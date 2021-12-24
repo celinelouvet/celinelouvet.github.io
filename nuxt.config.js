@@ -3,7 +3,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "celinelouvet-cv",
+    title: "Céline Louvet",
     htmlAttrs: {
       lang: "en",
     },
@@ -22,20 +22,26 @@ export default {
   plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: ["~/components/", { path: "~/components/summary/", prefix: "summary" }, { path: "~/components/content/", prefix: "content" }],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     "@nuxt/typescript-build",
+    "@nuxtjs/google-fonts",
+    ["@nuxtjs/moment", { defaultLocale: "fr", locales: ["fr", "en-gb"] }],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // https://go.nuxtjs.dev/bootstrap
-    "bootstrap-vue/nuxt",
-  ],
+  modules: [["bootstrap-vue/nuxt", { icons: true }]],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  googleFonts: {
+    families: {
+      Nunito: [400, 600, 700],
+      "PT Sans Narrow": [400, 600],
+    },
+  },
 };

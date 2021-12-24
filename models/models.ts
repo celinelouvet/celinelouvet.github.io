@@ -1,25 +1,25 @@
-type Certification = {
+export type Certification = {
   topic: string;
   company: string;
   when: string;
 };
 
-type Convention = {
+export type Convention = {
   name: string;
   when: string;
 };
 
-type Period = {
+export type Period = {
   from: string;
   to?: string;
 };
 
-type Project = {
+export type Project = {
   name: string;
   description: string;
 };
 
-type RemoteType = "FULLTIME" | "2_DAYS" | "NONE";
+export type RemoteType = "FULLTIME" | "2_DAYS" | "NONE";
 
 type Social = {
   name: string;
@@ -27,18 +27,18 @@ type Social = {
   link: string;
 };
 
-type Stack = {
+export type Stack = {
   type: string;
   technos: string[];
 };
 
-type Talk = {
+export type Talk = {
   topic: string;
   link: string;
   where: Convention[];
 };
 
-type Education = Period & {
+export type Education = Period & {
   school: string;
   fullname?: string;
   diploma?: string;
@@ -56,7 +56,7 @@ type Role = {
   tasks?: Task[];
 };
 
-type Experience = Period &
+export type Experience = Period &
   Role & {
     company?: string;
     remote?: boolean;
@@ -66,7 +66,7 @@ type Experience = Period &
     stacks?: Stack[];
   };
 
-type CV = {
+export type CV = {
   firstname: string;
   lastname: string;
   birthdate: string;
