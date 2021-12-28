@@ -8,6 +8,7 @@ module.exports = {
   plugins: [],
   rules: {
     semi: ["error", "always"],
-    quotes: ["double"],
+    quotes: ["error", "double"],
+    "vue/multi-word-component-names": ["off"],
   },
 };
