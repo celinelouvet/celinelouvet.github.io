@@ -1,6 +1,6 @@
 <template>
   <div class="flex horizontal justify-center">
-    <b-avatar src="photo.jpg" size="200px" class="photo"></b-avatar>
+    <b-avatar src="photo.jpg" size="200px" class="photo" aria-label="photo"></b-avatar>
   </div>
 </template>
 

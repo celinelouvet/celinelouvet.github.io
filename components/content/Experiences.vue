@@ -1,9 +1,21 @@
 <template>
   <div>
-    <h2>Expériences</h2>
+    <h2>{{ $t("title") }}</h2>
     <ContentExperienceDetails v-for="xp in cv.experiences" :key="`${xp.company}-${xp.from}`" :job="xp" />
   </div>
 </template>
+
+<i18n locale="fr" lang="json5">
+{
+  title: "Expériences",
+}
+</i18n>
+
+<i18n locale="en" lang="json5">
+{
+  title: "Experience",
+}
+</i18n>
 
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";

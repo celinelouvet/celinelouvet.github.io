@@ -26,7 +26,9 @@
     "types": [
       "@types/node",
       "@nuxt/types",
-      "@nuxtjs/moment"
+      "@nuxtjs/i18n",
+      "@nuxtjs/moment",
+      "@types/moment-precise-range-plugin"
     ]
   },
   "exclude": [

@@ -29,11 +29,11 @@ export default {
     // https://go.nuxtjs.dev/typescript
     "@nuxt/typescript-build",
     "@nuxtjs/google-fonts",
-    ["@nuxtjs/moment", { defaultLocale: "fr", locales: ["fr", "en-gb"] }],
+    ["@nuxtjs/moment", { defaultLocale: "fr", locales: ["fr", "en-gb"], plugins: ["moment-precise-range-plugin"] }],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [["bootstrap-vue/nuxt", { icons: true }]],
+  modules: [["bootstrap-vue/nuxt", { icons: true }], "@nuxtjs/i18n"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
@@ -43,5 +43,22 @@ export default {
       Nunito: [400, 600, 700],
       "PT Sans Narrow": [400, 600],
     },
+  },
+
+  i18n: {
+    vueI18nLoader: true,
+    defaultLocale: "fr",
+    locales: [
+      {
+        name: "English",
+        code: "us",
+        iso: "en-US",
+      },
+      {
+        name: "Français",
+        code: "fr",
+        iso: "fr-FR",
+      },
+    ],
   },
 };

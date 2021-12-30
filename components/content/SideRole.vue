@@ -2,30 +2,67 @@
   <div class="siderole">
     <div>
       <span class="h4 company">{{ sideRole.company }}</span>
-      <span class="cv-small">{{ dates(sideRole) }}</span>
+      <span class="cv-small">{{ from }} - {{ to }}</span>
+      <span v-if="diff.years === 0 && diff.months !== 0" class="cv-small">({{ $tc("months", diff.months) }})</span>
+      <span v-else-if="diff.years !== 0 && diff.months === 0" class="cv-small">({{ $tc("years", diff.years) }})</span>
+      <span v-else class="cv-small">({{ $tc("years", diff.years) }} {{ $tc("months", diff.months) }})</span>
     </div>
     <p class="description">{{ sideRole.description }}</p>
   </div>
 </template>
 
+<i18n locale="fr" lang="json5">
+{
+  years: " | 1 an | {n} ans",
+  months: " | 1 mois | {n} mois",
+  today: "aujourd'hui",
+}
+</i18n>
+
+<i18n locale="en" lang="json5">
+{
+  years: " | 1 year | {n} years",
+  months: " | 1 month | {n} months",
+  today: "today",
+}
+</i18n>
+
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
 
-import { Experience, Period } from "~/models";
+import { Experience } from "~/models";
 
 @Component
 export default class SideRole extends Vue {
   @Prop({ default: {} }) readonly sideRole!: Experience;
 
-  dates({ from: fromDate, to: toDate }: Period) {
-    const from = this.$moment(fromDate);
-    const to = this.$moment(toDate);
-    const diff = to.from(from, true);
+  get from() {
+    const from = this.$moment(this.sideRole.from);
+    return from.format("MMM YYYY");
+  }
 
-    const fromString = from.format("MMM YYYY");
-    const toString = toDate ? this.$moment(toDate).format("MMM YYYY") : "aujourd'hui";
+  get to() {
+    if (this.sideRole.to) {
+      const to = this.$moment(this.sideRole.to);
+      return to.format("MMM YYYY");
+    }
+    return this.$t("today");
+  }
 
-    return `${fromString} - ${toString} (${diff})`;
+  get diff() {
+    const from = this.$moment(this.sideRole.from);
+    const to = this.$moment(this.sideRole.to);
+
+    const { years, months, days, hours } = this.$moment.preciseDiff(from, to, true);
+
+    const roundedDays = hours >= 12 ? days + 1 : days;
+    const roundedMonths = roundedDays >= 15 ? months + 1 : months;
+    const roundedYears = roundedMonths === 12 ? years + 1 : years;
+
+    return {
+      months: roundedMonths === 12 ? 0 : roundedMonths,
+      years: roundedYears,
+    };
   }
 }
 </script>

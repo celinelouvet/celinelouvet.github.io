@@ -9,6 +9,18 @@
   </div>
 </template>
 
+<i18n locale="fr" lang="json5">
+{
+  today: "aujourd'hui",
+}
+</i18n>
+
+<i18n locale="en" lang="json5">
+{
+  today: "today",
+}
+</i18n>
+
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
 
@@ -29,8 +41,7 @@ export default class Infos extends Vue {
 
   get to() {
     const to = this.education.to;
-
-    return to ? this.$moment(to).format("YYYY") : "aujourd'hui";
+    return to ? this.$moment(to).format("YYYY") : this.$t("today");
   }
 }
 </script>

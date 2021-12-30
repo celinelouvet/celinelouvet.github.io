@@ -10,5 +10,6 @@ module.exports = {
     semi: ["error", "always"],
     quotes: ["error", "double"],
     "vue/multi-word-component-names": ["off"],
+    "no-irregular-whitespace": ["off"],
   },
 };
