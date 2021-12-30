@@ -22,7 +22,12 @@ export default {
   plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: ["~/components/", { path: "~/components/summary/", prefix: "summary" }, { path: "~/components/content/", prefix: "content" }],
+  components: [
+    "~/components/",
+    { path: "~/components/summary/", prefix: "summary" },
+    { path: "~/components/content/", prefix: "content" },
+    { path: "~/components/language/", prefix: "language" },
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -51,7 +56,7 @@ export default {
     locales: [
       {
         name: "English",
-        code: "us",
+        code: "en",
         iso: "en-US",
       },
       {

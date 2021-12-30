@@ -2,14 +2,7 @@
   <div class="flex vertical full">
     <div class="main-title">
       <div class="d-flex justify-content-end">
-        <b-dropdown right variant="outline-light">
-          <template #button-content>
-            <Language :locale="$i18n.localeProperties" />
-          </template>
-          <b-dropdown-item v-for="locale in $i18n.locales" :key="locale.code" @click.prevent.stop="changeLocale(locale)">
-            <Language :locale="locale" />
-          </b-dropdown-item>
-        </b-dropdown>
+        <LanguageSwitcher />
       </div>
       <h1 class="name">{{ cv.firstname }} {{ cv.lastname }}</h1>
       <h2 class="job-title">{{ cv.title }}</h2>
@@ -33,32 +26,14 @@
 </template>
 
 <script lang="ts">
-import { LocaleObject } from "@nuxtjs/i18n";
 import { Vue, Component } from "vue-property-decorator";
 
 import { cv, CV } from "~/models";
 
-const localeCodes: Map<string, string> = new Map([
-  ["us", "en-gb"],
-  ["fr", "fr"],
-]);
-
 @Component
 export default class DesktopCV extends Vue {
-  created() {
-    const localeCode = localeCodes.get(this.$i18n.locale) ?? "fr";
-    this.$moment.locale(localeCode);
-  }
-
   get cv(): CV {
     return cv;
-  }
-
-  changeLocale({ code }: LocaleObject) {
-    this.$i18n.setLocale(code);
-
-    const localeCode = localeCodes.get(code) ?? "fr";
-    this.$moment.locale(localeCode);
   }
 }
 </script>
