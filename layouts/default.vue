@@ -1,19 +1,47 @@
 <template>
-  <div>
+  <div class="full">
     <Nuxt />
   </div>
 </template>
 
 <style>
+:root {
+  --photo-size: 200px;
+  --summary-width: calc(var(--photo-size) * 1.5);
+  --cv-blue: #2a5978;
+  --cv-blue-rgb: 42, 89, 120;
+  --cv-blue-light: #428cbd;
+  --cv-gray: #e3e8ec;
+
+  --default-font: Nunito;
+  --narrow-font: "PT Sans Narrow";
+
+  --bs-body-font-family: var(--default-font);
+  --bs-body-font-size: 14px;
+}
+
 html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
   word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  font-smooth: always;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+body,
+.full {
+  min-height: 100vh;
+}
+a {
+  color: var(--cv-blue-light);
+  font-weight: 600;
+}
+a:hover {
+  color: var(--cv-blue);
+  font-weight: 600;
 }
 
 *,
@@ -23,32 +51,48 @@ html {
   margin: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  font-family: var(--narrow-font, Nunito);
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+h2,
+.h2 {
+  text-transform: uppercase;
+  font-size: 2.25em;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+h3,
+.h3 {
+  font-size: 1.7em;
 }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.flex {
+  display: flex;
+}
+.flex.vertical {
+  flex-direction: column;
+}
+.flex.horizontal {
+  flex-direction: row;
+}
+.flex.justify-center {
+  justify-content: center;
+}
+.flex.align-center {
+  align-items: center;
+}
+.flex.align-baseline {
+  align-items: baseline;
+}
+
+.flex-1 {
+  flex: 1;
 }
 </style>
