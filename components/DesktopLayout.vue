@@ -15,8 +15,9 @@
         <SummarySocials class="section" />
       </div>
       <div class="content flex-1">
+        <DetailsLevel class="details-container" @details-change="details = $event" />
         <ContentDescription class="section" />
-        <ContentExperiences class="section" />
+        <ContentExperiences :details="details" class="section" />
         <ContentTalks class="section" />
         <ContentEducations class="section" />
         <ContentCertifications class="section" />
@@ -32,6 +33,8 @@ import { cv, CV } from "~/models";
 
 @Component
 export default class DesktopLayout extends Vue {
+  details: boolean = false;
+
   get cv(): CV {
     return cv;
   }
