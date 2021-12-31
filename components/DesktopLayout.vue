@@ -31,14 +31,14 @@ import { Vue, Component } from "vue-property-decorator";
 import { cv, CV } from "~/models";
 
 @Component
-export default class DesktopCV extends Vue {
+export default class DesktopLayout extends Vue {
   get cv(): CV {
     return cv;
   }
 }
 </script>
 
-<style>
+<style scoped>
 .main-title {
   background: linear-gradient(
     180deg,
@@ -76,11 +76,15 @@ export default class DesktopCV extends Vue {
   margin: 1.5em 1.5em 0em 1.5em;
 }
 
+.content {
+  background-color: white;
+}
+
 .content .section {
   margin: 2em 1.5em 0em 1.5em;
 }
 
-.content {
-  background-color: white;
+.details-container {
+  margin-top: 1em;
 }
 </style>

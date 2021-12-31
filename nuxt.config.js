@@ -16,7 +16,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ["~/assets/main.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -42,6 +42,21 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  bootstrapVue: {
+    components: [
+      "BAvatar",
+      "BContainer",
+      "BDropdown",
+      "BDropdownItem",
+      "BFormCheckbox",
+      "BIcon",
+      "BIconEnvelopeFill",
+      "BIconGeoAltFill",
+      "BIconTwitter",
+      "BIconLinkedin",
+    ],
+  },
 
   googleFonts: {
     families: {
