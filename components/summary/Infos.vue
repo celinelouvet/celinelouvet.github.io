@@ -11,7 +11,7 @@
         <b-icon-geo-alt-fill class="icon" /><span>{{ cv.location }}</span>
       </li>
       <li>
-        {{ $t(`common.remoteType.${cv.remote}`) }}
+        {{ $t(`remoteType.${cv.remote}`) }}
       </li>
     </ul>
   </div>

@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-    <div v-if="job.tasks" class="tasks">
+    <div v-if="job.tasks" class="tasks hidden" :class="{ show: details }">
       <h4>{{ $t("tasks") }}</h4>
       <ul>
         <li v-for="task in job.tasks" :key="task.name">
@@ -31,10 +31,10 @@
         </li>
       </ul>
     </div>
-    <div v-if="job.sideRoles" class="sideroles">
+    <div v-if="job.sideRoles" class="sideroles hidden" :class="{ show: details }">
       <ContentSideRole v-for="sideRole in job.sideRoles" :key="`${sideRole.company}-${sideRole.from}`" :side-role="sideRole" />
     </div>
-    <div v-if="job.stacks" class="stacks">
+    <div v-if="job.stacks" class="stacks hidden" :class="{ show: details }">
       <h4>{{ $t("stacks") }}</h4>
       <div v-if="job.stacks.length === 1" :set="(stack = job.stacks[0])">
         {{ stack.technos.join(", ") }}
@@ -46,7 +46,13 @@
       </div>
     </div>
     <div v-if="job.jobs" class="subjobs">
-      <ContentExperienceDetails v-for="subjob in job.jobs" :key="`${subjob.company}-${subjob.from}`" :job="subjob" class="subjob" />
+      <ContentExperienceDetails
+        v-for="subjob in job.jobs"
+        :key="`${subjob.company}-${subjob.from}`"
+        :job="subjob"
+        :details="details"
+        class="subjob"
+      />
     </div>
   </div>
 </template>
@@ -83,6 +89,7 @@ import { Experience } from "~/models";
 @Component
 export default class TalkDetails extends Vue {
   @Prop({ default: {} }) readonly job!: Experience;
+  @Prop({ default: false }) readonly details!: boolean;
 
   get remote() {
     return this.job.remote ? `- ${this.$t("remote")}` : "";
@@ -180,5 +187,18 @@ h4,
 .subjob {
   padding-left: 2em;
   font-size: 0.9em;
+}
+
+.hidden {
+  overflow: hidden; /* Hide the element content, while height = 0 */
+  height: 0;
+  opacity: 0;
+  transition: height 0s 5s, opacity 1s 0s;
+}
+
+.show {
+  height: auto;
+  opacity: 1;
+  /* transition: height 0s 5s, opacity 1s 0s; */
 }
 </style>

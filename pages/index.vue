@@ -1,17 +1,17 @@
 <template>
   <div class="container">
-    <DesktopCV class="full" />
+    <DesktopLayout class="full" />
     <MobileCV class="full" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import DesktopCV from "~/components/DesktopCV.vue";
+import DesktopLayout from "~/components/DesktopLayout.vue";
 import MobileCV from "~/components/MobileCV.vue";
 
 export default Vue.extend({
-  components: { DesktopCV, MobileCV },
+  components: { DesktopLayout, MobileCV },
 });
 </script>
 

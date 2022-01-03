@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>{{ $t("title") }}</h2>
-    <ContentExperienceDetails v-for="xp in cv.experiences" :key="`${xp.company}-${xp.from}`" :job="xp" />
+    <ContentExperienceDetails v-for="xp in cv.experiences" :key="`${xp.company}-${xp.from}`" :job="xp" :details="details" />
   </div>
 </template>
 
@@ -18,12 +18,14 @@
 </i18n>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
+import { Vue, Component, Prop } from "vue-property-decorator";
 
 import { cv, CV, Experience } from "~/models";
 
 @Component
 export default class Experiences extends Vue {
+  @Prop({ default: false }) readonly details!: boolean;
+
   get cv(): CV {
     return cv;
   }
