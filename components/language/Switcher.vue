@@ -58,6 +58,6 @@ export default class LanguageSwitcher extends Vue {
 }
 
 .language-name {
-  padding-left: 0.5em;
+  padding-left: var(--cv-size);
 }
 </style>

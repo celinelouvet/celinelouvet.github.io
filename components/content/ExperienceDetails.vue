@@ -141,17 +141,28 @@ h4,
 }
 
 .job-container {
-  margin-bottom: 3em;
+  margin-bottom: var(--cv-size-3x);
 }
 
 .company {
   font-size: 2.1em;
 }
 
+.subjobs {
+  border-left: 2px solid var(--bs-gray-400);
+}
+
+.subjob {
+  padding-left: var(--cv-size-2x);
+  font-size: 0.9em;
+}
+
 .subjob > .header .company::before {
+  font-size: 30px;
+  margin-left: calc(var(--cv-size-2x) * -1 - 10px);
+  padding-right: var(--cv-size);
+
   content: "●";
-  margin-left: -1.28em;
-  padding-right: 0.7em;
   font-family: "Glyphicons Halflings";
   color: var(--bs-gray-400);
 }
@@ -166,31 +177,22 @@ h4,
 .tasks,
 .sideroles,
 .stacks {
-  margin-bottom: 1em;
+  margin-bottom: var(--cv-size);
 }
 
 .grid {
   display: grid;
   grid-template-columns: 110px auto;
-  gap: 0.75em;
-  padding-left: 1.5em;
+  gap: var(--cv-size);
+  padding-left: var(--cv-size-2x);
 }
 
 .grid-item:nth-child(2n + 1) {
   font-weight: 700;
 }
 
-.subjobs {
-  border-left: 2px solid var(--bs-gray-400);
-}
-
-.subjob {
-  padding-left: 2em;
-  font-size: 0.9em;
-}
-
 .hidden {
-  overflow: hidden; /* Hide the element content, while height = 0 */
+  overflow: hidden;
   height: 0;
   opacity: 0;
   transition: height 0s 5s, opacity 1s 0s;
@@ -199,6 +201,5 @@ h4,
 .show {
   height: auto;
   opacity: 1;
-  /* transition: height 0s 5s, opacity 1s 0s; */
 }
 </style>

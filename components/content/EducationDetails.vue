@@ -48,7 +48,7 @@ export default class Infos extends Vue {
 
 <style scoped>
 .dates {
-  padding-left: 0.5em;
+  padding-left: var(--cv-size);
   color: var(--bs-gray-600);
 }
 </style>

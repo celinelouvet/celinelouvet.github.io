@@ -9,7 +9,7 @@
     </div>
     <div class="flex horizontal flex-1">
       <div class="summary">
-        <SummaryPicture class="picture" />
+        <SummaryPicture class="section picture" />
         <SummaryInfos class="section" />
         <SummarySkills class="section" />
         <SummarySocials class="section" />
@@ -53,21 +53,30 @@ export default class DesktopLayout extends Vue {
     rgba(var(--cv-blue-rgb), 0) 96%,
     rgba(var(--cv-blue-rgb), 1) 96%
   );
-  padding: 0.5em 1em 0 var(--summary-width);
+  padding: var(--cv-size-2x) var(--cv-size) 0 var(--summary-width);
   color: white;
 }
 .main-title .name,
 .main-title .job-title {
   text-transform: uppercase;
   font-family: var(--narrow-font);
+  margin-bottom: 0;
 }
 .main-title .name {
   font-size: 3.5em;
-  padding-bottom: 0.25em;
+  padding-bottom: var(--cv-size);
 }
 .main-title .job-title {
   font-size: 2.25em;
-  padding-bottom: 1em;
+  padding-bottom: var(--cv-size-3x);
+}
+
+.summary,
+.content {
+  padding: var(--cv-size-2x);
+}
+.section:not(:last-of-type) {
+  padding-bottom: var(--cv-size-2x);
 }
 
 .summary {
@@ -75,21 +84,10 @@ export default class DesktopLayout extends Vue {
   width: var(--summary-width);
 }
 .summary .picture {
-  margin-top: calc(var(--photo-size) * -0.5);
-}
-.summary .section {
-  margin: 1.5em 1.5em 0em 1.5em;
+  margin-top: calc(var(--photo-size) * -0.5 - var(--cv-size-2x));
 }
 
 .content {
   background-color: white;
-}
-
-.content .section {
-  margin: 2em 1.5em 0em 1.5em;
-}
-
-.details-container {
-  margin-top: 1em;
 }
 </style>

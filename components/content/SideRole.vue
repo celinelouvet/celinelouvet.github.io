@@ -69,7 +69,7 @@ export default class SideRole extends Vue {
 
 <style scoped>
 .siderole {
-  padding-left: 1.5em;
+  padding-left: var(--cv-size);
   font-size: 0.9em;
 }
 
@@ -83,6 +83,6 @@ export default class SideRole extends Vue {
 }
 
 .description {
-  margin-bottom: 1em;
+  margin-bottom: var(--cv-size);
 }
 </style>

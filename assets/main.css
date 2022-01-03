@@ -7,6 +7,9 @@
   --cv-blue-ultralight: #a1c5de;
   --cv-blue-ultralight-rgb: 161, 197, 222;
   --cv-gray: #e3e8ec;
+  --cv-size: 12px;
+  --cv-size-2x: calc(var(--cv-size) * 2);
+  --cv-size-3x: calc(var(--cv-size) * 3);
 
   --default-font: Nunito;
   --narrow-font: "PT Sans Narrow";
