@@ -35,7 +35,7 @@ import { cv, CV } from "~/models";
 export default class DesktopLayout extends Vue {
   details: boolean = false;
 
-  languageFlip: boolean = false;
+  languageFlip: boolean = process.env.ACTIVATE_LANGUAGE === "true";
 
   get cv(): CV {
     return cv;
