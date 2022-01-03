@@ -1,5 +1,5 @@
 <template>
-  <div class="flex vertical full">
+  <div>
     <div class="main-title">
       <div v-if="languageFlip" class="d-flex justify-content-end">
         <LanguageSwitcher />
@@ -7,21 +7,18 @@
       <h1 class="name">{{ cv.firstname }} {{ cv.lastname }}</h1>
       <h2 class="job-title">{{ cv.title }}</h2>
     </div>
-    <div class="flex horizontal flex-1">
-      <div class="summary">
-        <SummaryPicture class="section picture" />
-        <SummaryInfos class="section" />
-        <SummarySkills class="section" />
-        <SummarySocials class="section" />
-      </div>
-      <div class="content flex-1">
-        <DetailsLevel class="details-container" @details-change="details = $event" />
-        <ContentDescription class="section" />
-        <ContentExperiences :details="details" class="section" />
-        <ContentTalks class="section" />
-        <ContentEducations class="section" />
-        <ContentCertifications class="section" />
-      </div>
+    <div class="summary">
+      <SummaryInfos class="section" />
+      <ContentDescription class="section" />
+      <SummarySkills class="section" />
+      <SummarySocials class="section" />
+    </div>
+    <div class="content">
+      <DetailsLevel class="details-container" @details-change="details = $event" />
+      <ContentExperiences :details="details" class="section" />
+      <ContentTalks class="section" />
+      <ContentEducations class="section" />
+      <ContentCertifications class="section" />
     </div>
   </div>
 </template>
@@ -32,7 +29,7 @@ import { Vue, Component } from "vue-property-decorator";
 import { cv, CV } from "~/models";
 
 @Component
-export default class DesktopLayout extends Vue {
+export default class MobileLayout extends Vue {
   details: boolean = false;
 
   languageFlip: boolean = process.env.ACTIVATE_LANGUAGE === "true";
@@ -53,7 +50,7 @@ export default class DesktopLayout extends Vue {
     rgba(var(--cv-blue-rgb), 0) 96%,
     rgba(var(--cv-blue-rgb), 1) 96%
   );
-  padding: var(--cv-size-2x) var(--cv-size) 0 var(--summary-width);
+  padding: var(--cv-size-2x) var(--cv-size-2x) 0 var(--cv-size-2x);
   color: white;
 }
 .main-title .name,
@@ -81,13 +78,5 @@ export default class DesktopLayout extends Vue {
 
 .summary {
   background-color: var(--cv-gray);
-  width: var(--summary-width);
-}
-.summary .picture {
-  margin-top: calc(var(--photo-size) * -0.5 - var(--cv-size-2x));
-}
-
-.content {
-  background-color: white;
 }
 </style>

@@ -32,6 +32,6 @@ export default class TalkDetails extends Vue {
 
 <style scoped>
 .link {
-  padding-left: 0.5em;
+  padding-left: var(--cv-size);
 }
 </style>
