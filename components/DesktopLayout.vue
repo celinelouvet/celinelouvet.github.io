@@ -1,7 +1,7 @@
 <template>
   <div class="flex vertical full">
     <div class="main-title">
-      <div class="d-flex justify-content-end">
+      <div v-if="languageFlip" class="d-flex justify-content-end">
         <LanguageSwitcher />
       </div>
       <h1 class="name">{{ cv.firstname }} {{ cv.lastname }}</h1>
@@ -34,6 +34,8 @@ import { cv, CV } from "~/models";
 @Component
 export default class DesktopLayout extends Vue {
   details: boolean = false;
+
+  languageFlip: boolean = false;
 
   get cv(): CV {
     return cv;
