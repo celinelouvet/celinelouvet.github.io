@@ -3,8 +3,9 @@
     <div class="header">
       <span class="h3 company">{{ job.company }}</span>
       <span class="cv-small">{{ from }} - {{ to }}</span>
-      <span v-if="diff.years === 0 && diff.months !== 0" class="cv-small">({{ $tc("months", diff.months) }})</span>
-      <span v-if="diff.years !== 0 && diff.months === 0" class="cv-small">({{ $tc("years", diff.years) }})</span>
+      <span v-if="diff.years !== 0 && diff.months !== 0" class="cv-small">({{ $tc("years", diff.years) }} {{ $tc("months", diff.months) }})</span>
+      <span v-else-if="diff.years === 0 && diff.months !== 0" class="cv-small">({{ $tc("months", diff.months) }})</span>
+      <span v-else-if="diff.years !== 0 && diff.months === 0" class="cv-small">({{ $tc("years", diff.years) }})</span>
       <span v-else class="cv-small">({{ $tc("years", diff.years) }} {{ $tc("months", diff.months) }})</span>
       <span class="cv-small">{{ remote }}</span>
     </div>
