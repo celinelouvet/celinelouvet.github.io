@@ -1,22 +1,23 @@
 <template>
-  <div class="flex vertical full">
-    <div class="main-title">
-      <div v-if="languageFlip" class="d-flex justify-content-end">
-        <LanguageSwitcher />
+  <div class="container-fluid container-lg">
+    <div class="grid cv-container">
+      <div class="main-title">
+        <div v-if="languageFlip" class="d-flex justify-content-end">
+          <LanguageSwitcher />
+        </div>
+        <h1 class="name">{{ cv.firstname }} {{ cv.lastname }}</h1>
+        <h2 class="job-title">{{ cv.title }}</h2>
       </div>
-      <h1 class="name">{{ cv.firstname }} {{ cv.lastname }}</h1>
-      <h2 class="job-title">{{ cv.title }}</h2>
-    </div>
-    <div class="flex horizontal flex-1">
       <div class="summary">
-        <SummaryPicture class="section picture" />
+        <SummaryPicture class="section picture d-none d-lg-block" />
         <SummaryInfos class="section" />
+        <ContentDescription class="section d-lg-none" />
         <SummarySkills class="section" />
         <SummarySocials class="section" />
       </div>
-      <div class="content flex-1">
+      <div class="content">
         <DetailsLevel class="details-container" @details-change="details = $event" />
-        <ContentDescription class="section" />
+        <ContentDescription class="section d-none d-lg-block" />
         <ContentExperiences :details="details" class="section" />
         <ContentTalks class="section" />
         <ContentEducations class="section" />
@@ -32,7 +33,7 @@ import { Vue, Component } from "vue-property-decorator";
 import { cv, CV } from "~/models";
 
 @Component
-export default class DesktopLayout extends Vue {
+export default class MainLayout extends Vue {
   details: boolean = false;
 
   languageFlip: boolean = process.env.ACTIVATE_LANGUAGE === "true";
@@ -44,6 +45,18 @@ export default class DesktopLayout extends Vue {
 </script>
 
 <style scoped>
+@media (max-width: 768px) {
+  .cv-container > div {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width: 769px) {
+  .cv-container {
+    grid-template-columns: [col1] var(--summary-width) [line2] auto;
+  }
+}
+
 .main-title {
   background: linear-gradient(
     180deg,
@@ -53,9 +66,17 @@ export default class DesktopLayout extends Vue {
     rgba(var(--cv-blue-rgb), 0) 96%,
     rgba(var(--cv-blue-rgb), 1) 96%
   );
-  padding: var(--cv-size-2x) var(--cv-size) 0 var(--summary-width);
+  padding: var(--cv-size-2x) var(--cv-size-2x) 0 var(--cv-size-2x);
   color: white;
 }
+
+@media (min-width: 769px) {
+  .main-title {
+    padding: var(--cv-size-2x) var(--cv-size-2x) 0 calc(var(--summary-width) + var(--cv-size-2x));
+    grid-column: 1 / span 2;
+  }
+}
+
 .main-title .name,
 .main-title .job-title {
   text-transform: uppercase;
@@ -81,7 +102,6 @@ export default class DesktopLayout extends Vue {
 
 .summary {
   background-color: var(--cv-gray);
-  width: var(--summary-width);
 }
 .summary .picture {
   margin-top: calc(var(--photo-size) * -0.5 - var(--cv-size-2x));
@@ -89,5 +109,11 @@ export default class DesktopLayout extends Vue {
 
 .content {
   background-color: white;
+}
+
+@media print {
+  .cv-container {
+    width: 100%;
+  }
 }
 </style>

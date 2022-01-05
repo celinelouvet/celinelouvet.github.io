@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex horizontal align-baseline">
+    <div class="d-flex flex-row align-items-baseline">
       <h3>{{ education.school }}</h3>
       <span class="dates">{{ from }} - {{ to }}</span>
     </div>
@@ -46,9 +46,4 @@ export default class Infos extends Vue {
 }
 </script>
 
-<style scoped>
-.dates {
-  padding-left: var(--cv-size);
-  color: var(--bs-gray-600);
-}
-</style>
+<style scoped></style>

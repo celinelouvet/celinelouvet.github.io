@@ -13,7 +13,7 @@
     <p class="description">{{ job.description }}</p>
     <div v-if="job.projects" class="projects">
       <h4>{{ $tc("project", job.projects.length) }}</h4>
-      <div class="grid">
+      <div class="grid-projects">
         <div v-for="item in projects" :key="item" class="grid-item">
           {{ item }}
         </div>
@@ -40,7 +40,7 @@
       <div v-if="job.stacks.length === 1" :set="(stack = job.stacks[0])">
         {{ stack.technos.join(", ") }}
       </div>
-      <div v-else class="grid">
+      <div v-else class="grid-technos">
         <div v-for="item in technos" :key="item" class="grid-item">
           {{ item }}
         </div>
@@ -179,17 +179,6 @@ h4,
 .sideroles,
 .stacks {
   margin-bottom: var(--cv-size);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 110px auto;
-  gap: var(--cv-size);
-  padding-left: var(--cv-size-2x);
-}
-
-.grid-item:nth-child(2n + 1) {
-  font-weight: 700;
 }
 
 .hidden {

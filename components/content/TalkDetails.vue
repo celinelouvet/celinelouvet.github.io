@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex horizontal align-baseline">
+    <div class="d-flex flex-row align-items-baseline">
       <div class="h3">{{ talk.topic }}</div>
       <span v-if="talk.link !== ''" class="link"><a :href="talk.link">Slides</a></span>
     </div>
