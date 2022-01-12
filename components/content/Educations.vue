@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="educations">
     <h2>{{ $t("title") }}</h2>
-    <ContentEducationDetails v-for="education in cv.educations" :key="education.from" :education="education" />
+    <div class="content">
+      <ContentEducationDetails v-for="education in cv.educations" :key="education.from" :education="education" />
+    </div>
   </div>
 </template>
 
@@ -30,4 +32,15 @@ export default class Infos extends Vue {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+@media print {
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--cv-size-2x);
+  }
+  .educations {
+    break-inside: avoid-page;
+  }
+}
+</style>

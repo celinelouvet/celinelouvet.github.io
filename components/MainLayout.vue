@@ -1,22 +1,27 @@
 <template>
   <div class="container-fluid container-lg">
-    <div class="grid cv-container">
+    <div class="cv-container">
       <div class="main-title">
-        <div v-if="languageFlip" class="d-flex justify-content-end">
-          <LanguageSwitcher />
+        <div class="d-none d-print-block">
+          <SummaryPicture />
         </div>
-        <h1 class="name">{{ cv.firstname }} {{ cv.lastname }}</h1>
-        <h2 class="job-title">{{ cv.title }}</h2>
+        <div>
+          <div v-if="languageFlip" class="d-flex justify-content-end d-print-none">
+            <LanguageSwitcher />
+          </div>
+          <h1 class="name">{{ cv.firstname }} {{ cv.lastname }}</h1>
+          <h2 class="job-title">{{ cv.title }}</h2>
+        </div>
       </div>
       <div class="summary">
-        <SummaryPicture class="section picture d-none d-lg-block" />
-        <SummaryInfos class="section" />
-        <ContentDescription class="section d-lg-none" />
-        <SummarySkills class="section" />
-        <SummarySocials class="section" />
+        <SummaryPicture class="section picture d-none d-lg-block d-print-none" />
+        <SummaryInfos class="section infos" />
+        <ContentDescription class="section d-lg-none description" />
+        <SummarySkills class="section skills" />
+        <SummarySocials class="section socials" />
       </div>
       <div class="content">
-        <DetailsLevel class="details-container" @details-change="details = $event" />
+        <DetailsLevel class="details-container d-print-none" @details-change="details = $event" />
         <ContentDescription class="section d-none d-lg-block" />
         <ContentExperiences :details="details" class="section" />
         <ContentTalks class="section" />
@@ -45,14 +50,15 @@ export default class MainLayout extends Vue {
 </script>
 
 <style scoped>
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .cv-container > div {
     grid-column: 1 / span 2;
   }
 }
 
-@media (min-width: 769px) {
+@media screen and (min-width: 769px) {
   .cv-container {
+    display: grid;
     grid-template-columns: [col1] var(--summary-width) [line2] auto;
   }
 }
@@ -70,7 +76,7 @@ export default class MainLayout extends Vue {
   color: white;
 }
 
-@media (min-width: 769px) {
+@media screen and (min-width: 769px) {
   .main-title {
     padding: var(--cv-size-2x) var(--cv-size-2x) 0 calc(var(--summary-width) + var(--cv-size-2x));
     grid-column: 1 / span 2;
@@ -112,8 +118,42 @@ export default class MainLayout extends Vue {
 }
 
 @media print {
-  .cv-container {
+  @page {
+    size: A4 portrait;
+    margin: 10mm 10mm 10mm 10mm;
+  }
+  .container-fluid.container-lg {
     width: 100%;
+    max-width: 100%;
+  }
+  .cv-container > div {
+    grid-column: 1 / span 2;
+  }
+  .main-title {
+    --photo-size: 100px;
+    --summary-width: calc(var(--photo-size) * 2);
+
+    padding: var(--cv-size-2x) var(--cv-size-2x) 0 var(--cv-size-2x);
+    display: grid;
+    grid-template-columns: [col1] var(--summary-width) [line2] auto;
+  }
+  .summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: var(--cv-size);
+    grid-row-gap: var(--cv-size);
+  }
+  .skills {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+  }
+  .description {
+    grid-row: 1 / span 2;
+    grid-column: 3;
+  }
+  .socials {
+    grid-row: 2;
+    grid-column: 1;
   }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="d-flex flex-row justify-content-center">
-      <b-avatar src="photo.jpg" size="200px" class="photo" aria-label="photo"></b-avatar>
+      <b-avatar src="photo.jpg" class="photo" aria-label="photo"></b-avatar>
     </div>
   </div>
 </template>

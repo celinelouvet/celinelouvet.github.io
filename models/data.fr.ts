@@ -15,7 +15,7 @@ const cv: CV = {
     "Architecture cloud",
     "Typescript",
     "NodeJs",
-    "Google Cloud Platform",
+    "Google Cloud Platform (GCP)",
     "Tests & automatisation",
   ],
   socials: [
@@ -62,13 +62,7 @@ const cv: CV = {
       stacks: [
         {
           type: "Infrastructure",
-          technos: [
-            "Google Cloud Platform AppEngine",
-            "Google Cloud Platform Datastore",
-            "Google Cloud Platform FileStorage",
-            "Google Cloud Platform Pub/Sub",
-            "Google Cloud Platform Cloud Run",
-          ],
+          technos: ["GCP AppEngine", "GCP Datastore", "GCP FileStorage", "GCP Pub/Sub", "GCP Cloud Run"],
         },
         {
           type: "Frontend",
@@ -110,13 +104,7 @@ const cv: CV = {
           stacks: [
             {
               type: "Common",
-              technos: [
-                "Google Cloud Platform AppEngine",
-                "Google Cloud Platform Datastore",
-                "Google Cloud Platform FileStorage",
-                "Google Cloud Platform Pub/Sub",
-                "Google Cloud Platform Cloud Run",
-              ],
+              technos: ["GCP AppEngine", "GCP Datastore", "GCP FileStorage", "GCP Pub/Sub", "GCP Cloud Run"],
             },
             {
               type: "Frontend",
@@ -397,13 +385,7 @@ const cv: CV = {
             },
             {
               type: "Back-ends",
-              technos: [
-                "Java",
-                "Google Cloud Platform AppEngine",
-                "Google Cloud Platform FileStorage",
-                "Google Cloud Platform SearchAPI",
-                "Google Cloud Platform Datastore",
-              ],
+              technos: ["Java", "GCP AppEngine", "GCP FileStorage", "GCP SearchAPI", "GCP Datastore"],
             },
           ],
         },
@@ -549,7 +531,7 @@ const cv: CV = {
           stacks: [
             {
               type: "",
-              technos: ["GWT2.3", "Google Cloud Platform AppEngine", "Google Cloud Platform Datastore"],
+              technos: ["GWT2.3", "GCP AppEngine", "GCP Datastore"],
             },
           ],
         },
