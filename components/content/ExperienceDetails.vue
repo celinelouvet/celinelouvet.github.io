@@ -11,38 +11,42 @@
     </div>
     <h4 v-if="job.role">{{ job.role }}</h4>
     <p class="description">{{ job.description }}</p>
-    <div v-if="job.projects" class="projects">
-      <h4>{{ $tc("project", job.projects.length) }}</h4>
-      <div class="grid">
-        <div v-for="item in projects" :key="item" class="grid-item">
-          {{ item }}
+    <div class="details">
+      <div v-if="job.projects" class="projects">
+        <h4>{{ $tc("project", job.projects.length) }}</h4>
+        <div class="projects-content" :class="{ one: job.projects.length === 1 }">
+          <div v-for="project in job.projects" :key="project" class="project">
+            <div class="name">{{ project.name }}</div>
+            <div class="description">{{ project.description }}</div>
+          </div>
         </div>
       </div>
-    </div>
-    <div v-if="job.tasks" class="tasks hidden" :class="{ show: details }">
-      <h4>{{ $t("tasks") }}</h4>
-      <ul>
-        <li v-for="task in job.tasks" :key="task.name">
-          {{ task.name }}
-          <ul v-if="task.subtasks">
-            <li v-for="subtask in task.subtasks" :key="subtask.name">
-              {{ subtask.name }}
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div v-if="job.sideRoles" class="sideroles hidden" :class="{ show: details }">
-      <ContentSideRole v-for="sideRole in job.sideRoles" :key="`${sideRole.company}-${sideRole.from}`" :side-role="sideRole" />
-    </div>
-    <div v-if="job.stacks" class="stacks hidden" :class="{ show: details }">
-      <h4>{{ $t("stacks") }}</h4>
-      <div v-if="job.stacks.length === 1" :set="(stack = job.stacks[0])">
-        {{ stack.technos.join(", ") }}
+      <div v-if="job.tasks" class="tasks hidden d-print-none" :class="{ show: details }">
+        <h4>{{ $t("tasks") }}</h4>
+        <ul>
+          <li v-for="task in job.tasks" :key="task.name">
+            {{ task.name }}
+            <ul v-if="task.subtasks">
+              <li v-for="subtask in task.subtasks" :key="subtask.name">
+                {{ subtask.name }}
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
-      <div v-else class="grid">
-        <div v-for="item in technos" :key="item" class="grid-item">
-          {{ item }}
+      <div v-if="job.sideRoles" class="sideroles hidden d-print-none" :class="{ show: details }">
+        <ContentSideRole v-for="sideRole in job.sideRoles" :key="`${sideRole.company}-${sideRole.from}`" :side-role="sideRole" />
+      </div>
+      <div v-if="job.stacks" class="stacks hidden" :class="{ show: details }">
+        <h4>{{ $t("stacks") }}</h4>
+        <div v-if="job.stacks.length === 1" :set="(stack = job.stacks[0])">
+          {{ stack.technos.join(", ") }}
+        </div>
+        <div v-else class="stacks-content" :class="{ one: job.stacks.length === 1 }">
+          <div v-for="stack in job.stacks" :key="stack" class="stack">
+            <div class="type">{{ stack.type }}</div>
+            <div class="technos">{{ stack.technos.join(", ") }}</div>
+          </div>
         </div>
       </div>
     </div>
@@ -136,17 +140,8 @@ export default class TalkDetails extends Vue {
 </script>
 
 <style scoped>
-h4,
-.h4 {
-  font-size: 1.6em;
-}
-
 .job-container {
   margin-bottom: var(--cv-size-3x);
-}
-
-.company {
-  font-size: 2.1em;
 }
 
 .subjobs {
@@ -173,7 +168,7 @@ h4,
   color: var(--bs-gray-600);
 }
 
-.description,
+.job-container > .description,
 .projects,
 .tasks,
 .sideroles,
@@ -181,26 +176,84 @@ h4,
   margin-bottom: var(--cv-size);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 110px auto;
-  gap: var(--cv-size);
-  padding-left: var(--cv-size-2x);
+@media screen {
+  h4,
+  .h4 {
+    font-size: 1.6em;
+  }
+
+  .company {
+    font-size: 2.1em;
+  }
+
+  @media screen and (max-width: 576px) {
+    .project .name,
+    .project .description,
+    .stack .type,
+    .stack .technos {
+      grid-column: 1 / span 2;
+    }
+  }
+
+  .project,
+  .stack {
+    display: grid;
+    grid-template-columns: 110px auto;
+    gap: var(--cv-size);
+    padding-left: var(--cv-size-2x);
+    margin-bottom: var(--cv-size);
+  }
 }
 
-.grid-item:nth-child(2n + 1) {
+.project .name,
+.stack .type {
   font-weight: 700;
 }
 
-.hidden {
-  overflow: hidden;
-  height: 0;
-  opacity: 0;
-  transition: height 0s 5s, opacity 1s 0s;
+@media screen {
+  .hidden {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: height 0s 5s, opacity 1s 0s;
+  }
+
+  .show {
+    height: auto;
+    opacity: 1;
+  }
 }
 
-.show {
-  height: auto;
-  opacity: 1;
+@media print {
+  .projects-content,
+  .stacks-content {
+    padding-left: var(--cv-size-2x);
+  }
+
+  .projects-content:not(.one),
+  .stacks-content:not(.one) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--cv-size-2x);
+    row-gap: var(--cv-size);
+  }
+
+  .project .name,
+  .stack .type {
+    padding-bottom: var(--cv-size-05x);
+  }
+
+  .header,
+  .job-container > .description,
+  .job-container > .details,
+  .projects {
+    break-after: avoid-page;
+  }
+  .subjobs {
+    break-before: avoid-page;
+  }
+  .subjob {
+    break-inside: avoid-page;
+  }
 }
 </style>

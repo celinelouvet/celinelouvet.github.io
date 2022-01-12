@@ -7,9 +7,12 @@
   --cv-blue-ultralight: #a1c5de;
   --cv-blue-ultralight-rgb: 161, 197, 222;
   --cv-gray: #e3e8ec;
+  --cv-size-05x: 6px;
   --cv-size: 12px;
   --cv-size-2x: calc(var(--cv-size) * 2);
   --cv-size-3x: calc(var(--cv-size) * 3);
+  --cv-size-4x: calc(var(--cv-size) * 4);
+  --cv-size-5x: calc(var(--cv-size) * 5);
 
   --default-font: Nunito;
   --narrow-font: "PT Sans Narrow";
@@ -17,6 +20,12 @@
   --bs-body-font-family: var(--default-font);
   --bs-body-font-size: 14px;
   --dot-blue-light: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23a1c5de'/%3e%3c/svg%3e");
+}
+
+@media print {
+  :root {
+    --bs-body-font-size: 12px;
+  }
 }
 
 html {
@@ -72,25 +81,28 @@ h3,
   font-size: 1.7em;
 }
 
-.flex {
-  display: flex;
-}
-.flex.vertical {
-  flex-direction: column;
-}
-.flex.horizontal {
-  flex-direction: row;
-}
-.flex.justify-center {
-  justify-content: center;
-}
-.flex.align-center {
-  align-items: center;
-}
-.flex.align-baseline {
-  align-items: baseline;
+@media print {
+  h2,
+  .h2 {
+    font-size: 22px;
+  }
+
+  h3,
+  .h3 {
+    font-size: 18px;
+  }
+  h4,
+  .h4 {
+    font-size: 16px;
+  }
 }
 
-.flex-1 {
-  flex: 1;
+.grid {
+  display: grid;
+}
+
+.dates,
+.date {
+  padding-left: var(--cv-size);
+  color: var(--bs-gray-600);
 }

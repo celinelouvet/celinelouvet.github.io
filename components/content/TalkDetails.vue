@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <div class="flex horizontal align-baseline">
+  <div class="talk">
+    <div class="d-flex flex-row align-items-baseline">
       <div class="h3">{{ talk.topic }}</div>
-      <span v-if="talk.link !== ''" class="link"><a :href="talk.link">Slides</a></span>
+      <span v-if="talk.link !== ''" class="link d-print-none"><a :href="talk.link">Slides</a></span>
     </div>
     <p>{{ conventions }}</p>
   </div>
@@ -33,5 +33,11 @@ export default class TalkDetails extends Vue {
 <style scoped>
 .link {
   padding-left: var(--cv-size);
+}
+
+@media print {
+  .talk {
+    break-inside: avoid-page;
+  }
 }
 </style>

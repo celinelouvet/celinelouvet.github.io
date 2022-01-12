@@ -1,7 +1,13 @@
 <template>
-  <div>
+  <div class="experiences">
     <h2>{{ $t("title") }}</h2>
-    <ContentExperienceDetails v-for="xp in cv.experiences" :key="`${xp.company}-${xp.from}`" :job="xp" :details="details" />
+    <ContentExperienceDetails
+      v-for="(xp, index) in cv.experiences"
+      :key="`${xp.company}-${xp.from}`"
+      :job="xp"
+      :details="details"
+      :class="`experience-${index}`"
+    />
   </div>
 </template>
 
@@ -38,4 +44,10 @@ export default class Experiences extends Vue {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+@media print {
+  .experience-1 {
+    break-before: always;
+  }
+}
+</style>

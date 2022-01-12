@@ -1,15 +1,17 @@
 <template>
-  <div class="d-flex flex-row justify-content-end">
-    <div class="form-check form-switch">
-      <input
-        id="switchDetails"
-        :checked="details"
-        class="form-check-input details"
-        type="checkbox"
-        role="switch"
-        @click="detailsChange($event.target.checked)"
-      />
-      <label class="form-check-label" for="switchDetails">{{ $t("label") }}</label>
+  <div>
+    <div class="d-flex flex-row justify-content-end">
+      <div class="form-check form-switch">
+        <input
+          id="switchDetails"
+          :checked="details"
+          class="form-check-input details"
+          type="checkbox"
+          role="switch"
+          @click="detailsChange($event.target.checked)"
+        />
+        <label class="form-check-label" for="switchDetails">{{ $t("label") }}</label>
+      </div>
     </div>
   </div>
 </template>

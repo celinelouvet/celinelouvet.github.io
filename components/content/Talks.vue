@@ -1,8 +1,10 @@
 <template>
-  <div>
+  <div class="talks">
     <h2>{{ $t("title") }}</h2>
-    <div v-for="talk in cv.talks" :key="talk.from">
-      <ContentTalkDetails :talk="talk" />
+    <div class="content">
+      <div v-for="talk in cv.talks" :key="talk.from">
+        <ContentTalkDetails :talk="talk" />
+      </div>
     </div>
   </div>
 </template>
@@ -32,4 +34,15 @@ export default class Talks extends Vue {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+@media print {
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--cv-size-2x);
+  }
+  .talks {
+    break-inside: avoid-page;
+  }
+}
+</style>

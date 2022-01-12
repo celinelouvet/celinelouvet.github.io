@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex horizontal align-baseline">
+    <div class="d-flex flex-row align-items-baseline">
       <h3>{{ certification.topic }}</h3>
       <span class="date">{{ when }}</span>
     </div>
@@ -23,9 +23,4 @@ export default class Certifications extends Vue {
 }
 </script>
 
-<style scoped>
-.date {
-  padding-left: var(--cv-size);
-  color: var(--bs-gray-600);
-}
-</style>
+<style scoped></style>
