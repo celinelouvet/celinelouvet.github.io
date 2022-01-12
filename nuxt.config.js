@@ -5,7 +5,7 @@ export default {
   head: {
     title: "Céline Louvet",
     htmlAttrs: {
-      lang: "en",
+      lang: "fr",
     },
     meta: [
       { charset: "utf-8" },
