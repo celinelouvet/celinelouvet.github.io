@@ -73,11 +73,11 @@ export default {
     vueI18nLoader: true,
     defaultLocale: "fr",
     locales: [
-      {
-        name: "English",
-        code: "en",
-        iso: "en-US",
-      },
+      // {
+      //   name: "English",
+      //   code: "en",
+      //   iso: "en-US",
+      // },
       {
         name: "Français",
         code: "fr",
