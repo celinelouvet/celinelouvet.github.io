@@ -32,8 +32,49 @@ const cv: CV = {
   ],
   experiences: [
     {
+      company: "Pyxo",
+      from: "2021-05-02",
+      role: "Backend developer",
+      description: "Developpeuse backend sur une architecture microservices, fortement évènementielle.",
+      remote: false,
+      projects: [
+        {
+          name: "Pyxo API",
+          description: "Service permettant d'effectuer des emprunts et des retours de contenants réutilisables.",
+        },
+      ],
+      tasks: [
+        { name: "Réalisation d'un POC pour une démo d'appel d'offre" },
+        { name: "Développement d'une landing permettant à un utilisateur anonyme de réaliser un prêt" },
+        {
+          name: "Programme de fidélité",
+          subtasks: [
+            { name: "Coordination des phases de conception / réalisation / livraison" },
+            { name: "Découpage fonctionnel" },
+            { name: "Conception" },
+            { name: "Développements backend" },
+          ],
+        },
+      ],
+      stacks: [
+        {
+          type: "Infrastructure",
+          technos: ["AWS DynamoDB", "AWS RDS", "AWS CacheCluster", "AWS SQS", "AWS function"],
+        },
+        {
+          type: "Landing",
+          technos: ["VanillaJs"],
+        },
+        {
+          type: "Backend API",
+          technos: ["Node", "Typescript", "Serverless"],
+        },
+      ],
+    },
+    {
       company: "Hubside",
       from: "2021-01-01",
+      to: "2020-04-25",
       role: "Senior Lead developer",
       description:
         "Tech lead avec un role de mid-management et une implication au niveau entreprise. La répartition entre développement et lead/management est de 60-40%.",
