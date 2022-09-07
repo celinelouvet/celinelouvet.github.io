@@ -33,7 +33,7 @@ const cv: CV = {
   experiences: [
     {
       company: "Pyxo",
-      from: "2021-05-02",
+      from: "2022-05-02",
       role: "Backend developer",
       description: "Developpeuse backend sur une architecture microservices, fortement évènementielle.",
       remote: false,
@@ -74,7 +74,7 @@ const cv: CV = {
     {
       company: "Hubside",
       from: "2021-01-01",
-      to: "2020-04-25",
+      to: "2022-04-25",
       role: "Senior Lead developer",
       description:
         "Tech lead avec un role de mid-management et une implication au niveau entreprise. La répartition entre développement et lead/management est de 60-40%.",
