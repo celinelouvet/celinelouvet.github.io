@@ -47,9 +47,16 @@ const cv: CV = {
         { name: "Réalisation d'un POC pour une démo d'appel d'offre" },
         { name: "Développement d'une landing permettant à un utilisateur anonyme de réaliser un prêt" },
         {
-          name: "Programme de fidélité",
+          name: "Mise en place d'un programme de fidélité",
           subtasks: [
-            { name: "Coordination des phases de conception / réalisation / livraison" },
+            { name: "Découpage fonctionnel" },
+            { name: "Conception" },
+            { name: "Développements backend" },
+          ],
+        },
+        {
+          name: "Mise en place d'un système de parrainage",
+          subtasks: [
             { name: "Découpage fonctionnel" },
             { name: "Conception" },
             { name: "Développements backend" },
