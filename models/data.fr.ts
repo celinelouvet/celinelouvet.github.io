@@ -32,6 +32,53 @@ const cv: CV = {
   ],
   experiences: [
     {
+      company: "Pyxo",
+      from: "2022-05-02",
+      role: "Backend developer",
+      description: "Developpeuse backend sur une architecture microservices, fortement évènementielle.",
+      remote: false,
+      projects: [
+        {
+          name: "Pyxo API",
+          description: "Service permettant d'effectuer des emprunts et des retours de contenants réutilisables.",
+        },
+      ],
+      tasks: [
+        { name: "Réalisation d'un POC pour une démo d'appel d'offre" },
+        { name: "Développement d'une landing permettant à un utilisateur anonyme de réaliser un prêt" },
+        {
+          name: "Mise en place d'un programme de fidélité",
+          subtasks: [
+            { name: "Découpage fonctionnel" },
+            { name: "Conception" },
+            { name: "Développements backend" },
+          ],
+        },
+        {
+          name: "Mise en place d'un système de parrainage",
+          subtasks: [
+            { name: "Découpage fonctionnel" },
+            { name: "Conception" },
+            { name: "Développements backend" },
+          ],
+        },
+      ],
+      stacks: [
+        {
+          type: "Infrastructure",
+          technos: ["AWS DynamoDB", "AWS RDS", "AWS CacheCluster", "AWS SQS", "AWS function"],
+        },
+        {
+          type: "Landing",
+          technos: ["VanillaJs"],
+        },
+        {
+          type: "Backend API",
+          technos: ["Node", "Typescript", "Serverless"],
+        },
+      ],
+    },
+    {
       company: "Hubside",
       from: "2021-01-01",
       to: "2022-04-25",
