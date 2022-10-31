@@ -145,7 +145,7 @@ export default class TalkDetails extends Vue {
 }
 
 .subjobs {
-  border-left: 2px solid var(--bs-gray-400);
+  border-left: 2px solid var(--cv-blue);
 }
 
 .subjob {
@@ -160,7 +160,7 @@ export default class TalkDetails extends Vue {
 
   content: "●";
   font-family: "Glyphicons Halflings";
-  color: var(--bs-gray-400);
+  color: var(--cv-blue);
 }
 
 .cv-small {
@@ -254,6 +254,12 @@ export default class TalkDetails extends Vue {
   }
   .subjob {
     break-inside: avoid-page;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .subjob > .header .company::before {
+    color: var(--cv-blue-light);
   }
 }
 </style>
