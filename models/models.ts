@@ -21,9 +21,9 @@ export type Project = {
 
 export type RemoteType = "FULLTIME" | "HYBRID" | "NONE";
 type Remote = {
-  type: RemoteType, 
-  where: string
-}
+  type: RemoteType;
+  where: string;
+};
 
 type Social = {
   name: string;
