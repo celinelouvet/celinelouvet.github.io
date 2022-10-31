@@ -2,7 +2,7 @@
   <div>
     <h2>{{ $t("title") }}</h2>
     <ul class="list-unstyled">
-      <li v-for="remote in cv.remote">{{ $t(`remoteType.${remote.type}`, { location: remote.where }) }}</li>
+      <li v-for="(remote, index) in cv.remote" :key="index">{{ $t(`remoteType.${remote.type}`, { location: remote.where }) }}</li>
     </ul>
   </div>
 </template>
