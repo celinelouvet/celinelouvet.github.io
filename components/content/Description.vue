@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>{{ $t("title") }}</h2>
-    <p>{{ cv.description }}</p>
+    <p v-for="description in cv.description">{{ description }}</p>
   </div>
 </template>
 

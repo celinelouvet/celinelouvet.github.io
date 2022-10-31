@@ -8,10 +8,13 @@
         >
       </li>
       <li :aria-label="$t('location')">
-        <b-icon-geo-alt-fill class="icon" /><span>{{ cv.location }}</span>
+        <b-icon-geo-alt-fill class="icon" /><span>{{ cv.location }} ({{ cv.zipCode }})</span>
       </li>
-      <li>
-        {{ $t(`remoteType.${cv.remote}`) }}
+      <li :aria-label="$t('experience')">
+        <b-icon-hourglass-split class="icon" /><span>{{ $t("yearsOfExperience", { experience: $moment(cv.firstExperience).fromNow(true) }) }}</span>
+      </li>
+      <li :aria-label="$t('experience')">
+        <b-icon-bicycle class="icon" /><span>{{ cv.hobbies }}</span>
       </li>
     </ul>
   </div>
@@ -22,11 +25,9 @@
   title: "Mes Infos",
   email: "Email",
   location: "Adresse",
-  remoteType: {
-    FULLTIME: "Télétravail à temps plein",
-    "2_DAYS": "Télétravail à temps partiel (minimum 2 jours / semaine)",
-    NONE: "Travail en présentiel",
-  },
+  experience: "Expérience",
+  yearsOfExperience: "{experience} d'expérience",
+  hobbies: "Loisirs",
 }
 </i18n>
 
@@ -35,11 +36,9 @@
   title: "My Infos",
   email: "Email",
   location: "Location",
-  remoteType: {
-    FULLTIME: "Full-time remote",
-    "2_DAYS": "Part-time remote (2 days / week min.)",
-    NONE: "No remote",
-  },
+  experience: "Experience",
+  yearsOfExperience: "{experience} of experience",
+  hobbies: "Hobbies",
 }
 </i18n>
 
