@@ -1,5 +1,5 @@
 <template>
-  <div class="job-container">
+  <div class="job-container" :class="{ summarize: summarize }">
     <div class="header">
       <span class="h3 company">{{ job.company }}</span>
       <span class="cv-small">{{ from }} - {{ to }}</span>
@@ -13,7 +13,7 @@
     <p class="description">{{ job.description }}</p>
     <div class="details">
       <div v-if="job.projects" class="projects">
-        <h4>{{ $tc("project", job.projects.length) }}</h4>
+        <h4 :class="{ 'd-print-none': summarize }">{{ $tc("project", job.projects.length) }}</h4>
         <div class="projects-content" :class="{ one: job.projects.length === 1 }">
           <div v-for="project in job.projects" :key="project" class="project">
             <div class="name">{{ project.name }}</div>
@@ -21,7 +21,7 @@
           </div>
         </div>
       </div>
-      <div v-if="job.tasks" class="tasks hidden d-print-none" :class="{ show: details }">
+      <div v-if="job.tasks" class="tasks hidden d-print-none" :class="{ show: details && !summarize }">
         <h4>{{ $t("tasks") }}</h4>
         <ul>
           <li v-for="task in job.tasks" :key="task.name">
@@ -37,15 +37,17 @@
       <div v-if="job.sideRoles" class="sideroles hidden d-print-none" :class="{ show: details }">
         <ContentSideRole v-for="sideRole in job.sideRoles" :key="`${sideRole.company}-${sideRole.from}`" :side-role="sideRole" />
       </div>
-      <div v-if="job.stacks" class="stacks hidden" :class="{ show: details }">
-        <h4>{{ $t("stacks") }}</h4>
-        <div v-if="job.stacks.length === 1" :set="(stack = job.stacks[0])">
-          {{ stack.technos.join(", ") }}
-        </div>
-        <div v-else class="stacks-content" :class="{ one: job.stacks.length === 1 }">
-          <div v-for="stack in job.stacks" :key="stack" class="stack">
-            <div class="type">{{ stack.type }}</div>
-            <div class="technos">{{ stack.technos.join(", ") }}</div>
+      <div v-if="!summarize">
+        <div v-if="job.stacks" class="stacks hidden" :class="{ show: details }">
+          <h4>{{ $t("stacks") }}</h4>
+          <div v-if="job.stacks.length === 1" :set="(stack = job.stacks[0])">
+            {{ stack.technos.join(", ") }}
+          </div>
+          <div v-else class="stacks-content" :class="{ one: job.stacks.length === 1 }">
+            <div v-for="stack in job.stacks" :key="stack" class="stack">
+              <div class="type">{{ stack.type }}</div>
+              <div class="technos">{{ stack.technos.join(", ") }}</div>
+            </div>
           </div>
         </div>
       </div>
@@ -56,6 +58,7 @@
         :key="`${subjob.company}-${subjob.from}`"
         :job="subjob"
         :details="details"
+        :summarize="summarize || subjob.summarize"
         class="subjob"
       />
     </div>
@@ -92,9 +95,10 @@ import { Vue, Component, Prop } from "vue-property-decorator";
 import { Experience } from "~/models";
 
 @Component
-export default class TalkDetails extends Vue {
+export default class ExperienceDetails extends Vue {
   @Prop({ default: {} }) readonly job!: Experience;
   @Prop({ default: false }) readonly details!: boolean;
+  @Prop({ default: false }) readonly summarize!: boolean;
 
   get remote() {
     return this.job.remote ? `- ${this.$t("remote")}` : "";
@@ -140,12 +144,15 @@ export default class TalkDetails extends Vue {
 </script>
 
 <style scoped>
-.job-container {
+.job-container:not(.summarize) {
   margin-bottom: var(--cv-size-3x);
+}
+.job-container.summarize:not(.subjob) {
+  margin-bottom: var(--cv-size-2x);
 }
 
 .subjobs {
-  border-left: 2px solid var(--bs-gray-400);
+  border-left: 2px solid var(--cv-blue);
 }
 
 .subjob {
@@ -160,7 +167,7 @@ export default class TalkDetails extends Vue {
 
   content: "●";
   font-family: "Glyphicons Halflings";
-  color: var(--bs-gray-400);
+  color: var(--cv-blue);
 }
 
 .cv-small {
@@ -177,11 +184,6 @@ export default class TalkDetails extends Vue {
 }
 
 @media screen {
-  h4,
-  .h4 {
-    font-size: 1.6em;
-  }
-
   .company {
     font-size: 2.1em;
   }
@@ -225,6 +227,16 @@ export default class TalkDetails extends Vue {
 }
 
 @media print {
+  .job-container:not(.summarize) {
+    margin-bottom: var(--cv-size-2x);
+  }
+  .job-container.summarize:not(.subjob) {
+    margin-bottom: var(--cv-size-2x);
+  }
+  .job-container.summarize {
+    margin-bottom: var(--cv-size);
+  }
+
   .projects-content,
   .stacks-content {
     padding-left: var(--cv-size-2x);
@@ -243,6 +255,11 @@ export default class TalkDetails extends Vue {
     padding-bottom: var(--cv-size-05x);
   }
 
+  .summarize .project .name,
+  .summarize .project .description {
+    grid-column: 1 / span 2;
+  }
+
   .header,
   .job-container > .description,
   .job-container > .details,
@@ -254,6 +271,12 @@ export default class TalkDetails extends Vue {
   }
   .subjob {
     break-inside: avoid-page;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .subjob > .header .company::before {
+    color: var(--cv-blue-light);
   }
 }
 </style>

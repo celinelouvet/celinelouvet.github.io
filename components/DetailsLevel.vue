@@ -45,15 +45,33 @@ export default class DetailsLevel extends Vue {
 
 <style scoped>
 [type="checkbox"].details:checked {
-  background-color: var(--cv-blue);
+  background-color: var(--cv-blue-darkest);
+  border-color: var(--cv-blue-darkest);
+  background-image: var(--dot-blue-ultralight);
+}
+[type="checkbox"].details:not(:checked) {
   border-color: var(--cv-blue);
+  background-color: var(--cv-blue-ultralight);
+  background-image: var(--dot-blue);
 }
 [type="checkbox"].details:focus {
-  border-color: var(--cv-blue);
-  box-shadow: 0 0 0 0.25rem rgba(var(--cv-blue-ultralight-rgb), 30%);
+  border-color: var(--cv-blue-darkest);
+  box-shadow: 0 0 0 0.25rem rgba(var(--cv-blue-rgb), 30%);
 }
 [type="checkbox"].details:not(:checked):focus {
-  border-color: var(--cv-blue-ultralight);
-  background-image: var(--dot-blue-light);
+  border-color: var(--cv-blue);
+  background-image: var(--dot-blue);
+}
+
+@media (prefers-color-scheme: dark) {
+  [type="checkbox"].details:checked {
+    background-color: var(--cv-blue-dark);
+    border-color: var(--cv-blue-dark);
+    background-image: var(--dot-blue-ultralight);
+  }
+  [type="checkbox"].details:not(:checked) {
+    background-color: var(--cv-blue-ultralight);
+    background-image: var(--dot-blue-light);
+  }
 }
 </style>

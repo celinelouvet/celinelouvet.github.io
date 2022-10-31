@@ -1,11 +1,14 @@
 :root {
   --photo-size: 200px;
   --summary-width: calc(var(--photo-size) * 1.5);
-  --cv-blue: #2a5978;
-  --cv-blue-rgb: 42, 89, 120;
-  --cv-blue-light: #428cbd;
-  --cv-blue-ultralight: #a1c5de;
-  --cv-blue-ultralight-rgb: 161, 197, 222;
+  --cv-blue-darkest: #2a5978;
+  --cv-blue-darkest-rgb: 42, 89, 120;
+  --cv-blue-dark: #4990bf;
+  --cv-blue: #94beda;
+  --cv-blue-rgb: 148, 190, 218;
+  --cv-blue-light: #bad5e7;
+  --cv-blue-lighter: #d5e5f0;
+  --cv-blue-ultralight: #f3f8fb;
   --cv-gray: #e3e8ec;
   --cv-size-05x: 6px;
   --cv-size: 12px;
@@ -19,7 +22,9 @@
 
   --bs-body-font-family: var(--default-font);
   --bs-body-font-size: 14px;
-  --dot-blue-light: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23a1c5de'/%3e%3c/svg%3e");
+  --dot-blue: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23bad5e7'/%3e%3c/svg%3e");
+  --dot-blue-light: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23d5e5f0'/%3e%3c/svg%3e");
+  --dot-blue-ultralight: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23f3f8fb'/%3e%3c/svg%3e");
 }
 
 @media print {
@@ -44,11 +49,11 @@ body,
   min-height: 100vh;
 }
 a {
-  color: var(--cv-blue-light);
+  color: var(--cv-blue-dark);
   font-weight: 600;
 }
 a:hover {
-  color: var(--cv-blue);
+  color: var(--cv-blue-darkest);
   font-weight: 600;
 }
 
@@ -81,6 +86,16 @@ h3,
   font-size: 1.7em;
 }
 
+h4,
+.h4 {
+  font-size: 1.5em;
+}
+
+h5,
+.h5 {
+  font-size: 1.3em;
+}
+
 @media print {
   h2,
   .h2 {
@@ -95,6 +110,11 @@ h3,
   .h4 {
     font-size: 16px;
   }
+
+  h5,
+  .h5 {
+    font-size: 14px;
+  }
 }
 
 .grid {
@@ -105,4 +125,13 @@ h3,
 .date {
   padding-left: var(--cv-size);
   color: var(--bs-gray-600);
+}
+
+@media (prefers-color-scheme: dark) {
+  a {
+    color: var(--cv-blue);
+  }
+  a:hover {
+    color: var(--cv-blue-dark);
+  }
 }

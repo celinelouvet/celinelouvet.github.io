@@ -5,6 +5,7 @@
       v-for="(xp, index) in cv.experiences"
       :key="`${xp.company}-${xp.from}`"
       :job="xp"
+      :summarize="xp.summarize"
       :details="details"
       :class="`experience-${index}`"
     />

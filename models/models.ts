@@ -64,6 +64,7 @@ export type Experience = Period &
   Role & {
     company?: string;
     remote?: boolean;
+    summarize?: boolean;
     jobs?: Experience[];
     sideRoles?: Experience[];
     projects?: Project[];
