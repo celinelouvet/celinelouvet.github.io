@@ -4,12 +4,19 @@ const cv: CV = {
   firstname: "Céline",
   lastname: "Louvet",
   birthdate: "1980-12-02",
+  firstExperience: "2006-02-01",
   email: "celine.louvet@gmail.com",
   title: "Senior lead developer",
-  location: "Lyon (69006)",
-  remote: "FULLTIME",
+  location: "Lyon",
+  zipCode: "69006",
+  remote: [{type: "FULLTIME", where: "France / Europe"}, {type:"HYBRID", where: "Lyon"}],
+  hobbies: "Dessins, peinture, modelage, sport",
   description:
-    "Développeuse Backend Senior, en Typescript, avec une appétance aux langages fonctionnels. Plusieurs expériences de Technical Leader et de mises en place de méthodes de développement.",
+    [
+      "Développeuse Backend Senior, en Typescript, avec une appétance aux langages fonctionnels.",
+      "Plusieurs expériences de lead developer, avec management d'une équipe de développeurs.",
+      "Plusieurs expériences de Technical Leader, avec reprise de legacy ou de création en partant de zéro, architecture et de mises en place de méthodes de travail.",
+  ],
   skills: [
     "Phase de build, avec objectif stabilité & qualité",
     "Architecture cloud",
@@ -39,8 +46,8 @@ const cv: CV = {
       remote: false,
       projects: [
         {
-          name: "Pyxo API",
-          description: "Service permettant d'effectuer des emprunts et des retours de contenants réutilisables.",
+          name: "Pyxo",
+          description: "Solution permettant d'effectuer des prêts et retours de contenants réutilisables, auprès des restaurateurs clients.",
         },
       ],
       tasks: [

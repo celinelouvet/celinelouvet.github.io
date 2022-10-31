@@ -16,6 +16,7 @@
       <div class="summary">
         <SummaryPicture class="section picture d-none d-lg-block d-print-none" />
         <SummaryInfos class="section infos" />
+        <SummaryRemote class="section remote" />
         <ContentDescription class="section d-lg-none description" />
         <SummarySkills class="section skills" />
         <SummarySocials class="section socials" />
@@ -129,6 +130,10 @@ export default class MainLayout extends Vue {
   .cv-container > div {
     grid-column: 1 / span 2;
   }
+  .summary .section,
+  .summary .section:not(:last-of-type) {
+    padding-bottom: 0;
+  }
   .main-title {
     --photo-size: 100px;
     --summary-width: calc(var(--photo-size) * 2);
@@ -144,16 +149,20 @@ export default class MainLayout extends Vue {
     grid-row-gap: var(--cv-size);
   }
   .skills {
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 3;
     grid-column: 2;
   }
   .description {
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 3;
     grid-column: 3;
   }
   .socials {
     grid-row: 2;
     grid-column: 1;
+  }
+  .remote {
+    grid-row: 3;
+    grid-column: 1 / span 2;
   }
 }
 </style>

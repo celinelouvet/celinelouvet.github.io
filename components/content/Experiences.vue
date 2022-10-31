@@ -46,7 +46,9 @@ export default class Experiences extends Vue {
 
 <style scoped>
 @media print {
-  .experience-1 {
+  /* Specific print adjustments depending on the content */
+  .experience-1,
+  .experience-3 {
     break-before: always;
   }
 }

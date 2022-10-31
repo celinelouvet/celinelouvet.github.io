@@ -19,7 +19,11 @@ export type Project = {
   description: string;
 };
 
-export type RemoteType = "FULLTIME" | "2_DAYS" | "NONE";
+export type RemoteType = "FULLTIME" | "HYBRID" | "NONE";
+type Remote = {
+  type: RemoteType, 
+  where: string
+}
 
 type Social = {
   name: string;
@@ -70,11 +74,14 @@ export type CV = {
   firstname: string;
   lastname: string;
   birthdate: string;
+  firstExperience: string;
   email: string;
   title: string;
   location: string;
-  remote: RemoteType;
-  description: string;
+  zipCode: string;
+  remote: Remote[];
+  hobbies: string;
+  description: string[];
   skills: string[];
   socials: Social[];
   experiences: Experience[];
