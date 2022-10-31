@@ -435,6 +435,7 @@ const cv: CV = {
           from: "2012-07-01",
           to: "2012-12-31",
           role: "Développeuse Java",
+          summarize: true,
           description: "Evolutions effectuées dans le cadre des changements pour Bâle III.",
           projects: [
             {
@@ -477,6 +478,7 @@ const cv: CV = {
           from: "2012-01-01",
           to: "2012-07-01",
           role: "Architecte junior & Développeuse Java / GWT",
+          summarize: true,
           description:
             "Intégration à la cellule d’architecture développant un socle technique. Ces développements ont nécessité le développement de POC.",
           tasks: [
@@ -521,6 +523,7 @@ const cv: CV = {
           from: "2011-11-01",
           to: "2011-12-31",
           role: "Développeuse Java/GWT & ScrumMaster",
+          summarize: true,
           description:
             "Application primée en interne pour sa simplicité d’utilisation. Réalisation des développements d’une application, dans le cadre d’une formation interne THALES.",
           projects: [
@@ -553,6 +556,7 @@ const cv: CV = {
           to: "2011-10-31",
           role: "Développeuse Java/GWT",
           description: "Développeuse junior",
+          summarize: true,
           projects: [
             {
               name: "StoreForce",
@@ -583,6 +587,7 @@ const cv: CV = {
       from: "2007-05-01",
       to: "2011-05-31",
       role: "Opérationnelle & développeuse",
+      summarize: true,
       jobs: [
         {
           company: "SGCIB",
@@ -676,6 +681,7 @@ const cv: CV = {
       from: "2006-02-01",
       to: "2007-05-31",
       role: "Ingénieur tests automatiques",
+      summarize: true,
       jobs: [
         {
           company: "Bouygues Télécom",
