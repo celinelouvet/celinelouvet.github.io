@@ -65,7 +65,7 @@ export default class MainLayout extends Vue {
 }
 
 .main-title {
-  background: linear-gradient(
+  background-image: linear-gradient(
     180deg,
     rgba(var(--cv-blue-darkest-rgb), 1),
     rgba(var(--cv-blue-darkest-rgb), 1) 93%,

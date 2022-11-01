@@ -1,0 +1,21 @@
+{
+  "name": "celinelouvet-cv",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint:ts": "eslint --ext \".ts,.js,.vue\" --ignore-path .gitignore .",
+    "lint": "yarn lint:ts",
+    "pdf": "ts-node --project tsconfig.json ./generate-pdf.ts"
+  },
+  "dependencies": {
+    "eslint": "^8.4.1",
+    "prettier": "^2.5.1",
+    "typescript": "^4.8.4"
+  },
+  "devDependencies": {
+    "@types/yargs": "^17.0.13",
+    "puppeteer": "^19.2.0",
+    "ts-node": "^10.9.1",
+    "yargs": "^17.6.2"
+  }
+}
