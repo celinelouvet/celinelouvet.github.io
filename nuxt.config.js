@@ -88,4 +88,6 @@ export default {
       },
     ],
   },
+
+  ignore: "pdf-generator/",
 };
