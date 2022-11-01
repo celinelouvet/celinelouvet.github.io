@@ -1,0 +1,54 @@
+name: cd-appengine
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Deploy:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [16]
+
+    permissions:
+      contents: "read"
+      id-token: "write"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Setup node env
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Generate
+        run: yarn generate
+
+      - id: auth
+        name: Auth to GCP
+        uses: google-github-actions/auth@v0
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - id: deploy
+        name: Deploy to GCP AppEngine
+        uses: google-github-actions/deploy-appengine@v0
+        with:
+          deliverables: "app.yaml"
+          promote: false
+          version: "v1"
+
+      - name: Test default URL
+        run: curl "${{ steps.deploy.outputs.url }}"
+
+      - name: Test CNAME URL
+        run: curl "https://celine.louvet.me"
