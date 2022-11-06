@@ -9,7 +9,7 @@
       <span v-else class="cv-small">({{ $tc("years", diff.years) }} {{ $tc("months", diff.months) }})</span>
       <span class="cv-small">{{ remote }}</span>
     </div>
-    <h4 v-if="job.role">{{ job.role }}</h4>
+    <h4 v-if="job.role" class="role">{{ job.role }}</h4>
     <p class="description">{{ job.description }}</p>
     <div class="details">
       <div v-if="job.projects" class="projects">
@@ -54,12 +54,12 @@
     </div>
     <div v-if="job.jobs" class="subjobs">
       <ContentExperienceDetails
-        v-for="subjob in job.jobs"
+        v-for="(subjob, index) in job.jobs"
         :key="`${subjob.company}-${subjob.from}`"
         :job="subjob"
         :details="details"
         :summarize="summarize || subjob.summarize"
-        class="subjob"
+        :class="`subjob subjob-${index}`"
       />
     </div>
   </div>
@@ -234,7 +234,7 @@ export default class ExperienceDetails extends Vue {
     margin-bottom: var(--cv-size-2x);
   }
   .job-container.summarize {
-    margin-bottom: var(--cv-size);
+    margin-bottom: var(--cv-size-2x);
   }
 
   .projects-content,
@@ -260,17 +260,37 @@ export default class ExperienceDetails extends Vue {
     grid-column: 1 / span 2;
   }
 
-  .header,
-  .job-container > .description,
-  .job-container > .details,
-  .projects {
+  .job-container > .header {
+    break-after: avoid;
+  }
+  .job-container > .role {
+    break-after: avoid;
+  }
+  .job-container > .description {
+    break-after: avoid;
+  }
+
+  /* .job-container .stacks {
+    break-inside: avoid-page;
+  } */
+
+  /* .job-container > .details {
     break-after: avoid-page;
-  }
-  .subjobs {
+  } */
+
+  /* .projects {
+    break-after: avoid-page;
+  } */
+  /* .subjobs {
     break-before: avoid-page;
-  }
+  } */
+
   .subjob {
     break-inside: avoid-page;
+  }
+
+  .subjob-0 {
+    break-before: avoid-page;
   }
 }
 

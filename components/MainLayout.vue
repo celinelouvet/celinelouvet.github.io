@@ -22,7 +22,10 @@
         <SummarySocials class="section socials" />
       </div>
       <div class="content">
-        <DetailsLevel class="details-container d-print-none" @details-change="details = $event" />
+        <div class="d-print-none d-flex justify-content-end align-items-center">
+          <PdfDownloader class="downloader" />
+          <DetailsLevel @details-change="details = $event" />
+        </div>
         <ContentDescription class="section d-none d-lg-block" />
         <ContentExperiences :details="details" class="section" />
         <ContentTalks class="section" />
@@ -65,7 +68,7 @@ export default class MainLayout extends Vue {
 }
 
 .main-title {
-  background: linear-gradient(
+  background-image: linear-gradient(
     180deg,
     rgba(var(--cv-blue-darkest-rgb), 1),
     rgba(var(--cv-blue-darkest-rgb), 1) 93%,
@@ -97,6 +100,10 @@ export default class MainLayout extends Vue {
 .main-title .job-title {
   font-size: 2.25em;
   padding-bottom: var(--cv-size-3x);
+}
+
+.downloader {
+  margin-right: 2.5em;
 }
 
 .summary,

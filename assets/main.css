@@ -29,7 +29,7 @@
 
 @media print {
   :root {
-    --bs-body-font-size: 12px;
+    --bs-body-font-size: 11px;
   }
 }
 
@@ -38,6 +38,9 @@ html {
   font-smooth: always;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+
+  -webkit-print-color-adjust: exact !important;
+  -webkit-filter: opacity(1) !important;
 }
 
 body {
@@ -55,6 +58,19 @@ a {
 a:hover {
   color: var(--cv-blue-darkest);
   font-weight: 600;
+}
+
+.btn-primary {
+  color: #fff;
+  font-weight: 600;
+  background-color: var(--cv-blue-dark);
+  border-color: var(--cv-blue-dark);
+}
+.btn-primary:hover {
+  color: #fff;
+  font-weight: 600;
+  background-color: var(--cv-blue-darkest);
+  border-color: var(--cv-blue-darkest);
 }
 
 *,

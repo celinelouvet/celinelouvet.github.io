@@ -7,6 +7,11 @@
           ><a :href="`mailto:${cv.email}`">{{ cv.email }}</a></span
         >
       </li>
+      <li :aria-label="$t('website')">
+        <b-icon-globe class="icon" /><span
+          ><a :href="cv.website">{{ cv.website.replace("https://", "") }}</a></span
+        >
+      </li>
       <li :aria-label="$t('location')">
         <b-icon-geo-alt-fill class="icon" /><span>{{ cv.location }} ({{ cv.zipCode }})</span>
       </li>
@@ -28,6 +33,7 @@
   experience: "Expérience",
   yearsOfExperience: "{experience} d'expérience",
   hobbies: "Loisirs",
+  website: "Site web",
 }
 </i18n>
 
@@ -39,6 +45,7 @@
   experience: "Experience",
   yearsOfExperience: "{experience} of experience",
   hobbies: "Hobbies",
+  website: "Website",
 }
 </i18n>
 

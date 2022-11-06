@@ -77,6 +77,7 @@ export type CV = {
   birthdate: string;
   firstExperience: string;
   email: string;
+  website: string;
   title: string;
   location: string;
   zipCode: string;
