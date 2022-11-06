@@ -2,7 +2,7 @@
   <div class="talks">
     <h2>{{ $t("title") }}</h2>
     <div class="content">
-      <div v-for="talk in cv.talks" :key="talk.from">
+      <div v-for="talk in talks" :key="talk.topic">
         <ContentTalkDetails :talk="talk" />
       </div>
     </div>
@@ -22,15 +22,13 @@
 </i18n>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
+import { Vue, Component, Prop } from "vue-property-decorator";
 
-import { cv, CV } from "~/models";
+import { Talk } from "~/models";
 
 @Component
 export default class Talks extends Vue {
-  get cv(): CV {
-    return cv;
-  }
+  @Prop({ default: [] }) readonly talks!: Talk[];
 }
 </script>
 

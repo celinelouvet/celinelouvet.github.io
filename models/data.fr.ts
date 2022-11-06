@@ -10,12 +10,12 @@ const cv: CV = {
   title: "Senior lead developer",
   location: "Lyon",
   zipCode: "69006",
-  remote: [
+  remotes: [
     { type: "FULLTIME", where: "France / Europe" },
     { type: "HYBRID", where: "Lyon" },
   ],
   hobbies: "Dessins, peinture, modelage, sport",
-  description: [
+  descriptions: [
     "Développeuse Backend Senior, en Typescript, avec une appétance aux langages fonctionnels.",
     "Plusieurs expériences de lead developer, avec management d'une équipe de développeurs.",
     "Plusieurs expériences de Technical Leader, avec reprise de legacy ou de création en partant de zéro, architecture et de mises en place de méthodes de travail.",

@@ -15,22 +15,22 @@
       </div>
       <div class="summary">
         <SummaryPicture class="section picture d-none d-lg-block d-print-none" />
-        <SummaryInfos class="section infos" />
-        <SummaryRemote class="section remote" />
-        <ContentDescription class="section d-lg-none description" />
-        <SummarySkills class="section skills" />
-        <SummarySocials class="section socials" />
+        <SummaryInfos class="section infos" :cv="cv" />
+        <SummaryRemote class="section remote" :remotes="cv.remotes" />
+        <ContentDescription class="section d-lg-none description" :descriptions="cv.descriptions" />
+        <SummarySkills class="section skills" :skills="cv.skills" />
+        <SummarySocials class="section socials" :socials="cv.socials" />
       </div>
       <div class="content">
         <div class="d-print-none d-flex justify-content-end align-items-center">
           <PdfDownloader class="downloader" />
           <DetailsLevel @details-change="details = $event" />
         </div>
-        <ContentDescription class="section d-none d-lg-block" />
-        <ContentExperiences :details="details" class="section" />
-        <ContentTalks class="section" />
-        <ContentEducations class="section" />
-        <ContentCertifications class="section" />
+        <ContentDescription class="section d-none d-lg-block" :descriptions="cv.descriptions" />
+        <ContentExperiences :details="details" class="section" :experiences="cv.experiences" />
+        <ContentTalks class="section" :talks="cv.talks" />
+        <ContentEducations class="section" :educations="cv.educations" />
+        <ContentCertifications class="section" :certifications="cv.certifications" />
       </div>
     </div>
   </div>

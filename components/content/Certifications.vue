@@ -2,7 +2,7 @@
   <div class="certifications">
     <h2>{{ $t("title") }}</h2>
     <div class="content">
-      <ContentCertificationDetails v-for="certification in cv.certifications" :key="certification.when" :certification="certification" />
+      <ContentCertificationDetails v-for="certification in certifications" :key="certification.when" :certification="certification" />
     </div>
   </div>
 </template>
@@ -20,15 +20,13 @@
 </i18n>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
+import { Vue, Component, Prop } from "vue-property-decorator";
 
-import { cv, CV } from "~/models";
+import { Certification } from "~/models";
 
 @Component
 export default class Certifications extends Vue {
-  get cv(): CV {
-    return cv;
-  }
+  @Prop({ default: [] }) readonly certifications!: Certification[];
 }
 </script>
 
