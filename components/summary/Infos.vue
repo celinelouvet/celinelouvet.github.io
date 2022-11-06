@@ -33,6 +33,7 @@
   experience: "Expérience",
   yearsOfExperience: "{experience} d'expérience",
   hobbies: "Loisirs",
+  website: "Site web",
 }
 </i18n>
 
@@ -44,6 +45,7 @@
   experience: "Experience",
   yearsOfExperience: "{experience} of experience",
   hobbies: "Hobbies",
+  website: "Website",
 }
 </i18n>
 

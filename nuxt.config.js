@@ -51,6 +51,7 @@ export default {
     components: [
       "BAvatar",
       "BContainer",
+      "BButton",
       "BDropdown",
       "BDropdownItem",
       "BFormCheckbox",
@@ -62,6 +63,7 @@ export default {
       "BIconCalendarWeekFill",
       "BIconHourglassSplit",
       "BIconBicycle",
+      "BIconFileEarmarkPdfFill",
     ],
   },
 

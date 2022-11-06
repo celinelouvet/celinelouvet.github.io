@@ -74,7 +74,7 @@ async function screenshotPage(url: string, imagePath: string) {
     console.log("[PDF] Page loaded", { url });
 
     await page.emulateMediaType("print");
-    await page.screenshot({ path: imagePath, fullPage: true });
+    await page.screenshot({ path: imagePath });
 
     await browser.close();
     console.log("[PDF] Screenshot generated");

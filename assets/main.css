@@ -60,6 +60,19 @@ a:hover {
   font-weight: 600;
 }
 
+.btn-primary {
+  color: #fff;
+  font-weight: 600;
+  background-color: var(--cv-blue-dark);
+  border-color: var(--cv-blue-dark);
+}
+.btn-primary:hover {
+  color: #fff;
+  font-weight: 600;
+  background-color: var(--cv-blue-darkest);
+  border-color: var(--cv-blue-darkest);
+}
+
 *,
 *::before,
 *::after {
