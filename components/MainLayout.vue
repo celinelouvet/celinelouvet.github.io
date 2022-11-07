@@ -39,7 +39,7 @@
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
 
-import { cv, CV } from "~/models";
+import { enCv, frCv, CV } from "~/models";
 
 @Component
 export default class MainLayout extends Vue {
@@ -48,7 +48,11 @@ export default class MainLayout extends Vue {
   languageFlip: boolean = process.env.ACTIVATE_LANGUAGE === "true";
 
   get cv(): CV {
-    return cv;
+    if (this.$i18n.locale === "fr") {
+      return frCv;
+    }
+
+    return enCv;
   }
 }
 </script>

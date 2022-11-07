@@ -108,7 +108,7 @@ const cv: CV = {
         },
         {
           type: "Frontend",
-          technos: ["PWA", "ReactJs", "Typescript", "Jest", "Cypress", "GraphQL (Apollo Client)"],
+          technos: ["PWA", "ReactJs", "Typescript", "Jest", "Cypress", "GraphQL (Apollo Client)", "Storybook"],
         },
         {
           type: "Backend",
@@ -150,7 +150,7 @@ const cv: CV = {
             },
             {
               type: "Frontend",
-              technos: ["ReactJs", "Typescript", "Jest", "Cypress", "GraphQL (Apollo Client)"],
+              technos: ["ReactJs", "Typescript", "Jest", "Cypress", "GraphQL (Apollo Client)", "Storybook"],
             },
             {
               type: "Backend",

@@ -1,2 +1,3 @@
 export * from "./models";
-export { default as cv } from "./data.fr";
+export { default as frCv } from "./data.fr";
+export { default as enCv } from "./data.en";
