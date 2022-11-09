@@ -33,11 +33,8 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Install main dependencies
-        run: yarn
-
-      - name: Install pdf-generator dependencies
-        run: cd pdf-generator && yarn
+      - name: Install dependencies
+        run: yarn && cd pdf-generator && yarn
 
       - name: Generate
         run: yarn generate

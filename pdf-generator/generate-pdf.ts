@@ -27,7 +27,7 @@ async function exists(path: string): Promise<boolean> {
   try {
     await fs.promises.access(path);
     return true;
-  } catch (error) {
+  } catch (error: unknown) {
     return false;
   }
 }
@@ -56,12 +56,12 @@ function openPage(browser: Browser): Promise<Page> {
           }
           resolve(page);
         });
-        page.on("error", (error) => reject(error));
-        page.on("pageerror", (error) => reject(error));
+        page.on("error", (error: unknown) => reject(error));
+        page.on("pageerror", (error: unknown) => reject(error));
 
         resolve(page);
       })
-      .catch((error) => reject(error));
+      .catch((error: unknown) => reject(error));
   });
 }
 
@@ -84,13 +84,13 @@ async function screenshotPage(url: string, imagePath: string) {
 
     await browser.close();
     console.log("[PDF] Screenshot generated");
-  } catch (error) {
+  } catch (error: unknown) {
     console.error("[PDF] Couldn't screenshot the page", { path: url, error });
     throw error;
   }
 }
 
-async function printPage(url: string, pdfPath?: string): Promise<Buffer> {
+async function printPage(url: string, pdfPath?: string): Promise<void> {
   try {
     console.log("[PDF] Generating PDF", { url, pdfPath });
 
@@ -104,7 +104,7 @@ async function printPage(url: string, pdfPath?: string): Promise<Buffer> {
     await page.waitForNetworkIdle({ idleTime: 500 });
     console.log("[PDF] Page loaded", { url });
 
-    const pdfBuffer = await page.pdf({
+    await page.pdf({
       printBackground: true,
       format: "A4",
       ...(pdfPath && { path: pdfPath }),
@@ -118,9 +118,7 @@ async function printPage(url: string, pdfPath?: string): Promise<Buffer> {
 
     await browser.close();
     console.log("[PDF] PDF generated");
-
-    return pdfBuffer;
-  } catch (error) {
+  } catch (error: unknown) {
     console.error("[PDF] Couldn't print the page", { path: url, error });
     throw error;
   }
@@ -143,7 +141,7 @@ async function printLanguage({ folder, suffix }: Language): Promise<void> {
     await printPage(url, pdfFile);
 
     console.log(`[PDF] ${folder} finished`);
-  } catch (error) {
+  } catch (error: unknown) {
     console.error(`Error while generating: ${error}`);
   }
 }
