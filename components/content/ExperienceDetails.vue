@@ -15,7 +15,7 @@
       <div v-if="job.projects" class="projects">
         <h4 :class="{ 'd-print-none': summarize }">{{ $tc("project", job.projects.length) }}</h4>
         <div class="projects-content" :class="{ one: job.projects.length === 1 }">
-          <div v-for="project in job.projects" :key="project" class="project">
+          <div v-for="project in job.projects" :key="project.name" class="project">
             <div class="name">{{ project.name }}</div>
             <div class="description">{{ project.description }}</div>
           </div>
@@ -40,11 +40,10 @@
       <div v-if="!summarize">
         <div v-if="job.stacks" class="stacks hidden" :class="{ show: details }">
           <h4>{{ $t("stacks") }}</h4>
-          <div v-if="job.stacks.length === 1" :set="(stack = job.stacks[0])">
-            {{ stack.technos.join(", ") }}
-          </div>
+          <div v-if="job.stacks.length === 1">{{ job.stacks[0].technos.join(", ") }}</div>
+
           <div v-else class="stacks-content" :class="{ one: job.stacks.length === 1 }">
-            <div v-for="stack in job.stacks" :key="stack" class="stack">
+            <div v-for="stack in job.stacks" :key="stack.type" class="stack">
               <div class="type">{{ stack.type }}</div>
               <div class="technos">{{ stack.technos.join(", ") }}</div>
             </div>

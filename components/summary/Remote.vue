@@ -2,7 +2,7 @@
   <div>
     <h2>{{ $t("title") }}</h2>
     <ul class="list-unstyled">
-      <li v-for="(remote, index) in cv.remote" :key="index">{{ $t(`remoteType.${remote.type}`, { location: remote.where }) }}</li>
+      <li v-for="(remote, index) in remotes" :key="index">{{ $t(`remoteType.${remote.type}`, { location: remote.where }) }}</li>
     </ul>
   </div>
 </template>
@@ -30,15 +30,13 @@
 </i18n>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
+import { Vue, Component, Prop } from "vue-property-decorator";
 
-import { cv, CV } from "~/models";
+import { Remote } from "~/models";
 
 @Component
 export default class Infos extends Vue {
-  get cv(): CV {
-    return cv;
-  }
+  @Prop({ default: [] }) readonly remotes!: Remote[];
 }
 </script>
 

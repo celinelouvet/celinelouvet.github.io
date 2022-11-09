@@ -6,31 +6,29 @@
           <SummaryPicture />
         </div>
         <div>
-          <div v-if="languageFlip" class="d-flex justify-content-end d-print-none">
-            <LanguageSwitcher />
-          </div>
           <h1 class="name">{{ cv.firstname }} {{ cv.lastname }}</h1>
           <h2 class="job-title">{{ cv.title }}</h2>
         </div>
       </div>
       <div class="summary">
         <SummaryPicture class="section picture d-none d-lg-block d-print-none" />
-        <SummaryInfos class="section infos" />
-        <SummaryRemote class="section remote" />
-        <ContentDescription class="section d-lg-none description" />
-        <SummarySkills class="section skills" />
-        <SummarySocials class="section socials" />
+        <SummaryInfos class="section infos" :cv="cv" />
+        <SummaryRemote class="section remote" :remotes="cv.remotes" />
+        <ContentDescription class="section d-lg-none description" :descriptions="cv.descriptions" />
+        <SummarySkills class="section skills" :skills="cv.skills" />
+        <SummarySocials class="section socials" :socials="cv.socials" />
       </div>
       <div class="content">
-        <div class="d-print-none d-flex justify-content-end align-items-center">
-          <PdfDownloader class="downloader" />
+        <div class="d-print-none d-flex justify-content-end align-items-center actions">
+          <span v-if="languageFlip"><LanguageSwitcher /></span>
+          <PdfDownloader />
           <DetailsLevel @details-change="details = $event" />
         </div>
-        <ContentDescription class="section d-none d-lg-block" />
-        <ContentExperiences :details="details" class="section" />
-        <ContentTalks class="section" />
-        <ContentEducations class="section" />
-        <ContentCertifications class="section" />
+        <ContentDescription class="section d-none d-lg-block" :descriptions="cv.descriptions" />
+        <ContentExperiences :details="details" class="section" :experiences="cv.experiences" />
+        <ContentTalks class="section" :talks="cv.talks" />
+        <ContentEducations class="section" :educations="cv.educations" />
+        <ContentCertifications class="section" :certifications="cv.certifications" />
       </div>
     </div>
   </div>
@@ -39,7 +37,7 @@
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
 
-import { cv, CV } from "~/models";
+import { enCv, frCv, CV } from "~/models";
 
 @Component
 export default class MainLayout extends Vue {
@@ -48,7 +46,11 @@ export default class MainLayout extends Vue {
   languageFlip: boolean = process.env.ACTIVATE_LANGUAGE === "true";
 
   get cv(): CV {
-    return cv;
+    if (this.$i18n.locale === "fr") {
+      return frCv;
+    }
+
+    return enCv;
   }
 }
 </script>
@@ -102,8 +104,14 @@ export default class MainLayout extends Vue {
   padding-bottom: var(--cv-size-3x);
 }
 
-.downloader {
+.actions {
   margin-right: 2.5em;
+}
+
+@media screen and (max-width: 768px) {
+  .actions {
+    margin-bottom: 1.5em;
+  }
 }
 
 .summary,
@@ -123,6 +131,10 @@ export default class MainLayout extends Vue {
 
 .content {
   background-color: white;
+}
+
+.actions > * {
+  margin-left: 1em;
 }
 
 @media print {

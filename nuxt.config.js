@@ -1,3 +1,5 @@
+const defaultLocale = "fr";
+
 export default {
   target: "static",
 
@@ -16,7 +18,7 @@ export default {
   },
 
   env: {
-    ACTIVATE_LANGUAGE: "false",
+    ACTIVATE_LANGUAGE: "true",
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -38,7 +40,7 @@ export default {
     // https://go.nuxtjs.dev/typescript
     "@nuxt/typescript-build",
     "@nuxtjs/google-fonts",
-    ["@nuxtjs/moment", { defaultLocale: "fr", locales: ["fr", "en-gb"], plugins: ["moment-precise-range-plugin"] }],
+    ["@nuxtjs/moment", { defaultLocale, locales: ["fr", "en-gb"], plugins: ["moment-precise-range-plugin"] }],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -56,14 +58,15 @@ export default {
       "BDropdownItem",
       "BFormCheckbox",
       "BIcon",
-      "BIconEnvelopeFill",
-      "BIconGeoAltFill",
-      "BIconTwitter",
-      "BIconLinkedin",
-      "BIconCalendarWeekFill",
-      "BIconHourglassSplit",
       "BIconBicycle",
+      "BIconCalendarWeekFill",
+      "BIconEnvelopeFill",
       "BIconFileEarmarkPdfFill",
+      "BIconGeoAltFill",
+      "BIconHourglassSplit",
+      "BIconLinkedin",
+      "BIconTranslate",
+      "BIconTwitter",
     ],
   },
 
@@ -76,13 +79,13 @@ export default {
 
   i18n: {
     vueI18nLoader: true,
-    defaultLocale: "fr",
+    defaultLocale,
     locales: [
-      // {
-      //   name: "English",
-      //   code: "en",
-      //   iso: "en-US",
-      // },
+      {
+        name: "English",
+        code: "en",
+        iso: "en-US",
+      },
       {
         name: "Français",
         code: "fr",

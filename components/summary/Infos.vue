@@ -50,15 +50,13 @@
 </i18n>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
+import { Vue, Component, Prop } from "vue-property-decorator";
 
-import { cv, CV } from "~/models";
+import { CV } from "~/models";
 
 @Component
 export default class Infos extends Vue {
-  get cv(): CV {
-    return cv;
-  }
+  @Prop({ default: {} }) readonly cv!: CV;
 }
 </script>
 

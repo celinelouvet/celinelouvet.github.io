@@ -2,7 +2,7 @@
   <div class="experiences">
     <h2>{{ $t("title") }}</h2>
     <ContentExperienceDetails
-      v-for="(xp, index) in cv.experiences"
+      v-for="(xp, index) in experiences"
       :key="`${xp.company}-${xp.from}`"
       :job="xp"
       :summarize="xp.summarize"
@@ -27,15 +27,12 @@
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
 
-import { cv, CV, Experience } from "~/models";
+import { Experience } from "~/models";
 
 @Component
 export default class Experiences extends Vue {
+  @Prop({ default: [] }) readonly experiences!: Experience[];
   @Prop({ default: false }) readonly details!: boolean;
-
-  get cv(): CV {
-    return cv;
-  }
 
   sort(experiences: Experience[]) {
     return experiences.sort(({ from: from1 }, { from: from2 }) => {

@@ -1,17 +1,30 @@
 <template>
-  <b-dropdown right variant="outline-light">
+  <b-dropdown variant="primary" size="sm" :aria-label="$t('language')">
     <template #button-content>
-      <span class="language" :set="(flag = `language-flag-${$i18n.locale}`)">
-        <component :is="flag" class="flag" /><span class="language-name">{{ $i18n.localeProperties.name }}</span>
-      </span>
+      <b-icon-translate class="icon icon-language" /> <span class="d-none d-md-inline">{{ $t("language") }}</span>
     </template>
-    <b-dropdown-item v-for="locale in $i18n.locales" :key="locale.code" @click.prevent.stop="changeLocale(locale)">
-      <span class="language" :set="(flag = `language-flag-${locale.code}`)">
-        <component :is="flag" class="flag" /><span class="language-name">{{ locale.name }}</span>
-      </span>
+    <b-dropdown-item
+      v-for="locale in allLocales"
+      :key="locale.code"
+      :active="locale.code === $i18n.locale"
+      @click.prevent.stop="changeLocale(locale)"
+    >
+      <span class="language">{{ locale.name }}</span>
     </b-dropdown-item>
   </b-dropdown>
 </template>
+
+<i18n locale="fr" lang="json5">
+{
+  language: "Langue",
+}
+</i18n>
+
+<i18n locale="en" lang="json5">
+{
+  language: "Language",
+}
+</i18n>
 
 <script lang="ts">
 import { LocaleObject } from "@nuxtjs/i18n";
@@ -37,6 +50,15 @@ export default class LanguageSwitcher extends Vue {
     return localeCodes.get(this.$i18n.locale);
   }
 
+  get allLocales() {
+    return this.$i18n.locales.map((locale: string | LocaleObject) => {
+      if (typeof locale === "string") {
+        return { code: locale, name: locale };
+      }
+      return locale;
+    });
+  }
+
   changeLocale({ code }: LocaleObject) {
     this.$i18n.setLocale(code);
 
@@ -47,17 +69,13 @@ export default class LanguageSwitcher extends Vue {
 </script>
 
 <style scoped>
+.icon-language {
+  font-size: 1em !important;
+  vertical-align: middle !important;
+}
+
 .language {
   line-height: 1em;
-  font-size: 0.85em;
-}
-
-.flag {
-  height: 1em;
-  vertical-align: -0.1em;
-}
-
-.language-name {
-  padding-left: var(--cv-size);
+  font-size: 0.8em;
 }
 </style>

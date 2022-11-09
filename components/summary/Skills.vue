@@ -2,7 +2,7 @@
   <div>
     <h2>{{ $t("title") }}</h2>
     <ul class="list-unstyled">
-      <li v-for="skill in cv.skills" :key="skill" class="skill">{{ skill }}</li>
+      <li v-for="skill in skills" :key="skill" class="skill">{{ skill }}</li>
     </ul>
   </div>
 </template>
@@ -20,15 +20,11 @@
 </i18n>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
-
-import { cv, CV } from "~/models";
+import { Vue, Component, Prop } from "vue-property-decorator";
 
 @Component
 export default class Skills extends Vue {
-  get cv(): CV {
-    return cv;
-  }
+  @Prop({ default: [] }) readonly skills!: string[];
 }
 </script>
 

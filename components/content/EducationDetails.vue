@@ -24,15 +24,11 @@
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
 
-import { cv, CV, Education } from "~/models";
+import { Education } from "~/models";
 
 @Component
 export default class Infos extends Vue {
   @Prop({ default: {} }) readonly education!: Education;
-
-  get cv(): CV {
-    return cv;
-  }
 
   get from() {
     const from = this.education.from;

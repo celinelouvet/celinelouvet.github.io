@@ -2,8 +2,8 @@
   <div>
     <h2>{{ $t("title") }}</h2>
     <ul class="list-unstyled">
-      <li v-for="social in cv.socials" :key="social.link" :set="(icon = `b-icon-${social.name}`)">
-        <component :is="icon" class="icon" /><span
+      <li v-for="social in socials" :key="social.link">
+        <component :is="`b-icon-${social.name}`" class="icon" /><span
           ><a :href="social.link">@{{ social.handle }}</a></span
         >
       </li>
@@ -24,15 +24,13 @@
 </i18n>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
+import { Vue, Component, Prop } from "vue-property-decorator";
 
-import { cv, CV } from "~/models";
+import { Social } from "~/models";
 
 @Component
 export default class Socials extends Vue {
-  get cv(): CV {
-    return cv;
-  }
+  @Prop({ default: [] }) readonly socials!: Social[];
 }
 </script>
 
