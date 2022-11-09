@@ -24,7 +24,10 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Install dependencies
-        run: yarn
+        run: yarn && cd pdf-generator && yarn
+
+      - name: Lint
+        run: yarn lint
 
       - name: Generate
-        run: yarn lint
+        run: yarn generate
