@@ -8,6 +8,12 @@ type Arguments = {
   image: string;
 };
 
+type Language = { folder: string; suffix: string };
+const languages: Language[] = [
+  { folder: "fr", suffix: "" },
+  { folder: "en", suffix: "en" },
+];
+
 const { pdf, image, pageUrl } = yargs(process.argv.slice(2))
   .scriptName("generate-pdf")
   .usage("Usage: $0 --pdf LOUVET_Celine.pdf --image LOUVET_Celine.png --pageUrl http://localhost:3000")
@@ -120,21 +126,31 @@ async function printPage(url: string, pdfPath?: string): Promise<Buffer> {
   }
 }
 
-export async function run(): Promise<void> {
+async function printLanguage({ folder, suffix }: Language): Promise<void> {
   try {
-    console.log("[PDF] Starting", { pdf, image, pageUrl });
+    const pdfFile = `./${folder}/${pdf}`;
+    const imageFile = `./${folder}/${image}`;
+    const url = `${pageUrl}/${suffix}`;
 
-    const pdfFile = `./${pdf}`;
-    const imageFile = `./${image}`;
+    console.log(`[PDF] ${folder} Starting`, { pdfFile, imageFile, url, folder, suffix });
 
     await cleanPrevious(pdfFile);
     await cleanPrevious(imageFile);
-    await screenshotPage(pageUrl, imageFile);
-    await printPage(pageUrl, pdfFile);
 
-    console.log("[PDF] Finished");
+    await fs.promises.mkdir(folder, { recursive: true });
+
+    await screenshotPage(url, imageFile);
+    await printPage(url, pdfFile);
+
+    console.log(`[PDF] ${folder} finished`);
   } catch (error) {
     console.error(`Error while generating: ${error}`);
+  }
+}
+
+export async function run(): Promise<void> {
+  for (const language of languages) {
+    await printLanguage(language);
   }
 }
 
