@@ -9,7 +9,11 @@ import { Vue, Component } from "vue-property-decorator";
 
 @Component
 export default class PdfDownloader extends Vue {
-  file = "https://storage.googleapis.com/celinelouvet-cv.appspot.com/CV/LOUVET_Celine.pdf";
+  get file() {
+    const root = "https://storage.googleapis.com/celinelouvet-cv.appspot.com/CV";
+
+    return `${root}/${this.$i18n.locale}/LOUVET_Celine.pdf`;
+  }
 }
 </script>
 
