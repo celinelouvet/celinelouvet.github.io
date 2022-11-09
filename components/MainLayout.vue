@@ -6,9 +6,6 @@
           <SummaryPicture />
         </div>
         <div>
-          <div v-if="languageFlip" class="d-flex justify-content-end d-print-none">
-            <LanguageSwitcher />
-          </div>
           <h1 class="name">{{ cv.firstname }} {{ cv.lastname }}</h1>
           <h2 class="job-title">{{ cv.title }}</h2>
         </div>
@@ -22,8 +19,9 @@
         <SummarySocials class="section socials" :socials="cv.socials" />
       </div>
       <div class="content">
-        <div class="d-print-none d-flex justify-content-end align-items-center">
-          <PdfDownloader class="downloader" />
+        <div class="d-print-none d-flex justify-content-end align-items-center actions">
+          <span v-if="languageFlip"><LanguageSwitcher /></span>
+          <PdfDownloader />
           <DetailsLevel @details-change="details = $event" />
         </div>
         <ContentDescription class="section d-none d-lg-block" :descriptions="cv.descriptions" />
@@ -106,8 +104,14 @@ export default class MainLayout extends Vue {
   padding-bottom: var(--cv-size-3x);
 }
 
-.downloader {
+.actions {
   margin-right: 2.5em;
+}
+
+@media screen and (max-width: 768px) {
+  .actions {
+    margin-bottom: 1.5em;
+  }
 }
 
 .summary,
@@ -127,6 +131,10 @@ export default class MainLayout extends Vue {
 
 .content {
   background-color: white;
+}
+
+.actions > * {
+  margin-left: 1em;
 }
 
 @media print {
