@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>{{ $t("title") }}</h2>
-    <ul class="list-unstyled">
+    <ul class="list-unstyled list">
       <li v-for="skill in skills" :key="skill" class="skill">{{ skill }}</li>
     </ul>
   </div>
@@ -31,5 +31,11 @@ export default class Skills extends Vue {
 <style scoped>
 .skill {
   padding-bottom: 0.4em;
+}
+
+@media print {
+  .list {
+    margin-bottom: 0;
+  }
 }
 </style>

@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+concurrency: 
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   GCP_DOMAIN: "https://celine.louvet.me"
   PDF_FILE: "LOUVET_Celine"
@@ -103,5 +107,3 @@ jobs:
           path: "./pdf-generator/${{ env.PDF_FILE }}_EN.pdf"
           destination: celinelouvet-cv.appspot.com/CV/
           predefinedAcl: publicRead
-
-      

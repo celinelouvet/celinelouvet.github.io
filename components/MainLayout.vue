@@ -164,9 +164,15 @@ export default class MainLayout extends Vue {
   }
   .summary {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
     grid-column-gap: var(--cv-size);
-    grid-row-gap: var(--cv-size);
+    grid-row-gap: var(--cv-size-2x);
+  }
+
+  .infos {
+    grid-row: 1;
+    grid-column: 1;
   }
   .skills {
     grid-row: 1 / span 3;
@@ -178,7 +184,7 @@ export default class MainLayout extends Vue {
   }
   .socials {
     grid-row: 2;
-    grid-column: 1;
+    grid-column: 1 / span 2;
   }
   .remote {
     grid-row: 3;

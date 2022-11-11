@@ -31,6 +31,7 @@ const cv: CV = {
   socials: [
     { name: "twitter", handle: "celine_louvet", link: "https://twitter.com/celine_louvet" },
     { name: "linkedin", handle: "celinelouvet", link: "https://www.linkedin.com/in/celinelouvet" },
+    { name: "mastodon", handle: "celine_louvet@pouet.chapril.org", link: "https://pouet.chapril.org/@celine_louvet" },
   ],
   experiences: [
     {

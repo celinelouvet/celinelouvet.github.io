@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>{{ $t("title") }}</h2>
-    <p v-for="(description, index) in descriptions" :key="index">{{ description }}</p>
+    <p v-for="(description, index) in descriptions" :key="index" class="description-content">{{ description }}</p>
   </div>
 </template>
 
@@ -26,4 +26,10 @@ export default class Description extends Vue {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+@media print {
+  .description-content:last-child {
+    margin-bottom: 0;
+  }
+}
+</style>
