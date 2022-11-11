@@ -85,6 +85,8 @@ a:hover {
 
 .dropdown-menu {
   min-width: 100%;
+  padding-top: 1px;
+  padding-bottom: 0;
 }
 .dropdown-item.active {
   background-color: var(--cv-blue-dark);

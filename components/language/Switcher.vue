@@ -42,10 +42,6 @@ export default class LanguageSwitcher extends Vue {
     this.$moment.locale(this.localeCode ?? defaultCode);
   }
 
-  get localeProp() {
-    return this.$i18n.localeProperties;
-  }
-
   get localeCode() {
     return localeCodes.get(this.$i18n.locale);
   }
@@ -60,7 +56,7 @@ export default class LanguageSwitcher extends Vue {
   }
 
   changeLocale({ code }: LocaleObject) {
-    this.$i18n.setLocale(code);
+    this.$router.push(this.switchLocalePath(code));
 
     const localeCode = localeCodes.get(code) ?? defaultCode;
     this.$moment.locale(localeCode);

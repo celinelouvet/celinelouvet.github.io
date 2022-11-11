@@ -12,7 +12,7 @@ export default class PdfDownloader extends Vue {
   get file() {
     const root = "https://storage.googleapis.com/celinelouvet-cv.appspot.com/CV";
 
-    return `${root}/${this.$i18n.locale}/LOUVET_Celine.pdf`;
+    return `${root}/LOUVET_Celine_${this.$i18n.locale.toUpperCase()}.pdf`;
   }
 }
 </script>
