@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>{{ $t("title") }}</h2>
-    <ul class="list-unstyled">
+    <ul class="list-unstyled list">
       <li v-for="social in socials" :key="social.link">
         <component :is="`b-icon-${social.name}`" class="icon" /><span
           ><a :href="social.link">@{{ social.handle }}</a></span
@@ -39,5 +39,11 @@ export default class Socials extends Vue {
   font-size: 1.15em;
   margin-right: 0.5em;
   vertical-align: -0.25em;
+}
+
+@media print {
+  .list {
+    margin-bottom: 0;
+  }
 }
 </style>

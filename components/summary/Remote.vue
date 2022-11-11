@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>{{ $t("title") }}</h2>
-    <ul class="list-unstyled">
+    <ul class="list-unstyled list">
       <li v-for="(remote, index) in remotes" :key="index">{{ $t(`remoteType.${remote.type}`, { location: remote.where }) }}</li>
     </ul>
   </div>
@@ -45,5 +45,11 @@ export default class Infos extends Vue {
   font-size: 1.15em;
   margin-right: 0.5em;
   vertical-align: -0.25em;
+}
+
+@media print {
+  .list {
+    margin-bottom: 0;
+  }
 }
 </style>
