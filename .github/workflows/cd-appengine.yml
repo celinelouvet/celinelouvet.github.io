@@ -7,8 +7,7 @@ on:
 
 env:
   GCP_DOMAIN: "https://celine.louvet.me"
-  PDF_FILE: "LOUVET_Celine.pdf"
-  IMAGE_FILE: "LOUVET_Celine.png"
+  PDF_FILE: "LOUVET_Celine"
 
 jobs:
   deploy:
@@ -94,14 +93,14 @@ jobs:
       - name: Upload FR PDF CV
         uses: google-github-actions/upload-cloud-storage@v0
         with:
-          path: "./pdf-generator/fr_${{ env.PDF_FILE }}"
+          path: "./pdf-generator/${{ env.PDF_FILE }}_FR.pdf"
           destination: celinelouvet-cv.appspot.com/CV/
           predefinedAcl: publicRead
 
       - name: Upload EN PDF CV
         uses: google-github-actions/upload-cloud-storage@v0
         with:
-          path: "./pdf-generator/en_${{ env.PDF_FILE }}"
+          path: "./pdf-generator/${{ env.PDF_FILE }}_EN.pdf"
           destination: celinelouvet-cv.appspot.com/CV/
           predefinedAcl: publicRead
 
