@@ -67,6 +67,7 @@ export default {
       "BIconLinkedin",
       "BIconTranslate",
       "BIconTwitter",
+      "BIconMastodon",
     ],
   },
 
