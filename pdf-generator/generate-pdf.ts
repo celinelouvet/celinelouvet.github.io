@@ -5,21 +5,19 @@ import { Browser, launch, Page } from "puppeteer";
 type Arguments = {
   pageUrl: string;
   pdf: string;
-  image: string;
 };
 
-type Language = { folder: string; suffix: string };
-const languages: Language[] = [
-  { folder: "fr", suffix: "" },
-  { folder: "en", suffix: "en" },
+type LanguageVersion = { locale: string; language: string; suffix?: string };
+const languageVersions: LanguageVersion[] = [
+  { locale: "fr-FR", language: "FR", suffix: "/fr" },
+  { locale: "en-US", language: "EN", suffix: "/en" },
 ];
 
-const { pdf, image, pageUrl } = yargs(process.argv.slice(2))
+const { pdf, pageUrl } = yargs(process.argv.slice(2))
   .scriptName("generate-pdf")
-  .usage("Usage: $0 --pdf LOUVET_Celine.pdf --image LOUVET_Celine.png --pageUrl http://localhost:3000")
+  .usage("Usage: $0 --pdf LOUVET_Celine --pageUrl http://localhost:3000")
   .options({
-    pdf: { type: "string", demandOption: true, default: "cv.pdf" },
-    image: { type: "string", demandOption: true, default: "cv.png" },
+    pdf: { type: "string", demandOption: true, default: "cv" },
     pageUrl: { type: "string", demandOption: true, default: "http://localhost:3000" },
   }).argv as Arguments;
 
@@ -65,41 +63,18 @@ function openPage(browser: Browser): Promise<Page> {
   });
 }
 
-async function screenshotPage(url: string, imagePath: string) {
+async function printPage(url: string, locale: string, pdfPath?: string): Promise<void> {
   try {
-    console.log("[PDF] Generating screenshot", { url, imagePath });
+    console.log("[PDF] Generating PDF", { url, locale, pdfPath });
 
     const browser = await launch({
       headless: true,
-      args: ["--disable-gpu", "--disable-dev-shm-usage", "--disable-setuid-sandbox", "--no-sandbox"],
+      args: ["--disable-gpu", "--disable-dev-shm-usage", "--disable-setuid-sandbox", "--no-sandbox", `--lang=${locale}`],
+      env: { LANGUAGE: locale.replace("-", "_") },
     });
 
     const page = await openPage(browser);
-    await page.goto(url, { waitUntil: "networkidle2" });
-    await page.waitForNetworkIdle({ idleTime: 500 });
-    console.log("[PDF] Page loaded", { url });
-
-    await page.emulateMediaType("print");
-    await page.screenshot({ path: imagePath });
-
-    await browser.close();
-    console.log("[PDF] Screenshot generated");
-  } catch (error: unknown) {
-    console.error("[PDF] Couldn't screenshot the page", { path: url, error });
-    throw error;
-  }
-}
-
-async function printPage(url: string, pdfPath?: string): Promise<void> {
-  try {
-    console.log("[PDF] Generating PDF", { url, pdfPath });
-
-    const browser = await launch({
-      headless: true,
-      args: ["--disable-gpu", "--disable-dev-shm-usage", "--disable-setuid-sandbox", "--no-sandbox"],
-    });
-
-    const page = await openPage(browser);
+    await page.setExtraHTTPHeaders({ "Accept-Language": locale });
     await page.goto(url, { waitUntil: "networkidle2" });
     await page.waitForNetworkIdle({ idleTime: 500 });
     console.log("[PDF] Page loaded", { url });
@@ -124,31 +99,25 @@ async function printPage(url: string, pdfPath?: string): Promise<void> {
   }
 }
 
-async function printLanguage({ folder, suffix }: Language): Promise<void> {
+async function printLanguageVersion({ locale, language, suffix = "" }: LanguageVersion): Promise<void> {
   try {
-    const pdfFile = `./${folder}/${pdf}`;
-    const imageFile = `./${folder}/${image}`;
-    const url = `${pageUrl}/${suffix}`;
+    const pdfFile = `./${pdf}_${language}.pdf`;
+    const url = `${pageUrl}${suffix}`;
 
-    console.log(`[PDF] ${folder} Starting`, { pdfFile, imageFile, url, folder, suffix });
+    console.log(`[PDF] ${locale} Starting`, { locale, pdfFile, url });
 
     await cleanPrevious(pdfFile);
-    await cleanPrevious(imageFile);
+    await printPage(url, locale, pdfFile);
 
-    await fs.promises.mkdir(folder, { recursive: true });
-
-    await screenshotPage(url, imageFile);
-    await printPage(url, pdfFile);
-
-    console.log(`[PDF] ${folder} finished`);
+    console.log(`[PDF] ${locale} finished`);
   } catch (error: unknown) {
     console.error(`Error while generating: ${error}`);
   }
 }
 
 export async function run(): Promise<void> {
-  for (const language of languages) {
-    await printLanguage(language);
+  for (const version of languageVersions) {
+    await printLanguageVersion(version);
   }
 }
 

@@ -131,6 +131,7 @@ export default class MainLayout extends Vue {
 
 .content {
   background-color: white;
+  border-bottom: 1px solid white;
 }
 
 .actions > * {

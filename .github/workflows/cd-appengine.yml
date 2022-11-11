@@ -83,7 +83,7 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Generate PDF
-        run: cd pdf-generator && yarn && yarn pdf --pdf "${{ env.PDF_FILE }}" --image "${{ env.IMAGE_FILE }}" --pageUrl "${{ env.GCP_DOMAIN }}"
+        run: cd pdf-generator && yarn && yarn pdf --pdf "${{ env.PDF_FILE }}" --pageUrl "${{ env.GCP_DOMAIN }}"
 
       - id: auth
         name: Auth to GCP
@@ -94,15 +94,15 @@ jobs:
       - name: Upload FR PDF CV
         uses: google-github-actions/upload-cloud-storage@v0
         with:
-          path: "./pdf-generator/fr/${{ env.PDF_FILE }}"
-          destination: celinelouvet-cv.appspot.com/CV/fr/
+          path: "./pdf-generator/fr_${{ env.PDF_FILE }}"
+          destination: celinelouvet-cv.appspot.com/CV/
           predefinedAcl: publicRead
 
       - name: Upload EN PDF CV
         uses: google-github-actions/upload-cloud-storage@v0
         with:
-          path: "./pdf-generator/en/${{ env.PDF_FILE }}"
-          destination: celinelouvet-cv.appspot.com/CV/en/
+          path: "./pdf-generator/en_${{ env.PDF_FILE }}"
+          destination: celinelouvet-cv.appspot.com/CV/
           predefinedAcl: publicRead
 
       
