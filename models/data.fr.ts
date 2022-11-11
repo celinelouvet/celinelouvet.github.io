@@ -22,7 +22,7 @@ const cv: CV = {
   ],
   skills: [
     "Phase de build, avec objectif stabilité & qualité",
-    "Architecture cloud",
+    "Architecture cloud (GCP & AWS)",
     "Typescript",
     "NodeJs",
     "Google Cloud Platform (GCP)",
@@ -43,48 +43,39 @@ const cv: CV = {
       projects: [
         {
           name: "Pyxo",
-          description: "Solution permettant d'effectuer des prêts et retours de contenants réutilisables, auprès des restaurateurs clients.",
+          description: "Solution B2B2C permettant d'effectuer des prêts et retours de contenants réutilisables, auprès des restaurateurs clients.",
         },
       ],
       tasks: [
         { name: "Réalisation d'un POC pour une démo d'appel d'offre" },
         { name: "Développement d'une landing permettant à un utilisateur anonyme de réaliser un prêt" },
         {
-          name: "Mise en place d'un programme de fidélité",
+          name: "Développement d'un programme de fidélité",
           subtasks: [{ name: "Découpage fonctionnel" }, { name: "Conception" }, { name: "Développements backend" }],
         },
         {
-          name: "Mise en place d'un système de parrainage",
+          name: "Développement d'un système de parrainage",
           subtasks: [{ name: "Découpage fonctionnel" }, { name: "Conception" }, { name: "Développements backend" }],
         },
       ],
       stacks: [
-        {
-          type: "Infrastructure",
-          technos: ["AWS DynamoDB", "AWS RDS", "AWS CacheCluster", "AWS SQS", "AWS function"],
-        },
-        {
-          type: "Landing",
-          technos: ["VanillaJs"],
-        },
-        {
-          type: "Backend API",
-          technos: ["Node", "Typescript", "Serverless"],
-        },
+        { type: "Infrastructure", technos: ["AWS DynamoDB", "AWS RDS", "AWS CacheCluster", "AWS SQS", "AWS function"] },
+        { type: "Landings", technos: ["VanillaJs", "Preact"] },
+        { type: "Backend API", technos: ["Node", "Typescript", "Serverless"] },
       ],
     },
     {
       company: "Hubside",
       from: "2021-01-01",
       to: "2022-04-25",
-      role: "Senior Lead developer",
+      role: "Staff engineer / Senior Lead developer",
       description:
         "Tech lead avec un role de mid-management et une implication au niveau entreprise. La répartition entre développement et lead/management est de 60-40%.",
       remote: true,
       projects: [
         {
           name: "Hubside Photos",
-          description: "Service permettant de partager des albums et d’imprimer des photos en tirages unitaires ou livre photos.",
+          description: "Service B2C permettant de partager des albums et d’imprimer des photos en tirages unitaires ou livre photos.",
         },
       ],
       tasks: [
@@ -103,22 +94,10 @@ const cv: CV = {
         { name: "Management RH des développeurs." },
       ],
       stacks: [
-        {
-          type: "Infrastructure",
-          technos: ["GCP AppEngine", "GCP Datastore", "GCP FileStorage", "GCP Pub/Sub", "GCP Cloud Run"],
-        },
-        {
-          type: "Frontend",
-          technos: ["PWA", "ReactJs", "Typescript", "Jest", "Cypress", "GraphQL (Apollo Client)", "Storybook"],
-        },
-        {
-          type: "Backend",
-          technos: ["Node", "Typescript", "GraphQL (Apollo Server)"],
-        },
-        {
-          type: "API",
-          technos: ["Node", "Typescript", "REST", "Express"],
-        },
+        { type: "Infrastructure", technos: ["GCP AppEngine", "GCP Datastore", "GCP FileStorage", "GCP Pub/Sub", "GCP Cloud Run"] },
+        { type: "Frontend", technos: ["PWA", "ReactJs", "Typescript", "Jest", "Cypress", "GraphQL (Apollo Client)", "Storybook"] },
+        { type: "Backend", technos: ["Node", "Typescript", "GraphQL (Apollo Server)"] },
+        { type: "API", technos: ["Node", "Typescript", "REST", "Express"] },
       ],
     },
     {
@@ -135,7 +114,7 @@ const cv: CV = {
           projects: [
             {
               name: "Hubside Photos",
-              description: "Service permettant de partager des albums et d’imprimer des photos en tirages unitaires ou livre photos.",
+              description: "Service B2C permettant de partager des albums et d’imprimer des photos en tirages unitaires ou livre photos.",
             },
           ],
           tasks: [
@@ -145,18 +124,9 @@ const cv: CV = {
             { name: "Impression de livre photos" },
           ],
           stacks: [
-            {
-              type: "Common",
-              technos: ["GCP AppEngine", "GCP Datastore", "GCP FileStorage", "GCP Pub/Sub", "GCP Cloud Run"],
-            },
-            {
-              type: "Frontend",
-              technos: ["ReactJs", "Typescript", "Jest", "Cypress", "GraphQL (Apollo Client)", "Storybook"],
-            },
-            {
-              type: "Backend",
-              technos: ["Node", "Typescript", "REST", "Express", "GraphQL (Apollo Server)"],
-            },
+            { type: "Common", technos: ["GCP AppEngine", "GCP Datastore", "GCP FileStorage", "GCP Pub/Sub", "GCP Cloud Run"] },
+            { type: "Frontend", technos: ["ReactJs", "Typescript", "Jest", "Cypress", "GraphQL (Apollo Client)", "Storybook"] },
+            { type: "Backend", technos: ["Node", "Typescript", "REST", "Express", "GraphQL (Apollo Server)"] },
           ],
         },
         {
@@ -176,12 +146,7 @@ const cv: CV = {
               ],
             },
           ],
-          stacks: [
-            {
-              type: "Backend",
-              technos: ["Javascript", "Node", "REST", "Express", "Jest"],
-            },
-          ],
+          stacks: [{ type: "Backend", technos: ["Javascript", "Node", "REST", "Express", "Jest"] }],
         },
       ],
     },
@@ -193,18 +158,9 @@ const cv: CV = {
       description:
         "Incubateur Université Dauphine. Solution de récolte d’avis clients post-achat à impact positif, sur le principe de 1 avis consommateur = 1 don à une association.",
       projects: [
-        {
-          name: "Vitrine",
-          description: "Site de présentation du produit à destination des commerçants",
-        },
-        {
-          name: "Solution",
-          description: "Application WEB pour visualiser les avis déposés et en ajouter",
-        },
-        {
-          name: "AddOn Prestashop",
-          description: "AddOn permettant d’afficher et administrer les avis reçus",
-        },
+        { name: "Vitrine", description: "Site B2B de présentation du produit à destination des commerçants" },
+        { name: "Solution", description: "Application web B2C pour visualiser les avis déposés et en ajouter" },
+        { name: "AddOn Prestashop", description: "AddOn permettant à un commerçant d’afficher et administrer les avis reçus" },
       ],
       tasks: [
         { name: "Choix stratégiques et levée de fond" },
@@ -214,10 +170,7 @@ const cv: CV = {
       ],
       stacks: [
         { type: "Vitrine", technos: ["VueJS", "Firebase"] },
-        {
-          type: "Solution",
-          technos: ["VueJS", "Haskell", "PostgreSQL", "Clever Cloud", "SendInBlue"],
-        },
+        { type: "Solution", technos: ["VueJS", "Haskell", "PostgreSQL", "Clever Cloud", "SendInBlue"] },
         { type: "AddOn Prestashop", technos: ["PHP", "Prestashop 1.6.x"] },
       ],
     },
@@ -228,35 +181,24 @@ const cv: CV = {
       role: "CTO",
       description:
         "Management d’une petite équipe de développeurs, nécessitant un changement de méthodes de travail, afin de sortir de la phase de PoC initiale.",
+      projects: [{ name: "Captain contrat", description: "Site B2C facilitant la création de documents légaux" }],
       tasks: [
-        {
-          name: "Choix technique et création d’un nouveau module client",
-        },
+        { name: "Choix technique et création d’un nouveau module client" },
         {
           name: "Mise en place de méthodes pour",
           subtasks: [
-            {
-              name: "Augmenter l’efficacité et la concentration de l’équipe de développement",
-            },
+            { name: "Augmenter l’efficacité et la concentration de l’équipe de développement" },
             { name: "Augmenter la qualité technique du produit développé" },
             { name: "Réduire les frictions avec l’équipe produit" },
           ],
         },
-        {
-          name: "Management et suivi de carrière d’une équipe de trois développeurs",
-        },
+        { name: "Management et suivi de carrière d’une équipe de trois développeurs" },
         { name: "Recrutement : recherche, suivi et embauche" },
       ],
 
       stacks: [
-        {
-          type: "Legacy",
-          technos: ["Ruby on Rails", "MySQL", "Amazon RDS", "Amazon EC2"],
-        },
-        {
-          type: "Module client",
-          technos: ["ReactJs", "Amazon S3"],
-        },
+        { type: "Legacy", technos: ["Ruby on Rails", "MySQL", "Amazon RDS", "Amazon EC2"] },
+        { type: "Module client", technos: ["ReactJs", "Amazon S3"] },
       ],
     },
     {
@@ -265,18 +207,10 @@ const cv: CV = {
       to: "2017-06-20",
       role: "Team Leader, Technical Leader & développeuse",
       tasks: [
-        {
-          name: "Management et suivi de carrière d’une quinzaine de personnes",
-        },
-        {
-          name: "Réalisation d’entretiens techniques hebdomadaires",
-        },
-        {
-          name: "Amélioration continue des processus internes de SFEIR",
-        },
-        {
-          name: "Animation technique de la communauté SFEIR (organisation de journée Codingame, etc)",
-        },
+        { name: "Management et suivi de carrière d’une quinzaine de personnes" },
+        { name: "Réalisation d’entretiens techniques hebdomadaires" },
+        { name: "Amélioration continue des processus internes de SFEIR" },
+        { name: "Animation technique de la communauté SFEIR (organisation de journée Codingame, etc)" },
       ],
       jobs: [
         {
@@ -288,11 +222,11 @@ const cv: CV = {
           projects: [
             {
               name: "Active Advisory",
-              description: "Aide à l’achat et à la vente de produits financiers recommandés par la banque",
+              description: "Application B2C d'aide à l’achat et à la vente de produits financiers recommandés par la banque",
             },
             {
               name: "Digital DAA",
-              description: "Outil de répartition du patrimoine financier suivant la performance et le risque souhaité",
+              description: "Application B2B de répartition du patrimoine financier suivant la performance et le risque souhaité",
             },
           ],
           tasks: [
@@ -300,12 +234,7 @@ const cv: CV = {
             { name: "Accompagnement technique en AngularJs" },
             { name: "Développements" },
           ],
-          stacks: [
-            {
-              type: "",
-              technos: ["AngularJs", "Java 8", "PostgreSQL", "MongoDB"],
-            },
-          ],
+          stacks: [{ type: "", technos: ["AngularJs", "Java 8", "PostgreSQL", "MongoDB"] }],
         },
         {
           company: "Deloitte France",
@@ -317,16 +246,10 @@ const cv: CV = {
           projects: [
             {
               name: "EasyRisk",
-              description: "Outil d’analyse et d’évaluation des risques majeurs (GRC - Governance, risk management, and compliance)",
+              description: "Outil B2B d’analyse et d’évaluation des risques majeurs (GRC - Governance, risk management, and compliance)",
             },
-            {
-              name: "Goals",
-              description: "Outil de suivi des prévisions budgétaires",
-            },
-            {
-              name: "CMS",
-              description: "Outil de réponse à appel d’offres",
-            },
+            { name: "Goals", description: "Outil B2B de suivi des prévisions budgétaires" },
+            { name: "CMS", description: "Outil B2B de réponse à appel d’offres" },
           ],
           tasks: [
             { name: "Animation de workshops utilisateurs" },
@@ -337,14 +260,8 @@ const cv: CV = {
             { name: "Mises en production" },
           ],
           stacks: [
-            {
-              type: "EasyRisk",
-              technos: ["Polymer", "PostgreSQL", "Scala"],
-            },
-            {
-              type: "Goals & CMS",
-              technos: ["AngularJs", "NodeJs", "MongoDB"],
-            },
+            { type: "EasyRisk", technos: ["Polymer", "PostgreSQL", "Scala"] },
+            { type: "Goals & CMS", technos: ["AngularJs", "NodeJs", "MongoDB"] },
           ],
         },
         {
@@ -355,47 +272,18 @@ const cv: CV = {
           description:
             "Responsable des projets Valeo chez SFEIR. Technical Leader sur tous les projets et développement backend sur les projets les plus importants. Interactions permanentes avec 5 POs et le DSI Cloud.",
           projects: [
-            {
-              name: "Cloud Services",
-              description: "Outils transverses",
-            },
-            {
-              name: "ISPM",
-              description: "Outil de suivi d’indicateurs des projets",
-            },
-            {
-              name: "HUB",
-              description: "Portail de connexion à la plateforme Valeo / Google",
-            },
-            {
-              name: "Newscenter",
-              description: "Outil de publication de news à destination des employés",
-            },
-            {
-              name: "QnP",
-              description: "Outil de suivi des alertes des chaînes de production",
-            },
-            {
-              name: "Contact Search",
-              description: "Outil de recherche d’employés",
-            },
-            {
-              name: "Organization Search",
-              description: "Outil de recherche des informations d’organisation Valeo",
-            },
-            {
-              name: "Roles Search",
-              description: "Outil de recherche des personnes ayant un rôle spécifique",
-            },
-            {
-              name: "Roadmap",
-              description: "Outil de suivi de la progression de la maturité des processus",
-            },
+            { name: "Roadmap", description: "Outil de suivi de la progression de la maturité des processus" },
+            { name: "ISPM", description: "Outil de suivi d’indicateurs des projets" },
+            { name: "HUB", description: "Portail de connexion à la plateforme Valeo / Google" },
+            { name: "Newscenter", description: "Outil de publication de news à destination des employés" },
+            { name: "QnP", description: "Outil de suivi des alertes des chaînes de production" },
+            { name: "Cloud Services", description: "Outils transverses" },
+            { name: "Contact Search", description: "Outil de recherche d’employés" },
+            { name: "Organization Search", description: "Outil de recherche des informations d’organisation Valeo" },
+            { name: "Roles Search", description: "Outil de recherche des personnes ayant un rôle spécifique" },
           ],
           tasks: [
-            {
-              name: "Choix et mise en place de la stack technique pour le groupe",
-            },
+            { name: "Choix et mise en place de la stack technique pour le groupe" },
             { name: "Suivi des équipes de développement" },
             { name: "Animation de workshops utilisateurs" },
             { name: "Avant-ventes" },
@@ -422,14 +310,8 @@ const cv: CV = {
             },
           ],
           stacks: [
-            {
-              type: "Front-ends",
-              technos: ["GWT", "AngularJs"],
-            },
-            {
-              type: "Back-ends",
-              technos: ["Java", "GCP AppEngine", "GCP FileStorage", "GCP SearchAPI", "GCP Datastore"],
-            },
+            { type: "Front-ends", technos: ["GWT", "AngularJs"] },
+            { type: "Back-ends", technos: ["Java", "GCP AppEngine", "GCP FileStorage", "GCP SearchAPI", "GCP Datastore"] },
           ],
         },
         {
@@ -451,29 +333,18 @@ const cv: CV = {
             { name: "Choix des évolutions de l’architecture" },
             {
               name: "Développement de contrôles effectuant des tests de cohérence sur les données en base",
-              subtasks: [
-                {
-                  name: "Recalcul des indicateurs de risque (Loan Equivalent, Borrowing Equivalent, MtM, AaR, Global Risk, etc.)",
-                },
-              ],
+              subtasks: [{ name: "Recalcul des indicateurs de risque (Loan Equivalent, Borrowing Equivalent, MtM, AaR, Global Risk, etc.)" }],
             },
             {
               name: "Développement de contrôles effectuant des tests de non régression entre deux contextes",
               subtasks: [{ name: "Parsing des fichiers FpML" }, { name: "Comparaison des données de marché" }],
             },
-            {
-              name: "Développement de contrôles générant divers rapports pour les UAT",
-            },
+            { name: "Développement de contrôles générant divers rapports pour les UAT" },
             { name: "Optimisation de l’application" },
             { name: "Mise en place de tests unitaires" },
             { name: "Mise en place du serveur d’exploitation" },
           ],
-          stacks: [
-            {
-              type: "",
-              technos: ["JEE5", "JSP", "Sybase"],
-            },
-          ],
+          stacks: [{ type: "", technos: ["JEE5", "JSP", "Sybase"] }],
         },
         {
           company: "I-CDC",
@@ -484,9 +355,7 @@ const cv: CV = {
           description:
             "Intégration à la cellule d’architecture développant un socle technique. Ces développements ont nécessité le développement de POC.",
           tasks: [
-            {
-              name: "Développement d’un socle technique JEE à destination de développeurs",
-            },
+            { name: "Développement d’un socle technique JEE à destination de développeurs" },
             {
               name: "Développement d’une application WEB en HTML5 / JQuery pour le portail CDC",
               subtasks: [
@@ -502,22 +371,14 @@ const cv: CV = {
                 { name: "Développement des écrans" },
                 { name: "Développement des couches métier" },
                 { name: "Connexion aux WS d’Archiva et Continuum" },
-                {
-                  name: "Parsing et écriture des fichiers d’administration SVN",
-                },
+                { name: "Parsing et écriture des fichiers d’administration SVN" },
               ],
             },
           ],
           stacks: [
             { type: "Socle technique", technos: ["JEE5", "Tomcat"] },
-            {
-              type: "POC Liferay",
-              technos: ["Liferay 6.1", "HTML5", "Javascript", "JQuery", "Twitter Bootstrap", "JEE5"],
-            },
-            {
-              type: "IHM admin",
-              technos: ["GWT2.4", "Twitter Bootstrap", "Framework DEI", "Tomcat"],
-            },
+            { type: "POC Liferay", technos: ["Liferay 6.1", "HTML5", "Javascript", "JQuery", "Twitter Bootstrap", "JEE5"] },
+            { type: "IHM admin", technos: ["GWT2.4", "Twitter Bootstrap", "Framework DEI", "Tomcat"] },
           ],
         },
         {
@@ -539,18 +400,11 @@ const cv: CV = {
             { name: "Etude et analyse du besoin" },
             { name: "Développement des écrans" },
             { name: "Développement des couches métier" },
-            {
-              name: "Développement du client Socket pour la connexion aux caméras",
-            },
+            { name: "Développement du client Socket pour la connexion aux caméras" },
             { name: "Suivi de la recette" },
             { name: "Réalisation des icônes" },
           ],
-          stacks: [
-            {
-              type: "",
-              technos: ["GWT2.4", "Apache Mina", "Tomcat"],
-            },
-          ],
+          stacks: [{ type: "", technos: ["GWT2.4", "Apache Mina", "Tomcat"] }],
         },
         {
           company: "Storeforce",
@@ -570,17 +424,10 @@ const cv: CV = {
             { name: "Etude et analyse du besoin" },
             { name: "Développement des écrans" },
             { name: "Développement des couches métier" },
-            {
-              name: "Développement de l’algorithme de génération du planning",
-            },
+            { name: "Développement de l’algorithme de génération du planning" },
             { name: "Suivi de la recette" },
           ],
-          stacks: [
-            {
-              type: "",
-              technos: ["GWT2.3", "GCP AppEngine", "GCP Datastore"],
-            },
-          ],
+          stacks: [{ type: "", technos: ["GWT2.3", "GCP AppEngine", "GCP Datastore"] }],
         },
       ],
     },
@@ -608,36 +455,20 @@ const cv: CV = {
             {
               name: "Développement d’un ordonnanceur fonctionnel, client de BACARDI, à destination de la MOA",
               subtasks: [
-                {
-                  name: "Automatiser l’exécution de traitements fonctionnels, en fonction des impacts des développements en cours sur BACARDI",
-                },
-                {
-                  name: "Génération automatique de jeux de données, injection des jeux et exécution séquencée",
-                },
+                { name: "Automatiser l’exécution de traitements fonctionnels, en fonction des impacts des développements en cours sur BACARDI" },
+                { name: "Génération automatique de jeux de données, injection des jeux et exécution séquencée" },
               ],
             },
             {
               name: "Mise en place d’une Software Factory (Automatisation des déploiements, des rafraîchissements de données, des tests fonctionnels)",
             },
-            {
-              name: "Développement d’outils d’automatisation des livraisons et de tests",
-            },
-            {
-              name: "Développement d’une application de soumission automatique des demandes de rafraîchissement des environnements d’intégration",
-            },
-            {
-              name: "Beta tests et configuration pour la migration de ClearCase vers Git",
-            },
+            { name: "Développement d’outils d’automatisation des livraisons et de tests" },
+            { name: "Développement d’une application de soumission automatique des demandes de rafraîchissement des environnements d’intégration" },
+            { name: "Beta tests et configuration pour la migration de ClearCase vers Git" },
           ],
           stacks: [
-            {
-              type: "BACARDI",
-              technos: ["Java JEE 6", "Oracle 10g", "Sybase", "PL/SQL", "Scripts", "ClearCase"],
-            },
-            {
-              type: "Autres",
-              technos: ["Java JEE 6", "API XStream", "GWT", "Git"],
-            },
+            { type: "BACARDI", technos: ["Java JEE 6", "Oracle 10g", "Sybase", "PL/SQL", "Scripts", "ClearCase"] },
+            { type: "Autres", technos: ["Java JEE 6", "API XStream", "GWT", "Git"] },
           ],
         },
         {
@@ -655,26 +486,13 @@ const cv: CV = {
           tasks: [
             { name: "Gestionnaire d’environnement" },
             { name: "Mise en place d’outils de gestion d’environnement" },
-            {
-              name: "Validation des outils de déploiement et d’industrialisation",
-            },
-            {
-              name: "Coordination des équipes techniques lors des mises en production",
-            },
-            {
-              name: "Mise en place de l’architecture internationale (intégration et production)",
-            },
+            { name: "Validation des outils de déploiement et d’industrialisation" },
+            { name: "Coordination des équipes techniques lors des mises en production" },
+            { name: "Mise en place de l’architecture internationale (intégration et production)" },
             { name: "Mise en place des procédés de monitoring internationaux" },
-            {
-              name: "Collaboration avec les équipes situées aux USA et au Japon",
-            },
+            { name: "Collaboration avec les équipes situées aux USA et au Japon" },
           ],
-          stacks: [
-            {
-              type: "",
-              technos: ["Oracle 10g", "Sybase", "PL/SQL", "Scripts", "ClearCase"],
-            },
-          ],
+          stacks: [{ type: "", technos: ["Oracle 10g", "Sybase", "PL/SQL", "Scripts", "ClearCase"] }],
         },
       ],
     },
@@ -691,12 +509,7 @@ const cv: CV = {
           to: "2007-05-31",
           role: "Ingénieur tests automatiques",
           description: "Assurance de la qualité du logiciel et de la documentation projet",
-          projects: [
-            {
-              name: "Gestion du Client",
-              description: "Système de gestion des dossiers mobiles des clients (Forfaits, options…)",
-            },
-          ],
+          projects: [{ name: "Gestion du Client", description: "Système de gestion des dossiers mobiles des clients (Forfaits, options…)" }],
           tasks: [
             { name: "Elaboration de la stratégie de tests" },
             { name: "Qualification technique et fonctionnelle des versions" },
@@ -707,12 +520,7 @@ const cv: CV = {
             { name: "Support à la mise en production" },
             { name: "Suivi des anomalies de production" },
           ],
-          stacks: [
-            {
-              type: "",
-              technos: ["Oracle 9i", "LIGIS de MetaMicro", "Scripts", "PL/SQL"],
-            },
-          ],
+          stacks: [{ type: "", technos: ["Oracle 9i", "LIGIS de MetaMicro", "Scripts", "PL/SQL"] }],
         },
         {
           company: "France Télécom / Wanadoo",
@@ -721,24 +529,14 @@ const cv: CV = {
           role: "Ingénieur tests automatiques",
           description:
             "Dans le cadre de la fusion Wanadoo / Orange. Qualification du Bus de Provisioning de Services (Bus de données du système de gestion de l’identité)",
-          projects: [
-            {
-              name: "Gestion du Client",
-              description: "Système de gestion des clients et de leur identité (compte email, téléphone etc.)",
-            },
-          ],
+          projects: [{ name: "Gestion du Client", description: "Système de gestion des clients et de leur identité (compte email, téléphone etc.)" }],
           tasks: [
             { name: "Mise en place de méthodologie de test" },
             { name: "Qualification des services de provisioning (1ème génération du bus, en Corba)" },
             { name: "Qualification des services de provisioning (2ème génération du bus, utilisant des WebServices)" },
             { name: "Qualification des SGBD : 2 générations de bases Sybase" },
           ],
-          stacks: [
-            {
-              type: "",
-              technos: ["Corba", "Sybase", "Oracle 9i", "Scripts", "PL/SQL"],
-            },
-          ],
+          stacks: [{ type: "", technos: ["Corba", "Sybase", "Oracle 9i", "Scripts", "PL/SQL"] }],
         },
       ],
     },

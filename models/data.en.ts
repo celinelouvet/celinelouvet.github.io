@@ -57,7 +57,7 @@ const cv: CV = {
       ],
       stacks: [
         { type: "Infrastructure", technos: ["AWS DynamoDB", "AWS RDS", "AWS CacheCluster", "AWS SQS", "AWS function"] },
-        { type: "Landing", technos: ["VanillaJs"] },
+        { type: "Landings", technos: ["VanillaJs", "Preact"] },
         { type: "Backend API", technos: ["Node", "Typescript", "Serverless"] },
       ],
     },
