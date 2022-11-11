@@ -20,7 +20,7 @@
     "vue-class-component": "^7.2.6"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.16.5",
+    "@babel/plugin-proposal-class-properties": "^7.16.6",
     "@babel/plugin-proposal-decorators": "^7.16.5",
     "@intlify/vue-i18n-loader": "^4.1.0",
     "@nuxt/types": "^2.15.8",
