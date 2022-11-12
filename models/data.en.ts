@@ -6,8 +6,8 @@ const cv: CV = {
   birthdate: "1980-12-02",
   firstExperience: "2006-02-01",
   email: "celine.louvet@gmail.com",
-  website: "https://celine.louvet.me/en",
-  title: "Senior lead developer",
+  website: "https://celine.louvet.me",
+  title: "Staff engineer / Senior lead developer",
   location: "Lyon",
   zipCode: "69006",
   remotes: [
