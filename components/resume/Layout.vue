@@ -1,22 +1,22 @@
 <template>
   <div class="container-fluid container-lg">
-    <div class="cv-container">
+    <div class="resume-container">
       <div class="main-title">
         <div class="d-none d-print-block">
           <ResumeSummaryPicture />
         </div>
         <div>
-          <h1 class="name">{{ cv.firstname }} {{ cv.lastname }}</h1>
-          <h2 class="job-title">{{ cv.title }}</h2>
+          <h1 class="name">{{ resume.firstname }} {{ resume.lastname }}</h1>
+          <h2 class="job-title">{{ resume.title }}</h2>
         </div>
       </div>
       <div class="summary">
         <ResumeSummaryPicture class="section picture d-none d-lg-block d-print-none" />
-        <ResumeSummaryInfos class="section infos" :cv="cv" />
-        <ResumeSummaryRemote class="section remote" :remotes="cv.remotes" />
-        <ResumeContentDescription class="section d-lg-none description" :descriptions="cv.descriptions" />
-        <ResumeSummarySkills class="section skills" :skills="cv.skills" />
-        <ResumeSummarySocials class="section socials" :socials="cv.socials" />
+        <ResumeSummaryInfos class="section infos" :resume="resume" />
+        <ResumeSummaryRemote class="section remote" :remotes="resume.remotes" />
+        <ResumeContentDescription class="section d-lg-none description" :descriptions="resume.descriptions" />
+        <ResumeSummarySkills class="section skills" :skills="resume.skills" />
+        <ResumeSummarySocials class="section socials" :socials="resume.socials" />
       </div>
       <div class="content">
         <div class="d-print-none d-flex justify-content-end align-items-center actions">
@@ -24,11 +24,11 @@
           <ResumePdfDownloader />
           <ResumeDetailsLevel @details-change="details = $event" />
         </div>
-        <ResumeContentDescription class="section d-none d-lg-block" :descriptions="cv.descriptions" />
-        <ResumeContentExperiences :details="details" class="section" :experiences="cv.experiences" />
-        <ResumeContentTalks class="section" :talks="cv.talks" />
-        <ResumeContentEducations class="section" :educations="cv.educations" />
-        <ResumeContentCertifications class="section" :certifications="cv.certifications" />
+        <ResumeContentDescription class="section d-none d-lg-block" :descriptions="resume.descriptions" />
+        <ResumeContentExperiences :details="details" class="section" :experiences="resume.experiences" />
+        <ResumeContentTalks class="section" :talks="resume.talks" />
+        <ResumeContentEducations class="section" :educations="resume.educations" />
+        <ResumeContentCertifications class="section" :certifications="resume.certifications" />
       </div>
     </div>
   </div>
@@ -37,7 +37,7 @@
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
 
-import { enCv, frCv, CV } from "~/models";
+import { enResume, frResume, Resume } from "~/models";
 
 @Component
 export default class Layout extends Vue {
@@ -45,25 +45,25 @@ export default class Layout extends Vue {
 
   languageFlip: boolean = process.env.ACTIVATE_LANGUAGE === "true";
 
-  get cv(): CV {
+  get resume(): Resume {
     if (this.$i18n.locale === "fr") {
-      return frCv;
+      return frResume;
     }
 
-    return enCv;
+    return enResume;
   }
 }
 </script>
 
 <style scoped>
 @media screen and (max-width: 768px) {
-  .cv-container > div {
+  .resume-container > div {
     grid-column: 1 / span 2;
   }
 }
 
 @media screen and (min-width: 769px) {
-  .cv-container {
+  .resume-container {
     display: grid;
     grid-template-columns: [col1] var(--summary-width) [line2] auto;
   }
@@ -147,7 +147,7 @@ export default class Layout extends Vue {
     width: 100%;
     max-width: 100%;
   }
-  .cv-container > div {
+  .resume-container > div {
     grid-column: 1 / span 2;
   }
   .summary .section,

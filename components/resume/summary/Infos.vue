@@ -4,22 +4,24 @@
     <ul class="list-unstyled list">
       <li :aria-label="$t('email')">
         <b-icon-envelope-fill class="icon" /><span
-          ><a :href="`mailto:${cv.email}`">{{ cv.email }}</a></span
+          ><a :href="`mailto:${resume.email}`">{{ resume.email }}</a></span
         >
       </li>
       <li :aria-label="$t('website')">
         <b-icon-globe class="icon" /><span
-          ><a :href="cv.website">{{ cv.website.replace("https://", "") }}</a></span
+          ><a :href="resume.website">{{ resume.website.replace("https://", "") }}</a></span
         >
       </li>
       <li :aria-label="$t('location')">
-        <b-icon-geo-alt-fill class="icon" /><span>{{ cv.location }} ({{ cv.zipCode }})</span>
+        <b-icon-geo-alt-fill class="icon" /><span>{{ resume.location }} ({{ resume.zipCode }})</span>
       </li>
       <li :aria-label="$t('experience')">
-        <b-icon-hourglass-split class="icon" /><span>{{ $t("yearsOfExperience", { experience: $moment(cv.firstExperience).fromNow(true) }) }}</span>
+        <b-icon-hourglass-split class="icon" /><span>{{
+          $t("yearsOfExperience", { experience: $moment(resume.firstExperience).fromNow(true) })
+        }}</span>
       </li>
       <li :aria-label="$t('experience')">
-        <b-icon-bicycle class="icon" /><span>{{ cv.hobbies }}</span>
+        <b-icon-bicycle class="icon" /><span>{{ resume.hobbies }}</span>
       </li>
     </ul>
   </div>
@@ -52,11 +54,11 @@
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
 
-import { CV } from "~/models";
+import { Resume } from "~/models";
 
 @Component
 export default class Infos extends Vue {
-  @Prop({ default: {} }) readonly cv!: CV;
+  @Prop({ default: {} }) readonly resume!: Resume;
 }
 </script>
 

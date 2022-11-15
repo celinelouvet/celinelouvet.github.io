@@ -94,16 +94,16 @@ jobs:
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
 
-      - name: Upload FR PDF CV
+      - name: Upload FR PDF Resume
         uses: google-github-actions/upload-cloud-storage@v0
         with:
           path: "./pdf-generator/${{ env.PDF_FILE }}_FR.pdf"
-          destination: celinelouvet-cv.appspot.com/CV/
+          destination: celinelouvet-cv.appspot.com/resume/
           predefinedAcl: publicRead
 
-      - name: Upload EN PDF CV
+      - name: Upload EN PDF Resume
         uses: google-github-actions/upload-cloud-storage@v0
         with:
           path: "./pdf-generator/${{ env.PDF_FILE }}_EN.pdf"
-          destination: celinelouvet-cv.appspot.com/CV/
+          destination: celinelouvet-cv.appspot.com/resume/
           predefinedAcl: publicRead

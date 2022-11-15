@@ -2,12 +2,12 @@
   <div class="job-container" :class="{ summarize: summarize }">
     <div class="header">
       <span class="h3 company">{{ job.company }}</span>
-      <span class="cv-small">{{ from }} - {{ to }}</span>
-      <span v-if="diff.years !== 0 && diff.months !== 0" class="cv-small">({{ $tc("years", diff.years) }} {{ $tc("months", diff.months) }})</span>
-      <span v-else-if="diff.years === 0 && diff.months !== 0" class="cv-small">({{ $tc("months", diff.months) }})</span>
-      <span v-else-if="diff.years !== 0 && diff.months === 0" class="cv-small">({{ $tc("years", diff.years) }})</span>
-      <span v-else class="cv-small">({{ $tc("years", diff.years) }} {{ $tc("months", diff.months) }})</span>
-      <span class="cv-small">{{ remote }}</span>
+      <span class="resume-small">{{ from }} - {{ to }}</span>
+      <span v-if="diff.years !== 0 && diff.months !== 0" class="resume-small">({{ $tc("years", diff.years) }} {{ $tc("months", diff.months) }})</span>
+      <span v-else-if="diff.years === 0 && diff.months !== 0" class="resume-small">({{ $tc("months", diff.months) }})</span>
+      <span v-else-if="diff.years !== 0 && diff.months === 0" class="resume-small">({{ $tc("years", diff.years) }})</span>
+      <span v-else class="resume-small">({{ $tc("years", diff.years) }} {{ $tc("months", diff.months) }})</span>
+      <span class="resume-small">{{ remote }}</span>
     </div>
     <h4 v-if="job.role" class="role">{{ job.role }}</h4>
     <p class="description">{{ job.description }}</p>
@@ -169,7 +169,7 @@ export default class ExperienceDetails extends Vue {
   color: var(--cv-blue);
 }
 
-.cv-small {
+.resume-small {
   font-size: 0.85em;
   color: var(--bs-gray-600);
 }
