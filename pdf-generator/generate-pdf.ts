@@ -63,7 +63,7 @@ function openPage(browser: Browser): Promise<Page> {
   });
 }
 
-async function printPage(url: string, locale: string, pdfPath?: string): Promise<void> {
+async function printPage(url: string, locale: string, pdfPath: string): Promise<void> {
   try {
     console.log("[PDF] Generating PDF", { url, locale, pdfPath });
 
@@ -82,7 +82,7 @@ async function printPage(url: string, locale: string, pdfPath?: string): Promise
     await page.pdf({
       printBackground: true,
       format: "A4",
-      ...(pdfPath && { path: pdfPath }),
+      path: pdfPath,
       margin: {
         top: "10mm",
         left: "10mm",
