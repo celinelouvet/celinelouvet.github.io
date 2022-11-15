@@ -33,9 +33,10 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [
     "~/components/",
-    { path: "~/components/summary/", prefix: "summary" },
-    { path: "~/components/content/", prefix: "content" },
-    { path: "~/components/language/", prefix: "language" },
+    { path: "~/components/resume/", prefix: "resume" },
+    { path: "~/components/resume/summary/", prefix: "resumeSummary" },
+    { path: "~/components/resume/content/", prefix: "resumeContent" },
+    { path: "~/components/resume/language/", prefix: "resumeLanguage" },
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules

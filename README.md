@@ -1,4 +1,4 @@
-# celinelouvet-cv
+# celinelouvet-resume
 
 https://celinelouvet.github.io/
 

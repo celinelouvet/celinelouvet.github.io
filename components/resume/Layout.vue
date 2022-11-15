@@ -3,7 +3,7 @@
     <div class="cv-container">
       <div class="main-title">
         <div class="d-none d-print-block">
-          <SummaryPicture />
+          <ResumeSummaryPicture />
         </div>
         <div>
           <h1 class="name">{{ cv.firstname }} {{ cv.lastname }}</h1>
@@ -11,24 +11,24 @@
         </div>
       </div>
       <div class="summary">
-        <SummaryPicture class="section picture d-none d-lg-block d-print-none" />
-        <SummaryInfos class="section infos" :cv="cv" />
-        <SummaryRemote class="section remote" :remotes="cv.remotes" />
-        <ContentDescription class="section d-lg-none description" :descriptions="cv.descriptions" />
-        <SummarySkills class="section skills" :skills="cv.skills" />
-        <SummarySocials class="section socials" :socials="cv.socials" />
+        <ResumeSummaryPicture class="section picture d-none d-lg-block d-print-none" />
+        <ResumeSummaryInfos class="section infos" :cv="cv" />
+        <ResumeSummaryRemote class="section remote" :remotes="cv.remotes" />
+        <ResumeContentDescription class="section d-lg-none description" :descriptions="cv.descriptions" />
+        <ResumeSummarySkills class="section skills" :skills="cv.skills" />
+        <ResumeSummarySocials class="section socials" :socials="cv.socials" />
       </div>
       <div class="content">
         <div class="d-print-none d-flex justify-content-end align-items-center actions">
-          <span v-if="languageFlip"><LanguageSwitcher /></span>
-          <PdfDownloader />
-          <DetailsLevel @details-change="details = $event" />
+          <span v-if="languageFlip"><ResumeLanguageSwitcher /></span>
+          <ResumePdfDownloader />
+          <ResumeDetailsLevel @details-change="details = $event" />
         </div>
-        <ContentDescription class="section d-none d-lg-block" :descriptions="cv.descriptions" />
-        <ContentExperiences :details="details" class="section" :experiences="cv.experiences" />
-        <ContentTalks class="section" :talks="cv.talks" />
-        <ContentEducations class="section" :educations="cv.educations" />
-        <ContentCertifications class="section" :certifications="cv.certifications" />
+        <ResumeContentDescription class="section d-none d-lg-block" :descriptions="cv.descriptions" />
+        <ResumeContentExperiences :details="details" class="section" :experiences="cv.experiences" />
+        <ResumeContentTalks class="section" :talks="cv.talks" />
+        <ResumeContentEducations class="section" :educations="cv.educations" />
+        <ResumeContentCertifications class="section" :certifications="cv.certifications" />
       </div>
     </div>
   </div>
@@ -40,7 +40,7 @@ import { Vue, Component } from "vue-property-decorator";
 import { enCv, frCv, CV } from "~/models";
 
 @Component
-export default class MainLayout extends Vue {
+export default class Layout extends Vue {
   details: boolean = false;
 
   languageFlip: boolean = process.env.ACTIVATE_LANGUAGE === "true";

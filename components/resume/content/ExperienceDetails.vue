@@ -35,7 +35,7 @@
         </ul>
       </div>
       <div v-if="job.sideRoles" class="sideroles hidden d-print-none" :class="{ show: details }">
-        <ContentSideRole v-for="sideRole in job.sideRoles" :key="`${sideRole.company}-${sideRole.from}`" :side-role="sideRole" />
+        <ResumeContentSideRole v-for="sideRole in job.sideRoles" :key="`${sideRole.company}-${sideRole.from}`" :side-role="sideRole" />
       </div>
       <div v-if="!summarize">
         <div v-if="job.stacks" class="stacks hidden" :class="{ show: details }">
@@ -52,7 +52,7 @@
       </div>
     </div>
     <div v-if="job.jobs" class="subjobs">
-      <ContentExperienceDetails
+      <ResumeContentExperienceDetails
         v-for="(subjob, index) in job.jobs"
         :key="`${subjob.company}-${subjob.from}`"
         :job="subjob"

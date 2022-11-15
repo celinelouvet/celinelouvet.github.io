@@ -1,32 +1,34 @@
 <template>
-  <div class="educations">
+  <div class="talks">
     <h2>{{ $t("title") }}</h2>
     <div class="content">
-      <ContentEducationDetails v-for="education in educations" :key="education.from" :education="education" />
+      <div v-for="talk in talks" :key="talk.topic">
+        <ResumeContentTalkDetails :talk="talk" />
+      </div>
     </div>
   </div>
 </template>
 
 <i18n locale="fr" lang="json5">
 {
-  title: "Formation",
+  title: "Conférences",
 }
 </i18n>
 
 <i18n locale="en" lang="json5">
 {
-  title: "Education",
+  title: "Talks",
 }
 </i18n>
 
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
 
-import { Education } from "~/models";
+import { Talk } from "~/models";
 
 @Component
-export default class Infos extends Vue {
-  @Prop({ default: [] }) readonly educations!: Education[];
+export default class Talks extends Vue {
+  @Prop({ default: [] }) readonly talks!: Talk[];
 }
 </script>
 
@@ -37,7 +39,7 @@ export default class Infos extends Vue {
     grid-template-columns: 1fr 1fr;
     column-gap: var(--cv-size-2x);
   }
-  .educations {
+  .talks {
     break-inside: avoid-page;
   }
 }
