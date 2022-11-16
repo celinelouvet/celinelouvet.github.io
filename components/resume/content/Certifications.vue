@@ -2,7 +2,7 @@
   <div class="certifications">
     <h2>{{ $t("title") }}</h2>
     <div class="content">
-      <ContentCertificationDetails v-for="certification in certifications" :key="certification.when" :certification="certification" />
+      <ResumeContentCertificationDetails v-for="certification in certifications" :key="certification.when" :certification="certification" />
     </div>
   </div>
 </template>

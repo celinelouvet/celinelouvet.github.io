@@ -2,10 +2,10 @@
   <div class="siderole">
     <div>
       <span class="h4 company">{{ sideRole.company }}</span>
-      <span class="cv-small">{{ from }} - {{ to }}</span>
-      <span v-if="diff.years === 0 && diff.months !== 0" class="cv-small">({{ $tc("months", diff.months) }})</span>
-      <span v-else-if="diff.years !== 0 && diff.months === 0" class="cv-small">({{ $tc("years", diff.years) }})</span>
-      <span v-else class="cv-small">({{ $tc("years", diff.years) }} {{ $tc("months", diff.months) }})</span>
+      <span class="resume-small">{{ from }} - {{ to }}</span>
+      <span v-if="diff.years === 0 && diff.months !== 0" class="resume-small">({{ $tc("months", diff.months) }})</span>
+      <span v-else-if="diff.years !== 0 && diff.months === 0" class="resume-small">({{ $tc("years", diff.years) }})</span>
+      <span v-else class="resume-small">({{ $tc("years", diff.years) }} {{ $tc("months", diff.months) }})</span>
     </div>
     <p class="description">{{ sideRole.description }}</p>
   </div>
@@ -77,7 +77,7 @@ export default class SideRole extends Vue {
   font-size: 2.1em;
 }
 
-.cv-small {
+.resume-small {
   font-size: 0.85em;
   color: var(--bs-gray-600);
 }

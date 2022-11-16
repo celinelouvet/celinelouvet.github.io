@@ -1,6 +1,6 @@
-import { CV } from "./models";
+import { Resume } from "./models";
 
-const cv: CV = {
+const resume: Resume = {
   firstname: "Céline",
   lastname: "Louvet",
   birthdate: "1980-12-02",
@@ -588,4 +588,4 @@ const cv: CV = {
   ],
 };
 
-export default cv;
+export default resume;

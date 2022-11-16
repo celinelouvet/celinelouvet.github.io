@@ -1,7 +1,7 @@
 <template>
   <div class="experiences">
     <h2>{{ $t("title") }}</h2>
-    <ContentExperienceDetails
+    <ResumeContentExperienceDetails
       v-for="(xp, index) in experiences"
       :key="`${xp.company}-${xp.from}`"
       :job="xp"

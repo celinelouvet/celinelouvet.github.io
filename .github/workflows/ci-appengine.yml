@@ -1,8 +1,8 @@
-name: cd-appengine
+name: ci-appengine
 
 on:
   push:
-    branches:
+    branches-ignore:
       - main
 
 concurrency:
@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  GCP_DOMAIN: "https://celine.louvet.me"
+  VERSION: ${{ github.ref_name }}
   PDF_FILE: "LOUVET_Celine"
   BUCKET_NAME: "celinelouvet-cv.appspot.com"
 
@@ -28,6 +28,9 @@ jobs:
       contents: read
       id-token: write
 
+    outputs:
+      url: ${{ steps.deploy.outputs.url }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@master
@@ -39,6 +42,9 @@ jobs:
 
       - name: Install dependencies
         run: yarn && cd pdf-generator && yarn
+
+      - name: Lint
+        run: yarn lint
 
       - name: Generate
         run: yarn generate
@@ -54,14 +60,11 @@ jobs:
         uses: google-github-actions/deploy-appengine@v0
         with:
           deliverables: app.yaml
-          promote: true
-          version: v1
+          promote: false
+          version: ${{ env.VERSION }}
 
-      - name: Test default URL
+      - name: Test deployed version
         run: curl --silent --head "${{ steps.deploy.outputs.url }}"
-
-      - name: Test ${{ env.GCP_DOMAIN }} URL
-        run: curl --silent --head "${{ env.GCP_DOMAIN }}"
 
   pdf:
     name: Generate PDF
@@ -79,7 +82,7 @@ jobs:
 
     steps:
       - name: Define bucket path
-        run: echo "BUCKET_PATH=${{env.BUCKET_NAME}}/resume" >> $GITHUB_ENV
+        run: echo "BUCKET_PATH=${{env.BUCKET_NAME}}/${{ env.VERSION }}/resume" >> $GITHUB_ENV
 
       - name: Checkout
         uses: actions/checkout@master
@@ -90,7 +93,7 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Generate PDF
-        run: cd pdf-generator && yarn && yarn pdf --pdf "${{ env.PDF_FILE }}" --pageUrl "${{ env.GCP_DOMAIN }}"
+        run: cd pdf-generator && yarn && yarn pdf --pdf "${{ env.PDF_FILE }}" --pageUrl "${{needs.deploy.outputs.url}}"
 
       - id: auth
         name: Auth to GCP

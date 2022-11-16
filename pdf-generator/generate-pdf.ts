@@ -102,7 +102,7 @@ async function printPage(url: string, locale: string, pdfPath: string): Promise<
 async function printLanguageVersion({ locale, language, suffix = "" }: LanguageVersion): Promise<void> {
   try {
     const pdfFile = `./${pdf}_${language}.pdf`;
-    const url = `${pageUrl}${suffix}`;
+    const url = `${pageUrl}${suffix}/resume`;
 
     console.log(`[PDF] ${locale} Starting`, { locale, pdfFile, url });
 

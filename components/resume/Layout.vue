@@ -1,34 +1,34 @@
 <template>
   <div class="container-fluid container-lg">
-    <div class="cv-container">
+    <div class="resume-container">
       <div class="main-title">
         <div class="d-none d-print-block">
-          <SummaryPicture />
+          <ResumeSummaryPicture />
         </div>
         <div>
-          <h1 class="name">{{ cv.firstname }} {{ cv.lastname }}</h1>
-          <h2 class="job-title">{{ cv.title }}</h2>
+          <h1 class="name">{{ resume.firstname }} {{ resume.lastname }}</h1>
+          <h2 class="job-title">{{ resume.title }}</h2>
         </div>
       </div>
       <div class="summary">
-        <SummaryPicture class="section picture d-none d-lg-block d-print-none" />
-        <SummaryInfos class="section infos" :cv="cv" />
-        <SummaryRemote class="section remote" :remotes="cv.remotes" />
-        <ContentDescription class="section d-lg-none description" :descriptions="cv.descriptions" />
-        <SummarySkills class="section skills" :skills="cv.skills" />
-        <SummarySocials class="section socials" :socials="cv.socials" />
+        <ResumeSummaryPicture class="section picture d-none d-lg-block d-print-none" />
+        <ResumeSummaryInfos class="section infos" :resume="resume" />
+        <ResumeSummaryRemote class="section remote" :remotes="resume.remotes" />
+        <ResumeContentDescription class="section d-lg-none description" :descriptions="resume.descriptions" />
+        <ResumeSummarySkills class="section skills" :skills="resume.skills" />
+        <ResumeSummarySocials class="section socials" :socials="resume.socials" />
       </div>
       <div class="content">
         <div class="d-print-none d-flex justify-content-end align-items-center actions">
-          <span v-if="languageFlip"><LanguageSwitcher /></span>
-          <PdfDownloader />
-          <DetailsLevel @details-change="details = $event" />
+          <span v-if="languageFlip"><ResumeLanguageSwitcher /></span>
+          <ResumePdfDownloader />
+          <ResumeDetailsLevel @details-change="details = $event" />
         </div>
-        <ContentDescription class="section d-none d-lg-block" :descriptions="cv.descriptions" />
-        <ContentExperiences :details="details" class="section" :experiences="cv.experiences" />
-        <ContentTalks class="section" :talks="cv.talks" />
-        <ContentEducations class="section" :educations="cv.educations" />
-        <ContentCertifications class="section" :certifications="cv.certifications" />
+        <ResumeContentDescription class="section d-none d-lg-block" :descriptions="resume.descriptions" />
+        <ResumeContentExperiences :details="details" class="section" :experiences="resume.experiences" />
+        <ResumeContentTalks class="section" :talks="resume.talks" />
+        <ResumeContentEducations class="section" :educations="resume.educations" />
+        <ResumeContentCertifications class="section" :certifications="resume.certifications" />
       </div>
     </div>
   </div>
@@ -37,33 +37,33 @@
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
 
-import { enCv, frCv, CV } from "~/models";
+import { enResume, frResume, Resume } from "~/models";
 
 @Component
-export default class MainLayout extends Vue {
+export default class Layout extends Vue {
   details: boolean = false;
 
   languageFlip: boolean = process.env.ACTIVATE_LANGUAGE === "true";
 
-  get cv(): CV {
+  get resume(): Resume {
     if (this.$i18n.locale === "fr") {
-      return frCv;
+      return frResume;
     }
 
-    return enCv;
+    return enResume;
   }
 }
 </script>
 
 <style scoped>
 @media screen and (max-width: 768px) {
-  .cv-container > div {
+  .resume-container > div {
     grid-column: 1 / span 2;
   }
 }
 
 @media screen and (min-width: 769px) {
-  .cv-container {
+  .resume-container {
     display: grid;
     grid-template-columns: [col1] var(--summary-width) [line2] auto;
   }
@@ -147,7 +147,7 @@ export default class MainLayout extends Vue {
     width: 100%;
     max-width: 100%;
   }
-  .cv-container > div {
+  .resume-container > div {
     grid-column: 1 / span 2;
   }
   .summary .section,

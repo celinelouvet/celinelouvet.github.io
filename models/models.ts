@@ -71,7 +71,7 @@ export type Experience = Period &
     stacks?: Stack[];
   };
 
-export type CV = {
+export type Resume = {
   firstname: string;
   lastname: string;
   birthdate: string;
