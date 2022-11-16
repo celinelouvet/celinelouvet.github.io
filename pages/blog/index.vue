@@ -1,12 +1,12 @@
 <template>
-  <section>Blog</section>
+  <BlogLayout />
 </template>
 
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
 
 @Component
-export default class Blog extends Vue {}
+export default class BlogPage extends Vue {}
 </script>
 
 <style></style>

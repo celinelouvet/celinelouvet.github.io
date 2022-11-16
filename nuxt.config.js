@@ -33,6 +33,7 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [
     "~/components/",
+    { path: "~/components/blog/", prefix: "blog" },
     { path: "~/components/resume/", prefix: "resume" },
     { path: "~/components/resume/summary/", prefix: "resumeSummary" },
     { path: "~/components/resume/content/", prefix: "resumeContent" },
@@ -51,7 +52,16 @@ export default {
   modules: [["bootstrap-vue/nuxt", { icons: true }], "@nuxtjs/i18n"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    extend(config) {
+      config.module.rules.push({
+        enforce: "pre",
+        test: /\.md$/,
+        loader: "raw-loader",
+        exclude: /(node_modules)/,
+      });
+    },
+  },
 
   bootstrapVue: {
     components: [
