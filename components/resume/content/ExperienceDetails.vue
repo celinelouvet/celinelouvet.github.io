@@ -10,7 +10,9 @@
       <span class="resume-small">{{ remote }}</span>
     </div>
     <h4 v-if="job.role" class="role">{{ job.role }}</h4>
-    <p class="description">{{ job.description }}</p>
+    <div class="description">
+      <div v-for="(description, index) in job.descriptions" :key="index">{{ description }}</div>
+    </div>
     <div class="details">
       <div v-if="job.projects" class="projects">
         <h4 :class="{ 'd-print-none': summarize }">{{ $tc("project", job.projects.length) }}</h4>
@@ -21,31 +23,28 @@
           </div>
         </div>
       </div>
-      <div v-if="job.tasks" class="tasks hidden d-print-none" :class="{ show: details && !summarize }">
+      <div v-if="job.tasks" class="tasks hidden" :class="{ show: !summarize }">
         <h4>{{ $t("tasks") }}</h4>
-        <ul>
-          <li v-for="task in job.tasks" :key="task.name">
-            {{ task.name }}
-            <ul v-if="task.subtasks">
+        <div class="tasks-content">
+          <div v-for="task in job.tasks" :key="task.name">
+            <p class="name">{{ task.name }}</p>
+            <ul v-if="task.subtasks" class="list">
               <li v-for="subtask in task.subtasks" :key="subtask.name">
                 {{ subtask.name }}
               </li>
             </ul>
-          </li>
-        </ul>
-      </div>
-      <div v-if="job.sideRoles" class="sideroles hidden d-print-none" :class="{ show: details }">
-        <ResumeContentSideRole v-for="sideRole in job.sideRoles" :key="`${sideRole.company}-${sideRole.from}`" :side-role="sideRole" />
+          </div>
+        </div>
       </div>
       <div v-if="!summarize">
         <div v-if="job.stacks" class="stacks hidden" :class="{ show: details }">
           <h4>{{ $t("stacks") }}</h4>
-          <div v-if="job.stacks.length === 1">{{ job.stacks[0].technos.join(", ") }}</div>
+          <div v-if="job.stacks.length === 1">{{ buildTechnos(job.stacks[0].technos) }}</div>
 
           <div v-else class="stacks-content" :class="{ one: job.stacks.length === 1 }">
             <div v-for="stack in job.stacks" :key="stack.type" class="stack">
               <div class="type">{{ stack.type }}</div>
-              <div class="technos">{{ stack.technos.join(", ") }}</div>
+              <div class="technos">{{ buildTechnos(stack.technos) }}</div>
             </div>
           </div>
         </div>
@@ -71,8 +70,12 @@
   stacks: "Technos",
   years: " | 1 an | {n} ans",
   months: " | 1 mois | {n} mois",
-  remote: "Télétravail à temps plein",
   today: "aujourd'hui",
+  remoteType: {
+    FULLTIME: "Télétravail complet",
+    HYBRID: "Télétravail alterné (2-3 jours / semaine)",
+    NONE: "Travail en présentiel",
+  },
 }
 </i18n>
 
@@ -83,15 +86,19 @@
   stacks: "Stacks",
   years: " | 1 year | {n} years",
   months: " | 1 month | {n} months",
-  remote: "Full-time remote",
   today: "today",
+  remoteType: {
+    FULLTIME: "Full-time remote",
+    HYBRID: "Part-time remote (2 days / week min.)",
+    NONE: "No remote",
+  },
 }
 </i18n>
 
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
 
-import { Experience } from "~/models";
+import { Experience, Platform } from "~/models";
 
 @Component
 export default class ExperienceDetails extends Vue {
@@ -100,7 +107,12 @@ export default class ExperienceDetails extends Vue {
   @Prop({ default: false }) readonly summarize!: boolean;
 
   get remote() {
-    return this.job.remote ? `- ${this.$t("remote")}` : "";
+    if (!this.job.remote || this.job.remote === "NONE") {
+      return "";
+    }
+
+    const remoteType = `remoteType.${this.job.remote}`;
+    return `- ${this.$t(remoteType)}`;
   }
 
   get projects() {
@@ -138,6 +150,17 @@ export default class ExperienceDetails extends Vue {
       months: roundedMonths === 12 ? 0 : roundedMonths,
       years: roundedYears,
     };
+  }
+
+  buildTechnos(technos: (string | Platform)[]) {
+    return technos
+      .map((techno: string | Platform) => {
+        if (typeof techno === "string") {
+          return techno;
+        }
+        return `${techno.type} (${techno.technos.join(", ")})`;
+      })
+      .join(", ");
   }
 }
 </script>
@@ -182,6 +205,17 @@ export default class ExperienceDetails extends Vue {
   margin-bottom: var(--cv-size);
 }
 
+.tasks > .tasks-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: column;
+  column-gap: var(--cv-size);
+}
+.tasks-content ul.list {
+  padding-left: 1rem;
+  margin-bottom: 0;
+}
+
 @media screen {
   .company {
     font-size: 2.1em;
@@ -207,6 +241,7 @@ export default class ExperienceDetails extends Vue {
 }
 
 .project .name,
+.tasks .name,
 .stack .type {
   font-weight: 700;
 }

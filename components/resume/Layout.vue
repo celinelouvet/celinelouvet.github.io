@@ -28,6 +28,7 @@
         <ResumeContentExperiences :details="details" class="section" :experiences="resume.experiences" />
         <ResumeContentTalks class="section" :talks="resume.talks" />
         <ResumeContentEducations class="section" :educations="resume.educations" />
+        <ResumeContentTrainings class="section" :trainings="resume.trainings" />
         <ResumeContentCertifications class="section" :certifications="resume.certifications" />
       </div>
     </div>
