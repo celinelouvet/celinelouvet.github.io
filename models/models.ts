@@ -31,15 +31,26 @@ export type Social = {
   link: string;
 };
 
-export type Stack = {
+export type Platform = {
   type: string;
   technos: string[];
+};
+
+export type Stack = {
+  type: string;
+  technos: (string | Platform)[];
 };
 
 export type Talk = {
   topic: string;
   link: string;
   where: Convention[];
+};
+
+export type Training = {
+  topic: string;
+  company: string;
+  when: string;
 };
 
 export type Education = Period & {
@@ -56,17 +67,16 @@ type Task = {
 
 type Role = {
   role?: string;
-  description?: string;
+  descriptions?: string[];
   tasks?: Task[];
 };
 
 export type Experience = Period &
   Role & {
     company?: string;
-    remote?: boolean;
+    remote?: RemoteType;
     summarize?: boolean;
     jobs?: Experience[];
-    sideRoles?: Experience[];
     projects?: Project[];
     stacks?: Stack[];
   };
@@ -89,5 +99,6 @@ export type Resume = {
   experiences: Experience[];
   talks: Talk[];
   educations: Education[];
+  trainings: Training[];
   certifications: Certification[];
 };

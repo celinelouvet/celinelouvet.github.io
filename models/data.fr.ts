@@ -16,12 +16,13 @@ const resume: Resume = {
   ],
   hobbies: "Dessins, peinture, modelage, sport",
   descriptions: [
-    "Développeuse Backend Senior, en Typescript, avec une appétance aux langages fonctionnels.",
-    "Plusieurs expériences de lead developer, avec management d'une équipe de développeurs.",
+    "Développeuse Backend Senior, en Typescript, avec une appétence aux langages fonctionnels.",
+    "Plusieurs expériences de lead developer, avec management d’une équipe de développeurs.",
     "Plusieurs expériences de Technical Leader, avec reprise de legacy ou de création en partant de zéro, architecture et de mises en place de méthodes de travail.",
   ],
   skills: [
     "Phase de build, avec objectif stabilité & qualité",
+    "Accompagnement",
     "Architecture cloud (GCP & AWS)",
     "Typescript",
     "NodeJs",
@@ -38,28 +39,22 @@ const resume: Resume = {
       company: "Pyxo",
       from: "2022-05-02",
       role: "Backend developer",
-      description: "Developpeuse backend sur une architecture microservices, fortement évènementielle.",
-      remote: false,
+      descriptions: [
+        "Developpeuse backend sur une architecture microservices, fortement évènementielle.",
+        "Mise en place de méthodologies pour réduire les frictions avec l’équipe produit, améliorer le suivi des initiatives projet et de leurs phase de QA.",
+      ],
+      remote: "HYBRID",
       projects: [
         {
           name: "Pyxo",
-          description: "Solution B2B2C permettant d'effectuer des prêts et retours de contenants réutilisables, auprès des restaurateurs clients.",
-        },
-      ],
-      tasks: [
-        { name: "Réalisation d'un POC pour une démo d'appel d'offre" },
-        { name: "Développement d'une landing permettant à un utilisateur anonyme de réaliser un prêt" },
-        {
-          name: "Développement d'un programme de fidélité",
-          subtasks: [{ name: "Découpage fonctionnel" }, { name: "Conception" }, { name: "Développements backend" }],
-        },
-        {
-          name: "Développement d'un système de parrainage",
-          subtasks: [{ name: "Découpage fonctionnel" }, { name: "Conception" }, { name: "Développements backend" }],
+          description: "Solution B2B2C permettant d’effectuer des prêts et retours de contenants réutilisables, auprès des restaurateurs clients.",
         },
       ],
       stacks: [
-        { type: "Infrastructure", technos: ["AWS DynamoDB", "AWS RDS", "AWS CacheCluster", "AWS SQS", "AWS function"] },
+        {
+          type: "Infrastructure",
+          technos: [{ type: "AWS", technos: ["CloudFormation", "DynamoDB", "RDS", "CacheCluster", "SQS", "Lambda", "S3", "Cloudfront", "VPC"] }],
+        },
         { type: "Landings", technos: ["VanillaJs", "Preact"] },
         { type: "Backend API", technos: ["Node", "Typescript", "Serverless"] },
       ],
@@ -69,9 +64,12 @@ const resume: Resume = {
       from: "2021-01-01",
       to: "2022-04-25",
       role: "Staff engineer / Senior Lead developer",
-      description:
-        "Tech lead avec un role de mid-management et une implication au niveau entreprise. La répartition entre développement et lead/management est de 60-40%.",
-      remote: true,
+      descriptions: [
+        "Tech lead avec un rôle de mid-management et une implication au niveau entreprise.",
+        "Accompagnement de managers. Accompagnement d’un junior en reconversion.",
+        "La répartition entre développement et lead/management est de 40-60%.",
+      ],
+      remote: "FULLTIME",
       projects: [
         {
           name: "Hubside Photos",
@@ -79,25 +77,33 @@ const resume: Resume = {
         },
       ],
       tasks: [
-        { name: "Choix d’architecture et de stack" },
-        { name: "Définition de roadmap tech" },
-        { name: "Mise en place d’un référencement de la dette technique existante" },
         {
-          name: "Développements backend / PoC",
+          name: "Au niveau Hubside",
           subtasks: [
-            { name: "Upload de photos" },
-            { name: "Création d’album partagé" },
-            { name: "Impression de tirages unitaires" },
-            { name: "Impression de livre photos" },
+            { name: "Mise en place d’un référencement de la dette technique existante" },
+            { name: "Définition de roadmap technique" },
+            { name: "Accompagnement des autres managers" },
           ],
         },
-        { name: "Management RH des développeurs." },
+        {
+          name: "Au niveau équipe Photos",
+          subtasks: [
+            { name: "Définition de roadmap technique" },
+            { name: "Choix d’architecture et de stack" },
+            { name: "Développements backend / PoC" },
+            { name: "Management RH des développeurs" },
+            { name: "Accompagnement et formation d’un développeur junior en reconversion" },
+          ],
+        },
       ],
       stacks: [
-        { type: "Infrastructure", technos: ["GCP AppEngine", "GCP Datastore", "GCP FileStorage", "GCP Pub/Sub", "GCP Cloud Run"] },
+        {
+          type: "Infrastructure",
+          technos: [{ type: "GCP", technos: ["AppEngine", "Datastore", "FileStorage", "Pub/Sub", "Cloud Run", "Compute Engine"] }],
+        },
         { type: "Frontend", technos: ["PWA", "ReactJs", "Typescript", "Jest", "Cypress", "GraphQL (Apollo Client)", "Storybook"] },
         { type: "Backend", technos: ["Node", "Typescript", "GraphQL (Apollo Server)"] },
-        { type: "API", technos: ["Node", "Typescript", "REST", "Express"] },
+        { type: "Print", technos: ["Node", "Typescript", "REST", "Express", "Puppeteer"] },
       ],
     },
     {
@@ -110,21 +116,21 @@ const resume: Resume = {
           from: "2019-08-01",
           to: "2020-12-31",
           role: "Fullstack developer / Tech lead",
-          description: "Développeuse fullstack dans un premier temps, puis reprise du rôle de techn lead après le départ du lead précédent.",
+          descriptions: [
+            "Développeuse fullstack dans un premier temps, puis reprise du rôle de tech lead après le départ du lead précédent.",
+            "La répartition entre développement et lead/management est de 70-30%.",
+          ],
           projects: [
             {
               name: "Hubside Photos",
               description: "Service B2C permettant de partager des albums et d’imprimer des photos en tirages unitaires ou livre photos.",
             },
           ],
-          tasks: [
-            { name: "Upload de photos" },
-            { name: "Création d’album partagé" },
-            { name: "Impression de tirages unitaires" },
-            { name: "Impression de livre photos" },
-          ],
           stacks: [
-            { type: "Common", technos: ["GCP AppEngine", "GCP Datastore", "GCP FileStorage", "GCP Pub/Sub", "GCP Cloud Run"] },
+            {
+              type: "Infrastructure",
+              technos: [{ type: "GCP", technos: ["AppEngine", "Datastore", "FileStorage", "Compute Engine"] }],
+            },
             { type: "Frontend", technos: ["ReactJs", "Typescript", "Jest", "Cypress", "GraphQL (Apollo Client)", "Storybook"] },
             { type: "Backend", technos: ["Node", "Typescript", "REST", "Express", "GraphQL (Apollo Server)"] },
           ],
@@ -134,18 +140,8 @@ const resume: Resume = {
           from: "2019-03-01",
           to: "2019-08-10",
           role: "Back-end developer",
-          description: "Développeuse backend sur des traitements asynchrones récurrents.",
+          descriptions: ["Développeuse backend sur des traitements asynchrones récurrents."],
           projects: [{ name: "Foncia Stark", description: "Refonte de l’application de gestion locative" }],
-          tasks: [
-            {
-              name: "Développement de workers",
-              subtasks: [
-                { name: "Courriers entrants et sortants" },
-                { name: "Réception de virements pour les loyers" },
-                { name: "Demande de virements auprès des banques" },
-              ],
-            },
-          ],
           stacks: [{ type: "Backend", technos: ["Javascript", "Node", "REST", "Express", "Jest"] }],
         },
       ],
@@ -155,18 +151,15 @@ const resume: Resume = {
       from: "2017-12-01",
       to: "2019-06-15",
       role: "CTO & co-founder",
-      description:
-        "Incubateur Université Dauphine. Solution de récolte d’avis clients post-achat à impact positif, sur le principe de 1 avis consommateur = 1 don à une association.",
+      descriptions: [
+        "Incubateur Université Dauphine.",
+        "Solution de récolte d’avis clients post-achat à impact positif, sur le principe de 1 avis consommateur = 1 don à une association.",
+        "Choix stratégiques et levée de fond. Développements, recrutement et accompagnement d’un stagiaire",
+      ],
       projects: [
         { name: "Vitrine", description: "Site B2B de présentation du produit à destination des commerçants" },
         { name: "Solution", description: "Application web B2C pour visualiser les avis déposés et en ajouter" },
         { name: "AddOn Prestashop", description: "AddOn permettant à un commerçant d’afficher et administrer les avis reçus" },
-      ],
-      tasks: [
-        { name: "Choix stratégiques et levée de fond" },
-        { name: "Choix de la stack technique" },
-        { name: "Développements" },
-        { name: "Recrutement et formation / accompagnement d’un stagiaire" },
       ],
       stacks: [
         { type: "Vitrine", technos: ["VueJS", "Firebase"] },
@@ -179,23 +172,11 @@ const resume: Resume = {
       from: "2017-06-21",
       to: "2017-11-20",
       role: "CTO",
-      description:
+      descriptions: [
         "Management d’une petite équipe de développeurs, nécessitant un changement de méthodes de travail, afin de sortir de la phase de PoC initiale.",
-      projects: [{ name: "Captain contrat", description: "Site B2C facilitant la création de documents légaux" }],
-      tasks: [
-        { name: "Choix technique et création d’un nouveau module client" },
-        {
-          name: "Mise en place de méthodes pour",
-          subtasks: [
-            { name: "Augmenter l’efficacité et la concentration de l’équipe de développement" },
-            { name: "Augmenter la qualité technique du produit développé" },
-            { name: "Réduire les frictions avec l’équipe produit" },
-          ],
-        },
-        { name: "Management et suivi de carrière d’une équipe de trois développeurs" },
-        { name: "Recrutement : recherche, suivi et embauche" },
+        "Recrutement (recherche, suivi et embauche)",
       ],
-
+      projects: [{ name: "Captain contrat", description: "Site B2C facilitant la création de documents légaux" }],
       stacks: [
         { type: "Legacy", technos: ["Ruby on Rails", "MySQL", "Amazon RDS", "Amazon EC2"] },
         { type: "Module client", technos: ["ReactJs", "Amazon S3"] },
@@ -206,11 +187,10 @@ const resume: Resume = {
       from: "2011-05-01",
       to: "2017-06-20",
       role: "Team Leader, Technical Leader & développeuse",
-      tasks: [
-        { name: "Management et suivi de carrière d’une quinzaine de personnes" },
-        { name: "Réalisation d’entretiens techniques hebdomadaires" },
-        { name: "Amélioration continue des processus internes de SFEIR" },
-        { name: "Animation technique de la communauté SFEIR (organisation de journée Codingame, etc)" },
+      descriptions: [
+        "Management et suivi de carrière d’une quinzaine de personnes. Réalisation d’entretiens techniques hebdomadaires.",
+        "Amélioration continue des processus internes de SFEIR.",
+        "Animation technique de la communauté SFEIR (organisation de journées Codingame, etc).",
       ],
       jobs: [
         {
@@ -218,21 +198,18 @@ const resume: Resume = {
           from: "2016-09-01",
           to: "2017-06-20",
           role: "Fullstack developer & accompagnement technique",
-          description: "Développeuse fullstack avec un rôle d’accompagnement technique, afin d’anticiper les problèmes rencontrés.",
+          descriptions: [
+            "Développeuse fullstack avec un rôle d’accompagnement technique (architecture et AngularJs), afin d’anticiper les problèmes rencontrés.",
+          ],
           projects: [
             {
               name: "Active Advisory",
-              description: "Application B2C d'aide à l’achat et à la vente de produits financiers recommandés par la banque",
+              description: "Application B2C d’aide à l’achat et à la vente de produits financiers recommandés par la banque",
             },
             {
               name: "Digital DAA",
               description: "Application B2B de répartition du patrimoine financier suivant la performance et le risque souhaité",
             },
-          ],
-          tasks: [
-            { name: "Accompagnement technique sur l’architecture" },
-            { name: "Accompagnement technique en AngularJs" },
-            { name: "Développements" },
           ],
           stacks: [{ type: "", technos: ["AngularJs", "Java 8", "PostgreSQL", "MongoDB"] }],
         },
@@ -241,8 +218,12 @@ const resume: Resume = {
           from: "2016-09-01",
           to: "2017-06-20",
           role: "Développeuse & Technical Leader & Accompagnement technique à la transition numérique",
-          description:
-            "Création d’une équipe dédiée à la réalisation d’applications Cloud, pour initier la transition numérique de l’entité France. Accompagnement technique pour l’architecture, accompagnement fonctionnel et technique lors des phases de design des applications, formation de développeurs juniors.",
+          descriptions: [
+            "Création d’une équipe dédiée à la réalisation d’applications Cloud, pour initier la transition numérique de l’entité France.",
+            "Accompagnement technique pour l’architecture, accompagnement fonctionnel et technique lors des phases de design des applications.",
+            "Formation de développeurs juniors.",
+            "Animation de workshops utilisateurs. Avant-ventes, chiffrages et réponses à appel d’offres.",
+          ],
           projects: [
             {
               name: "EasyRisk",
@@ -251,14 +232,6 @@ const resume: Resume = {
             { name: "Goals", description: "Outil B2B de suivi des prévisions budgétaires" },
             { name: "CMS", description: "Outil B2B de réponse à appel d’offres" },
           ],
-          tasks: [
-            { name: "Animation de workshops utilisateurs" },
-            { name: "Avant-ventes" },
-            { name: "Chiffrages, étude et analyse de besoins" },
-            { name: "Développement d’évolutions et des corrections de bugs" },
-            { name: "Suivi des recettes" },
-            { name: "Mises en production" },
-          ],
           stacks: [
             { type: "EasyRisk", technos: ["Polymer", "PostgreSQL", "Scala"] },
             { type: "Goals & CMS", technos: ["AngularJs", "NodeJs", "MongoDB"] },
@@ -266,11 +239,14 @@ const resume: Resume = {
         },
         {
           company: "Valeo",
-          from: "2014-03-01",
+          from: "2013-01-01",
           to: "2015-03-01",
-          role: "Développeuse Java/AngularJs & Technical Leader & PPO",
-          description:
-            "Responsable des projets Valeo chez SFEIR. Technical Leader sur tous les projets et développement backend sur les projets les plus importants. Interactions permanentes avec 5 POs et le DSI Cloud.",
+          role: "Développeuse Java/AngularJs & Technical Leader",
+          descriptions: [
+            "Responsable des projets Valeo chez SFEIR, en liaison avec 5 PMs et le DSI Cloud.",
+            "Technical Leader sur tous les projets et développement backend sur les projets les plus importants (Newscenter, Roadmap, QnP).",
+            "Accompagnement des développeurs. Animation de workshops utilisateurs. Avant-ventes, chiffrages et réponses à appel d’offres.",
+          ],
           projects: [
             { name: "Roadmap", description: "Outil de suivi de la progression de la maturité des processus" },
             { name: "ISPM", description: "Outil de suivi d’indicateurs des projets" },
@@ -282,36 +258,9 @@ const resume: Resume = {
             { name: "Organization Search", description: "Outil de recherche des informations d’organisation Valeo" },
             { name: "Roles Search", description: "Outil de recherche des personnes ayant un rôle spécifique" },
           ],
-          tasks: [
-            { name: "Choix et mise en place de la stack technique pour le groupe" },
-            { name: "Suivi des équipes de développement" },
-            { name: "Animation de workshops utilisateurs" },
-            { name: "Avant-ventes" },
-            { name: "Chiffrages, étude et analyse de besoins" },
-          ],
-          sideRoles: [
-            {
-              company: "QnP",
-              from: "2014-07-01",
-              to: "2014-12-31",
-              description: "Développement de PoC, des API et du backend",
-            },
-            {
-              company: "Roadmap",
-              from: "2013-06-01",
-              to: "2014-02-28",
-              description: "Développement de PoC, des API et du backend",
-            },
-            {
-              company: "Newscenter",
-              from: "2013-01-01",
-              to: "2013-06-30",
-              description: "Développement de PoC, des API et du backend",
-            },
-          ],
           stacks: [
             { type: "Front-ends", technos: ["GWT", "AngularJs"] },
-            { type: "Back-ends", technos: ["Java", "GCP AppEngine", "GCP FileStorage", "GCP SearchAPI", "GCP Datastore"] },
+            { type: "Back-ends", technos: ["Java", { type: "GCP", technos: ["AppEngine", "FileStorage", "SearchAPI", "Datastore"] }] },
           ],
         },
         {
@@ -320,29 +269,13 @@ const resume: Resume = {
           to: "2012-12-31",
           role: "Développeuse Java",
           summarize: true,
-          description: "Evolutions effectuées dans le cadre des changements pour Bâle III.",
+          descriptions: ["Dévelopements, optimisations et automatisation. Evolutions effectuées dans le cadre des changements pour Bâle III."],
           projects: [
             {
               name: "CNR",
               description:
                 "Application WEB permettant d’effectuer, de manière automatique, des tests de non régression fonctionnelle sur la librairie de calcul des risques de contreparties sur les opérations de marché",
             },
-          ],
-          tasks: [
-            { name: "Etude et analyse du besoin" },
-            { name: "Choix des évolutions de l’architecture" },
-            {
-              name: "Développement de contrôles effectuant des tests de cohérence sur les données en base",
-              subtasks: [{ name: "Recalcul des indicateurs de risque (Loan Equivalent, Borrowing Equivalent, MtM, AaR, Global Risk, etc.)" }],
-            },
-            {
-              name: "Développement de contrôles effectuant des tests de non régression entre deux contextes",
-              subtasks: [{ name: "Parsing des fichiers FpML" }, { name: "Comparaison des données de marché" }],
-            },
-            { name: "Développement de contrôles générant divers rapports pour les UAT" },
-            { name: "Optimisation de l’application" },
-            { name: "Mise en place de tests unitaires" },
-            { name: "Mise en place du serveur d’exploitation" },
           ],
           stacks: [{ type: "", technos: ["JEE5", "JSP", "Sybase"] }],
         },
@@ -352,28 +285,8 @@ const resume: Resume = {
           to: "2012-07-01",
           role: "Architecte junior & Développeuse Java / GWT",
           summarize: true,
-          description:
-            "Intégration à la cellule d’architecture développant un socle technique. Ces développements ont nécessité le développement de POC.",
-          tasks: [
-            { name: "Développement d’un socle technique JEE à destination de développeurs" },
-            {
-              name: "Développement d’une application WEB en HTML5 / JQuery pour le portail CDC",
-              subtasks: [
-                { name: "Intégration à un portail Liferay" },
-                { name: "Développement de portlets" },
-                { name: "Développement de thèmes avec Velocity" },
-              ],
-            },
-            {
-              name: "Développement d’une application WEB en GWT pour l’usine de développement, permettant d’effectuer l’administration des utilisateurs et de leurs droits conjointement sur SVN, Continuum et Archiva",
-              subtasks: [
-                { name: "Etude et analyse du besoin" },
-                { name: "Développement des écrans" },
-                { name: "Développement des couches métier" },
-                { name: "Connexion aux WS d’Archiva et Continuum" },
-                { name: "Parsing et écriture des fichiers d’administration SVN" },
-              ],
-            },
+          descriptions: [
+            "Intégration à la cellule d’architecture développant un socle technique. Développement d’un socle technique pour les autres équipes.",
           ],
           stacks: [
             { type: "Socle technique", technos: ["JEE5", "Tomcat"] },
@@ -387,22 +300,16 @@ const resume: Resume = {
           to: "2011-12-31",
           role: "Développeuse Java/GWT & ScrumMaster",
           summarize: true,
-          description:
-            "Application primée en interne pour sa simplicité d’utilisation. Réalisation des développements d’une application, dans le cadre d’une formation interne THALES.",
+          descriptions: [
+            "Application primée en interne pour sa simplicité d’utilisation.",
+            "Réalisation des développements d’une application, dans le cadre d’une formation interne THALES.",
+          ],
           projects: [
             {
               name: "AnaisHD",
               description:
                 "Application WEB permettant d’effectuer la comparaison et la démonstration de matériel de surveillance longue distance, avec la prise de contrôle à distance de caméras HD et d’objectifs Angénieux HD",
             },
-          ],
-          tasks: [
-            { name: "Etude et analyse du besoin" },
-            { name: "Développement des écrans" },
-            { name: "Développement des couches métier" },
-            { name: "Développement du client Socket pour la connexion aux caméras" },
-            { name: "Suivi de la recette" },
-            { name: "Réalisation des icônes" },
           ],
           stacks: [{ type: "", technos: ["GWT2.4", "Apache Mina", "Tomcat"] }],
         },
@@ -411,7 +318,7 @@ const resume: Resume = {
           from: "2011-06-01",
           to: "2011-10-31",
           role: "Développeuse Java/GWT",
-          description: "Développeuse junior",
+          descriptions: ["Développeuse junior"],
           summarize: true,
           projects: [
             {
@@ -420,14 +327,7 @@ const resume: Resume = {
                 "Application WEB permettant à une chaîne de magasins de Grande Distribution de planifier les tâches des employés en fonction des stocks et des livraisons",
             },
           ],
-          tasks: [
-            { name: "Etude et analyse du besoin" },
-            { name: "Développement des écrans" },
-            { name: "Développement des couches métier" },
-            { name: "Développement de l’algorithme de génération du planning" },
-            { name: "Suivi de la recette" },
-          ],
-          stacks: [{ type: "", technos: ["GWT2.3", "GCP AppEngine", "GCP Datastore"] }],
+          stacks: [{ type: "", technos: ["GWT2.3", { type: "GCP", technos: ["AppEngine", "Datastore"] }] }],
         },
       ],
     },
@@ -443,28 +343,14 @@ const resume: Resume = {
           from: "2010-10-01",
           to: "2011-03-31",
           role: "Développeuse Java/GWT & Technical Leader",
-          description:
+          descriptions: [
             "Mise en place de l’intégration continue sur BACARDI, via des chaînes automatiques de validation des livraisons en intégration, à destination de la MOA",
+          ],
           projects: [
             {
               name: "BACARDI",
               description: "Application Back-Office dédiée à l’analyse de risques pour les produits dérivés",
             },
-          ],
-          tasks: [
-            {
-              name: "Développement d’un ordonnanceur fonctionnel, client de BACARDI, à destination de la MOA",
-              subtasks: [
-                { name: "Automatiser l’exécution de traitements fonctionnels, en fonction des impacts des développements en cours sur BACARDI" },
-                { name: "Génération automatique de jeux de données, injection des jeux et exécution séquencée" },
-              ],
-            },
-            {
-              name: "Mise en place d’une Software Factory (Automatisation des déploiements, des rafraîchissements de données, des tests fonctionnels)",
-            },
-            { name: "Développement d’outils d’automatisation des livraisons et de tests" },
-            { name: "Développement d’une application de soumission automatique des demandes de rafraîchissement des environnements d’intégration" },
-            { name: "Beta tests et configuration pour la migration de ClearCase vers Git" },
           ],
           stacks: [
             { type: "BACARDI", technos: ["Java JEE 6", "Oracle 10g", "Sybase", "PL/SQL", "Scripts", "ClearCase"] },
@@ -476,21 +362,12 @@ const resume: Resume = {
           from: "2007-05-01",
           to: "2010-02-28",
           role: "Ingénieur opérationnel",
-          description: "Assurance de la qualité des livraisons en production et de leur mise en production",
+          descriptions: ["SysAdmin et ops. Livraisons en intégration, assurance de la qualité des livraisons et mise en production."],
           projects: [
             {
               name: "EPROM",
               description: "Application Back-Office servant de référentiel des produits dérivés",
             },
-          ],
-          tasks: [
-            { name: "Gestionnaire d’environnement" },
-            { name: "Mise en place d’outils de gestion d’environnement" },
-            { name: "Validation des outils de déploiement et d’industrialisation" },
-            { name: "Coordination des équipes techniques lors des mises en production" },
-            { name: "Mise en place de l’architecture internationale (intégration et production)" },
-            { name: "Mise en place des procédés de monitoring internationaux" },
-            { name: "Collaboration avec les équipes situées aux USA et au Japon" },
           ],
           stacks: [{ type: "", technos: ["Oracle 10g", "Sybase", "PL/SQL", "Scripts", "ClearCase"] }],
         },
@@ -508,18 +385,10 @@ const resume: Resume = {
           from: "2006-06-01",
           to: "2007-05-31",
           role: "Ingénieur tests automatiques",
-          description: "Assurance de la qualité du logiciel et de la documentation projet",
-          projects: [{ name: "Gestion du Client", description: "Système de gestion des dossiers mobiles des clients (Forfaits, options…)" }],
-          tasks: [
-            { name: "Elaboration de la stratégie de tests" },
-            { name: "Qualification technique et fonctionnelle des versions" },
-            {
-              name: "Rédaction de documentations (Cahier de tests, PV de Recette Technique, PV de Recette Logicielle, Dossier Technique de Mise en Production)",
-            },
-            { name: "Support aux équipes de tests fonctionnels et aux équipes des tests de performance" },
-            { name: "Support à la mise en production" },
-            { name: "Suivi des anomalies de production" },
+          descriptions: [
+            "Assurance de la qualité du logiciel et de la documentation projet. Réalisation de tests fonctionnels, techniques et performance.",
           ],
+          projects: [{ name: "Gestion du Client", description: "Système de gestion des dossiers mobiles des clients (Forfaits, options…)" }],
           stacks: [{ type: "", technos: ["Oracle 9i", "LIGIS de MetaMicro", "Scripts", "PL/SQL"] }],
         },
         {
@@ -527,15 +396,8 @@ const resume: Resume = {
           from: "2006-02-01",
           to: "2006-05-31",
           role: "Ingénieur tests automatiques",
-          description:
-            "Dans le cadre de la fusion Wanadoo / Orange. Qualification du Bus de Provisioning de Services (Bus de données du système de gestion de l’identité)",
+          descriptions: ["Dans le cadre de la fusion Wanadoo / Orange. Réalisation de tests fonctionnels."],
           projects: [{ name: "Gestion du Client", description: "Système de gestion des clients et de leur identité (compte email, téléphone etc.)" }],
-          tasks: [
-            { name: "Mise en place de méthodologie de test" },
-            { name: "Qualification des services de provisioning (1ème génération du bus, en Corba)" },
-            { name: "Qualification des services de provisioning (2ème génération du bus, utilisant des WebServices)" },
-            { name: "Qualification des SGBD : 2 générations de bases Sybase" },
-          ],
           stacks: [{ type: "", technos: ["Corba", "Sybase", "Oracle 9i", "Scripts", "PL/SQL"] }],
         },
       ],
@@ -580,6 +442,7 @@ const resume: Resume = {
       fullname: "Ecole Nationale Supérieure de l’Electronique et de ses Applications",
     },
   ],
+  trainings: [{ topic: "Mid-management", company: "Sparring Partners", when: "2021" }],
   certifications: [
     { topic: "Polymer 200", company: "SFEIR", when: "2016-07-01" },
     { topic: "AngularJs 200", company: "SFEIR", when: "2016-01-01" },
