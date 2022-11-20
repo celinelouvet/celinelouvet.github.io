@@ -94,6 +94,7 @@ export default {
 
   i18n: {
     vueI18nLoader: true,
+    defaultLocale,
     vueI18n: {
       fallbackLocale: defaultLocale,
     },
