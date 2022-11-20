@@ -9,7 +9,7 @@ type Arguments = {
 
 type LanguageVersion = { locale: string; language: string; suffix?: string };
 const languageVersions: LanguageVersion[] = [
-  { locale: "fr-FR", language: "FR", suffix: "/fr" },
+  { locale: "fr-FR", language: "FR" },
   { locale: "en-US", language: "EN", suffix: "/en" },
 ];
 

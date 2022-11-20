@@ -173,7 +173,7 @@ const resume: Resume = {
       role: "CTO",
       descriptions: [
         "Management of a small team of developers, needing a change in the working habits, in order to scale-up.",
-        "Hiring (search, followup and signature)",
+        "Hiring (search, follow-up and signature)",
       ],
       projects: [{ name: "Captain contrat", description: "B2C site dedicated to creating legal documents with forms help" }],
       stacks: [
@@ -260,7 +260,7 @@ const resume: Resume = {
             { name: "Cloud Services", description: "Common transversal tools and services" },
             { name: "Contact Search", description: "Microservice dedicated to search for employees" },
             { name: "Organization Search", description: "Microservice dedicated to search for Valeo organization informations" },
-            { name: "Roles Search", description: "Microservice dedicated to search for employes with a specific role" },
+            { name: "Roles Search", description: "Microservice dedicated to search for employees with a specific role" },
           ],
           stacks: [
             { type: "Front-ends", technos: ["GWT", "AngularJs"] },
@@ -278,7 +278,7 @@ const resume: Resume = {
             {
               name: "CNR",
               description:
-                "Web application used to automaticaly run functional non-regression tests on the library doing counterparty risks estimations on market transactions",
+                "Web application used to automatically run functional non-regression tests on the library doing counterparty risks estimations on market transactions",
             },
           ],
           stacks: [{ type: "", technos: ["JEE5", "JSP", "Sybase"] }],
