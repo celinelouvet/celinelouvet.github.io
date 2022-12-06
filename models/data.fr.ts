@@ -38,6 +38,7 @@ const resume: Resume = {
     {
       company: "Pyxo",
       from: "2022-05-02",
+      to: "2022-12-05",
       role: "Backend developer",
       descriptions: [
         "Developpeuse backend sur une architecture microservices, fortement évènementielle.",
