@@ -36,6 +36,18 @@ const resume: Resume = {
   ],
   experiences: [
     {
+      company: "Shine",
+      from: "2023-02-06",
+      role: "Senior Lead developer",
+      remote: "FULLTIME",
+      stacks: [
+        {
+          type: "Infrastructure",
+          technos: [{ type: "GCP", technos: ["AppEngine", "Spanner", "FileStorage", "Pub/Sub", "Cloud function"] }],
+        },
+      ],
+    },
+    {
       company: "Pyxo",
       from: "2022-05-02",
       to: "2022-12-05",
