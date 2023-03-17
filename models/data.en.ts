@@ -217,8 +217,8 @@ const resume: Resume = {
         },
         {
           company: "Deloitte France",
-          from: "2016-09-01",
-          to: "2017-06-20",
+          from: "2015-04-01",
+          to: "2016-08-31",
           role: "Developer & Technical Leader & Technical consulting for digital transformation",
           descriptions: [
             "Creation of a team dedicated to Cloud-hosted applications, in order to start the french entity's digital transformation.",

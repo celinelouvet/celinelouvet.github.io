@@ -216,8 +216,8 @@ const resume: Resume = {
         },
         {
           company: "Deloitte France",
-          from: "2016-09-01",
-          to: "2017-06-20",
+          from: "2015-04-01",
+          to: "2016-08-31",
           role: "Développeuse & Technical Leader & Accompagnement technique à la transition numérique",
           descriptions: [
             "Création d’une équipe dédiée à la réalisation d’applications Cloud, pour initier la transition numérique de l’entité France.",
