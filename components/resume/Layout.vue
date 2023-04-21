@@ -57,6 +57,10 @@ export default class Layout extends Vue {
 </script>
 
 <style scoped>
+h2,
+.h2 {
+  text-transform: uppercase;
+}
 @media screen and (max-width: 768px) {
   .resume-container > div {
     grid-column: 1 / span 2;

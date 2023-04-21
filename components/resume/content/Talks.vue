@@ -33,6 +33,10 @@ export default class Talks extends Vue {
 </script>
 
 <style scoped>
+h2,
+.h2 {
+  text-transform: uppercase;
+}
 @media print {
   .content {
     display: grid;

@@ -31,6 +31,10 @@ export default class Infos extends Vue {
 </script>
 
 <style scoped>
+h2,
+.h2 {
+  text-transform: uppercase;
+}
 @media print {
   .content {
     display: grid;
