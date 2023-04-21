@@ -34,6 +34,7 @@ export default {
   components: [
     "~/components/",
     { path: "~/components/blog/", prefix: "blog" },
+    { path: "~/components/home/", prefix: "home" },
     { path: "~/components/resume/", prefix: "resume" },
     { path: "~/components/resume/summary/", prefix: "resumeSummary" },
     { path: "~/components/resume/content/", prefix: "resumeContent" },

@@ -15,6 +15,11 @@ const resume: Resume = {
     { type: "HYBRID", where: "Lyon" },
   ],
   hobbies: "Drawing, painting, clay modeling, sports",
+  biographies: [
+    "Backend developer and passionate, for 17 years, loves reaching stabilty and quality for production applications.",
+    "Specializing into cloud architectures, with a liking for functional languages.",
+    "Currently lead developer at Shine.",
+  ],
   descriptions: [
     "Backend Senior Developer, in Typescript, with a liking for functional languages.",
     "Several experiences as lead developer or staff engineer, with developers teams management.",
@@ -23,6 +28,7 @@ const resume: Resume = {
   skills: [
     "Build phase, wih stability and qulity as a goal",
     "Mentoring",
+    "Domain Driven Design (DDD)",
     "Cloud architecture (GCP & AWS)",
     "Typescript",
     "NodeJs",
