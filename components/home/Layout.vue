@@ -1,14 +1,9 @@
 <template>
   <div>
-    <div class="nav-bar container-fluid container-lg">
-      <HomeNavBar />
-    </div>
+    <NavBar class="nav-bar" />
     <div class="container-fluid container-lg">
       <div class="home-container">
         <div class="summary">
-          <div class="container d-flex d-lg-none justify-content-end align-items-center actions">
-            <span v-if="languageFlip"><ResumeLanguageSwitcher /></span>
-          </div>
           <ResumeSummaryPicture class="picture" />
           <div class="main-title">
             <h1 class="name">{{ resume.firstname }} {{ resume.lastname }}</h1>
@@ -16,9 +11,6 @@
           </div>
         </div>
         <div class="content">
-          <div class="container d-none d-lg-flex justify-content-end align-items-center actions">
-            <span v-if="languageFlip"><ResumeLanguageSwitcher /></span>
-          </div>
           <HomeBiography class="section" :biographies="resume.biographies" />
           <HomeSocials class="section" :socials="resume.socials" />
         </div>
@@ -33,8 +25,6 @@ import { enResume, frResume, Resume } from "~/models";
 
 @Component
 export default class Layout extends Vue {
-  languageFlip: boolean = process.env.ACTIVATE_LANGUAGE === "true";
-
   get resume(): Resume {
     if (this.$i18n.locale === "fr") {
       return frResume;
@@ -59,19 +49,6 @@ export default class Layout extends Vue {
     display: grid;
     grid-template-columns: [col1] var(--summary-width) [line2] auto;
   }
-}
-
-.nav-bar {
-  background-image: linear-gradient(
-    180deg,
-    rgba(var(--cv-blue-darkest-rgb), 1),
-    rgba(var(--cv-blue-darkest-rgb), 1) 93%,
-    rgba(var(--cv-blue-darkest-rgb), 0) 93%,
-    rgba(var(--cv-blue-darkest-rgb), 0) 96%,
-    rgba(var(--cv-blue-darkest-rgb), 1) 96%
-  );
-  padding: var(--cv-size-2x);
-  color: white;
 }
 
 .main-title .name,

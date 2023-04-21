@@ -1,35 +1,37 @@
 <template>
-  <div class="container-fluid container-lg">
-    <div class="resume-container">
-      <div class="main-title">
-        <div class="d-none d-print-block">
-          <ResumeSummaryPicture />
+  <div>
+    <NavBar class="nav-bar d-print-none" />
+    <div class="container-fluid container-lg">
+      <div class="resume-container">
+        <div class="main-title">
+          <div class="d-none d-print-block">
+            <ResumeSummaryPicture />
+          </div>
+          <div>
+            <h1 class="name">{{ resume.firstname }} {{ resume.lastname }}</h1>
+            <h2 class="job-title">{{ resume.title }}</h2>
+          </div>
         </div>
-        <div>
-          <h1 class="name">{{ resume.firstname }} {{ resume.lastname }}</h1>
-          <h2 class="job-title">{{ resume.title }}</h2>
+        <div class="summary">
+          <ResumeSummaryPicture class="section picture d-none d-lg-block d-print-none" />
+          <ResumeSummaryInfos class="section infos" :resume="resume" />
+          <ResumeSummaryRemote class="section remote" :remotes="resume.remotes" />
+          <ResumeContentDescription class="section d-lg-none description" :descriptions="resume.descriptions" />
+          <ResumeSummarySkills class="section skills" :skills="resume.skills" />
+          <ResumeSummarySocials class="section socials" :socials="resume.socials" />
         </div>
-      </div>
-      <div class="summary">
-        <ResumeSummaryPicture class="section picture d-none d-lg-block d-print-none" />
-        <ResumeSummaryInfos class="section infos" :resume="resume" />
-        <ResumeSummaryRemote class="section remote" :remotes="resume.remotes" />
-        <ResumeContentDescription class="section d-lg-none description" :descriptions="resume.descriptions" />
-        <ResumeSummarySkills class="section skills" :skills="resume.skills" />
-        <ResumeSummarySocials class="section socials" :socials="resume.socials" />
-      </div>
-      <div class="content">
-        <div class="d-print-none d-flex justify-content-end align-items-center actions">
-          <span v-if="languageFlip"><ResumeLanguageSwitcher /></span>
-          <ResumePdfDownloader />
-          <ResumeDetailsLevel @details-change="details = $event" />
+        <div class="content">
+          <div class="d-print-none d-flex justify-content-end align-items-center actions">
+            <ResumePdfDownloader />
+            <ResumeDetailsLevel @details-change="details = $event" />
+          </div>
+          <ResumeContentDescription class="section d-none d-lg-block" :descriptions="resume.descriptions" />
+          <ResumeContentExperiences :details="details" class="section" :experiences="resume.experiences" />
+          <ResumeContentTalks class="section" :talks="resume.talks" />
+          <ResumeContentEducations class="section" :educations="resume.educations" />
+          <ResumeContentTrainings class="section" :trainings="resume.trainings" />
+          <ResumeContentCertifications class="section" :certifications="resume.certifications" />
         </div>
-        <ResumeContentDescription class="section d-none d-lg-block" :descriptions="resume.descriptions" />
-        <ResumeContentExperiences :details="details" class="section" :experiences="resume.experiences" />
-        <ResumeContentTalks class="section" :talks="resume.talks" />
-        <ResumeContentEducations class="section" :educations="resume.educations" />
-        <ResumeContentTrainings class="section" :trainings="resume.trainings" />
-        <ResumeContentCertifications class="section" :certifications="resume.certifications" />
       </div>
     </div>
   </div>
@@ -43,8 +45,6 @@ import { enResume, frResume, Resume } from "~/models";
 @Component
 export default class Layout extends Vue {
   details: boolean = false;
-
-  languageFlip: boolean = process.env.ACTIVATE_LANGUAGE === "true";
 
   get resume(): Resume {
     if (this.$i18n.locale === "fr") {
@@ -74,15 +74,12 @@ h2,
   }
 }
 
+.nav-bar {
+  margin-bottom: var(--cv-size-2x);
+}
+
 .main-title {
-  background-image: linear-gradient(
-    180deg,
-    rgba(var(--cv-blue-darkest-rgb), 1),
-    rgba(var(--cv-blue-darkest-rgb), 1) 93%,
-    rgba(var(--cv-blue-darkest-rgb), 0) 93%,
-    rgba(var(--cv-blue-darkest-rgb), 0) 96%,
-    rgba(var(--cv-blue-darkest-rgb), 1) 96%
-  );
+  background-image: var(--blue-and-white);
   padding: var(--cv-size-2x) var(--cv-size-2x) 0 var(--cv-size-2x);
   color: white;
 }
@@ -148,7 +145,7 @@ h2,
     size: A4 portrait;
     margin: 10mm 10mm 10mm 10mm;
   }
-  .container-fluid.container-lg {
+  .container-fluid {
     width: 100%;
     max-width: 100%;
   }
