@@ -1,12 +1,14 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <div>
-    <h3>{{ talk.topic }}</h3>
+    <h3>{{ talk.topic }} ({{ talk.language.toUpperCase() }})</h3>
+    <p v-if="talk.description" v-html="talk.description"></p>
     <ul>
       <li v-for="convention in conventions" :key="convention">{{ convention }}</li>
     </ul>
     <p v-if="talk.slidesLink || talk.videoLink">
-      <a v-if="talk.slidesLink" :href="talk.slidesLink"><span class="link">Slides</span></a>
-      <a v-if="talk.videoLink" :href="talk.videoLink"><span class="link">Vidéo</span></a>
+      <a v-if="talk.slidesLink" :href="talk.slidesLink" target="_blank"><span class="link">Slides</span></a>
+      <a v-if="talk.videoLink" :href="talk.videoLink" target="_blank"><span class="link">Vidéo</span></a>
     </p>
   </div>
 </template>

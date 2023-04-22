@@ -425,6 +425,9 @@ const resume: Resume = {
   talks: [
     {
       topic: "Votre mission ? Découvrir Haskell et le mettre en prod",
+      language: "fr",
+      description:
+        "On entend parler de Haskell de plus en plus, mais il parait souvent bien compliqué de se lancer. Haskell fait peur, avec ses Monades, Monoïdes et autres gros mots.<br />On verra ensemble que vous n'avez absolument pas besoin de savoir ce que ces termes signifient pour vous lancer. Je vous propose de regarder ce dont vous aurez besoin pour créer une petite API, avec de la sécurité et de la gestion de données, soit de quoi mettre une petite application en prod.",
       slidesLink: "https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994",
       videoLink: "https://www.youtube.com/watch?v=Omj9RvK1TbQ",
       where: [
@@ -438,11 +441,13 @@ const resume: Resume = {
     },
     {
       topic: "Retour d’expérience: Polymer chez Deloitte",
+      language: "fr",
       slidesLink: "https://www.slideshare.net/celine_louvet/rex-polymer-50365257",
       where: [{ name: "Meetup Paris-WebComponents", when: "2015-07-09" }],
     },
     {
       topic: "Google Datastore & Search API",
+      language: "fr",
       slidesLink: "https://www.slideshare.net/celine_louvet/google-datastore-search-api-93079759",
       where: [{ name: "SFEIR - Soirée NoSQL", when: "2014-12-16" }],
     },

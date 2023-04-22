@@ -43,6 +43,8 @@ export type Stack = {
 
 export type Talk = {
   topic: string;
+  description?: string;
+  language: string;
   slidesLink?: string;
   videoLink?: string;
   where: Convention[];

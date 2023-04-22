@@ -1,7 +1,7 @@
 <template>
   <div class="talk">
     <div class="d-flex flex-row align-items-baseline">
-      <div class="h3">{{ talk.topic }}</div>
+      <div class="h3">{{ talk.topic }} ({{ talk.language.toUpperCase() }})</div>
       <span v-if="talk.slidesLink" class="link d-print-none"><a :href="talk.slidesLink">Slides</a></span>
       <span v-if="talk.videoLink" class="link d-print-none"><a :href="talk.videoLink">Video</a></span>
     </div>
