@@ -1,11 +1,13 @@
 <template>
-  <div class="talk">
-    <div class="d-flex flex-row align-items-baseline">
-      <div class="h3">{{ talk.topic }}</div>
-      <span v-if="talk.slidesLink" class="link d-print-none"><a :href="talk.slidesLink">Slides</a></span>
-      <span v-if="talk.videoLink" class="link d-print-none"><a :href="talk.videoLink">Video</a></span>
-    </div>
-    <p>{{ conventions }}</p>
+  <div>
+    <h3>{{ talk.topic }}</h3>
+    <ul>
+      <li v-for="convention in conventions" :key="convention">{{ convention }}</li>
+    </ul>
+    <p v-if="talk.slidesLink || talk.videoLink">
+      <a v-if="talk.slidesLink" :href="talk.slidesLink"><span class="link">Slides</span></a>
+      <a v-if="talk.videoLink" :href="talk.videoLink"><span class="link">Vidéo</span></a>
+    </p>
   </div>
 </template>
 
@@ -25,20 +27,22 @@ export default class TalkDetails extends Vue {
       .map(({ name, when }) => {
         const date = this.$moment(when).format("MMM YYYY");
         return `${name} (${date})`;
-      })
-      .join(", ");
+      });
   }
 }
 </script>
 
 <style scoped>
-.link {
-  padding-left: var(--cv-size);
+a {
+  text-decoration: none;
 }
-
-@media print {
-  .talk {
-    break-inside: avoid-page;
-  }
+.link {
+  color: var(--cv-blue-dark);
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  border: 1px solid var(--cv-blue-dark);
+}
+.link:hover {
+  background-color: var(--cv-blue-lighter);
 }
 </style>

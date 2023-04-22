@@ -13,6 +13,7 @@
         <div class="content">
           <HomeBiography class="section" :biographies="resume.biographies" />
           <HomeSocials class="section" :socials="resume.socials" />
+          <HomeTalks class="section" :talks="resume.talks" />
         </div>
       </div>
     </div>
@@ -79,6 +80,9 @@ export default class Layout extends Vue {
 
 .actions {
   margin-right: 2.5em;
+}
+.section:not(:last-of-type) {
+  padding-bottom: var(--cv-size-2x);
 }
 
 @media screen and (max-width: 768px) {

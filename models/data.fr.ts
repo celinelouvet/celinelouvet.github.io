@@ -425,7 +425,8 @@ const resume: Resume = {
   talks: [
     {
       topic: "Votre mission ? Découvrir Haskell et le mettre en prod",
-      link: "https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994",
+      slidesLink: "https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994",
+      videoLink: "https://www.youtube.com/watch?v=Omj9RvK1TbQ",
       where: [
         { name: "Voxxed Days Luxembourg", when: "2019-06-21" },
         { name: "Web2Day", when: "2019-06-05" },
@@ -437,12 +438,12 @@ const resume: Resume = {
     },
     {
       topic: "Retour d’expérience: Polymer chez Deloitte",
-      link: "https://www.slideshare.net/celine_louvet/rex-polymer-50365257",
+      slidesLink: "https://www.slideshare.net/celine_louvet/rex-polymer-50365257",
       where: [{ name: "Meetup Paris-WebComponents", when: "2015-07-09" }],
     },
     {
       topic: "Google Datastore & Search API",
-      link: "https://www.slideshare.net/celine_louvet/google-datastore-search-api-93079759",
+      slidesLink: "https://www.slideshare.net/celine_louvet/google-datastore-search-api-93079759",
       where: [{ name: "SFEIR - Soirée NoSQL", when: "2014-12-16" }],
     },
   ],
