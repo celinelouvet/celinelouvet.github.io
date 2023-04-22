@@ -2,8 +2,8 @@
   <div class="talks">
     <h2>{{ $t("title") }}</h2>
     <div class="content">
-      <div v-for="talk in talks" :key="talk.topic">
-        <ResumeContentTalkDetails :talk="talk" />
+      <div v-for="talk in talks" :key="talk.topic" class="talk">
+        <HomeTalkDetails :talk="talk" />
       </div>
     </div>
   </div>
@@ -33,18 +33,7 @@ export default class Talks extends Vue {
 </script>
 
 <style scoped>
-h2,
-.h2 {
-  text-transform: uppercase;
-}
-@media print {
-  .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: var(--cv-size-2x);
-  }
-  .talks {
-    break-inside: avoid-page;
-  }
+.talk {
+  margin-bottom: 2em;
 }
 </style>

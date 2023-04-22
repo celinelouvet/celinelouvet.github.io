@@ -7,7 +7,7 @@ const resume: Resume = {
   firstExperience: "2006-02-01",
   email: "celine.louvet@gmail.com",
   website: "https://celine.louvet.me",
-  title: "Staff engineer / Senior lead developer",
+  title: "Staff engineer / Senior lead developer",
   location: "Lyon",
   zipCode: "69006",
   remotes: [
@@ -15,6 +15,11 @@ const resume: Resume = {
     { type: "HYBRID", where: "Lyon" },
   ],
   hobbies: "Drawing, painting, clay modeling, sports",
+  biographies: [
+    "Backend developer and passionate, for 17 years, loves reaching stabilty and quality for production applications.",
+    "Specializing into cloud architectures, with a liking for functional languages.",
+    "Currently lead developer at Shine.",
+  ],
   descriptions: [
     "Backend Senior Developer, in Typescript, with a liking for functional languages.",
     "Several experiences as lead developer or staff engineer, with developers teams management.",
@@ -23,6 +28,7 @@ const resume: Resume = {
   skills: [
     "Build phase, wih stability and qulity as a goal",
     "Mentoring",
+    "Domain Driven Design (DDD)",
     "Cloud architecture (GCP & AWS)",
     "Typescript",
     "NodeJs",
@@ -416,8 +422,26 @@ const resume: Resume = {
   ],
   talks: [
     {
-      topic: "Votre mission ? Découvrir Haskell et le mettre en prod",
-      link: "https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994",
+      topic: "Live with Philippe Charrière",
+      language: "fr",
+      when: "2023-04-06",
+      description: "On authorizations management in a microservices architecture, with banking examples.",
+      videoLink: "https://www.youtube.com/watch?v=psQV7zB59hQ&ab_channel=PhilippeCharri%C3%A8re",
+    },
+    {
+      topic: "Interview with Shirley Almosni Chiche",
+      language: "fr",
+      when: "2023-03-31",
+      description: "About my professional experience, as a woman in tech, and about my view of mentorship.",
+      videoLink: "https://www.youtube.com/watch?v=FNStkAKsujI&ab_channel=BUILDRH-Face%C3%A0faceavecTataShishi",
+    },
+    {
+      topic: "Your mission ? Discover Haskell and use it in production",
+      language: "fr",
+      description:
+        "We hear about Haskell now and then, but it often seems to be complicated to start using it. Haskell can be scary with its Monads, Monoids and other cursing words.<br />We'll see together that you don't really need to understand all this principles to use it. What I suggest is to see what you need to create a small API, with some security and data managment, in simpler words, what you need for a small production application.",
+      slidesLink: "https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994",
+      videoLink: "https://www.youtube.com/watch?v=Omj9RvK1TbQ",
       where: [
         { name: "Voxxed Days Luxembourg", when: "2019-06-21" },
         { name: "Web2Day", when: "2019-06-05" },
@@ -429,12 +453,14 @@ const resume: Resume = {
     },
     {
       topic: "Retour d’expérience: Polymer chez Deloitte",
-      link: "https://www.slideshare.net/celine_louvet/rex-polymer-50365257",
+      language: "fr",
+      slidesLink: "https://www.slideshare.net/celine_louvet/rex-polymer-50365257",
       where: [{ name: "Meetup Paris-WebComponents", when: "2015-07-09" }],
     },
     {
       topic: "Google Datastore & Search API",
-      link: "https://www.slideshare.net/celine_louvet/google-datastore-search-api-93079759",
+      language: "fr",
+      slidesLink: "https://www.slideshare.net/celine_louvet/google-datastore-search-api-93079759",
       where: [{ name: "SFEIR - Soirée NoSQL", when: "2014-12-16" }],
     },
   ],

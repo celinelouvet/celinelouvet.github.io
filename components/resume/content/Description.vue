@@ -27,6 +27,10 @@ export default class Description extends Vue {
 </script>
 
 <style scoped>
+h2,
+.h2 {
+  text-transform: uppercase;
+}
 @media print {
   .description-content:last-child {
     margin-bottom: 0;

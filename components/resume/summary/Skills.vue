@@ -29,6 +29,10 @@ export default class Skills extends Vue {
 </script>
 
 <style scoped>
+h2,
+.h2 {
+  text-transform: uppercase;
+}
 .skill {
   padding-bottom: 0.4em;
 }

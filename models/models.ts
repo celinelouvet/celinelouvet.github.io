@@ -43,8 +43,12 @@ export type Stack = {
 
 export type Talk = {
   topic: string;
-  link: string;
-  where: Convention[];
+  when?: string;
+  description?: string;
+  language: string;
+  slidesLink?: string;
+  videoLink?: string;
+  where?: Convention[];
 };
 
 export type Training = {
@@ -93,6 +97,7 @@ export type Resume = {
   zipCode: string;
   remotes: Remote[];
   hobbies: string;
+  biographies: string[];
   descriptions: string[];
   skills: string[];
   socials: Social[];

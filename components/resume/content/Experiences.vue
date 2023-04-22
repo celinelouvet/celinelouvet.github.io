@@ -43,6 +43,10 @@ export default class Experiences extends Vue {
 </script>
 
 <style scoped>
+h2,
+.h2 {
+  text-transform: uppercase;
+}
 @media print {
   /* Specific print adjustments depending on the content */
   .experience-1,

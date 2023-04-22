@@ -1,8 +1,10 @@
 <template>
   <div class="talk">
     <div class="d-flex flex-row align-items-baseline">
-      <div class="h3">{{ talk.topic }}</div>
-      <span v-if="talk.link !== ''" class="link d-print-none"><a :href="talk.link">Slides</a></span>
+      <div class="h3">{{ talk.topic }} ({{ talk.language.toUpperCase() }})</div>
+      <span v-if="talk.when" class="date">{{ formatDate(talk.when, "MMM YYYY") }}</span>
+      <span v-if="talk.slidesLink" class="link d-print-none"><a :href="talk.slidesLink">Slides</a></span>
+      <span v-if="talk.videoLink" class="link d-print-none"><a :href="talk.videoLink">Video</a></span>
     </div>
     <p>{{ conventions }}</p>
   </div>
@@ -22,10 +24,14 @@ export default class TalkDetails extends Vue {
     return [...(conventions ?? [])]
       .sort(({ when: when1 }, { when: when2 }) => this.$moment(when1).diff(this.$moment(when2)))
       .map(({ name, when }) => {
-        const date = this.$moment(when).format("MMM YYYY");
+        const date = this.formatDate(when, "MMM YYYY");
         return `${name} (${date})`;
       })
       .join(", ");
+  }
+
+  formatDate(date: string, format: string) {
+    return this.$moment(date).format(format);
   }
 }
 </script>

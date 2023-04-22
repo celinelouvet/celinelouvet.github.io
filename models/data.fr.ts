@@ -7,7 +7,7 @@ const resume: Resume = {
   firstExperience: "2006-02-01",
   email: "celine.louvet@gmail.com",
   website: "https://celine.louvet.me",
-  title: "Staff engineer / Senior lead developer",
+  title: "Staff engineer / Senior lead developer",
   location: "Lyon",
   zipCode: "69006",
   remotes: [
@@ -15,6 +15,11 @@ const resume: Resume = {
     { type: "HYBRID", where: "Lyon" },
   ],
   hobbies: "Dessins, peinture, modelage, sport",
+  biographies: [
+    "Développeuse backend et passionnée, depuis 17 ans, aimant la recherche de stabilité et de qualité d'une application.",
+    "Spécialisée sur les architectures cloud, avec une appétence pour les langages fonctionnels.",
+    "Actuellement lead developer chez Shine.",
+  ],
   descriptions: [
     "Développeuse Backend Senior, en Typescript, avec une appétence aux langages fonctionnels.",
     "Plusieurs expériences de lead developer, avec management d’une équipe de développeurs.",
@@ -23,6 +28,7 @@ const resume: Resume = {
   skills: [
     "Phase de build, avec objectif stabilité & qualité",
     "Accompagnement",
+    "Domain Driven Design (DDD)",
     "Architecture cloud (GCP & AWS)",
     "Typescript",
     "NodeJs",
@@ -418,8 +424,26 @@ const resume: Resume = {
   ],
   talks: [
     {
+      topic: "Live avec Philippe Charrière",
+      language: "fr",
+      when: "2023-04-06",
+      description: "Sur la gestion des permissions en système distribué, notamment dans le milieu bancaire.",
+      videoLink: "https://www.youtube.com/watch?v=psQV7zB59hQ&ab_channel=PhilippeCharri%C3%A8re",
+    },
+    {
+      topic: "Entretien avec Shirley Almosni Chiche",
+      language: "fr",
+      when: "2023-03-31",
+      description: "Sur mon expérience professionnelle, en tant que femme dans le monde du développement et sur ma conception du mentorat.",
+      videoLink: "https://www.youtube.com/watch?v=FNStkAKsujI&ab_channel=BUILDRH-Face%C3%A0faceavecTataShishi",
+    },
+    {
       topic: "Votre mission ? Découvrir Haskell et le mettre en prod",
-      link: "https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994",
+      language: "fr",
+      description:
+        "On entend parler de Haskell de plus en plus, mais il parait souvent bien compliqué de se lancer. Haskell fait peur, avec ses Monades, Monoïdes et autres gros mots.<br />On verra ensemble que vous n'avez absolument pas besoin de savoir ce que ces termes signifient pour vous lancer. Je vous propose de regarder ce dont vous aurez besoin pour créer une petite API, avec de la sécurité et de la gestion de données, soit de quoi mettre une petite application en prod.",
+      slidesLink: "https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994",
+      videoLink: "https://www.youtube.com/watch?v=Omj9RvK1TbQ",
       where: [
         { name: "Voxxed Days Luxembourg", when: "2019-06-21" },
         { name: "Web2Day", when: "2019-06-05" },
@@ -431,12 +455,14 @@ const resume: Resume = {
     },
     {
       topic: "Retour d’expérience: Polymer chez Deloitte",
-      link: "https://www.slideshare.net/celine_louvet/rex-polymer-50365257",
+      language: "fr",
+      slidesLink: "https://www.slideshare.net/celine_louvet/rex-polymer-50365257",
       where: [{ name: "Meetup Paris-WebComponents", when: "2015-07-09" }],
     },
     {
       topic: "Google Datastore & Search API",
-      link: "https://www.slideshare.net/celine_louvet/google-datastore-search-api-93079759",
+      language: "fr",
+      slidesLink: "https://www.slideshare.net/celine_louvet/google-datastore-search-api-93079759",
       where: [{ name: "SFEIR - Soirée NoSQL", when: "2014-12-16" }],
     },
   ],

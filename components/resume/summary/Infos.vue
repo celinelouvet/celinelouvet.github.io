@@ -63,6 +63,10 @@ export default class Infos extends Vue {
 </script>
 
 <style scoped>
+h2,
+.h2 {
+  text-transform: uppercase;
+}
 .icon {
   font-size: 1.15em;
   margin-right: 0.5em;

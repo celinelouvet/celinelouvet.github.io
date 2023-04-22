@@ -37,17 +37,11 @@ export default class Socials extends Vue {
 <style scoped>
 h2,
 .h2 {
-  text-transform: uppercase;
+  font-size: 2em;
 }
 .icon {
   font-size: 1.15em;
   margin-right: 0.5em;
   vertical-align: -0.25em;
-}
-
-@media print {
-  .list {
-    margin-bottom: 0;
-  }
 }
 </style>
