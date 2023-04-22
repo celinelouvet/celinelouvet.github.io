@@ -11,13 +11,13 @@
 
 <i18n locale="fr" lang="json5">
 {
-  title: "Conférences",
+  title: "Conférences & Interviews",
 }
 </i18n>
 
 <i18n locale="en" lang="json5">
 {
-  title: "Talks",
+  title: "Talks & Interviews",
 }
 </i18n>
 

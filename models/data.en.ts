@@ -422,6 +422,20 @@ const resume: Resume = {
   ],
   talks: [
     {
+      topic: "Live with Philippe Charrière",
+      language: "fr",
+      when: "2023-04-06",
+      description: "On authorizations management in a microservices architecture, with banking examples.",
+      videoLink: "https://www.youtube.com/watch?v=psQV7zB59hQ&ab_channel=PhilippeCharri%C3%A8re",
+    },
+    {
+      topic: "Interview with Shirley Almosni Chiche",
+      language: "fr",
+      when: "2023-03-31",
+      description: "About my professional experience, as a woman in tech, and about my view of mentorship.",
+      videoLink: "https://www.youtube.com/watch?v=FNStkAKsujI&ab_channel=BUILDRH-Face%C3%A0faceavecTataShishi",
+    },
+    {
       topic: "Your mission ? Discover Haskell and use it in production",
       language: "fr",
       description:

@@ -424,6 +424,20 @@ const resume: Resume = {
   ],
   talks: [
     {
+      topic: "Live avec Philippe Charrière",
+      language: "fr",
+      when: "2023-04-06",
+      description: "Sur la gestion des permissions en système distribué, notamment dans le milieu bancaire.",
+      videoLink: "https://www.youtube.com/watch?v=psQV7zB59hQ&ab_channel=PhilippeCharri%C3%A8re",
+    },
+    {
+      topic: "Entretien avec Shirley Almosni Chiche",
+      language: "fr",
+      when: "2023-03-31",
+      description: "Sur mon expérience professionnelle, en tant que femme dans le monde du développement et sur ma conception du mentorat.",
+      videoLink: "https://www.youtube.com/watch?v=FNStkAKsujI&ab_channel=BUILDRH-Face%C3%A0faceavecTataShishi",
+    },
+    {
       topic: "Votre mission ? Découvrir Haskell et le mettre en prod",
       language: "fr",
       description:
