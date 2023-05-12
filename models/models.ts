@@ -44,8 +44,8 @@ export type Stack = {
 export type Talk = {
   topic: string;
   when?: string;
-  description?: string;
-  language: string;
+  description?: string | string[];
+  language?: string;
   slidesLink?: string;
   videoLink?: string;
   where?: Convention[];

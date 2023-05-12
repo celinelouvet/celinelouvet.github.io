@@ -440,8 +440,10 @@ const resume: Resume = {
     {
       topic: "Votre mission ? Découvrir Haskell et le mettre en prod",
       language: "fr",
-      description:
-        "On entend parler de Haskell de plus en plus, mais il parait souvent bien compliqué de se lancer. Haskell fait peur, avec ses Monades, Monoïdes et autres gros mots.<br />On verra ensemble que vous n'avez absolument pas besoin de savoir ce que ces termes signifient pour vous lancer. Je vous propose de regarder ce dont vous aurez besoin pour créer une petite API, avec de la sécurité et de la gestion de données, soit de quoi mettre une petite application en prod.",
+      description: [
+        "On entend parler de Haskell de plus en plus, mais il parait souvent bien compliqué de se lancer. Haskell fait peur, avec ses Monades, Monoïdes et autres gros mots.",
+        "On verra ensemble que vous n'avez absolument pas besoin de savoir ce que ces termes signifient pour vous lancer. Je vous propose de regarder ce dont vous aurez besoin pour créer une petite API, avec de la sécurité et de la gestion de données, soit de quoi mettre une petite application en prod.",
+      ],
       slidesLink: "https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994",
       videoLink: "https://www.youtube.com/watch?v=Omj9RvK1TbQ",
       where: [
