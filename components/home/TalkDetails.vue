@@ -15,10 +15,12 @@
         </p>
       </div>
       <div v-if="talk.description" class="talk-description">
-        <HomeTalkDescription v-if="talk.description" :talk="talk" />
+        <div>
+          <HomeTalkDescription v-if="talk.description" :talk="talk" />
+          <HomeTalkLinks v-if="talk.links" :talk="talk" />
+        </div>
         <img v-if="talk.pictureId" :src="require(`~/assets/talks/${talk.pictureId}.png`)" :alt="$t('cover')" class="picture" />
       </div>
-      <HomeTalkLinks v-if="talk.links" :talk="talk" />
     </div>
   </div>
 </template>
