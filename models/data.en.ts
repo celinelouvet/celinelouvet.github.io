@@ -422,45 +422,128 @@ const resume: Resume = {
   ],
   talks: [
     {
+      topic: "The authorizations mystery",
+      description: [
+        "At the begin of your project, you simplify handle the user authentication, then little by little, you added some kind of user roles. And then, with time passes, your product manager asks you to refine this management and those user roles won't be enough.",
+        "Maybe you already had the impression that authorization management is something quite unclear or complex. We know we should do it, but we often don't know how to do it, or even why. Sometimes, we even mix it with authentication. But then, what is authorizations and how do we handle it?",
+        "To each situation, its solution. We'll how to answer to the most common cases, with their pros and cons. Our goal? To handle authorizations for our situation, without adding a lot of complexity to our application.",
+      ],
+      where: [
+        {
+          name: "Cloud Est 2023",
+          when: "2023-06-20",
+          language: "fr",
+          links: {
+            feedbacks: "https://openfeedback.io/lSG3Xl5ALpXqswcFPcu2/2023-05-26/fILn5VfKXqQfzKLsI4a5",
+          },
+          pictureId: "cloudest2023",
+        },
+      ],
+    },
+    {
+      topic: "Event Driven, but what is it?! A new buzzword ?",
+      description: [
+        "We hear about Event Driven Systems, now and then. That's a kind of hype, but what is it exactly? To understand it, we'll start with the basics, to gradually see what can bring us the publish - subscribe model, his pros and cons. We'll see how to use in some common cases.",
+        "In the past, I worked on a platform that had to grow fast. At each new added service, at each new added feature, complexity was pilled until making any change would become impossible, even dangerous. And, let's be honest, sometimes, some ill-advised good ideas made the situation even worst. We'll use this platform for this presentation and see what we could improve.",
+        "For each situation, we'll see what needs are answered, its advantages and even its flaws, flaws that we will then try to correct. Our goal? To have less dependently services, services that will gain in performance and stability!",
+      ],
+      where: [
+        {
+          name: "Camping des Speakers 2023",
+          when: "2023-06-15",
+          language: "fr",
+          links: {
+            program: "https://camping-speakers.fr/sessions/event_driven_qu_est_ce_donc/",
+            feedbacks: "https://openfeedback.io/ouZ1fEDbI8JLywIZyh7W/2023-06-15/1",
+          },
+          pictureId: "campingdespeakers2023",
+        },
+        {
+          name: "DevFest Lille 2023",
+          when: "2023-05-26",
+          language: "fr",
+          links: {
+            program: "https://devfest.gdglille.org/speaker-page-oyAdLXhQYzWS1j03gz79ADg2TRj2/",
+            feedbacks: "https://openfeedback.io/lSG3Xl5ALpXqswcFPcu2/2023-05-26/fILn5VfKXqQfzKLsI4a5",
+          },
+          pictureId: "devfestlille2023",
+        },
+      ],
+    },
+    {
       topic: "Live with Philippe Charrière",
       language: "fr",
       when: "2023-04-06",
       description: "On authorizations management in a microservices architecture, with banking examples.",
-      videoLink: "https://www.youtube.com/watch?v=psQV7zB59hQ&ab_channel=PhilippeCharri%C3%A8re",
+      links: {
+        video: "https://www.youtube.com/watch?v=psQV7zB59hQ&ab_channel=PhilippeCharri%C3%A8re",
+      },
+      pictureId: "livephilippecharriere2023",
     },
     {
       topic: "Interview with Shirley Almosni Chiche",
       language: "fr",
       when: "2023-03-31",
       description: "About my professional experience, as a woman in tech, and about my view of mentorship.",
-      videoLink: "https://www.youtube.com/watch?v=FNStkAKsujI&ab_channel=BUILDRH-Face%C3%A0faceavecTataShishi",
+      links: {
+        video: "https://www.youtube.com/watch?v=FNStkAKsujI&ab_channel=BUILDRH-Face%C3%A0faceavecTataShishi",
+      },
+      pictureId: "entretienshirleyalmosnichiche2023",
     },
     {
       topic: "Your mission ? Discover Haskell and use it in production",
       language: "fr",
-      description:
-        "We hear about Haskell now and then, but it often seems to be complicated to start using it. Haskell can be scary with its Monads, Monoids and other cursing words.<br />We'll see together that you don't really need to understand all this principles to use it. What I suggest is to see what you need to create a small API, with some security and data managment, in simpler words, what you need for a small production application.",
-      slidesLink: "https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994",
-      videoLink: "https://www.youtube.com/watch?v=Omj9RvK1TbQ",
+      description: [
+        "We hear about Haskell now and then, but it often seems to be complicated to start using it. Haskell can be scary with its Monads, Monoids and other cursing words.",
+        "We'll see together that you don't really need to understand all this principles to use it. What I suggest is to see what you need to create a small API, with some security and data managment, in simpler words, what you need for a small production application.",
+      ],
+      links: {
+        slides: "https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994",
+        video: "https://www.youtube.com/watch?v=Omj9RvK1TbQ",
+      },
       where: [
-        { name: "Voxxed Days Luxembourg", when: "2019-06-21" },
-        { name: "Web2Day", when: "2019-06-05" },
+        {
+          name: "Voxxed Days Luxembourg",
+          when: "2019-06-21",
+          links: { video: "https://www.youtube.com/watch?v=Omj9RvK1TbQ" },
+          pictureId: "voxxeddaysluxembourg2019",
+        },
+        {
+          name: "Web2Day",
+          when: "2019-06-05",
+          links: { video: "https://www.youtube.com/watch?v=QnS-Byrmf9c&ab_channel=Web2day" },
+          pictureId: "web2day2019",
+        },
         { name: "Functional programming Montpellier", when: "2019-01-15" },
-        { name: "Codeurs en Seine", when: "2018-11-22" },
-        { name: "DevFest Toulouse", when: "2018-11-08" },
+        {
+          name: "Codeurs en Seine",
+          when: "2018-11-22",
+          links: { video: "https://www.youtube.com/watch?v=9CKaeJjSKNQ&ab_channel=CodeursenSeine" },
+          pictureId: "codeursenseine2018",
+        },
+        {
+          name: "DevFest Toulouse",
+          when: "2018-11-08",
+          links: { video: "https://www.youtube.com/watch?v=5VCIaYvWecM&ab_channel=GDGFrance" },
+          pictureId: "devfesttoulouse2018",
+        },
         { name: "Scala.io", when: "2018-10-31" },
       ],
     },
     {
       topic: "Retour d’expérience: Polymer chez Deloitte",
       language: "fr",
-      slidesLink: "https://www.slideshare.net/celine_louvet/rex-polymer-50365257",
+      links: {
+        slides: "https://www.slideshare.net/celine_louvet/rex-polymer-50365257",
+      },
       where: [{ name: "Meetup Paris-WebComponents", when: "2015-07-09" }],
     },
     {
       topic: "Google Datastore & Search API",
       language: "fr",
-      slidesLink: "https://www.slideshare.net/celine_louvet/google-datastore-search-api-93079759",
+      links: {
+        slides: "https://www.slideshare.net/celine_louvet/google-datastore-search-api-93079759",
+      },
       where: [{ name: "SFEIR - Soirée NoSQL", when: "2014-12-16" }],
     },
   ],

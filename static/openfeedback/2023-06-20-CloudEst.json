@@ -1,0 +1,34 @@
+{
+  "sessions": {
+    "1": {
+      "speakers": ["celineLouvet"],
+      "tags": [],
+      "title": "Les mystères des permissions",
+      "id": "1",
+      "startTime": "2023-06-20T10:00:00+02:00",
+      "endTime": "2023-06-20T11:00:00+02:00",
+      "trackTitle": ""
+    }
+  },
+  "speakers": {
+    "celineLouvet": {
+      "name": "Céline LOUVET",
+      "photoUrl": "https://camo.githubusercontent.com/801bd75ccc2021c10539c96970cfa2ffe8db57dc9c8708d45fd8a70814279c64/68747470733a2f2f6c68352e676f6f676c6575736572636f6e74656e742e636f6d2f2d4e56375438735f374d4c452f41414141414141414141492f41414141414141414d556b2f52784b446164667a7556382f70686f746f2e6a7067",
+      "socials": [
+        {
+          "name": "twitter",
+          "link": "https://twitter.com/celine_louvet"
+        },
+        {
+          "name": "LinkedIn",
+          "link": "https://www.linkedin.com/in/celinelouvet"
+        },
+        {
+          "name": "Mastodon",
+          "link": "https://pouet.chapril.org/@celine_louvet"
+        }
+      ],
+      "id": "celineLouvet"
+    }
+  }
+}

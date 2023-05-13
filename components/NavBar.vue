@@ -1,8 +1,9 @@
 <template>
   <div class="container-fluid">
     <div class="common-nav">
-      <NuxtLink :to="homeLink" exact-active-class="active">{{ $t("home") }}</NuxtLink>
-      <NuxtLink :to="resumeLink" exact-active-class="active">{{ $t("resume") }}</NuxtLink>
+      <NuxtLink :to="asLink('/')" exact-active-class="active">{{ $t("home") }}</NuxtLink>
+      <NuxtLink :to="asLink('/resume')" exact-active-class="active">{{ $t("resume") }}</NuxtLink>
+      <NuxtLink :to="asLink('/#talks')" exact-active-class="active">{{ $t("talks") }}</NuxtLink>
     </div>
     <div class="container container-lg d-flex justify-content-end align-items-center actions">
       <span v-if="languageFlip"><LanguageSwitcher /></span>
@@ -14,6 +15,7 @@
 {
   home: "Accueil",
   resume: "CV",
+  talks: "Conférences",
 }
 </i18n>
 
@@ -21,6 +23,7 @@
 {
   home: "Home",
   resume: "Resume",
+  talks: "Talks",
 }
 </i18n>
 
@@ -31,20 +34,12 @@ import { Vue, Component } from "vue-property-decorator";
 export default class Layout extends Vue {
   languageFlip: boolean = process.env.ACTIVATE_LANGUAGE === "true";
 
-  get homeLink(): string {
+  asLink(path: string): string {
     if (this.$i18n.locale === "fr") {
-      return "/";
+      return path;
     }
 
-    return "/en";
-  }
-
-  get resumeLink(): string {
-    if (this.$i18n.locale === "fr") {
-      return "/resume";
-    }
-
-    return "/en/resume";
+    return `/en${path}`;
   }
 }
 </script>

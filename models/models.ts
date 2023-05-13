@@ -4,9 +4,19 @@ export type Certification = {
   when: string;
 };
 
+export type Links = {
+  slides?: string;
+  video?: string;
+  feedbacks?: string;
+  program?: string;
+};
+
 export type Convention = {
   name: string;
   when: string;
+  language?: string;
+  links?: Links;
+  pictureId?: string;
 };
 
 export type Period = {
@@ -44,11 +54,11 @@ export type Stack = {
 export type Talk = {
   topic: string;
   when?: string;
-  description?: string;
-  language: string;
-  slidesLink?: string;
-  videoLink?: string;
+  description?: string | string[];
+  language?: string;
   where?: Convention[];
+  links?: Links;
+  pictureId?: string;
 };
 
 export type Training = {

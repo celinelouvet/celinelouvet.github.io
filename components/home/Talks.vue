@@ -1,38 +1,35 @@
 <template>
   <div class="talks">
-    <h2>{{ $t("title") }}</h2>
+    <h2>{{ title }}</h2>
     <div class="content">
-      <div v-for="talk in talks" :key="talk.topic" class="talk">
+      <div v-for="talk in talks" :key="asKey(talk)" class="talk">
         <HomeTalkDetails :talk="talk" />
       </div>
     </div>
   </div>
 </template>
 
-<i18n locale="fr" lang="json5">
-{
-  title: "Conférences & Interviews",
-}
-</i18n>
-
-<i18n locale="en" lang="json5">
-{
-  title: "Talks & Interviews",
-}
-</i18n>
-
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
 
-import { Talk } from "~/models";
+import { ConventionTalk } from "./conventionTalks";
 
 @Component
 export default class Talks extends Vue {
-  @Prop({ default: [] }) readonly talks!: Talk[];
+  @Prop({ default: "" }) readonly title!: string;
+  @Prop({ default: [] }) readonly talks!: ConventionTalk[];
+
+  asKey(talk: ConventionTalk) {
+    return `${talk.topic}-${talk.name}-${talk.when}`;
+  }
 }
 </script>
 
 <style scoped>
+h2,
+.h2 {
+  font-size: 2em;
+}
 .talk {
   margin-bottom: 2em;
 }

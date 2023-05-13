@@ -13,15 +13,33 @@
         <div class="content">
           <HomeBiography class="section" :biographies="resume.biographies" />
           <HomeSocials class="section" :socials="resume.socials" />
-          <HomeTalks class="section" :talks="resume.talks" />
+          <div id="talks">
+            <HomeTalks v-if="talksToCome.length > 0" :talks="talksToCome" :title="$t('talksToCome')" class="section" />
+            <HomeTalks :talks="talksAlreadyDone" :title="$t('talksAlreadyDone')" class="section" />
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
 
+<i18n locale="fr" lang="json5">
+{
+  talksAlreadyDone: "Conférences & Interviews",
+  talksToCome: "Conférences à venir",
+}
+</i18n>
+
+<i18n locale="en" lang="json5">
+{
+  talksAlreadyDone: "Talks & Interviews",
+  talksToCome: "Incoming talks",
+}
+</i18n>
+
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
+import { ConventionTalk, asConventionTalks } from "./conventionTalks";
 import { enResume, frResume, Resume } from "~/models";
 
 @Component
@@ -32,6 +50,27 @@ export default class Layout extends Vue {
     }
 
     return enResume;
+  }
+
+  get talksAlreadyDone(): ConventionTalk[] {
+    return asConventionTalks(this.resume.talks)
+      .filter((talk: ConventionTalk) => this.isDone(talk))
+      .sort(({ when: when1 }, { when: when2 }) => this.$moment(when2).diff(this.$moment(when1)));
+  }
+
+  get talksToCome(): ConventionTalk[] {
+    return asConventionTalks(this.resume.talks)
+      .filter((talk: ConventionTalk) => !this.isDone(talk))
+      .sort(({ when: when1 }, { when: when2 }) => this.$moment(when2).diff(this.$moment(when1)));
+  }
+
+  isDone({ when }: ConventionTalk): boolean {
+    return this.isBefore(when);
+  }
+
+  isBefore(when?: string) {
+    const hasDate = Boolean(when);
+    return hasDate && this.$moment(when).isBefore(this.$moment());
   }
 }
 </script>
