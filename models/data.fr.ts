@@ -438,6 +438,7 @@ const resume: Resume = {
           links: {
             feedbacks: "https://openfeedback.io/lSG3Xl5ALpXqswcFPcu2/2023-05-26/fILn5VfKXqQfzKLsI4a5",
           },
+          pictureId: "cloudest2023",
         },
       ],
     },
@@ -457,6 +458,7 @@ const resume: Resume = {
             program: "https://camping-speakers.fr/sessions/event_driven_qu_est_ce_donc/",
             feedbacks: "https://openfeedback.io/ouZ1fEDbI8JLywIZyh7W/2023-06-15/1",
           },
+          pictureId: "campingdespeakers2023",
         },
         {
           name: "DevFest Lille 2023",
@@ -466,6 +468,7 @@ const resume: Resume = {
             program: "https://devfest.gdglille.org/speaker-page-oyAdLXhQYzWS1j03gz79ADg2TRj2/",
             feedbacks: "https://openfeedback.io/lSG3Xl5ALpXqswcFPcu2/2023-05-26/fILn5VfKXqQfzKLsI4a5",
           },
+          pictureId: "devfestlille2023",
         },
       ],
     },
@@ -477,6 +480,7 @@ const resume: Resume = {
       links: {
         video: "https://www.youtube.com/watch?v=psQV7zB59hQ&ab_channel=PhilippeCharri%C3%A8re",
       },
+      pictureId: "livephilippecharriere2023",
     },
     {
       topic: "Entretien avec Shirley Almosni Chiche",
@@ -486,6 +490,7 @@ const resume: Resume = {
       links: {
         video: "https://www.youtube.com/watch?v=FNStkAKsujI&ab_channel=BUILDRH-Face%C3%A0faceavecTataShishi",
       },
+      pictureId: "entretienshirleyalmosnichiche2023",
     },
     {
       topic: "Votre mission ? Découvrir Haskell et le mettre en prod",
@@ -499,11 +504,31 @@ const resume: Resume = {
         video: "https://www.youtube.com/watch?v=Omj9RvK1TbQ",
       },
       where: [
-        { name: "Voxxed Days Luxembourg", when: "2019-06-21" },
-        { name: "Web2Day", when: "2019-06-05" },
+        {
+          name: "Voxxed Days Luxembourg",
+          when: "2019-06-21",
+          links: { video: "https://www.youtube.com/watch?v=Omj9RvK1TbQ" },
+          pictureId: "voxxeddaysluxembourg2019",
+        },
+        {
+          name: "Web2Day",
+          when: "2019-06-05",
+          links: { video: "https://www.youtube.com/watch?v=QnS-Byrmf9c&ab_channel=Web2day" },
+          pictureId: "web2day2019",
+        },
         { name: "Functional programming Montpellier", when: "2019-01-15" },
-        { name: "Codeurs en Seine", when: "2018-11-22" },
-        { name: "DevFest Toulouse", when: "2018-11-08" },
+        {
+          name: "Codeurs en Seine",
+          when: "2018-11-22",
+          links: { video: "https://www.youtube.com/watch?v=9CKaeJjSKNQ&ab_channel=CodeursenSeine" },
+          pictureId: "codeursenseine2018",
+        },
+        {
+          name: "DevFest Toulouse",
+          when: "2018-11-08",
+          links: { video: "https://www.youtube.com/watch?v=5VCIaYvWecM&ab_channel=GDGFrance" },
+          pictureId: "devfesttoulouse2018",
+        },
         { name: "Scala.io", when: "2018-10-31" },
       ],
     },

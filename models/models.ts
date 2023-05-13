@@ -16,6 +16,7 @@ export type Convention = {
   when: string;
   language?: string;
   links?: Links;
+  pictureId?: string;
 };
 
 export type Period = {
@@ -57,6 +58,7 @@ export type Talk = {
   language?: string;
   where?: Convention[];
   links?: Links;
+  pictureId?: string;
 };
 
 export type Training = {

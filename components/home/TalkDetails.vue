@@ -1,32 +1,39 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div>
-    <div class="d-flex flex-row align-items-baseline">
-      <h3>
-        <span>{{ talk.topic }}</span>
-        <span v-if="talk.language">({{ talk.language.toUpperCase() }})</span>
-      </h3>
-    </div>
     <div>
-      <p>
-        <span>{{ talk.name }}</span>
-        <span v-if="talk.when" class="date">{{ formatDate(talk.when, $t("date")) }}</span>
-      </p>
+      <div class="d-flex flex-row align-items-baseline">
+        <h3>
+          <span>{{ talk.topic }}</span>
+          <span v-if="talk.language">({{ talk.language.toUpperCase() }})</span>
+        </h3>
+      </div>
+      <div>
+        <p>
+          <span>{{ talk.name }}</span>
+          <span v-if="talk.when" class="date">{{ formatDate(talk.when, $t("date")) }}</span>
+        </p>
+      </div>
+      <div v-if="talk.description" class="talk-description">
+        <HomeTalkDescription v-if="talk.description" :talk="talk" />
+        <img v-if="talk.pictureId" :src="require(`~/assets/talks/${talk.pictureId}.png`)" :alt="$t('cover')" class="picture" />
+      </div>
+      <HomeTalkLinks v-if="talk.links" :talk="talk" />
     </div>
-    <HomeTalkDescription v-if="talk.description" :talk="talk" />
-    <HomeTalkLinks v-if="talk.links" :talk="talk" />
   </div>
 </template>
 
 <i18n locale="fr" lang="json5">
 {
   date: "D MMM yyyy",
+  cover: "Couverture",
 }
 </i18n>
 
 <i18n locale="en" lang="json5">
 {
   date: "MMM D yyyy",
+  cover: "Cover",
 }
 </i18n>
 
@@ -63,5 +70,19 @@ a {
 }
 .link:hover {
   background-color: var(--cv-blue-lighter);
+}
+
+@media screen and (min-width: 768px) {
+  .talk-description {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-gap: 4em;
+  }
+
+  .picture {
+    max-width: 200px;
+    max-height: 120px;
+    justify-self: center;
+  }
 }
 </style>
