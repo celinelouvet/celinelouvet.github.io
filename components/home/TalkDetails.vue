@@ -1,24 +1,20 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div>
-    <div>
-      <div class="d-flex flex-row align-items-baseline">
-        <h3>
-          <span>{{ talk.topic }}</span>
-          <span v-if="talk.language">({{ talk.language.toUpperCase() }})</span>
-        </h3>
-      </div>
+    <h3>
+      <span>{{ talk.topic }}</span>
+      <span v-if="talk.language">({{ talk.language.toUpperCase() }})</span>
+    </h3>
+    <p>
+      <span>{{ talk.name }}</span>
+      <span v-if="talk.when" class="date">{{ formatDate(talk.when, $t("date")) }}</span>
+    </p>
+    <div v-if="talk.description" class="talk-description">
       <div>
-        <p>
-          <span>{{ talk.name }}</span>
-          <span v-if="talk.when" class="date">{{ formatDate(talk.when, $t("date")) }}</span>
-        </p>
+        <HomeTalkDescription v-if="talk.description" :talk="talk" />
+        <HomeTalkLinks v-if="talk.links" :talk="talk" />
       </div>
-      <div v-if="talk.description" class="talk-description">
-        <div>
-          <HomeTalkDescription v-if="talk.description" :talk="talk" />
-          <HomeTalkLinks v-if="talk.links" :talk="talk" />
-        </div>
+      <div class="picture-container">
         <img v-if="talk.pictureId" :src="require(`~/assets/talks/${talk.pictureId}.png`)" :alt="$t('cover')" class="picture" />
       </div>
     </div>
@@ -74,17 +70,27 @@ a {
   background-color: var(--cv-blue-lighter);
 }
 
-@media screen and (min-width: 768px) {
+.picture {
+  max-width: 100%;
+  max-height: 200px;
+}
+
+.picture-container {
+  text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+  .picture {
+    max-width: 200px;
+    max-height: 120px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .talk-description {
     display: grid;
     grid-template-columns: 1fr 200px;
     grid-gap: 4em;
-  }
-
-  .picture {
-    max-width: 200px;
-    max-height: 120px;
-    justify-self: center;
   }
 }
 </style>

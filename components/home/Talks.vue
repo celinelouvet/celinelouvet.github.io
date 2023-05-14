@@ -2,9 +2,7 @@
   <div class="talks">
     <h2>{{ title }}</h2>
     <div class="content">
-      <div v-for="talk in talks" :key="asKey(talk)" class="talk">
-        <HomeTalkDetails :talk="talk" />
-      </div>
+      <HomeTalkDetails v-for="talk in talks" :key="asKey(talk)" :talk="talk" class="talk" />
     </div>
   </div>
 </template>
@@ -32,5 +30,11 @@ h2,
 }
 .talk {
   margin-bottom: 2em;
+}
+
+@media screen and (max-width: 768px) {
+  .talk {
+    margin-bottom: 4em;
+  }
 }
 </style>

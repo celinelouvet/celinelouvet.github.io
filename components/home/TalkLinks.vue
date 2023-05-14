@@ -1,21 +1,19 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <div>
-    <p v-if="links.slides || links.video || links.program || links.feedbacks">
-      <a v-if="links.slides" :href="links.slides" target="_blank"
-        ><span class="link">{{ $t("slides") }}</span></a
-      >
-      <a v-if="links.video" :href="links.video" target="_blank"
-        ><span class="link">{{ $t("video") }}</span></a
-      >
-      <a v-if="links.program" :href="links.program" target="_blank"
-        ><span class="link">{{ $t("program") }}</span></a
-      >
-      <a v-if="links.feedbacks && isDone(talk)" :href="links.feedbacks" target="_blank"
-        ><span class="link">{{ $t("feedbacks") }}</span></a
-      >
-    </p>
-  </div>
+  <p v-if="links.slides || links.video || links.program || links.feedbacks">
+    <a v-if="links.slides" :href="links.slides" target="_blank"
+      ><span class="link">{{ $t("slides") }}</span></a
+    >
+    <a v-if="links.video" :href="links.video" target="_blank"
+      ><span class="link">{{ $t("video") }}</span></a
+    >
+    <a v-if="links.program" :href="links.program" target="_blank"
+      ><span class="link">{{ $t("program") }}</span></a
+    >
+    <a v-if="links.feedbacks && isDone(talk)" :href="links.feedbacks" target="_blank"
+      ><span class="link">{{ $t("feedbacks") }}</span></a
+    >
+  </p>
 </template>
 
 <i18n locale="fr" lang="json5">

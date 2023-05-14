@@ -1,16 +1,14 @@
 <template>
-  <div>
-    <div v-if="talk.description" class="description">
-      <p class="small">
-        <span>{{ firstLine }}</span>
-        <a v-if="!visible && rest.length > 0" class="link" @click="toggle">{{ $t("more") }}</a>
+  <div v-if="talk.description" class="description">
+    <p class="small">
+      <span>{{ firstLine }}</span>
+      <a v-if="!visible && rest.length > 0" class="link" @click="toggle">{{ $t("more") }}</a>
+    </p>
+    <div v-if="visible">
+      <p v-for="(line, index) in rest" :key="line" class="small">
+        <span>{{ line }}</span>
+        <a v-if="index === rest.length - 1" class="link" @click="toggle">{{ $t("less") }} </a>
       </p>
-      <div v-if="visible">
-        <p v-for="(line, index) in rest" :key="line" class="small">
-          <span>{{ line }}</span>
-          <a v-if="index === rest.length - 1" class="link" @click="toggle">{{ $t("less") }} </a>
-        </p>
-      </div>
     </div>
   </div>
 </template>
