@@ -422,7 +422,7 @@ const resume: Resume = {
   ],
   talks: [
     {
-      topic: "The authorizations mystery",
+      topic: "The authorization mysteries",
       description: [
         "At the begin of your project, you simplify handle the user authentication, then little by little, you added some kind of user roles. And then, with time passes, your product manager asks you to refine this management and those user roles won't be enough.",
         "Maybe you already had the impression that authorization management is something quite unclear or complex. We know we should do it, but we often don't know how to do it, or even why. Sometimes, we even mix it with authentication. But then, what is authorizations and how do we handle it?",
@@ -430,10 +430,21 @@ const resume: Resume = {
       ],
       where: [
         {
+          name: "BreizhCamp 2023",
+          when: "2023-06-30",
+          language: "fr",
+          links: {
+            program: "https://www.breizhcamp.org/conference/programme",
+            feedbacks: "https://openfeedback.io/lSG3Xl5ALpXqswcFPcu2/2023-05-26/fILn5VfKXqQfzKLsI4a5",
+          },
+          pictureId: "breizhcamp2023",
+        },
+        {
           name: "Cloud Est 2023",
           when: "2023-06-20",
           language: "fr",
           links: {
+            program: "https://cloudest-event.fr",
             feedbacks: "https://openfeedback.io/lSG3Xl5ALpXqswcFPcu2/2023-05-26/fILn5VfKXqQfzKLsI4a5",
           },
           pictureId: "cloudest2023",
@@ -454,7 +465,7 @@ const resume: Resume = {
           language: "fr",
           links: {
             program: "https://camping-speakers.fr/sessions/event_driven_qu_est_ce_donc/",
-            feedbacks: "https://openfeedback.io/ouZ1fEDbI8JLywIZyh7W/2023-06-15/1",
+            feedbacks: "https://openfeedback.io/tY2sBMJlCOeyH0kdoCIu/2023-06-15/hb3tHXpRWQ7VX3mpTRAA",
           },
           pictureId: "campingdespeakers2023",
         },
@@ -465,6 +476,7 @@ const resume: Resume = {
           links: {
             program: "https://devfest.gdglille.org/speaker-page-oyAdLXhQYzWS1j03gz79ADg2TRj2/",
             feedbacks: "https://openfeedback.io/lSG3Xl5ALpXqswcFPcu2/2023-05-26/fILn5VfKXqQfzKLsI4a5",
+            video: "https://www.youtube.com/watch?v=RovPh9agiFc&t=1s&ab_channel=GDGFrance",
           },
           pictureId: "devfestlille2023",
         },
