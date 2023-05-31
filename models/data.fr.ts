@@ -424,7 +424,7 @@ const resume: Resume = {
   ],
   talks: [
     {
-      topic: "Le mystère des permissions",
+      topic: "Les mystères des permissions",
       description: [
         "Au début de votre projet, vous avez simplement géré l'authentification de votre utilisateur, puis petit à petit, vous avez ajouté une notion de rôles utilisateur. Et plus le temps passe, plus votre product manager vous demande d’affiner cette gestion et moins cette gestion par rôle va suffire.",
         "Peut-être avez-vous eu déjà eu l’impression que la gestion des permissions est quelque d’assez obscure ou complexe. On sait qu’on doit le faire, mais on ne sait pas trop comment, ni même pourquoi. Parfois, on confond même avec l'authentification. Mais alors, en quoi ça consiste rellement et comment on peut l'appliquer ?",
@@ -432,10 +432,21 @@ const resume: Resume = {
       ],
       where: [
         {
+          name: "BreizhCamp 2023",
+          when: "2023-06-30",
+          language: "fr",
+          links: {
+            program: "https://www.breizhcamp.org/conference/programme",
+            feedbacks: "https://openfeedback.io/lSG3Xl5ALpXqswcFPcu2/2023-05-26/fILn5VfKXqQfzKLsI4a5",
+          },
+          pictureId: "breizhcamp2023",
+        },
+        {
           name: "Cloud Est 2023",
           when: "2023-06-20",
           language: "fr",
           links: {
+            program: "https://cloudest-event.fr",
             feedbacks: "https://openfeedback.io/lSG3Xl5ALpXqswcFPcu2/2023-05-26/fILn5VfKXqQfzKLsI4a5",
           },
           pictureId: "cloudest2023",
@@ -456,7 +467,7 @@ const resume: Resume = {
           language: "fr",
           links: {
             program: "https://camping-speakers.fr/sessions/event_driven_qu_est_ce_donc/",
-            feedbacks: "https://openfeedback.io/ouZ1fEDbI8JLywIZyh7W/2023-06-15/1",
+            feedbacks: "https://openfeedback.io/tY2sBMJlCOeyH0kdoCIu/2023-06-15/hb3tHXpRWQ7VX3mpTRAA",
           },
           pictureId: "campingdespeakers2023",
         },
@@ -467,6 +478,7 @@ const resume: Resume = {
           links: {
             program: "https://devfest.gdglille.org/speaker-page-oyAdLXhQYzWS1j03gz79ADg2TRj2/",
             feedbacks: "https://openfeedback.io/lSG3Xl5ALpXqswcFPcu2/2023-05-26/fILn5VfKXqQfzKLsI4a5",
+            video: "https://www.youtube.com/watch?v=RovPh9agiFc&t=1s&ab_channel=GDGFrance",
           },
           pictureId: "devfestlille2023",
         },
