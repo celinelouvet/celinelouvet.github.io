@@ -3,11 +3,20 @@
     "1": {
       "speakers": ["celineLouvet"],
       "tags": [],
-      "title": "Les mystères des permissions",
+      "title": "Event Driven, qu'est-ce donc ?! Un nouveau buzzword ?",
       "id": "1",
-      "startTime": "2023-06-20T15:00:00+02:00",
-      "endTime": "2023-06-20T16:00:00+02:00",
-      "trackTitle": "Salle 1"
+      "startTime": "2023-06-29T00:00:00+02:00",
+      "endTime": "2023-06-29T00:00:00+02:00",
+      "trackTitle": ""
+    },
+    "2": {
+      "speakers": ["celineLouvet"],
+      "tags": [],
+      "title": "Les mystères des permissions",
+      "id": "2",
+      "startTime": "2023-06-30T13:30:00+02:00",
+      "endTime": "2023-06-30T14:25:00+02:00",
+      "trackTitle": "Amphi C"
     }
   },
   "speakers": {
