@@ -5,9 +5,9 @@
       "tags": [],
       "title": "Event Driven, qu'est-ce donc ?! Un nouveau buzzword ?",
       "id": "1",
-      "startTime": "2023-06-29T00:00:00+02:00",
-      "endTime": "2023-06-29T00:00:00+02:00",
-      "trackTitle": ""
+      "startTime": "2023-06-29T16:00:00+02:00",
+      "endTime": "2023-06-29T16:55:00+02:00",
+      "trackTitle": "Amphi C"
     },
     "2": {
       "speakers": ["celineLouvet"],
@@ -22,7 +22,7 @@
   "speakers": {
     "celineLouvet": {
       "name": "Céline LOUVET",
-      "photoUrl": "https://camo.githubusercontent.com/801bd75ccc2021c10539c96970cfa2ffe8db57dc9c8708d45fd8a70814279c64/68747470733a2f2f6c68352e676f6f676c6575736572636f6e74656e742e636f6d2f2d4e56375438735f374d4c452f41414141414141414141492f41414141414141414d556b2f52784b446164667a7556382f70686f746f2e6a7067",
+      "photoUrl": "https://lh5.googleusercontent.com/-NV7T8s_7MLE/AAAAAAAAAAI/AAAAAAAAMUk/RxKDadfzuV8/photo.jpg",
       "socials": [
         {
           "name": "twitter",
