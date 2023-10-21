@@ -1,0 +1,18 @@
+{
+  "mainMenu": {
+    "dashboard": "Tableau de bord",
+    "repositories": "Dépôts",
+    "admin": "Admin"
+  },
+  "accountMenu": {
+    "version": {
+      "copied": "Version copiée",
+      "copy": "Copier la version",
+      "label": "Version"
+    },
+    "switchColorModeDark": "Passer en mode sombre",
+    "switchColorModeLight": "Passer en mode clair",
+    "myAccount": "Mon compte",
+    "logout": "Déconnexion"
+  }
+}
