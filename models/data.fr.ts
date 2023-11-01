@@ -462,6 +462,15 @@ const resume: Resume = {
       ],
       where: [
         {
+          name: "BreizhCamp 2023",
+          when: "2023-06-30",
+          language: "fr",
+          links: {
+            program: "https://www.breizhcamp.org/conference/programme",
+          },
+          pictureId: "breizhcamp2023",
+        },
+        {
           name: "Camping des Speakers 2023",
           when: "2023-06-15",
           language: "fr",
