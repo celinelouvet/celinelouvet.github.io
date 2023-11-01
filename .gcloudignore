@@ -1,0 +1,10 @@
+.gcloudignore
+
+.git
+.gitignore
+
+.husky/
+.vscode/
+
+node_modules/
+pdf-generator/
