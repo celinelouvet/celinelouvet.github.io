@@ -1,4 +1,4 @@
-import { StorybookConfig } from '@storybook/nextjs';
+import type { StorybookConfig } from '@storybook/nextjs';
 
 const config: StorybookConfig = {
   framework: {
@@ -7,14 +7,24 @@ const config: StorybookConfig = {
   },
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
   addons: [
+    '@storybook/addon-actions',
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
     'storybook-dark-mode',
   ],
   staticDirs: ['../public'],
   docs: {
-    autodocs: true,
+    autodocs: false,
+  },
+  webpackFinal: async (config) => {
+    config.module?.rules?.push({
+      test: /\.mjs$/,
+      include: /node_modules/,
+      type: 'javascript/auto',
+    });
+
+    return config;
   },
 };
-
 export default config;

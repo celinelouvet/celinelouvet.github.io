@@ -3,7 +3,6 @@
 .git
 .gitignore
 
-.husky/
 .vscode/
 
 node_modules/

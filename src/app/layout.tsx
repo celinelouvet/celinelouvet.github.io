@@ -1,11 +1,15 @@
-import { ReactNode } from 'react';
+import { Providers } from './providers';
 
-import { Document } from '@/app/Document';
-
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
-  children: ReactNode;
+  children: React.ReactNode;
 }) {
-  return <Document>{children}</Document>;
+  return (
+    <html lang="en">
+      <body>
+        <Providers>{children}</Providers>
+      </body>
+    </html>
+  );
 }

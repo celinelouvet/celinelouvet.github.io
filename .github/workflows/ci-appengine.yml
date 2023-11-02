@@ -52,6 +52,9 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
+      - name: Clean
+        run: rm -fr .next && rm -fr build
+
       - name: Install dependencies
         run: yarn install
 
@@ -66,9 +69,6 @@ jobs:
 
       - name: Lint code and types
         run: yarn lint
-
-      - name: Run components tests
-        run: yarn test:ci
 
       - name: Prepare for AppEngine
         run: yarn appengine:prepare

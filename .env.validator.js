@@ -9,8 +9,6 @@ const envSchema = z.object({
   DATABASE_URL: z.string().url(),
   AUTH_SECRET: z.string(),
 
-  NEXT_PUBLIC_IS_DEMO: z.enum(['true', 'false']).optional(),
-
   NEXT_PUBLIC_BASE_URL: z.string().url(),
   NEXT_PUBLIC_API_BASE_URL: z.union([
     z.string().url({

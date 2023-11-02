@@ -26,6 +26,7 @@ module.exports = defineNextConfig({
       },
     ];
   },
+
   async rewrites() {
     return [
       // Rewrite app

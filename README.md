@@ -43,22 +43,14 @@ yarn dev
 - 🟦 [TypeScript](https://www.typescriptlang.org/)
 - ⚛️ [React](https://reactjs.org/)
 - ▲ [NextJS](https://nextjs.org/) (with [Static Export](https://nextjs.org/docs/app/building-your-application/deploying/static-exports))
-- 📕 [Storybook](https://storybook.js.org/)
-- ⚛️ [React Router](https://reactrouter.com/)
 - ⚡️ [Chakra UI](https://chakra-ui.com/)
 - ⚛️ [TanStack Query](https://react-query.tanstack.com/)
-- 🐜 [Formiz](https://formiz-react.com/)
 - ⭐️ [React Icons](https://react-icons.github.io/react-icons/)
 - 🌍 [React i18next](https://react.i18next.com/)
-- 🔽 [React Select](https://react-select.com/)
-- 🔢 [React Currency Input Field](https://github.com/cchanxzy/react-currency-input-field)
-- ↔ [Axios](https://github.com/axios/axios)
 - 📅 [Day.js](https://day.js.org/)
-- 👮 [Cypress](https://www.cypress.io/)
 
 👉 [Technology Choices](#technology-choices)
 
-ℹ️ API calls are mapped on a [JHipster](https://www.jhipster.tech/) backend application.
 
 ## Features
 
@@ -70,13 +62,9 @@ You can find more details about each feature on the [documentation](https://docs
 - Users management admin screens (CRUD).
 - Multi-languages (i18n) (English & French built-in).
 - Custom Chakra UI theme with generated typings.
-- Great list of UI components with their Storybook documentation.
-- Fields components for Formiz.
-- Dark mode support with Storybook toggle.
 - App version & Environment name in the UI.
-- API Schema documentation via [Swagger UI React](https://github.com/swagger-api/swagger-ui).
 - API Mocking with a JHipster mapping using Next.js API.
-- Developer eXperience improved with ESLint, Prettier and Husky
+- Developer eXperience improved with ESLint and Prettier
 - Deployment made easy using Next.js
 
 ## Installation
@@ -102,12 +90,6 @@ yarn db:push && yarn db:seed
 ```bash
 # Run the development server
 yarn dev
-```
-
-### Storybook
-
-```bash
-yarn storybook
 ```
 
 ### Update theme typing
@@ -252,7 +234,6 @@ t('account:resetPassword.actions.reset')
 
 ```bash
 yarn install
-yarn storybook:build # Optional: Will expose the Storybook at `/storybook`
 yarn build
 yarn start
 ```
@@ -281,7 +262,6 @@ Update the `next.config.js` file with `output: 'export'` (and remove `redirects`
 ```
 
 ```bash
-yarn storybook:build # Optional: Will expose the Storybook at `/storybook/`
 yarn build
 ```
 
@@ -350,17 +330,9 @@ practice to do so to avoid bugs in the future.
 [TanStack Query](https://github.com/tannerlinsley/react-query) is a powerful tool
 to do efficient data synchronization for React. No need of Redux
 or another global state manager anymore. Usable with [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API),
-[`axios`](https://github.com/axios/axios), or [`graphql-request`](https://github.com/prisma-labs/graphql-request),
 React Query will do the work and is agnostic of the method you will use.
 
 [GitHub](https://github.com/tannerlinsley/react-query) · [License MIT](https://github.com/tannerlinsley/react-query/blob/master/LICENSE)
-
-### Storybook
-
-[Storybook](https://storybook.js.org/) is an Open Source tool to help you
-develop framework agnostic components in isolation and document them.
-
-[GitHub](https://github.com/storybookjs/storybook) · [License MIT](https://github.com/storybookjs/storybook/blob/next/LICENSE)
 
 ### Chakra UI
 
@@ -368,14 +340,6 @@ develop framework agnostic components in isolation and document them.
 accessible component library that is highly customizable.
 
 [GitHub](https://github.com/chakra-ui/chakra-ui/) · [License MIT](https://github.com/chakra-ui/chakra-ui/blob/main/LICENSE)
-
-### Formiz
-
-To create React forms, there is a lot of libraries out there.
-[Formiz](https://formiz-react.com/) will help you create React forms with ease!
-Composable, headless & with built-in multi steps.
-
-[GitHub](https://github.com/ivan-dalmet/formiz) · [License MIT](https://github.com/ivan-dalmet/formiz/blob/master/LICENSE)
 
 ### Cypress
 
