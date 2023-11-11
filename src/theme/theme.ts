@@ -1,11 +1,14 @@
 import { extendTheme } from '@chakra-ui/react';
 
+import { typographyComponents } from '@/components/typography';
+
 import { config } from './config';
+import { global } from './global';
 
 export const theme = extendTheme({
   config,
-  fonts: {
-    heading: `'PT Sans Narrow', sans-serif`,
-    body: `'Nunito', sans-serif`,
+  styles: { global },
+  components: {
+    ...typographyComponents,
   },
 });
