@@ -1,12 +1,24 @@
-import { Text } from '@chakra-ui/react';
+import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { H1Heading } from '@/components/typography';
+import { Home } from '@/components/features/home';
+import { type Resume, enResume, frResume } from '@/data';
+import { type Languages } from '@/lib/i18n';
+
+const getResume = (language: Languages): Resume => {
+  if (language === 'fr') {
+    return frResume;
+  }
+  return enResume;
+};
 
 export default function Page() {
-  return (
-    <>
-      <H1Heading>H1 - Lorem ipsum dolor sit amet</H1Heading>
-      <Text>Hello buds</Text>
-    </>
+  const { i18n } = useTranslation();
+
+  const resume = useMemo(
+    () => getResume(i18n.language as Languages),
+    [i18n.language]
   );
+
+  return <Home resume={resume} />;
 }

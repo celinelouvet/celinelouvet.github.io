@@ -6,4 +6,4 @@ export const pictureComponent = {
   Picture: pictureStyles,
 } satisfies ChakraTheme['components'];
 
-export { Picture } from './Picture';
+export { Picture, pictureInPx } from './Picture';
