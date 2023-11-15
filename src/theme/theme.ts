@@ -1,5 +1,6 @@
 import { extendTheme } from '@chakra-ui/react';
 
+import { mediaComponents } from '@/components/media';
 import { typographyComponents } from '@/components/typography';
 
 import { colors } from './color';
@@ -11,6 +12,7 @@ export const theme = extendTheme({
   colors: { ...colors },
   styles: { global },
   components: {
+    ...mediaComponents,
     ...typographyComponents,
   },
 });
