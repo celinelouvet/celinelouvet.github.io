@@ -2,5 +2,8 @@
   "biography": {
     "title": "Biography",
     "seeDetails": "See my full CV"
+  },
+  "socials": {
+    "title": "Social networks"
   }
 }

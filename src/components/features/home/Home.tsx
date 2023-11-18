@@ -5,6 +5,7 @@ import { pictureInPx } from '@/components/media';
 import { type Resume } from '@/data';
 
 import { Biography } from './Biography';
+import { Socials } from './Socials';
 import { Summary } from './Summary';
 
 type HomeProps = {
@@ -26,6 +27,7 @@ export const Home: FC<HomeProps> = ({ resume }) => {
         <Summary resume={resume} />
         <Stack spacing={8}>
           <Biography biographies={resume.biographies} />
+          <Socials socials={resume.socials} />
         </Stack>
       </Grid>
     </Flex>
