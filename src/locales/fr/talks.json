@@ -1,0 +1,10 @@
+{
+  "subjects": "Sujets disponibles pour CFP",
+  "toCome": "Conférences à venir",
+  "alreadyDone": "Conférences & Interviews",
+  "talk": {
+    "date": "D MMM YYYY",
+    "more": "Voir plus",
+    "less": "Voir moins"
+  }
+}

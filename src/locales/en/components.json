@@ -1,17 +1,11 @@
 {
-  "errorPage": {
-    "403": {
-      "title": "Unauthorized",
-      "description": "Sorry, you can't access this page."
-    },
-    "404": {
-      "title": "Page not found",
-      "description": "The page does not exist or the url has changed."
-    },
-    "errorCode": "Error {{code}}",
-    "default": {
-      "title": "Error",
-      "description": "Something went wrong 😞"
-    }
+  "talkDetails": {
+    "date": "MMM D YYYY",
+    "more": "View more",
+    "less": "View less",
+    "audio": "Audio",
+    "program": "Program",
+    "slides": "Slides",
+    "video": "Video"
   }
 }

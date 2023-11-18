@@ -7,6 +7,7 @@ import { type Resume } from '@/data';
 import { Biography } from './Biography';
 import { Socials } from './Socials';
 import { Summary } from './Summary';
+import { Talks } from './Talks';
 
 type HomeProps = {
   resume: Resume;
@@ -28,6 +29,7 @@ export const Home: FC<HomeProps> = ({ resume }) => {
         <Stack spacing={8}>
           <Biography biographies={resume.biographies} />
           <Socials socials={resume.socials} />
+          <Talks resume={resume} />
         </Stack>
       </Grid>
     </Flex>

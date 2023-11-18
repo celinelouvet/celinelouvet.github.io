@@ -5,5 +5,15 @@
   },
   "socials": {
     "title": "Réseaux sociaux"
+  },
+  "talks": {
+    "toCome": "Conférences à venir",
+    "alreadyDone": "Conférences & Interviews",
+    "seeAllTalks": "Voir toutes mes conférences",
+    "talk": {
+      "date": "D MMM YYYY",
+      "more": "Voir plus",
+      "less": "Voir moins"
+    }
   }
 }

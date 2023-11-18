@@ -5,5 +5,15 @@
   },
   "socials": {
     "title": "Social networks"
+  },
+  "talks": {
+    "toCome": "Incoming talks",
+    "alreadyDone": "Talks & Interviews",
+    "seeAllTalks": "See all talks",
+    "talk": {
+      "date": "MMM D YYYY",
+      "more": "View more",
+      "less": "View less"
+    }
   }
 }

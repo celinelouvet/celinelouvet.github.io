@@ -1,17 +1,11 @@
 {
-  "errorPage": {
-    "errorCode": "Erreur {{code}}",
-    "403": {
-      "title": "Page non autorisée",
-      "description": "Désolé, vous ne pouvez pas accéder à cette page."
-    },
-    "404": {
-      "title": "Page introuvable",
-      "description": "La page n'existe pas ou l'URL a changé."
-    },
-    "default": {
-      "title": "Erreur",
-      "description": "Une erreur est survenue 😞"
-    }
+  "talkDetails": {
+    "date": "D MMM YYYY",
+    "more": "Voir plus",
+    "less": "Voir moins",
+    "audio": "Audio",
+    "program": "Programme",
+    "slides": "Slides",
+    "video": "Vidéo"
   }
 }
