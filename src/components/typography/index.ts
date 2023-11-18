@@ -1,7 +1,9 @@
 import { type ChakraTheme } from '@chakra-ui/react';
 
+import { dateTextComponent } from './dateText';
 import { headingsComponents } from './headings';
 
+export { DateText } from './dateText';
 export {
   H1Heading,
   H2Heading,
@@ -11,5 +13,6 @@ export {
 } from './headings';
 
 export const typographyComponents = {
+  ...dateTextComponent,
   ...headingsComponents,
 } satisfies ChakraTheme['components'];
