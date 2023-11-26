@@ -6,6 +6,7 @@ import { typographyComponents } from '@/components/typography';
 import { colors } from './color';
 import { config } from './config';
 import { global } from './global';
+import { overrideComponents } from './override';
 
 export const theme = extendTheme({
   config,
@@ -13,6 +14,7 @@ export const theme = extendTheme({
   styles: { global },
   components: {
     ...mediaComponents,
+    ...overrideComponents,
     ...typographyComponents,
   },
 });
