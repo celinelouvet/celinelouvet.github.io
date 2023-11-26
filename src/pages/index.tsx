@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Home } from '@/components/features/home';
+import { PageContainer } from '@/components/layout';
 import { type Resume, enResume, frResume } from '@/data';
 import { type Languages } from '@/lib/i18n';
 
@@ -20,5 +21,9 @@ export default function Page() {
     [i18n.language]
   );
 
-  return <Home resume={resume} />;
+  return (
+    <PageContainer>
+      <Home resume={resume} />
+    </PageContainer>
+  );
 }
