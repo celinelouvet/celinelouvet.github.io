@@ -1,0 +1,25 @@
+{
+  "infos": {
+    "title": "My Infos",
+    "email": "Email",
+    "location": "Location",
+    "experience": "Experience",
+    "yearsOfExperience": "{{experience}} of experience",
+    "hobbies": "Hobbies",
+    "website": "Website"
+  },
+  "remote": {
+    "title": "Remote",
+    "remoteType": {
+      "FULLTIME": "Full-time remote in {{location}}",
+      "HYBRID": "Part-time remote (2 days / week min.) in {{location}}",
+      "NONE": "No remote"
+    }
+  },
+  "socials": {
+    "title": "Social networks"
+  },
+  "skills": {
+    "title": "Main skills"
+  }
+}
