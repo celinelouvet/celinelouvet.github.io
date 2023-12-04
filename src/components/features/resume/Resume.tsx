@@ -4,7 +4,7 @@ import { type FC } from 'react';
 import { pictureInPx } from '@/components/media';
 import { type Resume } from '@/data';
 
-import { Content } from './Content';
+import { Content } from './content';
 import { MainTitle } from './MainTitle';
 import { Summary } from './summary';
 
