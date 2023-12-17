@@ -8,24 +8,18 @@ import { type Experience } from '@/data';
 
 import {
   allProjects,
-  allStacks,
-  allTasks,
   basicJob,
   descriptions,
-  platformStack1,
-  platformStacks,
   project1,
   remotes,
   role,
-  simpleStack1,
-  simpleStacks,
   subjobs,
   to,
 } from './fixtures';
 import { FullExperience as FullExperienceComponent } from './FullExperience';
 
 const meta = {
-  title: 'Resume/Content',
+  title: 'Resume/Content/Experience',
   component: FullExperienceComponent,
   decorators: [
     (Story) => (
@@ -39,7 +33,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const FullExperience: Story = {
+export const ExperienceParts: Story = {
   render: ({ job }) => {
     const Item: FC<{ title: string; job: Experience }> = ({ title, job }) => (
       <Card variant={'outline'} size={'sm'}>
@@ -78,46 +72,7 @@ export const FullExperience: Story = {
           job={{ ...job, projects: allProjects }}
         />
 
-        <Item title={'With tasks'} job={{ ...job, tasks: allTasks }} />
-
-        <Item
-          title={'With one simple stack'}
-          job={{ ...job, stacks: [simpleStack1] }}
-        />
-
-        <Item
-          title={'With several simple stacks'}
-          job={{ ...job, stacks: simpleStacks }}
-        />
-
-        <Item
-          title={'With one platform stack'}
-          job={{ ...job, stacks: [platformStack1] }}
-        />
-
-        <Item
-          title={'With several platform stacks'}
-          job={{ ...job, stacks: platformStacks }}
-        />
-
-        <Item title={'With all stacks'} job={{ ...job, stacks: allStacks }} />
-
         <Item title={'With sub jobs'} job={{ ...job, subjobs }} />
-
-        <Item
-          title={'Complete'}
-          job={{
-            ...job,
-            to,
-            role,
-            remote: 'FULLTIME',
-            descriptions,
-            projects: allProjects,
-            tasks: allTasks,
-            stacks: allStacks,
-            subjobs,
-          }}
-        />
       </Stack>
     );
   },
