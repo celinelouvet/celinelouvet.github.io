@@ -44,5 +44,8 @@
         "HYBRID": "Part-time remote (2 days / week min.)"
       }
     }
+  },
+  "details": {
+    "label": "Show details"
   }
 }

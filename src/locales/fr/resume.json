@@ -42,5 +42,8 @@
         "HYBRID": "Télétravail alterné (2-3 jours / semaine)"
       }
     }
+  },
+  "details": {
+    "label": "Afficher le détail"
   }
 }
