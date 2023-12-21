@@ -1,4 +1,4 @@
-import { Stack } from '@chakra-ui/react';
+import { type StackProps as ChakraStackProps, Stack } from '@chakra-ui/react';
 import { type FC, useState } from 'react';
 
 import { type Resume } from '@/data';
@@ -6,7 +6,7 @@ import { type Resume } from '@/data';
 import { Experiences } from './experiences';
 import { Description, DetailsSwitcher, PdfDownloader } from '../parts';
 
-type ContentProps = {
+type ContentProps = Omit<ChakraStackProps, 'children'> & {
   resume: Resume;
 };
 

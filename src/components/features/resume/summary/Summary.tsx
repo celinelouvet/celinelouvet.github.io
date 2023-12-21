@@ -1,5 +1,7 @@
 import {
   Center,
+  type StackProps as ChakraStackProps,
+  Show,
   Stack,
   type SystemStyleObject,
   useColorModeValue,
@@ -11,20 +13,22 @@ import { type Resume } from '@/data';
 
 import { Infos, Remotes, Skills, Socials } from '../parts';
 
-type SummaryProps = {
+type SummaryProps = Omit<ChakraStackProps, 'children'> & {
   resume: Resume;
 };
 
 const slideIn = -pictureInPx * 0.5;
 
-export const Summary: FC<SummaryProps> = ({ resume }) => {
+export const Summary: FC<SummaryProps> = ({ resume, ...props }) => {
   const bgColor = useColorModeValue('brand.900', 'brand.200');
 
   return (
-    <Stack bgColor={bgColor} __css={summaryStyle} spacing={6}>
-      <Center marginTop={`${slideIn}px`}>
-        <Picture size="lg" />
-      </Center>
+    <Stack bgColor={bgColor} __css={summaryStyle} spacing={6} {...props}>
+      <Show above="lg">
+        <Center marginTop={`${slideIn}px`}>
+          <Picture size="lg" />
+        </Center>
+      </Show>
       <Infos resume={resume} />
       <Remotes remotes={resume.remotes} />
       <Skills skills={resume.skills} />

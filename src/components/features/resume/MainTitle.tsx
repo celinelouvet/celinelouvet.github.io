@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, type StyleConfig } from '@chakra-ui/react';
 import { type FC } from 'react';
 
 import { pictureInPx } from '@/components/media';
@@ -18,9 +18,14 @@ export const MainTitle: FC<MainTitleProps> = ({ resume }) => {
   const fullname = `${resume.firstname} ${resume.lastname}`;
 
   return (
-    <Box paddingLeft={`${summarySize}px`} color="white">
+    <Box __css={css}>
       <H1Heading size={size}>{fullname}</H1Heading>
       <H2Heading size={size}>{resume.title}</H2Heading>
     </Box>
   );
 };
+
+const css = {
+  paddingLeft: { lg: `${summarySize}px`, base: 0 },
+  color: 'white',
+} satisfies StyleConfig['baseStyle'];

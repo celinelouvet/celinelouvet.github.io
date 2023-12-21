@@ -1,4 +1,9 @@
-import { type StyleConfig, Text, useColorModeValue } from '@chakra-ui/react';
+import {
+  Show,
+  type StyleConfig,
+  Text,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -20,9 +25,11 @@ export const RemoteText: FC<RemoteTextProps> = ({ remote }) => {
 
   return (
     <Text as="span" sx={css} color={color}>
-      <Text as="span" marginRight={'2'}>
-        —
-      </Text>
+      <Show above="md">
+        <Text as="span" marginRight={'2'}>
+          —
+        </Text>
+      </Show>
       <Text as="span">{t(remote)}</Text>
     </Text>
   );
