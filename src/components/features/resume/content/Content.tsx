@@ -4,6 +4,7 @@ import { type FC, useState } from 'react';
 import { type Resume } from '@/data';
 
 import { Experiences } from './experiences';
+import { Talks } from './Talks';
 import { Description, DetailsSwitcher, PdfDownloader } from '../parts';
 
 type ContentProps = Omit<ChakraStackProps, 'children'> & {
@@ -21,6 +22,7 @@ export const Content: FC<ContentProps> = ({ resume }) => {
       </Stack>
       <Description descriptions={resume.descriptions} />
       <Experiences experiences={resume.experiences} full={shown} />
+      <Talks resume={resume} />
     </Stack>
   );
 };

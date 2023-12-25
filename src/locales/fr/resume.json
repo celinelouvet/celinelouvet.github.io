@@ -45,5 +45,8 @@
   },
   "details": {
     "label": "Afficher le détail"
+  },
+  "talks": {
+    "title": "Conférences & Interviews"
   }
 }
