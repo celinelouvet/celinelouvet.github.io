@@ -1,11 +1,12 @@
-import { ColorModeScript } from '@chakra-ui/react'
-import { Head, Html, Main, NextScript } from 'next/document'
+import { ColorModeScript } from '@chakra-ui/react';
+import { Head, Html, Main, NextScript } from 'next/document';
 
-import theme from '@/theme'
+import i18next from '@/lib/i18n/config';
+import theme from '@/theme';
 
 export default function Document() {
   return (
-    <Html lang='en'>
+    <Html lang={i18next.language}>
       <Head />
       <body>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
@@ -13,5 +14,5 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }

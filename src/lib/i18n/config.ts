@@ -1,5 +1,5 @@
 import dayjs from 'dayjs';
-import i18n, { use } from 'i18next';
+import i18next, { use } from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 import { DEFAULT_LANGUAGE_KEY, DEFAULT_NAMESPACE } from '@/lib/i18n';
@@ -24,11 +24,11 @@ use(initReactI18next).init({
   },
 });
 
-i18n.on('languageChanged', (langKey) => {
+i18next.on('languageChanged', (langKey) => {
   dayjs.locale(langKey);
   if (isBrowser) {
     document.documentElement.lang = langKey;
   }
 });
 
-export default i18n;
+export default i18next;

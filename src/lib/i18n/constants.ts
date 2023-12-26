@@ -1,11 +1,9 @@
-import type locales from '@/locales';
-
+export type Languages = 'en' | 'fr';
 export type Language = {
-  key: keyof typeof locales;
+  key: Languages;
 };
 
-export const DEFAULT_NAMESPACE = 'common';
-
-export const DEFAULT_LANGUAGE_KEY: Language['key'] = 'en';
-
 export const AVAILABLE_LANGUAGES: Language[] = [{ key: 'en' }, { key: 'fr' }];
+export const DEFAULT_LANGUAGE_KEY: Languages = 'fr';
+
+export const DEFAULT_NAMESPACE = 'common';

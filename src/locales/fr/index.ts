@@ -1,9 +1,11 @@
 import common from './common.json';
 import components from './components.json';
-import dashboard from './dashboard.json';
+import header from './header.json';
 
 export default {
+  header,
+  //
+
   common,
   components,
-  dashboard,
 } as const;

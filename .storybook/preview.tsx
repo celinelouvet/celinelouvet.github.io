@@ -2,6 +2,7 @@ import * as React from 'react';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import { StoryFn, type Parameters, type Preview } from '@storybook/react';
 
+import '@/lib/i18n/config';
 import theme from '../src/theme';
 
 const WithStoryThemeProvider = (Story: StoryFn) => (
