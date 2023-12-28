@@ -3,7 +3,8 @@ import { type FC } from 'react';
 
 import { type Resume } from '@/data';
 
-import { PdfDownloader } from '../parts';
+import { Experiences } from './experiences';
+import { Description, PdfDownloader } from '../parts';
 
 type ContentProps = {
   resume: Resume;
@@ -15,6 +16,8 @@ export const Content: FC<ContentProps> = ({ resume }) => {
       <Stack direction={'row-reverse'} spacing={4}>
         <PdfDownloader />
       </Stack>
+      <Description descriptions={resume.descriptions} />
+      <Experiences experiences={resume.experiences} />
     </Stack>
   );
 };

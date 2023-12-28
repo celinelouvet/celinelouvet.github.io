@@ -21,5 +21,26 @@
   },
   "skills": {
     "title": "Compétences"
+  },
+  "description": {
+    "title": "Description"
+  },
+  "experiences": {
+    "title": "Expériences",
+
+    "experience": {
+      "project_one": "Projet",
+      "project_other": "Projets",
+      "tasks": "Tâches",
+      "stacks": "Technos",
+
+      "years_one": "{{count}} an",
+      "years_other": "{{count}} ans",
+      "months": "{{count}} mois",
+      "remoteType": {
+        "FULLTIME": "Télétravail complet",
+        "HYBRID": "Télétravail alterné (2-3 jours / semaine)"
+      }
+    }
   }
 }

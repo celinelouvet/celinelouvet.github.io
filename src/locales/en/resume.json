@@ -21,5 +21,28 @@
   },
   "skills": {
     "title": "Main skills"
+  },
+  "description": {
+    "title": "Description"
+  },
+  "experiences": {
+    "title": "Experiences",
+
+    "experience": {
+      "project_one": "Project",
+      "project_other": "Projects",
+      "tasks": "Tasks",
+      "stacks": "Stacks",
+
+      "years_one": "{{count}} year",
+      "years_other": "{{count}} years",
+      "months_one": "{{count}} month",
+      "months_other": "{{count}} months",
+
+      "remoteType": {
+        "FULLTIME": "Full-time remote",
+        "HYBRID": "Part-time remote (2 days / week min.)"
+      }
+    }
   }
 }
