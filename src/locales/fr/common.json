@@ -2,5 +2,12 @@
   "languages": {
     "en": "Anglais",
     "fr": "Français"
+  },
+  "dates": {
+    "today": "aujourd'hui",
+
+    "years_one": "{{count}} an",
+    "years_other": "{{count}} ans",
+    "months": "{{count}} mois"
   }
 }
