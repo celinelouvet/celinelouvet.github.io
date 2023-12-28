@@ -56,5 +56,8 @@
   },
   "trainings": {
     "title": "Trainings"
+  },
+  "certifications": {
+    "title": "Certifications"
   }
 }

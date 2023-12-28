@@ -3,6 +3,7 @@ import { type FC, useState } from 'react';
 
 import { type Resume } from '@/data';
 
+import { Certifications } from './Certifications';
 import { Educations } from './Educations';
 import { Experiences } from './experiences';
 import { Talks } from './Talks';
@@ -27,6 +28,7 @@ export const Content: FC<ContentProps> = ({ resume }) => {
       <Talks resume={resume} />
       <Educations educations={resume.educations} />
       <Trainings trainings={resume.trainings} />
+      <Certifications certifications={resume.certifications} />
     </Stack>
   );
 };
