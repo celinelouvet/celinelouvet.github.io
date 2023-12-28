@@ -51,5 +51,8 @@
   },
   "educations": {
     "title": "Formation scolaire"
+  },
+  "trainings": {
+    "title": "Formations"
   }
 }
