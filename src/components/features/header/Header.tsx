@@ -4,11 +4,10 @@ import { useRouter } from 'next/router';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-
 import { ColorModeMenu } from './colorModeMenu';
 import { LanguageMenu } from './languageMenu';
 
-type ActiveSection = 'home' | 'resume' | 'talks';
+type ActiveSection = 'home' | 'resume' | 'talks' | 'blog';
 
 const useActiveSection = (): ActiveSection => {
   const { asPath } = useRouter();
@@ -18,6 +17,9 @@ const useActiveSection = (): ActiveSection => {
   }
   if (asPath.includes('resume')) {
     return 'resume';
+  }
+  if (asPath.includes('blog')) {
+    return 'blog';
   }
   return 'home';
 };
@@ -30,7 +32,7 @@ export const Header: FC = () => {
     <>
       <Flex __css={navStyle}>
         <Container>
-          <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+          <Grid templateColumns="repeat(4, 1fr)" gap={6}>
             <Center
               __css={navItemStyle}
               bgColor={activeSection === 'home' ? 'brand.300' : 'transparent'}
@@ -53,6 +55,14 @@ export const Header: FC = () => {
             >
               <Link as={NextLink} href="/talks">
                 {t('talks')}
+              </Link>
+            </Center>
+            <Center
+              __css={navItemStyle}
+              bgColor={activeSection === 'blog' ? 'brand.300' : 'transparent'}
+            >
+              <Link as={NextLink} href="/blog">
+                {t('blog')}
               </Link>
             </Center>
           </Grid>
