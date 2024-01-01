@@ -2,6 +2,7 @@ import { extendTheme } from '@chakra-ui/react';
 
 import { layoutComponents } from '@/components/layout';
 import { mediaComponents } from '@/components/media';
+import { navigationComponents } from '@/components/navigation';
 import { typographyComponents } from '@/components/typography';
 
 import { colors } from './color';
@@ -16,6 +17,7 @@ export const theme = extendTheme({
   components: {
     ...layoutComponents,
     ...mediaComponents,
+    ...navigationComponents,
     ...overrideComponents,
     ...typographyComponents,
   },
