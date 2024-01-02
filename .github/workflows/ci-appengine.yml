@@ -1,0 +1,92 @@
+name: ci-appengine
+
+on:
+  push:
+    branches:
+      - 'v2**'
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  VERSION: ${{ github.ref_name }}
+  PDF_FILE: 'LOUVET_Celine'
+  BUCKET_NAME: '${{ secrets.GCP_PROJECT }}.appspot.com'
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [18]
+
+    permissions:
+      contents: read
+      id-token: write
+
+    outputs:
+      url: ${{ steps.deploy.outputs.url }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Setup node env
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Cache node modules
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Clean
+        run: rm -fr .next && rm -fr build
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Prepare env file
+        run: cp .env.example .env
+
+      - name: Build
+        run: yarn build
+
+      - name: Generate theme
+        run: yarn theme
+
+      - name: Lint code and types
+        run: yarn lint
+
+      - name: Prepare for AppEngine
+        run: yarn appengine:prepare
+
+      - id: auth
+        name: Auth to GCP
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - id: deploy
+        name: Deploy to GCP AppEngine
+        uses: google-github-actions/deploy-appengine@v1
+        with:
+          project_id: ${{ secrets.GCP_PROJECT }}
+          deliverables: app.yaml
+          promote: false
+          version: ${{ env.VERSION }}
+
+      - name: Test deployed version
+        run: curl --silent --head "${{ steps.deploy.outputs.version_url }}"

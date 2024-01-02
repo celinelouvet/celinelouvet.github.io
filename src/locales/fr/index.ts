@@ -1,23 +1,17 @@
-import account from './account.json';
-import admin from './admin.json';
-import auth from './auth.json';
+import blog from './blog.json';
 import common from './common.json';
 import components from './components.json';
-import dashboard from './dashboard.json';
-import demoMode from './demoMode.json';
-import layout from './layout.json';
-import repositories from './repositories.json';
-import users from './users.json';
+import header from './header.json';
+import home from './home.json';
+import resume from './resume.json';
+import talks from './talks.json';
 
 export default {
-  account,
-  admin,
-  auth,
+  blog,
   common,
   components,
-  dashboard,
-  demoMode,
-  layout,
-  repositories,
-  users,
+  header,
+  home,
+  resume,
+  talks,
 } as const;

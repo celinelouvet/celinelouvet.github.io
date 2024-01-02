@@ -1,0 +1,10 @@
+{
+  "subjects": "Available subjects for CFP",
+  "toCome": "Incoming talks",
+  "alreadyDone": "Talks & Interviews",
+  "talk": {
+    "date": "MMM D YYYY",
+    "more": "View more",
+    "less": "View less"
+  }
+}

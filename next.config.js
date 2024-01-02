@@ -15,6 +15,8 @@ function defineNextConfig(config) {
 }
 
 module.exports = defineNextConfig({
+  distDir: 'build',
+
   async redirects() {
     return [
       {
@@ -24,6 +26,7 @@ module.exports = defineNextConfig({
       },
     ];
   },
+
   async rewrites() {
     return [
       // Rewrite app

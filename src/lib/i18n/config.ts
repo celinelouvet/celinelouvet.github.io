@@ -1,18 +1,14 @@
 import dayjs from 'dayjs';
-import i18n from 'i18next';
+import i18next, { use } from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
-import {
-  AVAILABLE_LANGUAGES,
-  DEFAULT_LANGUAGE_KEY,
-  DEFAULT_NAMESPACE,
-} from '@/lib/i18n/constants';
+import { DEFAULT_LANGUAGE_KEY, DEFAULT_NAMESPACE } from '@/lib/i18n';
 import { isBrowser } from '@/lib/ssr';
 import locales from '@/locales';
 
 dayjs.locale(DEFAULT_LANGUAGE_KEY);
 
-i18n.use(initReactI18next).init({
+use(initReactI18next).init({
   defaultNS: DEFAULT_NAMESPACE,
   ns: Object.keys(locales[DEFAULT_LANGUAGE_KEY]),
   resources: locales,
@@ -28,16 +24,11 @@ i18n.use(initReactI18next).init({
   },
 });
 
-i18n.on('languageChanged', (langKey) => {
-  const language = AVAILABLE_LANGUAGES.find(({ key }) => key === langKey);
+i18next.on('languageChanged', (langKey) => {
   dayjs.locale(langKey);
   if (isBrowser) {
     document.documentElement.lang = langKey;
-    document.documentElement.dir = language?.dir ?? 'ltr';
-    document.documentElement.style.fontSize = `${
-      (language?.fontScale ?? 1) * 100
-    }%`;
   }
 });
 
-export default i18n;
+export default i18next;

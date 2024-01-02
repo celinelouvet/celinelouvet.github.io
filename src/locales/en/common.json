@@ -1,15 +1,14 @@
 {
   "languages": {
     "en": "English",
-    "fr": "French",
-    "ar": "Arabic",
-    "sw": "Swahili"
+    "fr": "French"
   },
-  "actions": {
-    "activate": "Activate",
-    "cancel": "Cancel",
-    "deactivate": "Deactivate",
-    "delete": "Delete",
-    "edit": "Edit"
+  "dates": {
+    "today": "today",
+
+    "years_one": "{{count}} year",
+    "years_other": "{{count}} years",
+    "months_one": "{{count}} month",
+    "months_other": "{{count}} months"
   }
 }

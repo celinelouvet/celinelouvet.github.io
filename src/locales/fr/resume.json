@@ -1,0 +1,61 @@
+{
+  "infos": {
+    "title": "Mes Infos",
+    "email": "Email",
+    "location": "Adresse",
+    "experience": "Expérience",
+    "yearsOfExperience": "{{experience}} d'expérience",
+    "hobbies": "Loisirs",
+    "website": "Site web"
+  },
+  "remote": {
+    "title": "Télétravail",
+    "remoteType": {
+      "FULLTIME": "Télétravail complet en {{location}}",
+      "HYBRID": "Télétravail alterné (2-3 jours / semaine) à {{location}}",
+      "NONE": "Travail en présentiel"
+    }
+  },
+  "socials": {
+    "title": "Réseaux sociaux"
+  },
+  "skills": {
+    "title": "Compétences"
+  },
+  "description": {
+    "title": "Description"
+  },
+  "experiences": {
+    "title": "Expériences",
+
+    "experience": {
+      "project_one": "Projet",
+      "project_other": "Projets",
+      "tasks": "Tâches",
+      "stacks": "Technos",
+
+      "years_one": "{{count}} an",
+      "years_other": "{{count}} ans",
+      "months": "{{count}} mois",
+      "remoteType": {
+        "FULLTIME": "Télétravail complet",
+        "HYBRID": "Télétravail alterné (2-3 jours / semaine)"
+      }
+    }
+  },
+  "details": {
+    "label": "Afficher le détail"
+  },
+  "talks": {
+    "title": "Conférences & Interviews"
+  },
+  "educations": {
+    "title": "Formation scolaire"
+  },
+  "trainings": {
+    "title": "Formations"
+  },
+  "certifications": {
+    "title": "Certifications"
+  }
+}

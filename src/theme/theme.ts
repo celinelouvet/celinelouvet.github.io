@@ -1,13 +1,24 @@
 import { extendTheme } from '@chakra-ui/react';
 
-import * as components from './components';
+import { layoutComponents } from '@/components/layout';
+import { mediaComponents } from '@/components/media';
+import { navigationComponents } from '@/components/navigation';
+import { typographyComponents } from '@/components/typography';
+
+import { colors } from './color';
 import { config } from './config';
-import foundations from './foundations';
-import { styles } from './styles';
+import { global } from './global';
+import { overrideComponents } from './override';
 
 export const theme = extendTheme({
   config,
-  styles,
-  ...foundations,
-  components: { ...components },
+  colors: { ...colors },
+  styles: { global },
+  components: {
+    ...layoutComponents,
+    ...mediaComponents,
+    ...navigationComponents,
+    ...overrideComponents,
+    ...typographyComponents,
+  },
 });

@@ -1,0 +1,63 @@
+{
+  "infos": {
+    "title": "My Infos",
+    "email": "Email",
+    "location": "Location",
+    "experience": "Experience",
+    "yearsOfExperience": "{{experience}} of experience",
+    "hobbies": "Hobbies",
+    "website": "Website"
+  },
+  "remote": {
+    "title": "Remote",
+    "remoteType": {
+      "FULLTIME": "Full-time remote in {{location}}",
+      "HYBRID": "Part-time remote (2 days / week min.) in {{location}}",
+      "NONE": "No remote"
+    }
+  },
+  "socials": {
+    "title": "Social networks"
+  },
+  "skills": {
+    "title": "Main skills"
+  },
+  "description": {
+    "title": "Description"
+  },
+  "experiences": {
+    "title": "Experiences",
+
+    "experience": {
+      "project_one": "Project",
+      "project_other": "Projects",
+      "tasks": "Tasks",
+      "stacks": "Stacks",
+
+      "years_one": "{{count}} year",
+      "years_other": "{{count}} years",
+      "months_one": "{{count}} month",
+      "months_other": "{{count}} months",
+
+      "remoteType": {
+        "FULLTIME": "Full-time remote",
+        "HYBRID": "Part-time remote (2 days / week min.)"
+      }
+    }
+  },
+  "details": {
+    "label": "Show details"
+  },
+  "talks": {
+    "title": "Talks & Interviews"
+  },
+  "educations": {
+    "title": "Education"
+  },
+  "trainings": {
+    "title": "Trainings"
+  },
+  "certifications": {
+    "title": "Certifications"
+  }
+}

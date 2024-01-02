@@ -1,15 +1,13 @@
 {
   "languages": {
     "en": "Anglais",
-    "fr": "Français",
-    "ar": "Arabe",
-    "sw": "Swahili"
+    "fr": "Français"
   },
-  "actions": {
-    "activate": "Activer",
-    "cancel": "Annuler",
-    "deactivate": "Désactiver",
-    "delete": "Supprimer",
-    "edit": "Modifier"
+  "dates": {
+    "today": "aujourd'hui",
+
+    "years_one": "{{count}} an",
+    "years_other": "{{count}} ans",
+    "months": "{{count}} mois"
   }
 }

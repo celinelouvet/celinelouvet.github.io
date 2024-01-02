@@ -15,8 +15,6 @@ next-env.d.ts
 
 # production
 /build
-/public/storybook
-/storybook-static
 
 # misc
 .DS_Store
@@ -43,11 +41,5 @@ yarn-error.log*
 # vercel
 .vercel
 
-# cypress
-/cypress/videos
-
 # Build info
 .build-info.json
-
-# Prisma
-prisma/dev.db
