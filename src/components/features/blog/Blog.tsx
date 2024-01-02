@@ -1,8 +1,18 @@
-import { Text } from '@chakra-ui/react';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { H2Heading } from '@/components/typography';
+
+import { Retro2023Summary } from './articles';
+
 export const BlogLayout: FC = () => {
   const { t } = useTranslation('blog');
-  return <Text>{t('title')}</Text>;
+
+  return (
+    <>
+      <H2Heading>{t('title')}</H2Heading>
+
+      <Retro2023Summary link={'/blog/1-retro-2023'} />
+    </>
+  );
 };

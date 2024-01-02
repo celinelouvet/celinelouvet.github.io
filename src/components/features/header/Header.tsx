@@ -1,8 +1,10 @@
-import { Center, Container, Flex, Grid, Link } from '@chakra-ui/react';
+import { Center, Flex, Grid, Link } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
+
+import { HeaderContainer } from '@/components/layout';
 
 import { ColorModeMenu } from './colorModeMenu';
 import { LanguageMenu } from './languageMenu';
@@ -31,7 +33,7 @@ export const Header: FC = () => {
   return (
     <>
       <Flex __css={navStyle}>
-        <Container>
+        <HeaderContainer>
           <Grid templateColumns="repeat(4, 1fr)" gap={6}>
             <Center
               __css={navItemStyle}
@@ -66,7 +68,7 @@ export const Header: FC = () => {
               </Link>
             </Center>
           </Grid>
-        </Container>
+        </HeaderContainer>
       </Flex>
       <Flex alignItems="center" justifyContent="end" gap={2} paddingRight={6}>
         <LanguageMenu />
