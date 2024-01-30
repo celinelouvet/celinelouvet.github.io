@@ -17,7 +17,7 @@ import { ArticleContent, ArticleSummary } from './Article';
 
 export const Retro2023Summary: FC<{ link: string }> = ({ link }) => {
   const image = {
-    src: '/talks/devfestlille2023-Event_driven.png',
+    src: '/talks/devfestlille2023-Event_driven.jpg',
     alt: 'Event Driven, au DevFest Lille 2023',
   };
 
@@ -253,7 +253,7 @@ export const Retro2023Content: FC = () => (
                   <Image
                     maxH={200}
                     objectFit="cover"
-                    src="/talks/paatternTalks2023-Tired_women_revolution.png"
+                    src="/talks/paatternTalks2023-Tired_women_revolution.jpg"
                     alt="La révolution des fatiguées, avec Angi Guyard et Sonia Prévost"
                     loading="lazy"
                   />
@@ -264,7 +264,7 @@ export const Retro2023Content: FC = () => (
                   <Image
                     maxH={200}
                     objectFit="cover"
-                    src="/talks/devfestlille2023-Event_driven.png"
+                    src="/talks/devfestlille2023-Event_driven.jpg"
                     alt="Event Driven, au DevFest Lille 2023"
                     loading="lazy"
                   />
@@ -275,7 +275,7 @@ export const Retro2023Content: FC = () => (
                   <Image
                     maxH={200}
                     objectFit="cover"
-                    src="/talks/breizhcamp2023-Permissions.png"
+                    src="/talks/breizhcamp2023-Permissions.jpg"
                     alt="Le mystère des permissions, au Breizhcamp 2023"
                     loading="lazy"
                   />

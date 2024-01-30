@@ -33,7 +33,7 @@ export const TalkDetails: FC<TalkProps> = ({ talk }) => (
           <Center __css={containerCss}>
             <Image
               __css={imageCss}
-              src={`./talks/${talk.pictureId}.png`}
+              src={`./talks/${talk.pictureId}.jpg`}
               alt={`${talk.name} - ${talk.topic}`}
             />
           </Center>
