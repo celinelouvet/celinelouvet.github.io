@@ -335,7 +335,7 @@ export const Retro2023Content: FC = () => (
                 <Image
                   maxH={200}
                   objectFit="cover"
-                  src="/others/reliure-1.png"
+                  src="/others/reliure-1.jpg"
                   alt="Carnet fait main, au format A5, avec une couverture en tissu gris et un fil bleu foncé. Vue du carnet fermé, de la tranche"
                   loading="lazy"
                 />
@@ -346,7 +346,7 @@ export const Retro2023Content: FC = () => (
                 <Image
                   maxH={200}
                   objectFit="cover"
-                  src="/others/reliure-2.png"
+                  src="/others/reliure-2.jpg"
                   alt="Carnet fait main, au format A5, avec une couverture en tissu gris et un fil bleu foncé. Vue du carnet ouvert"
                   loading="lazy"
                 />
@@ -357,7 +357,7 @@ export const Retro2023Content: FC = () => (
                 <Image
                   maxH={200}
                   objectFit="cover"
-                  src="/others/inktober_hermit.png"
+                  src="/others/inktober_hermit.jpg"
                   alt="Bernard l‘ermite, dessiné à l‘encre de chine et à l‘aquarelle"
                   loading="lazy"
                 />
@@ -368,7 +368,7 @@ export const Retro2023Content: FC = () => (
                 <Image
                   maxH={200}
                   objectFit="cover"
-                  src="/others/street_copics.png"
+                  src="/others/street_copics.jpg"
                   alt="Une rue, dessinée aux marqueurs à alcool"
                   loading="lazy"
                 />
@@ -406,7 +406,7 @@ export const Retro2023Content: FC = () => (
         <Image
           boxSize={200}
           objectFit="cover"
-          src="/others/fireworks.png"
+          src="/others/fireworks.jpg"
           alt="Un feu d‘artifice"
           loading="lazy"
         />
