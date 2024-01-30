@@ -82,6 +82,15 @@ const talkSubjects = new Map<string, TalkSubject>([
     },
   ],
   [
+    'podcast_avocado_growth',
+    {
+      topic: 'Avocado Growth : Tech Profile',
+      descriptions: [
+        'Episode 18 of Mansour Mahamat-salle‘s podcasts, about my journey in tech, including how I got to where I am today.',
+      ],
+    },
+  ],
+  [
     'highway_to_fail',
     {
       topic: 'Highway to fail',
@@ -130,6 +139,7 @@ const conventions = new Map<string, Convention>([
   ['breizhcamp_2023', { name: 'BreizhCamp 2023', language: 'FR' }],
   ['paattern_talks_2023', { name: 'Paattern Talks 2023', language: 'FR' }],
   ['online_developer_experience', { name: 'Online', language: 'FR' }],
+  ['online_avocado_growth', { name: 'Online', language: 'FR' }],
 ]);
 
 const resume: Resume = {
@@ -1044,6 +1054,16 @@ const resume: Resume = {
         audio: 'https://podcast.ausha.co/developer-experience/celine-louvet',
       },
       pictureId: 'podcast_devxp2023',
+    },
+    {
+      subjectId: 'podcast_avocado_growth',
+      conventionId: 'online_avocado_growth',
+      when: '2024-01-22',
+      links: {
+        audio:
+          'https://podcast.ausha.co/avocado-growth-portrait-tech/18-parcours-tech-celine',
+      },
+      pictureId: 'podcast_avocadogrowth2024',
     },
   ],
   educations: [
