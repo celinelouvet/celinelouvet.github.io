@@ -89,23 +89,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bearstudio/start-ui-web.git"
+    "url": "git+https://github.com/celinelouvet/celinelouvet.github.io.git"
   },
   "author": {
-    "name": "Ivan Dalmet",
-    "email": "ivan@dalmet.fr",
-    "url": "https://github.com/ivan-dalmet"
+    "name": "Céline Louvet",
+    "email": "celine@louvet.me",
+    "url": "https://github.com/celinelouvet"
   },
   "contributors": [
-    {
-      "name": "Yoann Fleury",
-      "email": "yoannfleurydev@gmail.com",
-      "url": "https://github.com/yoannfleurydev"
-    }
   ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bearstudio/start-ui-web/issues"
-  },
-  "homepage": "https://github.com/bearstudio/start-ui-web#readme"
+  "license": "MIT"
 }
