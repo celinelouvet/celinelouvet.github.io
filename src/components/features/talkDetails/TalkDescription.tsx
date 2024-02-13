@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
+import { BsChevronContract, BsChevronExpand } from 'react-icons/bs';
 
 import { type Links } from '@/data';
 
@@ -20,7 +21,12 @@ const ShowMore: FC<{ onOpen: () => void }> = ({ onOpen }) => {
   const { t } = useTranslation('components', { keyPrefix: 'talkDetails' });
 
   return (
-    <Button onClick={onOpen} size="xs">
+    <Button
+      onClick={onOpen}
+      rightIcon={<BsChevronExpand />}
+      variant={'outline'}
+      size="sm"
+    >
       {t('more')}
     </Button>
   );
@@ -29,7 +35,12 @@ const ShowLess: FC<{ onClose: () => void }> = ({ onClose }) => {
   const { t } = useTranslation('components', { keyPrefix: 'talkDetails' });
 
   return (
-    <Button onClick={onClose} size="xs">
+    <Button
+      onClick={onClose}
+      rightIcon={<BsChevronContract />}
+      variant={'outline'}
+      size="sm"
+    >
       {t('less')}
     </Button>
   );
@@ -40,7 +51,7 @@ const TalkLinks: FC<{ links: Links }> = ({ links }) => {
 
   const { audio, slides, video, program } = links;
   return (
-    <ButtonGroup variant="solid" size="xs" spacing={4}>
+    <ButtonGroup variant="solid" size="sm" spacing={4}>
       {slides ? (
         <Button as={Link} href={slides} isExternal>
           {t('slides')}
@@ -83,7 +94,7 @@ export const TalkDescription: FC<TalkProps> = ({ talk }) => {
     <>
       <Grid gridTemplateRows={'auto 2em 2em'} gap={2}>
         <GridItem>
-          <Stack fontSize="xs" color={color}>
+          <Stack fontSize="sm" color={color}>
             <Text>{firstLine}</Text>
 
             {isOpen

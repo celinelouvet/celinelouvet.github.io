@@ -14,10 +14,11 @@ export type ExternalLinkProps = LinkProps;
 
 export const ExternalLink: FC<ExternalLinkProps> = ({
   children,
+  size,
   href,
   ...props
 }) => {
-  const styles = useStyleConfig('ExternalLink');
+  const styles = useStyleConfig('ExternalLink', { size });
 
   return (
     <Link href={href} {...props}>
@@ -40,4 +41,15 @@ export const externalLinkStyles = {
       color: mode('brand.400', 'brand.600')(props),
     },
   }),
+  sizes: {
+    md: {
+      fontSize: 'md',
+    },
+    sm: {
+      fontSize: 'sm',
+    },
+  },
+  defaultProps: {
+    size: 'md',
+  },
 } satisfies StyleConfig;

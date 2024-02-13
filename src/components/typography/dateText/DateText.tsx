@@ -15,8 +15,8 @@ export type DateTextProps = Omit<ChakraTextProps, 'children'> & {
 };
 
 export const DateText = forwardRef<DateTextProps, 'span'>(
-  ({ dateFormat, when, ...props }, ref) => {
-    const styles = useStyleConfig('DateText');
+  ({ dateFormat, size, when, ...props }, ref) => {
+    const styles = useStyleConfig('DateText', { size });
 
     return (
       <ChakraText as="span" sx={styles} {...props} ref={ref}>
@@ -30,6 +30,16 @@ export const dateTextStyles = {
   baseStyle: (props: StyleFunctionProps) => ({
     color: mode('gray.500', 'gray.400')(props),
     fontFamily: 'Nunito',
-    fontSize: 'xs',
   }),
+  sizes: {
+    sm: {
+      fontSize: 'sm',
+    },
+    xs: {
+      fontSize: 'xs',
+    },
+  },
+  defaultProps: {
+    size: 'sm',
+  },
 } satisfies StyleConfig;

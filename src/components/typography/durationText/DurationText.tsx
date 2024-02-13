@@ -18,8 +18,8 @@ export type DurationTextProps = Omit<ChakraTextProps, 'children'> & {
 };
 
 export const DurationText = forwardRef<DurationTextProps, 'span'>(
-  ({ period, ...props }, ref) => {
-    const styles = useStyleConfig('DurationText');
+  ({ period, size, ...props }, ref) => {
+    const styles = useStyleConfig('DurationText', { size });
 
     const from = dayjs(period.from);
     const to = period.to ? dayjs(period.to) : dayjs();
@@ -41,8 +41,18 @@ export const durationTextStyles = {
   baseStyle: (props: StyleFunctionProps) => ({
     color: mode('gray.500', 'gray.400')(props),
     fontFamily: 'Nunito',
-    fontSize: 'xs',
   }),
+  sizes: {
+    sm: {
+      fontSize: 'sm',
+    },
+    xs: {
+      fontSize: 'xs',
+    },
+  },
+  defaultProps: {
+    size: 'sm',
+  },
 } satisfies StyleConfig;
 
 type DurationContentProps = {

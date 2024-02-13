@@ -1,6 +1,9 @@
+import { Grid, GridItem, Text } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { DateText } from '@/components/typography';
+import { DateText, H2Heading } from '@/components/typography';
+
+import { dateTextStyles } from './DateText';
 
 const meta = {
   title: 'Theme/Typography',
@@ -11,7 +14,27 @@ const meta = {
   },
 } satisfies Meta<typeof DateText>;
 
+const sizes = ['sm', 'xs'] as const;
+
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const DateTexts: Story = {};
+export const DateTexts: Story = {
+  render: (args) => (
+    <Grid templateColumns="70px 1fr" columnGap={8} alignItems={'baseline'}>
+      <GridItem colSpan={2}>
+        <H2Heading>Sizes</H2Heading>
+      </GridItem>
+      {sizes.map((size) => (
+        <>
+          <GridItem>
+            <Text fontWeight={700}>{dateTextStyles.sizes[size].fontSize}</Text>
+          </GridItem>
+          <GridItem>
+            <DateText {...args} size={size} />
+          </GridItem>
+        </>
+      ))}
+    </Grid>
+  ),
+};

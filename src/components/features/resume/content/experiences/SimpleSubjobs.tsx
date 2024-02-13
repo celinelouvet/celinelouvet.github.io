@@ -26,11 +26,7 @@ export const SimpleSubjobs: FC<SimpleSubjobsProps> = ({ subjobs }) => {
           paddingLeft={'8'}
           paddingBottom={'4'}
         >
-          <ListIcon
-            as={BsCircleFill}
-            color="brand.500"
-            marginLeft={'-2.85em'}
-          />
+          <ListIcon as={BsCircleFill} color="brand.500" marginLeft={'-41px'} />
           <Box fontSize="0.9em">
             <SimpleExperience job={subjob} />
           </Box>

@@ -11,9 +11,10 @@ import { type RemoteType } from '@/data';
 
 export type RemoteTextProps = {
   remote?: RemoteType;
+  size?: 'sm' | 'xs';
 };
 
-export const RemoteText: FC<RemoteTextProps> = ({ remote }) => {
+export const RemoteText: FC<RemoteTextProps> = ({ remote, size = 'sm' }) => {
   const color = useColorModeValue('gray.500', 'gray.400');
   const { t } = useTranslation('resume', {
     keyPrefix: 'experiences.experience.remoteType',
@@ -24,7 +25,7 @@ export const RemoteText: FC<RemoteTextProps> = ({ remote }) => {
   }
 
   return (
-    <Text as="span" sx={css} color={color}>
+    <Text as="span" fontSize={size} sx={css} color={color}>
       <Show above="md">
         <Text as="span" marginRight={'2'}>
           —
@@ -37,5 +38,4 @@ export const RemoteText: FC<RemoteTextProps> = ({ remote }) => {
 
 export const css = {
   fontFamily: 'Nunito',
-  fontSize: 'xs',
 } satisfies StyleConfig['baseStyle'];

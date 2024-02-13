@@ -10,6 +10,7 @@ import {
 } from '@chakra-ui/react';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
+import { BsChevronContract, BsChevronExpand } from 'react-icons/bs';
 
 import { H2Heading } from '@/components/typography';
 import { type TalkSubject } from '@/data';
@@ -63,7 +64,12 @@ const ShowMore: FC<{ onOpen: () => void }> = ({ onOpen }) => {
   const { t } = useTranslation('components', { keyPrefix: 'talkDetails' });
 
   return (
-    <Button onClick={onOpen} size="xs">
+    <Button
+      onClick={onOpen}
+      rightIcon={<BsChevronExpand />}
+      variant={'outline'}
+      size="sm"
+    >
       {t('more')}
     </Button>
   );
@@ -72,7 +78,12 @@ const ShowLess: FC<{ onClose: () => void }> = ({ onClose }) => {
   const { t } = useTranslation('components', { keyPrefix: 'talkDetails' });
 
   return (
-    <Button onClick={onClose} size="xs">
+    <Button
+      onClick={onClose}
+      rightIcon={<BsChevronContract />}
+      variant={'outline'}
+      size="sm"
+    >
       {t('less')}
     </Button>
   );
