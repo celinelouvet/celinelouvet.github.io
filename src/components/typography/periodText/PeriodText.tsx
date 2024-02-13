@@ -18,8 +18,8 @@ export type PeriodTextProps = Omit<ChakraTextProps, 'children'> & {
 };
 
 export const PeriodText = forwardRef<PeriodTextProps, 'span'>(
-  ({ period, ...props }, ref) => {
-    const styles = useStyleConfig('PeriodText');
+  ({ period, size, ...props }, ref) => {
+    const styles = useStyleConfig('PeriodText', { size });
 
     return (
       <ChakraText as="span" sx={styles} {...props} ref={ref}>
@@ -42,8 +42,18 @@ export const periodTextStyles = {
   baseStyle: (props: StyleFunctionProps) => ({
     color: mode('gray.500', 'gray.400')(props),
     fontFamily: 'Nunito',
-    fontSize: 'xs',
   }),
+  sizes: {
+    sm: {
+      fontSize: 'sm',
+    },
+    xs: {
+      fontSize: 'xs',
+    },
+  },
+  defaultProps: {
+    size: 'sm',
+  },
 } satisfies StyleConfig;
 
 const ToComponent: FC<PeriodTextProps> = ({ period }) => {

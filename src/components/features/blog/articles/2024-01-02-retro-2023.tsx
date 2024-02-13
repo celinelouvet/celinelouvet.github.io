@@ -17,7 +17,7 @@ import { ArticleContent, ArticleSummary } from './Article';
 
 export const Retro2023Summary: FC<{ link: string }> = ({ link }) => {
   const image = {
-    src: '/talks/devfestlille2023-Event_driven.png',
+    src: '/talks/devfestlille2023-Event_driven.jpg',
     alt: 'Event Driven, au DevFest Lille 2023',
   };
 
@@ -253,7 +253,7 @@ export const Retro2023Content: FC = () => (
                   <Image
                     maxH={200}
                     objectFit="cover"
-                    src="/talks/paatternTalks2023-Tired_women_revolution.png"
+                    src="/talks/paatternTalks2023-Tired_women_revolution.jpg"
                     alt="La révolution des fatiguées, avec Angi Guyard et Sonia Prévost"
                     loading="lazy"
                   />
@@ -264,7 +264,7 @@ export const Retro2023Content: FC = () => (
                   <Image
                     maxH={200}
                     objectFit="cover"
-                    src="/talks/devfestlille2023-Event_driven.png"
+                    src="/talks/devfestlille2023-Event_driven.jpg"
                     alt="Event Driven, au DevFest Lille 2023"
                     loading="lazy"
                   />
@@ -275,7 +275,7 @@ export const Retro2023Content: FC = () => (
                   <Image
                     maxH={200}
                     objectFit="cover"
-                    src="/talks/breizhcamp2023-Permissions.png"
+                    src="/talks/breizhcamp2023-Permissions.jpg"
                     alt="Le mystère des permissions, au Breizhcamp 2023"
                     loading="lazy"
                   />
@@ -335,7 +335,7 @@ export const Retro2023Content: FC = () => (
                 <Image
                   maxH={200}
                   objectFit="cover"
-                  src="/others/reliure-1.png"
+                  src="/others/reliure-1.jpg"
                   alt="Carnet fait main, au format A5, avec une couverture en tissu gris et un fil bleu foncé. Vue du carnet fermé, de la tranche"
                   loading="lazy"
                 />
@@ -346,7 +346,7 @@ export const Retro2023Content: FC = () => (
                 <Image
                   maxH={200}
                   objectFit="cover"
-                  src="/others/reliure-2.png"
+                  src="/others/reliure-2.jpg"
                   alt="Carnet fait main, au format A5, avec une couverture en tissu gris et un fil bleu foncé. Vue du carnet ouvert"
                   loading="lazy"
                 />
@@ -357,7 +357,7 @@ export const Retro2023Content: FC = () => (
                 <Image
                   maxH={200}
                   objectFit="cover"
-                  src="/others/inktober_hermit.png"
+                  src="/others/inktober_hermit.jpg"
                   alt="Bernard l‘ermite, dessiné à l‘encre de chine et à l‘aquarelle"
                   loading="lazy"
                 />
@@ -368,7 +368,7 @@ export const Retro2023Content: FC = () => (
                 <Image
                   maxH={200}
                   objectFit="cover"
-                  src="/others/street_copics.png"
+                  src="/others/street_copics.jpg"
                   alt="Une rue, dessinée aux marqueurs à alcool"
                   loading="lazy"
                 />
@@ -406,7 +406,7 @@ export const Retro2023Content: FC = () => (
         <Image
           boxSize={200}
           objectFit="cover"
-          src="/others/fireworks.png"
+          src="/others/fireworks.jpg"
           alt="Un feu d‘artifice"
           loading="lazy"
         />

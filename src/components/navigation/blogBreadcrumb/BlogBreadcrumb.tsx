@@ -16,13 +16,17 @@ import { BsChevronRight } from 'react-icons/bs';
 
 const [StylesProvider] = createStylesContext('BlogBreadcrumb');
 
-export type BlogBreadcrumbProps = { title: string };
+export type BlogBreadcrumbProps = { title: string; size?: 'sm' | 'md' };
 
 export const BlogBreadcrumb: FC<BlogBreadcrumbProps> = ({
   title,
+  size,
   ...props
 }) => {
-  const styles = useMultiStyleConfig('BlogBreadcrumb', breadcrumbAnatomy.keys);
+  const styles = useMultiStyleConfig('BlogBreadcrumb', {
+    ...breadcrumbAnatomy.keys,
+    size,
+  });
   const { t } = useTranslation('components');
 
   return (
@@ -79,4 +83,33 @@ const baseStyle = (props: StyleFunctionProps) =>
     },
   });
 
-export const blogBreadcrumbStyles = defineMultiStyleConfig({ baseStyle });
+const sizesStyle = {
+  md: {
+    separator: {
+      fontSize: '0.8em',
+    },
+    link: {
+      ['&:not([aria-current=page])']: {
+        fontSize: 'md',
+      },
+    },
+  },
+  sm: {
+    separator: {
+      fontSize: '0.6em',
+    },
+    link: {
+      ['&:not([aria-current=page])']: {
+        fontSize: 'sm',
+      },
+    },
+  },
+};
+
+export const blogBreadcrumbStyles = defineMultiStyleConfig({
+  baseStyle,
+  sizes: sizesStyle,
+  defaultProps: {
+    size: 'md',
+  },
+});
