@@ -1,50 +1,19 @@
 import {
   Button,
   ButtonGroup,
-  Grid,
-  GridItem,
   Link,
   Stack,
+  StackItem,
   Text,
   useColorModeValue,
-  useDisclosure,
 } from '@chakra-ui/react';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import { BsChevronContract, BsChevronExpand } from 'react-icons/bs';
 
+import { MoreLessCollapsible } from '@/components/disclosure';
 import { type Links } from '@/data';
 
 import { type TalkProps } from './TalkDetails';
-
-const ShowMore: FC<{ onOpen: () => void }> = ({ onOpen }) => {
-  const { t } = useTranslation('components', { keyPrefix: 'talkDetails' });
-
-  return (
-    <Button
-      onClick={onOpen}
-      rightIcon={<BsChevronExpand />}
-      variant={'outline'}
-      size="sm"
-    >
-      {t('more')}
-    </Button>
-  );
-};
-const ShowLess: FC<{ onClose: () => void }> = ({ onClose }) => {
-  const { t } = useTranslation('components', { keyPrefix: 'talkDetails' });
-
-  return (
-    <Button
-      onClick={onClose}
-      rightIcon={<BsChevronContract />}
-      variant={'outline'}
-      size="sm"
-    >
-      {t('less')}
-    </Button>
-  );
-};
 
 const TalkLinks: FC<{ links: Links }> = ({ links }) => {
   const { t } = useTranslation('components', { keyPrefix: 'talkDetails' });
@@ -80,7 +49,6 @@ const TalkLinks: FC<{ links: Links }> = ({ links }) => {
 
 export const TalkDescription: FC<TalkProps> = ({ talk }) => {
   const { descriptions = [] } = talk;
-  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const color = useColorModeValue('gray.600', 'blanc');
 
@@ -92,24 +60,21 @@ export const TalkDescription: FC<TalkProps> = ({ talk }) => {
 
   return (
     <>
-      <Grid gridTemplateRows={'auto 2em 2em'} gap={2}>
-        <GridItem>
-          <Stack fontSize="sm" color={color}>
-            <Text>{firstLine}</Text>
+      <Stack spacing={4}>
+        <StackItem fontSize="sm" color={color} flex={1}>
+          <Text>{firstLine}</Text>
 
-            {isOpen
-              ? rest.map((line, index) => <Text key={index}>{line}</Text>)
-              : null}
-          </Stack>
-        </GridItem>
-        <GridItem>
-          {!isOpen && rest.length > 0 ? <ShowMore onOpen={onOpen} /> : null}
-          {isOpen ? <ShowLess onClose={onClose} /> : null}
-        </GridItem>
-        <GridItem>
+          <MoreLessCollapsible>
+            {rest.map((line, index) => (
+              <Text key={index}>{line}</Text>
+            ))}
+          </MoreLessCollapsible>
+        </StackItem>
+
+        <StackItem minHeight={'2em'}>
           <TalkLinks links={talk.links ?? {}} />
-        </GridItem>
-      </Grid>
+        </StackItem>
+      </Stack>
     </>
   );
 };

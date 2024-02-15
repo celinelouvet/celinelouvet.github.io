@@ -1,18 +1,8 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardBody,
-  CardHeader,
-  Stack,
-  Text,
-  useDisclosure,
-} from '@chakra-ui/react';
+import { Card, CardBody, CardHeader, Stack, Text } from '@chakra-ui/react';
 import { type FC } from 'react';
-import { useTranslation } from 'react-i18next';
-import { BsChevronContract, BsChevronExpand } from 'react-icons/bs';
 
-import { H2Heading } from '@/components/typography';
+import { MoreLessCollapsible } from '@/components/disclosure';
+import { H3Heading } from '@/components/typography';
 import { type TalkSubject } from '@/data';
 
 export type PossibleSubjectProps = {
@@ -26,7 +16,7 @@ export const PossibleSubject: FC<PossibleSubjectProps> = ({ subject }) => {
     <>
       <Card size="sm" variant="filled">
         <CardHeader>
-          <H2Heading>{topic}</H2Heading>
+          <H3Heading>{topic}</H3Heading>
         </CardHeader>
 
         <CardBody>
@@ -38,8 +28,6 @@ export const PossibleSubject: FC<PossibleSubjectProps> = ({ subject }) => {
 };
 
 const Descriptions: FC<{ descriptions: string[] }> = ({ descriptions }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
   if (descriptions.length === 0) {
     return null;
   }
@@ -47,44 +35,14 @@ const Descriptions: FC<{ descriptions: string[] }> = ({ descriptions }) => {
   const [firstLine, ...rest] = descriptions;
 
   return (
-    <Stack>
+    <Stack fontSize={'sm'}>
       <Text>{firstLine}</Text>
-      {isOpen
-        ? rest.map((line, index) => <Text key={index}>{line}</Text>)
-        : null}
-      <Box>
-        {!isOpen && rest.length > 0 ? <ShowMore onOpen={onOpen} /> : null}
-        {isOpen ? <ShowLess onClose={onClose} /> : null}
-      </Box>
+
+      <MoreLessCollapsible>
+        {rest.map((line, index) => (
+          <Text key={index}>{line}</Text>
+        ))}
+      </MoreLessCollapsible>
     </Stack>
-  );
-};
-
-const ShowMore: FC<{ onOpen: () => void }> = ({ onOpen }) => {
-  const { t } = useTranslation('components', { keyPrefix: 'talkDetails' });
-
-  return (
-    <Button
-      onClick={onOpen}
-      rightIcon={<BsChevronExpand />}
-      variant={'outline'}
-      size="sm"
-    >
-      {t('more')}
-    </Button>
-  );
-};
-const ShowLess: FC<{ onClose: () => void }> = ({ onClose }) => {
-  const { t } = useTranslation('components', { keyPrefix: 'talkDetails' });
-
-  return (
-    <Button
-      onClick={onClose}
-      rightIcon={<BsChevronContract />}
-      variant={'outline'}
-      size="sm"
-    >
-      {t('less')}
-    </Button>
   );
 };
