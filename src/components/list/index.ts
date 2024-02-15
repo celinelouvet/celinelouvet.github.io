@@ -1,2 +1,2 @@
-export { LinkListItem } from './LinkListItem';
-export { TextListItem } from './TextListItem';
+export { LinkListItem } from './linkListItem';
+export { TextListItem } from './textListItem';
