@@ -27,7 +27,7 @@ export const Stacks: FC<StacksProps> = ({ stacks }) => {
     keyPrefix: 'experiences.experience',
   });
 
-  if (!stacks) {
+  if (!stacks || stacks.length === 0) {
     return null;
   }
 

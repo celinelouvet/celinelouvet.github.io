@@ -6,6 +6,7 @@ import { PageContainer } from '@/components/layout';
 import { H3Heading } from '@/components/typography';
 import { type Experience } from '@/data';
 
+import { ExperienceDetails as ExperienceDetailsComponent } from './ExperienceDetails';
 import {
   allProjects,
   basicJob,
@@ -16,11 +17,10 @@ import {
   subjobs,
   to,
 } from './fixtures';
-import { FullExperience as FullExperienceComponent } from './FullExperience';
 
 const meta = {
-  title: 'Resume/Content/Experience',
-  component: FullExperienceComponent,
+  title: 'Resume/Content/ExperienceDetails',
+  component: ExperienceDetailsComponent,
   decorators: [
     (Story) => (
       <PageContainer>
@@ -28,7 +28,7 @@ const meta = {
       </PageContainer>
     ),
   ],
-} satisfies Meta<typeof FullExperienceComponent>;
+} satisfies Meta<typeof ExperienceDetailsComponent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -41,7 +41,7 @@ export const ExperienceParts: Story = {
           <H3Heading>{title}</H3Heading>
         </CardHeader>
         <CardBody>
-          <FullExperienceComponent job={job} />
+          <ExperienceDetailsComponent job={job} />
         </CardBody>
       </Card>
     );

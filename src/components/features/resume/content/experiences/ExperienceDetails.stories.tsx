@@ -1,12 +1,11 @@
-import { Box, Card, CardBody, CardHeader, Stack } from '@chakra-ui/react';
+import { Box, Card, CardBody, CardHeader } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
-import { type FC } from 'react';
 
 import { PageContainer } from '@/components/layout';
 import { H3Heading } from '@/components/typography';
 import { type Experience } from '@/data';
 
-import { ExperienceComponent } from './Experience';
+import { ExperienceDetails as ExperienceDetailsComponent } from './ExperienceDetails';
 import {
   allProjects,
   allStacks,
@@ -19,8 +18,8 @@ import {
 } from './fixtures';
 
 const meta = {
-  title: 'Resume/Content/Experience',
-  component: ExperienceComponent,
+  title: 'Resume/Content/ExperienceDetails',
+  component: ExperienceDetailsComponent,
   decorators: [
     (Story) => (
       <PageContainer>
@@ -28,7 +27,7 @@ const meta = {
       </PageContainer>
     ),
   ],
-} satisfies Meta<typeof ExperienceComponent>;
+} satisfies Meta<typeof ExperienceDetailsComponent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -47,30 +46,18 @@ const job = {
 
 export const AllVersions: Story = {
   render: ({ job }) => {
-    const Item: FC<{ title: string; job: Experience; full?: boolean }> = ({
-      title,
-      job,
-      full,
-    }) => (
+    return (
       <Card variant={'outline'} size={'sm'}>
         <CardHeader>
-          <H3Heading>{title}</H3Heading>
+          <H3Heading>Exemple</H3Heading>
         </CardHeader>
         <CardBody>
-          <ExperienceComponent job={job} full={full} />
+          <ExperienceDetailsComponent job={job} />
         </CardBody>
       </Card>
-    );
-
-    return (
-      <Stack spacing={10}>
-        <Item title={'Simple version'} job={job} full={false} />
-        <Item title={'Full version'} job={job} full={true} />
-      </Stack>
     );
   },
   args: {
     job,
-    full: false,
   },
 };

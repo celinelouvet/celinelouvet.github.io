@@ -4,13 +4,13 @@ import { BsCircleFill } from 'react-icons/bs';
 
 import { type Experience } from '@/data';
 
-import { FullExperience } from './FullExperience';
+import { ExperienceDetails } from './ExperienceDetails';
 
-export type FullSubjobsProps = {
+export type SubjobsProps = {
   subjobs?: Experience[];
 };
 
-export const FullSubjobs: FC<FullSubjobsProps> = ({ subjobs }) => {
+export const Subjobs: FC<SubjobsProps> = ({ subjobs }) => {
   if (!subjobs) return null;
 
   return (
@@ -28,7 +28,7 @@ export const FullSubjobs: FC<FullSubjobsProps> = ({ subjobs }) => {
         >
           <ListIcon as={BsCircleFill} color="brand.500" marginLeft={'-41px'} />
           <Box fontSize="0.9em">
-            <FullExperience job={subjob} />
+            <ExperienceDetails job={subjob} />
           </Box>
         </ListItem>
       ))}

@@ -1,18 +1,26 @@
 import { Stack, type StyleConfig } from '@chakra-ui/react';
 import { type FC } from 'react';
 
+import { MoreLessCollapsible } from '@/components/disclosure';
 import { DurationText, H3Heading, PeriodText } from '@/components/typography';
 import { type Experience, type Period } from '@/data';
 import { useHeadingSize } from '@/hooks';
 
-import { Descriptions, Projects, RemoteText, RoleText } from './parts';
-import { SimpleSubjobs } from './SimpleSubjobs';
+import {
+  Descriptions,
+  Projects,
+  RemoteText,
+  RoleText,
+  Stacks,
+  Tasks,
+} from './parts';
+import { Subjobs } from './Subjobs';
 
-export type SimpleExperienceProps = {
+export type ExperienceDetailsProps = {
   job: Experience;
 };
 
-export const SimpleExperience: FC<SimpleExperienceProps> = ({ job }) => {
+export const ExperienceDetails: FC<ExperienceDetailsProps> = ({ job }) => {
   const size = useHeadingSize();
 
   const period = { from: job.from, to: job.to } satisfies Period;
@@ -33,7 +41,17 @@ export const SimpleExperience: FC<SimpleExperienceProps> = ({ job }) => {
       <RoleText role={job.role} />
       <Descriptions descriptions={job.descriptions} />
       <Projects projects={job.projects} />
-      <SimpleSubjobs subjobs={job.subjobs} />
+
+      <MoreLessCollapsible
+        shown={Boolean(job.tasks) || Boolean(job.stacks)}
+        marginTop={'-2'}
+        paddingTop={'2'}
+      >
+        <Tasks tasks={job.tasks} />
+        <Stacks stacks={job.stacks} />
+      </MoreLessCollapsible>
+
+      <Subjobs subjobs={job.subjobs} />
     </Stack>
   );
 };

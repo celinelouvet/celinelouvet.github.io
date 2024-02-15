@@ -22,7 +22,7 @@ export const Tasks: FC<TasksProps> = ({ tasks }) => {
     keyPrefix: 'experiences.experience',
   });
 
-  if (!tasks) {
+  if (!tasks || tasks.length === 0) {
     return null;
   }
 
