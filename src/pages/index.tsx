@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { PageContainer } from '@/components/core';
 import { Home } from '@/components/features/home';
-import { PageContainer } from '@/components/layout';
 import { type Resume, enResume, frResume } from '@/data';
 import { type Languages } from '@/lib/i18n';
 

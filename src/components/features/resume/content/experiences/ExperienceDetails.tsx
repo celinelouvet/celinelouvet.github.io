@@ -1,8 +1,12 @@
 import { Stack, type StyleConfig } from '@chakra-ui/react';
 import { type FC } from 'react';
 
-import { MoreLessCollapsible } from '@/components/disclosure';
-import { DurationText, H3Heading, PeriodText } from '@/components/typography';
+import {
+  DurationText,
+  H3Heading,
+  MoreLessCollapsible,
+  PeriodText,
+} from '@/components/core';
 import { type Experience, type Period } from '@/data';
 import { useHeadingSize } from '@/hooks';
 

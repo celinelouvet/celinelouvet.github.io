@@ -1,8 +1,7 @@
 import { Box, Card, CardBody, CardHeader } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { PageContainer } from '@/components/layout';
-import { H3Heading } from '@/components/typography';
+import { H3Heading, PageContainer } from '@/components/core';
 import { type Experience } from '@/data';
 
 import { ExperienceDetails as ExperienceDetailsComponent } from './ExperienceDetails';

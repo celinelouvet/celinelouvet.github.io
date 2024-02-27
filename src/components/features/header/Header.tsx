@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { HeaderContainer } from '@/components/layout';
+import { HeaderContainer } from '@/components/core';
 
 import { ColorModeMenu } from './colorModeMenu';
 import { LanguageMenu } from './languageMenu';

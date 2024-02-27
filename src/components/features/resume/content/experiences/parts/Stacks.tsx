@@ -2,7 +2,7 @@ import { Flex, Stack, Text } from '@chakra-ui/react';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H4Heading } from '@/components/typography';
+import { H4Heading } from '@/components/core';
 import { type Platform, type Stack as XPStack } from '@/data';
 import { useHeadingSize } from '@/hooks';
 

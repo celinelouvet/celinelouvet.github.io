@@ -1,7 +1,7 @@
 import { Box, Stack } from '@chakra-ui/react';
 import { type FC } from 'react';
 
-import { H2Heading } from '@/components/typography';
+import { H2Heading } from '@/components/core';
 import { type ConventionTalk } from '@/data';
 
 import { TalkDetails } from '../talkDetails';

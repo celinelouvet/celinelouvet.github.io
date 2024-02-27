@@ -1,8 +1,7 @@
 import { Card, CardBody, CardHeader, Stack, Text } from '@chakra-ui/react';
 import { type FC } from 'react';
 
-import { MoreLessCollapsible } from '@/components/disclosure';
-import { H3Heading } from '@/components/typography';
+import { H3Heading, MoreLessCollapsible } from '@/components/core';
 import { type TalkSubject } from '@/data';
 
 export type PossibleSubjectProps = {

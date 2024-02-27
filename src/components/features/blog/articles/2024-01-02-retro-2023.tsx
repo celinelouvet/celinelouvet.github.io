@@ -10,8 +10,12 @@ import {
 } from '@chakra-ui/react';
 import { type FC } from 'react';
 
-import { ExternalLink, InternalLink } from '@/components/navigation';
-import { H3Heading, H4Heading } from '@/components/typography';
+import {
+  ExternalLink,
+  H3Heading,
+  H4Heading,
+  InternalLink,
+} from '@/components/core';
 
 import { ArticleContent, ArticleSummary } from './Article';
 

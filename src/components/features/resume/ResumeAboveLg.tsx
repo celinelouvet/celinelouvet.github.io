@@ -1,7 +1,7 @@
 import { Box, Grid } from '@chakra-ui/react';
 import { type FC } from 'react';
 
-import { pictureInPx } from '@/components/media';
+import { pictureInPx } from '@/components/core';
 import { type Resume } from '@/data';
 
 import { Content } from './content';

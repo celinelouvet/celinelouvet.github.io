@@ -2,7 +2,7 @@ import { Box, Stack } from '@chakra-ui/react';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H2Heading } from '@/components/typography';
+import { H2Heading } from '@/components/core';
 import { type TalkSubject } from '@/data';
 
 import { PossibleSubject } from './PossibleSubject';

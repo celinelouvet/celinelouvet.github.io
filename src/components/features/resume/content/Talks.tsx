@@ -3,7 +3,7 @@ import dayjs from 'dayjs';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H2Heading, H3Heading } from '@/components/typography';
+import { H2Heading, H3Heading } from '@/components/core';
 import {
   type ConventionWithDate,
   type Resume,

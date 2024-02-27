@@ -2,8 +2,7 @@ import { Box, List } from '@chakra-ui/react';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { LinkListItem } from '@/components/list';
-import { H2Heading } from '@/components/typography';
+import { H2Heading, LinkListItem } from '@/components/core';
 import { type Social } from '@/data';
 import { useHeadingSize } from '@/hooks';
 import { socialIcon } from '@/lib';

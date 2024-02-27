@@ -10,7 +10,7 @@ import {
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { MoreLessCollapsible } from '@/components/disclosure';
+import { MoreLessCollapsible } from '@/components/core';
 import { type Links } from '@/data';
 
 import { type TalkProps } from './TalkDetails';

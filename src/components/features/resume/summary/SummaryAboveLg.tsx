@@ -6,7 +6,7 @@ import {
 } from '@chakra-ui/react';
 import { type FC } from 'react';
 
-import { Picture, pictureInPx } from '@/components/media';
+import { Picture, pictureInPx } from '@/components/core';
 
 import { type SummaryProps } from './Summary';
 import { Infos, Remotes, Skills, Socials } from '../parts';

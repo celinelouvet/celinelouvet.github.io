@@ -1,7 +1,7 @@
 import { Divider, Grid, GridItem, Stack, Text } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { H2Heading } from '@/components/typography';
+import { H2Heading } from '@/components/core';
 
 import { RemoteText as RemoteTextComponent } from './RemoteText';
 
