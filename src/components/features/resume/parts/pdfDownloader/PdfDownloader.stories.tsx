@@ -3,7 +3,7 @@ import { type Meta, type StoryObj } from '@storybook/react';
 import { PdfDownloader as PdfDownloaderComponent } from './PdfDownloader';
 
 const meta = {
-  title: 'Resume/Content',
+  title: 'Features/Resume',
   component: PdfDownloaderComponent,
 } satisfies Meta<typeof PdfDownloaderComponent>;
 

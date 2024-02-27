@@ -3,7 +3,7 @@ import { type Meta, type StoryObj } from '@storybook/react';
 import { TalkDetails as TalkDetailsComponent } from './TalkDetails';
 
 const meta = {
-  title: 'Content',
+  title: 'Features/Talks',
   component: TalkDetailsComponent,
   args: {
     talk: {

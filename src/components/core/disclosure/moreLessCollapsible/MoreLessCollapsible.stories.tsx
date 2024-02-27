@@ -11,14 +11,14 @@ import { type Meta, type StoryObj } from '@storybook/react';
 import { MoreLessCollapsible as MoreLessCollapsibleComponent } from './MoreLessCollapsible';
 
 const meta = {
-  title: 'Core/Disclosure/MoreLessCollapsible',
+  title: 'Core/Disclosure',
   component: MoreLessCollapsibleComponent,
 } satisfies Meta<typeof MoreLessCollapsibleComponent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const AllVersions: Story = {
+export const MoreLessCollapsible: Story = {
   render: () => {
     return (
       <Stack>
@@ -56,17 +56,5 @@ export const AllVersions: Story = {
         </Card>
       </Stack>
     );
-  },
-};
-
-export const Playground: Story = {
-  args: {
-    children: (
-      <List>
-        <ListItem>Text 1</ListItem>
-        <ListItem>Text 2</ListItem>
-      </List>
-    ),
-    shown: true,
   },
 };

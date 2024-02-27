@@ -9,11 +9,11 @@ import {
 export type HeaderContainerProps = Omit<ChakraContainerProps, 'size'>;
 
 export const HeaderContainer = forwardRef<HeaderContainerProps, 'div'>(
-  ({ children }, ref) => {
+  ({ children, ...props }, ref) => {
     const styles = useStyleConfig('HeaderContainer');
 
     return (
-      <ChakraContainer sx={styles} ref={ref}>
+      <ChakraContainer sx={styles} ref={ref} {...props}>
         {children}
       </ChakraContainer>
     );

@@ -9,11 +9,11 @@ import {
 export type PageContainerProps = Omit<ChakraContainerProps, 'size'>;
 
 export const PageContainer = forwardRef<PageContainerProps, 'div'>(
-  ({ children }, ref) => {
+  ({ children, ...props }, ref) => {
     const styles = useStyleConfig('PageContainer');
 
     return (
-      <ChakraContainer sx={styles} ref={ref}>
+      <ChakraContainer sx={styles} ref={ref} {...props}>
         {children}
       </ChakraContainer>
     );

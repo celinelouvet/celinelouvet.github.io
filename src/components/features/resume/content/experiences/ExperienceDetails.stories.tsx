@@ -1,5 +1,6 @@
-import { Box, Card, CardBody, CardHeader } from '@chakra-ui/react';
+import { Box, Card, CardBody, CardHeader, Stack } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
+import { type FC } from 'react';
 
 import { H3Heading, PageContainer } from '@/components/core';
 import { type Experience } from '@/data';
@@ -7,17 +8,18 @@ import { type Experience } from '@/data';
 import { ExperienceDetails as ExperienceDetailsComponent } from './ExperienceDetails';
 import {
   allProjects,
-  allStacks,
-  allTasks,
   basicJob,
   descriptions,
+  fullJob,
+  project1,
+  remotes,
   role,
   subjobs,
   to,
 } from './fixtures';
 
 const meta = {
-  title: 'Resume/Content/ExperienceDetails',
+  title: 'Features/Resume',
   component: ExperienceDetailsComponent,
   decorators: [
     (Story) => (
@@ -31,32 +33,52 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const job = {
-  ...basicJob,
-  to,
-  role,
-  remote: 'FULLTIME',
-  descriptions,
-  projects: allProjects,
-  subjobs,
-  tasks: allTasks,
-  stacks: allStacks,
-} satisfies Experience;
-
-export const AllVersions: Story = {
+export const AllExperienceVersions: Story = {
   render: ({ job }) => {
-    return (
+    const Item: FC<{ title: string; job: Experience }> = ({ title, job }) => (
       <Card variant={'outline'} size={'sm'}>
         <CardHeader>
-          <H3Heading>Exemple</H3Heading>
+          <H3Heading>{title}</H3Heading>
         </CardHeader>
         <CardBody>
           <ExperienceDetailsComponent job={job} />
         </CardBody>
       </Card>
     );
+
+    return (
+      <Stack spacing={10}>
+        <Item title={'Simplest experience'} job={job} />
+        <Item title={'With role'} job={{ ...job, role }} />
+        <Item title={'With end date'} job={{ ...job, to }} />
+
+        {remotes.map((remote) => (
+          <Item
+            key={remote}
+            title={`With remote type: ${remote}`}
+            job={{ ...job, remote }}
+          />
+        ))}
+
+        <Item title={'With description'} job={{ ...job, descriptions }} />
+
+        <Item
+          title={'With one project'}
+          job={{ ...job, projects: [project1] }}
+        />
+
+        <Item
+          title={'With several projects'}
+          job={{ ...job, projects: allProjects }}
+        />
+
+        <Item title={'With sub jobs'} job={{ ...job, subjobs }} />
+
+        <Item title={'Full version'} job={fullJob} />
+      </Stack>
+    );
   },
   args: {
-    job,
+    job: basicJob,
   },
 };

@@ -4,7 +4,7 @@ import { Descriptions as DescriptionsComponent } from './Descriptions';
 import { descriptions } from '../fixtures';
 
 const meta = {
-  title: 'Resume/Content/Experience/Parts/Descriptions',
+  title: 'Features/Resume',
   component: DescriptionsComponent,
   args: {
     descriptions,
@@ -14,4 +14,4 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Descriptions: Story = {};
+export const ExperienceDescriptions: Story = {};

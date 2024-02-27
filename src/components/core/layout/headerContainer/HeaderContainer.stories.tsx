@@ -12,6 +12,8 @@ type Story = StoryObj<typeof meta>;
 
 export const HeaderContainer: Story = {
   render: () => (
-    <HeaderContainerComponent>HeaderContainer</HeaderContainerComponent>
+    <HeaderContainerComponent bgColor={'brand.700'} color={'brand.200'}>
+      HeaderContainer
+    </HeaderContainerComponent>
   ),
 };
