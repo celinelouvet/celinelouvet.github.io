@@ -2580,10 +2580,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource/nunito/-/nunito-5.0.16.tgz#7283fc487d9c2d7edb3be3ce8298647f85e9d463"
   integrity sha512-55Au63Sm2ux/Aef4JenA8HJKEH1mpEMvZCYR7f4pnlOQ9linVwa1/dzPh2GDnt2H5uUK7hK2JmPCyskrldm8+w==
 
-"@fontsource/pt-sans-narrow@^5.0.18":
-  version "5.0.18"
-  resolved "https://registry.yarnpkg.com/@fontsource/pt-sans-narrow/-/pt-sans-narrow-5.0.18.tgz#ffa915ba5bc858f2e9dd7e4b08f70ddfc99ae2b1"
-  integrity sha512-Ba4GfGpZM571i2tW4QvpJ4DAGarfqpRaN50RIJUYb9lela5Y1GXaGWtLJJRVyId8XL+K/jWKerKJ9hbat2+8vQ==
+"@fontsource/pt-sans-narrow@5.0.19":
+  version "5.0.19"
+  resolved "https://registry.yarnpkg.com/@fontsource/pt-sans-narrow/-/pt-sans-narrow-5.0.19.tgz#ba0219be0024590d51674ca5eed95a2d491734f4"
+  integrity sha512-fGgGhanvn0Sy0L2pG3Up+HntPt0rTicMws88Fbz798MgJ2sNzIinGW1PLur7gPoVf6/In4TJZt3jNT5Tpm58Sg==
 
 "@humanwhocodes/config-array@^0.11.13":
   version "0.11.13"
