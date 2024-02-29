@@ -82,7 +82,7 @@
     "storybook": "^7.5.3",
     "storybook-dark-mode": "^3.0.1",
     "tsx": "4.7.1",
-    "typescript": "5.2.2"
+    "typescript": "5.3.3"
   },
   "resolutions": {
     "jackspeak": "2.1.1"
