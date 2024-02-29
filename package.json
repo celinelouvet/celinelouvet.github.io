@@ -34,8 +34,6 @@
     "@fontsource/nunito": "5.0.16",
     "@fontsource/pt-sans-narrow": "5.0.19",
     "@lukemorales/query-key-factory": "1.3.2",
-    "@tanstack/react-query": "5.7.2",
-    "@tanstack/react-query-devtools": "5.7.2",
     "dayjs": "1.11.10",
     "framer-motion": "^11.0.8",
     "i18next": "23.6.0",
