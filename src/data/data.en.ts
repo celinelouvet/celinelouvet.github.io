@@ -158,7 +158,7 @@ const resume: Resume = {
   ],
   hobbies: 'Drawing, painting, clay modeling, sports',
   biographies: [
-    'Backend developer and passionate, for 17 years, loves reaching stabilty and quality for production applications.',
+    'Backend developer and passionate, for 18 years, loves reaching stabilty and quality for production applications.',
     'Specializing into cloud architectures, with a liking for functional languages.',
     'Currently lead developer at Shine.',
   ],

@@ -158,7 +158,7 @@ const resume: Resume = {
   ],
   hobbies: 'Dessins, peinture, modelage, sport',
   biographies: [
-    'Développeuse backend et passionnée, depuis 17 ans, aimant la recherche de stabilité et de qualité d‘une application.',
+    'Développeuse backend et passionnée, depuis 18 ans, aimant la recherche de stabilité et de qualité d‘une application.',
     'Spécialisée sur les architectures cloud, avec une appétence pour les langages fonctionnels.',
     'Actuellement lead developer chez Shine.',
   ],
