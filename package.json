@@ -28,7 +28,7 @@
     "@chakra-ui/next-js": "^2.1.5",
     "@chakra-ui/react": "^2.8.1",
     "@chakra-ui/theme-tools": "2.1.2",
-    "@emotion/react": "^11.11.1",
+    "@emotion/react": "11.11.4",
     "@emotion/styled": "^11.11.0",
     "@faker-js/faker": "8.2.0",
     "@fontsource/inter": "5.0.16",
