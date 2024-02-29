@@ -2,20 +2,20 @@ import {
   BsBoxArrowUpRight,
   BsLinkedin,
   BsMastodon,
-  BsSquareFill,
-  BsTwitter,
+  BsTwitterX,
 } from 'react-icons/bs';
+import { PiButterflyFill } from 'react-icons/pi';
 
 export const socialIcon = (name: string) => {
   switch (name) {
     case 'twitter':
-      return BsTwitter;
+      return BsTwitterX;
     case 'linkedin':
       return BsLinkedin;
     case 'mastodon':
       return BsMastodon;
     case 'bluesky':
-      return BsSquareFill;
+      return PiButterflyFill;
     default:
       return BsBoxArrowUpRight;
   }
