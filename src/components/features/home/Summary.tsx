@@ -1,8 +1,7 @@
 import { Box, Stack } from '@chakra-ui/react';
 import { type FC } from 'react';
 
-import { Picture } from '@/components/media';
-import { H1Heading, H2Heading } from '@/components/typography';
+import { H1Heading, H2Heading, Picture } from '@/components/core';
 import { type Resume } from '@/data';
 
 export type SummaryProps = {

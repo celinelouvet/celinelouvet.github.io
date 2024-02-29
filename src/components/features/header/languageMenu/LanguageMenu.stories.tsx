@@ -1,13 +1,13 @@
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { LanguageMenu } from './LanguageMenu';
+import { LanguageMenu as LanguageMenuComponent } from './LanguageMenu';
 
 const meta = {
-  title: 'Header/LanguageMenu',
-  component: LanguageMenu,
-} satisfies Meta<typeof LanguageMenu>;
+  title: 'Features/Header',
+  component: LanguageMenuComponent,
+} satisfies Meta<typeof LanguageMenuComponent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const LanguageMenu: Story = {};

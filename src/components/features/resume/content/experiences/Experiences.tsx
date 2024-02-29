@@ -2,21 +2,17 @@ import { Stack } from '@chakra-ui/react';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H2Heading } from '@/components/typography';
+import { H2Heading } from '@/components/core';
 import { type Experience } from '@/data';
 import { useHeadingSize } from '@/hooks';
 
-import { ExperienceComponent } from './Experience';
+import { ExperienceDetails } from './ExperienceDetails';
 
 export type ExperiencesProps = {
   experiences: Experience[];
-  full?: boolean;
 };
 
-export const Experiences: FC<ExperiencesProps> = ({
-  experiences,
-  full = false,
-}) => {
+export const Experiences: FC<ExperiencesProps> = ({ experiences }) => {
   const size = useHeadingSize();
   const { t } = useTranslation('resume', { keyPrefix: 'experiences' });
   return (
@@ -24,11 +20,7 @@ export const Experiences: FC<ExperiencesProps> = ({
       <H2Heading size={size}>{t('title')}</H2Heading>
 
       {experiences.map((job) => (
-        <ExperienceComponent
-          key={`${job.company}-${job.from}`}
-          job={job}
-          full={full}
-        />
+        <ExperienceDetails key={`${job.company}-${job.from}`} job={job} />
       ))}
     </Stack>
   );

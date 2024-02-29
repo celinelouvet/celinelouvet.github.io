@@ -2,7 +2,7 @@ import { Box, Flex, Stack, Text } from '@chakra-ui/react';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H2Heading, H3Heading, PeriodText } from '@/components/typography';
+import { H2Heading, H3Heading, PeriodText } from '@/components/core';
 import { type Education } from '@/data';
 import { useHeadingSize } from '@/hooks';
 

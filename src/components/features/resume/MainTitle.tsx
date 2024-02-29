@@ -1,8 +1,7 @@
 import { Box, type StyleConfig } from '@chakra-ui/react';
 import { type FC } from 'react';
 
-import { pictureInPx } from '@/components/media';
-import { H1Heading, H2Heading } from '@/components/typography';
+import { H1Heading, H2Heading, pictureInPx } from '@/components/core';
 import { type Resume } from '@/data';
 import { useHeadingSize } from '@/hooks';
 

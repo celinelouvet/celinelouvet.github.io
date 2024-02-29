@@ -8,7 +8,7 @@ import {
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H4Heading } from '@/components/typography';
+import { H4Heading } from '@/components/core';
 import { type Task } from '@/data';
 import { useHeadingSize } from '@/hooks';
 
@@ -22,7 +22,7 @@ export const Tasks: FC<TasksProps> = ({ tasks }) => {
     keyPrefix: 'experiences.experience',
   });
 
-  if (!tasks) {
+  if (!tasks || tasks.length === 0) {
     return null;
   }
 

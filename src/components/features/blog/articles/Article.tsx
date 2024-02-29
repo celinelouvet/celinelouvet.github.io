@@ -15,8 +15,13 @@ import NextLink from 'next/link';
 import { type FC, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { BlogBreadcrumb, InternalLink } from '@/components/navigation';
-import { DateText, H2Heading, H3Heading } from '@/components/typography';
+import {
+  BlogBreadcrumb,
+  DateText,
+  H2Heading,
+  H3Heading,
+  InternalLink,
+} from '@/components/core';
 
 type ImageProps = {
   src: string;

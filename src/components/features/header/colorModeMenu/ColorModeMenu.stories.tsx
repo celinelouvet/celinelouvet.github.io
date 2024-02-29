@@ -1,13 +1,13 @@
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { ColorModeMenu } from './ColorModeMenu';
+import { ColorModeMenu as ColorModeMenuComponent } from './ColorModeMenu';
 
 const meta = {
-  title: 'Header/ColorModeMenu',
-  component: ColorModeMenu,
-} satisfies Meta<typeof ColorModeMenu>;
+  title: 'Features/Header',
+  component: ColorModeMenuComponent,
+} satisfies Meta<typeof ColorModeMenuComponent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const ColorModeMenu: Story = {};

@@ -2,7 +2,7 @@ import { Stack, Text } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'Theme/Typography',
+  title: 'Core/Typography',
   component: Text,
 } satisfies Meta<typeof Text>;
 

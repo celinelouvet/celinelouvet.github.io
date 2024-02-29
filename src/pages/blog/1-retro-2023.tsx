@@ -1,5 +1,5 @@
+import { PageContainer } from '@/components/core';
 import { Retro2023Content } from '@/components/features/blog/articles';
-import { PageContainer } from '@/components/layout';
 
 export default function Page() {
   return (

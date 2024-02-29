@@ -1,12 +1,12 @@
 import { Divider, Grid, GridItem, Stack, Text } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { H2Heading } from '@/components/typography';
+import { H2Heading } from '@/components/core';
 
 import { RemoteText as RemoteTextComponent } from './RemoteText';
 
 const meta = {
-  title: 'Resume/Content/Experience/Parts/RemoteText',
+  title: 'Features/Resume',
   component: RemoteTextComponent,
   args: {
     remote: 'NONE',
@@ -16,7 +16,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const RemoteText: Story = {
+export const ExperienceRemoteText: Story = {
   render: () => (
     <Stack spacing={4}>
       <Grid templateColumns="150px 1fr" columnGap={8}>

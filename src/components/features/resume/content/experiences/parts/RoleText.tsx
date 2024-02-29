@@ -1,6 +1,6 @@
 import { type FC } from 'react';
 
-import { H4Heading } from '@/components/typography';
+import { H4Heading } from '@/components/core';
 import { useHeadingSize } from '@/hooks';
 
 export type RoleTextProps = {

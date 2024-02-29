@@ -2,7 +2,7 @@ import { Text } from '@chakra-ui/react';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { DateText, H3Heading } from '@/components/typography';
+import { DateText, H3Heading } from '@/components/core';
 import { type ConventionTalk } from '@/data';
 
 import { ConventionName } from './ConventionName';

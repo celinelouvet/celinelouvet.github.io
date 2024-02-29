@@ -12,8 +12,7 @@ import {
 
 import '@/lib/dayjs/config';
 
-import { LinkListItem, TextListItem } from '@/components/list';
-import { H2Heading } from '@/components/typography';
+import { H2Heading, LinkListItem, TextListItem } from '@/components/core';
 import { type Resume } from '@/data';
 import { useHeadingSize } from '@/hooks';
 
