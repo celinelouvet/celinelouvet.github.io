@@ -1,10 +1,9 @@
-name: ci-appengine
+name: cd-appengine
 
 on:
   push:
-    branches-ignore:
+    branches:
       - 'v2**'
-      - main
 
 concurrency:
   group: ${{ github.ref }}
@@ -76,13 +75,13 @@ jobs:
 
       - id: auth
         name: Auth to GCP
-        uses: google-github-actions/auth@v2
+        uses: google-github-actions/auth@v1
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
 
       - id: deploy
         name: Deploy to GCP AppEngine
-        uses: google-github-actions/deploy-appengine@v2
+        uses: google-github-actions/deploy-appengine@v1
         with:
           project_id: ${{ secrets.GCP_PROJECT }}
           deliverables: app.yaml
