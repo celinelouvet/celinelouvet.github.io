@@ -34,7 +34,7 @@
     "@fontsource/pt-sans-narrow": "5.0.19",
     "dayjs": "1.11.10",
     "framer-motion": "^11.0.8",
-    "i18next": "23.6.0",
+    "i18next": "23.10.0",
     "next": "14.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
