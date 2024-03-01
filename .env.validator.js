@@ -1,14 +1,7 @@
 // @ts-check
 const { z } = require('zod');
 
-/**
- * Update this when adding/editing/removing environment variables
- */
-
 const envSchema = z.object({
-  DATABASE_URL: z.string().url(),
-  AUTH_SECRET: z.string(),
-
   NEXT_PUBLIC_BASE_URL: z.string().url(),
   NEXT_PUBLIC_API_BASE_URL: z.union([
     z.string().url({
@@ -17,14 +10,7 @@ const envSchema = z.object({
     }),
     z.string().startsWith('/'),
   ]),
-
-  NEXT_PUBLIC_DEV_ENV_NAME: z.string().optional(),
-  NEXT_PUBLIC_DEV_ENV_COLOR_SCHEME: z.string().optional(),
 });
-
-/**
- * This file is included in `/next.config.js` which ensures the app isn't built with invalid env vars.
- */
 
 const _env = envSchema.safeParse(process.env);
 
