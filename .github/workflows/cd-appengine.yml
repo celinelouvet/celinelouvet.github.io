@@ -59,7 +59,7 @@ jobs:
         run: yarn install
 
       - name: Prepare env file
-        run: cp .env.example .env
+        run: cp .env.prod .env
 
       - name: Build
         run: yarn build
@@ -72,6 +72,9 @@ jobs:
 
       - name: Prepare for AppEngine
         run: yarn appengine:prepare
+
+      - name: Prepare appengine env file
+        run: cp app.prod.yaml app.yaml
 
       - id: auth
         name: Auth to GCP
