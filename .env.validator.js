@@ -10,6 +10,7 @@ const envSchema = z.object({
     }),
     z.string().startsWith('/'),
   ]),
+  VERSION_NAME: z.string(),
 });
 
 const _env = envSchema.safeParse(process.env);

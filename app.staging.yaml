@@ -14,3 +14,4 @@ env_variables:
   HOST: '0.0.0.0'
   NEXT_PUBLIC_BASE_URL: 'https://__VERSION_NAME__-dot-celinelouvet-cv.ew.r.appspot.com'
   NEXT_PUBLIC_API_BASE_URL: 'https://__VERSION_NAME__-dot-celinelouvet-cv.ew.r.appspot.com/api'
+  VERSION_NAME: '__VERSION_NAME__'
