@@ -28,11 +28,12 @@ const useActiveSection = (): ActiveSection => {
 
 export const Header: FC = () => {
   const activeSection = useActiveSection();
-
+  const [brandGradient] = useToken('colors', ['brandGradient']);
   const { t } = useTranslation('header', { keyPrefix: 'nav' });
+
   return (
     <>
-      <Flex __css={navStyle}>
+      <Flex bgGradient={`linear-gradient(${brandGradient})`} __css={navStyle}>
         <HeaderContainer>
           <Grid templateColumns="repeat(4, 1fr)" gap={6}>
             <Center
@@ -81,7 +82,7 @@ export const Header: FC = () => {
 const brand100_rgb = '42, 89, 120';
 
 const navStyle = {
-  backgroundImage: `linear-gradient(180deg, rgba(${brand100_rgb}, 1), rgba(${brand100_rgb}, 1) 93%, rgba(${brand100_rgb}, 0) 93%, rgba(${brand100_rgb}, 0) 96%, rgba(${brand100_rgb}, 1) 96%)`,
+  bgGradient: `linear-gradient(180deg, rgba(${brand100_rgb}, 1), rgba(${brand100_rgb}, 1) 93%, rgba(${brand100_rgb}, 0) 93%, rgba(${brand100_rgb}, 0) 96%, rgba(${brand100_rgb}, 1) 96%)`,
   marginBottom: '12px',
   fontFamily: 'PT Sans Narrow',
   fontWeight: '400',

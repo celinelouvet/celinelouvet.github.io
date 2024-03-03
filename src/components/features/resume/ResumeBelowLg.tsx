@@ -1,4 +1,4 @@
-import { Box, Stack } from '@chakra-ui/react';
+import { Box, Stack, useToken } from '@chakra-ui/react';
 import { type FC } from 'react';
 
 import { type Resume } from '@/data';
@@ -12,9 +12,11 @@ type ResumeProps = {
 };
 
 export const ResumeBelowLg: FC<ResumeProps> = ({ resume }) => {
+  const [brandGradient] = useToken('colors', ['brandGradient']);
+
   return (
     <Stack>
-      <Box __css={mainTitleStyle}>
+      <Box bgGradient={`linear-gradient(${brandGradient})`} padding="6">
         <MainTitle resume={resume} />
       </Box>
 
@@ -22,11 +24,4 @@ export const ResumeBelowLg: FC<ResumeProps> = ({ resume }) => {
       <Content resume={resume} />
     </Stack>
   );
-};
-
-const brand100_rgb = '42, 89, 120';
-
-const mainTitleStyle = {
-  backgroundImage: `linear-gradient(180deg, rgba(${brand100_rgb}, 1), rgba(${brand100_rgb}, 1) 93%, rgba(${brand100_rgb}, 0) 93%, rgba(${brand100_rgb}, 0) 96%, rgba(${brand100_rgb}, 1) 96%)`,
-  padding: '6',
 };
