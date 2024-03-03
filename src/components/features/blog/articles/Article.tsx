@@ -22,6 +22,7 @@ import {
   H3Heading,
   InternalLink,
 } from '@/components/core';
+import { useLogger } from '@/hooks';
 
 type ImageProps = {
   src: string;
@@ -63,12 +64,21 @@ export const ArticleSummary: FC<ArticleSummaryProps> = ({
   title,
   when,
 }) => {
+  const { log } = useLogger();
   const { t } = useTranslation('blog');
+
+  const logArticle = (from: 'button' | 'overlay') =>
+    log('Article', { from, title, link });
+
   return (
     <LinkBox as="article">
       <Card size="sm" variant="filled">
         <CardHeader>
-          <LinkOverlay as={NextLink} href={link}>
+          <LinkOverlay
+            as={NextLink}
+            href={link}
+            onClick={() => logArticle('overlay')}
+          >
             <Flex gap="2" alignItems="baseline">
               <H3Heading>{title}</H3Heading>
               <DateText when={when} dateFormat="DD MMM YYYY" />
@@ -82,7 +92,9 @@ export const ArticleSummary: FC<ArticleSummaryProps> = ({
           </Flex>
         </CardBody>
         <CardFooter>
-          <InternalLink href={link}>{t('readMore')}</InternalLink>
+          <InternalLink href={link} onClick={() => logArticle('button')}>
+            {t('readMore')}
+          </InternalLink>
         </CardFooter>
       </Card>
     </LinkBox>
