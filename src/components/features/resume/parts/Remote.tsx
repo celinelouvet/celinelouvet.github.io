@@ -18,7 +18,7 @@ export const Remotes: FC<RemotesProps> = ({ remotes }) => {
     <Box>
       <H2Heading size={size}>{t('title')}</H2Heading>
 
-      <List spacing={1}>
+      <List spacing="1">
         {remotes.map(({ type, where }, index) => (
           <ListItem key={index}>
             {t(`remoteType.${type}`, { location: where })}

@@ -18,46 +18,46 @@ type Story = StoryObj<typeof meta>;
 
 export const ExperienceRemoteText: Story = {
   render: () => (
-    <Stack spacing={4}>
-      <Grid templateColumns="150px 1fr" columnGap={8}>
+    <Stack spacing="4">
+      <Grid templateColumns="150px 1fr" columnGap="8">
         <GridItem colSpan={2}>
           <H2Heading>Remote types</H2Heading>
         </GridItem>
         <GridItem>
-          <Text fontWeight={700}>NONE</Text>
+          <Text fontWeight="700">NONE</Text>
         </GridItem>
         <GridItem>
-          <RemoteTextComponent remote={'NONE'} />
+          <RemoteTextComponent remote="NONE" />
         </GridItem>
         <GridItem>
-          <Text fontWeight={700}>HYBRID</Text>
+          <Text fontWeight="700">HYBRID</Text>
         </GridItem>
         <GridItem>
-          <RemoteTextComponent remote={'HYBRID'} />
+          <RemoteTextComponent remote="HYBRID" />
         </GridItem>
         <GridItem>
-          <Text fontWeight={700}>FULLTIME</Text>
+          <Text fontWeight="700">FULLTIME</Text>
         </GridItem>
         <GridItem>
-          <RemoteTextComponent remote={'FULLTIME'} />
+          <RemoteTextComponent remote="FULLTIME" />
         </GridItem>
       </Grid>
       <Divider />
-      <Grid templateColumns="70px 1fr" columnGap={8}>
+      <Grid templateColumns="70px 1fr" columnGap="8">
         <GridItem colSpan={2}>
           <H2Heading>Sizes</H2Heading>
         </GridItem>
         <GridItem>
-          <Text fontWeight={700}>sm</Text>
+          <Text fontWeight="700">sm</Text>
         </GridItem>
         <GridItem>
-          <RemoteTextComponent remote={'HYBRID'} size="sm" />
+          <RemoteTextComponent remote="HYBRID" size="sm" />
         </GridItem>
         <GridItem>
-          <Text fontWeight={700}>xs</Text>
+          <Text fontWeight="700">xs</Text>
         </GridItem>
         <GridItem>
-          <RemoteTextComponent remote={'HYBRID'} size="xs" />
+          <RemoteTextComponent remote="HYBRID" size="xs" />
         </GridItem>
       </Grid>
     </Stack>

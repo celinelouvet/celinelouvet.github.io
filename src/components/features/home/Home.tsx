@@ -1,7 +1,6 @@
-import { Flex, Grid, Stack } from '@chakra-ui/react';
+import { Flex, Grid, Stack, useToken } from '@chakra-ui/react';
 import { type FC } from 'react';
 
-import { pictureInPx } from '@/components/core';
 import { type Resume } from '@/data';
 
 import { Biography } from './Biography';
@@ -14,19 +13,19 @@ type HomeProps = {
 };
 
 export const Home: FC<HomeProps> = ({ resume }) => {
-  const summarySize = pictureInPx * 1.75;
+  const [summaryWidth] = useToken('space', ['summary.space']);
 
   return (
     <Flex>
       <Grid
         gridTemplateColumns={{
-          md: `[col1] ${summarySize}px [line2] auto`,
+          md: `[col1] ${summaryWidth} [line2] auto`,
           base: `100%`,
         }}
-        gap={8}
+        gap="8"
       >
         <Summary resume={resume} />
-        <Stack spacing={8}>
+        <Stack spacing="8">
           <Biography biographies={resume.biographies} />
           <Socials socials={resume.socials} />
           <Talks resume={resume} />

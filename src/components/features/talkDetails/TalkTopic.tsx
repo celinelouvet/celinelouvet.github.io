@@ -8,7 +8,7 @@ export type TalkProps = {
 };
 
 export const TalkTopic: FC<TalkProps> = ({ talk }) => (
-  <Text as="span" marginRight={2}>
+  <Text as="span" marginRight="2">
     {talk.topic}
   </Text>
 );

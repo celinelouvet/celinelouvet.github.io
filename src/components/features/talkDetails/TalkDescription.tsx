@@ -20,7 +20,7 @@ const TalkLinks: FC<{ links: Links }> = ({ links }) => {
 
   const { audio, slides, video, program } = links;
   return (
-    <ButtonGroup variant="solid" size="sm" spacing={4}>
+    <ButtonGroup variant="solid" size="sm" spacing="4">
       {slides ? (
         <Button as={Link} href={slides} isExternal>
           {t('slides')}
@@ -60,8 +60,8 @@ export const TalkDescription: FC<TalkProps> = ({ talk }) => {
 
   return (
     <>
-      <Stack spacing={4}>
-        <StackItem fontSize="sm" color={color} flex={1}>
+      <Stack spacing="4">
+        <StackItem fontSize="sm" color={color} flex="1">
           <Text>{firstLine}</Text>
 
           <MoreLessCollapsible>
@@ -71,7 +71,7 @@ export const TalkDescription: FC<TalkProps> = ({ talk }) => {
           </MoreLessCollapsible>
         </StackItem>
 
-        <StackItem minHeight={'2em'}>
+        <StackItem minHeight="2em">
           <TalkLinks links={talk.links ?? {}} />
         </StackItem>
       </Stack>

@@ -23,7 +23,7 @@ export const LinkListItem: FC<LinkListItemProps> = ({
     <ListItem aria-label={capitalizedAriaLabel}>
       <Tooltip label={capitalizedAriaLabel}>
         <Link href={href} isExternal>
-          <ListIcon as={icon} marginTop={-1} verticalAlign="middle" />
+          <ListIcon as={icon} marginTop="-1" verticalAlign="middle" />
           <Text as="span">{text}</Text>
         </Link>
       </Tooltip>

@@ -34,7 +34,7 @@ const Descriptions: FC<{ descriptions: string[] }> = ({ descriptions }) => {
   const [firstLine, ...rest] = descriptions;
 
   return (
-    <Stack fontSize={'sm'}>
+    <Stack fontSize="sm">
       <Text>{firstLine}</Text>
 
       <MoreLessCollapsible>

@@ -16,7 +16,7 @@ export const ShowLess: FC<ShowLessProps> = ({ onClose }) => {
     <Button
       onClick={onClose}
       rightIcon={<BsChevronContract />}
-      variant={'outline'}
+      variant="outline"
       size="sm"
     >
       {t('less')}

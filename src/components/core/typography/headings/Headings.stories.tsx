@@ -25,7 +25,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Headings: Story = {
   render: () => (
-    <Grid templateColumns="50px 200px 250px" gap={4}>
+    <Grid templateColumns="50px 200px 250px" gap="4">
       <GridItem></GridItem>
       <GridItem>
         <Tag size="lg">md</Tag>

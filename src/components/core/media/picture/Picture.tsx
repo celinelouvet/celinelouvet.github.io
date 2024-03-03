@@ -18,22 +18,20 @@ export const Picture = forwardRef<PictureProps, 'img'>(
   }
 );
 
-export const pictureInPx = 200;
-
 export const pictureStyles = {
   baseStyle: {
-    width: `${pictureInPx}px`,
-    height: `${pictureInPx}px`,
+    width: 'picture.size',
+    height: 'picture.size',
     border: '3px solid white',
   },
   sizes: {
     md: {
-      width: `${pictureInPx / 2}px`,
-      height: `${pictureInPx / 2}px`,
+      width: 'picture.size.half',
+      height: 'picture.size.half',
     },
     lg: {
-      width: `${pictureInPx}px`,
-      height: `${pictureInPx}px`,
+      width: 'picture.size',
+      height: 'picture.size',
     },
   },
   defaultProps: {

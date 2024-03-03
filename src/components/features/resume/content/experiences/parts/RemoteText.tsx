@@ -27,7 +27,7 @@ export const RemoteText: FC<RemoteTextProps> = ({ remote, size = 'sm' }) => {
   return (
     <Text as="span" fontSize={size} sx={css} color={color}>
       <Show above="md">
-        <Text as="span" marginRight={'2'}>
+        <Text as="span" marginRight="2">
           —
         </Text>
       </Show>

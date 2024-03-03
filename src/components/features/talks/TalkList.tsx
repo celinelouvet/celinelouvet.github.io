@@ -23,7 +23,7 @@ export const TalkList: FC<TalkListProps> = ({ talks, title }) => {
     <Box>
       <H2Heading>{title}</H2Heading>
 
-      <Stack spacing={6}>
+      <Stack spacing="6">
         {talks.map((talk) => (
           <TalkDetails key={key(talk)} talk={talk} />
         ))}

@@ -21,14 +21,14 @@ type Story = StoryObj<typeof meta>;
 
 export const DateTexts: Story = {
   render: (args) => (
-    <Grid templateColumns="70px 1fr" columnGap={8} alignItems={'baseline'}>
+    <Grid templateColumns="70px 1fr" columnGap="8" alignItems="baseline">
       <GridItem colSpan={2}>
         <H2Heading>Sizes</H2Heading>
       </GridItem>
       {sizes.map((size) => (
         <>
           <GridItem>
-            <Text fontWeight={700}>{dateTextStyles.sizes[size].fontSize}</Text>
+            <Text fontWeight="700">{dateTextStyles.sizes[size].fontSize}</Text>
           </GridItem>
           <GridItem>
             <DateText {...args} size={size} />

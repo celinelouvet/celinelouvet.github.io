@@ -35,11 +35,11 @@ export const Stacks: FC<StacksProps> = ({ stacks }) => {
     <>
       <H4Heading size={size}>{t('stacks')}</H4Heading>
 
-      <Stack paddingLeft={'6'} spacing={0}>
+      <Stack paddingLeft="6" spacing="0">
         {stacks.map(({ type, technos }) => (
           <Flex key={`stack-${type}`} direction={{ md: 'row', base: 'column' }}>
             {type ? (
-              <Text fontWeight={'700'} width="120px">
+              <Text fontWeight="700" width="120px">
                 {type}
               </Text>
             ) : null}

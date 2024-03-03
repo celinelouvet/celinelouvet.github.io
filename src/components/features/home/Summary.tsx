@@ -12,10 +12,10 @@ export const Summary: FC<SummaryProps> = ({ resume }) => {
   const fullname = `${resume.firstname} ${resume.lastname}`;
 
   return (
-    <Stack alignItems={'center'} spacing={6}>
+    <Stack alignItems="center" spacing="6">
       <Picture size="lg" />
 
-      <Box textAlign={'center'}>
+      <Box textAlign="center">
         <H1Heading>{fullname}</H1Heading>
         <H2Heading>{resume.title}</H2Heading>
       </Box>

@@ -13,8 +13,8 @@ export const PdfDownloader: FC = () => {
   const fileName = 'LOUVET_Celine.pdf';
   return (
     <Link href={file} download={fileName} isExternal>
-      <Tooltip label={'Download PDF'}>
-        <Button leftIcon={<BsFileEarmarkPdfFill />} size={'sm'}>
+      <Tooltip label="Download PDF">
+        <Button leftIcon={<BsFileEarmarkPdfFill />} size="sm">
           PDF
         </Button>
       </Tooltip>

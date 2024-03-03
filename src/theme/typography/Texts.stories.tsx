@@ -11,7 +11,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Texts: Story = {
   render: () => (
-    <Stack spacing={5}>
+    <Stack spacing="5">
       <Text>Basic</Text>
       <Text as="b">Bold</Text>
       <Text as="i">Italic</Text>

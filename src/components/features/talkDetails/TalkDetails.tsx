@@ -27,7 +27,7 @@ export const TalkDetails: FC<TalkProps> = ({ talk }) => (
       </CardHeader>
 
       <CardBody>
-        <Flex gap={4} direction={{ base: 'column', lg: 'row' }}>
+        <Flex gap="4" direction={{ base: 'column', lg: 'row' }}>
           <TalkDescription talk={talk} />
           <Spacer />
           <Center __css={containerCss}>

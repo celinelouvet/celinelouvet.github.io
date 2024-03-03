@@ -32,7 +32,7 @@ export const Retro2023Summary: FC<{ link: string }> = ({ link }) => {
       when="2024-01-02"
       image={image}
     >
-      <Stack spacing={0}>
+      <Stack spacing="0">
         <Text>
           Il parait que c‘est le moment de faire une rétrospective sur ce qu‘il
           s‘est passé cette année. L‘année a été riche en rebondissements
@@ -54,7 +54,7 @@ export const Retro2023Summary: FC<{ link: string }> = ({ link }) => {
 export const Retro2023Content: FC = () => (
   <ArticleContent title="Rétrospective 2023" when="2024-01-02">
     <>
-      <Stack spacing={0}>
+      <Stack spacing="0">
         <Text>
           Il parait que c‘est le moment de faire une rétrospective sur ce qu‘il
           s‘est passé cette année. L‘année a été riche en rebondissements
@@ -70,10 +70,10 @@ export const Retro2023Content: FC = () => (
         </Text>
       </Stack>
 
-      <Stack spacing={2}>
+      <Stack spacing="2">
         <H3Heading>Le nouveau site</H3Heading>
 
-        <Stack spacing={0}>
+        <Stack spacing="0">
           <Text>
             Eh oui ! Je ne sais pas si vous l‘avez remarqué, mais ce site est
             une nouvelle version faite en React, avec Next.js et Chakra UI. Ça a
@@ -89,10 +89,10 @@ export const Retro2023Content: FC = () => (
         </Stack>
       </Stack>
 
-      <Stack spacing={2}>
+      <Stack spacing="2">
         <H3Heading>Côté pro</H3Heading>
 
-        <Stack spacing={0}>
+        <Stack spacing="0">
           <Text>
             En décembre 2022, je quittais Pyxo, après 7 mois chez eux.
           </Text>
@@ -117,13 +117,13 @@ export const Retro2023Content: FC = () => (
         </Stack>
       </Stack>
 
-      <Stack spacing={2}>
+      <Stack spacing="2">
         <H3Heading>Côté conférences</H3Heading>
 
-        <Stack spacing={2}>
+        <Stack spacing="2">
           <H4Heading>En spectatrice</H4Heading>
 
-          <Stack spacing={0}>
+          <Stack spacing="0">
             <Text>
               A côté de ça, j‘ai profité d‘être à Lyon pour assister au Tremplin
               MixIT, puis à MixIT.
@@ -146,7 +146,7 @@ export const Retro2023Content: FC = () => (
               <ExternalLink href="https://mixitconf.org/2023/pour-une-ecologie-decoloniale-du-numerique">
                 “Pour une écologie décoloniale du numérique“
               </ExternalLink>
-              <Text as="em" marginLeft={1}>
+              <Text as="em" marginLeft="1">
                 par David Maenda Kithoko.
               </Text>
             </Text>
@@ -154,7 +154,7 @@ export const Retro2023Content: FC = () => (
               Tous les talks de MixIT 2023 :
               <ExternalLink
                 href="https://mixitconf.org/2023/medias"
-                marginLeft={1}
+                marginLeft="1"
               >
                 https://mixitconf.org/2023/medias
               </ExternalLink>
@@ -162,11 +162,11 @@ export const Retro2023Content: FC = () => (
           </Stack>
         </Stack>
 
-        <Stack spacing={2}>
+        <Stack spacing="2">
           <H4Heading>En conférencière</H4Heading>
 
-          <Stack spacing={2}>
-            <Stack spacing={0}>
+          <Stack spacing="2">
+            <Stack spacing="0">
               <Text>
                 Certaines confériencières m‘ont donné envie de me relancer dans
                 les conférences. J‘ai donc profité de mon arrivée chez Shine
@@ -178,15 +178,15 @@ export const Retro2023Content: FC = () => (
                 des permissions“ ainsi qu‘une table ronde avec
                 <ExternalLink
                   href="https://www.linkedin.com/in/d%C3%A9borah-guyard/"
-                  marginLeft={1}
-                  marginRight={1}
+                  marginLeft="1"
+                  marginRight="1"
                 >
                   Angi Guyard
                 </ExternalLink>
                 et
                 <ExternalLink
                   href="https://www.linkedin.com/in/soniaprevost/"
-                  marginLeft={1}
+                  marginLeft="1"
                 >
                   Sonia Prévost
                 </ExternalLink>
@@ -194,12 +194,12 @@ export const Retro2023Content: FC = () => (
               </Text>
             </Stack>
 
-            <Stack spacing={0}>
+            <Stack spacing="0">
               <Text as="span">
                 J‘ai pu découvrir des conférences, dont certaines que je ne
                 connaissais que de nom :
               </Text>
-              <UnorderedList paddingLeft={4}>
+              <UnorderedList paddingLeft="4">
                 <ListItem>DevFest Lille,</ListItem>
                 <ListItem>BreizhCamp,</ListItem>
                 <ListItem>Camping de Speakers,</ListItem>
@@ -209,12 +209,12 @@ export const Retro2023Content: FC = () => (
               </UnorderedList>
             </Stack>
 
-            <Stack spacing={0}>
+            <Stack spacing="0">
               <Text as="span">
                 J‘ai aussi eu l‘occasion d‘échanger avec différentes personnes
                 pour des podcasts avec :
               </Text>
-              <UnorderedList paddingLeft={4}>
+              <UnorderedList paddingLeft="4">
                 <ListItem>
                   <ExternalLink href="https://www.linkedin.com/in/shirley-almosni-chiche/">
                     Shirley Almosni Chiche
@@ -245,7 +245,7 @@ export const Retro2023Content: FC = () => (
             <Text>
               Pour plus de détails sur mes interventions, je vous propose
               d‘aller sur la page
-              <InternalLink href="/talks" marginLeft={1}>
+              <InternalLink href="/talks" marginLeft="1">
                 Conférences
               </InternalLink>
               .
@@ -255,7 +255,7 @@ export const Retro2023Content: FC = () => (
               <WrapItem>
                 <Center maxH="200px">
                   <Image
-                    maxH={200}
+                    maxH="200"
                     objectFit="cover"
                     src="/talks/paatternTalks2023-Tired_women_revolution.jpg"
                     alt="La révolution des fatiguées, avec Angi Guyard et Sonia Prévost"
@@ -266,7 +266,7 @@ export const Retro2023Content: FC = () => (
               <WrapItem>
                 <Center maxH="200px">
                   <Image
-                    maxH={200}
+                    maxH="200"
                     objectFit="cover"
                     src="/talks/devfestlille2023-Event_driven.jpg"
                     alt="Event Driven, au DevFest Lille 2023"
@@ -277,7 +277,7 @@ export const Retro2023Content: FC = () => (
               <WrapItem>
                 <Center maxH="200px">
                   <Image
-                    maxH={200}
+                    maxH="200"
                     objectFit="cover"
                     src="/talks/breizhcamp2023-Permissions.jpg"
                     alt="Le mystère des permissions, au Breizhcamp 2023"
@@ -290,13 +290,13 @@ export const Retro2023Content: FC = () => (
         </Stack>
       </Stack>
 
-      <Stack spacing={2}>
+      <Stack spacing="2">
         <H3Heading>Côté personnel</H3Heading>
 
-        <Stack spacing={2}>
+        <Stack spacing="2">
           <H4Heading>Et la santé ?</H4Heading>
 
-          <Stack spacing={0}>
+          <Stack spacing="0">
             <Text>
               D‘un point de vue santé, l‘année n‘a pas été entièrement rose.
               J‘ai eu des hauts et des bas, mais j‘ai pu compter sur mes proches
@@ -317,9 +317,9 @@ export const Retro2023Content: FC = () => (
           </Stack>
         </Stack>
 
-        <Stack spacing={2}>
+        <Stack spacing="2">
           <H4Heading>Côté hobbies</H4Heading>
-          <Stack spacing={0}>
+          <Stack spacing="0">
             <Text>
               J‘aime tout ce qui a attrait à l‘art. J‘ai toujours l‘envie
               d‘essayer divers médium. Cette année a été l‘occasion de tester
@@ -337,7 +337,7 @@ export const Retro2023Content: FC = () => (
             <WrapItem>
               <Center maxH="200px">
                 <Image
-                  maxH={200}
+                  maxH="200"
                   objectFit="cover"
                   src="/others/reliure-1.jpg"
                   alt="Carnet fait main, au format A5, avec une couverture en tissu gris et un fil bleu foncé. Vue du carnet fermé, de la tranche"
@@ -348,7 +348,7 @@ export const Retro2023Content: FC = () => (
             <WrapItem>
               <Center maxH="200px">
                 <Image
-                  maxH={200}
+                  maxH="200"
                   objectFit="cover"
                   src="/others/reliure-2.jpg"
                   alt="Carnet fait main, au format A5, avec une couverture en tissu gris et un fil bleu foncé. Vue du carnet ouvert"
@@ -359,7 +359,7 @@ export const Retro2023Content: FC = () => (
             <WrapItem>
               <Center maxH="200px">
                 <Image
-                  maxH={200}
+                  maxH="200"
                   objectFit="cover"
                   src="/others/inktober_hermit.jpg"
                   alt="Bernard l‘ermite, dessiné à l‘encre de chine et à l‘aquarelle"
@@ -370,7 +370,7 @@ export const Retro2023Content: FC = () => (
             <WrapItem>
               <Center maxH="200px">
                 <Image
-                  maxH={200}
+                  maxH="200"
                   objectFit="cover"
                   src="/others/street_copics.jpg"
                   alt="Une rue, dessinée aux marqueurs à alcool"
@@ -382,10 +382,10 @@ export const Retro2023Content: FC = () => (
         </Stack>
       </Stack>
 
-      <Stack spacing={2}>
+      <Stack spacing="2">
         <H3Heading>Et maintenant, en 2024 ?</H3Heading>
 
-        <Stack spacing={0}>
+        <Stack spacing="0">
           <Text>
             Pour cette nouvelle année, je vais essayer de continuer sur ma
             lancée en termes de conférences. J‘ai déjà quelques propositions en
@@ -405,10 +405,10 @@ export const Retro2023Content: FC = () => (
         cette rétrospective. Je vous souhaite une bonne année 2024, avec une
         excellente santé et que vos projets se réalisent !
       </Text>
-      <Stack spacing={2} alignItems={'center'}>
+      <Stack spacing="2" alignItems="center">
         <Text fontSize="xl">Bonne année</Text>
         <Image
-          boxSize={200}
+          boxSize="200"
           objectFit="cover"
           src="/others/fireworks.jpg"
           alt="Un feu d‘artifice"

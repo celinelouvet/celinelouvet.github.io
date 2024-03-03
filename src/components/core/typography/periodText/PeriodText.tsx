@@ -25,11 +25,11 @@ export const PeriodText = forwardRef<PeriodTextProps, 'span'>(
       <ChakraText as="span" sx={styles} {...props} ref={ref}>
         <DateText
           when={period.from}
-          dateFormat={'MMM YYYY'}
+          dateFormat="MMM YYYY"
           as="span"
-          marginRight={'1'}
+          marginRight="1"
         />
-        <ChakraText as="span" marginRight={'1'}>
+        <ChakraText as="span" marginRight="1">
           -
         </ChakraText>
         <ToComponent period={period} />
@@ -63,5 +63,5 @@ const ToComponent: FC<PeriodTextProps> = ({ period }) => {
     return <ChakraText as="span">{t('today')}</ChakraText>;
   }
 
-  return <DateText when={period.to} dateFormat={'MMM YYYY'} as="span" />;
+  return <DateText when={period.to} dateFormat="MMM YYYY" as="span" />;
 };

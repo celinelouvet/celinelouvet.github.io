@@ -24,7 +24,7 @@ export const PossibleSubjectList: FC<PossibleSubjectListProps> = ({
     <Box>
       <H2Heading>{t('subjects')}</H2Heading>
 
-      <Stack spacing={6}>
+      <Stack spacing="6">
         {subjects.map((subject, index) => (
           <PossibleSubject key={index} subject={subject} />
         ))}

@@ -29,7 +29,7 @@ const TalkList: FC<{ talks: ConventionTalk[]; title: string }> = ({
     <Box>
       <H2Heading>{title}</H2Heading>
 
-      <Stack spacing={6}>
+      <Stack spacing="6">
         {talks.slice(0, TALKS_TO_SEE).map((talk) => (
           <TalkDetails key={key(talk)} talk={talk} />
         ))}

@@ -12,7 +12,7 @@ type Story = StoryObj<typeof meta>;
 
 export const PageContainer: Story = {
   render: () => (
-    <PageContainerComponent bgColor={'brand.700'} color={'brand.200'}>
+    <PageContainerComponent bgColor="brand.700" color="brand.200">
       PageContainer
     </PageContainerComponent>
   ),

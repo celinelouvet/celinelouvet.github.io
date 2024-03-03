@@ -31,7 +31,7 @@ const EducationHeader: FC<{ education: Education }> = ({ education }) => {
   const size = useHeadingSize();
 
   return (
-    <Flex alignItems={'baseline'} gap={'2'}>
+    <Flex alignItems="baseline" gap="2">
       <H3Heading size={size}>{education.school}</H3Heading>
       <PeriodText period={education} />
     </Flex>
@@ -60,7 +60,7 @@ const EducationDiploma: FC<{ education: Education }> = ({ education }) => {
 
 const EducationContent: FC<{ education: Education }> = ({ education }) => {
   return (
-    <Flex direction={'column'}>
+    <Flex direction="column">
       <EducationHeader education={education} />
       <EducationFullname education={education} />
       <EducationDiploma education={education} />

@@ -26,13 +26,13 @@ export const Projects: FC<ProjectsProps> = ({ projects }) => {
         {t('project', { count: projects.length })}
       </H4Heading>
 
-      <Stack paddingLeft={'6'} spacing={0}>
+      <Stack paddingLeft="6" spacing="0">
         {projects.map(({ name, description }) => (
           <Flex
             key={`project-${name}`}
             direction={{ md: 'row', base: 'column' }}
           >
-            <Text fontWeight={'700'} width="120px">
+            <Text fontWeight="700" width="120px">
               {name}
             </Text>
             <Text flex="1">{description}</Text>

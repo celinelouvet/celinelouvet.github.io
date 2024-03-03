@@ -20,27 +20,27 @@ type Story = StoryObj<typeof meta>;
 
 export const BlogBreadcrumb: Story = {
   render: (args) => (
-    <Stack spacing={8}>
-      <Grid templateColumns="70px 1fr" columnGap={8} alignItems={'baseline'}>
+    <Stack spacing="8">
+      <Grid templateColumns="70px 1fr" columnGap="8" alignItems="baseline">
         <GridItem colSpan={2}>
           <H2Heading>Args</H2Heading>
         </GridItem>
         <GridItem>
-          <Text fontWeight={600}>Default</Text>
+          <Text fontWeight="600">Default</Text>
         </GridItem>
         <GridItem>
           <BlogBreadcrumbComponent {...args} />
         </GridItem>
       </Grid>
       <Divider />
-      <Grid templateColumns="70px 1fr" columnGap={8} alignItems={'baseline'}>
+      <Grid templateColumns="70px 1fr" columnGap="8" alignItems="baseline">
         <GridItem colSpan={2}>
           <H2Heading>Sizes</H2Heading>
         </GridItem>
         {sizes.map((size) => (
           <>
             <GridItem>
-              <Text fontWeight={700}>{size}</Text>
+              <Text fontWeight="700">{size}</Text>
             </GridItem>
             <GridItem>
               <BlogBreadcrumbComponent size={size} {...args} />

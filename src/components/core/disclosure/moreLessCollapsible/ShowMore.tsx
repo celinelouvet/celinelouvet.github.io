@@ -16,7 +16,7 @@ export const ShowMore: FC<ShowMoreProps> = ({ onOpen }) => {
     <Button
       onClick={onOpen}
       rightIcon={<BsChevronExpand />}
-      variant={'outline'}
+      variant="outline"
       size="sm"
     >
       {t('more')}
