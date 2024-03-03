@@ -14,19 +14,19 @@ export const Subjobs: FC<SubjobsProps> = ({ subjobs }) => {
   if (!subjobs) return null;
 
   return (
-    <List listStyleType={'circle'}>
+    <List listStyleType="circle">
       {subjobs.map((subjob) => (
         <ListItem
           key={`xp-${subjob.company}-${subjob.from}`}
           display="flex"
-          alignItems={'baseline'}
+          alignItems="baseline"
           borderLeftColor="brand.500"
           borderLeftStyle="solid"
           borderLeftWidth="2px"
-          paddingLeft={'8'}
-          paddingBottom={'4'}
+          paddingLeft="8"
+          paddingBottom="4"
         >
-          <ListIcon as={BsCircleFill} color="brand.500" marginLeft={'-41px'} />
+          <ListIcon as={BsCircleFill} color="brand.500" marginLeft="-41px" />
           <Box fontSize="0.9em">
             <ExperienceDetails job={subjob} />
           </Box>

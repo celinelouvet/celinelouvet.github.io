@@ -17,7 +17,7 @@ export const Skills: FC<SkillsProps> = ({ skills }) => {
     <Box>
       <H2Heading size={size}>{t('title')}</H2Heading>
 
-      <List spacing={1}>
+      <List spacing="1">
         {skills.map((skill, index) => (
           <ListItem key={index}>{skill}</ListItem>
         ))}

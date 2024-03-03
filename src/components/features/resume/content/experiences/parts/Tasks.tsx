@@ -35,11 +35,11 @@ export const Tasks: FC<TasksProps> = ({ tasks }) => {
           md: `1fr 1fr`,
           base: `100%`,
         }}
-        gap={6}
+        gap="6"
       >
         {tasks.map(({ name, subtasks = [] }) => (
-          <GridItem key={`task-${name}`} paddingLeft={6}>
-            <Text fontWeight={'700'}>{name}</Text>
+          <GridItem key={`task-${name}`} paddingLeft="6">
+            <Text fontWeight="700">{name}</Text>
 
             <UnorderedList>
               {subtasks.map(({ name }) => (

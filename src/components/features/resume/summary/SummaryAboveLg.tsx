@@ -11,7 +11,7 @@ export const SummaryAboveLg: FC<SummaryProps> = ({ resume, ...props }) => {
 
   return (
     <Stack bgColor={bgColor} spacing="6" padding="6" paddingTop="0" {...props}>
-      <Center marginTop={'neg.picture.space.half'}>
+      <Center marginTop="neg.picture.space.half">
         <Picture size="lg" />
       </Center>
       <Infos resume={resume} />

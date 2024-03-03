@@ -18,7 +18,7 @@ export const Socials: FC<SocialsProps> = ({ socials }) => {
     <Box>
       <H2Heading>{t('title')}</H2Heading>
 
-      <List spacing={1}>
+      <List spacing="1">
         {socials.map(({ name, handle, link }, index) => (
           <LinkListItem
             key={index}

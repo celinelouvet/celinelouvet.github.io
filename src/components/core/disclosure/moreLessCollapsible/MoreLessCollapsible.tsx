@@ -43,14 +43,14 @@ export const MoreLessCollapsible: FC<MoreLessCollapsibleProps> = ({
 
   return (
     <>
-      <Stack spacing={0} {...props}>
-        <StackItem flex={1}>
+      <Stack spacing="0" {...props}>
+        <StackItem flex="1">
           <Collapse in={isOpen} animateOpacity>
             {children}
           </Collapse>
         </StackItem>
 
-        <StackItem minHeight={'2em'}>
+        <StackItem minHeight="2em">
           {!isOpen ? <ShowMore onOpen={onOpen} /> : null}
           {isOpen ? <ShowLess onClose={onClose} /> : null}
         </StackItem>

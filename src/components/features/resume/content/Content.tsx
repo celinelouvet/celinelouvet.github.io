@@ -15,8 +15,8 @@ type ContentProps = Omit<ChakraStackProps, 'children'> & {
 };
 
 export const Content: FC<ContentProps> = ({ resume }) => (
-  <Stack spacing={4} padding={6}>
-    <Stack direction={'row-reverse'} spacing={6} alignItems={'center'}>
+  <Stack spacing="4" padding="6">
+    <Stack direction="row-reverse" spacing="6" alignItems="center">
       <PdfDownloader />
     </Stack>
     <Description descriptions={resume.descriptions} />

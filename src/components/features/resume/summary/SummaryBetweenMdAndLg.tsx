@@ -13,9 +13,9 @@ export const SummaryBetweenMdAndLg: FC<SummaryProps> = ({
   return (
     <Grid
       bgColor={bgColor}
-      templateColumns={'1fr 1fr'}
-      gap={'6'}
-      padding={'6'}
+      templateColumns="1fr 1fr"
+      gap="6"
+      padding="6"
       {...props}
     >
       <Infos resume={resume} />

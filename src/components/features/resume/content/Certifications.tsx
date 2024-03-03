@@ -33,7 +33,7 @@ const CertificationHeader: FC<{ certification: Certification }> = ({
   const size = useHeadingSize();
 
   return (
-    <Flex alignItems={'baseline'} gap={'2'}>
+    <Flex alignItems="baseline" gap="2">
       <H3Heading size={size}>{certification.topic}</H3Heading>
       <DateText when={certification.when} dateFormat="MMM YYYY" />
     </Flex>
@@ -44,7 +44,7 @@ const CertificationContent: FC<{ certification: Certification }> = ({
   certification,
 }) => {
   return (
-    <Flex direction={'column'}>
+    <Flex direction="column">
       <CertificationHeader certification={certification} />
       <Text>{certification.company}</Text>
     </Flex>

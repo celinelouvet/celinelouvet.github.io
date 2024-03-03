@@ -11,7 +11,7 @@ export const ConventionName: FC<TalkProps> = ({ talk }) => {
   }
 
   return (
-    <Text as="span" paddingRight={3}>
+    <Text as="span" paddingRight="3">
       {name}
     </Text>
   );

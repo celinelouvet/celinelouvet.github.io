@@ -69,14 +69,14 @@ export const ArticleSummary: FC<ArticleSummaryProps> = ({
       <Card size="sm" variant="filled">
         <CardHeader>
           <LinkOverlay as={NextLink} href={link}>
-            <Flex gap={2} alignItems={'baseline'}>
+            <Flex gap="2" alignItems="baseline">
               <H3Heading>{title}</H3Heading>
               <DateText when={when} dateFormat="DD MMM YYYY" />
             </Flex>
           </LinkOverlay>
         </CardHeader>
         <CardBody>
-          <Flex gap={6} direction={{ base: 'column', lg: 'row' }}>
+          <Flex gap="6" direction={{ base: 'column', lg: 'row' }}>
             {children}
             <ArticleImage image={image} />
           </Flex>
@@ -95,17 +95,17 @@ export const ArticleContent: FC<ArticleContentProps> = ({
   children,
 }) => {
   return (
-    <Stack spacing={6}>
+    <Stack spacing="6">
       <BlogBreadcrumb title={title} />
 
-      <Stack spacing={1}>
-        <Flex gap={2} alignItems={'baseline'}>
+      <Stack spacing="1">
+        <Flex gap="2" alignItems="baseline">
           <H2Heading>{title}</H2Heading>
           <DateText when={when} dateFormat="DD MMM YYYY" />
         </Flex>
         <Text as="em">Par Céline Louvet</Text>
       </Stack>
-      <Stack spacing={6}>{children}</Stack>
+      <Stack spacing="6">{children}</Stack>
     </Stack>
   );
 };

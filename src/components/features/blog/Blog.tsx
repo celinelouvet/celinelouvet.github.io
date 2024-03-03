@@ -12,7 +12,7 @@ export const BlogLayout: FC = () => {
     <>
       <H2Heading>{t('title')}</H2Heading>
 
-      <Retro2023Summary link={'/blog/1-retro-2023'} />
+      <Retro2023Summary link="/blog/1-retro-2023" />
     </>
   );
 };

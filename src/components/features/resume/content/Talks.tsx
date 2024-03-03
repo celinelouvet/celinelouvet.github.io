@@ -63,14 +63,14 @@ const TalkConvention: FC<{
 
   return (
     <>
-      <Text as="span" marginRight={'1'}>
+      <Text as="span" marginRight="1">
         {name}
       </Text>
-      <Text as="span" color={color} fontSize={'xs'}>
+      <Text as="span" color={color} fontSize="xs">
         ({language} – {dayjs(when).format('MMM YYYY')})
       </Text>
       {!isLast ? (
-        <Text as="span" marginRight={'1'}>
+        <Text as="span" marginRight="1">
           ,
         </Text>
       ) : null}

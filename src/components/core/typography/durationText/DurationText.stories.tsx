@@ -22,19 +22,19 @@ type Story = StoryObj<typeof meta>;
 
 export const DurationTexts: Story = {
   render: ({ period }) => (
-    <Stack spacing={4}>
-      <Grid templateColumns="275px 1fr" columnGap={8} alignItems={'baseline'}>
+    <Stack spacing="4">
+      <Grid templateColumns="275px 1fr" columnGap="8" alignItems="baseline">
         <GridItem colSpan={2}>
           <H2Heading>Args</H2Heading>
         </GridItem>
         <GridItem>
-          <Text fontWeight={600}>from: {from}, to today</Text>
+          <Text fontWeight="600">from: {from}, to today</Text>
         </GridItem>
         <GridItem>
           <DurationText period={period} />
         </GridItem>
         <GridItem>
-          <Text fontWeight={600}>
+          <Text fontWeight="600">
             from: {from}, to: {to}
           </Text>
         </GridItem>
@@ -43,14 +43,14 @@ export const DurationTexts: Story = {
         </GridItem>
       </Grid>
       <Divider />
-      <Grid templateColumns="70px 1fr" columnGap={8} alignItems={'baseline'}>
+      <Grid templateColumns="70px 1fr" columnGap="8" alignItems="baseline">
         <GridItem colSpan={2}>
           <H2Heading>Sizes</H2Heading>
         </GridItem>
         {sizes.map((size) => (
           <>
             <GridItem>
-              <Text fontWeight={700}>
+              <Text fontWeight="700">
                 {durationTextStyles.sizes[size].fontSize}
               </Text>
             </GridItem>

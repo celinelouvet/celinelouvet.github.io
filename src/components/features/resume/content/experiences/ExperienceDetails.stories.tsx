@@ -24,7 +24,7 @@ const meta = {
   decorators: [
     (Story) => (
       <PageContainer>
-        <Box paddingLeft={'120px'}>{Story()}</Box>
+        <Box paddingLeft="120px">{Story()}</Box>
       </PageContainer>
     ),
   ],
@@ -36,7 +36,7 @@ type Story = StoryObj<typeof meta>;
 export const AllExperienceVersions: Story = {
   render: ({ job }) => {
     const Item: FC<{ title: string; job: Experience }> = ({ title, job }) => (
-      <Card variant={'outline'} size={'sm'}>
+      <Card variant="outline" size="sm">
         <CardHeader>
           <H3Heading>{title}</H3Heading>
         </CardHeader>
@@ -47,10 +47,10 @@ export const AllExperienceVersions: Story = {
     );
 
     return (
-      <Stack spacing={10}>
-        <Item title={'Simplest experience'} job={job} />
-        <Item title={'With role'} job={{ ...job, role }} />
-        <Item title={'With end date'} job={{ ...job, to }} />
+      <Stack spacing="10">
+        <Item title="Simplest experience" job={job} />
+        <Item title="With role" job={{ ...job, role }} />
+        <Item title="With end date" job={{ ...job, to }} />
 
         {remotes.map((remote) => (
           <Item
@@ -60,21 +60,18 @@ export const AllExperienceVersions: Story = {
           />
         ))}
 
-        <Item title={'With description'} job={{ ...job, descriptions }} />
+        <Item title="With description" job={{ ...job, descriptions }} />
+
+        <Item title="With one project" job={{ ...job, projects: [project1] }} />
 
         <Item
-          title={'With one project'}
-          job={{ ...job, projects: [project1] }}
-        />
-
-        <Item
-          title={'With several projects'}
+          title="With several projects"
           job={{ ...job, projects: allProjects }}
         />
 
-        <Item title={'With sub jobs'} job={{ ...job, subjobs }} />
+        <Item title="With sub jobs" job={{ ...job, subjobs }} />
 
-        <Item title={'Full version'} job={fullJob} />
+        <Item title="Full version" job={fullJob} />
       </Stack>
     );
   },

@@ -30,7 +30,7 @@ export const ExperienceDetails: FC<ExperienceDetailsProps> = ({ job }) => {
   const period = { from: job.from, to: job.to } satisfies Period;
 
   return (
-    <Stack spacing={'2'}>
+    <Stack spacing="2">
       <Stack sx={containerCss}>
         <H3Heading size={size}>{job.company}</H3Heading>
 
@@ -48,8 +48,8 @@ export const ExperienceDetails: FC<ExperienceDetailsProps> = ({ job }) => {
 
       <MoreLessCollapsible
         shown={Boolean(job.tasks) || Boolean(job.stacks)}
-        marginTop={'-2'}
-        paddingTop={'2'}
+        marginTop="-2"
+        paddingTop="2"
       >
         <Tasks tasks={job.tasks} />
         <Stacks stacks={job.stacks} />

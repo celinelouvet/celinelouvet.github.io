@@ -20,7 +20,7 @@ export const TextListItem: FC<TextListItemProps> = ({
     <ListItem aria-label={capitalizedAriaLabel}>
       <Tooltip label={capitalizedAriaLabel}>
         <Text as="span">
-          <ListIcon as={icon} marginTop={-1} verticalAlign="middle" />
+          <ListIcon as={icon} marginTop="-1" verticalAlign="middle" />
           {text}
         </Text>
       </Tooltip>

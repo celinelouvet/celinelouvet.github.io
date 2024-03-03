@@ -18,7 +18,7 @@ export const Talks: FC<TalksProps> = ({ resume }) => {
   const { t } = useTranslation('talks');
 
   return (
-    <Stack spacing={'8'}>
+    <Stack spacing="8">
       <PossibleSubjectList subjects={possibleSubjects} />
       <TalkList talks={comingTalks} title={t('toCome')} />
       <TalkList talks={alreadyDoneTalks} title={t('alreadyDone')} />

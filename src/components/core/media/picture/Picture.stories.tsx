@@ -16,14 +16,14 @@ const sizes = ['md', 'lg'];
 export const Picture: Story = {
   render: () => (
     <>
-      <Grid templateColumns="70px 1fr" columnGap="8" alignItems={'center'}>
+      <Grid templateColumns="70px 1fr" columnGap="8" alignItems="center">
         <GridItem colSpan={2}>
           <H2Heading>Sizes</H2Heading>
         </GridItem>
         {sizes.map((size) => (
           <>
             <GridItem>
-              <Text fontWeight={700}>{size}</Text>
+              <Text fontWeight="700">{size}</Text>
             </GridItem>
             <GridItem>
               <PictureComponent size={size} />

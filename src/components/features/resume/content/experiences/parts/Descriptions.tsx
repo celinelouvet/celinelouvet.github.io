@@ -11,9 +11,9 @@ export const Descriptions: FC<DescriptionsProps> = ({ descriptions }) => {
   }
 
   return (
-    <Stack spacing={0}>
+    <Stack spacing="0">
       {descriptions.map((description, index) => (
-        <Text key={index} marginBottom={0}>
+        <Text key={index} marginBottom="0">
           {description}
         </Text>
       ))}
