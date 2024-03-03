@@ -79,6 +79,9 @@
     "tsx": "4.7.1",
     "typescript": "5.3.3"
   },
+  "resolutions": {
+    "jackspeak": "2.1.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/celinelouvet/celinelouvet.github.io.git"
