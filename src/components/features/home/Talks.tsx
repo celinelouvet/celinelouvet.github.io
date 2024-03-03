@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import { H2Heading } from '@/components/core';
 import { type ConventionTalk, type Resume } from '@/data';
-import { useSortByConventions } from '@/hooks';
+import { useLogger, useSortByConventions } from '@/hooks';
 
 import { TalkDetails } from '../talkDetails';
 
@@ -19,6 +19,7 @@ const TalkList: FC<{ talks: ConventionTalk[]; title: string }> = ({
   talks,
   title,
 }) => {
+  const { log } = useLogger();
   const { t } = useTranslation('home', { keyPrefix: 'talks' });
 
   if (talks.length === 0) {
@@ -34,7 +35,12 @@ const TalkList: FC<{ talks: ConventionTalk[]; title: string }> = ({
           <TalkDetails key={key(talk)} talk={talk} />
         ))}
 
-        <Button as={NextLink} href="/talks" variant="link">
+        <Button
+          as={NextLink}
+          href="/talks"
+          variant="link"
+          onClick={() => log('See talks')}
+        >
           {t('seeAllTalks')}
         </Button>
       </Stack>

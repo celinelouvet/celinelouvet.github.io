@@ -4,6 +4,7 @@ import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { H2Heading } from '@/components/core';
+import { useLogger } from '@/hooks';
 
 export type BiographyProps = {
   biographies: string[];
@@ -11,6 +12,7 @@ export type BiographyProps = {
 
 export const Biography: FC<BiographyProps> = ({ biographies }) => {
   const { t } = useTranslation('home', { keyPrefix: 'biography' });
+  const { log } = useLogger();
 
   return (
     <Stack>
@@ -22,7 +24,12 @@ export const Biography: FC<BiographyProps> = ({ biographies }) => {
         ))}
       </Box>
 
-      <Button as={NextLink} href="/resume" variant="link">
+      <Button
+        as={NextLink}
+        href="/resume"
+        variant="link"
+        onClick={() => log('See full resume')}
+      >
         {t('seeDetails')}
       </Button>
     </Stack>

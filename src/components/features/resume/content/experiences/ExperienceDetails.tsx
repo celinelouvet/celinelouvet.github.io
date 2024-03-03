@@ -48,6 +48,12 @@ export const ExperienceDetails: FC<ExperienceDetailsProps> = ({ job }) => {
 
       <MoreLessCollapsible
         shown={Boolean(job.tasks) || Boolean(job.stacks)}
+        logMetadata={{
+          target: 'Experience',
+          company: job.company,
+          from: job.from,
+          to: job.to,
+        }}
         marginTop="-2"
         paddingTop="2"
       >

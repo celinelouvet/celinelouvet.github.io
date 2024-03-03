@@ -23,7 +23,7 @@ export default async function handler(
 
 const loggerSchema = z.object({
   message: z.string(),
-  metadata: z.record(z.string()),
+  metadata: z.record(z.string().or(z.boolean()).nullable().optional()),
 });
 type Logger = z.infer<typeof loggerSchema>;
 

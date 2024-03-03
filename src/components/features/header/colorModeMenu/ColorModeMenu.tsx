@@ -11,6 +11,8 @@ import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BsChevronDown, BsMoonStarsFill, BsSunFill } from 'react-icons/bs';
 
+import { useLogger } from '@/hooks';
+
 type ColorMode = 'light' | 'dark' | 'system';
 const modes: ColorMode[] = ['light', 'dark', 'system'];
 
@@ -21,6 +23,7 @@ const isColorMode = (value: string): value is ColorMode => {
 export const ColorModeMenu: FC = () => {
   const { t } = useTranslation('header', { keyPrefix: 'colorModes' });
   const { colorMode, setColorMode } = useColorMode();
+  const { log } = useLogger();
 
   const leftIcon = colorMode === 'dark' ? <BsMoonStarsFill /> : <BsSunFill />;
 
@@ -32,7 +35,8 @@ export const ColorModeMenu: FC = () => {
       return changeColorMode(value[0]);
     }
     if (isColorMode(value)) {
-      console.log('value', value);
+      log(`Color mode change`, { from: colorMode, to: value });
+
       setColorMode(value);
     }
   };

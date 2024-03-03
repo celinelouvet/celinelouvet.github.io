@@ -2,21 +2,20 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { type AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
 
 import { Header } from '@/components/features';
-import { log } from '@/lib/clientLogger';
+import { useLogger } from '@/hooks';
 import theme from '@/theme';
 
 import '@/lib/i18n/config';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  const { i18n } = useTranslation();
+  const { log } = useLogger();
 
   useEffect(() => {
-    log('Routing', { path: router.asPath, language: i18n.language });
-  }, [router, i18n.language]);
+    log('Routing', { path: router.asPath });
+  }, [router, log]);
 
   return (
     <ChakraProvider theme={theme}>

@@ -10,6 +10,7 @@ import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BsChevronDown, BsTranslate } from 'react-icons/bs';
 
+import { useLogger } from '@/hooks';
 import { AVAILABLE_LANGUAGES, type Languages } from '@/lib/i18n/constants';
 
 const isAvailableLanguage = (value: string): value is Languages => {
@@ -17,6 +18,7 @@ const isAvailableLanguage = (value: string): value is Languages => {
 };
 
 export const LanguageMenu: FC = () => {
+  const { log } = useLogger();
   const { i18n, t } = useTranslation('header', { keyPrefix: 'languages' });
 
   const changeLanguage = (value?: string | string[]): void => {
@@ -27,6 +29,8 @@ export const LanguageMenu: FC = () => {
       return changeLanguage(value[0]);
     }
     if (isAvailableLanguage(value)) {
+      log(`Language change`, { from: i18n.language, to: value });
+
       i18n.changeLanguage(value);
     }
   };

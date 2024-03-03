@@ -92,4 +92,4 @@ jobs:
           version: ${{ env.VERSION }}
 
       - name: Test deployed version
-        run: curl --silent --head "${{ steps.deploy.outputs.version_url }}"
+        run: curl --silent --head "${{ steps.deploy.outputs.version_url }}/test"
