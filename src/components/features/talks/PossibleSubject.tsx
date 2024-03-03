@@ -19,14 +19,17 @@ export const PossibleSubject: FC<PossibleSubjectProps> = ({ subject }) => {
         </CardHeader>
 
         <CardBody>
-          <Descriptions descriptions={descriptions} />
+          <Descriptions topic={topic} descriptions={descriptions} />
         </CardBody>
       </Card>
     </>
   );
 };
 
-const Descriptions: FC<{ descriptions: string[] }> = ({ descriptions }) => {
+const Descriptions: FC<{ topic: string; descriptions: string[] }> = ({
+  topic,
+  descriptions,
+}) => {
   if (descriptions.length === 0) {
     return null;
   }
@@ -37,7 +40,7 @@ const Descriptions: FC<{ descriptions: string[] }> = ({ descriptions }) => {
     <Stack fontSize="sm">
       <Text>{firstLine}</Text>
 
-      <MoreLessCollapsible>
+      <MoreLessCollapsible logMetadata={{ target: 'Subject', topic }}>
         {rest.map((line, index) => (
           <Text key={index}>{line}</Text>
         ))}

@@ -64,7 +64,13 @@ export const TalkDescription: FC<TalkProps> = ({ talk }) => {
         <StackItem fontSize="sm" color={color} flex="1">
           <Text>{firstLine}</Text>
 
-          <MoreLessCollapsible>
+          <MoreLessCollapsible
+            logMetadata={{
+              target: 'Talk',
+              topic: talk.topic,
+              conventionId: talk.conventionId,
+            }}
+          >
             {rest.map((line, index) => (
               <Text key={index}>{line}</Text>
             ))}
