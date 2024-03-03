@@ -1,12 +1,14 @@
 {
   "talkDetails": {
     "date": "D MMM YYYY",
-    "more": "Voir plus",
-    "less": "Voir moins",
     "audio": "Audio",
     "program": "Programme",
     "slides": "Slides",
     "video": "Vidéo"
+  },
+  "moreLessCollapsible": {
+    "more": "Voir plus",
+    "less": "Voir moins"
   },
   "blog": "Blog"
 }

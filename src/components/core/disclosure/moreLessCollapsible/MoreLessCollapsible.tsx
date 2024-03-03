@@ -1,43 +1,14 @@
 import {
   type BoxProps,
-  Button,
   Collapse,
   Stack,
   StackItem,
   useDisclosure,
 } from '@chakra-ui/react';
 import { type FC, type ReactNode } from 'react';
-import { useTranslation } from 'react-i18next';
-import { BsChevronContract, BsChevronExpand } from 'react-icons/bs';
 
-const ShowMore: FC<{ onOpen: () => void }> = ({ onOpen }) => {
-  const { t } = useTranslation('components', { keyPrefix: 'talkDetails' });
-
-  return (
-    <Button
-      onClick={onOpen}
-      rightIcon={<BsChevronExpand />}
-      variant={'outline'}
-      size="sm"
-    >
-      {t('more')}
-    </Button>
-  );
-};
-const ShowLess: FC<{ onClose: () => void }> = ({ onClose }) => {
-  const { t } = useTranslation('components', { keyPrefix: 'talkDetails' });
-
-  return (
-    <Button
-      onClick={onClose}
-      rightIcon={<BsChevronContract />}
-      variant={'outline'}
-      size="sm"
-    >
-      {t('less')}
-    </Button>
-  );
-};
+import { ShowLess } from './ShowLess';
+import { ShowMore } from './ShowMore';
 
 const hasContent = (children?: ReactNode) => {
   if (!Boolean(children)) {
