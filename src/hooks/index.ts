@@ -1,3 +1,4 @@
+export { useActiveSection } from './useActiveSection.hook';
 export { useHeadingSize } from './useHeadingSize.hook';
 export { useLogger } from './useLogger.hook';
 export { usePossibleTalkSubjects } from './usePossibleTalkSubjects.hook';

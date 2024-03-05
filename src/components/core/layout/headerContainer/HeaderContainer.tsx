@@ -24,15 +24,15 @@ export const headerContainerStyles = {
   baseStyle: {
     width: {
       base: '100%',
-      md: '480px',
-      lg: '640px',
-      xl: '880px',
+      md: '720px',
+      lg: '960px',
+      xl: '1320px',
     },
     maxWidth: {
       base: '100%',
-      md: '480px',
-      lg: '640px',
-      xl: '880px',
+      md: '720px',
+      lg: '960px',
+      xl: '1320px',
     },
     paddingLeft: {
       base: '12px',
