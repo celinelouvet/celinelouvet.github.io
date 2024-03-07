@@ -45,9 +45,13 @@ const ArticleImage: FC<Pick<ArticleSummaryProps, 'image'>> = ({ image }) => {
   }
 
   return (
-    <Center width={{ base: '100%', lg: 200 }}>
+    <Center
+      width={{ base: '100%', lg: '200px' }}
+      maxWidth={{ base: '100%', lg: '200px' }}
+      minWidth={{ base: '100%', lg: '200px' }}
+    >
       <Image
-        maxW={{ base: '100%', md: 200 }}
+        maxW={{ base: '100%', md: '200px' }}
         objectFit="cover"
         src={image.src}
         alt={image.alt}
@@ -86,7 +90,11 @@ export const ArticleSummary: FC<ArticleSummaryProps> = ({
           </LinkOverlay>
         </CardHeader>
         <CardBody>
-          <Flex gap="6" direction={{ base: 'column', lg: 'row' }}>
+          <Flex
+            gap="6"
+            direction={{ base: 'column', lg: 'row' }}
+            justifyContent="space-between"
+          >
             {children}
             <ArticleImage image={image} />
           </Flex>
@@ -117,7 +125,7 @@ export const ArticleContent: FC<ArticleContentProps> = ({
         </Flex>
         <Text as="em">Par Céline Louvet</Text>
       </Stack>
-      <Stack spacing="6">{children}</Stack>
+      <Stack spacing="8">{children}</Stack>
     </Stack>
   );
 };
