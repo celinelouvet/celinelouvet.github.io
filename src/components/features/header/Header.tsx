@@ -1,93 +1,20 @@
-import { Center, Flex, Grid, Link, useToken } from '@chakra-ui/react';
-import NextLink from 'next/link';
-import { useRouter } from 'next/router';
+import { Show, useToken } from '@chakra-ui/react';
 import { type FC } from 'react';
-import { useTranslation } from 'react-i18next';
 
-import { HeaderContainer } from '@/components/core';
-
-import { ColorModeMenu } from './colorModeMenu';
-import { LanguageMenu } from './languageMenu';
-
-type ActiveSection = 'home' | 'resume' | 'talks' | 'blog';
-
-const useActiveSection = (): ActiveSection => {
-  const { asPath } = useRouter();
-
-  if (asPath.includes('talks')) {
-    return 'talks';
-  }
-  if (asPath.includes('resume')) {
-    return 'resume';
-  }
-  if (asPath.includes('blog')) {
-    return 'blog';
-  }
-  return 'home';
-};
+import { HeaderAboveLg } from './headerAboveLg';
+import { HeaderBelowLg } from './headerBelowLg';
 
 export const Header: FC = () => {
-  const activeSection = useActiveSection();
-  const [brandGradient] = useToken('colors', ['brandGradient']);
-  const { t } = useTranslation('header', { keyPrefix: 'nav' });
+  const [lg] = useToken('breakpoints', ['lg']);
 
   return (
     <>
-      <Flex bgGradient={`linear-gradient(${brandGradient})`} __css={navStyle}>
-        <HeaderContainer>
-          <Grid templateColumns="repeat(4, 1fr)" gap="6">
-            <Center
-              __css={navItemStyle}
-              bgColor={activeSection === 'home' ? 'brand.300' : 'transparent'}
-            >
-              <Link as={NextLink} href="/">
-                {t('home')}
-              </Link>
-            </Center>
-            <Center
-              __css={navItemStyle}
-              bgColor={activeSection === 'resume' ? 'brand.300' : 'transparent'}
-            >
-              <Link as={NextLink} href="/resume">
-                {t('resume')}
-              </Link>
-            </Center>
-            <Center
-              __css={navItemStyle}
-              bgColor={activeSection === 'talks' ? 'brand.300' : 'transparent'}
-            >
-              <Link as={NextLink} href="/talks">
-                {t('talks')}
-              </Link>
-            </Center>
-            <Center
-              __css={navItemStyle}
-              bgColor={activeSection === 'blog' ? 'brand.300' : 'transparent'}
-            >
-              <Link as={NextLink} href="/blog">
-                {t('blog')}
-              </Link>
-            </Center>
-          </Grid>
-        </HeaderContainer>
-      </Flex>
-      <Flex alignItems="center" justifyContent="end" gap="2" paddingRight="6">
-        <LanguageMenu />
-        <ColorModeMenu />
-      </Flex>
+      <Show breakpoint={`(max-width: ${lg})`}>
+        <HeaderBelowLg />
+      </Show>
+      <Show breakpoint={`(min-width: ${lg})`}>
+        <HeaderAboveLg />
+      </Show>
     </>
   );
-};
-
-const navStyle = {
-  marginBottom: '12px',
-  fontFamily: 'PT Sans Narrow',
-  fontWeight: '400',
-  paddingBottom: '6px',
-  color: 'white',
-};
-
-const navItemStyle = {
-  fontSize: '1.5em',
-  padding: '24px 0 18px 0',
 };

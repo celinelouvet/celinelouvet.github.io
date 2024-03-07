@@ -14,6 +14,8 @@
     "home": "Home",
     "resume": "Resume",
     "talks": "Talks",
-    "blog": "Blog"
+    "blog": "Blog",
+    "open": "Open the navigation menu",
+    "close": "Close the navigation menu"
   }
 }
