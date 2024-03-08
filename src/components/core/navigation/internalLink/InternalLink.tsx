@@ -35,6 +35,7 @@ export const internalLinkStyles = {
     color: 'brand.500',
     fontWeight: '600',
     fontFamily: 'Nunito',
+    textWrap: 'wrap',
 
     _hover: {
       color: mode('brand.400', 'brand.600')(props),

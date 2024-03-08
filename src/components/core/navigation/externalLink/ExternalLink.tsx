@@ -36,6 +36,7 @@ export const externalLinkStyles = {
     fontWeight: '600',
     fontFamily: 'Nunito',
     fontSize: 'sm',
+    textWrap: 'wrap',
 
     _hover: {
       color: mode('brand.400', 'brand.600')(props),
