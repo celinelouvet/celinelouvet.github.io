@@ -4,6 +4,7 @@ import {
   Icon,
   Image,
   ListItem,
+  Show,
   Stack,
   Text,
   UnorderedList,
@@ -20,7 +21,7 @@ import { ArticleContent, ArticleSummary } from './Article';
 export const FeedbackSummary: FC<{ link: string }> = ({ link }) => {
   const image = {
     src: '/others/2-feedbacks/want-your-feedback.png',
-    alt: 'I wan your feedback',
+    alt: 'I want your feedback',
   };
 
   return (
@@ -229,9 +230,11 @@ export const FeedbackContent: FC = () => (
                   />
                 </Center>
               </WrapItem>
-              <WrapItem>
-                <Icon as={FaChevronCircleRight} boxSize="6" />
-              </WrapItem>
+              <Show above="xs">
+                <WrapItem>
+                  <Icon as={FaChevronCircleRight} boxSize="6" />
+                </WrapItem>
+              </Show>
               <WrapItem flexDirection="column" alignItems="center">
                 <Text>Nouvelle version</Text>
                 <Center maxH="200px">
@@ -267,9 +270,11 @@ export const FeedbackContent: FC = () => (
                   />
                 </Center>
               </WrapItem>
-              <WrapItem>
-                <Icon as={FaChevronCircleRight} boxSize="6" />
-              </WrapItem>
+              <Show above="xs">
+                <WrapItem>
+                  <Icon as={FaChevronCircleRight} boxSize="6" />
+                </WrapItem>
+              </Show>
               <WrapItem flexDirection="column" alignItems="center">
                 <Text>Nouvelle version</Text>
                 <Flex>
