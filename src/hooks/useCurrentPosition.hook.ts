@@ -12,18 +12,25 @@ export const useCurrentPosition = (length: number) => {
   useEffect(() => {
     const maxPosition = length - 1;
 
+    const channel = new BroadcastChannel('useCurrentPosition');
+
+    const sendPosition = (position: number) => {
+      channel.postMessage(position);
+      setCurrentPosition(position);
+    };
+
     const next = () => {
       const newPosition =
         currentPosition === maxPosition ? maxPosition : currentPosition + 1;
 
-      setCurrentPosition(newPosition);
+      sendPosition(newPosition);
     };
 
     const back = () => {
       const newPosition =
         currentPosition === 0 ? currentPosition : currentPosition - 1;
 
-      setCurrentPosition(newPosition);
+      sendPosition(newPosition);
     };
 
     const onKeyDown = (event: KeyboardEvent) => {
@@ -36,9 +43,15 @@ export const useCurrentPosition = (length: number) => {
       }
     };
 
+    const onMessage = ({ data: position }: MessageEvent<number>) => {
+      setCurrentPosition(position);
+    };
+
+    channel.addEventListener('message', onMessage);
     document.addEventListener('keydown', onKeyDown);
 
     return () => {
+      channel.removeEventListener('message', onMessage);
       document.removeEventListener('keydown', onKeyDown);
     };
   }, [currentPosition, length]);

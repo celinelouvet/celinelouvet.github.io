@@ -10,22 +10,28 @@ export const useSlideSize = ({ height, width }: WindowSize) => {
   if (windowRatio > ratio) {
     const fontSize = (defaultFontSize * height) / defaultContentHeight;
     const newWidth = height * ratio;
+    const marginLeft = (width - newWidth) / 2;
 
     return {
       height,
       width: newWidth,
       fontSize,
       lineHeight: '2em',
+      marginLeft,
+      marginTop: 0,
     };
   } else {
     const newHeight = width / ratio;
     const fontSize = (defaultFontSize * newHeight) / defaultContentHeight;
+    const marginTop = (height - newHeight) / 2;
 
     return {
       width,
       height: newHeight,
       fontSize,
       lineHeight: '2em',
+      marginLeft: 0,
+      marginTop,
     };
   }
 };
