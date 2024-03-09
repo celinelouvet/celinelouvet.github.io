@@ -19,11 +19,13 @@ export const SlideContent = forwardRef<SlideContentProps, 'div'>(
     if (windowRatio > ratio) {
       const fontSize = (defaultFontSize * height) / defaultContentHeight;
       const newWidth = height * ratio;
+      const marginLeft = (width - newWidth) / 2;
 
       return (
         <Box
           height={height}
           width={newWidth}
+          marginLeft={marginLeft}
           fontSize={fontSize}
           lineHeight="2em"
           ref={ref}
@@ -35,11 +37,13 @@ export const SlideContent = forwardRef<SlideContentProps, 'div'>(
     } else {
       const newHeight = width / ratio;
       const fontSize = (defaultFontSize * newHeight) / defaultContentHeight;
+      const marginTop = (height - newHeight) / 2;
 
       return (
         <Box
           width={width}
           height={newHeight}
+          marginTop={marginTop}
           fontSize={fontSize}
           lineHeight="2em"
           ref={ref}
