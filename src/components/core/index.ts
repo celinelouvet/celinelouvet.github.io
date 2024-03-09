@@ -12,6 +12,7 @@ export * from './layout';
 export * from './list';
 export * from './media';
 export * from './navigation';
+export * from './slide';
 export * from './typography';
 
 export const coreComponents = {

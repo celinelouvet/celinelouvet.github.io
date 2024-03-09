@@ -1,0 +1,1 @@
+export { SlideNote } from './SlideNote';
