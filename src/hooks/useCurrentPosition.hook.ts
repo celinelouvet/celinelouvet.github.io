@@ -1,0 +1,47 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
+const previousKeys = ['ArrowLeft', 'ArrowUp'];
+const nextKeys = ['ArrowRight', 'ArrowDown', ' '];
+const defaultPosition = 0;
+
+export const useCurrentPosition = (length: number) => {
+  const [currentPosition, setCurrentPosition] = useState(defaultPosition);
+
+  useEffect(() => {
+    const maxPosition = length - 1;
+
+    const next = () => {
+      const newPosition =
+        currentPosition === maxPosition ? maxPosition : currentPosition + 1;
+
+      setCurrentPosition(newPosition);
+    };
+
+    const back = () => {
+      const newPosition =
+        currentPosition === 0 ? currentPosition : currentPosition - 1;
+
+      setCurrentPosition(newPosition);
+    };
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (nextKeys.includes(event.key)) {
+        next();
+      }
+
+      if (previousKeys.includes(event.key)) {
+        back();
+      }
+    };
+
+    document.addEventListener('keydown', onKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', onKeyDown);
+    };
+  }, [currentPosition, length]);
+
+  return currentPosition;
+};
