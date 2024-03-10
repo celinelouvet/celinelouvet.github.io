@@ -11,6 +11,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -28,7 +29,8 @@ export const HeaderDrawer: FC<HeaderDrawerProps> = ({
   isOpen,
   onClose,
 }) => {
-  const { slug } = useActiveSection();
+  const { asPath } = useRouter();
+  const { slug } = useActiveSection(asPath);
   const { t } = useTranslation('header', { keyPrefix: 'nav' });
 
   return (

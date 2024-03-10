@@ -1,4 +1,5 @@
 import { Flex, useDisclosure, useToken } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 import { type FC } from 'react';
 
 import { HeaderContainer } from '@/components/core';
@@ -11,7 +12,8 @@ import { ColorModeMenu } from '../colorModeMenu';
 import { LanguageMenu } from '../languageMenu';
 
 export const HeaderBelowLg: FC = () => {
-  const { slug: activeSlug } = useActiveSection();
+  const { asPath } = useRouter();
+  const { slug: activeSlug } = useActiveSection(asPath);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [brandGradient] = useToken('colors', ['brandGradient']);
   const { firstname, lastname } = useResume();

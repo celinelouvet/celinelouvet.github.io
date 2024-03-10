@@ -1,5 +1,6 @@
 import { Button, DarkMode } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -11,13 +12,14 @@ type HeaderButtonProps = {
 };
 
 export const HeaderButton: FC<HeaderButtonProps> = ({ section }) => {
-  const activeSection = useActiveSection();
+  const { asPath } = useRouter();
+  const { slug: activeSlug } = useActiveSection(asPath);
   const { t } = useTranslation('header', { keyPrefix: 'nav' });
 
   return (
     <DarkMode>
       <Button
-        isActive={activeSection.slug === section.slug}
+        isActive={activeSlug === section.slug}
         as={NextLink}
         href={section.href}
         size="2xl"
