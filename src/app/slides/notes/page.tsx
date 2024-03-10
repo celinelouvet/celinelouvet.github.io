@@ -16,6 +16,7 @@ export default function Page() {
       left="0"
       right="0"
       bottom="0"
+      backgroundColor="brand.900"
     />
   );
 }

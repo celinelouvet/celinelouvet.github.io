@@ -1,0 +1,1 @@
+export { SlideTimer } from './SlideTimer';
