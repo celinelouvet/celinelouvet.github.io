@@ -10,7 +10,7 @@ const maxSlides = 5;
 const contentExample = <Text>Big example</Text>;
 
 const noteExample = (
-  <SlideNote>
+  <SlideNote key="text" minutes={2} seconds={56}>
     <UnorderedList>
       <ListItem>
         Qui a eu envie un jour de se lancer dans la création de startup ?
@@ -38,7 +38,7 @@ const slides: Slide[] = [
 for (let i = 0; i < maxSlides; i++) {
   slides.push({
     content: <SlideContent>Content {i + 1}</SlideContent>,
-    note: <SlideNote>Note {i + 1}</SlideNote>,
+    note: <SlideNote minutes={i + 1}>Note {i + 1}</SlideNote>,
   });
 }
 
