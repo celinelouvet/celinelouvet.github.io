@@ -25,9 +25,6 @@ export const H1Heading = forwardRef<H1HeadingProps, 'h1'>(
 export const h1HeadingStyles = {
   baseStyle: {
     fontFamily: 'PT Sans Narrow',
-    textTransform: 'uppercase',
-    fontWeight: '400',
-    paddingBottom: '3',
   },
   sizes: {
     md: {
@@ -37,7 +34,15 @@ export const h1HeadingStyles = {
       fontSize: '2.75rem',
     },
   },
+  variants: {
+    basic: {
+      textTransform: 'uppercase',
+      fontWeight: '400',
+      paddingBottom: '3',
+    },
+  },
   defaultProps: {
     size: 'md',
+    variant: 'basic',
   },
 } satisfies StyleConfig;
