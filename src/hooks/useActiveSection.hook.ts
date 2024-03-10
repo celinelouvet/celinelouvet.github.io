@@ -1,9 +1,6 @@
-import { useRouter } from 'next/router';
-
 import { type Section, url2slugs } from '@/data';
 
-export const useActiveSection = (): Section => {
-  const { asPath } = useRouter();
+export const useActiveSection = (asPath: string): Section => {
   const root = keepRoot(asPath);
 
   if (!url2slugs.has(root)) {
