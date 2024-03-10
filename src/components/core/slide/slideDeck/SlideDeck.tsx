@@ -1,28 +1,21 @@
-import { Box, type BoxProps, forwardRef } from '@chakra-ui/react';
+import { type BoxProps, forwardRef } from '@chakra-ui/react';
 
-import { useArray, useCurrentPosition } from '@/hooks';
+import { SlideDeckForContent } from './SlideDeckForContent';
+import { SlideDeckForNotes } from './SlideDeckForNotes';
 
-type SlideDeckProps = BoxProps;
+export type SlideDeckProps = BoxProps & {
+  forNotes?: boolean;
+};
 
 export const SlideDeck = forwardRef<SlideDeckProps, 'div'>(
-  ({ children, ...props }, ref) => {
-    const array = useArray(children);
-    const currentPosition = useCurrentPosition(array.length);
-
-    return (
-      <>
-        {array.map((child, index) => (
-          <Box
-            key={index}
-            display={index !== currentPosition ? 'none' : ''}
-            userSelect="none"
-            {...props}
-            ref={ref}
-          >
-            {child}
-          </Box>
-        ))}
-      </>
-    );
-  }
+  ({ children, forNotes = false, ...props }, ref) =>
+    forNotes ? (
+      <SlideDeckForNotes {...props} ref={ref}>
+        {children}
+      </SlideDeckForNotes>
+    ) : (
+      <SlideDeckForContent {...props} ref={ref}>
+        {children}
+      </SlideDeckForContent>
+    )
 );

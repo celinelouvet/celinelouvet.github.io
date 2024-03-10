@@ -47,11 +47,13 @@ type Story = StoryObj<typeof meta>;
 export const Content: Story = {
   args: {
     children: contents,
+    forNotes: false,
   },
 };
 
 export const Notes: Story = {
   args: {
     children: notes,
+    forNotes: true,
   },
 };

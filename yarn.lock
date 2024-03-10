@@ -10174,6 +10174,11 @@ react-style-singleton@^2.2.1:
     invariant "^2.2.4"
     tslib "^2.0.0"
 
+react-timer-hook@3.0.7:
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/react-timer-hook/-/react-timer-hook-3.0.7.tgz#ac42c43d0034b873cbf97b44eb34ccb2b11fe5e0"
+  integrity sha512-ATpNcU+PQRxxfNBPVqce2+REtjGAlwmfoNQfcEBMZFxPj0r3GYdKhyPHdStvqrejejEi0QvqaJZjy2lBlFvAsA==
+
 react-use-measure@2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/react-use-measure/-/react-use-measure-2.1.1.tgz#5824537f4ee01c9469c45d5f7a8446177c6cc4ba"
