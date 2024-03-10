@@ -7,7 +7,11 @@ export const getSlides = () => {
 
   for (let i = 0; i < maxSlides; i++) {
     contents.push(<SlideContent key={i}>Content {i + 1}</SlideContent>);
-    notes.push(<SlideNote key={i}>Note {i + 1}</SlideNote>);
+    notes.push(
+      <SlideNote key={i} minutes={i + 1}>
+        Note {i + 1}
+      </SlideNote>
+    );
   }
   return { contents, notes };
 };

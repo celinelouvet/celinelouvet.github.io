@@ -1,26 +1,36 @@
 import {
-  Box as ChakraBox,
-  type BoxProps as ChakraBoxProps,
+  Stack,
+  StackItem,
+  type StackProps,
   forwardRef,
 } from '@chakra-ui/react';
 
-type Omitted = 'size' | 'boxSize' | 'width' | 'height' | 'w' | 'h';
-type SlideNoteProps = Omit<ChakraBoxProps, Omitted>;
+import { TimeText } from '@/components/core';
+
+type SlideNoteProps = StackProps & {
+  hours?: number;
+  minutes?: number;
+  seconds?: number;
+};
 
 export const SlideNote = forwardRef<SlideNoteProps, 'div'>(
-  ({ children, ...props }, ref) => {
+  ({ hours, minutes, seconds, children, ...props }, ref) => {
     return (
-      <ChakraBox
-        w="100%"
-        h="100%"
-        padding="4"
-        fontSize="2xl"
-        lineHeight="2"
-        ref={ref}
-        {...props}
-      >
-        {children}
-      </ChakraBox>
+      <Stack ref={ref} {...props} gap="4">
+        {hours || minutes || seconds ? (
+          <StackItem
+            textAlign="center"
+            backgroundColor="brand.600"
+            borderRadius="md"
+            paddingY="1"
+          >
+            <TimeText {...{ hours, minutes, seconds }} />
+          </StackItem>
+        ) : null}
+        <StackItem fontSize="2xl" lineHeight="2">
+          {children}
+        </StackItem>
+      </Stack>
     );
   }
 );
