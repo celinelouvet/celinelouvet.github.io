@@ -13,7 +13,7 @@ export const Picture = forwardRef<PictureProps, 'img'>(
     const styles = useStyleConfig('Picture', { size });
 
     return (
-      <ChakraAvatar src="./square-gray.png" sx={styles} {...props} ref={ref} />
+      <ChakraAvatar src="/square-gray.png" sx={styles} {...props} ref={ref} />
     );
   }
 );
