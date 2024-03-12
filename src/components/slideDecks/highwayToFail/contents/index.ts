@@ -1,0 +1,1 @@
+export { getSlides } from './slides';

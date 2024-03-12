@@ -1,8 +1,7 @@
 'use client';
 
 import { SlideDeck } from '@/components/core';
-
-import { getSlides } from '../slides';
+import { getSlides } from '@/components/slideDecks/highwayToFail';
 
 export default function Page() {
   const { contents } = getSlides();
