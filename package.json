@@ -29,6 +29,7 @@
     "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.0",
     "@fontsource/inter": "5.0.16",
+    "@fontsource/noto-mono": "5.0.7",
     "@fontsource/nunito": "5.0.16",
     "@fontsource/pt-sans-narrow": "5.0.19",
     "@google-cloud/datastore": "^8.5.0",
