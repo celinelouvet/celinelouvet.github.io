@@ -28,10 +28,10 @@ export const h1HeadingStyles = {
   },
   sizes: {
     md: {
-      fontSize: '2.5rem',
+      fontSize: '2.5em',
     },
     lg: {
-      fontSize: '2.75rem',
+      fontSize: '2.75em',
     },
   },
   variants: {
