@@ -8,6 +8,10 @@ import Fairvioo3 from './Fairvioo3';
 import Fairvioo4 from './Fairvioo4';
 import Introduction from './Introduction';
 import MainTitle from './MainTitle';
+import Numbers1 from './Numbers1';
+import Numbers2 from './Numbers2';
+import Numbers3 from './Numbers3';
+import Numbers4 from './Numbers4';
 import Preface1 from './Preface1';
 import Preface2 from './Preface2';
 import Preface3 from './Preface3';
@@ -30,6 +34,11 @@ export const getSlides = () => {
     Preface2,
     Preface3,
     Preface4,
+
+    Numbers1,
+    Numbers2,
+    Numbers3,
+    Numbers4,
 
     EndTitle,
     PromotionLyonCraft,
