@@ -10,6 +10,10 @@ import { content as Fairvioo3Content } from './Fairvioo3';
 import { content as Fairvioo4Content } from './Fairvioo4';
 import { content as IntroductionContent } from './Introduction';
 import { content as MainTitleContent } from './MainTitle';
+import { content as Preface1Content } from './Preface1';
+import { content as Preface2Content } from './Preface2';
+import { content as Preface3Content } from './Preface3';
+import { content as Preface4Content } from './Preface4';
 import { content as PromotionLyonCraftContent } from './PromotionLyonCraft';
 import { content as SurveySectionTitleContent } from './SurveySectionTitle';
 
@@ -55,6 +59,22 @@ export const Fairvioo3: Story = {
 
 export const Fairvioo4: Story = {
   render: () => <SlideDeck>{Fairvioo4Content}</SlideDeck>,
+};
+
+export const Preface1: Story = {
+  render: () => <SlideDeck>{Preface1Content}</SlideDeck>,
+};
+
+export const Preface2: Story = {
+  render: () => <SlideDeck>{Preface2Content}</SlideDeck>,
+};
+
+export const Preface3: Story = {
+  render: () => <SlideDeck>{Preface3Content}</SlideDeck>,
+};
+
+export const Preface4: Story = {
+  render: () => <SlideDeck>{Preface4Content}</SlideDeck>,
 };
 
 export const EndTitle: Story = {
