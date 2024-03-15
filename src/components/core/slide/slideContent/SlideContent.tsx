@@ -3,7 +3,7 @@ import { useRef } from 'react';
 
 import { useWindowSize } from '@/hooks';
 
-import { SlideContentMainTitle } from './contents';
+import { SlideContentMainTitle, SlideContentWith2Columns } from './contents';
 import { type Contents, SlideContentTypes } from './types';
 
 const defaultFontSize = 18;
@@ -62,9 +62,14 @@ export const SlideContent = forwardRef<SlideContentProps, 'div'>(
 );
 
 const getContent = (props: SlideContentProps): React.ReactNode => {
-  if (props.type === SlideContentTypes.title) {
-    return <SlideContentMainTitle {...props} />;
-  }
+  switch (props.type) {
+    case SlideContentTypes.title:
+      return <SlideContentMainTitle {...props} />;
 
-  return <Text>Unknown content type</Text>;
+    case SlideContentTypes.content2Columns:
+      return <SlideContentWith2Columns {...props} />;
+
+    default:
+      <Text>Unknown type</Text>;
+  }
 };
