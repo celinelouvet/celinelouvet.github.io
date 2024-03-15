@@ -101,3 +101,11 @@ export const Promotion: Story = {
     room: 'Room 1',
   },
 };
+
+export const Abstract: Story = {
+  args: {
+    type: SlideContentTypes.abstract,
+    topic: highwayToFail.abstract.title,
+    descriptions: highwayToFail.abstract.descriptions,
+  },
+};

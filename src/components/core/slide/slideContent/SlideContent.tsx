@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { useWindowSize } from '@/hooks';
 
 import {
+  SlideContentAbstract,
   SlideContentEndTitle,
   SlideContentIntroduction,
   SlideContentMainTitle,
@@ -83,6 +84,9 @@ const getContent = (props: SlideContentProps): React.ReactNode => {
 
     case SlideContentTypes.promotion:
       return <SlideContentPromotion {...props} />;
+
+    case SlideContentTypes.abstract:
+      return <SlideContentAbstract {...props} />;
 
     default:
       <Text>Unknown type</Text>;
