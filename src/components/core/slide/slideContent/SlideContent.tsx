@@ -1,13 +1,25 @@
-import { Box, type BoxProps, forwardRef } from '@chakra-ui/react';
+import { type BoxProps, Text, forwardRef } from '@chakra-ui/react';
+import { type ForwardedRef } from 'react';
 
-type SlideContentProps = BoxProps;
+import { SlideContentMainTitle } from './contents';
+import { type Contents, SlideContentTypes } from './types';
+import { type Slide } from '../types';
+
+type SlideContentProps = BoxProps & Contents;
 
 export const SlideContent = forwardRef<SlideContentProps, 'div'>(
-  ({ children, ...props }, ref) => {
-    return (
-      <Box ref={ref} {...props} width="100%" height="100%">
-        {children}
-      </Box>
-    );
+  (props, ref) => {
+    return getContent(props, ref);
   }
 );
+
+const getContent = (
+  props: SlideContentProps,
+  ref: ForwardedRef<'div'>
+): Slide['content'] => {
+  if (props.type === SlideContentTypes.title) {
+    return <SlideContentMainTitle {...props} ref={ref} />;
+  }
+
+  return <Text>Unknown content type</Text>;
+};

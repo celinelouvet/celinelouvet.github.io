@@ -1,7 +1,12 @@
 import { ListItem, Text, UnorderedList } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { type Slide, SlideContent, SlideNote } from '@/components/core';
+import {
+  type Slide,
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+} from '@/components/core';
 
 import { SlideDeck as SlideDeckComponent } from './SlideDeck';
 
@@ -37,7 +42,13 @@ const slides: Slide[] = [
 
 for (let i = 0; i < maxSlides; i++) {
   slides.push({
-    content: <SlideContent>Content {i + 1}</SlideContent>,
+    content: (
+      <SlideContent
+        type={SlideContentTypes.title}
+        title={`Title ${i + 1}`}
+        author="author"
+      ></SlideContent>
+    ),
     note: <SlideNote minutes={i + 1}>Note {i + 1}</SlideNote>,
   });
 }
