@@ -7,6 +7,7 @@ import EndTitleSlide from './EndTitle';
 import IntroductionSlide from './Introduction';
 import MainTitleSlide from './MainTitle';
 import PromotionLyonCraftSlide from './PromotionLyonCraft';
+import SurveySectionTitleSlide from './SurveySectionTitle';
 
 const meta = {
   title: 'Talks/HighwayToFail',
@@ -31,6 +32,12 @@ export const PromotionLyonCraft: Story = {
 export const MainTitle: Story = {
   args: {
     slides: [MainTitleSlide],
+  },
+};
+
+export const SurveySectionTitle: Story = {
+  args: {
+    slides: [SurveySectionTitleSlide],
   },
 };
 
