@@ -133,3 +133,20 @@ export const SectionTitleWithThinColumn: Story = {
     ),
   },
 };
+
+export const TitleWithContent: Story = {
+  args: {
+    type: SlideContentTypes.titleWithContent,
+    title: 'Title with content',
+    children: (
+      <Box
+        width="100%"
+        height="100%"
+        border="1px solid"
+        borderColor="brand.500"
+      >
+        Content
+      </Box>
+    ),
+  },
+};

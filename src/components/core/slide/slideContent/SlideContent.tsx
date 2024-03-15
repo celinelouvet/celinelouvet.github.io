@@ -11,6 +11,7 @@ import {
   SlideContentPromotion,
   SlideContentSectionTitle,
   SlideContentSectionTitleWithThinColumn,
+  SlideContentTitleWithContent,
   SlideContentWith2Columns,
 } from './contents';
 import { type Contents, SlideContentTypes } from './types';
@@ -86,6 +87,9 @@ const getContent = (props: SlideContentProps): React.ReactNode => {
 
     case SlideContentTypes.sectionTitleWithThinColumn:
       return <SlideContentSectionTitleWithThinColumn {...props} />;
+
+    case SlideContentTypes.titleWithContent:
+      return <SlideContentTitleWithContent {...props} />;
 
     case SlideContentTypes.endTitle:
       return <SlideContentEndTitle {...props} />;
