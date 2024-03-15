@@ -5,6 +5,7 @@ import {
   SlideContentEndTitle,
   SlideContentIntroduction,
   SlideContentMainTitle,
+  SlideContentPromotion,
   SlideContentWith2Columns,
 } from './contents';
 import { type Contents, SlideContentTypes } from './types';
@@ -34,6 +35,9 @@ const getContent = (
 
     case SlideContentTypes.endTitle:
       return <SlideContentEndTitle {...props} ref={ref} />;
+
+    case SlideContentTypes.promotion:
+      return <SlideContentPromotion {...props} ref={ref} />;
 
     default:
       <Text>Unknown type</Text>;
