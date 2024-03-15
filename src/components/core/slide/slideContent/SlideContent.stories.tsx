@@ -109,3 +109,10 @@ export const Abstract: Story = {
     descriptions: highwayToFail.abstract.descriptions,
   },
 };
+
+export const SectionTitle: Story = {
+  args: {
+    type: SlideContentTypes.sectionTitle,
+    title: 'Section Title',
+  },
+};
