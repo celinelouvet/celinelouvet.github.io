@@ -6,3 +6,4 @@ export * from './mainTitle';
 export * from './promotion';
 export * from './sectionTitle';
 export * from './sectionTitleWithThinColumn';
+export * from './titleWithContent';

@@ -6,6 +6,7 @@ export enum SlideContentTypes {
   introduction = 'introduction',
   sectionTitle = 'sectionTitle',
   sectionTitleWithThinColumn = 'sectionTitleWithThinColumn',
+  titleWithContent = 'titleWithContent',
   endTitle = 'endTitle',
   promotion = 'promotion',
   abstract = 'abstract',
@@ -56,6 +57,11 @@ const ContentSectionTitleWithThinColumnSchema = z.object({
   column1: z.any(),
 });
 
+const ContentTitleWithContentSchema = z.object({
+  type: z.literal(SlideContentTypes.titleWithContent),
+  title: z.string(),
+});
+
 const ContentEndTitleSchema = z.object({
   type: z.literal(SlideContentTypes.endTitle),
 });
@@ -81,6 +87,7 @@ const ContentsSchema = z.discriminatedUnion('type', [
   ContentIntroductionSchema,
   ContentSectionTitleSchema,
   ContentSectionTitleWithThinColumnSchema,
+  ContentTitleWithContentSchema,
   ContentEndTitleSchema,
   ContentPromotionSchema,
   ContentAbstractSchema,
@@ -92,6 +99,9 @@ export type ContentIntroduction = z.infer<typeof ContentIntroductionSchema>;
 export type ContentSectionTitle = z.infer<typeof ContentSectionTitleSchema>;
 export type ContentSectionTitleWithThinColumn = z.infer<
   typeof ContentSectionTitleWithThinColumnSchema
+>;
+export type ContentTitleWithContent = z.infer<
+  typeof ContentTitleWithContentSchema
 >;
 export type ContentEndTitle = z.infer<typeof ContentEndTitleSchema>;
 export type ContentPromotion = z.infer<typeof ContentPromotionSchema>;
