@@ -96,7 +96,7 @@ const talkSubjects = new Map<string, TalkSubject>([
       topic: 'Highway to fail',
       descriptions: [
         'You want to venture into entrepreneurship, but are still undecided? You would see yourself creating your own startup, but don’t dare? You might be right, since, as we now know it, 90 % of the startups will go bankrupt, with 10 % during the first year.',
-        'At the end of 2018, I joined 2 cofonders to create our first startup. And towards June 2020, we closed down for good. Why ? Between product, technics, business and human factors, sometimes, it can be hard to find the balance.',
+        'At the end of 2017, I joined 2 cofonders to create our first startup. And towards June 2019, we closed down for good. Why ? Between product, technics, business and human factors, sometimes, it can be hard to find the balance.',
         'Through my own entrepreneurial journey, I want to come back to some of our mistakes and if we could have prevented it. Maybe this honest self-reflection will help you prevent some pitfalls.',
       ],
     },
