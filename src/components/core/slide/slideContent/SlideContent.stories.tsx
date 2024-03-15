@@ -90,3 +90,14 @@ export const Title: Story = {
     author: highwayToFail.author,
   },
 };
+
+export const Promotion: Story = {
+  args: {
+    type: SlideContentTypes.promotion,
+    author: highwayToFail.author,
+    title: highwayToFail.title,
+    convention: 'Lyon Craft',
+    time: '2024-04-08T10:30:00Z',
+    room: 'Room 1',
+  },
+};
