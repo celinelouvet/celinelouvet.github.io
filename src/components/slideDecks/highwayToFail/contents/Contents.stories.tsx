@@ -2,6 +2,7 @@ import { type Meta, type StoryObj } from '@storybook/react';
 
 import { SlideDeck } from '@/components/core';
 
+import { content as EndTitleContent } from './EndTitle';
 import { content as IntroductionContent } from './Introduction';
 import { content as MainTitleContent } from './MainTitle';
 
@@ -19,4 +20,8 @@ export const MainTitle: Story = {
 
 export const Introduction: Story = {
   render: () => <SlideDeck>{IntroductionContent}</SlideDeck>,
+};
+
+export const EndTitle: Story = {
+  render: () => <SlideDeck>{EndTitleContent}</SlideDeck>,
 };
