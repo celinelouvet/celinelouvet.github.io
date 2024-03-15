@@ -1,7 +1,7 @@
 import { type BoxProps, Text, forwardRef } from '@chakra-ui/react';
 import { type ForwardedRef } from 'react';
 
-import { SlideContentMainTitle } from './contents';
+import { SlideContentMainTitle, SlideContentWith2Columns } from './contents';
 import { type Contents, SlideContentTypes } from './types';
 import { type Slide } from '../types';
 
@@ -17,9 +17,14 @@ const getContent = (
   props: SlideContentProps,
   ref: ForwardedRef<'div'>
 ): Slide['content'] => {
-  if (props.type === SlideContentTypes.title) {
-    return <SlideContentMainTitle {...props} ref={ref} />;
-  }
+  switch (props.type) {
+    case SlideContentTypes.title:
+      return <SlideContentMainTitle {...props} ref={ref} />;
 
-  return <Text>Unknown content type</Text>;
+    case SlideContentTypes.content2Columns:
+      return <SlideContentWith2Columns {...props} ref={ref} />;
+
+    default:
+      <Text>Unknown type</Text>;
+  }
 };
