@@ -7,6 +7,7 @@ import { content as EndTitleContent } from './EndTitle';
 import { content as IntroductionContent } from './Introduction';
 import { content as MainTitleContent } from './MainTitle';
 import { content as PromotionLyonCraftContent } from './PromotionLyonCraft';
+import { content as SurveySectionTitleContent } from './SurveySectionTitle';
 
 const meta = {
   title: 'Talks/HighwayToFail',
@@ -26,6 +27,10 @@ export const PromotionLyonCraft: Story = {
 
 export const MainTitle: Story = {
   render: () => <SlideDeck>{MainTitleContent}</SlideDeck>,
+};
+
+export const SurveySectionTitle: Story = {
+  render: () => <SlideDeck>{SurveySectionTitleContent}</SlideDeck>,
 };
 
 export const Introduction: Story = {

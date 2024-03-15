@@ -5,10 +5,12 @@ import EndTitle from './EndTitle';
 import Introduction from './Introduction';
 import MainTitle from './MainTitle';
 import PromotionLyonCraft from './PromotionLyonCraft';
+import SurveySectionTitle from './SurveySectionTitle';
 
 export const getSlides = () => {
   const slides = [
     MainTitle,
+    SurveySectionTitle,
     Introduction,
 
     EndTitle,
