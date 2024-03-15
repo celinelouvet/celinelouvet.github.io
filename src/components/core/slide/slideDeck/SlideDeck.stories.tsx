@@ -1,7 +1,7 @@
 import { ListItem, Text, UnorderedList } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { SlideContent, SlideNote } from '@/components/core';
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
 import { SlideDeck as SlideDeckComponent } from './SlideDeck';
 
@@ -32,7 +32,14 @@ const contents: React.ReactNode[] = [contentExample];
 const notes: React.ReactNode[] = [noteExample];
 
 for (let i = 0; i < maxSlides; i++) {
-  contents.push(<SlideContent key={i}>Content {i + 1}</SlideContent>);
+  contents.push(
+    <SlideContent
+      type={SlideContentTypes.title}
+      key={i}
+      title={`Title ${i + 1}`}
+      author="author"
+    ></SlideContent>
+  );
   notes.push(
     <SlideNote key={i} minutes={i + 1}>
       Note {i + 1}

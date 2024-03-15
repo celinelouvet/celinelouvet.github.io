@@ -1,13 +1,16 @@
-import { Box, type BoxProps, forwardRef } from '@chakra-ui/react';
+import { Box, type BoxProps, Text, forwardRef } from '@chakra-ui/react';
 import { useRef } from 'react';
 
 import { useWindowSize } from '@/hooks';
+
+import { SlideContentMainTitle } from './contents';
+import { type Contents, SlideContentTypes } from './types';
 
 const defaultFontSize = 18;
 const defaultContentHeight = 450;
 const ratio = 16 / 9;
 
-type SlideContentProps = BoxProps;
+type SlideContentProps = BoxProps & Contents;
 
 export const SlideContent = forwardRef<SlideContentProps, 'div'>(
   ({ children, ...props }, ref) => {
@@ -15,6 +18,8 @@ export const SlideContent = forwardRef<SlideContentProps, 'div'>(
     const { width, height } = useWindowSize(elemref);
 
     const windowRatio = width / height;
+
+    const content = getContent({ children, ...props });
 
     if (windowRatio > ratio) {
       const fontSize = (defaultFontSize * height) / defaultContentHeight;
@@ -31,7 +36,7 @@ export const SlideContent = forwardRef<SlideContentProps, 'div'>(
           ref={ref}
           {...props}
         >
-          {children}
+          {content}
         </Box>
       );
     } else {
@@ -49,9 +54,17 @@ export const SlideContent = forwardRef<SlideContentProps, 'div'>(
           ref={ref}
           {...props}
         >
-          {children}
+          {content}
         </Box>
       );
     }
   }
 );
+
+const getContent = (props: SlideContentProps): React.ReactNode => {
+  if (props.type === SlideContentTypes.title) {
+    return <SlideContentMainTitle {...props} />;
+  }
+
+  return <Text>Unknown content type</Text>;
+};
