@@ -10,6 +10,10 @@ import Fairvioo3Slide from './Fairvioo3';
 import Fairvioo4Slide from './Fairvioo4';
 import IntroductionSlide from './Introduction';
 import MainTitleSlide from './MainTitle';
+import Numbers1Slide from './Numbers1';
+import Numbers2Slide from './Numbers2';
+import Numbers3Slide from './Numbers3';
+import Numbers4Slide from './Numbers4';
 import Preface1Slide from './Preface1';
 import Preface2Slide from './Preface2';
 import Preface3Slide from './Preface3';
@@ -100,6 +104,30 @@ export const Preface3: Story = {
 export const Preface4: Story = {
   args: {
     slides: [Preface4Slide],
+  },
+};
+
+export const Numbers1: Story = {
+  args: {
+    slides: [Numbers1Slide],
+  },
+};
+
+export const Numbers2: Story = {
+  args: {
+    slides: [Numbers2Slide],
+  },
+};
+
+export const Numbers3: Story = {
+  args: {
+    slides: [Numbers3Slide],
+  },
+};
+
+export const Numbers4: Story = {
+  args: {
+    slides: [Numbers4Slide],
   },
 };
 
