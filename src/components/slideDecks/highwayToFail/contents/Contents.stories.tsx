@@ -2,6 +2,7 @@ import { type Meta, type StoryObj } from '@storybook/react';
 
 import { SlideDeck } from '@/components/core';
 
+import AbstractSlide from './Abstract';
 import EndTitleSlide from './EndTitle';
 import IntroductionSlide from './Introduction';
 import MainTitleSlide from './MainTitle';
@@ -14,6 +15,12 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
+
+export const Abstract: Story = {
+  args: {
+    slides: [AbstractSlide],
+  },
+};
 
 export const PromotionLyonCraft: Story = {
   args: {
