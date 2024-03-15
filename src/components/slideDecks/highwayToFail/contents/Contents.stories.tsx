@@ -5,6 +5,7 @@ import { SlideDeck } from '@/components/core';
 import EndTitleSlide from './EndTitle';
 import IntroductionSlide from './Introduction';
 import MainTitleSlide from './MainTitle';
+import PromotionLyonCraftSlide from './PromotionLyonCraft';
 
 const meta = {
   title: 'Talks/HighwayToFail',
@@ -13,6 +14,12 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
+
+export const PromotionLyonCraft: Story = {
+  args: {
+    slides: [PromotionLyonCraftSlide],
+  },
+};
 
 export const MainTitle: Story = {
   args: {
