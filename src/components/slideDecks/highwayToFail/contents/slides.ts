@@ -1,9 +1,10 @@
 'use client';
 
+import Introduction from './Introduction';
 import MainTitle from './MainTitle';
 
 export const getSlides = () => {
-  const slides = [MainTitle];
+  const slides = [MainTitle, Introduction];
 
   const contents = slides.map((slide, index) => ({
     ...slide.content,
