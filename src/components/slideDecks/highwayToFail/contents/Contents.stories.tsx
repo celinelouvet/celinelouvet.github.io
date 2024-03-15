@@ -10,6 +10,10 @@ import Fairvioo3Slide from './Fairvioo3';
 import Fairvioo4Slide from './Fairvioo4';
 import IntroductionSlide from './Introduction';
 import MainTitleSlide from './MainTitle';
+import Preface1Slide from './Preface1';
+import Preface2Slide from './Preface2';
+import Preface3Slide from './Preface3';
+import Preface4Slide from './Preface4';
 import PromotionLyonCraftSlide from './PromotionLyonCraft';
 import SurveySectionTitleSlide from './SurveySectionTitle';
 
@@ -72,6 +76,30 @@ export const Fairvioo3: Story = {
 export const Fairvioo4: Story = {
   args: {
     slides: [Fairvioo4Slide],
+  },
+};
+
+export const Preface1: Story = {
+  args: {
+    slides: [Preface1Slide],
+  },
+};
+
+export const Preface2: Story = {
+  args: {
+    slides: [Preface2Slide],
+  },
+};
+
+export const Preface3: Story = {
+  args: {
+    slides: [Preface3Slide],
+  },
+};
+
+export const Preface4: Story = {
+  args: {
+    slides: [Preface4Slide],
   },
 };
 
