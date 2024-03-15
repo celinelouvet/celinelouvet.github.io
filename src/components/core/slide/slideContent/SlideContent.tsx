@@ -9,6 +9,7 @@ import {
   SlideContentPromotion,
   SlideContentSectionTitle,
   SlideContentSectionTitleWithThinColumn,
+  SlideContentTitleWith2Columns,
   SlideContentTitleWithContent,
   SlideContentWith2Columns,
 } from './contents';
@@ -45,6 +46,9 @@ const getContent = (
 
     case SlideContentTypes.titleWithContent:
       return <SlideContentTitleWithContent {...props} ref={ref} />;
+
+    case SlideContentTypes.titleWith2Columns:
+      return <SlideContentTitleWith2Columns {...props} ref={ref} />;
 
     case SlideContentTypes.endTitle:
       return <SlideContentEndTitle {...props} ref={ref} />;
