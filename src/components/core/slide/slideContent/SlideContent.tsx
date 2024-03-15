@@ -7,6 +7,7 @@ import {
   SlideContentIntroduction,
   SlideContentMainTitle,
   SlideContentPromotion,
+  SlideContentSectionTitle,
   SlideContentWith2Columns,
 } from './contents';
 import { type Contents, SlideContentTypes } from './types';
@@ -33,6 +34,9 @@ const getContent = (
 
     case SlideContentTypes.introduction:
       return <SlideContentIntroduction {...props} ref={ref} />;
+
+    case SlideContentTypes.sectionTitle:
+      return <SlideContentSectionTitle {...props} ref={ref} />;
 
     case SlideContentTypes.endTitle:
       return <SlideContentEndTitle {...props} ref={ref} />;

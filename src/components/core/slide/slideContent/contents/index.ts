@@ -4,3 +4,4 @@ export * from './endTitle';
 export * from './introduction';
 export * from './mainTitle';
 export * from './promotion';
+export * from './sectionTitle';

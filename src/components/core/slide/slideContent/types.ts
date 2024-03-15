@@ -4,6 +4,7 @@ export enum SlideContentTypes {
   title = 'title',
   content2Columns = 'content2Columns',
   introduction = 'introduction',
+  sectionTitle = 'sectionTitle',
   endTitle = 'endTitle',
   promotion = 'promotion',
   abstract = 'abstract',
@@ -43,6 +44,11 @@ const ContentIntroductionSchema = z.object({
   socials: z.array(socialSchema),
 });
 
+const ContentSectionTitleSchema = z.object({
+  type: z.literal(SlideContentTypes.sectionTitle),
+  title: z.string(),
+});
+
 const ContentEndTitleSchema = z.object({
   type: z.literal(SlideContentTypes.endTitle),
 });
@@ -66,6 +72,7 @@ const ContentsSchema = z.discriminatedUnion('type', [
   ContentTitleSchema,
   Content2ColumnsSchema,
   ContentIntroductionSchema,
+  ContentSectionTitleSchema,
   ContentEndTitleSchema,
   ContentPromotionSchema,
   ContentAbstractSchema,
@@ -74,6 +81,7 @@ const ContentsSchema = z.discriminatedUnion('type', [
 export type ContentTitle = z.infer<typeof ContentTitleSchema>;
 export type Content2Columns = z.infer<typeof Content2ColumnsSchema>;
 export type ContentIntroduction = z.infer<typeof ContentIntroductionSchema>;
+export type ContentSectionTitle = z.infer<typeof ContentSectionTitleSchema>;
 export type ContentEndTitle = z.infer<typeof ContentEndTitleSchema>;
 export type ContentPromotion = z.infer<typeof ContentPromotionSchema>;
 export type ContentAbstract = z.infer<typeof ContentAbstractSchema>;
