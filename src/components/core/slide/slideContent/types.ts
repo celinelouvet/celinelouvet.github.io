@@ -6,6 +6,7 @@ export enum SlideContentTypes {
   introduction = 'introduction',
   endTitle = 'endTitle',
   promotion = 'promotion',
+  abstract = 'abstract',
 }
 
 export enum ColorMode {
@@ -55,12 +56,19 @@ const ContentPromotionSchema = z.object({
   room: z.string().optional(),
 });
 
+const ContentAbstractSchema = z.object({
+  type: z.literal(SlideContentTypes.abstract),
+  topic: z.string(),
+  descriptions: z.array(z.string()),
+});
+
 const ContentsSchema = z.discriminatedUnion('type', [
   ContentTitleSchema,
   Content2ColumnsSchema,
   ContentIntroductionSchema,
   ContentEndTitleSchema,
   ContentPromotionSchema,
+  ContentAbstractSchema,
 ]);
 
 export type ContentTitle = z.infer<typeof ContentTitleSchema>;
@@ -68,5 +76,6 @@ export type Content2Columns = z.infer<typeof Content2ColumnsSchema>;
 export type ContentIntroduction = z.infer<typeof ContentIntroductionSchema>;
 export type ContentEndTitle = z.infer<typeof ContentEndTitleSchema>;
 export type ContentPromotion = z.infer<typeof ContentPromotionSchema>;
+export type ContentAbstract = z.infer<typeof ContentAbstractSchema>;
 
 export type Contents = z.infer<typeof ContentsSchema>;
