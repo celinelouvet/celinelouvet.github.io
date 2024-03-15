@@ -2,7 +2,8 @@ import { type Meta, type StoryObj } from '@storybook/react';
 
 import { SlideDeck } from '@/components/core';
 
-import IntroductionComponent from './Introduction';
+import EndTitleSlide from './EndTitle';
+import IntroductionSlide from './Introduction';
 import MainTitleSlide from './MainTitle';
 
 const meta = {
@@ -21,6 +22,12 @@ export const MainTitle: Story = {
 
 export const Introduction: Story = {
   args: {
-    slides: [IntroductionComponent],
+    slides: [IntroductionSlide],
+  },
+};
+
+export const EndTitle: Story = {
+  args: {
+    slides: [EndTitleSlide],
   },
 };
