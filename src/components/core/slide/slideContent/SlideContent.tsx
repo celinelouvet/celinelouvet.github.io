@@ -3,7 +3,11 @@ import { useRef } from 'react';
 
 import { useWindowSize } from '@/hooks';
 
-import { SlideContentMainTitle, SlideContentWith2Columns } from './contents';
+import {
+  SlideContentIntroduction,
+  SlideContentMainTitle,
+  SlideContentWith2Columns,
+} from './contents';
 import { type Contents, SlideContentTypes } from './types';
 
 const defaultFontSize = 18;
@@ -68,6 +72,9 @@ const getContent = (props: SlideContentProps): React.ReactNode => {
 
     case SlideContentTypes.content2Columns:
       return <SlideContentWith2Columns {...props} />;
+
+    case SlideContentTypes.introduction:
+      return <SlideContentIntroduction {...props} />;
 
     default:
       <Text>Unknown type</Text>;

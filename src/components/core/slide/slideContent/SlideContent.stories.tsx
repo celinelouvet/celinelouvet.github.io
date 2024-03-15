@@ -14,14 +14,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Title: Story = {
-  args: {
-    type: SlideContentTypes.title,
-    title: highwayToFail.title,
-    author: highwayToFail.author,
-  },
-};
-
 export const ContentWith2ColumnsLight: Story = {
   args: {
     type: SlideContentTypes.content2Columns,
@@ -73,5 +65,22 @@ export const ContentWith2ColumnsDark: Story = {
         Content
       </Box>
     ),
+  },
+};
+
+export const Introduction: Story = {
+  args: {
+    type: SlideContentTypes.introduction,
+    author: highwayToFail.author,
+    descriptions: highwayToFail.descriptions,
+    socials: highwayToFail.socials,
+  },
+};
+
+export const Title: Story = {
+  args: {
+    type: SlideContentTypes.title,
+    title: highwayToFail.title,
+    author: highwayToFail.author,
   },
 };
