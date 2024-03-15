@@ -150,3 +150,30 @@ export const TitleWithContent: Story = {
     ),
   },
 };
+
+export const TitleWith2Columns: Story = {
+  args: {
+    type: SlideContentTypes.titleWith2Columns,
+    title: 'Title with 2 columns',
+    column1: (
+      <Box
+        width="100%"
+        height="100%"
+        border="1px solid"
+        borderColor="brand.500"
+      >
+        Column 1
+      </Box>
+    ),
+    children: (
+      <Box
+        width="100%"
+        height="100%"
+        border="1px solid"
+        borderColor="brand.500"
+      >
+        Content
+      </Box>
+    ),
+  },
+};
