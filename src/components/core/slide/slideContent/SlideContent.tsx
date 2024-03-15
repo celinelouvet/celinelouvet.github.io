@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { useWindowSize } from '@/hooks';
 
 import {
+  SlideContentEndTitle,
   SlideContentIntroduction,
   SlideContentMainTitle,
   SlideContentWith2Columns,
@@ -75,6 +76,9 @@ const getContent = (props: SlideContentProps): React.ReactNode => {
 
     case SlideContentTypes.introduction:
       return <SlideContentIntroduction {...props} />;
+
+    case SlideContentTypes.endTitle:
+      return <SlideContentEndTitle {...props} />;
 
     default:
       <Text>Unknown type</Text>;

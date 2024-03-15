@@ -68,6 +68,12 @@ export const ContentWith2ColumnsDark: Story = {
   },
 };
 
+export const EndTitle: Story = {
+  args: {
+    type: SlideContentTypes.endTitle,
+  },
+};
+
 export const Introduction: Story = {
   args: {
     type: SlideContentTypes.introduction,
