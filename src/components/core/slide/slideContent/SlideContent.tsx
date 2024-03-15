@@ -2,6 +2,7 @@ import { type BoxProps, Text, forwardRef } from '@chakra-ui/react';
 import { type ForwardedRef } from 'react';
 
 import {
+  SlideContentEndTitle,
   SlideContentIntroduction,
   SlideContentMainTitle,
   SlideContentWith2Columns,
@@ -30,6 +31,9 @@ const getContent = (
 
     case SlideContentTypes.introduction:
       return <SlideContentIntroduction {...props} ref={ref} />;
+
+    case SlideContentTypes.endTitle:
+      return <SlideContentEndTitle {...props} ref={ref} />;
 
     default:
       <Text>Unknown type</Text>;
