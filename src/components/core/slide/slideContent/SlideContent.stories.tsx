@@ -177,3 +177,30 @@ export const TitleWith2Columns: Story = {
     ),
   },
 };
+
+export const TitleWithThinColumn: Story = {
+  args: {
+    type: SlideContentTypes.titleWithThinColumn,
+    title: 'Title with 1 thin column',
+    column1: (
+      <Box
+        width="100%"
+        height="100%"
+        border="1px solid"
+        borderColor="brand.500"
+      >
+        Column 1
+      </Box>
+    ),
+    children: (
+      <Box
+        width="100%"
+        height="100%"
+        border="1px solid"
+        borderColor="brand.500"
+      >
+        Content
+      </Box>
+    ),
+  },
+};
