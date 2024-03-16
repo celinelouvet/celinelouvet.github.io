@@ -4,6 +4,10 @@ import { SlideDeck } from '@/components/core';
 
 import AbstractSlide from './Abstract';
 import EndTitleSlide from './EndTitle';
+import Fairvioo1Slide from './Fairvioo1';
+import Fairvioo2Slide from './Fairvioo2';
+import Fairvioo3Slide from './Fairvioo3';
+import Fairvioo4Slide from './Fairvioo4';
 import IntroductionSlide from './Introduction';
 import MainTitleSlide from './MainTitle';
 import PromotionLyonCraftSlide from './PromotionLyonCraft';
@@ -44,6 +48,30 @@ export const SurveySectionTitle: Story = {
 export const Introduction: Story = {
   args: {
     slides: [IntroductionSlide],
+  },
+};
+
+export const Fairvioo1: Story = {
+  args: {
+    slides: [Fairvioo1Slide],
+  },
+};
+
+export const Fairvioo2: Story = {
+  args: {
+    slides: [Fairvioo2Slide],
+  },
+};
+
+export const Fairvioo3: Story = {
+  args: {
+    slides: [Fairvioo3Slide],
+  },
+};
+
+export const Fairvioo4: Story = {
+  args: {
+    slides: [Fairvioo4Slide],
   },
 };
 
