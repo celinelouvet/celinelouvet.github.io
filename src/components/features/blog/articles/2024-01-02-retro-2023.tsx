@@ -34,8 +34,8 @@ export const Retro2023Summary: FC<{ link: string }> = ({ link }) => {
     >
       <Stack spacing="0">
         <Text>
-          Il parait que c‘est le moment de faire une rétrospective sur ce qu‘il
-          s‘est passé cette année. L‘année a été riche en rebondissements
+          Il parait que c’est le moment de faire une rétrospective sur ce qu’il
+          s’est passé cette année. L’année a été riche en rebondissements
           positifs et négatifs et en nouvelles rencontres.
         </Text>
         <Text>
@@ -56,8 +56,8 @@ export const Retro2023Content: FC = () => (
     <>
       <Stack spacing="0">
         <Text>
-          Il parait que c‘est le moment de faire une rétrospective sur ce qu‘il
-          s‘est passé cette année. L‘année a été riche en rebondissements
+          Il parait que c’est le moment de faire une rétrospective sur ce qu’il
+          s’est passé cette année. L’année a été riche en rebondissements
           positifs et négatifs et en nouvelles rencontres.
         </Text>
         <Text>
@@ -75,15 +75,15 @@ export const Retro2023Content: FC = () => (
 
         <Stack spacing="0">
           <Text>
-            Eh oui ! Je ne sais pas si vous l‘avez remarqué, mais ce site est
+            Eh oui ! Je ne sais pas si vous l’avez remarqué, mais ce site est
             une nouvelle version faite en React, avec Next.js et Chakra UI. Ça a
-            été l‘occasion pour moi de rafraichir mes connaissances en React, et
+            été l’occasion pour moi de rafraichir mes connaissances en React, et
             de découvrir Next.js et Chakra UI. Il y a certainement des bugs, il
-            manque des choses, mais je suis contente de ce que j‘ai pu faire.
+            manque des choses, mais je suis contente de ce que j’ai pu faire.
           </Text>
           <Text>
-            J‘ai aussi profité de ce rafraichissement pour ajouter une section
-            de blog. J‘espère l‘utiliser sérieusement cette année.
+            J’ai aussi profité de ce rafraichissement pour ajouter une section
+            de blog. J’espère l’utiliser sérieusement cette année.
           </Text>
           <Text>Je reviendrai en détail dessus dans un prochain article.</Text>
         </Stack>
@@ -98,19 +98,19 @@ export const Retro2023Content: FC = () => (
           </Text>
           <Text>
             Puis, début février 2023, je commençais chez Shine, en tant que lead
-            dev/senior backend dev. J‘y ai rejoint l‘équipe User Success, qui
-            s‘occupe de répondre aux besoins des opérateurs de Shine. Nous
+            dev/senior backend dev. J’y ai rejoint l’équipe User Success, qui
+            s’occupe de répondre aux besoins des opérateurs de Shine. Nous
             fournissons un back-office, ainsi que des outils divers pour
             répondre à la réglementation bancaire.
           </Text>
           <Text>
-            J‘y ai découvert une équipe très soudée, avec des personnes très
-            compétentes et bienveillantes. L‘ambiance Shine est à l‘entraide et
+            J’y ai découvert une équipe très soudée, avec des personnes très
+            compétentes et bienveillantes. L’ambiance Shine est à l’entraide et
             au travail bien fait en commun. De plus, certaines décisions
             techniques sont prises de concert par tous les devs, en mode
-            démocratique. C‘est très agréable de voir des gens échanger
+            démocratique. C’est très agréable de voir des gens échanger
             calmement sur des sujets qui habituellement auraient déclenché de
-            batailles d‘égo. Les gens cherchent à apprendre des autres, et à
+            batailles d’égo. Les gens cherchent à apprendre des autres, et à
             faire avancer les choses ensemble.
           </Text>
           <Text>Shine a été une très belle découverte.</Text>
@@ -125,11 +125,11 @@ export const Retro2023Content: FC = () => (
 
           <Stack spacing="0">
             <Text>
-              A côté de ça, j‘ai profité d‘être à Lyon pour assister au Tremplin
+              A côté de ça, j’ai profité d’être à Lyon pour assister au Tremplin
               MixIT, puis à MixIT.
             </Text>
             <Text>
-              Si vous ne connaissez pas le Tremplin, c‘est un événement organisé
+              Si vous ne connaissez pas le Tremplin, c’est un événement organisé
               par Craft Records, qui permet à des nouvelles/nouveaux
               speakeuses/speakers de se lancer tout en étant accompagnées par
               des mentors. Le public vote pour ses talks préférés et les 2
@@ -138,8 +138,8 @@ export const Retro2023Content: FC = () => (
             <Text>
               Concernant MixIT, cette conférence est vraiment différente des
               autres. On y trouve des talks techniques, mais aussi beaucoup de
-              talks non techniques. J‘ai pu y assister à des talks très
-              intéressants. Je ne vais en lister qu‘un, car sinon, je listerai
+              talks non techniques. J’ai pu y assister à des talks très
+              intéressants. Je ne vais en lister qu’un, car sinon, je listerai
               les 3/4 des talks du programme !
             </Text>
             <Text>
@@ -168,14 +168,14 @@ export const Retro2023Content: FC = () => (
           <Stack spacing="2">
             <Stack spacing="0">
               <Text>
-                Certaines confériencières m‘ont donné envie de me relancer dans
-                les conférences. J‘ai donc profité de mon arrivée chez Shine
+                Certaines confériencières m’ont donné envie de me relancer dans
+                les conférences. J’ai donc profité de mon arrivée chez Shine
                 pour proposer de nouveaux sujets.
               </Text>
               <Text>
-                J‘ai eu la chance de présenter 3 sujets différents, “Event
-                Driven, qu‘est-ce donc ?! Un nouveau buzzword ?“, “Les mystères
-                des permissions“ ainsi qu‘une table ronde avec
+                J’ai eu la chance de présenter 3 sujets différents, “Event
+                Driven, qu’est-ce donc ?! Un nouveau buzzword ?“, “Les mystères
+                des permissions“ ainsi qu’une table ronde avec
                 <ExternalLink
                   href="https://www.linkedin.com/in/d%C3%A9borah-guyard/"
                   marginLeft="1"
@@ -196,7 +196,7 @@ export const Retro2023Content: FC = () => (
 
             <Stack spacing="0">
               <Text as="span">
-                J‘ai pu découvrir des conférences, dont certaines que je ne
+                J’ai pu découvrir des conférences, dont certaines que je ne
                 connaissais que de nom :
               </Text>
               <UnorderedList paddingLeft="4">
@@ -204,14 +204,14 @@ export const Retro2023Content: FC = () => (
                 <ListItem>BreizhCamp,</ListItem>
                 <ListItem>Camping de Speakers,</ListItem>
                 <ListItem>
-                  ainsi que Cloud Est, qui vient d‘être créée.
+                  ainsi que Cloud Est, qui vient d’être créée.
                 </ListItem>
               </UnorderedList>
             </Stack>
 
             <Stack spacing="0">
               <Text as="span">
-                J‘ai aussi eu l‘occasion d‘échanger avec différentes personnes
+                J’ai aussi eu l’occasion d’échanger avec différentes personnes
                 pour des podcasts avec :
               </Text>
               <UnorderedList paddingLeft="4">
@@ -244,7 +244,7 @@ export const Retro2023Content: FC = () => (
 
             <Text>
               Pour plus de détails sur mes interventions, je vous propose
-              d‘aller sur la page
+              d’aller sur la page
               <InternalLink href="/talks" marginLeft="1">
                 Conférences
               </InternalLink>
@@ -298,21 +298,21 @@ export const Retro2023Content: FC = () => (
 
           <Stack spacing="0">
             <Text>
-              D‘un point de vue santé, l‘année n‘a pas été entièrement rose.
-              J‘ai eu des hauts et des bas, mais j‘ai pu compter sur mes proches
-              pour m‘aider à remonter la pente. Je suis d‘ailleurs ravie des
-              rencontres que j‘ai pu faire cette année. Elles m‘ont beaucoup
+              D’un point de vue santé, l’année n’a pas été entièrement rose.
+              J’ai eu des hauts et des bas, mais j’ai pu compter sur mes proches
+              pour m’aider à remonter la pente. Je suis d’ailleurs ravie des
+              rencontres que j’ai pu faire cette année. Elles m’ont beaucoup
               apportées. Elles se reconnaitront si elles lisent cet article.
             </Text>
             <Text>
-              L‘avantage d‘avoir plus de temps pour moi, c‘est que j‘ai pu en
-              profiter pour faire ce que je n‘avais pas le temps de faire,
+              L’avantage d’avoir plus de temps pour moi, c’est que j’ai pu en
+              profiter pour faire ce que je n’avais pas le temps de faire,
               avant.
             </Text>
             <Text>
-              Je me suis donc lancée dans un apprentissage du Japonais. J‘en
-              avais fait 6 mois en fin d‘école d‘ingénieur. J‘ai donc repris
-              depuis le début. J‘espère pouvoir maintenir ça.
+              Je me suis donc lancée dans un apprentissage du Japonais. J’en
+              avais fait 6 mois en fin d’école d’ingénieur. J’ai donc repris
+              depuis le début. J’espère pouvoir maintenir ça.
             </Text>
           </Stack>
         </Stack>
@@ -321,14 +321,14 @@ export const Retro2023Content: FC = () => (
           <H4Heading>Côté hobbies</H4Heading>
           <Stack spacing="0">
             <Text>
-              J‘aime tout ce qui a attrait à l‘art. J‘ai toujours l‘envie
-              d‘essayer divers médium. Cette année a été l‘occasion de tester
-              des choses. J‘aime découvrir ou perfectionner des techniques
+              J’aime tout ce qui a attrait à l’art. J’ai toujours l’envie
+              d’essayer divers médium. Cette année a été l’occasion de tester
+              des choses. J’aime découvrir ou perfectionner des techniques
               artistiques.
             </Text>
             <Text>
               Je me suis donc lancée dans la création de carnet de notes /
-              dessins. J‘ai aussi fait de l‘inktober à l‘aquarelle, ainsi que
+              dessins. J’ai aussi fait de l’inktober à l’aquarelle, ainsi que
               des dessins aux marqueurs à alcool (type Copic)
             </Text>
           </Stack>
@@ -362,7 +362,7 @@ export const Retro2023Content: FC = () => (
                   maxH="200"
                   objectFit="cover"
                   src="/others/1-retro2023/inktober_hermit.jpg"
-                  alt="Bernard l‘ermite, dessiné à l‘encre de chine et à l‘aquarelle"
+                  alt="Bernard l’ermite, dessiné à l’encre de chine et à l’aquarelle"
                   loading="lazy"
                 />
               </Center>
@@ -388,9 +388,9 @@ export const Retro2023Content: FC = () => (
         <Stack spacing="0">
           <Text>
             Pour cette nouvelle année, je vais essayer de continuer sur ma
-            lancée en termes de conférences. J‘ai déjà quelques propositions en
-            cours, dont j‘attends les retours. J‘ai participé à l‘enregistrement
-            d‘un podcast, qui devrait sortir prochainement et je vais participer
+            lancée en termes de conférences. J’ai déjà quelques propositions en
+            cours, dont j’attends les retours. J’ai participé à l’enregistrement
+            d’un podcast, qui devrait sortir prochainement et je vais participer
             à un article pour 50inTech en Janvier.
           </Text>
           <Text>
@@ -401,7 +401,7 @@ export const Retro2023Content: FC = () => (
       </Stack>
 
       <Text>
-        Voilà, j‘ai fait le grand tour. Merci d‘avoir pris le temps de lire
+        Voilà, j’ai fait le grand tour. Merci d’avoir pris le temps de lire
         cette rétrospective. Je vous souhaite une bonne année 2024, avec une
         excellente santé et que vos projets se réalisent !
       </Text>
@@ -411,7 +411,7 @@ export const Retro2023Content: FC = () => (
           boxSize="200"
           objectFit="cover"
           src="/others/1-retro2023/fireworks.jpg"
-          alt="Un feu d‘artifice"
+          alt="Un feu d’artifice"
           loading="lazy"
         />
       </Stack>

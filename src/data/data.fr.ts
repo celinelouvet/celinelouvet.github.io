@@ -9,7 +9,7 @@ const talkSubjects = new Map<string, TalkSubject>([
       topic: 'Votre mission ? Découvrir Haskell et le mettre en prod',
       descriptions: [
         'On entend parler de Haskell de plus en plus, mais il parait souvent bien compliqué de se lancer. Haskell fait peur, avec ses Monades, Monoïdes et autres gros mots.',
-        'On verra ensemble que vous n‘avez absolument pas besoin de savoir ce que ces termes signifient pour vous lancer. Je vous propose de regarder ce dont vous aurez besoin pour créer une petite API, avec de la sécurité et de la gestion de données, soit de quoi mettre une petite application en prod.',
+        'On verra ensemble que vous n’avez absolument pas besoin de savoir ce que ces termes signifient pour vous lancer. Je vous propose de regarder ce dont vous aurez besoin pour créer une petite API, avec de la sécurité et de la gestion de données, soit de quoi mettre une petite application en prod.',
       ],
     },
   ],
@@ -36,17 +36,17 @@ const talkSubjects = new Map<string, TalkSubject>([
     {
       topic: 'Podcast Punkin Dev: Dev? Lead? Architecte? Non! ARCHIDEV',
       descriptions: [
-        'Épisode 12 de la saison 3 des podcast de Punkin Dev, sur mon expérience professionnelle, l‘architecture et le mentorat.',
+        'Épisode 12 de la saison 3 des podcast de Punkin Dev, sur mon expérience professionnelle, l’architecture et le mentorat.',
       ],
     },
   ],
   [
     'event_driven_buzzword',
     {
-      topic: 'Event Driven, qu‘est-ce donc ?! Un nouveau buzzword ?',
+      topic: 'Event Driven, qu’est-ce donc ?! Un nouveau buzzword ?',
       descriptions: [
-        'On entend, de plus en plus, parler d‘Event Driven Systems. C‘est un peu le nouveau truc à la mode, mais en quoi ça consiste réellement ? Pour le comprendre, nous repartirons des fondamentaux, pour progressivement voir ce que peut nous apporter le modèle événementiel publisher / subscriber, ses avantages et ses inconvénients. Nous verrons comment l‘utiliser dans certains cas fréquents.',
-        'Par le passé, j‘ai eu à travailler sur un SI qui a grossi au fil du temps. A chaque nouveau service ajouté, à chaque nouvelle fonctionnalité ajoutée, de la complexité s‘est cumulée jusqu‘à rendre des évolutions impossibles, voire dangereuses. De plus, soyons honnête, parfois de fausses "bonnes" idées ont pu empirer la situation. Nous allons nous inspirer de ce SI tout au long de cette présentation pour voir ce que nous pourrions y apporter.',
+        'On entend, de plus en plus, parler d’Event Driven Systems. C’est un peu le nouveau truc à la mode, mais en quoi ça consiste réellement ? Pour le comprendre, nous repartirons des fondamentaux, pour progressivement voir ce que peut nous apporter le modèle événementiel publisher / subscriber, ses avantages et ses inconvénients. Nous verrons comment l’utiliser dans certains cas fréquents.',
+        'Par le passé, j’ai eu à travailler sur un SI qui a grossi au fil du temps. A chaque nouveau service ajouté, à chaque nouvelle fonctionnalité ajoutée, de la complexité s’est cumulée jusqu’à rendre des évolutions impossibles, voire dangereuses. De plus, soyons honnête, parfois de fausses "bonnes" idées ont pu empirer la situation. Nous allons nous inspirer de ce SI tout au long de cette présentation pour voir ce que nous pourrions y apporter.',
         'Pour chaque situation, nous pourrons voir les besoins auxquels elle répond, ses avantages ainsi que ses défauts, défauts que nous essayerons de corriger ensuite. Notre objectif ? Des services moins interdépendants et qui y gagneront en performance et en stabilité !',
       ],
     },
@@ -56,8 +56,8 @@ const talkSubjects = new Map<string, TalkSubject>([
     {
       topic: 'Les mystères des permissions',
       descriptions: [
-        'Au début de votre projet, vous avez simplement géré l‘authentification de votre utilisateur, puis petit à petit, vous avez ajouté une notion de rôles utilisateur. Et plus le temps passe, plus votre product manager vous demande d’affiner cette gestion et moins cette gestion par rôle va suffire.',
-        'Peut-être avez-vous eu déjà eu l’impression que la gestion des permissions est quelque d’assez obscure ou complexe. On sait qu’on doit le faire, mais on ne sait pas trop comment, ni même pourquoi. Parfois, on confond même avec l‘authentification. Mais alors, en quoi ça consiste rellement et comment on peut l‘appliquer ?',
+        'Au début de votre projet, vous avez simplement géré l’authentification de votre utilisateur, puis petit à petit, vous avez ajouté une notion de rôles utilisateur. Et plus le temps passe, plus votre product manager vous demande d’affiner cette gestion et moins cette gestion par rôle va suffire.',
+        'Peut-être avez-vous eu déjà eu l’impression que la gestion des permissions est quelque d’assez obscure ou complexe. On sait qu’on doit le faire, mais on ne sait pas trop comment, ni même pourquoi. Parfois, on confond même avec l’authentification. Mais alors, en quoi ça consiste rellement et comment on peut l’appliquer ?',
         'A chaque situation, sa solution. Nous pourrons voir comment répondre aux besoins les plus fréquents, ainsi que leurs avantages et leurs inconvénients. Notre objectif ? Avoir la gestion des permissions adaptée à notre situation, sans pour autant ajouter une masse de complexité dans toute notre application.',
       ],
     },
@@ -67,7 +67,7 @@ const talkSubjects = new Map<string, TalkSubject>([
     {
       topic: 'La révolution des fatiguées',
       descriptions: [
-        'Table ronde avec Angi Guyard et Sonia Prévost. Nous aborderons l‘expérience des femmes dans la tech et nous vous expliquerons pourquoi nous sommes "fatiguées" par ces stéréotypes.',
+        'Table ronde avec Angi Guyard et Sonia Prévost. Nous aborderons l’expérience des femmes dans la tech et nous vous expliquerons pourquoi nous sommes "fatiguées" par ces stéréotypes.',
       ],
     },
   ],
@@ -75,9 +75,9 @@ const talkSubjects = new Map<string, TalkSubject>([
     'podcast_developer_experience',
     {
       topic:
-        'Podcast Developer Experience: 18 ans d‘exploration technique et humaine dans l‘informatique',
+        'Podcast Developer Experience: 18 ans d’exploration technique et humaine dans l’informatique',
       descriptions: [
-        'Par Donatien Léon, sur ma recherche de l‘expérience parfaite pour moi, mon expérience, l‘architecture et le mentorat.',
+        'Par Donatien Léon, sur ma recherche de l’expérience parfaite pour moi, mon expérience, l’architecture et le mentorat.',
       ],
     },
   ],
@@ -86,18 +86,18 @@ const talkSubjects = new Map<string, TalkSubject>([
     {
       topic: 'Avocado Growth : Portrait Tech',
       descriptions: [
-        'Épisode 18 des podcasts de Mansour Mahamat-salle, sur mon parcours dans la tech, notamment comment je suis arrivée où je suis aujourd‘hui.',
+        'Épisode 18 des podcasts de Mansour Mahamat-salle, sur mon parcours dans la tech, notamment comment je suis arrivée où je suis aujourd’hui.',
       ],
     },
   ],
   [
     'highway_to_fail',
     {
-      topic: 'Highway to fail, ou l‘histoire d‘un échec prévisible',
+      topic: 'Highway to fail, ou l’histoire d’un échec prévisible',
       descriptions: [
-        'Vous hésitez à vous lancer dans l‘aventure la startup ? Vous vous verriez bien créer votre propre société, mais vous n‘osez pas ? En effet, on le sait maintenant, 90 % des start-up font faillite, dont 10 % dès la première année.',
-        'Fin 2018, je rejoignais 2 autres cofondateurs pour créer notre première startup. Et mi-2020, nous mettions la clé sous la porte. Pourquoi ? Entre produit, technique, business et humain, il est parfois difficile d‘ajuster le curseur.',
-        'A travers mon retour d‘expérience entrepreneuriale, je souhaite revenir sur certaines de nos erreurs et voir s‘il aurait été possible de faire autrement. Peut-être que cette introspection pleine d‘honnêteté pourra vous permettre d‘éviter certains écueils.',
+        'Vous hésitez à vous lancer dans l’aventure la startup ? Vous vous verriez bien créer votre propre société, mais vous n’osez pas ? En effet, on le sait maintenant, 90 % des start-up font faillite, dont 10 % dès la première année.',
+        'Fin 2018, je rejoignais 2 autres cofondateurs pour créer notre première startup. Et mi-2020, nous mettions la clé sous la porte. Pourquoi ? Entre produit, technique, business et humain, il est parfois difficile d’ajuster le curseur.',
+        'A travers mon retour d’expérience entrepreneuriale, je souhaite revenir sur certaines de nos erreurs et voir s’il aurait été possible de faire autrement. Peut-être que cette introspection pleine d’honnêteté pourra vous permettre d’éviter certains écueils.',
       ],
     },
   ],
@@ -158,7 +158,7 @@ const resume: Resume = {
   ],
   hobbies: 'Dessins, peinture, modelage, sport',
   biographies: [
-    'Développeuse backend et passionnée, depuis 18 ans, aimant la recherche de stabilité et de qualité d‘une application.',
+    'Développeuse backend et passionnée, depuis 18 ans, aimant la recherche de stabilité et de qualité d’une application.',
     'Spécialisée sur les architectures cloud, avec une appétence pour les langages fonctionnels.',
     'Actuellement lead developer chez Shine.',
   ],
@@ -1067,7 +1067,7 @@ const resume: Resume = {
       from: '2002',
       to: '2005',
       school: 'EPSI Paris',
-      diploma: 'Diplôme d‘ingénieur en informatique',
+      diploma: 'Diplôme d’ingénieur en informatique',
       speciality: 'Génie logiciel',
     },
     {
