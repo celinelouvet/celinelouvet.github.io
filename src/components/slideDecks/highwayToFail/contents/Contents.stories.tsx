@@ -3,6 +3,10 @@ import { type Meta, type StoryObj } from '@storybook/react';
 import { SlideDeck } from '@/components/core';
 
 import AbstractSlide from './Abstract';
+import BeforeMe1Slide from './BeforeMe1';
+import BeforeMe2Slide from './BeforeMe2';
+import BeforeMe3Slide from './BeforeMe3';
+import BeforeSectionTitleSlide from './BeforeSectionTitle';
 import EndTitleSlide from './EndTitle';
 import Fairvioo1Slide from './Fairvioo1';
 import Fairvioo2Slide from './Fairvioo2';
@@ -135,6 +139,30 @@ export const Numbers4: Story = {
 export const Timeline: Story = {
   args: {
     slides: [TimelineSlide],
+  },
+};
+
+export const BeforeSectionTitle: Story = {
+  args: {
+    slides: [BeforeSectionTitleSlide],
+  },
+};
+
+export const BeforeMe1: Story = {
+  args: {
+    slides: [BeforeMe1Slide],
+  },
+};
+
+export const BeforeMe2: Story = {
+  args: {
+    slides: [BeforeMe2Slide],
+  },
+};
+
+export const BeforeMe3: Story = {
+  args: {
+    slides: [BeforeMe3Slide],
   },
 };
 
