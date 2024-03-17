@@ -48,6 +48,9 @@ export const dateTextStyles = {
     basic: (props: StyleFunctionProps) => ({
       color: mode('gray.500', 'gray.400')(props),
     }),
+    slide: {
+      fontSize: '1em',
+    },
   },
   defaultProps: {
     size: 'sm',
