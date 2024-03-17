@@ -20,6 +20,7 @@ import Preface3Slide from './Preface3';
 import Preface4Slide from './Preface4';
 import PromotionLyonCraftSlide from './PromotionLyonCraft';
 import SurveySectionTitleSlide from './SurveySectionTitle';
+import TimelineSlide from './Timeline';
 
 const meta = {
   title: 'Talks/HighwayToFail',
@@ -128,6 +129,12 @@ export const Numbers3: Story = {
 export const Numbers4: Story = {
   args: {
     slides: [Numbers4Slide],
+  },
+};
+
+export const Timeline: Story = {
+  args: {
+    slides: [TimelineSlide],
   },
 };
 
