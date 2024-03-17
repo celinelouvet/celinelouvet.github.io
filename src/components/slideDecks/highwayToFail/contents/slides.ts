@@ -1,6 +1,10 @@
 'use client';
 
 import Abstract from './Abstract';
+import BeforeMe1 from './BeforeMe1';
+import BeforeMe2 from './BeforeMe2';
+import BeforeMe3 from './BeforeMe3';
+import BeforeTimelineSectionTitle from './BeforeSectionTitle';
 import EndTitle from './EndTitle';
 import Fairvioo1 from './Fairvioo1';
 import Fairvioo2 from './Fairvioo2';
@@ -42,6 +46,11 @@ export const getSlides = () => {
     Numbers4,
 
     Timeline,
+
+    BeforeTimelineSectionTitle,
+    BeforeMe1,
+    BeforeMe2,
+    BeforeMe3,
 
     EndTitle,
     PromotionLyonCraft,
