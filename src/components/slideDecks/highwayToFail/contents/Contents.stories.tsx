@@ -3,6 +3,11 @@ import { type Meta, type StoryObj } from '@storybook/react';
 import { SlideDeck } from '@/components/core';
 
 import { content as AbstractContent } from './Abstract';
+import { content as BeforeCC1Content } from './BeforeCC1';
+import { content as BeforeCC2Content } from './BeforeCC2';
+import { content as BeforeCC3Content } from './BeforeCC3';
+import { content as BeforeCC4Content } from './BeforeCC4';
+import { content as BeforeCC5Content } from './BeforeCC5';
 import { content as BeforeMe1Content } from './BeforeMe1';
 import { content as BeforeMe2Content } from './BeforeMe2';
 import { content as BeforeMe3Content } from './BeforeMe3';
@@ -120,6 +125,26 @@ export const BeforeMe2: Story = {
 
 export const BeforeMe3: Story = {
   render: () => <SlideDeck>{BeforeMe3Content}</SlideDeck>,
+};
+
+export const BeforeCaptainContrat1: Story = {
+  render: () => <SlideDeck>{BeforeCC1Content}</SlideDeck>,
+};
+
+export const BeforeCaptainContrat2: Story = {
+  render: () => <SlideDeck>{BeforeCC2Content}</SlideDeck>,
+};
+
+export const BeforeCaptainContrat3: Story = {
+  render: () => <SlideDeck>{BeforeCC3Content}</SlideDeck>,
+};
+
+export const BeforeCaptainContrat4: Story = {
+  render: () => <SlideDeck>{BeforeCC4Content}</SlideDeck>,
+};
+
+export const BeforeCaptainContrat5: Story = {
+  render: () => <SlideDeck>{BeforeCC5Content}</SlideDeck>,
 };
 
 export const EndTitle: Story = {

@@ -1,6 +1,11 @@
 'use client';
 
 import Abstract from './Abstract';
+import BeforeCC1 from './BeforeCC1';
+import BeforeCC2 from './BeforeCC2';
+import BeforeCC3 from './BeforeCC3';
+import BeforeCC4 from './BeforeCC4';
+import BeforeCC5 from './BeforeCC5';
 import BeforeMe1 from './BeforeMe1';
 import BeforeMe2 from './BeforeMe2';
 import BeforeMe3 from './BeforeMe3';
@@ -51,6 +56,12 @@ export const getSlides = () => {
     BeforeMe1,
     BeforeMe2,
     BeforeMe3,
+
+    BeforeCC1,
+    BeforeCC2,
+    BeforeCC3,
+    BeforeCC4,
+    BeforeCC5,
 
     EndTitle,
     PromotionLyonCraft,
