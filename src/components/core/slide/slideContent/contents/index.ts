@@ -9,3 +9,4 @@ export * from './sectionTitleWithThinColumn';
 export * from './titleWithContent';
 export * from './titleWith2Columns';
 export * from './titleWithThinColumn';
+export * from './titleWithThinColumn2Columns';
