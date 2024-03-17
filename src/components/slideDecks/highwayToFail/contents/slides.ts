@@ -12,6 +12,11 @@ import BeforeMe3 from './BeforeMe3';
 import BeforeTimelineSectionTitle from './BeforeSectionTitle';
 import CreationContact1 from './CreationContact1';
 import CreationContact2 from './CreationContact2';
+import CreationMeeting1 from './CreationMeeting1';
+import CreationMeeting2 from './CreationMeeting2';
+import CreationMeeting3 from './CreationMeeting3';
+import CreationMeeting4 from './CreationMeeting4';
+import CreationMeeting5 from './CreationMeeting5';
 import CreationSectionTitle from './CreationSectionTitle';
 import EndTitle from './EndTitle';
 import Fairvioo1 from './Fairvioo1';
@@ -69,6 +74,12 @@ export const getSlides = () => {
     CreationSectionTitle,
     CreationContact1,
     CreationContact2,
+
+    CreationMeeting1,
+    CreationMeeting2,
+    CreationMeeting3,
+    CreationMeeting4,
+    CreationMeeting5,
 
     EndTitle,
     PromotionLyonCraft,

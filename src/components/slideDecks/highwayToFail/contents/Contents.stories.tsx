@@ -14,6 +14,11 @@ import { content as BeforeMe3Content } from './BeforeMe3';
 import { content as BeforeTimelineSectionTitleContent } from './BeforeSectionTitle';
 import { content as CreationContact1Content } from './CreationContact1';
 import { content as CreationContact2Content } from './CreationContact2';
+import { content as CreationMeeting1Content } from './CreationMeeting1';
+import { content as CreationMeeting2Content } from './CreationMeeting2';
+import { content as CreationMeeting3Content } from './CreationMeeting3';
+import { content as CreationMeeting4Content } from './CreationMeeting4';
+import { content as CreationMeeting5Content } from './CreationMeeting5';
 import { content as CreationSectionTitleContent } from './CreationSectionTitle';
 import { content as EndTitleContent } from './EndTitle';
 import { content as Fairvioo1Content } from './Fairvioo1';
@@ -160,6 +165,26 @@ export const CreationContact1: Story = {
 
 export const CreationContact2: Story = {
   render: () => <SlideDeck>{CreationContact2Content}</SlideDeck>,
+};
+
+export const CreationMeeting1: Story = {
+  render: () => <SlideDeck>{CreationMeeting1Content}</SlideDeck>,
+};
+
+export const CreationMeeting2: Story = {
+  render: () => <SlideDeck>{CreationMeeting2Content}</SlideDeck>,
+};
+
+export const CreationMeeting3: Story = {
+  render: () => <SlideDeck>{CreationMeeting3Content}</SlideDeck>,
+};
+
+export const CreationMeeting4: Story = {
+  render: () => <SlideDeck>{CreationMeeting4Content}</SlideDeck>,
+};
+
+export const CreationMeeting5: Story = {
+  render: () => <SlideDeck>{CreationMeeting5Content}</SlideDeck>,
 };
 
 export const EndTitle: Story = {
