@@ -12,6 +12,9 @@ import BeforeMe1Slide from './BeforeMe1';
 import BeforeMe2Slide from './BeforeMe2';
 import BeforeMe3Slide from './BeforeMe3';
 import BeforeSectionTitleSlide from './BeforeSectionTitle';
+import CreationContact1Slide from './CreationContact1';
+import CreationContact2Slide from './CreationContact2';
+import CreationSectionTitleSlide from './CreationSectionTitle';
 import EndTitleSlide from './EndTitle';
 import Fairvioo1Slide from './Fairvioo1';
 import Fairvioo2Slide from './Fairvioo2';
@@ -198,6 +201,24 @@ export const BeforeCaptainContrat4: Story = {
 export const BeforeCaptainContrat5: Story = {
   args: {
     slides: [BeforeCC5Slide],
+  },
+};
+
+export const CreationSectionTitle: Story = {
+  args: {
+    slides: [CreationSectionTitleSlide],
+  },
+};
+
+export const CreationContact1: Story = {
+  args: {
+    slides: [CreationContact1Slide],
+  },
+};
+
+export const CreationContact2: Story = {
+  args: {
+    slides: [CreationContact2Slide],
   },
 };
 
