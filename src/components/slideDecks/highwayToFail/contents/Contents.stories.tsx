@@ -14,6 +14,11 @@ import BeforeMe3Slide from './BeforeMe3';
 import BeforeSectionTitleSlide from './BeforeSectionTitle';
 import CreationContact1Slide from './CreationContact1';
 import CreationContact2Slide from './CreationContact2';
+import CreationMeeting1Slide from './CreationMeeting1';
+import CreationMeeting2Slide from './CreationMeeting2';
+import CreationMeeting3Slide from './CreationMeeting3';
+import CreationMeeting4Slide from './CreationMeeting4';
+import CreationMeeting5Slide from './CreationMeeting5';
 import CreationSectionTitleSlide from './CreationSectionTitle';
 import EndTitleSlide from './EndTitle';
 import Fairvioo1Slide from './Fairvioo1';
@@ -219,6 +224,36 @@ export const CreationContact1: Story = {
 export const CreationContact2: Story = {
   args: {
     slides: [CreationContact2Slide],
+  },
+};
+
+export const CreationMeeting1: Story = {
+  args: {
+    slides: [CreationMeeting1Slide],
+  },
+};
+
+export const CreationMeeting2: Story = {
+  args: {
+    slides: [CreationMeeting2Slide],
+  },
+};
+
+export const CreationMeeting3: Story = {
+  args: {
+    slides: [CreationMeeting3Slide],
+  },
+};
+
+export const CreationMeeting4: Story = {
+  args: {
+    slides: [CreationMeeting4Slide],
+  },
+};
+
+export const CreationMeeting5: Story = {
+  args: {
+    slides: [CreationMeeting5Slide],
   },
 };
 
