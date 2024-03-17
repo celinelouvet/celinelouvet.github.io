@@ -10,6 +10,9 @@ import BeforeMe1 from './BeforeMe1';
 import BeforeMe2 from './BeforeMe2';
 import BeforeMe3 from './BeforeMe3';
 import BeforeTimelineSectionTitle from './BeforeSectionTitle';
+import CreationContact1 from './CreationContact1';
+import CreationContact2 from './CreationContact2';
+import CreationSectionTitle from './CreationSectionTitle';
 import EndTitle from './EndTitle';
 import Fairvioo1 from './Fairvioo1';
 import Fairvioo2 from './Fairvioo2';
@@ -62,6 +65,10 @@ export const getSlides = () => {
     BeforeCC3,
     BeforeCC4,
     BeforeCC5,
+
+    CreationSectionTitle,
+    CreationContact1,
+    CreationContact2,
 
     EndTitle,
     PromotionLyonCraft,

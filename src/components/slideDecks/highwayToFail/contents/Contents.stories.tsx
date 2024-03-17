@@ -12,6 +12,9 @@ import { content as BeforeMe1Content } from './BeforeMe1';
 import { content as BeforeMe2Content } from './BeforeMe2';
 import { content as BeforeMe3Content } from './BeforeMe3';
 import { content as BeforeTimelineSectionTitleContent } from './BeforeSectionTitle';
+import { content as CreationContact1Content } from './CreationContact1';
+import { content as CreationContact2Content } from './CreationContact2';
+import { content as CreationSectionTitleContent } from './CreationSectionTitle';
 import { content as EndTitleContent } from './EndTitle';
 import { content as Fairvioo1Content } from './Fairvioo1';
 import { content as Fairvioo2Content } from './Fairvioo2';
@@ -145,6 +148,18 @@ export const BeforeCaptainContrat4: Story = {
 
 export const BeforeCaptainContrat5: Story = {
   render: () => <SlideDeck>{BeforeCC5Content}</SlideDeck>,
+};
+
+export const CreationSectionTitle: Story = {
+  render: () => <SlideDeck>{CreationSectionTitleContent}</SlideDeck>,
+};
+
+export const CreationContact1: Story = {
+  render: () => <SlideDeck>{CreationContact1Content}</SlideDeck>,
+};
+
+export const CreationContact2: Story = {
+  render: () => <SlideDeck>{CreationContact2Content}</SlideDeck>,
 };
 
 export const EndTitle: Story = {
