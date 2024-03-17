@@ -9,7 +9,7 @@ const talkSubjects = new Map<string, TalkSubject>([
       topic: 'Your mission ? Discover Haskell and use it in production',
       descriptions: [
         'We hear about Haskell now and then, but it often seems to be complicated to start using it. Haskell can be scary with its Monads, Monoids and other cursing words.',
-        'We‘ll see together that you don‘t really need to understand all this principles to use it. What I suggest is to see what you need to create a small API, with some security and data managment, in simpler words, what you need for a small production application.',
+        'We’ll see together that you don’t really need to understand all this principles to use it. What I suggest is to see what you need to create a small API, with some security and data managment, in simpler words, what you need for a small production application.',
       ],
     },
   ],
@@ -45,9 +45,9 @@ const talkSubjects = new Map<string, TalkSubject>([
     {
       topic: 'Event Driven, but what is it?! A new buzzword ?',
       descriptions: [
-        'We hear about Event Driven Systems, now and then. That‘s a kind of hype, but what is it exactly? To understand it, we‘ll start with the basics, to gradually see what can bring us the publish - subscribe model, his pros and cons. We‘ll see how to use in some common cases.',
-        'In the past, I worked on a platform that had to grow fast. At each new added service, at each new added feature, complexity was pilled until making any change would become impossible, even dangerous. And, let‘s be honest, sometimes, some ill-advised good ideas made the situation even worst. We‘ll use this platform for this presentation and see what we could improve.',
-        'For each situation, we‘ll see what needs are answered, its advantages and even its flaws, flaws that we will then try to correct. Our goal? To have less dependently services, services that will gain in performance and stability!',
+        'We hear about Event Driven Systems, now and then. That’s a kind of hype, but what is it exactly? To understand it, we’ll start with the basics, to gradually see what can bring us the publish - subscribe model, his pros and cons. We’ll see how to use in some common cases.',
+        'In the past, I worked on a platform that had to grow fast. At each new added service, at each new added feature, complexity was pilled until making any change would become impossible, even dangerous. And, let’s be honest, sometimes, some ill-advised good ideas made the situation even worst. We’ll use this platform for this presentation and see what we could improve.',
+        'For each situation, we’ll see what needs are answered, its advantages and even its flaws, flaws that we will then try to correct. Our goal? To have less dependently services, services that will gain in performance and stability!',
       ],
     },
   ],
@@ -56,18 +56,18 @@ const talkSubjects = new Map<string, TalkSubject>([
     {
       topic: 'The authorization mysteries',
       descriptions: [
-        'At the begin of your project, you simplify handle the user authentication, then little by little, you added some kind of user roles. And then, with time passes, your product manager asks you to refine this management and those user roles won‘t be enough.',
-        'Maybe you already had the impression that authorization management is something quite unclear or complex. We know we should do it, but we often don‘t know how to do it, or even why. Sometimes, we even mix it with authentication. But then, what is authorizations and how do we handle it?',
-        'To each situation, its solution. We‘ll how to answer to the most common cases, with their pros and cons. Our goal? To handle authorizations for our situation, without adding a lot of complexity to our application.',
+        'At the begin of your project, you simplify handle the user authentication, then little by little, you added some kind of user roles. And then, with time passes, your product manager asks you to refine this management and those user roles won’t be enough.',
+        'Maybe you already had the impression that authorization management is something quite unclear or complex. We know we should do it, but we often don’t know how to do it, or even why. Sometimes, we even mix it with authentication. But then, what is authorizations and how do we handle it?',
+        'To each situation, its solution. We’ll how to answer to the most common cases, with their pros and cons. Our goal? To handle authorizations for our situation, without adding a lot of complexity to our application.',
       ],
     },
   ],
   [
     'tired_women_revolution',
     {
-      topic: 'The tired women‘s revolution',
+      topic: 'The tired women’s revolution',
       descriptions: [
-        'Round table discussions with Angi Guyard and Sonia Prévost. We‘ll look at the experience of women in tech and explain why we‘re so "tired" of these stereotypes.',
+        'Round table discussions with Angi Guyard and Sonia Prévost. We’ll look at the experience of women in tech and explain why we’re so "tired" of these stereotypes.',
       ],
     },
   ],
@@ -86,7 +86,7 @@ const talkSubjects = new Map<string, TalkSubject>([
     {
       topic: 'Avocado Growth : Tech Profile',
       descriptions: [
-        'Episode 18 of Mansour Mahamat-salle‘s podcasts, about my journey in tech, including how I got to where I am today.',
+        'Episode 18 of Mansour Mahamat-salle’s podcasts, about my journey in tech, including how I got to where I am today.',
       ],
     },
   ],
@@ -95,7 +95,7 @@ const talkSubjects = new Map<string, TalkSubject>([
     {
       topic: 'Highway to fail',
       descriptions: [
-        'You want to venture into entrepreneurship, but are still undecided? You would see yourself creating your own startup, but don‘t dare? You might be right, since, as we now know it, 90 % of the startups will go bankrupt, with 10 % during the first year.',
+        'You want to venture into entrepreneurship, but are still undecided? You would see yourself creating your own startup, but don’t dare? You might be right, since, as we now know it, 90 % of the startups will go bankrupt, with 10 % during the first year.',
         'At the end of 2018, I joined 2 cofonders to create our first startup. And towards June 2020, we closed down for good. Why ? Between product, technics, business and human factors, sometimes, it can be hard to find the balance.',
         'Through my own entrepreneurial journey, I want to come back to some of our mistakes and if we could have prevented it. Maybe this honest self-reflection will help you prevent some pitfalls.',
       ],
@@ -535,7 +535,7 @@ const resume: Resume = {
           to: '2016-08-31',
           role: 'Developer & Technical Leader & Technical consulting for digital transformation',
           descriptions: [
-            'Creation of a team dedicated to Cloud-hosted applications, in order to start the french entity‘s digital transformation.',
+            'Creation of a team dedicated to Cloud-hosted applications, in order to start the french entity’s digital transformation.',
             'Technical consulting on architecture, recruitments, and mentorship. Functional and technical consulting on all design steps.',
             'User workshop animations. Pre-sales, Needs analysis and figures calculation.',
           ],
@@ -662,7 +662,7 @@ const resume: Resume = {
           role: 'Junior architect & Java / GWT developer',
           summarize: true,
           descriptions: [
-            'Integrated in a team of architects providing a technical platform. Implementation of a technical platform for developers‘ use.',
+            'Integrated in a team of architects providing a technical platform. Implementation of a technical platform for developers’ use.',
           ],
           stacks: [
             { type: 'Technical platform', technos: ['JEE5', 'Tomcat'] },
@@ -695,7 +695,7 @@ const resume: Resume = {
           role: 'Java/GWT developer & ScrumMaster',
           summarize: true,
           descriptions: [
-            'Application awarded internally for its usage‘s simplicity.',
+            'Application awarded internally for its usage’s simplicity.',
             'THALES employees needed to, in order to receive an internal certification, take part in the development of a project. I was the fullstack developer delivering the application for this project.',
           ],
           projects: [
@@ -718,7 +718,7 @@ const resume: Resume = {
             {
               name: 'StoreForce',
               description:
-                'Web application used by a retail store chain, to plan their employees‘ daily tasks depending on stocks and deliveries',
+                'Web application used by a retail store chain, to plan their employees’ daily tasks depending on stocks and deliveries',
             },
           ],
           stacks: [
@@ -822,7 +822,7 @@ const resume: Resume = {
             {
               name: 'Gestion du Client',
               description:
-                'Service dedicated to managing all phone customers‘ contract (package, options…)',
+                'Service dedicated to managing all phone customers’ contract (package, options…)',
             },
           ],
           stacks: [

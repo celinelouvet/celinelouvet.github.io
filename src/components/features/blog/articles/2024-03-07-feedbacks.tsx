@@ -33,9 +33,9 @@ export const FeedbackSummary: FC<{ link: string }> = ({ link }) => {
     >
       <Stack spacing={0}>
         <Text>
-          Suite à la publication du précédent article, j‘ai eu des retours très
-          pertinents. J‘ai donc appliqué ceux qui étaient facilement
-          réalisables. Je vous explique comment j‘ai fait ça.
+          Suite à la publication du précédent article, j’ai eu des retours très
+          pertinents. J’ai donc appliqué ceux qui étaient facilement
+          réalisables. Je vous explique comment j’ai fait ça.
         </Text>
         <Text>
           <Text as="b">TLDR: </Text>des feedbacks et une nouvelle version.
@@ -50,9 +50,9 @@ export const FeedbackContent: FC = () => (
     <>
       <Stack spacing={0}>
         <Text>
-          Suite à la publication du précédent article, j‘ai eu des retours très
-          pertinents. J‘ai donc appliqué ceux qui étaient facilement
-          réalisables. Je vous explique comment j‘ai fait ça.
+          Suite à la publication du précédent article, j’ai eu des retours très
+          pertinents. J’ai donc appliqué ceux qui étaient facilement
+          réalisables. Je vous explique comment j’ai fait ça.
         </Text>
         <Text>
           <Text as="b">TLDR: </Text>des feedbacks et une nouvelle version.
@@ -65,14 +65,14 @@ export const FeedbackContent: FC = () => (
         <Stack spacing={2}>
           <Stack spacing={0}>
             <Text as="span">
-              Quand j‘ai annoncé la publication de la refonte, j‘ai reçu ces
+              Quand j’ai annoncé la publication de la refonte, j’ai reçu ces
               feedbacks :
             </Text>
             <UnorderedList paddingLeft={4}>
               <ListItem>Le chargement du site était rapide,</ListItem>
               <ListItem>Le poids trop élevé de certaines images,</ListItem>
               <ListItem>
-                Le manque d‘accessibilité du menu de navigation,
+                Le manque d’accessibilité du menu de navigation,
               </ListItem>
               <ListItem>Une police majoritairement trop petite,</ListItem>
               <ListItem>
@@ -83,7 +83,7 @@ export const FeedbackContent: FC = () => (
           </Stack>
 
           <Text>
-            J‘ai aussi reçu une demande d‘ajout de fonctionnalité: un flux RSS.
+            J’ai aussi reçu une demande d’ajout de fonctionnalité: un flux RSS.
           </Text>
           <Text>
             Merci à toutes les personnes qui ont pris le temps de me faire ces
@@ -96,7 +96,7 @@ export const FeedbackContent: FC = () => (
 
           <Stack spacing={0}>
             <Text>
-              Je ne pense pas y être pour grand-chose. C‘est surtout la stack
+              Je ne pense pas y être pour grand-chose. C’est surtout la stack
               choisie qui permet tout ça.
             </Text>
             <Text>
@@ -104,7 +104,7 @@ export const FeedbackContent: FC = () => (
               <ExternalLink href="https://start-ui.com" marginX={1}>
                 Start UI de BearStudio
               </ExternalLink>
-              que j‘ai un peu purgé pour supprimer ce qui ne m‘était pas
+              que j’ai un peu purgé pour supprimer ce qui ne m’était pas
               nécessaire.
             </Text>
           </Stack>
@@ -119,7 +119,7 @@ export const FeedbackContent: FC = () => (
                   NextJs
                 </ExternalLink>
                 pour le framework web. Il permet de profiter de composants React
-                et il apporte une grande partie de l‘optimisation,
+                et il apporte une grande partie de l’optimisation,
               </ListItem>
               <ListItem>
                 <ExternalLink href="https://chakra-ui.com" marginX={1}>
@@ -134,7 +134,7 @@ export const FeedbackContent: FC = () => (
           <Stack spacing={2}>
             <Stack spacing={0}>
               <Text as="span">
-                J‘ai choisi de déployer le résultat sur
+                J’ai choisi de déployer le résultat sur
                 <ExternalLink
                   href="https://cloud.google.com/appengine?hl=en"
                   marginX={1}
@@ -145,7 +145,7 @@ export const FeedbackContent: FC = () => (
               </Text>
               <UnorderedList paddingLeft={4}>
                 <ListItem>
-                  C‘est gratuit tant que l‘usage reste en-dessous d‘un quota, ce
+                  C’est gratuit tant que l’usage reste en-dessous d’un quota, ce
                   qui est parfait pour un petit site perso.
                 </ListItem>
                 <ListItem>
@@ -153,18 +153,18 @@ export const FeedbackContent: FC = () => (
                   convient parfaitement.
                 </ListItem>
                 <ListItem>
-                  C‘est entièrement géré par GCP, donc je peux me concentrer sur
+                  C’est entièrement géré par GCP, donc je peux me concentrer sur
                   mon travail, le développement.
                 </ListItem>
               </UnorderedList>
             </Stack>
             <Stack spacing={0}>
               <Text>
-                J‘ai configuré mon instance pour qu‘elle soit up en permanence,
-                ce qui permet d‘éviter de subir trop de cold start.
+                J’ai configuré mon instance pour qu’elle soit up en permanence,
+                ce qui permet d’éviter de subir trop de cold start.
               </Text>
               <Text>
-                Néanmoins le gros souci du déploiement sur AppEngine, c‘est le
+                Néanmoins le gros souci du déploiement sur AppEngine, c’est le
                 temps de déploiement en tant que tel. Il varie entre
                 <strong>2 minutes et 7-8 minutes</strong>.
               </Text>
@@ -172,7 +172,7 @@ export const FeedbackContent: FC = () => (
           </Stack>
 
           <Text>
-            Pour la CI/CD, j‘utilise Github Actions, car il y a des actions
+            Pour la CI/CD, j’utilise Github Actions, car il y a des actions
             existantes pour GCP.
           </Text>
         </Stack>
@@ -182,15 +182,15 @@ export const FeedbackContent: FC = () => (
 
           <Stack spacing={0}>
             <Text>
-              Je n‘avais clairement pas réfléchi à ce problème avant le feedback
-              et c‘est idiot de ma part 😂
+              Je n’avais clairement pas réfléchi à ce problème avant le feedback
+              et c’est idiot de ma part 😂
             </Text>
             <Text>
-              J‘ai donc réduit la taille des images pour qu‘elles ne soient pas
-              plus grandes que nécessaire. Ça ne sert à rien d‘avoir une image
-              2000 x 1000 px, si c‘est pour l‘afficher en 200 x 100 px ! Pire
+              J’ai donc réduit la taille des images pour qu’elles ne soient pas
+              plus grandes que nécessaire. Ça ne sert à rien d’avoir une image
+              2000 x 1000 px, si c’est pour l’afficher en 200 x 100 px ! Pire
               que ça, ça ralentit le browser qui doit les réduire pour les
-              afficher. Ça m‘a permis déjà de diminuer grandement le poids de
+              afficher. Ça m’a permis déjà de diminuer grandement le poids de
               celles ci.
             </Text>
             <Text>
@@ -203,17 +203,17 @@ export const FeedbackContent: FC = () => (
         </Stack>
 
         <Stack spacing={4}>
-          <H4Heading>Manque d‘accessibilité du menu de navigation</H4Heading>
+          <H4Heading>Manque d’accessibilité du menu de navigation</H4Heading>
 
           <Stack spacing={0} marginBottom="6">
             <Text>
-              Mon menu manquait très clairement d‘accessibilité. Il était très
+              Mon menu manquait très clairement d’accessibilité. Il était très
               difficile de voir quelle page était sélectionnée.
             </Text>
             <Text>
-              Je l‘ai donc revu pour utiliser directement des boutons afin qu‘il
-              soit plus accessible pour les lecteurs. J‘ai aussi aligné les
-              boutons à gauche pour pouvoir ajouter d‘autres pages dans le
+              Je l’ai donc revu pour utiliser directement des boutons afin qu’il
+              soit plus accessible pour les lecteurs. J’ai aussi aligné les
+              boutons à gauche pour pouvoir ajouter d’autres pages dans le
               futur.
             </Text>
 
@@ -252,8 +252,8 @@ export const FeedbackContent: FC = () => (
 
           <Stack spacing={0}>
             <Text>
-              Au passage, j‘ai créé une vraie version pour mobile qui j‘espère
-              sera mieux. J‘ai enlevé le précédent menu pour ajouter un panneau
+              Au passage, j’ai créé une vraie version pour mobile qui j’espère
+              sera mieux. J’ai enlevé le précédent menu pour ajouter un panneau
               menu.
             </Text>
 
@@ -307,9 +307,9 @@ export const FeedbackContent: FC = () => (
 
           <Stack spacing={0} marginBottom="6">
             <Text>
-              Ma police était bien trop petite. J‘utilisais du 14px en taille
-              par défaut et parfois, je descendais jusqu‘à 10px. Maintenant, la
-              police par défaut est 16px, mais je pense qu‘elle est encore
+              Ma police était bien trop petite. J’utilisais du 14px en taille
+              par défaut et parfois, je descendais jusqu’à 10px. Maintenant, la
+              police par défaut est 16px, mais je pense qu’elle est encore
               parfois trop petite... Je reverrais ça à nouveau.
             </Text>
           </Stack>
@@ -322,12 +322,12 @@ export const FeedbackContent: FC = () => (
 
           <Stack spacing={0} marginBottom="6">
             <Text>
-              J‘avais ajouté un toggle sur le CV afin d‘adapter le contenu à la
+              J’avais ajouté un toggle sur le CV afin d’adapter le contenu à la
               personne qui le lit. Quand ce toggle est actif, les expériences
               affichaient plus de détails.
             </Text>
             <Text>
-              A la place, j‘ai mis une section dépliable par expérience, suite à
+              A la place, j’ai mis une section dépliable par expérience, suite à
               une suggestion.
             </Text>
 
@@ -368,13 +368,13 @@ export const FeedbackContent: FC = () => (
 
           <Stack spacing={0}>
             <Text>
-              Désolée, mais je n‘ai vraiment pas eu le temps d‘attaquer ça.
+              Désolée, mais je n’ai vraiment pas eu le temps d’attaquer ça.
               Peut-être en juin ?
             </Text>
             <Text>
               Si vous connaissez des librairies qui vont ça facilement en JS /
-              TS, je suis très preneuse, encore plus s‘il s‘agit de librairies
-              plug ‘n‘ play en nextJs !
+              TS, je suis très preneuse, encore plus s’il s’agit de librairies
+              plug ’n’ play en nextJs !
             </Text>
           </Stack>
         </Stack>
@@ -395,24 +395,24 @@ export const FeedbackContent: FC = () => (
       </Stack>
 
       <Stack spacing={4}>
-        <H3Heading>Et c‘est tout ?!</H3Heading>
+        <H3Heading>Et c’est tout ?!</H3Heading>
 
         <Text>
-          Non, ce n‘est pas tout. J‘en ai profité pour apporter 2-3 autres
+          Non, ce n’est pas tout. J’en ai profité pour apporter 2-3 autres
           choses.
         </Text>
 
-        <Text as="span">J‘ai fait :</Text>
+        <Text as="span">J’ai fait :</Text>
         <UnorderedList paddingLeft={4} marginBottom="6">
           <ListItem>
-            une mise à jour de la stack: les packages sont à jour et l‘instance
+            une mise à jour de la stack: les packages sont à jour et l’instance
             tourne sur du node 20 maintenant !
           </ListItem>
           <ListItem>
             du ménage dans le design system et dans les stories storybook
           </ListItem>
           <ListItem>
-            un micro-tracking maison: j‘enregistre au fil de votre navigation
+            un micro-tracking maison: j’enregistre au fil de votre navigation
             les infos suivantes
             <UnorderedList paddingLeft={4}>
               <ListItem>la langue utilisée,</ListItem>
@@ -420,14 +420,14 @@ export const FeedbackContent: FC = () => (
               <ListItem>la page où vous allez,</ListItem>
               <ListItem>si vous cliquez sur des zones dépliables.</ListItem>
               <ListItem>
-                Et c‘est tout ! Pas d‘identifiant, pas d‘IP, rien de personnel.
+                Et c’est tout ! Pas d’identifiant, pas d’IP, rien de personnel.
               </ListItem>
             </UnorderedList>
           </ListItem>
         </UnorderedList>
 
         <Text>
-          Si vous avez des doutes sur vos données, n‘hésitez pas à aller faire
+          Si vous avez des doutes sur vos données, n’hésitez pas à aller faire
           un tour dans le
           <ExternalLink
             href="https://github.com/celinelouvet/celinelouvet.github.io"
@@ -442,8 +442,8 @@ export const FeedbackContent: FC = () => (
 
       <Stack spacing={2} alignItems="center">
         <Text>
-          Et n‘hésitez pas, je suis toujours preneuse de vos feedbacks, tant
-          qu‘ils sont constructifs 🙂
+          Et n’hésitez pas, je suis toujours preneuse de vos feedbacks, tant
+          qu’ils sont constructifs 🙂
         </Text>
         <Image
           boxSize={200}
