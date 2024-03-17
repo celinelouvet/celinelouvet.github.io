@@ -20,6 +20,7 @@ import { content as Preface3Content } from './Preface3';
 import { content as Preface4Content } from './Preface4';
 import { content as PromotionLyonCraftContent } from './PromotionLyonCraft';
 import { content as SurveySectionTitleContent } from './SurveySectionTitle';
+import { content as TimelineContent } from './Timeline';
 
 const meta = {
   title: 'Talks/HighwayToFail',
@@ -95,6 +96,10 @@ export const Numbers3: Story = {
 
 export const Numbers4: Story = {
   render: () => <SlideDeck>{Numbers4Content}</SlideDeck>,
+};
+
+export const Timeline: Story = {
+  render: () => <SlideDeck>{TimelineContent}</SlideDeck>,
 };
 
 export const EndTitle: Story = {

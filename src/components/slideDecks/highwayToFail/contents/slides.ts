@@ -18,6 +18,7 @@ import Preface3 from './Preface3';
 import Preface4 from './Preface4';
 import PromotionLyonCraft from './PromotionLyonCraft';
 import SurveySectionTitle from './SurveySectionTitle';
+import Timeline from './Timeline';
 
 export const getSlides = () => {
   const slides = [
@@ -39,6 +40,8 @@ export const getSlides = () => {
     Numbers2,
     Numbers3,
     Numbers4,
+
+    Timeline,
 
     EndTitle,
     PromotionLyonCraft,
