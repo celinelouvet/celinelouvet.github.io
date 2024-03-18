@@ -11,8 +11,8 @@ export type H1HeadingProps = Omit<ChakraHeadingProps, 'size'> & {
 };
 
 export const H1Heading = forwardRef<H1HeadingProps, 'h1'>(
-  ({ children, size, ...props }, ref) => {
-    const styles = useStyleConfig('H1Heading', { size });
+  ({ children, size, variant, ...props }, ref) => {
+    const styles = useStyleConfig('H1Heading', { size, variant });
 
     return (
       <ChakraHeading as="h1" sx={styles} {...props} ref={ref}>
@@ -39,6 +39,10 @@ export const h1HeadingStyles = {
       textTransform: 'uppercase',
       fontWeight: '400',
       paddingBottom: '3',
+    },
+    slide: {
+      fontWeight: '700',
+      paddingBottom: '4',
     },
   },
   defaultProps: {
