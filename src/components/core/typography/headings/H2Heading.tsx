@@ -11,8 +11,8 @@ export type H2HeadingProps = Omit<ChakraHeadingProps, 'size'> & {
 };
 
 export const H2Heading = forwardRef<H2HeadingProps, 'h2'>(
-  ({ children, size, ...props }, ref) => {
-    const styles = useStyleConfig('H2Heading', { size });
+  ({ children, size, variant, ...props }, ref) => {
+    const styles = useStyleConfig('H2Heading', { size, variant });
 
     return (
       <ChakraHeading as="h2" sx={styles} {...props} ref={ref}>
@@ -25,8 +25,6 @@ export const H2Heading = forwardRef<H2HeadingProps, 'h2'>(
 export const h2HeadingStyles = {
   baseStyle: {
     fontFamily: 'PT Sans Narrow',
-    fontWeight: '400',
-    marginBottom: '2',
   },
   sizes: {
     md: {
@@ -37,7 +35,14 @@ export const h2HeadingStyles = {
       textTransform: 'uppercase',
     },
   },
+  variants: {
+    basic: {
+      fontWeight: '400',
+      marginBottom: '2',
+    },
+  },
   defaultProps: {
     size: 'md',
+    variant: 'basic',
   },
 } satisfies StyleConfig;
