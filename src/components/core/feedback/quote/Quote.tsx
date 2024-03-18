@@ -7,7 +7,6 @@ import {
   createMultiStyleConfigHelpers,
   createStylesContext,
   forwardRef,
-  useColorModeValue,
   useMultiStyleConfig,
 } from '@chakra-ui/react';
 import { FaQuoteRight } from 'react-icons/fa';
@@ -17,31 +16,23 @@ const [StylesProvider] = createStylesContext('Quote');
 export type QuoteProps = ChakraAlertProps;
 
 export const Quote = forwardRef<QuoteProps, 'div'>(
-  ({ children, ...props }, ref) => {
+  ({ children, variant, ...props }, ref) => {
     const styles = useMultiStyleConfig('Quote', {
       ...alertAnatomy.keys,
+      variant,
     });
-
-    const containerBgColor = useColorModeValue('brand.700', 'brand.300');
 
     return (
       <StylesProvider value={styles}>
         <ChakraAlert
           status="info"
-          variant="subtle"
-          bgColor={containerBgColor}
-          borderRadius="md"
-          marginBottom="6"
-          __css={styles.container}
+          variant={variant}
+          sx={styles.container}
           ref={ref}
           {...props}
         >
-          <ChakraAlertIcon
-            color="brand.500"
-            __css={styles.icon}
-            as={FaQuoteRight}
-          />
-          <ChakraAlertDescription __css={styles.description}>
+          <ChakraAlertIcon sx={styles.icon} as={FaQuoteRight} />
+          <ChakraAlertDescription sx={styles.description}>
             {children}
           </ChakraAlertDescription>
         </ChakraAlert>
@@ -54,10 +45,53 @@ const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(alertAnatomy.keys);
 
 const baseStyle = definePartsStyle({
-  container: {},
-  icon: {},
+  container: {
+    borderRadius: 'md',
+    borderColor: 'brand.400',
+    backgroundColor: 'brand.700',
+    color: 'brand.200',
+
+    _dark: {
+      backgroundColor: 'brand.300',
+      color: 'brand.700',
+      borderColor: 'brand.600',
+    },
+  },
+  icon: {
+    color: 'brand.400',
+
+    _dark: {
+      color: 'brand.600',
+    },
+  },
+});
+
+const solidStyle = definePartsStyle({
+  container: {
+    backgroundColor: 'brand.400',
+    color: 'brand.900',
+
+    _dark: {
+      backgroundColor: 'brand.600',
+      color: 'brand.200',
+    },
+  },
+  icon: {
+    color: 'brand.700',
+
+    _dark: {
+      color: 'brand.300',
+    },
+  },
 });
 
 export const quoteStyles = defineMultiStyleConfig({
   baseStyle,
+  variants: {
+    subtle: {},
+    solid: solidStyle,
+  },
+  defaultProps: {
+    variant: 'subtle',
+  },
 });

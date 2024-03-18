@@ -35,7 +35,7 @@ export const March8Summary: FC<{ link: string }> = ({ link }) => {
           s’est améliorée dans la tech. A cette question, j’ai souvent une
           réponse en demi-teinte où j’utilise une expression québécoise:
         </Text>
-        <Quote>C’est moins pire, oui.</Quote>
+        <Quote marginBottom="6">C’est moins pire, oui.</Quote>
         <Text>
           En effet, ça s’est amélioré sur certains points, mais on partait de
           tellement loin, c’est comme si la barre était au sol. Difficile de
@@ -62,7 +62,7 @@ export const March8Content: FC = () => (
           s’est améliorée dans la tech. A cette question, j’ai souvent une
           réponse en demi-teinte où j’utilise une expression québécoise:
         </Text>
-        <Quote>C’est moins pire, oui.</Quote>
+        <Quote marginBottom="6">C’est moins pire, oui.</Quote>
         <Text>
           En effet, ça s’est amélioré sur certains points, mais on partait de
           tellement loin, c’est comme si la barre était au sol. Difficile de
@@ -96,7 +96,7 @@ export const March8Content: FC = () => (
                 en tant que développeuse.
               </Text>
               <Text>Le recruteur m’a dit, en toute décontraction :</Text>
-              <Quote>
+              <Quote marginBottom="6">
                 Vous savez, en tant que femme, vous ne ferez jamais un bon
                 développeur. Faites plutôt de la MOA.
               </Quote>
@@ -127,7 +127,7 @@ export const March8Content: FC = () => (
                 Dès le début de l’entretien, le client me regarde, agacé, puis
                 me dit :
               </Text>
-              <Quote>
+              <Quote marginBottom="6">
                 Vous, je ne vous pose pas de question technique, ça ne sert à
                 rien. Je ne vais pas perdre mon temps avec vous.
               </Quote>
@@ -151,7 +151,7 @@ export const March8Content: FC = () => (
               <Text>
                 Puis à la fin, le commercial me dit, en toute décontraction :
               </Text>
-              <Quote>
+              <Quote marginBottom="6">
                 Déboutonnes un peu plus ta chemise, ça t’aidera à garder
                 l’attention du client.
               </Quote>
@@ -173,7 +173,7 @@ export const March8Content: FC = () => (
                 heures, l’implication.
               </Text>
               <Text>Au bout de quelques semaines, le client me dit :</Text>
-              <Quote>
+              <Quote marginBottom="6">
                 Il faut vraiment que tu t’investisses plus, car là, tu as l’air
                 moins compétente que tes collègues masculins.
               </Quote>
@@ -236,7 +236,7 @@ export const March8Content: FC = () => (
                 problème.
               </Text>
               <Text>Mon responsable me répond après l’avoir lu :</Text>
-              <Quote>
+              <Quote marginBottom="6">
                 Ok mais je veux que tu démontres ce que tu expliques, car j’ai
                 des doutes.
               </Quote>
@@ -250,7 +250,7 @@ export const March8Content: FC = () => (
                 démonstration est faite par A+B que oui, c’est bien la solution.
               </Text>
               <Text>Je la présente à mon responsable. Il me répond:</Text>
-              <Quote>
+              <Quote marginBottom="6">
                 Oui ça y répond, mais peux-tu approfondir les tests, car j’ai
                 encore des doutes.
               </Quote>
@@ -277,7 +277,9 @@ export const March8Content: FC = () => (
                 À un problème fonctionnel, je propose une solution. Mon lead dev
                 me répond, sans plus d’explication :
               </Text>
-              <Quote>Non, ce n’est pas une bonne solution.</Quote>
+              <Quote marginBottom="6">
+                Non, ce n’est pas une bonne solution.
+              </Quote>
               <Text as="span">
                 Jusque là, aucun souci à mes yeux, même si ça manque
                 d’explications. Le problème arrivera plus tard.
@@ -313,7 +315,7 @@ export const March8Content: FC = () => (
                 parole par quelqu’un d’autre, souvent un homme.
               </Text>
               <Text>Je finis par dire, énervée :</Text>
-              <Quote>
+              <Quote marginBottom="6">
                 Vous allez me laisser finir mes phrases, oui ou non ?!
               </Quote>
               <Text as="span">
@@ -376,7 +378,9 @@ export const March8Content: FC = () => (
                 Je poste sur Twitter le dernier podcast enregistré avec Mansour.
                 Je reçois plusieurs réponses, dont la suivante :
               </Text>
-              <Quote>Céline vous avez du charme a revendre</Quote>
+              <Quote marginBottom="6">
+                Céline vous avez du charme a revendre
+              </Quote>
               <Text>
                 On pourrait se dire &ldquo;C’est juste un compliment&rdquo;,
                 mais, en réalité, c’est très similaire au harcèlement de rue.
