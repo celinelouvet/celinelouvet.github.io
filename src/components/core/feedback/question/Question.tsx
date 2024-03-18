@@ -16,23 +16,23 @@ const [StylesProvider] = createStylesContext('Question');
 export type QuestionProps = ChakraAlertProps;
 
 export const Question = forwardRef<QuestionProps, 'div'>(
-  ({ children, ...props }, ref) => {
+  ({ children, variant, ...props }, ref) => {
     const styles = useMultiStyleConfig('Question', {
       ...alertAnatomy.keys,
+      variant,
     });
 
     return (
       <StylesProvider value={styles}>
         <ChakraAlert
           status="warning"
-          variant="subtle"
-          marginBottom="6"
-          __css={styles.container}
+          variant={variant}
+          sx={styles.container}
           ref={ref}
           {...props}
         >
-          <ChakraAlertIcon __css={styles.icon} as={FaQuestion} />
-          <ChakraAlertDescription __css={styles.description}>
+          <ChakraAlertIcon sx={styles.icon} as={FaQuestion} />
+          <ChakraAlertDescription sx={styles.description}>
             {children}
           </ChakraAlertDescription>
         </ChakraAlert>
@@ -45,10 +45,18 @@ const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(alertAnatomy.keys);
 
 const baseStyle = definePartsStyle({
-  container: {},
+  container: {
+    borderRadius: 'md',
+  },
   icon: {},
 });
 
 export const questionStyles = defineMultiStyleConfig({
   baseStyle,
+  variants: {
+    subtle: {},
+  },
+  defaultProps: {
+    variant: 'subtle',
+  },
 });
