@@ -189,7 +189,7 @@ export const March8Content: FC = () => (
                 Il en est ressorti une question que je me pose encore
                 régulièrement :
               </Text>
-              <Question>
+              <Question marginBottom="6">
                 Pourquoi m’investir plus, si ce n’est pas reconnu ? Que j’en
                 fasse plus ou moins, ils me considèreront toujours comme moins
                 compétente que les hommes. Autant en faire moins et arrêtez de
@@ -348,7 +348,7 @@ export const March8Content: FC = () => (
                 message est vital à passer, je vais demander à mon collègue de
                 le faire passer.
               </Text>
-              <Question>
+              <Question marginBottom="6">
                 Vu qu’on ne m’écoute pas, pourquoi continuer à m’acharner à
                 parler ?
               </Question>
