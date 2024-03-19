@@ -51,10 +51,41 @@ const baseStyle = definePartsStyle({
   icon: {},
 });
 
+const slideStyle = definePartsStyle({
+  container: {
+    borderRadius: '0.25em',
+    backgroundColor: '#eadcbf',
+    borderLeftColor: '#cf8b5e',
+    borderLeftWidth: '0.2em',
+    borderLeftStyle: 'solid',
+    fontSize: '1em',
+    color: '#443c37',
+
+    _dark: {
+      backgroundColor: '#eadcbf',
+      borderLeftColor: '#cf8b5e',
+      color: '#443c37',
+    },
+  },
+  description: {
+    lineHeight: '1.5em',
+  },
+  icon: {
+    color: '#cf8b5e',
+    boxSize: '1em',
+    marginRight: '1em',
+
+    _dark: {
+      color: '#cf8b5e',
+    },
+  },
+});
+
 export const thumbsDownStyles = defineMultiStyleConfig({
   baseStyle,
   variants: {
     subtle: {},
+    slide: slideStyle,
   },
   defaultProps: {
     variant: 'subtle',
