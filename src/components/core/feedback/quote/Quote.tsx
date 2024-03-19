@@ -85,11 +85,32 @@ const solidStyle = definePartsStyle({
   },
 });
 
+const slideStyle = definePartsStyle({
+  container: {
+    borderRadius: '0.25em',
+    borderColor: 'brand.600',
+    borderWidth: '1px',
+    borderStyle: 'solid',
+    fontSize: '1em',
+
+    _dark: {
+      borderColor: 'brand.400',
+    },
+  },
+  description: {
+    lineHeight: '1.5em',
+  },
+  icon: {
+    color: 'brand.300',
+  },
+});
+
 export const quoteStyles = defineMultiStyleConfig({
   baseStyle,
   variants: {
     subtle: {},
     solid: solidStyle,
+    slide: slideStyle,
   },
   defaultProps: {
     variant: 'subtle',
