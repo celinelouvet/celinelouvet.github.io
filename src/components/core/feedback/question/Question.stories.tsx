@@ -15,7 +15,13 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const variants = ['subtle', 'left-accent', 'top-accent', 'solid'] as const;
+const variants = [
+  'subtle',
+  'left-accent',
+  'top-accent',
+  'solid',
+  'slide',
+] as const;
 
 export const Question: Story = {
   render: (args) => {
