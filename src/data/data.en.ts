@@ -46,7 +46,7 @@ const talkSubjects = new Map<string, TalkSubject>([
       topic: 'Event Driven, but what is it?! A new buzzword ?',
       descriptions: [
         'We hear about Event Driven Systems, now and then. That’s a kind of hype, but what is it exactly? To understand it, we’ll start with the basics, to gradually see what can bring us the publish - subscribe model, his pros and cons. We’ll see how to use in some common cases.',
-        'In the past, I worked on a platform that had to grow fast. At each new added service, at each new added feature, complexity was pilled until making any change would become impossible, even dangerous. And, let’s be honest, sometimes, some ill-advised good ideas made the situation even worst. We’ll use this platform for this presentation and see what we could improve.',
+        'In the past, I worked on a platform that had to grow fast. At each new added service, at each new added feature, complexity was pilled until making any change would become impossible, even dangerous. And, let’s be honest, sometimes, some ill‑advised good ideas made the situation even worst. We’ll use this platform for this presentation and see what we could improve.',
         'For each situation, we’ll see what needs are answered, its advantages and even its flaws, flaws that we will then try to correct. Our goal? To have less dependently services, services that will gain in performance and stability!',
       ],
     },
@@ -86,7 +86,7 @@ const talkSubjects = new Map<string, TalkSubject>([
     {
       topic: 'Avocado Growth : Tech Profile',
       descriptions: [
-        'Episode 18 of Mansour Mahamat-salle’s podcasts, about my journey in tech, including how I got to where I am today.',
+        'Episode 18 of Mansour Mahamat‑salle’s podcasts, about my journey in tech, including how I got to where I am today.',
       ],
     },
   ],
@@ -97,7 +97,7 @@ const talkSubjects = new Map<string, TalkSubject>([
       descriptions: [
         'You want to venture into entrepreneurship, but are still undecided? You would see yourself creating your own startup, but don’t dare? You might be right, since, as we now know it, 90 % of the startups will go bankrupt, with 10 % during the first year.',
         'At the end of 2017, I joined 2 cofonders to create our first startup. And towards June 2019, we closed down for good. Why ? Between product, technics, business and human factors, sometimes, it can be hard to find the balance.',
-        'Through my own entrepreneurial journey, I want to come back to some of our mistakes and if we could have prevented it. Maybe this honest self-reflection will help you prevent some pitfalls.',
+        'Through my own entrepreneurial journey, I want to come back to some of our mistakes and if we could have prevented it. Maybe this honest self‑reflection will help you prevent some pitfalls.',
       ],
     },
   ],
@@ -229,8 +229,8 @@ const resume: Resume = {
       to: '2022-12-05',
       role: 'Backend developer',
       descriptions: [
-        'Backend developer on a microservices architecture, highly event-driven.',
-        'Several methodologies set up ro reduce frictions with the product team and improve projects and QA follow-ups.',
+        'Backend developer on a microservices architecture, highly event‑driven.',
+        'Several methodologies set up ro reduce frictions with the product team and improve projects and QA follow‑ups.',
       ],
       remote: 'HYBRID',
       projects: [
@@ -269,9 +269,9 @@ const resume: Resume = {
       to: '2022-04-25',
       role: 'Staff engineer / Senior Lead developer',
       descriptions: [
-        'Technical leader with a mid-management role and a strategic involvement, while being glue for the team, and developing backend features.',
+        'Technical leader with a mid‑management role and a strategic involvement, while being glue for the team, and developing backend features.',
         'Mentoring of other managers. Mentoring of a junior developer in career change.',
-        'The workload distribution between development and lead/management was 40-60%.',
+        'The workload distribution between development and lead/management was 40‑60%.',
       ],
       remote: 'FULLTIME',
       projects: [
@@ -286,7 +286,7 @@ const resume: Resume = {
           name: 'Hubside level',
           subtasks: [
             {
-              name: 'Set up of a system to catalog and handle existing technical debt, company-wide',
+              name: 'Set up of a system to catalog and handle existing technical debt, company‑wide',
             },
             { name: 'Technical roadmap definition' },
             { name: 'Mentoring of other managers' },
@@ -354,7 +354,7 @@ const resume: Resume = {
           role: 'Fullstack developer / Technical leader',
           descriptions: [
             'Fullstack developer at the begining, then take over of the technical leadership after the departure of the previous leader.',
-            'The workload distribution between development and lead/management was 70-30%.',
+            'The workload distribution between development and lead/management was 70‑30%.',
           ],
           projects: [
             {
@@ -428,11 +428,11 @@ const resume: Resume = {
       company: 'Fairvioo',
       from: '2017-12-01',
       to: '2019-06-15',
-      role: 'CTO & co-founder',
+      role: 'CTO & co‑founder',
       descriptions: [
         'Startup incubator at Paris Dauphine University.',
         'Solution to collect customers review after a purchase, with a positive impact based on thr principle of 1 customer review  = 1 donation to an organization.',
-        'Strategy and fundraising. Feature developments, hiring and mentorship of a, intern.',
+        'Strategy and fundraising. Feature developments, hiring and mentorship of an intern.',
       ],
       projects: [
         {
@@ -472,8 +472,8 @@ const resume: Resume = {
       to: '2017-11-20',
       role: 'CTO',
       descriptions: [
-        'Management of a small team of developers, needing a change in the working habits, in order to scale-up.',
-        'Hiring (search, follow-up and signature)',
+        'Management of a small team of developers, needing a change in the working habits, in order to scale‑up.',
+        'Hiring (search, follow‑up and signature)',
       ],
       projects: [
         {
@@ -535,9 +535,9 @@ const resume: Resume = {
           to: '2016-08-31',
           role: 'Developer & Technical Leader & Technical consulting for digital transformation',
           descriptions: [
-            'Creation of a team dedicated to Cloud-hosted applications, in order to start the french entity’s digital transformation.',
+            'Creation of a team dedicated to Cloud‑hosted applications, in order to start the french entity’s digital transformation.',
             'Technical consulting on architecture, recruitments, and mentorship. Functional and technical consulting on all design steps.',
-            'User workshop animations. Pre-sales, Needs analysis and figures calculation.',
+            'User workshop animations. Pre‑sales, Needs analysis and figures calculation.',
           ],
           projects: [
             {
@@ -572,13 +572,13 @@ const resume: Resume = {
           descriptions: [
             'Projects manager for Valeo at SFEIR, in liaison with 5 PMs and Cloud CIO.',
             'Architect, technical Leader and being glue on all projects, while developing backend features on the most crucial projects (Newscenter, Roadmap, QnP).',
-            'Developers mentorship. User workshops animation. Pre-sales, needs analysis and figures calculation',
+            'Developers mentorship. User workshops animation. Pre‑sales, needs analysis and figures calculation',
           ],
           projects: [
             {
               name: 'Roadmap',
               description:
-                'Web application dedicated to follow and estimate the maturity levels of all internal processes, company-wide (CMMI)',
+                'Web application dedicated to follow and estimate the maturity levels of all internal processes, company‑wide (CMMI)',
             },
             {
               name: 'ISPM',
@@ -619,9 +619,9 @@ const resume: Resume = {
             },
           ],
           stacks: [
-            { type: 'Front-ends', technos: ['GWT', 'AngularJs'] },
+            { type: 'Frontends', technos: ['GWT', 'AngularJs'] },
             {
-              type: 'Back-ends',
+              type: 'Backends',
               technos: [
                 'Java',
                 {
@@ -638,7 +638,7 @@ const resume: Resume = {
           ],
         },
         {
-          company: 'CA-CIB',
+          company: 'CA‑CIB',
           from: '2012-07-01',
           to: '2012-12-31',
           role: 'Java developer',
@@ -650,13 +650,13 @@ const resume: Resume = {
             {
               name: 'CNR',
               description:
-                'Web application used to automatically run functional non-regression tests on the library doing counterparty risks estimations on market transactions',
+                'Web application used to automatically run functional non‑regression tests on the library doing counterparty risks estimations on market transactions',
             },
           ],
           stacks: [{ type: '', technos: ['JEE5', 'JSP', 'Sybase'] }],
         },
         {
-          company: 'I-CDC',
+          company: 'I‑CDC',
           from: '2012-01-01',
           to: '2012-07-01',
           role: 'Junior architect & Java / GWT developer',
@@ -752,7 +752,7 @@ const resume: Resume = {
             {
               name: 'BACARDI',
               description:
-                'Back-office application dedicated to risk analysis on derivative products',
+                'Back‑office application dedicated to risk analysis on derivative products',
             },
           ],
           stacks: [
@@ -785,7 +785,7 @@ const resume: Resume = {
             {
               name: 'EPROM',
               description:
-                'Back-office application dedicated to derivative products, used as a refential by the others services',
+                'Back‑office application dedicated to derivative products, used as a refential by the others services',
             },
           ],
           stacks: [
@@ -1083,7 +1083,7 @@ const resume: Resume = {
     },
   ],
   trainings: [
-    { topic: 'Mid-management', company: 'Sparring Partners', when: '2021' },
+    { topic: 'Mid‑management', company: 'Sparring Partners', when: '2021' },
   ],
   certifications: [
     { topic: 'Polymer 200', company: 'SFEIR', when: '2016-07-01' },

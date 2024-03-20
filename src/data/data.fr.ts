@@ -43,7 +43,7 @@ const talkSubjects = new Map<string, TalkSubject>([
   [
     'event_driven_buzzword',
     {
-      topic: 'Event Driven, qu’est-ce donc ?! Un nouveau buzzword ?',
+      topic: 'Event Driven, qu’est‑ce donc ?! Un nouveau buzzword ?',
       descriptions: [
         'On entend, de plus en plus, parler d’Event Driven Systems. C’est un peu le nouveau truc à la mode, mais en quoi ça consiste réellement ? Pour le comprendre, nous repartirons des fondamentaux, pour progressivement voir ce que peut nous apporter le modèle événementiel publisher / subscriber, ses avantages et ses inconvénients. Nous verrons comment l’utiliser dans certains cas fréquents.',
         'Par le passé, j’ai eu à travailler sur un SI qui a grossi au fil du temps. A chaque nouveau service ajouté, à chaque nouvelle fonctionnalité ajoutée, de la complexité s’est cumulée jusqu’à rendre des évolutions impossibles, voire dangereuses. De plus, soyons honnête, parfois de fausses "bonnes" idées ont pu empirer la situation. Nous allons nous inspirer de ce SI tout au long de cette présentation pour voir ce que nous pourrions y apporter.',
@@ -57,7 +57,7 @@ const talkSubjects = new Map<string, TalkSubject>([
       topic: 'Les mystères des permissions',
       descriptions: [
         'Au début de votre projet, vous avez simplement géré l’authentification de votre utilisateur, puis petit à petit, vous avez ajouté une notion de rôles utilisateur. Et plus le temps passe, plus votre product manager vous demande d’affiner cette gestion et moins cette gestion par rôle va suffire.',
-        'Peut-être avez-vous eu déjà eu l’impression que la gestion des permissions est quelque d’assez obscure ou complexe. On sait qu’on doit le faire, mais on ne sait pas trop comment, ni même pourquoi. Parfois, on confond même avec l’authentification. Mais alors, en quoi ça consiste rellement et comment on peut l’appliquer ?',
+        'Peut‑être avez‑vous eu déjà eu l’impression que la gestion des permissions est quelque d’assez obscure ou complexe. On sait qu’on doit le faire, mais on ne sait pas trop comment, ni même pourquoi. Parfois, on confond même avec l’authentification. Mais alors, en quoi ça consiste rellement et comment on peut l’appliquer ?',
         'A chaque situation, sa solution. Nous pourrons voir comment répondre aux besoins les plus fréquents, ainsi que leurs avantages et leurs inconvénients. Notre objectif ? Avoir la gestion des permissions adaptée à notre situation, sans pour autant ajouter une masse de complexité dans toute notre application.',
       ],
     },
@@ -86,7 +86,7 @@ const talkSubjects = new Map<string, TalkSubject>([
     {
       topic: 'Avocado Growth : Portrait Tech',
       descriptions: [
-        'Épisode 18 des podcasts de Mansour Mahamat-salle, sur mon parcours dans la tech, notamment comment je suis arrivée où je suis aujourd’hui.',
+        'Épisode 18 des podcasts de Mansour Mahamat‑salle, sur mon parcours dans la tech, notamment comment je suis arrivée où je suis aujourd’hui.',
       ],
     },
   ],
@@ -95,9 +95,9 @@ const talkSubjects = new Map<string, TalkSubject>([
     {
       topic: 'Highway to fail, ou l’histoire d’un échec prévisible',
       descriptions: [
-        'Vous hésitez à vous lancer dans l’aventure de la startup ? Vous vous verriez bien créer votre propre société, mais vous n’osez pas ? En effet, on le sait maintenant, 90 % des start-up font faillite, dont 10 % dès la première année.',
-        'Fin 2017, je rejoignais 2 autres cofondateurs pour créer notre première startup. Et mi-2019, nous mettions la clé sous la porte. Pourquoi ? Entre produit, technique, business et humain, il est parfois difficile d’ajuster le curseur.',
-        'A travers mon retour d’expérience entrepreneuriale, je souhaite revenir sur certaines de nos erreurs et voir s’il aurait été possible de faire autrement. Peut-être que cette introspection pleine d’honnêteté pourra vous permettre d’éviter certains écueils.',
+        'Vous hésitez à vous lancer dans l’aventure de la startup ? Vous vous verriez bien créer votre propre société, mais vous n’osez pas ? En effet, on le sait maintenant, 90 % des start‑ups font faillite, dont 10 % dès la première année.',
+        'Fin 2017, je rejoignais 2 autres cofondateurs pour créer notre première startup. Et mi‑2019, nous mettions la clé sous la porte. Pourquoi ? Entre produit, technique, business et humain, il est parfois difficile d’ajuster le curseur.',
+        'A travers mon retour d’expérience entrepreneuriale, je souhaite revenir sur certaines de nos erreurs et voir s’il aurait été possible de faire autrement. Peut‑être que cette introspection pleine d’honnêteté pourra vous permettre d’éviter certains écueils.',
       ],
     },
   ],
@@ -270,9 +270,9 @@ const resume: Resume = {
       to: '2022-04-25',
       role: 'Staff engineer / Senior Lead developer',
       descriptions: [
-        'Tech lead avec un rôle de mid-management et une implication au niveau entreprise.',
+        'Tech lead avec un rôle de mid‑management et une implication au niveau entreprise.',
         'Accompagnement de managers. Accompagnement d’un junior en reconversion.',
-        'La répartition entre développement et lead/management est de 40-60%.',
+        'La répartition entre développement et lead/management est de 40‑60%.',
       ],
       remote: 'FULLTIME',
       projects: [
@@ -357,7 +357,7 @@ const resume: Resume = {
           role: 'Fullstack developer / Tech lead',
           descriptions: [
             'Développeuse fullstack dans un premier temps, puis reprise du rôle de tech lead après le départ du lead précédent.',
-            'La répartition entre développement et lead/management est de 70-30%.',
+            'La répartition entre développement et lead/management est de 70‑30%.',
           ],
           projects: [
             {
@@ -408,7 +408,7 @@ const resume: Resume = {
           company: 'Foncia Stark',
           from: '2019-03-01',
           to: '2019-08-10',
-          role: 'Back-end developer',
+          role: 'Back‑end developer',
           descriptions: [
             'Développeuse backend sur des traitements asynchrones récurrents.',
           ],
@@ -431,10 +431,10 @@ const resume: Resume = {
       company: 'Fairvioo',
       from: '2017-12-01',
       to: '2019-06-15',
-      role: 'CTO & co-founder',
+      role: 'CTO & co‑founder',
       descriptions: [
         'Incubateur Université Dauphine.',
-        'Solution de récolte d’avis clients post-achat à impact positif, sur le principe de 1 avis consommateur = 1 don à une association.',
+        'Solution de récolte d’avis clients post‑achat à impact positif, sur le principe de 1 avis consommateur = 1 don à une association.',
         'Choix stratégiques et levée de fond. Développements, recrutement et accompagnement d’un stagiaire',
       ],
       projects: [
@@ -539,7 +539,7 @@ const resume: Resume = {
             'Création d’une équipe dédiée à la réalisation d’applications Cloud, pour initier la transition numérique de l’entité France.',
             'Accompagnement technique pour l’architecture, accompagnement fonctionnel et technique lors des phases de design des applications.',
             'Formation de développeurs juniors.',
-            'Animation de workshops utilisateurs. Avant-ventes, chiffrages et réponses à appel d’offres.',
+            'Animation de workshops utilisateurs. Avant‑ventes, chiffrages et réponses à appel d’offres.',
           ],
           projects: [
             {
@@ -572,7 +572,7 @@ const resume: Resume = {
           descriptions: [
             'Responsable des projets Valeo chez SFEIR, en liaison avec 5 PMs et le DSI Cloud.',
             'Technical Leader sur tous les projets et développement backend sur les projets les plus importants (Newscenter, Roadmap, QnP).',
-            'Accompagnement des développeurs. Animation de workshops utilisateurs. Avant-ventes, chiffrages et réponses à appel d’offres.',
+            'Accompagnement des développeurs. Animation de workshops utilisateurs. Avant‑ventes, chiffrages et réponses à appel d’offres.',
           ],
           projects: [
             {
@@ -616,9 +616,9 @@ const resume: Resume = {
             },
           ],
           stacks: [
-            { type: 'Front-ends', technos: ['GWT', 'AngularJs'] },
+            { type: 'Front‑ends', technos: ['GWT', 'AngularJs'] },
             {
-              type: 'Back-ends',
+              type: 'Back‑ends',
               technos: [
                 'Java',
                 {
@@ -635,7 +635,7 @@ const resume: Resume = {
           ],
         },
         {
-          company: 'CA-CIB',
+          company: 'CA‑CIB',
           from: '2012-07-01',
           to: '2012-12-31',
           role: 'Développeuse Java',
@@ -653,7 +653,7 @@ const resume: Resume = {
           stacks: [{ type: '', technos: ['JEE5', 'JSP', 'Sybase'] }],
         },
         {
-          company: 'I-CDC',
+          company: 'I‑CDC',
           from: '2012-01-01',
           to: '2012-07-01',
           role: 'Architecte junior & Développeuse Java / GWT',
@@ -782,7 +782,7 @@ const resume: Resume = {
             {
               name: 'EPROM',
               description:
-                'Application Back-Office servant de référentiel des produits dérivés',
+                'Application Back‑Office servant de référentiel des produits dérivés',
             },
           ],
           stacks: [
@@ -1079,7 +1079,7 @@ const resume: Resume = {
     },
   ],
   trainings: [
-    { topic: 'Mid-management', company: 'Sparring Partners', when: '2021' },
+    { topic: 'Mid‑management', company: 'Sparring Partners', when: '2021' },
   ],
   certifications: [
     { topic: 'Polymer 200', company: 'SFEIR', when: '2016-07-01' },
