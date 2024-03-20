@@ -26,8 +26,8 @@ const variants = [
 export const Quote: Story = {
   render: (args) => (
     <Stack spacing="4">
-      <Grid templateColumns="100px 1fr" columnGap="8" alignItems="baseline">
-        <GridItem colSpan={2}>
+      <Grid templateColumns="100px 1fr 1fr" gap="8" alignItems="baseline">
+        <GridItem colSpan={3}>
           <H2Heading>Variants</H2Heading>
         </GridItem>
         {variants.map((variant) => (
@@ -37,6 +37,9 @@ export const Quote: Story = {
             </GridItem>
             <GridItem>
               <QuoteComponent {...args} variant={variant} />
+            </GridItem>
+            <GridItem>
+              <QuoteComponent {...args} title="Title" variant={variant} />
             </GridItem>
           </>
         ))}

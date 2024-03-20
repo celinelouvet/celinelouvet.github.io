@@ -27,8 +27,8 @@ export const Question: Story = {
   render: (args) => {
     return (
       <Stack spacing="4">
-        <Grid templateColumns="100px 1fr" columnGap="8" alignItems="baseline">
-          <GridItem colSpan={2}>
+        <Grid templateColumns="100px 1fr 1fr" gap="8" alignItems="baseline">
+          <GridItem colSpan={3}>
             <H2Heading>Variants</H2Heading>
           </GridItem>
           {variants.map((variant) => (
@@ -38,6 +38,9 @@ export const Question: Story = {
               </GridItem>
               <GridItem>
                 <QuestionComponent {...args} variant={variant} />
+              </GridItem>
+              <GridItem>
+                <QuestionComponent {...args} title="Title" variant={variant} />
               </GridItem>
             </>
           ))}

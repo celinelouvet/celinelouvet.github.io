@@ -1,9 +1,11 @@
 import { alertAnatomy } from '@chakra-ui/anatomy';
 import {
+  Box,
   Alert as ChakraAlert,
   AlertDescription as ChakraAlertDescription,
   AlertIcon as ChakraAlertIcon,
   type AlertProps as ChakraAlertProps,
+  AlertTitle as ChakraAlertTitle,
   createMultiStyleConfigHelpers,
   createStylesContext,
   forwardRef,
@@ -13,10 +15,12 @@ import { FaQuestion } from 'react-icons/fa';
 
 const [StylesProvider] = createStylesContext('Question');
 
-export type QuestionProps = ChakraAlertProps;
+export type QuestionProps = ChakraAlertProps & {
+  title?: string;
+};
 
 export const Question = forwardRef<QuestionProps, 'div'>(
-  ({ children, variant, ...props }, ref) => {
+  ({ title, children, variant, ...props }, ref) => {
     const styles = useMultiStyleConfig('Question', {
       ...alertAnatomy.keys,
       variant,
@@ -32,9 +36,14 @@ export const Question = forwardRef<QuestionProps, 'div'>(
           {...props}
         >
           <ChakraAlertIcon sx={styles.icon} as={FaQuestion} />
-          <ChakraAlertDescription sx={styles.description}>
-            {children}
-          </ChakraAlertDescription>
+          <Box width="100%" height="100%">
+            {title ? (
+              <ChakraAlertTitle sx={styles.title}>{title}</ChakraAlertTitle>
+            ) : null}
+            <ChakraAlertDescription sx={styles.description}>
+              {children}
+            </ChakraAlertDescription>
+          </Box>
         </ChakraAlert>
       </StylesProvider>
     );
@@ -77,6 +86,10 @@ const slideStyle = definePartsStyle({
 
     _dark: {
       color: '#cf8b5e',
+    },
+    title: {
+      lineHeight: '1.5em',
+      marginBottom: '0.5em',
     },
   },
 });

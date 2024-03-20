@@ -1,9 +1,11 @@
 import { alertAnatomy } from '@chakra-ui/anatomy';
 import {
+  Box,
   Alert as ChakraAlert,
   AlertDescription as ChakraAlertDescription,
   AlertIcon as ChakraAlertIcon,
   type AlertProps as ChakraAlertProps,
+  AlertTitle as ChakraAlertTitle,
   createMultiStyleConfigHelpers,
   createStylesContext,
   forwardRef,
@@ -13,10 +15,12 @@ import { FaThumbsUp } from 'react-icons/fa';
 
 const [StylesProvider] = createStylesContext('ThumbsUp');
 
-export type ThumbsUpProps = ChakraAlertProps;
+export type ThumbsUpProps = ChakraAlertProps & {
+  title?: string;
+};
 
 export const ThumbsUp = forwardRef<ThumbsUpProps, 'div'>(
-  ({ children, variant, ...props }, ref) => {
+  ({ title, children, variant, ...props }, ref) => {
     const styles = useMultiStyleConfig('ThumbsUp', {
       ...alertAnatomy.keys,
       variant,
@@ -32,9 +36,14 @@ export const ThumbsUp = forwardRef<ThumbsUpProps, 'div'>(
           {...props}
         >
           <ChakraAlertIcon sx={styles.icon} as={FaThumbsUp} />
-          <ChakraAlertDescription sx={styles.description}>
-            {children}
-          </ChakraAlertDescription>
+          <Box width="100%" height="100%">
+            {title ? (
+              <ChakraAlertTitle sx={styles.title}>{title}</ChakraAlertTitle>
+            ) : null}
+            <ChakraAlertDescription sx={styles.description}>
+              {children}
+            </ChakraAlertDescription>
+          </Box>
         </ChakraAlert>
       </StylesProvider>
     );
@@ -74,6 +83,14 @@ const slideStyle = definePartsStyle({
     color: '#517c71',
     boxSize: '1em',
     marginRight: '1em',
+
+    _dark: {
+      color: '#517c71',
+    },
+  },
+  title: {
+    lineHeight: '1.5em',
+    marginBottom: '0.5em',
   },
 });
 
