@@ -12,6 +12,14 @@ import BeforeMe3 from './BeforeMe3';
 import BeforeTimelineSectionTitle from './BeforeSectionTitle';
 import CreationContact1 from './CreationContact1';
 import CreationContact2 from './CreationContact2';
+import CreationIdea1 from './CreationIdea1';
+import CreationIdea2 from './CreationIdea2';
+import CreationIdea3 from './CreationIdea3';
+import CreationIdea4 from './CreationIdea4';
+import CreationIdea5 from './CreationIdea5';
+import CreationIdea6 from './CreationIdea6';
+import CreationIdea7 from './CreationIdea7';
+import CreationIdea8 from './CreationIdea8';
 import CreationMeeting1 from './CreationMeeting1';
 import CreationMeeting2 from './CreationMeeting2';
 import CreationMeeting3 from './CreationMeeting3';
@@ -80,6 +88,15 @@ export const getSlides = () => {
     CreationMeeting3,
     CreationMeeting4,
     CreationMeeting5,
+
+    CreationIdea1,
+    CreationIdea2,
+    CreationIdea3,
+    CreationIdea4,
+    CreationIdea5,
+    CreationIdea6,
+    CreationIdea7,
+    CreationIdea8,
 
     EndTitle,
     PromotionLyonCraft,
