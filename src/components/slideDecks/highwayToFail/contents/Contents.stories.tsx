@@ -14,6 +14,14 @@ import BeforeMe3Slide from './BeforeMe3';
 import BeforeSectionTitleSlide from './BeforeSectionTitle';
 import CreationContact1Slide from './CreationContact1';
 import CreationContact2Slide from './CreationContact2';
+import CreationIdea1Slide from './CreationIdea1';
+import CreationIdea2Slide from './CreationIdea2';
+import CreationIdea3Slide from './CreationIdea3';
+import CreationIdea4Slide from './CreationIdea4';
+import CreationIdea5Slide from './CreationIdea5';
+import CreationIdea6Slide from './CreationIdea6';
+import CreationIdea7Slide from './CreationIdea7';
+import CreationIdea8Slide from './CreationIdea8';
 import CreationMeeting1Slide from './CreationMeeting1';
 import CreationMeeting2Slide from './CreationMeeting2';
 import CreationMeeting3Slide from './CreationMeeting3';
@@ -254,6 +262,54 @@ export const CreationMeeting4: Story = {
 export const CreationMeeting5: Story = {
   args: {
     slides: [CreationMeeting5Slide],
+  },
+};
+
+export const CreationIdea1: Story = {
+  args: {
+    slides: [CreationIdea1Slide],
+  },
+};
+
+export const CreationIdea2: Story = {
+  args: {
+    slides: [CreationIdea2Slide],
+  },
+};
+
+export const CreationIdea3: Story = {
+  args: {
+    slides: [CreationIdea3Slide],
+  },
+};
+
+export const CreationIdea4: Story = {
+  args: {
+    slides: [CreationIdea4Slide],
+  },
+};
+
+export const CreationIdea5: Story = {
+  args: {
+    slides: [CreationIdea5Slide],
+  },
+};
+
+export const CreationIdea6: Story = {
+  args: {
+    slides: [CreationIdea6Slide],
+  },
+};
+
+export const CreationIdea7: Story = {
+  args: {
+    slides: [CreationIdea7Slide],
+  },
+};
+
+export const CreationIdea8: Story = {
+  args: {
+    slides: [CreationIdea8Slide],
   },
 };
 
