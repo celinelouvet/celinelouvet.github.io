@@ -22,6 +22,12 @@ import CreationIdea5Slide from './CreationIdea5';
 import CreationIdea6Slide from './CreationIdea6';
 import CreationIdea7Slide from './CreationIdea7';
 import CreationIdea8Slide from './CreationIdea8';
+import CreationMarket1Slide from './CreationMarket1';
+import CreationMarket2Slide from './CreationMarket2';
+import CreationMarket3Slide from './CreationMarket3';
+import CreationMarket4Slide from './CreationMarket4';
+import CreationMarket5Slide from './CreationMarket5';
+import CreationMarket6Slide from './CreationMarket6';
 import CreationMeeting1Slide from './CreationMeeting1';
 import CreationMeeting2Slide from './CreationMeeting2';
 import CreationMeeting3Slide from './CreationMeeting3';
@@ -310,6 +316,42 @@ export const CreationIdea7: Story = {
 export const CreationIdea8: Story = {
   args: {
     slides: [CreationIdea8Slide],
+  },
+};
+
+export const CreationMarket1: Story = {
+  args: {
+    slides: [CreationMarket1Slide],
+  },
+};
+
+export const CreationMarket2: Story = {
+  args: {
+    slides: [CreationMarket2Slide],
+  },
+};
+
+export const CreationMarket3: Story = {
+  args: {
+    slides: [CreationMarket3Slide],
+  },
+};
+
+export const CreationMarket4: Story = {
+  args: {
+    slides: [CreationMarket4Slide],
+  },
+};
+
+export const CreationMarket5: Story = {
+  args: {
+    slides: [CreationMarket5Slide],
+  },
+};
+
+export const CreationMarket6: Story = {
+  args: {
+    slides: [CreationMarket6Slide],
   },
 };
 
