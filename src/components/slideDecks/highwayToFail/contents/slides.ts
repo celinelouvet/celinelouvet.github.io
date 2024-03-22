@@ -20,6 +20,12 @@ import CreationIdea5 from './CreationIdea5';
 import CreationIdea6 from './CreationIdea6';
 import CreationIdea7 from './CreationIdea7';
 import CreationIdea8 from './CreationIdea8';
+import CreationMarket1 from './CreationMarket1';
+import CreationMarket2 from './CreationMarket2';
+import CreationMarket3 from './CreationMarket3';
+import CreationMarket4 from './CreationMarket4';
+import CreationMarket5 from './CreationMarket5';
+import CreationMarket6 from './CreationMarket6';
 import CreationMeeting1 from './CreationMeeting1';
 import CreationMeeting2 from './CreationMeeting2';
 import CreationMeeting3 from './CreationMeeting3';
@@ -97,6 +103,13 @@ export const getSlides = () => {
     CreationIdea6,
     CreationIdea7,
     CreationIdea8,
+
+    CreationMarket1,
+    CreationMarket2,
+    CreationMarket3,
+    CreationMarket4,
+    CreationMarket5,
+    CreationMarket6,
 
     EndTitle,
     PromotionLyonCraft,

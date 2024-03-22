@@ -22,6 +22,12 @@ import { content as CreationIdea5Content } from './CreationIdea5';
 import { content as CreationIdea6Content } from './CreationIdea6';
 import { content as CreationIdea7Content } from './CreationIdea7';
 import { content as CreationIdea8Content } from './CreationIdea8';
+import { content as CreationMarket1Content } from './CreationMarket1';
+import { content as CreationMarket2Content } from './CreationMarket2';
+import { content as CreationMarket3Content } from './CreationMarket3';
+import { content as CreationMarket4Content } from './CreationMarket4';
+import { content as CreationMarket5Content } from './CreationMarket5';
+import { content as CreationMarket6Content } from './CreationMarket6';
 import { content as CreationMeeting1Content } from './CreationMeeting1';
 import { content as CreationMeeting2Content } from './CreationMeeting2';
 import { content as CreationMeeting3Content } from './CreationMeeting3';
@@ -225,6 +231,30 @@ export const CreationIdea7: Story = {
 
 export const CreationIdea8: Story = {
   render: () => <SlideDeck>{CreationIdea8Content}</SlideDeck>,
+};
+
+export const CreationMarket1: Story = {
+  render: () => <SlideDeck>{CreationMarket1Content}</SlideDeck>,
+};
+
+export const CreationMarket2: Story = {
+  render: () => <SlideDeck>{CreationMarket2Content}</SlideDeck>,
+};
+
+export const CreationMarket3: Story = {
+  render: () => <SlideDeck>{CreationMarket3Content}</SlideDeck>,
+};
+
+export const CreationMarket4: Story = {
+  render: () => <SlideDeck>{CreationMarket4Content}</SlideDeck>,
+};
+
+export const CreationMarket5: Story = {
+  render: () => <SlideDeck>{CreationMarket5Content}</SlideDeck>,
+};
+
+export const CreationMarket6: Story = {
+  render: () => <SlideDeck>{CreationMarket6Content}</SlideDeck>,
 };
 
 export const EndTitle: Story = {
