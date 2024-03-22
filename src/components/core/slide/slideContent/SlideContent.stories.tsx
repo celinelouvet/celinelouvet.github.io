@@ -116,3 +116,20 @@ export const SectionTitle: Story = {
     title: 'Section Title',
   },
 };
+
+export const SectionTitleWithThinColumn: Story = {
+  args: {
+    type: SlideContentTypes.sectionTitleWithThinColumn,
+    title: 'Section Title',
+    column1: (
+      <Box
+        width="100%"
+        height="100%"
+        border="1px solid"
+        borderColor="brand.500"
+      >
+        Column 1
+      </Box>
+    ),
+  },
+};
