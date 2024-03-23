@@ -14,6 +14,14 @@ import { content as BeforeMe3Content } from './BeforeMe3';
 import { content as BeforeTimelineSectionTitleContent } from './BeforeSectionTitle';
 import { content as CreationContact1Content } from './CreationContact1';
 import { content as CreationContact2Content } from './CreationContact2';
+import { content as CreationFinal1Content } from './CreationFinal1';
+import { content as CreationFinal2Content } from './CreationFinal2';
+import { content as CreationFinal3Content } from './CreationFinal3';
+import { content as CreationFinal4Content } from './CreationFinal4';
+import { content as CreationFinal5Content } from './CreationFinal5';
+import { content as CreationFinal6Content } from './CreationFinal6';
+import { content as CreationFinal7Content } from './CreationFinal7';
+import { content as CreationFinal8Content } from './CreationFinal8';
 import { content as CreationIdea1Content } from './CreationIdea1';
 import { content as CreationIdea2Content } from './CreationIdea2';
 import { content as CreationIdea3Content } from './CreationIdea3';
@@ -275,6 +283,38 @@ export const CreationTimeline3: Story = {
 
 export const CreationTimeline4: Story = {
   render: () => <SlideDeck>{CreationTimeline4Content}</SlideDeck>,
+};
+
+export const CreationFinal1: Story = {
+  render: () => <SlideDeck>{CreationFinal1Content}</SlideDeck>,
+};
+
+export const CreationFinal2: Story = {
+  render: () => <SlideDeck>{CreationFinal2Content}</SlideDeck>,
+};
+
+export const CreationFinal3: Story = {
+  render: () => <SlideDeck>{CreationFinal3Content}</SlideDeck>,
+};
+
+export const CreationFinal4: Story = {
+  render: () => <SlideDeck>{CreationFinal4Content}</SlideDeck>,
+};
+
+export const CreationFinal5: Story = {
+  render: () => <SlideDeck>{CreationFinal5Content}</SlideDeck>,
+};
+
+export const CreationFinal6: Story = {
+  render: () => <SlideDeck>{CreationFinal6Content}</SlideDeck>,
+};
+
+export const CreationFinal7: Story = {
+  render: () => <SlideDeck>{CreationFinal7Content}</SlideDeck>,
+};
+
+export const CreationFinal8: Story = {
+  render: () => <SlideDeck>{CreationFinal8Content}</SlideDeck>,
 };
 
 export const EndTitle: Story = {
