@@ -34,6 +34,10 @@ import CreationMeeting3Slide from './CreationMeeting3';
 import CreationMeeting4Slide from './CreationMeeting4';
 import CreationMeeting5Slide from './CreationMeeting5';
 import CreationSectionTitleSlide from './CreationSectionTitle';
+import CreationTimeline1Slide from './CreationTimeline1';
+import CreationTimeline2Slide from './CreationTimeline2';
+import CreationTimeline3Slide from './CreationTimeline3';
+import CreationTimeline4Slide from './CreationTimeline4';
 import EndTitleSlide from './EndTitle';
 import Fairvioo1Slide from './Fairvioo1';
 import Fairvioo2Slide from './Fairvioo2';
@@ -352,6 +356,30 @@ export const CreationMarket5: Story = {
 export const CreationMarket6: Story = {
   args: {
     slides: [CreationMarket6Slide],
+  },
+};
+
+export const CreationTimeline1: Story = {
+  args: {
+    slides: [CreationTimeline1Slide],
+  },
+};
+
+export const CreationTimeline2: Story = {
+  args: {
+    slides: [CreationTimeline2Slide],
+  },
+};
+
+export const CreationTimeline3: Story = {
+  args: {
+    slides: [CreationTimeline3Slide],
+  },
+};
+
+export const CreationTimeline4: Story = {
+  args: {
+    slides: [CreationTimeline4Slide],
   },
 };
 
