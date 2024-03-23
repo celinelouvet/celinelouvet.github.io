@@ -14,6 +14,14 @@ import BeforeMe3Slide from './BeforeMe3';
 import BeforeSectionTitleSlide from './BeforeSectionTitle';
 import CreationContact1Slide from './CreationContact1';
 import CreationContact2Slide from './CreationContact2';
+import CreationFinal1Slide from './CreationFinal1';
+import CreationFinal2Slide from './CreationFinal2';
+import CreationFinal3Slide from './CreationFinal3';
+import CreationFinal4Slide from './CreationFinal4';
+import CreationFinal5Slide from './CreationFinal5';
+import CreationFinal6Slide from './CreationFinal6';
+import CreationFinal7Slide from './CreationFinal7';
+import CreationFinal8Slide from './CreationFinal8';
 import CreationIdea1Slide from './CreationIdea1';
 import CreationIdea2Slide from './CreationIdea2';
 import CreationIdea3Slide from './CreationIdea3';
@@ -380,6 +388,54 @@ export const CreationTimeline3: Story = {
 export const CreationTimeline4: Story = {
   args: {
     slides: [CreationTimeline4Slide],
+  },
+};
+
+export const CreationFinal1: Story = {
+  args: {
+    slides: [CreationFinal1Slide],
+  },
+};
+
+export const CreationFinal2: Story = {
+  args: {
+    slides: [CreationFinal2Slide],
+  },
+};
+
+export const CreationFinal3: Story = {
+  args: {
+    slides: [CreationFinal3Slide],
+  },
+};
+
+export const CreationFinal4: Story = {
+  args: {
+    slides: [CreationFinal4Slide],
+  },
+};
+
+export const CreationFinal5: Story = {
+  args: {
+    slides: [CreationFinal5Slide],
+  },
+};
+
+export const CreationFinal6: Story = {
+  args: {
+    slides: [CreationFinal6Slide],
+  },
+};
+
+export const CreationFinal7: Story = {
+  args: {
+    slides: [CreationFinal7Slide],
+  },
+};
+
+export const CreationFinal8: Story = {
+  args: {
+    slides: [CreationFinal8Slide],
   },
 };
 
