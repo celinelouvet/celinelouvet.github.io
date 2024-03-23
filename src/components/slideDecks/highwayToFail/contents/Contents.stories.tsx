@@ -34,6 +34,10 @@ import { content as CreationMeeting3Content } from './CreationMeeting3';
 import { content as CreationMeeting4Content } from './CreationMeeting4';
 import { content as CreationMeeting5Content } from './CreationMeeting5';
 import { content as CreationSectionTitleContent } from './CreationSectionTitle';
+import { content as CreationTimeline1Content } from './CreationTimeline1';
+import { content as CreationTimeline2Content } from './CreationTimeline2';
+import { content as CreationTimeline3Content } from './CreationTimeline3';
+import { content as CreationTimeline4Content } from './CreationTimeline4';
 import { content as EndTitleContent } from './EndTitle';
 import { content as Fairvioo1Content } from './Fairvioo1';
 import { content as Fairvioo2Content } from './Fairvioo2';
@@ -255,6 +259,22 @@ export const CreationMarket5: Story = {
 
 export const CreationMarket6: Story = {
   render: () => <SlideDeck>{CreationMarket6Content}</SlideDeck>,
+};
+
+export const CreationTimeline1: Story = {
+  render: () => <SlideDeck>{CreationTimeline1Content}</SlideDeck>,
+};
+
+export const CreationTimeline2: Story = {
+  render: () => <SlideDeck>{CreationTimeline2Content}</SlideDeck>,
+};
+
+export const CreationTimeline3: Story = {
+  render: () => <SlideDeck>{CreationTimeline3Content}</SlideDeck>,
+};
+
+export const CreationTimeline4: Story = {
+  render: () => <SlideDeck>{CreationTimeline4Content}</SlideDeck>,
 };
 
 export const EndTitle: Story = {
