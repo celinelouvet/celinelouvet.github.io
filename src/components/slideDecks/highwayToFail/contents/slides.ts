@@ -44,6 +44,9 @@ import CreationTimeline1 from './CreationTimeline1';
 import CreationTimeline2 from './CreationTimeline2';
 import CreationTimeline3 from './CreationTimeline3';
 import CreationTimeline4 from './CreationTimeline4';
+import DuringDauphine1 from './DuringDauphine1';
+import DuringDauphine2 from './DuringDauphine2';
+import DuringDauphine3 from './DuringDauphine3';
 import DuringEssec1 from './DuringEssec1';
 import DuringEssec2 from './DuringEssec2';
 import DuringEssec3 from './DuringEssec3';
@@ -152,6 +155,10 @@ export const getSlides = () => {
     DuringEssec1,
     DuringEssec2,
     DuringEssec3,
+
+    DuringDauphine1,
+    DuringDauphine2,
+    DuringDauphine3,
 
     EndTitle,
 

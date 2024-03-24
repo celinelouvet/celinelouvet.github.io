@@ -46,6 +46,9 @@ import CreationTimeline1Slide from './CreationTimeline1';
 import CreationTimeline2Slide from './CreationTimeline2';
 import CreationTimeline3Slide from './CreationTimeline3';
 import CreationTimeline4Slide from './CreationTimeline4';
+import DuringDauphine1Slide from './DuringDauphine1';
+import DuringDauphine2Slide from './DuringDauphine2';
+import DuringDauphine3Slide from './DuringDauphine3';
 import DuringEssec1Slide from './DuringEssec1';
 import DuringEssec2Slide from './DuringEssec2';
 import DuringEssec3Slide from './DuringEssec3';
@@ -485,6 +488,24 @@ export const DuringEssec2: Story = {
 export const DuringEssec3: Story = {
   args: {
     slides: [DuringEssec3Slide],
+  },
+};
+
+export const DuringDauphine1: Story = {
+  args: {
+    slides: [DuringDauphine1Slide],
+  },
+};
+
+export const DuringDauphine2: Story = {
+  args: {
+    slides: [DuringDauphine2Slide],
+  },
+};
+
+export const DuringDauphine3: Story = {
+  args: {
+    slides: [DuringDauphine3Slide],
   },
 };
 
