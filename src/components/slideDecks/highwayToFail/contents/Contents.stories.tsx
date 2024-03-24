@@ -47,6 +47,9 @@ import CreationTimeline2Slide from './CreationTimeline2';
 import CreationTimeline3Slide from './CreationTimeline3';
 import CreationTimeline4Slide from './CreationTimeline4';
 import DuringSectionTitleSlide from './DuringSectionTitle';
+import DuringWhere1Slide from './DuringWhere1';
+import DuringWhere2Slide from './DuringWhere2';
+import DuringWhere3Slide from './DuringWhere3';
 import EndTitleSlide from './EndTitle';
 import Fairvioo1Slide from './Fairvioo1';
 import Fairvioo2Slide from './Fairvioo2';
@@ -443,6 +446,24 @@ export const CreationFinal8: Story = {
 export const DuringSectionTitle: Story = {
   args: {
     slides: [DuringSectionTitleSlide],
+  },
+};
+
+export const DuringWhere1: Story = {
+  args: {
+    slides: [DuringWhere1Slide],
+  },
+};
+
+export const DuringWhere2: Story = {
+  args: {
+    slides: [DuringWhere2Slide],
+  },
+};
+
+export const DuringWhere3: Story = {
+  args: {
+    slides: [DuringWhere3Slide],
   },
 };
 

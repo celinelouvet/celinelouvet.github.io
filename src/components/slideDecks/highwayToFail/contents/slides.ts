@@ -45,6 +45,9 @@ import CreationTimeline2 from './CreationTimeline2';
 import CreationTimeline3 from './CreationTimeline3';
 import CreationTimeline4 from './CreationTimeline4';
 import DuringSectionTitle from './DuringSectionTitle';
+import DuringWhere1 from './DuringWhere1';
+import DuringWhere2 from './DuringWhere2';
+import DuringWhere3 from './DuringWhere3';
 import EndTitle from './EndTitle';
 import Fairvioo1 from './Fairvioo1';
 import Fairvioo2 from './Fairvioo2';
@@ -139,6 +142,9 @@ export const getSlides = () => {
     CreationFinal8,
 
     DuringSectionTitle,
+    DuringWhere1,
+    DuringWhere2,
+    DuringWhere3,
 
     EndTitle,
 
