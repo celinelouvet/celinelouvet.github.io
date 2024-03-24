@@ -44,6 +44,9 @@ import CreationTimeline1 from './CreationTimeline1';
 import CreationTimeline2 from './CreationTimeline2';
 import CreationTimeline3 from './CreationTimeline3';
 import CreationTimeline4 from './CreationTimeline4';
+import DuringEssec1 from './DuringEssec1';
+import DuringEssec2 from './DuringEssec2';
+import DuringEssec3 from './DuringEssec3';
 import DuringSectionTitle from './DuringSectionTitle';
 import DuringWhere1 from './DuringWhere1';
 import DuringWhere2 from './DuringWhere2';
@@ -145,6 +148,10 @@ export const getSlides = () => {
     DuringWhere1,
     DuringWhere2,
     DuringWhere3,
+
+    DuringEssec1,
+    DuringEssec2,
+    DuringEssec3,
 
     EndTitle,
 
