@@ -46,6 +46,7 @@ import CreationTimeline1Slide from './CreationTimeline1';
 import CreationTimeline2Slide from './CreationTimeline2';
 import CreationTimeline3Slide from './CreationTimeline3';
 import CreationTimeline4Slide from './CreationTimeline4';
+import DuringSectionTitleSlide from './DuringSectionTitle';
 import EndTitleSlide from './EndTitle';
 import Fairvioo1Slide from './Fairvioo1';
 import Fairvioo2Slide from './Fairvioo2';
@@ -436,6 +437,12 @@ export const CreationFinal7: Story = {
 export const CreationFinal8: Story = {
   args: {
     slides: [CreationFinal8Slide],
+  },
+};
+
+export const DuringSectionTitle: Story = {
+  args: {
+    slides: [DuringSectionTitleSlide],
   },
 };
 
