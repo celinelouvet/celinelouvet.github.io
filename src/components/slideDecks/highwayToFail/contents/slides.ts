@@ -1,6 +1,7 @@
 'use client';
 
 import Abstract from './Abstract';
+import AfterSectionTitle from './AfterSectionTitle';
 import BeforeCC1 from './BeforeCC1';
 import BeforeCC2 from './BeforeCC2';
 import BeforeCC3 from './BeforeCC3';
@@ -174,6 +175,8 @@ export const getSlides = () => {
     DuringSite5,
     DuringSite6,
     DuringSite7,
+
+    AfterSectionTitle,
 
     EndTitle,
 
