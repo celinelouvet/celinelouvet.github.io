@@ -51,6 +51,13 @@ import DuringEssec1 from './DuringEssec1';
 import DuringEssec2 from './DuringEssec2';
 import DuringEssec3 from './DuringEssec3';
 import DuringSectionTitle from './DuringSectionTitle';
+import DuringSite1 from './DuringSite1';
+import DuringSite2 from './DuringSite2';
+import DuringSite3 from './DuringSite3';
+import DuringSite4 from './DuringSite4';
+import DuringSite5 from './DuringSite5';
+import DuringSite6 from './DuringSite6';
+import DuringSite7 from './DuringSite7';
 import DuringWhere1 from './DuringWhere1';
 import DuringWhere2 from './DuringWhere2';
 import DuringWhere3 from './DuringWhere3';
@@ -159,6 +166,14 @@ export const getSlides = () => {
     DuringDauphine1,
     DuringDauphine2,
     DuringDauphine3,
+
+    DuringSite1,
+    DuringSite2,
+    DuringSite3,
+    DuringSite4,
+    DuringSite5,
+    DuringSite6,
+    DuringSite7,
 
     EndTitle,
 

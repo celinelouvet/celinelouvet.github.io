@@ -53,6 +53,13 @@ import DuringEssec1Slide from './DuringEssec1';
 import DuringEssec2Slide from './DuringEssec2';
 import DuringEssec3Slide from './DuringEssec3';
 import DuringSectionTitleSlide from './DuringSectionTitle';
+import DuringSite1Slide from './DuringSite1';
+import DuringSite2Slide from './DuringSite2';
+import DuringSite3Slide from './DuringSite3';
+import DuringSite4Slide from './DuringSite4';
+import DuringSite5Slide from './DuringSite5';
+import DuringSite6Slide from './DuringSite6';
+import DuringSite7Slide from './DuringSite7';
 import DuringWhere1Slide from './DuringWhere1';
 import DuringWhere2Slide from './DuringWhere2';
 import DuringWhere3Slide from './DuringWhere3';
@@ -506,6 +513,48 @@ export const DuringDauphine2: Story = {
 export const DuringDauphine3: Story = {
   args: {
     slides: [DuringDauphine3Slide],
+  },
+};
+
+export const DuringSite1: Story = {
+  args: {
+    slides: [DuringSite1Slide],
+  },
+};
+
+export const DuringSite2: Story = {
+  args: {
+    slides: [DuringSite2Slide],
+  },
+};
+
+export const DuringSite3: Story = {
+  args: {
+    slides: [DuringSite3Slide],
+  },
+};
+
+export const DuringSite4: Story = {
+  args: {
+    slides: [DuringSite4Slide],
+  },
+};
+
+export const DuringSite5: Story = {
+  args: {
+    slides: [DuringSite5Slide],
+  },
+};
+
+export const DuringSite6: Story = {
+  args: {
+    slides: [DuringSite6Slide],
+  },
+};
+
+export const DuringSite7: Story = {
+  args: {
+    slides: [DuringSite7Slide],
   },
 };
 
