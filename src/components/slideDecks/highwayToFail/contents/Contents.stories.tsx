@@ -46,6 +46,7 @@ import { content as CreationTimeline1Content } from './CreationTimeline1';
 import { content as CreationTimeline2Content } from './CreationTimeline2';
 import { content as CreationTimeline3Content } from './CreationTimeline3';
 import { content as CreationTimeline4Content } from './CreationTimeline4';
+import { content as DuringSectionTitleContent } from './DuringSectionTitle';
 import { content as EndTitleContent } from './EndTitle';
 import { content as Fairvioo1Content } from './Fairvioo1';
 import { content as Fairvioo2Content } from './Fairvioo2';
@@ -315,6 +316,10 @@ export const CreationFinal7: Story = {
 
 export const CreationFinal8: Story = {
   render: () => <SlideDeck>{CreationFinal8Content}</SlideDeck>,
+};
+
+export const DuringSectionTitle: Story = {
+  render: () => <SlideDeck>{DuringSectionTitleContent}</SlideDeck>,
 };
 
 export const EndTitle: Story = {

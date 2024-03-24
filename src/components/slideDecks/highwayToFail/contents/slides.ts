@@ -44,6 +44,7 @@ import CreationTimeline1 from './CreationTimeline1';
 import CreationTimeline2 from './CreationTimeline2';
 import CreationTimeline3 from './CreationTimeline3';
 import CreationTimeline4 from './CreationTimeline4';
+import DuringSectionTitle from './DuringSectionTitle';
 import EndTitle from './EndTitle';
 import Fairvioo1 from './Fairvioo1';
 import Fairvioo2 from './Fairvioo2';
@@ -136,6 +137,8 @@ export const getSlides = () => {
     CreationFinal6,
     CreationFinal7,
     CreationFinal8,
+
+    DuringSectionTitle,
 
     EndTitle,
     PromotionLyonCraft,
