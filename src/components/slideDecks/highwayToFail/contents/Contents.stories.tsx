@@ -3,6 +3,7 @@ import { type Meta, type StoryObj } from '@storybook/react';
 import { SlideDeck } from '@/components/core';
 
 import { content as AbstractContent } from './Abstract';
+import { content as AfterSectionTitleContent } from './AfterSectionTitle';
 import { content as BeforeCC1Content } from './BeforeCC1';
 import { content as BeforeCC2Content } from './BeforeCC2';
 import { content as BeforeCC3Content } from './BeforeCC3';
@@ -320,6 +321,10 @@ export const CreationFinal8: Story = {
 
 export const DuringSectionTitle: Story = {
   render: () => <SlideDeck>{DuringSectionTitleContent}</SlideDeck>,
+};
+
+export const AfterSectionTitle: Story = {
+  render: () => <SlideDeck>{AfterSectionTitleContent}</SlideDeck>,
 };
 
 export const EndTitle: Story = {

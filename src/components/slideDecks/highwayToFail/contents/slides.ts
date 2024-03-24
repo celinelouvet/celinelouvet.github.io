@@ -1,6 +1,7 @@
 'use client';
 
 import Abstract from './Abstract';
+import AfterSectionTitle from './AfterSectionTitle';
 import BeforeCC1 from './BeforeCC1';
 import BeforeCC2 from './BeforeCC2';
 import BeforeCC3 from './BeforeCC3';
@@ -139,6 +140,8 @@ export const getSlides = () => {
     CreationFinal8,
 
     DuringSectionTitle,
+
+    AfterSectionTitle,
 
     EndTitle,
     PromotionLyonCraft,
