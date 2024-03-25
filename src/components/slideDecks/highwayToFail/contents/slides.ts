@@ -59,6 +59,14 @@ import DuringSite4 from './DuringSite4';
 import DuringSite5 from './DuringSite5';
 import DuringSite6 from './DuringSite6';
 import DuringSite7 from './DuringSite7';
+import DuringSiteMvp1 from './DuringSiteMvp1';
+import DuringSiteMvp2 from './DuringSiteMvp2';
+import DuringSiteMvp3 from './DuringSiteMvp3';
+import DuringSiteMvp4 from './DuringSiteMvp4';
+import DuringSiteMvp5 from './DuringSiteMvp5';
+import DuringSiteMvp6 from './DuringSiteMvp6';
+import DuringSiteMvp7 from './DuringSiteMvp7';
+import DuringSiteMvp8 from './DuringSiteMvp8';
 import DuringWhere1 from './DuringWhere1';
 import DuringWhere2 from './DuringWhere2';
 import DuringWhere3 from './DuringWhere3';
@@ -175,6 +183,15 @@ export const getSlides = () => {
     DuringSite5,
     DuringSite6,
     DuringSite7,
+
+    DuringSiteMvp1,
+    DuringSiteMvp2,
+    DuringSiteMvp3,
+    DuringSiteMvp4,
+    DuringSiteMvp5,
+    DuringSiteMvp6,
+    DuringSiteMvp7,
+    DuringSiteMvp8,
 
     AfterSectionTitle,
 
