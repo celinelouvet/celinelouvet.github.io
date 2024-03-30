@@ -10,5 +10,11 @@
     "more": "View more",
     "less": "View less"
   },
+  "survey": {
+    "optional": "Optional",
+    "private": "Your answer will be kept private.",
+    "submit": "Submit",
+    "thanks": "Thank you for answering!"
+  },
   "blog": "Blog"
 }
