@@ -86,13 +86,14 @@ import Preface2 from './Preface2';
 import Preface3 from './Preface3';
 import Preface4 from './Preface4';
 import PromotionLyonCraft from './PromotionLyonCraft';
-import SurveySectionTitle from './SurveySectionTitle';
+import SurveyQR from './SurveyQR';
+import SurveyResult from './SurveyResult';
 import Timeline from './Timeline';
 
 export const getSlides = () => {
   return [
     MainTitle,
-    SurveySectionTitle,
+    SurveyQR,
 
     Fairvioo1,
     Fairvioo2,
@@ -110,6 +111,8 @@ export const getSlides = () => {
     Numbers2,
     Numbers3,
     Numbers4,
+
+    SurveyResult,
 
     Timeline,
 

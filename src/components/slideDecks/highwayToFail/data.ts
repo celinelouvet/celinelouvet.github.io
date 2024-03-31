@@ -27,10 +27,4 @@ export const talk = {
       room: 'P & Play',
     },
   },
-
-  sections: [
-    {
-      title: 'Sondage ?',
-    },
-  ],
 };
