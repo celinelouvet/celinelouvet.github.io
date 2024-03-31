@@ -1,6 +1,9 @@
 import { useTranslation } from 'react-i18next';
 
+import { useApi } from './useApi.hook';
+
 export const useLogger = () => {
+  const { post } = useApi();
   const { i18n } = useTranslation();
 
   const language = i18n.language;
@@ -21,17 +24,9 @@ export const useLogger = () => {
 
       const body = { message, metadata: { ...metadata, colorMode, language } };
 
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Logging: ', body);
-        return;
-      }
-
-      return fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/logger`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
-        cache: 'no-store',
-      }).catch((res) => console.log('Error logging: ', res));
+      return post('/logger', body).catch((res) =>
+        console.log('Error logging: ', res)
+      );
     },
   };
 };

@@ -10,5 +10,11 @@
     "more": "Voir plus",
     "less": "Voir moins"
   },
+  "survey": {
+    "optional": "Optionelle",
+    "private": "Cette réponse restera confidentielle.",
+    "submit": "Valider",
+    "thanks": "Merci d'avoir répondu !"
+  },
   "blog": "Blog"
 }
