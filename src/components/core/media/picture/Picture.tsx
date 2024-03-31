@@ -33,6 +33,10 @@ export const pictureStyles = {
       width: 'picture.size',
       height: 'picture.size',
     },
+    full: {
+      width: '100%',
+      height: '100%',
+    },
   },
   defaultProps: {
     size: 'md',

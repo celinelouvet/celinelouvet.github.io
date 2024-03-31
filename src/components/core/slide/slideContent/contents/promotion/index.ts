@@ -1,0 +1,1 @@
+export { SlideContentPromotion } from './SlideContentPromotion';

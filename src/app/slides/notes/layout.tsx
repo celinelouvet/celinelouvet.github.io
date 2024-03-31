@@ -2,8 +2,10 @@ import { ErrorBoundary } from 'react-error-boundary';
 
 import '../../common.css';
 
+import { talkMetadata } from '@/components/slideDecks/highwayToFail';
+
 export const metadata = {
-  title: 'Notes - Conf name',
+  title: `Notes - ${talkMetadata.title}`,
 };
 
 export default function SlideNotesLayout({

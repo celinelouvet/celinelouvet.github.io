@@ -1,13 +1,73 @@
-import { Box, type BoxProps, forwardRef } from '@chakra-ui/react';
+import { type BoxProps, Text, forwardRef } from '@chakra-ui/react';
+import { type ForwardedRef } from 'react';
 
-type SlideContentProps = BoxProps;
+import {
+  SlideContentAbstract,
+  SlideContentEndTitle,
+  SlideContentIntroduction,
+  SlideContentMainTitle,
+  SlideContentPromotion,
+  SlideContentSectionTitle,
+  SlideContentSectionTitleWithThinColumn,
+  SlideContentTitleWith2Columns,
+  SlideContentTitleWithContent,
+  SlideContentTitleWithThin2Columns,
+  SlideContentTitleWithThinColumn,
+  SlideContentWith2Columns,
+} from './contents';
+import { type Contents, SlideContentTypes } from './types';
+import { type Slide } from '../types';
+
+type SlideContentProps = BoxProps & Contents;
 
 export const SlideContent = forwardRef<SlideContentProps, 'div'>(
-  ({ children, ...props }, ref) => {
-    return (
-      <Box ref={ref} {...props} width="100%" height="100%">
-        {children}
-      </Box>
-    );
+  (props, ref) => {
+    return getContent(props, ref);
   }
 );
+
+const getContent = (
+  props: SlideContentProps,
+  ref: ForwardedRef<'div'>
+): Slide['content'] => {
+  switch (props.type) {
+    case SlideContentTypes.title:
+      return <SlideContentMainTitle {...props} ref={ref} />;
+
+    case SlideContentTypes.content2Columns:
+      return <SlideContentWith2Columns {...props} ref={ref} />;
+
+    case SlideContentTypes.introduction:
+      return <SlideContentIntroduction {...props} ref={ref} />;
+
+    case SlideContentTypes.sectionTitle:
+      return <SlideContentSectionTitle {...props} ref={ref} />;
+
+    case SlideContentTypes.sectionTitleWithThinColumn:
+      return <SlideContentSectionTitleWithThinColumn {...props} ref={ref} />;
+
+    case SlideContentTypes.titleWithContent:
+      return <SlideContentTitleWithContent {...props} ref={ref} />;
+
+    case SlideContentTypes.titleWith2Columns:
+      return <SlideContentTitleWith2Columns {...props} ref={ref} />;
+
+    case SlideContentTypes.titleWithThinColumn:
+      return <SlideContentTitleWithThinColumn {...props} ref={ref} />;
+
+    case SlideContentTypes.titleWithThin2Columns:
+      return <SlideContentTitleWithThin2Columns {...props} ref={ref} />;
+
+    case SlideContentTypes.endTitle:
+      return <SlideContentEndTitle {...props} ref={ref} />;
+
+    case SlideContentTypes.promotion:
+      return <SlideContentPromotion {...props} ref={ref} />;
+
+    case SlideContentTypes.abstract:
+      return <SlideContentAbstract {...props} ref={ref} />;
+
+    default:
+      <Text>Unknown type</Text>;
+  }
+};

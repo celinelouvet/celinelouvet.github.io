@@ -1,0 +1,1 @@
+export { SlideContentSectionTitleWithThinColumn } from './SlideContentSectionTitleWithThinColumn';
