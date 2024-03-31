@@ -1,9 +1,11 @@
 import { alertAnatomy } from '@chakra-ui/anatomy';
 import {
+  Box,
   Alert as ChakraAlert,
   AlertDescription as ChakraAlertDescription,
   AlertIcon as ChakraAlertIcon,
   type AlertProps as ChakraAlertProps,
+  AlertTitle as ChakraAlertTitle,
   createMultiStyleConfigHelpers,
   createStylesContext,
   forwardRef,
@@ -13,10 +15,12 @@ import { FaQuoteRight } from 'react-icons/fa';
 
 const [StylesProvider] = createStylesContext('Quote');
 
-export type QuoteProps = ChakraAlertProps;
+export type QuoteProps = ChakraAlertProps & {
+  title?: string;
+};
 
 export const Quote = forwardRef<QuoteProps, 'div'>(
-  ({ children, variant, ...props }, ref) => {
+  ({ title, children, variant, ...props }, ref) => {
     const styles = useMultiStyleConfig('Quote', {
       ...alertAnatomy.keys,
       variant,
@@ -32,9 +36,14 @@ export const Quote = forwardRef<QuoteProps, 'div'>(
           {...props}
         >
           <ChakraAlertIcon sx={styles.icon} as={FaQuoteRight} />
-          <ChakraAlertDescription sx={styles.description}>
-            {children}
-          </ChakraAlertDescription>
+          <Box width="100%" height="100%">
+            {title ? (
+              <ChakraAlertTitle sx={styles.title}>{title}</ChakraAlertTitle>
+            ) : null}
+            <ChakraAlertDescription sx={styles.description}>
+              {children}
+            </ChakraAlertDescription>
+          </Box>
         </ChakraAlert>
       </StylesProvider>
     );
@@ -85,11 +94,46 @@ const solidStyle = definePartsStyle({
   },
 });
 
+const slideStyle = definePartsStyle({
+  container: {
+    borderRadius: '0.25em',
+    backgroundColor: 'brand.700',
+    borderLeftColor: 'brand.400',
+    borderLeftWidth: '0.2em',
+    borderLeftStyle: 'solid',
+    fontSize: '1em',
+    color: 'brand.200',
+
+    _dark: {
+      borderLeftColor: 'brand.400',
+      backgroundColor: 'brand.700',
+      color: 'brand.200',
+    },
+  },
+  description: {
+    lineHeight: '1.5em',
+  },
+  icon: {
+    color: 'brand.300',
+    boxSize: '1em',
+    marginRight: '1em',
+
+    _dark: {
+      color: 'brand.300',
+    },
+  },
+  title: {
+    lineHeight: '1.5em',
+    marginBottom: '0.5em',
+  },
+});
+
 export const quoteStyles = defineMultiStyleConfig({
   baseStyle,
   variants: {
     subtle: {},
     solid: solidStyle,
+    slide: slideStyle,
   },
   defaultProps: {
     variant: 'subtle',

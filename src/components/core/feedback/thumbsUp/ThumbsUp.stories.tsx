@@ -1,16 +1,16 @@
 import { Grid, GridItem, Stack, Text } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { Quote as QuoteComponent } from './Quote';
+import { ThumbsUp as ThumbsUpComponent } from './ThumbsUp';
 import { H2Heading } from '../../typography';
 
 const meta = {
   title: 'Core/Feedback',
-  component: QuoteComponent,
+  component: ThumbsUpComponent,
   args: {
-    children: 'This is a quote.',
+    children: 'Yeah everything is good',
   },
-} satisfies Meta<typeof QuoteComponent>;
+} satisfies Meta<typeof ThumbsUpComponent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -23,7 +23,7 @@ const variants = [
   'slide',
 ] as const;
 
-export const Quote: Story = {
+export const ThumbsUp: Story = {
   render: (args) => (
     <Stack spacing="4">
       <Grid templateColumns="100px 1fr 1fr" gap="8" alignItems="baseline">
@@ -36,10 +36,10 @@ export const Quote: Story = {
               <Text fontWeight="700">{variant}</Text>
             </GridItem>
             <GridItem>
-              <QuoteComponent {...args} variant={variant} />
+              <ThumbsUpComponent {...args} variant={variant} />
             </GridItem>
             <GridItem>
-              <QuoteComponent {...args} title="Title" variant={variant} />
+              <ThumbsUpComponent {...args} title="Title" variant={variant} />
             </GridItem>
           </>
         ))}
