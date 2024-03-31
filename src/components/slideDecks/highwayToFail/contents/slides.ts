@@ -93,12 +93,13 @@ export const getSlides = () => {
   return [
     MainTitle,
     SurveySectionTitle,
-    Introduction,
 
     Fairvioo1,
     Fairvioo2,
     Fairvioo3,
     Fairvioo4,
+
+    Introduction,
 
     Preface1,
     Preface2,
