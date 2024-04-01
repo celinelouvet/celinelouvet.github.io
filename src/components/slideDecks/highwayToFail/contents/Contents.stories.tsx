@@ -88,7 +88,8 @@ import Preface2Slide from './Preface2';
 import Preface3Slide from './Preface3';
 import Preface4Slide from './Preface4';
 import PromotionLyonCraftSlide from './PromotionLyonCraft';
-import SurveySectionTitleSlide from './SurveySectionTitle';
+import SurverQRSlide from './SurveyQR';
+import SurveyResultSlide from './SurveyResult';
 import TimelineSlide from './Timeline';
 
 const meta = {
@@ -117,9 +118,9 @@ export const MainTitle: Story = {
   },
 };
 
-export const SurveySectionTitle: Story = {
+export const SurveyQR: Story = {
   args: {
-    slides: [SurveySectionTitleSlide],
+    slides: [SurverQRSlide],
   },
 };
 
@@ -198,6 +199,12 @@ export const Numbers3: Story = {
 export const Numbers4: Story = {
   args: {
     slides: [Numbers4Slide],
+  },
+};
+
+export const SurveyResult: Story = {
+  args: {
+    slides: [SurveyResultSlide],
   },
 };
 

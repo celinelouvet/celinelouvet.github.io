@@ -3,53 +3,65 @@ import {
   Link,
   type LinkProps,
   type StyleConfig,
-  type StyleFunctionProps,
+  forwardRef,
   useStyleConfig,
 } from '@chakra-ui/react';
-import { mode } from '@chakra-ui/theme-tools';
 import NextLink from 'next/link';
-import { type FC } from 'react';
 
 export type InternalLinkProps = LinkProps;
 
-export const InternalLink: FC<InternalLinkProps> = ({
-  children,
-  size,
-  href,
-  ...props
-}) => {
-  const styles = useStyleConfig('InternalLink', { size });
+export const InternalLink = forwardRef<InternalLinkProps, 'a'>(
+  ({ children, href, size, variant, ...props }, ref) => {
+    const styles = useStyleConfig('InternalLink', { size, variant });
 
-  return (
-    <Link as={NextLink} href={href} {...props}>
-      <Button variant="link" sx={styles}>
-        {children}
-      </Button>
-    </Link>
-  );
-};
+    return (
+      <Link as={NextLink} href={href} ref={ref} {...props}>
+        <Button variant="link" sx={styles}>
+          {children}
+        </Button>
+      </Link>
+    );
+  }
+);
 
 export const internalLinkStyles = {
-  baseStyle: (props: StyleFunctionProps) => ({
+  baseStyle: {
     textDecoration: 'underline',
-    color: 'brand.500',
     fontWeight: '600',
     fontFamily: 'Nunito',
     textWrap: 'wrap',
-
-    _hover: {
-      color: mode('brand.400', 'brand.600')(props),
-    },
-  }),
+  },
   sizes: {
+    sm: {
+      fontSize: 'sm',
+    },
     md: {
       fontSize: 'md',
     },
-    sm: {
-      fontSize: 'sm',
+  },
+  variants: {
+    basic: {
+      color: 'brand.500',
+
+      _hover: {
+        color: 'brand.400',
+
+        _dark: {
+          color: 'brand.600',
+        },
+      },
+    },
+    slideDark: {
+      color: 'brand.900',
+      fontSize: '1.25em',
+    },
+    slideLight: {
+      color: 'brand.300',
+      fontSize: '1.25em',
     },
   },
   defaultProps: {
     size: 'md',
+    variant: 'basic',
   },
 } satisfies StyleConfig;
