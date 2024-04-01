@@ -53,6 +53,10 @@ import DuringDauphine3Slide from './DuringDauphine3';
 import DuringEssec1Slide from './DuringEssec1';
 import DuringEssec2Slide from './DuringEssec2';
 import DuringEssec3Slide from './DuringEssec3';
+import DuringPlatform1Slide from './DuringPlatform1';
+import DuringPlatform2Slide from './DuringPlatform2';
+import DuringPlatform3Slide from './DuringPlatform3';
+import DuringPlatform4Slide from './DuringPlatform4';
 import DuringSectionTitleSlide from './DuringSectionTitle';
 import DuringSite1Slide from './DuringSite1';
 import DuringSite2Slide from './DuringSite2';
@@ -619,6 +623,30 @@ export const DuringSiteMvp7: Story = {
 export const DuringSiteMvp8: Story = {
   args: {
     slides: [DuringSiteMvp8Slide],
+  },
+};
+
+export const DuringPlatform1: Story = {
+  args: {
+    slides: [DuringPlatform1Slide],
+  },
+};
+
+export const DuringPlatform2: Story = {
+  args: {
+    slides: [DuringPlatform2Slide],
+  },
+};
+
+export const DuringPlatform3: Story = {
+  args: {
+    slides: [DuringPlatform3Slide],
+  },
+};
+
+export const DuringPlatform4: Story = {
+  args: {
+    slides: [DuringPlatform4Slide],
   },
 };
 
