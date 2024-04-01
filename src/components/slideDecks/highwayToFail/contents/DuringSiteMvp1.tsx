@@ -7,7 +7,7 @@ import { VerticalTimelineDuring } from '../components';
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="Premier gouffre de temps"
+    title="Première perte de temps"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
   >
