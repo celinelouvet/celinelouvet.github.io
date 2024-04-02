@@ -71,6 +71,11 @@ import DuringSiteMvp5 from './DuringSiteMvp5';
 import DuringSiteMvp6 from './DuringSiteMvp6';
 import DuringSiteMvp7 from './DuringSiteMvp7';
 import DuringSiteMvp8 from './DuringSiteMvp8';
+import DuringStack1 from './DuringStack1';
+import DuringStack2 from './DuringStack2';
+import DuringStack3 from './DuringStack3';
+import DuringStack4 from './DuringStack4';
+import DuringStack5 from './DuringStack5';
 import DuringWhere1 from './DuringWhere1';
 import DuringWhere2 from './DuringWhere2';
 import DuringWhere3 from './DuringWhere3';
@@ -205,6 +210,12 @@ export const getSlides = () => {
     DuringPlatform2,
     DuringPlatform3,
     DuringPlatform4,
+
+    DuringStack1,
+    DuringStack2,
+    DuringStack3,
+    DuringStack4,
+    DuringStack5,
 
     AfterSectionTitle,
 

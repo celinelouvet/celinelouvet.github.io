@@ -73,6 +73,11 @@ import DuringSiteMvp5Slide from './DuringSiteMvp5';
 import DuringSiteMvp6Slide from './DuringSiteMvp6';
 import DuringSiteMvp7Slide from './DuringSiteMvp7';
 import DuringSiteMvp8Slide from './DuringSiteMvp8';
+import DuringStack1Slide from './DuringStack1';
+import DuringStack2Slide from './DuringStack2';
+import DuringStack3Slide from './DuringStack3';
+import DuringStack4Slide from './DuringStack4';
+import DuringStack5Slide from './DuringStack5';
 import DuringWhere1Slide from './DuringWhere1';
 import DuringWhere2Slide from './DuringWhere2';
 import DuringWhere3Slide from './DuringWhere3';
@@ -647,6 +652,36 @@ export const DuringPlatform3: Story = {
 export const DuringPlatform4: Story = {
   args: {
     slides: [DuringPlatform4Slide],
+  },
+};
+
+export const DuringStack1: Story = {
+  args: {
+    slides: [DuringStack1Slide],
+  },
+};
+
+export const DuringStack2: Story = {
+  args: {
+    slides: [DuringStack2Slide],
+  },
+};
+
+export const DuringStack3: Story = {
+  args: {
+    slides: [DuringStack3Slide],
+  },
+};
+
+export const DuringStack4: Story = {
+  args: {
+    slides: [DuringStack4Slide],
+  },
+};
+
+export const DuringStack5: Story = {
+  args: {
+    slides: [DuringStack5Slide],
   },
 };
 
