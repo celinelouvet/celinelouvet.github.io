@@ -51,6 +51,21 @@ import DuringDauphine3 from './DuringDauphine3';
 import DuringEssec1 from './DuringEssec1';
 import DuringEssec2 from './DuringEssec2';
 import DuringEssec3 from './DuringEssec3';
+import DuringHaskell1 from './DuringHaskell1';
+import DuringHaskell10 from './DuringHaskell10';
+import DuringHaskell11 from './DuringHaskell11';
+import DuringHaskell12 from './DuringHaskell12';
+import DuringHaskell13 from './DuringHaskell13';
+import DuringHaskell14 from './DuringHaskell14';
+import DuringHaskell15 from './DuringHaskell15';
+import DuringHaskell2 from './DuringHaskell2';
+import DuringHaskell3 from './DuringHaskell3';
+import DuringHaskell4 from './DuringHaskell4';
+import DuringHaskell5 from './DuringHaskell5';
+import DuringHaskell6 from './DuringHaskell6';
+import DuringHaskell7 from './DuringHaskell7';
+import DuringHaskell8 from './DuringHaskell8';
+import DuringHaskell9 from './DuringHaskell9';
 import DuringHaskellChoice1 from './DuringHaskellChoice1';
 import DuringHaskellChoice10 from './DuringHaskellChoice10';
 import DuringHaskellChoice11 from './DuringHaskellChoice11';
@@ -239,6 +254,22 @@ export const getSlides = () => {
     DuringHaskellChoice9,
     DuringHaskellChoice10,
     DuringHaskellChoice11,
+
+    DuringHaskell1,
+    DuringHaskell2,
+    DuringHaskell3,
+    DuringHaskell4,
+    DuringHaskell5,
+    DuringHaskell6,
+    DuringHaskell7,
+    DuringHaskell8,
+    DuringHaskell9,
+    DuringHaskell10,
+    DuringHaskell11,
+    DuringHaskell12,
+    DuringHaskell13,
+    DuringHaskell14,
+    DuringHaskell15,
 
     AfterSectionTitle,
 
