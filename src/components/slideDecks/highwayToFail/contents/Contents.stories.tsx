@@ -53,6 +53,17 @@ import DuringDauphine3Slide from './DuringDauphine3';
 import DuringEssec1Slide from './DuringEssec1';
 import DuringEssec2Slide from './DuringEssec2';
 import DuringEssec3Slide from './DuringEssec3';
+import DuringHaskellChoice1Slide from './DuringHaskellChoice1';
+import DuringHaskellChoice10Slide from './DuringHaskellChoice10';
+import DuringHaskellChoice11Slide from './DuringHaskellChoice11';
+import DuringHaskellChoice2Slide from './DuringHaskellChoice2';
+import DuringHaskellChoice3Slide from './DuringHaskellChoice3';
+import DuringHaskellChoice4Slide from './DuringHaskellChoice4';
+import DuringHaskellChoice5Slide from './DuringHaskellChoice5';
+import DuringHaskellChoice6Slide from './DuringHaskellChoice6';
+import DuringHaskellChoice7Slide from './DuringHaskellChoice7';
+import DuringHaskellChoice8Slide from './DuringHaskellChoice8';
+import DuringHaskellChoice9Slide from './DuringHaskellChoice9';
 import DuringPlatform1Slide from './DuringPlatform1';
 import DuringPlatform2Slide from './DuringPlatform2';
 import DuringPlatform3Slide from './DuringPlatform3';
@@ -682,6 +693,72 @@ export const DuringStack4: Story = {
 export const DuringStack5: Story = {
   args: {
     slides: [DuringStack5Slide],
+  },
+};
+
+export const DuringHaskellChoice1: Story = {
+  args: {
+    slides: [DuringHaskellChoice1Slide],
+  },
+};
+
+export const DuringHaskellChoice2: Story = {
+  args: {
+    slides: [DuringHaskellChoice2Slide],
+  },
+};
+
+export const DuringHaskellChoice3: Story = {
+  args: {
+    slides: [DuringHaskellChoice3Slide],
+  },
+};
+
+export const DuringHaskellChoice4: Story = {
+  args: {
+    slides: [DuringHaskellChoice4Slide],
+  },
+};
+
+export const DuringHaskellChoice5: Story = {
+  args: {
+    slides: [DuringHaskellChoice5Slide],
+  },
+};
+
+export const DuringHaskellChoice6: Story = {
+  args: {
+    slides: [DuringHaskellChoice6Slide],
+  },
+};
+
+export const DuringHaskellChoice7: Story = {
+  args: {
+    slides: [DuringHaskellChoice7Slide],
+  },
+};
+
+export const DuringHaskellChoice8: Story = {
+  args: {
+    slides: [DuringHaskellChoice8Slide],
+  },
+};
+
+export const DuringHaskellChoice9: Story = {
+  args: {
+    slides: [DuringHaskellChoice9Slide],
+  },
+};
+
+export const DuringHaskellChoice10: Story = {
+  args: {
+    slides: [DuringHaskellChoice10Slide],
+  },
+};
+
+export const DuringHaskellChoice11: Story = {
+  args: {
+    slides: [DuringHaskellChoice11Slide],
   },
 };
 
