@@ -77,6 +77,11 @@ import DuringHaskellChoice6 from './DuringHaskellChoice6';
 import DuringHaskellChoice7 from './DuringHaskellChoice7';
 import DuringHaskellChoice8 from './DuringHaskellChoice8';
 import DuringHaskellChoice9 from './DuringHaskellChoice9';
+import DuringLearnHaskell1 from './DuringLearnHaskell1';
+import DuringLearnHaskell2 from './DuringLearnHaskell2';
+import DuringLearnHaskell3 from './DuringLearnHaskell3';
+import DuringLearnHaskell4 from './DuringLearnHaskell4';
+import DuringLearnHaskell5 from './DuringLearnHaskell5';
 import DuringPlatform1 from './DuringPlatform1';
 import DuringPlatform2 from './DuringPlatform2';
 import DuringPlatform3 from './DuringPlatform3';
@@ -270,6 +275,12 @@ export const getSlides = () => {
     DuringHaskell13,
     DuringHaskell14,
     DuringHaskell15,
+
+    DuringLearnHaskell1,
+    DuringLearnHaskell2,
+    DuringLearnHaskell3,
+    DuringLearnHaskell4,
+    DuringLearnHaskell5,
 
     AfterSectionTitle,
 

@@ -79,6 +79,11 @@ import DuringHaskellChoice6Slide from './DuringHaskellChoice6';
 import DuringHaskellChoice7Slide from './DuringHaskellChoice7';
 import DuringHaskellChoice8Slide from './DuringHaskellChoice8';
 import DuringHaskellChoice9Slide from './DuringHaskellChoice9';
+import DuringLearnHaskell1Slide from './DuringLearnHaskell1';
+import DuringLearnHaskell2Slide from './DuringLearnHaskell2';
+import DuringLearnHaskell3Slide from './DuringLearnHaskell3';
+import DuringLearnHaskell4Slide from './DuringLearnHaskell4';
+import DuringLearnHaskell5Slide from './DuringLearnHaskell5';
 import DuringPlatform1Slide from './DuringPlatform1';
 import DuringPlatform2Slide from './DuringPlatform2';
 import DuringPlatform3Slide from './DuringPlatform3';
@@ -864,6 +869,36 @@ export const DuringHaskell14: Story = {
 export const DuringHaskell15: Story = {
   args: {
     slides: [DuringHaskell15Slide],
+  },
+};
+
+export const DuringLearnHaskell1: Story = {
+  args: {
+    slides: [DuringLearnHaskell1Slide],
+  },
+};
+
+export const DuringLearnHaskell2: Story = {
+  args: {
+    slides: [DuringLearnHaskell2Slide],
+  },
+};
+
+export const DuringLearnHaskell3: Story = {
+  args: {
+    slides: [DuringLearnHaskell3Slide],
+  },
+};
+
+export const DuringLearnHaskell4: Story = {
+  args: {
+    slides: [DuringLearnHaskell4Slide],
+  },
+};
+
+export const DuringLearnHaskell5: Story = {
+  args: {
+    slides: [DuringLearnHaskell5Slide],
   },
 };
 
