@@ -35,7 +35,15 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Wydden qui est spécialisé dans l’accompagnement de startups, annonce un
+      taux entre 60% et 75% d’échecs.
+    </Text>
+    <Text>Par contre, on ne sait pas d’où ces chiffres proviennent.</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

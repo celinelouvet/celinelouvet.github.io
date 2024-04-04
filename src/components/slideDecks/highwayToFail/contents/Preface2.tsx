@@ -44,7 +44,11 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    On en compte actuellement 27 en France. J’en ai listé 6.
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

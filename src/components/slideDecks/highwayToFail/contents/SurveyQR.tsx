@@ -1,4 +1,4 @@
-import { Center, Stack } from '@chakra-ui/react';
+import { Center, ListItem, Stack, Text, UnorderedList } from '@chakra-ui/react';
 
 import {
   H1Heading,
@@ -43,7 +43,37 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Par curiosité, j’aimerais faire un petit sondage. Est-ce que vous arrivez
+      à accéder à internet ?
+    </Text>
+    <Text>
+      Si oui: Parfait, pouvez-vous scanner ce QR code ? Il vous amènera sur un
+      sondage. On regardera les résultats un peu plus loin.
+    </Text>
+    <Text>Si non: Bon, tant pis, on va le faire à mains levées.</Text>
+    <UnorderedList>
+      <ListItem>
+        Qui a eu envie un jour de se lancer dans la création de startup ?
+      </ListItem>
+      <ListItem>Parmi les personnes qui ont dit oui, qui l’a fait ?</ListItem>
+      <ListItem>
+        Pour les personnes qui l’ont fait, considérez vous avoir réussi votre
+        pari ?
+      </ListItem>
+      <ListItem>
+        Pour les personnes qui en ont créé une, considérez vous avoir réussi
+        votre pari ?
+      </ListItem>
+      <ListItem>
+        Pour les personnes qui en avait envie, mais qui n’en ont pas créé,
+        est-ce que c’est parce que vous avez peur de l’échec ou de l’inconnu ?
+      </ListItem>
+    </UnorderedList>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

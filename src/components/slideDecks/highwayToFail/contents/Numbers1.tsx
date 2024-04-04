@@ -35,7 +35,17 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Dans l’abstract, j’annonce 90% d’échecs dont 10% la premère année.
+    </Text>
+    <Text>
+      Ce chiffre vient d’une étude de Startup Genome, mais je n’ai pas réussi à
+      trouver plus de détails.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;
