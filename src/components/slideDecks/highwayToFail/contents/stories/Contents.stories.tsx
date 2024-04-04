@@ -115,6 +115,7 @@ import DuringStack5Slide from '../DuringStack5';
 import DuringWhere1Slide from '../DuringWhere1';
 import DuringWhere2Slide from '../DuringWhere2';
 import DuringWhere3Slide from '../DuringWhere3';
+import DuringWhere4Slide from '../DuringWhere4';
 import EndTitleSlide from '../EndTitle';
 import Fairvioo1Slide from '../Fairvioo1';
 import Fairvioo2Slide from '../Fairvioo2';
@@ -554,6 +555,12 @@ export const DuringWhere2: Story = {
 export const DuringWhere3: Story = {
   args: {
     slides: [DuringWhere3Slide],
+  },
+};
+
+export const DuringWhere4: Story = {
+  args: {
+    slides: [DuringWhere4Slide],
   },
 };
 

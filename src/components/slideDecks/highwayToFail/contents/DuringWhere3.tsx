@@ -23,14 +23,21 @@ export const content = (
       <StackItem>
         <ThumbsDown variant="slide">Passer son temps chez quelqu’un</ThumbsDown>
       </StackItem>
-      <StackItem>
-        <ThumbsDown variant="slide">Les coworkings coûtent cher</ThumbsDown>
-      </StackItem>
     </Stack>
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Par contre, je ne sais pas pour vous, mais moi, je suis mal à l’aise de
+      squater chez un inconnu.
+    </Text>
+    <Text>
+      Nous sommes collègues, je n’ai pas besoin de connaître sa vie privée.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;
