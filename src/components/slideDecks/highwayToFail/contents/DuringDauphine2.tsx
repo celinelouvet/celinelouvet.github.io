@@ -27,16 +27,7 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>
-      Courant Janvier 2018, on effectuera une présentation devant le jury de
-      sélection.
-    </Text>
-    <Text>
-      Si vous vous lancez, vous le remarquerez surement. Dans ces présentations,
-      on est surtout présentés en tant que faire-valoir technique.
-    </Text>
-    <Text>
-      On est acceptés par l’incubateur. On va pouvoir s’installer à partir
-      d’avril 2018 à la FAC de Dauphine.
+      On va donc pouvoir s’inscrire au programme de l’incubateur Paris-Dauphine.
     </Text>
   </SlideNote>
 );
