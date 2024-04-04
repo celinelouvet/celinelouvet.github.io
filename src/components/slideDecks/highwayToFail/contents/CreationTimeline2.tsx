@@ -1,4 +1,4 @@
-import { Center } from '@chakra-ui/react';
+import { Center, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -17,7 +17,14 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Au moment de notre discussion, nous sommes mi décembre. Nous avons donc 6
+      mois devant nous pour sortir une version beta et 9 pour la version finale.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

@@ -1,4 +1,4 @@
-import { Center } from '@chakra-ui/react';
+import { Center, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -17,7 +17,11 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>Une roadmap a été prévue.</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;
