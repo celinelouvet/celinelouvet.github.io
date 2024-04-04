@@ -15,8 +15,8 @@ export const content = (
         <Text>Ils ont:</Text>
         <UnorderedList paddingLeft="1em">
           <ListItem>l’idée,</ListItem>
-          <ListItem>le moyen de se démarquer,</ListItem>
           <ListItem>fait une étude de marché,</ListItem>
+          <ListItem>le moyen de se démarquer,</ListItem>
           <ListItem>un business model,</ListItem>
           <ListItem>un business plan.</ListItem>
         </UnorderedList>
@@ -25,7 +25,18 @@ export const content = (
   ></SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>Ils ont :</Text>
+    <UnorderedList paddingLeft="1em">
+      <ListItem>l’idée,</ListItem>
+      <ListItem>fait une étude de marché,</ListItem>
+      <ListItem>réfléchi à un moyen de se démarquer,</ListItem>
+      <ListItem>défini un business model,</ListItem>
+      <ListItem>réalisé un business plan.</ListItem>
+    </UnorderedList>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

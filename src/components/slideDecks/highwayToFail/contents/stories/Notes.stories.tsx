@@ -41,6 +41,8 @@ import CreationMeeting2Slide from '../CreationMeeting2';
 import CreationMeeting3Slide from '../CreationMeeting3';
 import CreationMeeting4Slide from '../CreationMeeting4';
 import CreationMeeting5Slide from '../CreationMeeting5';
+import CreationMeeting6Slide from '../CreationMeeting6';
+import CreationMeeting7Slide from '../CreationMeeting7';
 import CreationSectionTitleSlide from '../CreationSectionTitle';
 import CreationTimeline1Slide from '../CreationTimeline1';
 import CreationTimeline2Slide from '../CreationTimeline2';
@@ -373,6 +375,20 @@ export const CreationMeeting5: Story = {
   args: {
     forNotes: true,
     slides: [CreationMeeting5Slide],
+  },
+};
+
+export const CreationMeeting6: Story = {
+  args: {
+    forNotes: true,
+    slides: [CreationMeeting6Slide],
+  },
+};
+
+export const CreationMeeting7: Story = {
+  args: {
+    forNotes: true,
+    slides: [CreationMeeting7Slide],
   },
 };
 
