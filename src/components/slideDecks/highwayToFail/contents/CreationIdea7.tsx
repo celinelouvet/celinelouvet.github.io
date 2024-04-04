@@ -2,7 +2,7 @@ import { Center, Stack, StackItem, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { ReviewAsked2, VerticalTimelineCreation } from '../components';
+import { ReviewAsked1, VerticalTimelineCreation } from '../components';
 
 export const content = (
   <SlideContent
@@ -17,14 +17,19 @@ export const content = (
       </StackItem>
       <StackItem width="100%" flexGrow="1">
         <Center width="100%" height="100%">
-          <ReviewAsked2 />
+          <ReviewAsked1 />
         </Center>
       </StackItem>
     </Stack>
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    Deux semaines plus tard, Fairvioo envoie un email au consommateur pour lui
+    demander son avis.
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

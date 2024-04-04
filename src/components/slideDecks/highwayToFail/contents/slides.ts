@@ -29,6 +29,7 @@ import CreationIdea5 from './CreationIdea5';
 import CreationIdea6 from './CreationIdea6';
 import CreationIdea7 from './CreationIdea7';
 import CreationIdea8 from './CreationIdea8';
+import CreationIdea9 from './CreationIdea9';
 import CreationMarket1 from './CreationMarket1';
 import CreationMarket2 from './CreationMarket2';
 import CreationMarket3 from './CreationMarket3';
@@ -189,6 +190,7 @@ export const getSlides = () => {
     CreationIdea6,
     CreationIdea7,
     CreationIdea8,
+    CreationIdea9,
 
     CreationMarket1,
     CreationMarket2,

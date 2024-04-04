@@ -27,7 +27,16 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      De plus, pour chaque avis laissé par un client, un micro-don est
+      enregistré pour une association.
+    </Text>
+    <Text>Les dons seront reversés régulièrement.</Text>
+    <Text>J’aime ce coté éthique !</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

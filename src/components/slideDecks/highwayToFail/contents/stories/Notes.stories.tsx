@@ -30,6 +30,7 @@ import CreationIdea5Slide from '../CreationIdea5';
 import CreationIdea6Slide from '../CreationIdea6';
 import CreationIdea7Slide from '../CreationIdea7';
 import CreationIdea8Slide from '../CreationIdea8';
+import CreationIdea9Slide from '../CreationIdea9';
 import CreationMarket1Slide from '../CreationMarket1';
 import CreationMarket2Slide from '../CreationMarket2';
 import CreationMarket3Slide from '../CreationMarket3';
@@ -445,6 +446,13 @@ export const CreationIdea8: Story = {
   args: {
     forNotes: true,
     slides: [CreationIdea8Slide],
+  },
+};
+
+export const CreationIdea9: Story = {
+  args: {
+    forNotes: true,
+    slides: [CreationIdea9Slide],
   },
 };
 

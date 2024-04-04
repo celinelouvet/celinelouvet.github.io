@@ -2,7 +2,7 @@ import { Center, Stack, StackItem, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { OrderConfirmation2, VerticalTimelineCreation } from '../components';
+import { ReviewAsked3, VerticalTimelineCreation } from '../components';
 
 export const content = (
   <SlideContent
@@ -13,20 +13,18 @@ export const content = (
   >
     <Stack width="100%" height="100%">
       <StackItem>
-        <Text>La confirmation d’achat</Text>
+        <Text>La demande d’avis</Text>
       </StackItem>
       <StackItem width="100%" flexGrow="1">
         <Center width="100%" height="100%">
-          <OrderConfirmation2 />
+          <ReviewAsked3 />
         </Center>
       </StackItem>
     </Stack>
   </SlideContent>
 );
 
-const note = (
-  <SlideNote>Le commerçant notifie Fairvioo de cet achat.</SlideNote>
-);
+const note = <SlideNote>Le micro-don est comptabilisé.</SlideNote>;
 
 const slide = { content, note };
 export default slide;
