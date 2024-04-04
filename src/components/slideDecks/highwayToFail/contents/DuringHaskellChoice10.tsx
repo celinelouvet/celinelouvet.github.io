@@ -1,21 +1,19 @@
-import { Box, Center } from '@chakra-ui/react';
+import { Stack, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { ParetoSite, VerticalTimelineDuring } from '../components';
+import { VerticalTimelineDuring } from '../components';
 
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="Première perte de temps"
+    title="Pourquoi Haskell ?"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
   >
-    <Center width="100%" height="100%">
-      <Box height="100%">
-        <ParetoSite />
-      </Box>
-    </Center>
+    <Stack width="100%" height="100%">
+      <Text>Clever Cloud cherche à promouvoir l’hébergement de Haskell.</Text>
+    </Stack>
   </SlideContent>
 );
 

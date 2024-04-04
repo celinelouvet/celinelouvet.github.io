@@ -19,13 +19,6 @@ export const content = (
     <Stack width="100%" gap="1em">
       <StackItem>
         <UnorderedList paddingLeft="1em">
-          <ListItem>En couple, avec un enfant et un crédit</ListItem>
-          <ListItem>Déjà eu un burn‑out</ListItem>
-        </UnorderedList>
-      </StackItem>
-
-      <StackItem>
-        <UnorderedList paddingLeft="1em">
           <ListItem>
             ESN toute ma carrière, beaucoup de régie (chez le client)
           </ListItem>

@@ -14,7 +14,7 @@ export const content = (
     <Stack width="100%" gap="1em">
       <StackItem>
         <UnorderedList paddingLeft="1em">
-          <ListItem>En couple, avec un enfant et un crédit</ListItem>
+          <ListItem>En couple, avec un enfant et un crédit bancaire</ListItem>
           <ListItem>Déjà eu un burn‑out</ListItem>
         </UnorderedList>
       </StackItem>

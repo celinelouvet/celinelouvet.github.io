@@ -51,6 +51,41 @@ import DuringDauphine3 from './DuringDauphine3';
 import DuringEssec1 from './DuringEssec1';
 import DuringEssec2 from './DuringEssec2';
 import DuringEssec3 from './DuringEssec3';
+import DuringHaskell1 from './DuringHaskell1';
+import DuringHaskell10 from './DuringHaskell10';
+import DuringHaskell11 from './DuringHaskell11';
+import DuringHaskell12 from './DuringHaskell12';
+import DuringHaskell13 from './DuringHaskell13';
+import DuringHaskell14 from './DuringHaskell14';
+import DuringHaskell15 from './DuringHaskell15';
+import DuringHaskell2 from './DuringHaskell2';
+import DuringHaskell3 from './DuringHaskell3';
+import DuringHaskell4 from './DuringHaskell4';
+import DuringHaskell5 from './DuringHaskell5';
+import DuringHaskell6 from './DuringHaskell6';
+import DuringHaskell7 from './DuringHaskell7';
+import DuringHaskell8 from './DuringHaskell8';
+import DuringHaskell9 from './DuringHaskell9';
+import DuringHaskellChoice1 from './DuringHaskellChoice1';
+import DuringHaskellChoice10 from './DuringHaskellChoice10';
+import DuringHaskellChoice11 from './DuringHaskellChoice11';
+import DuringHaskellChoice2 from './DuringHaskellChoice2';
+import DuringHaskellChoice3 from './DuringHaskellChoice3';
+import DuringHaskellChoice4 from './DuringHaskellChoice4';
+import DuringHaskellChoice5 from './DuringHaskellChoice5';
+import DuringHaskellChoice6 from './DuringHaskellChoice6';
+import DuringHaskellChoice7 from './DuringHaskellChoice7';
+import DuringHaskellChoice8 from './DuringHaskellChoice8';
+import DuringHaskellChoice9 from './DuringHaskellChoice9';
+import DuringLearnHaskell1 from './DuringLearnHaskell1';
+import DuringLearnHaskell2 from './DuringLearnHaskell2';
+import DuringLearnHaskell3 from './DuringLearnHaskell3';
+import DuringLearnHaskell4 from './DuringLearnHaskell4';
+import DuringLearnHaskell5 from './DuringLearnHaskell5';
+import DuringPlatform1 from './DuringPlatform1';
+import DuringPlatform2 from './DuringPlatform2';
+import DuringPlatform3 from './DuringPlatform3';
+import DuringPlatform4 from './DuringPlatform4';
 import DuringSectionTitle from './DuringSectionTitle';
 import DuringSite1 from './DuringSite1';
 import DuringSite2 from './DuringSite2';
@@ -67,6 +102,11 @@ import DuringSiteMvp5 from './DuringSiteMvp5';
 import DuringSiteMvp6 from './DuringSiteMvp6';
 import DuringSiteMvp7 from './DuringSiteMvp7';
 import DuringSiteMvp8 from './DuringSiteMvp8';
+import DuringStack1 from './DuringStack1';
+import DuringStack2 from './DuringStack2';
+import DuringStack3 from './DuringStack3';
+import DuringStack4 from './DuringStack4';
+import DuringStack5 from './DuringStack5';
 import DuringWhere1 from './DuringWhere1';
 import DuringWhere2 from './DuringWhere2';
 import DuringWhere3 from './DuringWhere3';
@@ -196,6 +236,51 @@ export const getSlides = () => {
     DuringSiteMvp6,
     DuringSiteMvp7,
     DuringSiteMvp8,
+
+    DuringPlatform1,
+    DuringPlatform2,
+    DuringPlatform3,
+    DuringPlatform4,
+
+    DuringStack1,
+    DuringStack2,
+    DuringStack3,
+    DuringStack4,
+    DuringStack5,
+
+    DuringHaskellChoice1,
+    DuringHaskellChoice2,
+    DuringHaskellChoice3,
+    DuringHaskellChoice4,
+    DuringHaskellChoice5,
+    DuringHaskellChoice6,
+    DuringHaskellChoice7,
+    DuringHaskellChoice8,
+    DuringHaskellChoice9,
+    DuringHaskellChoice10,
+    DuringHaskellChoice11,
+
+    DuringHaskell1,
+    DuringHaskell2,
+    DuringHaskell3,
+    DuringHaskell4,
+    DuringHaskell5,
+    DuringHaskell6,
+    DuringHaskell7,
+    DuringHaskell8,
+    DuringHaskell9,
+    DuringHaskell10,
+    DuringHaskell11,
+    DuringHaskell12,
+    DuringHaskell13,
+    DuringHaskell14,
+    DuringHaskell15,
+
+    DuringLearnHaskell1,
+    DuringLearnHaskell2,
+    DuringLearnHaskell3,
+    DuringLearnHaskell4,
+    DuringLearnHaskell5,
 
     AfterSectionTitle,
 

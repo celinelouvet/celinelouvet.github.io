@@ -1,4 +1,4 @@
-import { Stack, StackItem, Text } from '@chakra-ui/react';
+import { ListItem, UnorderedList } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -7,15 +7,16 @@ import { VerticalTimelineDuring } from '../components';
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="Première perte de temps"
+    title="Haskell"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
   >
-    <Stack gap="1em">
-      <StackItem>
-        <Text>Version simplifiée ne conviendra pas</Text>
-      </StackItem>
-    </Stack>
+    <UnorderedList paddingLeft="1em">
+      <ListItem>Purement fonctionnel,</ListItem>
+      <ListItem>statiquement typé,</ListItem>
+      <ListItem>inférence de type,</ListItem>
+      <ListItem>concurrence prévue.</ListItem>
+    </UnorderedList>
   </SlideContent>
 );
 

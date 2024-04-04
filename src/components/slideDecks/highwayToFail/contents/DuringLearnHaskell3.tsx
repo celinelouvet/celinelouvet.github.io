@@ -1,20 +1,23 @@
-import { Stack, StackItem, Text } from '@chakra-ui/react';
+import { Stack } from '@chakra-ui/react';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+  ThumbsDown,
+} from '@/components/core';
 
 import { VerticalTimelineDuring } from '../components';
 
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="Première perte de temps"
+    title="Courbe d’apprentissage"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
   >
     <Stack gap="1em">
-      <StackItem>
-        <Text>Version simplifiée ne conviendra pas</Text>
-      </StackItem>
+      <ThumbsDown variant="slide">Personne pour m’expliquer.</ThumbsDown>
     </Stack>
   </SlideContent>
 );

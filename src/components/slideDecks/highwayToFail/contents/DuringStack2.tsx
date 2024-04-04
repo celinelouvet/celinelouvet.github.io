@@ -2,18 +2,18 @@ import { Box, Center } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { ParetoSite, VerticalTimelineDuring } from '../components';
+import { Stack1, VerticalTimelineDuring } from '../components';
 
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="Première perte de temps"
+    title="En détails"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
   >
-    <Center width="100%" height="100%">
+    <Center height="100%">
       <Box height="100%">
-        <ParetoSite />
+        <Stack1 />
       </Box>
     </Center>
   </SlideContent>

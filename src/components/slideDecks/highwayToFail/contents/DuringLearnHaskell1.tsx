@@ -1,21 +1,17 @@
-import { Box, Center } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { ParetoSite, VerticalTimelineDuring } from '../components';
+import { VerticalTimelineDuring } from '../components';
 
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="Première perte de temps"
+    title="Courbe d’apprentissage"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
   >
-    <Center width="100%" height="100%">
-      <Box height="100%">
-        <ParetoSite />
-      </Box>
-    </Center>
+    <Text>Apprentissage très douloureux.</Text>
   </SlideContent>
 );
 

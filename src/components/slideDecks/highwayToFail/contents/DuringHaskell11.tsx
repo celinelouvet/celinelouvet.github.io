@@ -1,21 +1,23 @@
-import { Box, Center } from '@chakra-ui/react';
+import { Code, Stack, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { ParetoSite, VerticalTimelineDuring } from '../components';
+import { VerticalTimelineDuring } from '../components';
 
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="Première perte de temps"
+    title="Haskell — Inférence de type"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
   >
-    <Center width="100%" height="100%">
-      <Box height="100%">
-        <ParetoSite />
-      </Box>
-    </Center>
+    <Stack>
+      <Code width="100%" variant="slide">
+        <Stack fontFamily="noto mono" gap="0.5em">
+          <Text as="span">inc x = x + 1</Text>
+        </Stack>
+      </Code>
+    </Stack>
   </SlideContent>
 );
 
