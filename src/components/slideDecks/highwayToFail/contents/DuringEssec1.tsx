@@ -19,7 +19,13 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Comme je le disais en préambule, l’un des deux avait fait l’ESSEC.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;
