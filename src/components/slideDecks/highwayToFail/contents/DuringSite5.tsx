@@ -1,4 +1,10 @@
-import { ListItem, Stack, StackItem, UnorderedList } from '@chakra-ui/react';
+import {
+  ListItem,
+  Stack,
+  StackItem,
+  Text,
+  UnorderedList,
+} from '@chakra-ui/react';
 
 import {
   SlideContent,
@@ -32,7 +38,15 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Avantage important, le système de quota de Firebase et notre utilisation
+      fait que c’est gratuit pour le moment.
+    </Text>
+    <Text>Parfait.</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

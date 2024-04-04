@@ -21,7 +21,16 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>On va commencer par réaliser le site vitrine.</Text>
+    <Text>
+      L’idée est de faire un site pour exposer notre produit, pouvoir toucher
+      les investisseurs, convaincre les incubateurs et récolter des futurs
+      clients.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

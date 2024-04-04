@@ -1,4 +1,4 @@
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Flex, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -28,7 +28,13 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Les maquettes sont déjà prêtes. Elles ont servi à faire le prototype.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;
