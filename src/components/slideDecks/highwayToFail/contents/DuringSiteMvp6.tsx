@@ -1,8 +1,8 @@
-import { Box, Center } from '@chakra-ui/react';
+import { Stack, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { Pareto1, VerticalTimelineDuring } from '../components';
+import { VerticalTimelineDuring } from '../components';
 
 export const content = (
   <SlideContent
@@ -11,15 +11,31 @@ export const content = (
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
   >
-    <Center width="100%" height="100%">
-      <Box height="100%">
-        <Pareto1 />
-      </Box>
-    </Center>
+    <Stack gap="1em">
+      <Text>
+        Les premiers 80% sont les plus faciles à atteindre, car ils demandent
+        20% d’effort.
+      </Text>
+      <Text>
+        Les 20% restants vont être les plus difficiles, et demanderont 80%
+        d’effort.
+      </Text>
+    </Stack>
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Quand on applique ce principe au développement, il dit que 80% des
+      fonctionnalités vont demander 20% des efforts, car ils sont faciles à
+      atteindre.
+    </Text>
+    <Text>
+      Par contre, les 20% restantes demanderont, elles, 80% des efforts.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

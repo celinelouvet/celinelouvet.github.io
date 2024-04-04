@@ -101,6 +101,7 @@ import DuringSite5Slide from '../DuringSite5';
 import DuringSite6Slide from '../DuringSite6';
 import DuringSite7Slide from '../DuringSite7';
 import DuringSiteMvp1Slide from '../DuringSiteMvp1';
+import DuringSiteMvp10Slide from '../DuringSiteMvp10';
 import DuringSiteMvp2Slide from '../DuringSiteMvp2';
 import DuringSiteMvp3Slide from '../DuringSiteMvp3';
 import DuringSiteMvp4Slide from '../DuringSiteMvp4';
@@ -108,6 +109,7 @@ import DuringSiteMvp5Slide from '../DuringSiteMvp5';
 import DuringSiteMvp6Slide from '../DuringSiteMvp6';
 import DuringSiteMvp7Slide from '../DuringSiteMvp7';
 import DuringSiteMvp8Slide from '../DuringSiteMvp8';
+import DuringSiteMvp9Slide from '../DuringSiteMvp9';
 import DuringStack1Slide from '../DuringStack1';
 import DuringStack2Slide from '../DuringStack2';
 import DuringStack3Slide from '../DuringStack3';
@@ -694,6 +696,18 @@ export const DuringSiteMvp7: Story = {
 export const DuringSiteMvp8: Story = {
   args: {
     slides: [DuringSiteMvp8Slide],
+  },
+};
+
+export const DuringSiteMvp9: Story = {
+  args: {
+    slides: [DuringSiteMvp9Slide],
+  },
+};
+
+export const DuringSiteMvp10: Story = {
+  args: {
+    slides: [DuringSiteMvp10Slide],
   },
 };
 

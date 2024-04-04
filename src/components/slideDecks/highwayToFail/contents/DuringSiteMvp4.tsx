@@ -1,25 +1,46 @@
-import { Box, Center } from '@chakra-ui/react';
+import { ListItem, Text, UnorderedList } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { ParetoSite, VerticalTimelineDuring } from '../components';
+import { VerticalTimelineDuring } from '../components';
 
 export const content = (
   <SlideContent
-    type={SlideContentTypes.titleWithThinColumn}
+    type={SlideContentTypes.titleWithThin2Columns}
     title="Première perte de temps"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
+    column2={
+      <UnorderedList paddingLeft="1em">
+        <ListItem>Google analytics,</ListItem>
+        <ListItem>du SEO,</ListItem>
+        <ListItem>du Prerendering,</ListItem>
+        <ListItem>des évènements Facebook,</ListItem>
+        <ListItem>des évènements LinkedIn,</ListItem>
+        <ListItem>des évènements Segment,</ListItem>
+      </UnorderedList>
+    }
   >
-    <Center width="100%" height="100%">
-      <Box height="100%">
-        <ParetoSite />
-      </Box>
-    </Center>
+    <UnorderedList paddingLeft="1em">
+      <ListItem>Zapier pour le formulaire de contact,</ListItem>
+      <ListItem>Prefinery (gestion de referrals),</ListItem>
+      <ListItem>Drift (chats).</ListItem>
+    </UnorderedList>
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Ça va déraper assez vite, car je vais commencer à ajouter de plus en plus
+      de choses.
+    </Text>
+    <Text>
+      Et comme il faut quelqu’un qui s’y connaisse en développement, il n’y a
+      que moi qui peut le faire.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

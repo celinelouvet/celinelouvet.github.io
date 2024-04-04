@@ -7,7 +7,7 @@ import { VerticalTimelineDuring } from '../components';
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="Première perte de temps"
+    title="Si je devais le refaire ?"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
   ></SlideContent>
@@ -16,7 +16,7 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>
-      Et c’est là qu’on va avoir nos premières tensions et perte de temps.
+      Si je devais le refaire aujourd’hui, je ferai vraiement autrement.
     </Text>
   </SlideNote>
 );
