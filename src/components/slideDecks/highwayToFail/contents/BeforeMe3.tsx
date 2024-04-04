@@ -1,4 +1,10 @@
-import { ListItem, Stack, StackItem, UnorderedList } from '@chakra-ui/react';
+import {
+  ListItem,
+  Stack,
+  StackItem,
+  Text,
+  UnorderedList,
+} from '@chakra-ui/react';
 
 import {
   SlideContent,
@@ -36,7 +42,15 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>Un point très important :</Text>
+    <Text>
+      La plupart de mes projets se sont bien passés et j’ai confiance en moi et
+      en mes réalisations.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;
