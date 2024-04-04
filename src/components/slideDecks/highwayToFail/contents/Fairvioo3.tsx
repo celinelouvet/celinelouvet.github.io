@@ -29,7 +29,11 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    Juin 2019, Fairvioo met la clé sous la porte et passe en liquidation.
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

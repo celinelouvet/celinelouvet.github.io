@@ -1,8 +1,6 @@
-import { Center, Stack, StackItem, Text } from '@chakra-ui/react';
-
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { OrderConfirmation1, VerticalTimelineCreation } from '../components';
+import { VerticalTimelineCreation } from '../components';
 
 export const content = (
   <SlideContent
@@ -10,21 +8,10 @@ export const content = (
     title="Le fonctionnement"
     alignContent="flex-start"
     column1={<VerticalTimelineCreation />}
-  >
-    <Stack width="100%" height="100%">
-      <StackItem>
-        <Text>La confirmation d’achat</Text>
-      </StackItem>
-      <StackItem width="100%" flexGrow="1">
-        <Center width="100%" height="100%">
-          <OrderConfirmation1 />
-        </Center>
-      </StackItem>
-    </Stack>
-  </SlideContent>
+  ></SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = <SlideNote>Comment ça fonctionne ?</SlideNote>;
 
 const slide = { content, note };
 export default slide;

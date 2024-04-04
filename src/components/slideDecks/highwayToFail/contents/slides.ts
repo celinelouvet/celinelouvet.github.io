@@ -29,6 +29,7 @@ import CreationIdea5 from './CreationIdea5';
 import CreationIdea6 from './CreationIdea6';
 import CreationIdea7 from './CreationIdea7';
 import CreationIdea8 from './CreationIdea8';
+import CreationIdea9 from './CreationIdea9';
 import CreationMarket1 from './CreationMarket1';
 import CreationMarket2 from './CreationMarket2';
 import CreationMarket3 from './CreationMarket3';
@@ -40,6 +41,8 @@ import CreationMeeting2 from './CreationMeeting2';
 import CreationMeeting3 from './CreationMeeting3';
 import CreationMeeting4 from './CreationMeeting4';
 import CreationMeeting5 from './CreationMeeting5';
+import CreationMeeting6 from './CreationMeeting6';
+import CreationMeeting7 from './CreationMeeting7';
 import CreationSectionTitle from './CreationSectionTitle';
 import CreationTimeline1 from './CreationTimeline1';
 import CreationTimeline2 from './CreationTimeline2';
@@ -51,21 +54,21 @@ import DuringDauphine3 from './DuringDauphine3';
 import DuringEssec1 from './DuringEssec1';
 import DuringEssec2 from './DuringEssec2';
 import DuringEssec3 from './DuringEssec3';
-import DuringHaskell1 from './DuringHaskell1';
-import DuringHaskell10 from './DuringHaskell10';
-import DuringHaskell11 from './DuringHaskell11';
-import DuringHaskell12 from './DuringHaskell12';
-import DuringHaskell13 from './DuringHaskell13';
-import DuringHaskell14 from './DuringHaskell14';
-import DuringHaskell15 from './DuringHaskell15';
-import DuringHaskell2 from './DuringHaskell2';
-import DuringHaskell3 from './DuringHaskell3';
-import DuringHaskell4 from './DuringHaskell4';
-import DuringHaskell5 from './DuringHaskell5';
-import DuringHaskell6 from './DuringHaskell6';
-import DuringHaskell7 from './DuringHaskell7';
-import DuringHaskell8 from './DuringHaskell8';
-import DuringHaskell9 from './DuringHaskell9';
+// import DuringHaskell1 from './DuringHaskell1';
+// import DuringHaskell10 from './DuringHaskell10';
+// import DuringHaskell11 from './DuringHaskell11';
+// import DuringHaskell12 from './DuringHaskell12';
+// import DuringHaskell13 from './DuringHaskell13';
+// import DuringHaskell14 from './DuringHaskell14';
+// import DuringHaskell15 from './DuringHaskell15';
+// import DuringHaskell2 from './DuringHaskell2';
+// import DuringHaskell3 from './DuringHaskell3';
+// import DuringHaskell4 from './DuringHaskell4';
+// import DuringHaskell5 from './DuringHaskell5';
+// import DuringHaskell6 from './DuringHaskell6';
+// import DuringHaskell7 from './DuringHaskell7';
+// import DuringHaskell8 from './DuringHaskell8';
+// import DuringHaskell9 from './DuringHaskell9';
 import DuringHaskellChoice1 from './DuringHaskellChoice1';
 import DuringHaskellChoice10 from './DuringHaskellChoice10';
 import DuringHaskellChoice11 from './DuringHaskellChoice11';
@@ -176,6 +179,8 @@ export const getSlides = () => {
     CreationMeeting3,
     CreationMeeting4,
     CreationMeeting5,
+    CreationMeeting6,
+    CreationMeeting7,
 
     CreationIdea1,
     CreationIdea2,
@@ -185,6 +190,7 @@ export const getSlides = () => {
     CreationIdea6,
     CreationIdea7,
     CreationIdea8,
+    CreationIdea9,
 
     CreationMarket1,
     CreationMarket2,
@@ -260,21 +266,21 @@ export const getSlides = () => {
     DuringHaskellChoice10,
     DuringHaskellChoice11,
 
-    DuringHaskell1,
-    DuringHaskell2,
-    DuringHaskell3,
-    DuringHaskell4,
-    DuringHaskell5,
-    DuringHaskell6,
-    DuringHaskell7,
-    DuringHaskell8,
-    DuringHaskell9,
-    DuringHaskell10,
-    DuringHaskell11,
-    DuringHaskell12,
-    DuringHaskell13,
-    DuringHaskell14,
-    DuringHaskell15,
+    // DuringHaskell1,
+    // DuringHaskell2,
+    // DuringHaskell3,
+    // DuringHaskell4,
+    // DuringHaskell5,
+    // DuringHaskell6,
+    // DuringHaskell7,
+    // DuringHaskell8,
+    // DuringHaskell9,
+    // DuringHaskell10,
+    // DuringHaskell11,
+    // DuringHaskell12,
+    // DuringHaskell13,
+    // DuringHaskell14,
+    // DuringHaskell15,
 
     DuringLearnHaskell1,
     DuringLearnHaskell2,

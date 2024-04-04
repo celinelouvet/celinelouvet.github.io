@@ -19,7 +19,12 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    Après discussion, ils vont me proposer une rupture de la période d’essai. Il
+    s’agit de me permettre de bénéficier des allocations chômage.
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

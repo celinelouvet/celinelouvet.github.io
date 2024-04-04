@@ -32,7 +32,15 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Bref, ça reste assez flou, mais il y a un consensus qui s’est formé autour
+      d’un taux d’échecs entre 60% et 90%.
+    </Text>
+    <Text>Ça reste plus d’une startup sur deux.</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

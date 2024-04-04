@@ -29,7 +29,11 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    Fin 2017, je rejoins 2 co-fondateurs pour créer Fairvioo, en tant que CTO.
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

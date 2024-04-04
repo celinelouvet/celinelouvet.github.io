@@ -19,7 +19,12 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    En discutant lors d’un meetup, au-dessus d’une part de pizza, un ami me dit
+    connaître 2 personnes recherchant quelqu’un pour le développement
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

@@ -34,7 +34,13 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    En 2018 et 2019, je présente en conférence un talk « votre mission ?
+    Découvrir Haskell et le mettre en prod » en m’appuyant sur l’exemple
+    Fairvioo.
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

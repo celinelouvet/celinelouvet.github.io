@@ -15,7 +15,15 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>En quoi consiste l’idée ?</Text>
+    <Text>
+      Fairvioo est un outil de récolte des avis des consommateurs, comme Avis
+      Vérifiés, et bien d’autres.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

@@ -29,13 +29,20 @@ export const content = (
         <Text>des start‑ups échouent</Text>
       </StackItem>
       <StackItem>
-        <Text as="em">Dynamic Mag (pas de source)</Text>
+        <Text as="em">Dynamique Mag (pas de source)</Text>
       </StackItem>
     </Stack>
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Dynamique Mag annonce un taux entre 80% d’échecs. Pareil, aucune source ne
+      vient l’expliquer.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

@@ -1,4 +1,4 @@
-import { Center } from '@chakra-ui/react';
+import { Center, Text } from '@chakra-ui/react';
 
 import {
   InternalLink,
@@ -25,7 +25,11 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>Penchons-nous sur les résultats du sondage.</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;
