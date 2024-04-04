@@ -1,4 +1,4 @@
-import { Stack, StackItem } from '@chakra-ui/react';
+import { Stack, StackItem, Text } from '@chakra-ui/react';
 
 import {
   SlideContent,
@@ -32,7 +32,15 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>En fait, ce n’est pas du tout OK.</Text>
+    <Text>
+      Car en faisant ça, la répartition est inégale et ils sont majoritaires.
+    </Text>
+    <Text>Je n’avais du poids que si les 2 autres l’acceptaient.</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

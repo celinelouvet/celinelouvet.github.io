@@ -16,16 +16,32 @@ export const content = (
       <Box>
         <Icon as={FaFlag} boxSize="4em" color="brand.500" />
       </Box>
-      <Box flex="1" color="brand.300" fontSize="1.25em" textAlign="center">
-        <Text>Une répartition inégale amènera</Text>
-        <Text>pratiquement toujours un rapport</Text>
-        <Text>de force inégal.</Text>
-      </Box>
+      <Flex
+        flex="1"
+        color="brand.300"
+        fontSize="1.25em"
+        lineHeight="2em"
+        textAlign="center"
+      >
+        <Text>
+          Une répartition inégale amènera pratiquement toujours un rapport de
+          force inégal.
+        </Text>
+      </Flex>
     </Flex>
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>En y repensant, je suis persuadée que</Text>
+    <Text>
+      Une répartition inégale amènera pratiquement toujours un rapport de force
+      inégal.
+    </Text>
+    <Text>Pensez-y en vous associant.</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

@@ -21,7 +21,14 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Je signe donc une lettre d’intention pour avoir les 20% par vesting, par
+      attribution progressive.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

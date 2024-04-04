@@ -1,4 +1,4 @@
-import { Stack, StackItem } from '@chakra-ui/react';
+import { Stack, StackItem, Text } from '@chakra-ui/react';
 
 import {
   SlideContent,
@@ -26,7 +26,11 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>Ça me parait OK, car ils apportent l’idée.</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

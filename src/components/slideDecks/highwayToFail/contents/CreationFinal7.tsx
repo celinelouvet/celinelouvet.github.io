@@ -31,7 +31,18 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      C’est une lettre d’intention, pas un pacte d’associés. Ça n’a aucune
+      valeur administrativement, voire juridiquement.
+    </Text>
+    <Text>
+      Fun fact: si vous regardez sur Pappers la déclaration de Fairvioo, vous ne
+      verrez mon nom nulle part.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;
