@@ -1,4 +1,4 @@
-import { ListItem, UnorderedList } from '@chakra-ui/react';
+import { ListItem, Text, UnorderedList } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -18,7 +18,18 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Pour le MVP, c’est plus compliqué. C’est difficile de prévoir un contenu
+      plus réduit que le dépot d’avis et la liste des avis.
+    </Text>
+    <Text>
+      Comme on veut toucher les TPE et PME, le plus simple est de s’intégrer
+      directement à leur site, via un plugin.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

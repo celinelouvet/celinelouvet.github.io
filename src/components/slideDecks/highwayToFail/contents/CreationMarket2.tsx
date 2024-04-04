@@ -1,4 +1,4 @@
-import { Center } from '@chakra-ui/react';
+import { Center, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -17,7 +17,14 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Fairvioo est positionné ici, aux cotés d’Avis vérifiés et Trustpilot, qui
+      sont assez connus.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

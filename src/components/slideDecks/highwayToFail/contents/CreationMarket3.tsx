@@ -36,7 +36,12 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    Comme on l’a vu, les concurrents sont nombreux et certains sont en place
+    depuis une dizaine d’années.
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;
