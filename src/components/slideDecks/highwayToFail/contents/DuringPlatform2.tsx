@@ -2,7 +2,7 @@ import { Center } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { Platform2, VerticalTimelineDuring } from '../components';
+import { Platform1, VerticalTimelineDuring } from '../components';
 
 export const content = (
   <SlideContent
@@ -12,12 +12,12 @@ export const content = (
     column1={<VerticalTimelineDuring />}
   >
     <Center width="100%" height="100%">
-      <Platform2 />
+      <Platform1 />
     </Center>
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = <SlideNote>Je prévois donc une API</SlideNote>;
 
 const slide = { content, note };
 export default slide;

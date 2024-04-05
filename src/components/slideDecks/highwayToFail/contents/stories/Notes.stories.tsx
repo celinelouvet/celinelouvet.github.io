@@ -91,6 +91,7 @@ import DuringPlatform1Slide from '../DuringPlatform1';
 import DuringPlatform2Slide from '../DuringPlatform2';
 import DuringPlatform3Slide from '../DuringPlatform3';
 import DuringPlatform4Slide from '../DuringPlatform4';
+import DuringPlatform5Slide from '../DuringPlatform5';
 import DuringSectionTitleSlide from '../DuringSectionTitle';
 import DuringSite1Slide from '../DuringSite1';
 import DuringSite2Slide from '../DuringSite2';
@@ -814,6 +815,13 @@ export const DuringPlatform4: Story = {
   args: {
     forNotes: true,
     slides: [DuringPlatform4Slide],
+  },
+};
+
+export const DuringPlatform5: Story = {
+  args: {
+    forNotes: true,
+    slides: [DuringPlatform5Slide],
   },
 };
 

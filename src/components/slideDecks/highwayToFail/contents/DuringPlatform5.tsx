@@ -1,6 +1,8 @@
+import { Center, Text } from '@chakra-ui/react';
+
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { VerticalTimelineDuring } from '../components';
+import { Platform4, VerticalTimelineDuring } from '../components';
 
 export const content = (
   <SlideContent
@@ -8,13 +10,19 @@ export const content = (
     title="Le produit"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
-  ></SlideContent>
+  >
+    <Center width="100%" height="100%">
+      <Platform4 />
+    </Center>
+  </SlideContent>
 );
 
 const note = (
   <SlideNote>
-    Maintenant qu’on a un site vitrine, je peux me concentrer sur le produit
-    principal.
+    <Text>
+      Et enfin, l’API sert aussi les plugins des plateformes d’e-commerce, comme
+      prestashop ou shopify.
+    </Text>
   </SlideNote>
 );
 
