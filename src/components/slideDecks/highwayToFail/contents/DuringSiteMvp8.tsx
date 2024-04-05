@@ -1,48 +1,29 @@
-import {
-  Flex,
-  Icon,
-  ListItem,
-  Stack,
-  StackItem,
-  Text,
-  UnorderedList,
-} from '@chakra-ui/react';
-import { BsArrowReturnRight } from 'react-icons/bs';
+import { Box, Center, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { VerticalTimelineDuring } from '../components';
+import { Pareto2, VerticalTimelineDuring } from '../components';
 
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="Si je devais le refaire ?"
+    title="Le principe de Pareto (80 — 20)"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
   >
-    <Stack>
-      <StackItem>
-        <Text as="span">Utiliser un outil no code / low code</Text>
-        <Flex alignItems="center" gap="0.5em" marginLeft="1em">
-          <Icon as={BsArrowReturnRight} />
-          <Text as="span">
-            Permettre aux autres de faire les modifications fines
-          </Text>
-        </Flex>
-      </StackItem>
-      <StackItem>
-        <UnorderedList paddingLeft="1em">
-          <ListItem>Webflow,</ListItem>
-          <ListItem>Bubble,</ListItem>
-          <ListItem>Strapi,</ListItem>
-          <ListItem>etc.</ListItem>
-        </UnorderedList>
-      </StackItem>
-    </Stack>
+    <Center width="100%" height="100%">
+      <Box height="100%">
+        <Pareto2 />
+      </Box>
+    </Center>
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>Et la zone 2 correspond, elle, à ces 20% restants.</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

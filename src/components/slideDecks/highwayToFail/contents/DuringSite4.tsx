@@ -1,4 +1,4 @@
-import { ListItem, UnorderedList } from '@chakra-ui/react';
+import { ListItem, Text, UnorderedList } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -21,7 +21,16 @@ export const content = (
   ></SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>Je démarre donc.</Text>
+    <Text>J’ai une stack avec VueJs déjà disponible, donc je m’en sers.</Text>
+    <Text>
+      Je vais héberger tout ça sur du Firebase et utiliser CircleCI pour le
+      build.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

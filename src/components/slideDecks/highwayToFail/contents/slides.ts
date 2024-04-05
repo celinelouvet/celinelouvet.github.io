@@ -1,6 +1,6 @@
 'use client';
 
-import Abstract from './Abstract';
+// import Abstract from './Abstract';
 import AfterSectionTitle from './AfterSectionTitle';
 import BeforeCC1 from './BeforeCC1';
 import BeforeCC2 from './BeforeCC2';
@@ -51,6 +51,7 @@ import CreationTimeline4 from './CreationTimeline4';
 import DuringDauphine1 from './DuringDauphine1';
 import DuringDauphine2 from './DuringDauphine2';
 import DuringDauphine3 from './DuringDauphine3';
+import DuringDauphine4 from './DuringDauphine4';
 import DuringEssec1 from './DuringEssec1';
 import DuringEssec2 from './DuringEssec2';
 import DuringEssec3 from './DuringEssec3';
@@ -98,6 +99,7 @@ import DuringSite5 from './DuringSite5';
 import DuringSite6 from './DuringSite6';
 import DuringSite7 from './DuringSite7';
 import DuringSiteMvp1 from './DuringSiteMvp1';
+import DuringSiteMvp10 from './DuringSiteMvp10';
 import DuringSiteMvp2 from './DuringSiteMvp2';
 import DuringSiteMvp3 from './DuringSiteMvp3';
 import DuringSiteMvp4 from './DuringSiteMvp4';
@@ -105,6 +107,7 @@ import DuringSiteMvp5 from './DuringSiteMvp5';
 import DuringSiteMvp6 from './DuringSiteMvp6';
 import DuringSiteMvp7 from './DuringSiteMvp7';
 import DuringSiteMvp8 from './DuringSiteMvp8';
+import DuringSiteMvp9 from './DuringSiteMvp9';
 import DuringStack1 from './DuringStack1';
 import DuringStack2 from './DuringStack2';
 import DuringStack3 from './DuringStack3';
@@ -113,6 +116,7 @@ import DuringStack5 from './DuringStack5';
 import DuringWhere1 from './DuringWhere1';
 import DuringWhere2 from './DuringWhere2';
 import DuringWhere3 from './DuringWhere3';
+import DuringWhere4 from './DuringWhere4';
 import EndTitle from './EndTitle';
 import Fairvioo1 from './Fairvioo1';
 import Fairvioo2 from './Fairvioo2';
@@ -128,7 +132,7 @@ import Preface1 from './Preface1';
 import Preface2 from './Preface2';
 import Preface3 from './Preface3';
 import Preface4 from './Preface4';
-import PromotionLyonCraft from './PromotionLyonCraft';
+// import PromotionLyonCraft from './PromotionLyonCraft';
 import SurveyQR from './SurveyQR';
 import SurveyResult from './SurveyResult';
 import Timeline from './Timeline';
@@ -217,6 +221,7 @@ export const getSlides = () => {
     DuringWhere1,
     DuringWhere2,
     DuringWhere3,
+    DuringWhere4,
 
     DuringEssec1,
     DuringEssec2,
@@ -225,6 +230,7 @@ export const getSlides = () => {
     DuringDauphine1,
     DuringDauphine2,
     DuringDauphine3,
+    DuringDauphine4,
 
     DuringSite1,
     DuringSite2,
@@ -242,6 +248,8 @@ export const getSlides = () => {
     DuringSiteMvp6,
     DuringSiteMvp7,
     DuringSiteMvp8,
+    DuringSiteMvp9,
+    DuringSiteMvp10,
 
     DuringPlatform1,
     DuringPlatform2,
@@ -292,7 +300,7 @@ export const getSlides = () => {
 
     EndTitle,
 
-    PromotionLyonCraft,
-    Abstract,
+    // PromotionLyonCraft,
+    // Abstract,
   ];
 };

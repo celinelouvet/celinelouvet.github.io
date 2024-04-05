@@ -40,7 +40,12 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>Il va donc être vital de se démarquer rapidement</Text>
+    <Text>Et de réfléchir au contenu du MVP</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

@@ -1,6 +1,11 @@
 import { Stack, StackItem, Text } from '@chakra-ui/react';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+  ThumbsDown,
+} from '@/components/core';
 
 import { VerticalTimelineDuring } from '../components';
 
@@ -15,6 +20,12 @@ export const content = (
       <StackItem>
         <Text>Canapé & espace de coworking</Text>
       </StackItem>
+      <StackItem>
+        <ThumbsDown variant="slide">Passer son temps chez quelqu’un</ThumbsDown>
+      </StackItem>
+      <StackItem>
+        <ThumbsDown variant="slide">Les coworkings coûtent cher</ThumbsDown>
+      </StackItem>
     </Stack>
   </SlideContent>
 );
@@ -22,8 +33,8 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>
-      On va donc commencer par un canapé chez l’un d’eux et on ira parfois en
-      espace de coworking, quand ce canapé ne sera pas accessible.
+      Malheureusement les espaces de coworking coûtent cher, donc ça sera
+      ponctuel.
     </Text>
   </SlideNote>
 );

@@ -1,4 +1,10 @@
-import { ListItem, Stack, StackItem, UnorderedList } from '@chakra-ui/react';
+import {
+  ListItem,
+  Stack,
+  StackItem,
+  Text,
+  UnorderedList,
+} from '@chakra-ui/react';
 
 import {
   SlideContent,
@@ -41,7 +47,18 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>Et là, gros piège.</Text>
+    <Text>
+      En effet, il faut avoir des connaissances en dev pour faire la moindre
+      modification dessus.
+    </Text>
+    <Text>
+      Corriger une typo, changer une couleur, ajouter un bouton, bref.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

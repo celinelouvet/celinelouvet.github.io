@@ -3,43 +3,39 @@ import { FaFlag } from 'react-icons/fa';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { VerticalTimelineCreation } from '../components';
+import { VerticalTimelineDuring } from '../components';
 
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="La répartition des parts"
+    title="Incubateurs"
     alignContent="flex-start"
-    column1={<VerticalTimelineCreation />}
+    column1={<VerticalTimelineDuring />}
   >
     <Flex height="100%" alignItems="center" gap="3em">
       <Box>
         <Icon as={FaFlag} boxSize="4em" color="brand.500" />
       </Box>
-      <Flex
+      <Box
         flex="1"
         color="brand.300"
         fontSize="1.25em"
         lineHeight="2em"
         textAlign="center"
       >
-        <Text>
-          Une répartition inégale amènera pratiquement toujours un rapport de
-          force inégal.
-        </Text>
-      </Flex>
+        <Text>L’aide apportée n’est pas anodine.</Text>
+      </Box>
     </Flex>
   </SlideContent>
 );
 
 const note = (
   <SlideNote>
-    <Text>En y repensant, je suis persuadée que</Text>
     <Text>
-      Une répartition inégale amènera pratiquement toujours un rapport de force
-      inégal.
+      C’est pas nouveau, mais si l’établissement où vous avez fait votre
+      formation a un incubateur, renseignez-vous ! L’aide apportée n’est pas
+      anodine.
     </Text>
-    <Text>Pensez-y en vous associant.</Text>
   </SlideNote>
 );
 

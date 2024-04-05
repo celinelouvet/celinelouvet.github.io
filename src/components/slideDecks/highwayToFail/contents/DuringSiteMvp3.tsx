@@ -1,4 +1,10 @@
-import { ListItem, UnorderedList } from '@chakra-ui/react';
+import {
+  ListItem,
+  Stack,
+  StackItem,
+  Text,
+  UnorderedList,
+} from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -6,30 +12,33 @@ import { VerticalTimelineDuring } from '../components';
 
 export const content = (
   <SlideContent
-    type={SlideContentTypes.titleWithThin2Columns}
+    type={SlideContentTypes.titleWithThinColumn}
     title="Première perte de temps"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
-    column2={
-      <UnorderedList paddingLeft="1em">
-        <ListItem>Google analytics,</ListItem>
-        <ListItem>du SEO,</ListItem>
-        <ListItem>du Prerendering,</ListItem>
-        <ListItem>des évènements Facebook,</ListItem>
-        <ListItem>des évènements LinkedIn,</ListItem>
-        <ListItem>des évènements Segment,</ListItem>
-      </UnorderedList>
-    }
   >
-    <UnorderedList paddingLeft="1em">
-      <ListItem>Zapier pour le formulaire de contact,</ListItem>
-      <ListItem>Prefinery (gestion de referrals),</ListItem>
-      <ListItem>Drift (chats).</ListItem>
-    </UnorderedList>
+    <Stack gap="1em">
+      <StackItem>
+        <Text>Version simplifiée ne suffira pas</Text>
+      </StackItem>
+      <StackItem>
+        <UnorderedList paddingLeft="1em">
+          <ListItem>CSS plus poussé,</ListItem>
+          <ListItem>Ajout progressif de fonctionnalités.</ListItem>
+        </UnorderedList>
+      </StackItem>
+    </Stack>
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Je vais donc investir plus de temps pour pousser le CSS et ajouter des
+      fonctionnalités qui sont progressivement demandées.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

@@ -34,12 +34,17 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>Ça sera un changement très apprécié.</Text>
-    <Text>Pouvoir discuter avec d’autres gens fait du bien.</Text>
-    <Text>On a bénéficié de l’accès à des experts sur divers sujets.</Text>
     <Text>
-      Par contre, les locaux sont dans la FAC de Dauphine. Me voici donc de
-      retour au milieu des étudiants à 38 ans. Je me suis sentie vieille 👵🏻
+      On va pouvoir s’installer à partir d’avril 2018 à la FAC de Dauphine.
+    </Text>
+    <Text>Ça sera un changement très apprécié.</Text>
+    <Text>
+      On quitte le canapé et on va pouvoir discuter avec d’autres gens.
+    </Text>
+    <Text>On bénéficie aussi de l’accès à divers experts.</Text>
+    <Text>
+      Les locaux sont dans la FAC de Dauphine. Me voici donc de retour au milieu
+      des étudiants à 38 ans. Je me suis sentie vieille 👵🏻
     </Text>
     <Text>
       Et on a pu profiter du resto U au tarif étudiant. Ce n’est pas rien en

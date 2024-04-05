@@ -1,8 +1,8 @@
-import { Box, Center } from '@chakra-ui/react';
+import { Box, Center, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { Pareto2, VerticalTimelineDuring } from '../components';
+import { Pareto1, VerticalTimelineDuring } from '../components';
 
 export const content = (
   <SlideContent
@@ -13,13 +13,18 @@ export const content = (
   >
     <Center width="100%" height="100%">
       <Box height="100%">
-        <Pareto2 />
+        <Pareto1 />
       </Box>
     </Center>
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>Ce qui donne ça.</Text>
+    <Text>Ici, la zone 1 correspond à ces 80% faciles à atteindre</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

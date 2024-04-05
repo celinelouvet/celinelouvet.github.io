@@ -1,4 +1,4 @@
-import { Box, Center } from '@chakra-ui/react';
+import { Box, Center, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -19,7 +19,13 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>Ils vont me proposer la répartition suivante</Text>
+    <Text>Chacun d’eux me cède 10% de ses parts</Text>
+    <Text>Ce qui m’amène à 20% et eux à 40%.</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

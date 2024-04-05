@@ -16,15 +16,27 @@ export const content = (
       <Box>
         <Icon as={FaFlag} boxSize="4em" color="brand.500" />
       </Box>
-      <Box flex="1" color="brand.300" fontSize="1.25em" textAlign="center">
-        <Text>Renseignez-vous de votre côté </Text>
-        <Text>sur la procédure.</Text>
+      <Box
+        flex="1"
+        color="brand.300"
+        fontSize="1.25em"
+        lineHeight="2em"
+        textAlign="center"
+      >
+        <Text>Renseignez-vous de votre côté sur la procédure.</Text>
       </Box>
     </Flex>
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Donc un conseil important, renseignez-vous de votre côté sur la procédure.
+    </Text>
+    <Text>Peut-être que c’est le moment de faire intervenir un avocat ?</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

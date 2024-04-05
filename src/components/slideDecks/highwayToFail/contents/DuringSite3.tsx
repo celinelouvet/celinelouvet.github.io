@@ -19,7 +19,19 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Pour avancer vite, je vais suggérer de faire une version simplifiée qu’on
+      enrichira ensuite.
+    </Text>
+    <Text>
+      Donc je prévois un design allégé et le formulaire de contact est remplacé
+      par un email pré-rempli.
+    </Text>
+    <Text>Ils sont d’accord.</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

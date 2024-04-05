@@ -1,5 +1,3 @@
-import { Stack, StackItem, Text } from '@chakra-ui/react';
-
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
 import { VerticalTimelineDuring } from '../components';
@@ -10,16 +8,15 @@ export const content = (
     title="Où ça se passe ?"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
-  >
-    <Stack width="100%" gap="1em">
-      <StackItem>
-        <Text>Canapé & espace de coworking</Text>
-      </StackItem>
-    </Stack>
-  </SlideContent>
+  ></SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    Il y a une question qui arrive assez vite quand on se lance, c’est comment
+    on s’organise et où on s’installe.
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

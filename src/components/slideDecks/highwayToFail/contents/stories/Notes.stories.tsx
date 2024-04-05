@@ -52,6 +52,7 @@ import CreationTimeline4Slide from '../CreationTimeline4';
 import DuringDauphine1Slide from '../DuringDauphine1';
 import DuringDauphine2Slide from '../DuringDauphine2';
 import DuringDauphine3Slide from '../DuringDauphine3';
+import DuringDauphine4Slide from '../DuringDauphine4';
 import DuringEssec1Slide from '../DuringEssec1';
 import DuringEssec2Slide from '../DuringEssec2';
 import DuringEssec3Slide from '../DuringEssec3';
@@ -99,6 +100,7 @@ import DuringSite5Slide from '../DuringSite5';
 import DuringSite6Slide from '../DuringSite6';
 import DuringSite7Slide from '../DuringSite7';
 import DuringSiteMvp1Slide from '../DuringSiteMvp1';
+import DuringSiteMvp10Slide from '../DuringSiteMvp10';
 import DuringSiteMvp2Slide from '../DuringSiteMvp2';
 import DuringSiteMvp3Slide from '../DuringSiteMvp3';
 import DuringSiteMvp4Slide from '../DuringSiteMvp4';
@@ -106,6 +108,7 @@ import DuringSiteMvp5Slide from '../DuringSiteMvp5';
 import DuringSiteMvp6Slide from '../DuringSiteMvp6';
 import DuringSiteMvp7Slide from '../DuringSiteMvp7';
 import DuringSiteMvp8Slide from '../DuringSiteMvp8';
+import DuringSiteMvp9Slide from '../DuringSiteMvp9';
 import DuringStack1Slide from '../DuringStack1';
 import DuringStack2Slide from '../DuringStack2';
 import DuringStack3Slide from '../DuringStack3';
@@ -114,6 +117,7 @@ import DuringStack5Slide from '../DuringStack5';
 import DuringWhere1Slide from '../DuringWhere1';
 import DuringWhere2Slide from '../DuringWhere2';
 import DuringWhere3Slide from '../DuringWhere3';
+import DuringWhere4Slide from '../DuringWhere4';
 import EndTitleSlide from '../EndTitle';
 import Fairvioo1Slide from '../Fairvioo1';
 import Fairvioo2Slide from '../Fairvioo2';
@@ -610,6 +614,13 @@ export const DuringWhere3: Story = {
   },
 };
 
+export const DuringWhere4: Story = {
+  args: {
+    forNotes: true,
+    slides: [DuringWhere4Slide],
+  },
+};
+
 export const DuringEssec1: Story = {
   args: {
     forNotes: true,
@@ -649,6 +660,13 @@ export const DuringDauphine3: Story = {
   args: {
     forNotes: true,
     slides: [DuringDauphine3Slide],
+  },
+};
+
+export const DuringDauphine4: Story = {
+  args: {
+    forNotes: true,
+    slides: [DuringDauphine4Slide],
   },
 };
 
@@ -754,6 +772,20 @@ export const DuringSiteMvp8: Story = {
   args: {
     forNotes: true,
     slides: [DuringSiteMvp8Slide],
+  },
+};
+
+export const DuringSiteMvp9: Story = {
+  args: {
+    forNotes: true,
+    slides: [DuringSiteMvp9Slide],
+  },
+};
+
+export const DuringSiteMvp10: Story = {
+  args: {
+    forNotes: true,
+    slides: [DuringSiteMvp10Slide],
   },
 };
 

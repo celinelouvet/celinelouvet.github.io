@@ -13,7 +13,7 @@ export const content = (
     column1={<VerticalTimelineCreation />}
   >
     <Stack spacing="1em">
-      <Text>Clients de type PME</Text>
+      <Text>Clients de type TPE et PME</Text>
 
       <Stack spacing="0.5em">
         <Text as="span">Motivation éthique: 1 avis = 1 micro-don</Text>
@@ -27,7 +27,16 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>Pour se démarquer, Fairvioo vise les TPE et les PME</Text>
+    <Text>Et c’est aussi l’intéret de la motivation éthique.</Text>
+    <Text>
+      Petit bonus: les dons aux associations sont déductibles des impots sur le
+      chiffre d’affaire.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

@@ -24,7 +24,14 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Ce qui a permi de nous inscrire pour bénéficier de l’accompagnement de
+      l’incubateur.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;
