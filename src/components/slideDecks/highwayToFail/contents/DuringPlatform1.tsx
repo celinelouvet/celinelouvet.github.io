@@ -1,8 +1,6 @@
-import { Center } from '@chakra-ui/react';
-
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { Platform1, VerticalTimelineDuring } from '../components';
+import { VerticalTimelineDuring } from '../components';
 
 export const content = (
   <SlideContent
@@ -10,14 +8,15 @@ export const content = (
     title="Le produit"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
-  >
-    <Center width="100%" height="100%">
-      <Platform1 />
-    </Center>
-  </SlideContent>
+  ></SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    Maintenant qu’on a un site vitrine, je peux me concentrer sur le produit
+    principal.
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

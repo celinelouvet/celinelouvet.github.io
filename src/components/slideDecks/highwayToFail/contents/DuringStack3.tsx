@@ -1,4 +1,4 @@
-import { Box, Center } from '@chakra-ui/react';
+import { Box, Center, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -19,7 +19,15 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>Les front-ends sont réalisés en VueJs.</Text>
+    <Text>
+      La différence entre l’admin et l’accès publique se fait via un rôle
+      d’admin.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

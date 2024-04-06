@@ -1,6 +1,6 @@
 'use client';
 
-// import Abstract from './Abstract';
+import Abstract from './Abstract';
 import AfterSectionTitle from './AfterSectionTitle';
 import BeforeCC1 from './BeforeCC1';
 import BeforeCC2 from './BeforeCC2';
@@ -55,21 +55,21 @@ import DuringDauphine4 from './DuringDauphine4';
 import DuringEssec1 from './DuringEssec1';
 import DuringEssec2 from './DuringEssec2';
 import DuringEssec3 from './DuringEssec3';
-// import DuringHaskell1 from './DuringHaskell1';
-// import DuringHaskell10 from './DuringHaskell10';
-// import DuringHaskell11 from './DuringHaskell11';
-// import DuringHaskell12 from './DuringHaskell12';
-// import DuringHaskell13 from './DuringHaskell13';
-// import DuringHaskell14 from './DuringHaskell14';
-// import DuringHaskell15 from './DuringHaskell15';
-// import DuringHaskell2 from './DuringHaskell2';
-// import DuringHaskell3 from './DuringHaskell3';
-// import DuringHaskell4 from './DuringHaskell4';
-// import DuringHaskell5 from './DuringHaskell5';
-// import DuringHaskell6 from './DuringHaskell6';
-// import DuringHaskell7 from './DuringHaskell7';
-// import DuringHaskell8 from './DuringHaskell8';
-// import DuringHaskell9 from './DuringHaskell9';
+import DuringHaskell1 from './DuringHaskell1';
+import DuringHaskell10 from './DuringHaskell10';
+import DuringHaskell11 from './DuringHaskell11';
+import DuringHaskell12 from './DuringHaskell12';
+import DuringHaskell13 from './DuringHaskell13';
+import DuringHaskell14 from './DuringHaskell14';
+import DuringHaskell15 from './DuringHaskell15';
+import DuringHaskell2 from './DuringHaskell2';
+import DuringHaskell3 from './DuringHaskell3';
+import DuringHaskell4 from './DuringHaskell4';
+import DuringHaskell5 from './DuringHaskell5';
+import DuringHaskell6 from './DuringHaskell6';
+import DuringHaskell7 from './DuringHaskell7';
+import DuringHaskell8 from './DuringHaskell8';
+import DuringHaskell9 from './DuringHaskell9';
 import DuringHaskellChoice1 from './DuringHaskellChoice1';
 import DuringHaskellChoice10 from './DuringHaskellChoice10';
 import DuringHaskellChoice11 from './DuringHaskellChoice11';
@@ -86,10 +86,12 @@ import DuringLearnHaskell2 from './DuringLearnHaskell2';
 import DuringLearnHaskell3 from './DuringLearnHaskell3';
 import DuringLearnHaskell4 from './DuringLearnHaskell4';
 import DuringLearnHaskell5 from './DuringLearnHaskell5';
+import DuringLearnHaskell6 from './DuringLearnHaskell6';
 import DuringPlatform1 from './DuringPlatform1';
 import DuringPlatform2 from './DuringPlatform2';
 import DuringPlatform3 from './DuringPlatform3';
 import DuringPlatform4 from './DuringPlatform4';
+import DuringPlatform5 from './DuringPlatform5';
 import DuringSectionTitle from './DuringSectionTitle';
 import DuringSite1 from './DuringSite1';
 import DuringSite2 from './DuringSite2';
@@ -122,6 +124,7 @@ import Fairvioo1 from './Fairvioo1';
 import Fairvioo2 from './Fairvioo2';
 import Fairvioo3 from './Fairvioo3';
 import Fairvioo4 from './Fairvioo4';
+import FeedbacksQR from './FeedbacksQR';
 import Introduction from './Introduction';
 import MainTitle from './MainTitle';
 import Numbers1 from './Numbers1';
@@ -132,7 +135,7 @@ import Preface1 from './Preface1';
 import Preface2 from './Preface2';
 import Preface3 from './Preface3';
 import Preface4 from './Preface4';
-// import PromotionLyonCraft from './PromotionLyonCraft';
+import PromotionLyonCraft from './PromotionLyonCraft';
 import SurveyQR from './SurveyQR';
 import SurveyResult from './SurveyResult';
 import Timeline from './Timeline';
@@ -255,6 +258,7 @@ export const getSlides = () => {
     DuringPlatform2,
     DuringPlatform3,
     DuringPlatform4,
+    DuringPlatform5,
 
     DuringStack1,
     DuringStack2,
@@ -274,33 +278,36 @@ export const getSlides = () => {
     DuringHaskellChoice10,
     DuringHaskellChoice11,
 
-    // DuringHaskell1,
-    // DuringHaskell2,
-    // DuringHaskell3,
-    // DuringHaskell4,
-    // DuringHaskell5,
-    // DuringHaskell6,
-    // DuringHaskell7,
-    // DuringHaskell8,
-    // DuringHaskell9,
-    // DuringHaskell10,
-    // DuringHaskell11,
-    // DuringHaskell12,
-    // DuringHaskell13,
-    // DuringHaskell14,
-    // DuringHaskell15,
-
     DuringLearnHaskell1,
     DuringLearnHaskell2,
     DuringLearnHaskell3,
     DuringLearnHaskell4,
     DuringLearnHaskell5,
+    DuringLearnHaskell6,
 
     AfterSectionTitle,
 
+    FeedbacksQR,
+
     EndTitle,
 
-    // PromotionLyonCraft,
-    // Abstract,
+    DuringHaskell1,
+    DuringHaskell2,
+    DuringHaskell3,
+    DuringHaskell4,
+    DuringHaskell5,
+    DuringHaskell6,
+    DuringHaskell7,
+    DuringHaskell8,
+    DuringHaskell9,
+    DuringHaskell10,
+    DuringHaskell11,
+    DuringHaskell12,
+    DuringHaskell13,
+    DuringHaskell14,
+    DuringHaskell15,
+
+    PromotionLyonCraft,
+    Abstract,
   ];
 };

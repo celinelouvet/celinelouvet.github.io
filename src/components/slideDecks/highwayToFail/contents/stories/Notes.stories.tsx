@@ -87,10 +87,12 @@ import DuringLearnHaskell2Slide from '../DuringLearnHaskell2';
 import DuringLearnHaskell3Slide from '../DuringLearnHaskell3';
 import DuringLearnHaskell4Slide from '../DuringLearnHaskell4';
 import DuringLearnHaskell5Slide from '../DuringLearnHaskell5';
+import DuringLearnHaskell6Slide from '../DuringLearnHaskell6';
 import DuringPlatform1Slide from '../DuringPlatform1';
 import DuringPlatform2Slide from '../DuringPlatform2';
 import DuringPlatform3Slide from '../DuringPlatform3';
 import DuringPlatform4Slide from '../DuringPlatform4';
+import DuringPlatform5Slide from '../DuringPlatform5';
 import DuringSectionTitleSlide from '../DuringSectionTitle';
 import DuringSite1Slide from '../DuringSite1';
 import DuringSite2Slide from '../DuringSite2';
@@ -123,6 +125,7 @@ import Fairvioo1Slide from '../Fairvioo1';
 import Fairvioo2Slide from '../Fairvioo2';
 import Fairvioo3Slide from '../Fairvioo3';
 import Fairvioo4Slide from '../Fairvioo4';
+import FeedbacksQRSlide from '../FeedbacksQR';
 import IntroductionSlide from '../Introduction';
 import MainTitleSlide from '../MainTitle';
 import Numbers1Slide from '../Numbers1';
@@ -817,6 +820,13 @@ export const DuringPlatform4: Story = {
   },
 };
 
+export const DuringPlatform5: Story = {
+  args: {
+    forNotes: true,
+    slides: [DuringPlatform5Slide],
+  },
+};
+
 export const DuringStack1: Story = {
   args: {
     forNotes: true,
@@ -1069,10 +1079,24 @@ export const DuringLearnHaskell5: Story = {
   },
 };
 
+export const DuringLearnHaskell6: Story = {
+  args: {
+    forNotes: true,
+    slides: [DuringLearnHaskell6Slide],
+  },
+};
+
 export const AfterSectionTitle: Story = {
   args: {
     forNotes: true,
     slides: [AfterSectionTitleSlide],
+  },
+};
+
+export const FeedbacksQR: Story = {
+  args: {
+    forNotes: true,
+    slides: [FeedbacksQRSlide],
   },
 };
 

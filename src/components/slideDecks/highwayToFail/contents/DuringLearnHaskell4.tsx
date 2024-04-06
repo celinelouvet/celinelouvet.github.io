@@ -1,15 +1,8 @@
-import { Flex, Icon, Stack, Text } from '@chakra-ui/react';
-import { BsArrowReturnRight } from 'react-icons/bs';
+import { Box, Center, Text } from '@chakra-ui/react';
 
-import {
-  SlideContent,
-  SlideContentTypes,
-  SlideNote,
-  ThumbsDown,
-  ThumbsUp,
-} from '@/components/core';
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { VerticalTimelineDuring } from '../components';
+import { LearnHaskell, VerticalTimelineDuring } from '../components';
 
 export const content = (
   <SlideContent
@@ -18,20 +11,31 @@ export const content = (
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
   >
-    <Stack gap="1em">
-      <ThumbsDown variant="slide">Personne pour m’expliquer.</ThumbsDown>
-      <ThumbsUp variant="slide">
-        <Text>Découverte du Type Driven Development.</Text>
-        <Flex alignItems="center" gap="0.5em" marginLeft="1em">
-          <Icon as={BsArrowReturnRight} />
-          <Text as="span">Toujours utile.</Text>
-        </Flex>
-      </ThumbsUp>
-    </Stack>
+    <Center height="100%">
+      <Box height="100%">
+        <LearnHaskell />
+      </Box>
+    </Center>
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>En fait, ce que j’ai vécu, c’est exactement ça.</Text>
+    <Text>
+      Au début, tous les soirs, j’avais l’impression d’avoir tellement réfléchi
+      que mon cerveau allait imploser.
+    </Text>
+    <Text>
+      Puis j’ai compris les principes de base et j’ai pu avancer sérieusement.
+    </Text>
+    <Text>Puis après, bam les monades, nouveau mur à passer.</Text>
+    <Text>
+      Je pense que je me suis arrêtée avant de vraiment m’attaquer au mur
+      suivant…
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

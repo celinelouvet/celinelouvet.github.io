@@ -1,20 +1,18 @@
-import { Box, Center, Text } from '@chakra-ui/react';
+import { Center, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { Stack1, VerticalTimelineDuring } from '../components';
+import { Platform4, VerticalTimelineDuring } from '../components';
 
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="En détails"
+    title="Le produit"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
   >
-    <Center height="100%">
-      <Box height="100%">
-        <Stack1 />
-      </Box>
+    <Center width="100%" height="100%">
+      <Platform4 />
     </Center>
   </SlideContent>
 );
@@ -22,8 +20,8 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>
-      Pour avancer au plus court, je suis partie sur un monolithe, servant les
-      fichiers des front-ends.
+      Et enfin, l’API sert aussi les plugins des plateformes d’e-commerce, comme
+      prestashop ou shopify.
     </Text>
   </SlideNote>
 );

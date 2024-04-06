@@ -1,4 +1,4 @@
-import { Box, Center } from '@chakra-ui/react';
+import { Box, Center, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -19,7 +19,22 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Coté base de données, je pars du PostgreSQL, qui permet de faire beaucoup
+      de choses.
+    </Text>
+    <Text>
+      Mon idée est de me concentrer sur les fonctionnalités sans me préoccuper
+      de la scalabilité au début.
+    </Text>
+    <Text>
+      En effet, le besoin de scalabilité n’intervient que lorsqu’on on a réussi
+      à avoir beaucoup d’utilisateurs.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

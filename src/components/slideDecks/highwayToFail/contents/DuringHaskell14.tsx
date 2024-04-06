@@ -28,7 +28,11 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>À faire</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;
