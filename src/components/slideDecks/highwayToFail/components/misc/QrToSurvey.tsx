@@ -5,8 +5,8 @@ export const QrToSurvey: FC = () => (
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     xmlSpace="preserve"
-    width="792"
-    height="792"
+    width="100%"
+    height="100%"
     viewBox="0 0 792 792"
   >
     <g fill="#1f435a">
