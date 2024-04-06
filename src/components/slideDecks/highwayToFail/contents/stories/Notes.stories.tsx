@@ -82,6 +82,14 @@ import DuringHaskellChoice6Slide from '../DuringHaskellChoice6';
 import DuringHaskellChoice7Slide from '../DuringHaskellChoice7';
 import DuringHaskellChoice8Slide from '../DuringHaskellChoice8';
 import DuringHaskellChoice9Slide from '../DuringHaskellChoice9';
+import DuringHaskellConsequences1Slide from '../DuringHaskellConsequences1';
+import DuringHaskellConsequences2Slide from '../DuringHaskellConsequences2';
+import DuringHaskellConsequences3Slide from '../DuringHaskellConsequences3';
+import DuringHaskellConsequences4Slide from '../DuringHaskellConsequences4';
+import DuringHaskellConsequences5Slide from '../DuringHaskellConsequences5';
+import DuringHaskellConsequences6Slide from '../DuringHaskellConsequences6';
+import DuringHaskellConsequences7Slide from '../DuringHaskellConsequences7';
+import DuringHaskellConsequences8Slide from '../DuringHaskellConsequences8';
 import DuringLearnHaskell1Slide from '../DuringLearnHaskell1';
 import DuringLearnHaskell2Slide from '../DuringLearnHaskell2';
 import DuringLearnHaskell3Slide from '../DuringLearnHaskell3';
@@ -1083,6 +1091,62 @@ export const DuringLearnHaskell6: Story = {
   args: {
     forNotes: true,
     slides: [DuringLearnHaskell6Slide],
+  },
+};
+
+export const DuringHaskellConsequences1: Story = {
+  args: {
+    forNotes: true,
+    slides: [DuringHaskellConsequences1Slide],
+  },
+};
+
+export const DuringHaskellConsequences2: Story = {
+  args: {
+    forNotes: true,
+    slides: [DuringHaskellConsequences2Slide],
+  },
+};
+
+export const DuringHaskellConsequences3: Story = {
+  args: {
+    forNotes: true,
+    slides: [DuringHaskellConsequences3Slide],
+  },
+};
+
+export const DuringHaskellConsequences4: Story = {
+  args: {
+    forNotes: true,
+    slides: [DuringHaskellConsequences4Slide],
+  },
+};
+
+export const DuringHaskellConsequences5: Story = {
+  args: {
+    forNotes: true,
+    slides: [DuringHaskellConsequences5Slide],
+  },
+};
+
+export const DuringHaskellConsequences6: Story = {
+  args: {
+    forNotes: true,
+    slides: [DuringHaskellConsequences6Slide],
+  },
+};
+
+export const DuringHaskellConsequences7: Story = {
+  args: {
+    forNotes: true,
+    slides: [DuringHaskellConsequences7Slide],
+  },
+};
+
+export const DuringHaskellConsequences8: Story = {
+  args: {
+    forNotes: true,
+    slides: [DuringHaskellConsequences8Slide],
   },
 };
 
