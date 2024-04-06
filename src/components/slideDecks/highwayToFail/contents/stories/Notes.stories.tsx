@@ -124,6 +124,7 @@ import Fairvioo1Slide from '../Fairvioo1';
 import Fairvioo2Slide from '../Fairvioo2';
 import Fairvioo3Slide from '../Fairvioo3';
 import Fairvioo4Slide from '../Fairvioo4';
+import FeedbacksQRSlide from '../FeedbacksQR';
 import IntroductionSlide from '../Introduction';
 import MainTitleSlide from '../MainTitle';
 import Numbers1Slide from '../Numbers1';
@@ -1081,6 +1082,13 @@ export const AfterSectionTitle: Story = {
   args: {
     forNotes: true,
     slides: [AfterSectionTitleSlide],
+  },
+};
+
+export const FeedbacksQR: Story = {
+  args: {
+    forNotes: true,
+    slides: [FeedbacksQRSlide],
   },
 };
 
