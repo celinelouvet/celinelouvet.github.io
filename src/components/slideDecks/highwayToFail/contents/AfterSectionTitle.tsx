@@ -1,3 +1,5 @@
+import { Text } from '@chakra-ui/react';
+
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
 import { VerticalTimelineAfter } from '../components';
@@ -10,7 +12,11 @@ export const content = (
   />
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>Bonjour</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;
