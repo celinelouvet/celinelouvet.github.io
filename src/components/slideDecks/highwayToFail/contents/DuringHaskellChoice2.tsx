@@ -4,6 +4,12 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
 import { VerticalTimelineDuring } from '../components';
 
+const commonStyle = {
+  width: '4em',
+  marginBottom: '0',
+  paddingBottom: '0',
+};
+
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThin2Columns}
@@ -13,39 +19,49 @@ export const content = (
     column2={<Stack height="100%" justifyContent="center"></Stack>}
   >
     <Grid
-      templateColumns="1fr 1fr"
+      templateColumns="5em 5em"
       templateRows="repeat(1fr, 6)"
+      alignItems="center"
+      justifyItems="center"
+      columnGap="1em"
       textAlign="center"
     >
       <GridItem>
-        <Text as="span">NodeJs</Text>
+        <Text {...commonStyle}>NodeJs</Text>
       </GridItem>
       <GridItem></GridItem>
       <GridItem></GridItem>
       <GridItem>
-        <Text as="span">Ruby</Text>
+        <Text {...commonStyle}>Ruby</Text>
       </GridItem>
       <GridItem>
-        <Text as="span">PHP</Text>
-      </GridItem>
-      <GridItem></GridItem>
-      <GridItem></GridItem>
-      <GridItem>
-        <Text as="span">Scala</Text>
-      </GridItem>
-      <GridItem>
-        <Text as="span">Java</Text>
+        <Text {...commonStyle}>PHP</Text>
       </GridItem>
       <GridItem></GridItem>
       <GridItem></GridItem>
       <GridItem>
-        <Text as="span">Haskell</Text>
+        <Text {...commonStyle}>Scala</Text>
+      </GridItem>
+      <GridItem>
+        <Text {...commonStyle}>Java</Text>
+      </GridItem>
+      <GridItem></GridItem>
+      <GridItem></GridItem>
+      <GridItem>
+        <Text {...commonStyle}>Haskell</Text>
       </GridItem>
     </Grid>
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Je suis partie d’une liste de technos usuelles, Node, Ruby, PHP, Java,
+      Scala et Haskell
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

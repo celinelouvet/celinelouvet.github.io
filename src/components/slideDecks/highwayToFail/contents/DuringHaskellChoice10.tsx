@@ -17,7 +17,13 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Au même moment, Clever Cloud cherche à en promouvoir l’hébergement.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

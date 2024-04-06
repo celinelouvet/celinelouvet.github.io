@@ -4,6 +4,19 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
 import { VerticalTimelineDuring } from '../components';
 
+const strikethrough =
+  'linear-gradient(to left top, transparent 48%, currentColor 49.5%, currentColor 50.5%, transparent 52%)';
+
+const commonStyle = {
+  width: '4em',
+  marginBottom: '0',
+  paddingBottom: '0',
+};
+const strikedStyle = {
+  ...commonStyle,
+  background: strikethrough,
+};
+
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThin2Columns}
@@ -19,39 +32,46 @@ export const content = (
     }
   >
     <Grid
-      templateColumns="1fr 1fr"
+      templateColumns="5em 5em"
       templateRows="repeat(1fr, 6)"
+      alignItems="center"
+      justifyItems="center"
+      columnGap="1em"
       textAlign="center"
     >
       <GridItem>
-        <Text as="s"> NodeJs </Text>
+        <Text {...strikedStyle}>NodeJs</Text>
       </GridItem>
       <GridItem></GridItem>
       <GridItem></GridItem>
       <GridItem>
-        <Text as="s"> Ruby </Text>
+        <Text {...strikedStyle}>Ruby</Text>
       </GridItem>
       <GridItem>
-        <Text as="s"> PHP </Text>
-      </GridItem>
-      <GridItem></GridItem>
-      <GridItem></GridItem>
-      <GridItem>
-        <Text as="s"> Scala </Text>
-      </GridItem>
-      <GridItem>
-        <Text as="s"> Java </Text>
+        <Text {...strikedStyle}>PHP</Text>
       </GridItem>
       <GridItem></GridItem>
       <GridItem></GridItem>
       <GridItem>
-        <Text as="span">Haskell</Text>
+        <Text {...strikedStyle}>Scala</Text>
+      </GridItem>
+      <GridItem>
+        <Text {...strikedStyle}>Java</Text>
+      </GridItem>
+      <GridItem></GridItem>
+      <GridItem></GridItem>
+      <GridItem>
+        <Text {...commonStyle}>Haskell</Text>
       </GridItem>
     </Grid>
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>Or, j’avais déjà fait du scala.</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

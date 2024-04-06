@@ -23,7 +23,14 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>
+      Ce qui va me permettre de profiter de crédits gratuits pour toute la durée
+      du projet.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

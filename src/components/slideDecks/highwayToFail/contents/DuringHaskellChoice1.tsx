@@ -24,7 +24,12 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>Vous allez me dire, mais pourquoi Haskell ?</Text>
+    <Text>Lors de mon talk sur Haskell, j’avais expliqué le choix ainsi.</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;
