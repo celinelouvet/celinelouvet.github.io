@@ -88,6 +88,7 @@ import DuringLearnHaskell2Slide from '../DuringLearnHaskell2';
 import DuringLearnHaskell3Slide from '../DuringLearnHaskell3';
 import DuringLearnHaskell4Slide from '../DuringLearnHaskell4';
 import DuringLearnHaskell5Slide from '../DuringLearnHaskell5';
+import DuringLearnHaskell6Slide from '../DuringLearnHaskell6';
 import DuringPlatform1Slide from '../DuringPlatform1';
 import DuringPlatform2Slide from '../DuringPlatform2';
 import DuringPlatform3Slide from '../DuringPlatform3';
@@ -956,6 +957,12 @@ export const DuringLearnHaskell4: Story = {
 export const DuringLearnHaskell5: Story = {
   args: {
     slides: [DuringLearnHaskell5Slide],
+  },
+};
+
+export const DuringLearnHaskell6: Story = {
+  args: {
+    slides: [DuringLearnHaskell6Slide],
   },
 };
 

@@ -1,4 +1,4 @@
-import { Code, ListItem, Text, UnorderedList } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -12,24 +12,19 @@ export const content = (
     column1={<VerticalTimelineDuring />}
   >
     <Text>Apprentissage très douloureux.</Text>
-    <UnorderedList paddingLeft="1em">
-      <ListItem>
-        Syntaxe particulière (<Code variant="inlineSlide">{`->`}</Code>,{' '}
-        <Code variant="inlineSlide">{`<-`}</Code>,{' '}
-        <Code variant="inlineSlide">{`=>`}</Code>,{' '}
-        <Code variant="inlineSlide">{`>>=`}</Code>,{' '}
-        <Code variant="inlineSlide">{`<$>`}</Code>,{' '}
-        <Code variant="inlineSlide">{`:>`}</Code>,{' '}
-        <Code variant="inlineSlide">{`:<|>`}</Code>, etc.),
-      </ListItem>
-      <ListItem>Penser de manière fonctionnelle,</ListItem>
-      <ListItem>Pure / IO,</ListItem>
-      <ListItem>Documentation parfois complexe à comprendre.</ListItem>
-    </UnorderedList>
   </SlideContent>
 );
 
-const note = <SlideNote>Bonjour</SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>Difficilement...</Text>
+    <Text>
+      Je débarquais pleine d’assurance, en me disant que ce n’était qu’une
+      syntaxe différente.
+    </Text>
+    <Text>Que nenni !</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;
