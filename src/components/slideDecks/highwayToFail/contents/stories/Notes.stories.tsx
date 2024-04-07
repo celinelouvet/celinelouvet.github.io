@@ -2,6 +2,12 @@ import { type Meta, type StoryObj } from '@storybook/react';
 
 import { SlideDeck } from '@/components/core';
 
+import AfterEnd1Slide from '../AfterEnd1';
+import AfterEnd2Slide from '../AfterEnd2';
+import AfterEnd3Slide from '../AfterEnd3';
+import AfterEnd4Slide from '../AfterEnd4';
+import AfterEnd5Slide from '../AfterEnd5';
+import AfterEnd6Slide from '../AfterEnd6';
 import AfterSectionTitleSlide from '../AfterSectionTitle';
 import BeforeCC1Slide from '../BeforeCC1';
 import BeforeCC2Slide from '../BeforeCC2';
@@ -1226,6 +1232,48 @@ export const AfterSectionTitle: Story = {
   args: {
     forNotes: true,
     slides: [AfterSectionTitleSlide],
+  },
+};
+
+export const AfterEnd1: Story = {
+  args: {
+    forNotes: true,
+    slides: [AfterEnd1Slide],
+  },
+};
+
+export const AfterEnd2: Story = {
+  args: {
+    forNotes: true,
+    slides: [AfterEnd2Slide],
+  },
+};
+
+export const AfterEnd3: Story = {
+  args: {
+    forNotes: true,
+    slides: [AfterEnd3Slide],
+  },
+};
+
+export const AfterEnd4: Story = {
+  args: {
+    forNotes: true,
+    slides: [AfterEnd4Slide],
+  },
+};
+
+export const AfterEnd5: Story = {
+  args: {
+    forNotes: true,
+    slides: [AfterEnd5Slide],
+  },
+};
+
+export const AfterEnd6: Story = {
+  args: {
+    forNotes: true,
+    slides: [AfterEnd6Slide],
   },
 };
 

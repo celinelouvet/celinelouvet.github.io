@@ -14,7 +14,7 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>Bonjour</Text>
+    <Text>Ca marquera la fin de l’aventure.</Text>
   </SlideNote>
 );
 

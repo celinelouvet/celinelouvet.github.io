@@ -1,6 +1,12 @@
 'use client';
 
 import Abstract from './Abstract';
+import AfterEnd1 from './AfterEnd1';
+import AfterEnd2 from './AfterEnd2';
+import AfterEnd3 from './AfterEnd3';
+import AfterEnd4 from './AfterEnd4';
+import AfterEnd5 from './AfterEnd5';
+import AfterEnd6 from './AfterEnd6';
 import AfterSectionTitle from './AfterSectionTitle';
 import BeforeCC1 from './BeforeCC1';
 import BeforeCC2 from './BeforeCC2';
@@ -322,6 +328,13 @@ export const getSlides = () => {
     DuringSeed9,
 
     AfterSectionTitle,
+
+    AfterEnd1,
+    AfterEnd2,
+    AfterEnd3,
+    AfterEnd4,
+    AfterEnd5,
+    AfterEnd6,
 
     FeedbacksQR,
 

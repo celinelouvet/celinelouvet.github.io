@@ -3,6 +3,12 @@ import { type Meta, type StoryObj } from '@storybook/react';
 import { SlideDeck } from '@/components/core';
 
 import AbstractSlide from '../Abstract';
+import AfterEnd1Slide from '../AfterEnd1';
+import AfterEnd2Slide from '../AfterEnd2';
+import AfterEnd3Slide from '../AfterEnd3';
+import AfterEnd4Slide from '../AfterEnd4';
+import AfterEnd5Slide from '../AfterEnd5';
+import AfterEnd6Slide from '../AfterEnd6';
 import AfterSectionTitleSlide from '../AfterSectionTitle';
 import BeforeCC1Slide from '../BeforeCC1';
 import BeforeCC2Slide from '../BeforeCC2';
@@ -1087,6 +1093,42 @@ export const DuringSeed9: Story = {
 export const AfterSectionTitle: Story = {
   args: {
     slides: [AfterSectionTitleSlide],
+  },
+};
+
+export const AfterEnd1: Story = {
+  args: {
+    slides: [AfterEnd1Slide],
+  },
+};
+
+export const AfterEnd2: Story = {
+  args: {
+    slides: [AfterEnd2Slide],
+  },
+};
+
+export const AfterEnd3: Story = {
+  args: {
+    slides: [AfterEnd3Slide],
+  },
+};
+
+export const AfterEnd4: Story = {
+  args: {
+    slides: [AfterEnd4Slide],
+  },
+};
+
+export const AfterEnd5: Story = {
+  args: {
+    slides: [AfterEnd5Slide],
+  },
+};
+
+export const AfterEnd6: Story = {
+  args: {
+    slides: [AfterEnd6Slide],
   },
 };
 
