@@ -3,14 +3,14 @@ import { FaFlag } from 'react-icons/fa';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { VerticalTimelineCreation } from '../components';
+import { VerticalTimelineAfter } from '../components';
 
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
     title="En conclusion"
     alignContent="flex-start"
-    column1={<VerticalTimelineCreation />}
+    column1={<VerticalTimelineAfter />}
   >
     <Flex height="100%" alignItems="center" gap="3em">
       <Box>

@@ -7,14 +7,14 @@ import {
   SlideNote,
 } from '@/components/core';
 
-import { VerticalTimelineDuring } from '../components';
+import { VerticalTimelineAfter } from '../components';
 
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
     title="Alors ?"
     alignContent="flex-start"
-    column1={<VerticalTimelineDuring />}
+    column1={<VerticalTimelineAfter />}
   >
     <Stack spacing="1em">
       <Failure variant="slide">J’ai fait un burnout</Failure>
