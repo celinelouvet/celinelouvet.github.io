@@ -1,4 +1,4 @@
-import { Text } from '@chakra-ui/react';
+import { Stack, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -7,16 +7,21 @@ import { VerticalTimelineDuring } from '../components';
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="Si je devais le refaire ?"
+    title="Le début de la fin"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
-  ></SlideContent>
+  >
+    <Stack spacing="1em">
+      <Text>Mars 2019 : Freelance</Text>
+    </Stack>
+  </SlideContent>
 );
 
 const note = (
   <SlideNote>
     <Text>
-      Si je devais le refaire aujourd’hui, je ferai vraiment autrement.
+      On est en mars 2019. Je me suis un peu reposée et je retourne à la vie
+      réelle, en freelance chez un client.
     </Text>
   </SlideNote>
 );

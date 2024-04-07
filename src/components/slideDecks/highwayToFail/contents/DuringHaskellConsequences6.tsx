@@ -15,9 +15,7 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>
-      Si je devais le refaire aujourd’hui, je ferai vraiment autrement.
-    </Text>
+    <Text>Si je devais la refaire demain ?</Text>
   </SlideNote>
 );
 

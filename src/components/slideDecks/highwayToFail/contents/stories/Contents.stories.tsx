@@ -3,6 +3,19 @@ import { type Meta, type StoryObj } from '@storybook/react';
 import { SlideDeck } from '@/components/core';
 
 import AbstractSlide from '../Abstract';
+import After1Slide from '../After1';
+import After2Slide from '../After2';
+import After3Slide from '../After3';
+import After4Slide from '../After4';
+import After5Slide from '../After5';
+import After6Slide from '../After6';
+import After7Slide from '../After7';
+import AfterEnd1Slide from '../AfterEnd1';
+import AfterEnd2Slide from '../AfterEnd2';
+import AfterEnd3Slide from '../AfterEnd3';
+import AfterEnd4Slide from '../AfterEnd4';
+import AfterEnd5Slide from '../AfterEnd5';
+import AfterEnd6Slide from '../AfterEnd6';
 import AfterSectionTitleSlide from '../AfterSectionTitle';
 import BeforeCC1Slide from '../BeforeCC1';
 import BeforeCC2Slide from '../BeforeCC2';
@@ -44,7 +57,6 @@ import CreationMeeting3Slide from '../CreationMeeting3';
 import CreationMeeting4Slide from '../CreationMeeting4';
 import CreationMeeting5Slide from '../CreationMeeting5';
 import CreationMeeting6Slide from '../CreationMeeting6';
-import CreationMeeting7Slide from '../CreationMeeting7';
 import CreationSectionTitleSlide from '../CreationSectionTitle';
 import CreationTimeline1Slide from '../CreationTimeline1';
 import CreationTimeline2Slide from '../CreationTimeline2';
@@ -83,6 +95,14 @@ import DuringHaskellChoice6Slide from '../DuringHaskellChoice6';
 import DuringHaskellChoice7Slide from '../DuringHaskellChoice7';
 import DuringHaskellChoice8Slide from '../DuringHaskellChoice8';
 import DuringHaskellChoice9Slide from '../DuringHaskellChoice9';
+import DuringHaskellConsequences1Slide from '../DuringHaskellConsequences1';
+import DuringHaskellConsequences2Slide from '../DuringHaskellConsequences2';
+import DuringHaskellConsequences3Slide from '../DuringHaskellConsequences3';
+import DuringHaskellConsequences4Slide from '../DuringHaskellConsequences4';
+import DuringHaskellConsequences5Slide from '../DuringHaskellConsequences5';
+import DuringHaskellConsequences6Slide from '../DuringHaskellConsequences6';
+import DuringHaskellConsequences7Slide from '../DuringHaskellConsequences7';
+import DuringHaskellConsequences8Slide from '../DuringHaskellConsequences8';
 import DuringLearnHaskell1Slide from '../DuringLearnHaskell1';
 import DuringLearnHaskell2Slide from '../DuringLearnHaskell2';
 import DuringLearnHaskell3Slide from '../DuringLearnHaskell3';
@@ -95,6 +115,15 @@ import DuringPlatform3Slide from '../DuringPlatform3';
 import DuringPlatform4Slide from '../DuringPlatform4';
 import DuringPlatform5Slide from '../DuringPlatform5';
 import DuringSectionTitleSlide from '../DuringSectionTitle';
+import DuringSeed1Slide from '../DuringSeed1';
+import DuringSeed2Slide from '../DuringSeed2';
+import DuringSeed3Slide from '../DuringSeed3';
+import DuringSeed4Slide from '../DuringSeed4';
+import DuringSeed5Slide from '../DuringSeed5';
+import DuringSeed6Slide from '../DuringSeed6';
+import DuringSeed7Slide from '../DuringSeed7';
+import DuringSeed8Slide from '../DuringSeed8';
+import DuringSeed9Slide from '../DuringSeed9';
 import DuringSite1Slide from '../DuringSite1';
 import DuringSite2Slide from '../DuringSite2';
 import DuringSite3Slide from '../DuringSite3';
@@ -369,12 +398,6 @@ export const CreationMeeting5: Story = {
 export const CreationMeeting6: Story = {
   args: {
     slides: [CreationMeeting6Slide],
-  },
-};
-
-export const CreationMeeting7: Story = {
-  args: {
-    slides: [CreationMeeting7Slide],
   },
 };
 
@@ -966,9 +989,188 @@ export const DuringLearnHaskell6: Story = {
   },
 };
 
+export const DuringHaskellConsequences1: Story = {
+  args: {
+    slides: [DuringHaskellConsequences1Slide],
+  },
+};
+
+export const DuringHaskellConsequences2: Story = {
+  args: {
+    slides: [DuringHaskellConsequences2Slide],
+  },
+};
+
+export const DuringHaskellConsequences3: Story = {
+  args: {
+    slides: [DuringHaskellConsequences3Slide],
+  },
+};
+export const DuringHaskellConsequences4: Story = {
+  args: {
+    slides: [DuringHaskellConsequences4Slide],
+  },
+};
+
+export const DuringHaskellConsequences5: Story = {
+  args: {
+    slides: [DuringHaskellConsequences5Slide],
+  },
+};
+
+export const DuringHaskellConsequences6: Story = {
+  args: {
+    slides: [DuringHaskellConsequences6Slide],
+  },
+};
+
+export const DuringHaskellConsequences7: Story = {
+  args: {
+    slides: [DuringHaskellConsequences7Slide],
+  },
+};
+
+export const DuringHaskellConsequences8: Story = {
+  args: {
+    slides: [DuringHaskellConsequences8Slide],
+  },
+};
+
+export const DuringSeed1: Story = {
+  args: {
+    slides: [DuringSeed1Slide],
+  },
+};
+
+export const DuringSeed2: Story = {
+  args: {
+    slides: [DuringSeed2Slide],
+  },
+};
+
+export const DuringSeed3: Story = {
+  args: {
+    slides: [DuringSeed3Slide],
+  },
+};
+
+export const DuringSeed4: Story = {
+  args: {
+    slides: [DuringSeed4Slide],
+  },
+};
+
+export const DuringSeed5: Story = {
+  args: {
+    slides: [DuringSeed5Slide],
+  },
+};
+
+export const DuringSeed6: Story = {
+  args: {
+    slides: [DuringSeed6Slide],
+  },
+};
+
+export const DuringSeed7: Story = {
+  args: {
+    slides: [DuringSeed7Slide],
+  },
+};
+
+export const DuringSeed8: Story = {
+  args: {
+    slides: [DuringSeed8Slide],
+  },
+};
+
+export const DuringSeed9: Story = {
+  args: {
+    slides: [DuringSeed9Slide],
+  },
+};
+
 export const AfterSectionTitle: Story = {
   args: {
     slides: [AfterSectionTitleSlide],
+  },
+};
+
+export const AfterEnd1: Story = {
+  args: {
+    slides: [AfterEnd1Slide],
+  },
+};
+
+export const AfterEnd2: Story = {
+  args: {
+    slides: [AfterEnd2Slide],
+  },
+};
+
+export const AfterEnd3: Story = {
+  args: {
+    slides: [AfterEnd3Slide],
+  },
+};
+
+export const AfterEnd4: Story = {
+  args: {
+    slides: [AfterEnd4Slide],
+  },
+};
+
+export const AfterEnd5: Story = {
+  args: {
+    slides: [AfterEnd5Slide],
+  },
+};
+
+export const AfterEnd6: Story = {
+  args: {
+    slides: [AfterEnd6Slide],
+  },
+};
+
+export const After1: Story = {
+  args: {
+    slides: [After1Slide],
+  },
+};
+
+export const After2: Story = {
+  args: {
+    slides: [After2Slide],
+  },
+};
+
+export const After3: Story = {
+  args: {
+    slides: [After3Slide],
+  },
+};
+
+export const After4: Story = {
+  args: {
+    slides: [After4Slide],
+  },
+};
+
+export const After5: Story = {
+  args: {
+    slides: [After5Slide],
+  },
+};
+
+export const After6: Story = {
+  args: {
+    slides: [After6Slide],
+  },
+};
+
+export const After7: Story = {
+  args: {
+    slides: [After7Slide],
   },
 };
 

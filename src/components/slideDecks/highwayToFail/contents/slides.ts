@@ -1,6 +1,19 @@
 'use client';
 
 import Abstract from './Abstract';
+import After1 from './After1';
+import After2 from './After2';
+import After3 from './After3';
+import After4 from './After4';
+import After5 from './After5';
+import After6 from './After6';
+import After7 from './After7';
+import AfterEnd1 from './AfterEnd1';
+import AfterEnd2 from './AfterEnd2';
+import AfterEnd3 from './AfterEnd3';
+import AfterEnd4 from './AfterEnd4';
+import AfterEnd5 from './AfterEnd5';
+import AfterEnd6 from './AfterEnd6';
 import AfterSectionTitle from './AfterSectionTitle';
 import BeforeCC1 from './BeforeCC1';
 import BeforeCC2 from './BeforeCC2';
@@ -42,7 +55,6 @@ import CreationMeeting3 from './CreationMeeting3';
 import CreationMeeting4 from './CreationMeeting4';
 import CreationMeeting5 from './CreationMeeting5';
 import CreationMeeting6 from './CreationMeeting6';
-import CreationMeeting7 from './CreationMeeting7';
 import CreationSectionTitle from './CreationSectionTitle';
 import CreationTimeline1 from './CreationTimeline1';
 import CreationTimeline2 from './CreationTimeline2';
@@ -81,6 +93,14 @@ import DuringHaskellChoice6 from './DuringHaskellChoice6';
 import DuringHaskellChoice7 from './DuringHaskellChoice7';
 import DuringHaskellChoice8 from './DuringHaskellChoice8';
 import DuringHaskellChoice9 from './DuringHaskellChoice9';
+import DuringHaskellConsequences1 from './DuringHaskellConsequences1';
+import DuringHaskellConsequences2 from './DuringHaskellConsequences2';
+import DuringHaskellConsequences3 from './DuringHaskellConsequences3';
+import DuringHaskellConsequences4 from './DuringHaskellConsequences4';
+import DuringHaskellConsequences5 from './DuringHaskellConsequences5';
+import DuringHaskellConsequences6 from './DuringHaskellConsequences6';
+import DuringHaskellConsequences7 from './DuringHaskellConsequences7';
+import DuringHaskellConsequences8 from './DuringHaskellConsequences8';
 import DuringLearnHaskell1 from './DuringLearnHaskell1';
 import DuringLearnHaskell2 from './DuringLearnHaskell2';
 import DuringLearnHaskell3 from './DuringLearnHaskell3';
@@ -93,6 +113,15 @@ import DuringPlatform3 from './DuringPlatform3';
 import DuringPlatform4 from './DuringPlatform4';
 import DuringPlatform5 from './DuringPlatform5';
 import DuringSectionTitle from './DuringSectionTitle';
+import DuringSeed1 from './DuringSeed1';
+import DuringSeed2 from './DuringSeed2';
+import DuringSeed3 from './DuringSeed3';
+import DuringSeed4 from './DuringSeed4';
+import DuringSeed5 from './DuringSeed5';
+import DuringSeed6 from './DuringSeed6';
+import DuringSeed7 from './DuringSeed7';
+import DuringSeed8 from './DuringSeed8';
+import DuringSeed9 from './DuringSeed9';
 import DuringSite1 from './DuringSite1';
 import DuringSite2 from './DuringSite2';
 import DuringSite3 from './DuringSite3';
@@ -187,7 +216,6 @@ export const getSlides = () => {
     CreationMeeting4,
     CreationMeeting5,
     CreationMeeting6,
-    CreationMeeting7,
 
     CreationIdea1,
     CreationIdea2,
@@ -285,7 +313,41 @@ export const getSlides = () => {
     DuringLearnHaskell5,
     DuringLearnHaskell6,
 
+    DuringHaskellConsequences1,
+    DuringHaskellConsequences2,
+    DuringHaskellConsequences3,
+    DuringHaskellConsequences4,
+    DuringHaskellConsequences5,
+    DuringHaskellConsequences6,
+    DuringHaskellConsequences7,
+    DuringHaskellConsequences8,
+
+    DuringSeed1,
+    DuringSeed2,
+    DuringSeed3,
+    DuringSeed4,
+    DuringSeed5,
+    DuringSeed6,
+    DuringSeed7,
+    DuringSeed8,
+    DuringSeed9,
+
     AfterSectionTitle,
+
+    AfterEnd1,
+    AfterEnd2,
+    AfterEnd3,
+    AfterEnd4,
+    AfterEnd5,
+    AfterEnd6,
+
+    After1,
+    After2,
+    After3,
+    After4,
+    After5,
+    After6,
+    After7,
 
     FeedbacksQR,
 

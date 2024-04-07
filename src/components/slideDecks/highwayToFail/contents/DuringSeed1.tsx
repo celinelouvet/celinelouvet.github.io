@@ -7,7 +7,7 @@ import { VerticalTimelineDuring } from '../components';
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="Si je devais le refaire ?"
+    title="Les levées"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
   ></SlideContent>
@@ -15,9 +15,7 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>
-      Si je devais le refaire aujourd’hui, je ferai vraiment autrement.
-    </Text>
+    <Text>Vous allez me dire, et les levées dans tout ça ?</Text>
   </SlideNote>
 );
 

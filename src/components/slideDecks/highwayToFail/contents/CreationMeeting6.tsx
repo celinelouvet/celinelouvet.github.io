@@ -20,6 +20,9 @@ export const content = (
       <ThumbsDown variant="slide">
         Manque de volonté de les challenger sur leur vision
       </ThumbsDown>
+      <ThumbsDown variant="slide">
+        Je ne me suis pas demandée si je voulais travailler avec eux.
+      </ThumbsDown>
     </Stack>
   </SlideContent>
 );
@@ -27,16 +30,8 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>
-      En toute honnêteté, je ne me rappelle pas les avoir vraiment challengés
-      sur leur idée à ce moment-là.
-    </Text>
-    <Text>
-      Je n’y connaissais rien. Ils avaient l’air de savoir de quoi ils
-      parlaient.
-    </Text>
-    <Text>
-      Je pense que j’avais le comportement de quelqu’un passant un entretien
-      d’embauche.
+      Je voulais travailler sur l’idée, mais je ne me suis pas posée la question
+      de si je voulais travailler avec eux.
     </Text>
   </SlideNote>
 );

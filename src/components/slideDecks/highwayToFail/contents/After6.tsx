@@ -1,0 +1,37 @@
+import { ListItem, Stack, Text, UnorderedList } from '@chakra-ui/react';
+
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
+
+import { VerticalTimelineDuring } from '../components';
+
+export const content = (
+  <SlideContent
+    type={SlideContentTypes.titleWithThinColumn}
+    title="A refaire ?"
+    alignContent="flex-start"
+    column1={<VerticalTimelineDuring />}
+  >
+    <Stack spacing="1em">
+      <UnorderedList>
+        <ListItem>Poser des questions lors de la rencontre</ListItem>
+        <ListItem>Comprendre le business plan</ListItem>
+        <ListItem>Comprendre la procédure ou passer par un avocat</ListItem>
+        <ListItem>Répartition équitable des parts</ListItem>
+        <ListItem>Low code / no code</ListItem>
+      </UnorderedList>
+    </Stack>
+  </SlideContent>
+);
+
+const note = (
+  <SlideNote>
+    <Text>Si on résume, j’ai vraiment fait un burnout.</Text>
+    <Text>
+      On est 5 ans plus tard et je le sens toujours. Dès que j’abuse, il
+      repointe le bout de son nez.
+    </Text>
+  </SlideNote>
+);
+
+const slide = { content, note };
+export default slide;
