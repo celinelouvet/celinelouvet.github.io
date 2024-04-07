@@ -68,12 +68,12 @@ const slideStyle = definePartsStyle({
     borderLeftWidth: '0.2em',
     borderLeftStyle: 'solid',
     fontSize: '1em',
-    color: '#534750',
+    color: '#3d3b46',
 
     _dark: {
       backgroundColor: '#e3b4b7',
       borderLeftColor: '#cc5152',
-      color: '#534750',
+      color: '#3d3b46',
     },
   },
   description: {
