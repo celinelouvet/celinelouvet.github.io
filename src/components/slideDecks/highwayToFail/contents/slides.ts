@@ -101,6 +101,15 @@ import DuringPlatform3 from './DuringPlatform3';
 import DuringPlatform4 from './DuringPlatform4';
 import DuringPlatform5 from './DuringPlatform5';
 import DuringSectionTitle from './DuringSectionTitle';
+import DuringSeed1 from './DuringSeed1';
+import DuringSeed2 from './DuringSeed2';
+import DuringSeed3 from './DuringSeed3';
+import DuringSeed4 from './DuringSeed4';
+import DuringSeed5 from './DuringSeed5';
+import DuringSeed6 from './DuringSeed6';
+import DuringSeed7 from './DuringSeed7';
+import DuringSeed8 from './DuringSeed8';
+import DuringSeed9 from './DuringSeed9';
 import DuringSite1 from './DuringSite1';
 import DuringSite2 from './DuringSite2';
 import DuringSite3 from './DuringSite3';
@@ -301,6 +310,16 @@ export const getSlides = () => {
     DuringHaskellConsequences6,
     DuringHaskellConsequences7,
     DuringHaskellConsequences8,
+
+    DuringSeed1,
+    DuringSeed2,
+    DuringSeed3,
+    DuringSeed4,
+    DuringSeed5,
+    DuringSeed6,
+    DuringSeed7,
+    DuringSeed8,
+    DuringSeed9,
 
     AfterSectionTitle,
 

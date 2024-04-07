@@ -103,6 +103,15 @@ import DuringPlatform3Slide from '../DuringPlatform3';
 import DuringPlatform4Slide from '../DuringPlatform4';
 import DuringPlatform5Slide from '../DuringPlatform5';
 import DuringSectionTitleSlide from '../DuringSectionTitle';
+import DuringSeed1Slide from '../DuringSeed1';
+import DuringSeed2Slide from '../DuringSeed2';
+import DuringSeed3Slide from '../DuringSeed3';
+import DuringSeed4Slide from '../DuringSeed4';
+import DuringSeed5Slide from '../DuringSeed5';
+import DuringSeed6Slide from '../DuringSeed6';
+import DuringSeed7Slide from '../DuringSeed7';
+import DuringSeed8Slide from '../DuringSeed8';
+import DuringSeed9Slide from '../DuringSeed9';
 import DuringSite1Slide from '../DuringSite1';
 import DuringSite2Slide from '../DuringSite2';
 import DuringSite3Slide from '../DuringSite3';
@@ -1018,6 +1027,60 @@ export const DuringHaskellConsequences7: Story = {
 export const DuringHaskellConsequences8: Story = {
   args: {
     slides: [DuringHaskellConsequences8Slide],
+  },
+};
+
+export const DuringSeed1: Story = {
+  args: {
+    slides: [DuringSeed1Slide],
+  },
+};
+
+export const DuringSeed2: Story = {
+  args: {
+    slides: [DuringSeed2Slide],
+  },
+};
+
+export const DuringSeed3: Story = {
+  args: {
+    slides: [DuringSeed3Slide],
+  },
+};
+
+export const DuringSeed4: Story = {
+  args: {
+    slides: [DuringSeed4Slide],
+  },
+};
+
+export const DuringSeed5: Story = {
+  args: {
+    slides: [DuringSeed5Slide],
+  },
+};
+
+export const DuringSeed6: Story = {
+  args: {
+    slides: [DuringSeed6Slide],
+  },
+};
+
+export const DuringSeed7: Story = {
+  args: {
+    slides: [DuringSeed7Slide],
+  },
+};
+
+export const DuringSeed8: Story = {
+  args: {
+    slides: [DuringSeed8Slide],
+  },
+};
+
+export const DuringSeed9: Story = {
+  args: {
+    slides: [DuringSeed9Slide],
   },
 };
 
