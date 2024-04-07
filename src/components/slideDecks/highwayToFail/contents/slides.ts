@@ -1,6 +1,13 @@
 'use client';
 
 import Abstract from './Abstract';
+import After1 from './After1';
+import After2 from './After2';
+import After3 from './After3';
+import After4 from './After4';
+import After5 from './After5';
+import After6 from './After6';
+import After7 from './After7';
 import AfterEnd1 from './AfterEnd1';
 import AfterEnd2 from './AfterEnd2';
 import AfterEnd3 from './AfterEnd3';
@@ -335,6 +342,14 @@ export const getSlides = () => {
     AfterEnd4,
     AfterEnd5,
     AfterEnd6,
+
+    After1,
+    After2,
+    After3,
+    After4,
+    After5,
+    After6,
+    After7,
 
     FeedbacksQR,
 

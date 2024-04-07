@@ -2,6 +2,13 @@ import { type Meta, type StoryObj } from '@storybook/react';
 
 import { SlideDeck } from '@/components/core';
 
+import After1Slide from '../After1';
+import After2Slide from '../After2';
+import After3Slide from '../After3';
+import After4Slide from '../After4';
+import After5Slide from '../After5';
+import After6Slide from '../After6';
+import After7Slide from '../After7';
 import AfterEnd1Slide from '../AfterEnd1';
 import AfterEnd2Slide from '../AfterEnd2';
 import AfterEnd3Slide from '../AfterEnd3';
@@ -1274,6 +1281,55 @@ export const AfterEnd6: Story = {
   args: {
     forNotes: true,
     slides: [AfterEnd6Slide],
+  },
+};
+
+export const After1: Story = {
+  args: {
+    forNotes: true,
+    slides: [After1Slide],
+  },
+};
+
+export const After2: Story = {
+  args: {
+    forNotes: true,
+    slides: [After2Slide],
+  },
+};
+
+export const After3: Story = {
+  args: {
+    forNotes: true,
+    slides: [After3Slide],
+  },
+};
+
+export const After4: Story = {
+  args: {
+    forNotes: true,
+    slides: [After4Slide],
+  },
+};
+
+export const After5: Story = {
+  args: {
+    forNotes: true,
+    slides: [After5Slide],
+  },
+};
+
+export const After6: Story = {
+  args: {
+    forNotes: true,
+    slides: [After6Slide],
+  },
+};
+
+export const After7: Story = {
+  args: {
+    forNotes: true,
+    slides: [After7Slide],
   },
 };
 
