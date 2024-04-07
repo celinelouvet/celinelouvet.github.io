@@ -55,7 +55,6 @@ import CreationMeeting3 from './CreationMeeting3';
 import CreationMeeting4 from './CreationMeeting4';
 import CreationMeeting5 from './CreationMeeting5';
 import CreationMeeting6 from './CreationMeeting6';
-import CreationMeeting7 from './CreationMeeting7';
 import CreationSectionTitle from './CreationSectionTitle';
 import CreationTimeline1 from './CreationTimeline1';
 import CreationTimeline2 from './CreationTimeline2';
@@ -217,7 +216,6 @@ export const getSlides = () => {
     CreationMeeting4,
     CreationMeeting5,
     CreationMeeting6,
-    CreationMeeting7,
 
     CreationIdea1,
     CreationIdea2,
