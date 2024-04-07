@@ -2,14 +2,14 @@ import { ListItem, Stack, Text, UnorderedList } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { VerticalTimelineDuring } from '../components';
+import { VerticalTimelineAfter } from '../components';
 
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
     title="A refaire ?"
     alignContent="flex-start"
-    column1={<VerticalTimelineDuring />}
+    column1={<VerticalTimelineAfter />}
   >
     <Stack spacing="1em">
       <UnorderedList>
