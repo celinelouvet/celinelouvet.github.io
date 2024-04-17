@@ -14,7 +14,8 @@
     "optional": "Optionelle",
     "private": "Cette réponse restera confidentielle.",
     "submit": "Valider",
-    "thanks": "Merci d'avoir répondu !"
+    "thanks": "Merci d'avoir répondu !",
+    "allVotes": "Votes exprimés :"
   },
   "blog": "Blog"
 }
