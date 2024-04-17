@@ -51,12 +51,13 @@ export const SurveyResultsChoice = forwardRef<SurveyResultsChoiceProps, 'div'>(
                 </Text>
                 <Text>{total}</Text>
               </Flex>
-              {data.map(({ text, percentage }) => (
-                <Flex key={text} fontSize="xl" flexDirection="row">
+              {data.map(({ text, value, percentage }) => (
+                <Flex key={text} fontSize="xl" flexDirection="row" gap="1em">
                   <Text fontWeight="700" width="4em">
                     {text}
                   </Text>
                   <Text>{percentage}%</Text>
+                  <Text>({value} votes)</Text>
                 </Flex>
               ))}
             </Stack>
