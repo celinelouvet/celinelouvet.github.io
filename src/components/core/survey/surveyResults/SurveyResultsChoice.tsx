@@ -3,17 +3,40 @@ import {
   CardBody,
   CardHeader,
   Flex,
+  Grid,
   Stack,
   type StyleConfig,
   Text,
   forwardRef,
   useStyleConfig,
 } from '@chakra-ui/react';
+import { type FC } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { H2Heading } from '@/components/core';
 import { type SurveyPollChoiceQuestion } from '@/models';
 
 import { SurveyResultsPie } from './SurveyResultsPie';
+
+type VoteResult = {
+  text: string;
+  value: number;
+  percentage: number;
+};
+
+const SurveyVotes: FC<{ result: VoteResult }> = ({ result }) => {
+  const { text, value, percentage } = result;
+  return (
+    <>
+      <Text fontWeight="700" as="span">
+        {text}
+      </Text>
+      <Text as="span">{percentage}%</Text>
+      <Text as="span">→</Text>
+      <Text as="span">{value}</Text>
+    </>
+  );
+};
 
 type SurveyResultsChoiceProps = {
   question?: SurveyPollChoiceQuestion;
@@ -23,6 +46,7 @@ type SurveyResultsChoiceProps = {
 export const SurveyResultsChoice = forwardRef<SurveyResultsChoiceProps, 'div'>(
   ({ question, results }, ref) => {
     const styles = useStyleConfig('SurveyResultsChoice');
+    const { t } = useTranslation('components', { keyPrefix: 'survey' });
 
     if (!question) return null;
     if (!results) return null;
@@ -42,24 +66,31 @@ export const SurveyResultsChoice = forwardRef<SurveyResultsChoiceProps, 'div'>(
           <H2Heading>{title}</H2Heading>
         </CardHeader>
         <CardBody>
-          <Flex alignItems="center" justifyContent="space-evenly">
+          <Flex
+            alignItems="center"
+            justifyContent="space-evenly"
+            flexDirection={{
+              base: 'column',
+              sm: 'row',
+            }}
+          >
             <SurveyResultsPie question={question} results={results} />
             <Stack>
-              <Flex fontSize="xl" flexDirection="row">
-                <Text fontWeight="700" marginRight="1em">
-                  Nombre de votes:
-                </Text>
+              <Flex fontSize="xl" flexDirection="row" gap="1em">
+                <Text fontWeight="700">{t('allVotes')}</Text>
                 <Text>{total}</Text>
               </Flex>
-              {data.map(({ text, value, percentage }) => (
-                <Flex key={text} fontSize="xl" flexDirection="row" gap="1em">
-                  <Text fontWeight="700" width="4em">
-                    {text}
-                  </Text>
-                  <Text>{percentage}%</Text>
-                  <Text>({value} votes)</Text>
-                </Flex>
-              ))}
+              <Grid
+                templateColumns="3em auto auto auto"
+                columnGap="1em"
+                rowGap="0.5em"
+                alignItems="center"
+                justifyItems="start"
+              >
+                {data.map((result) => (
+                  <SurveyVotes result={result} key={result.text} />
+                ))}
+              </Grid>
             </Stack>
           </Flex>
         </CardBody>
