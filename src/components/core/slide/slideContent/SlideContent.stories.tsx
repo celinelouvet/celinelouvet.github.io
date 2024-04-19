@@ -111,8 +111,8 @@ export const Promotion: Story = {
 export const Abstract: Story = {
   args: {
     type: SlideContentTypes.abstract,
-    topic: highwayToFail.abstract.title,
-    descriptions: highwayToFail.abstract.descriptions,
+    topic: 'Title',
+    descriptions: ['Line 1', 'Line 2', 'Line 3'],
   },
 };
 
