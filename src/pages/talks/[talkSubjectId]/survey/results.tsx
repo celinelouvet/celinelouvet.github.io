@@ -1,10 +1,10 @@
 import { PageContainer, SurveyResults } from '@/components/core';
-import { highwayToFailSurvey } from '@/components/slideDecks/highwayToFail';
+import { highwayToFailSurveyFr as survey } from '@/data/talks';
 
 export default function Page() {
   return (
     <PageContainer>
-      <SurveyResults survey={highwayToFailSurvey} />
+      <SurveyResults survey={survey} />
     </PageContainer>
   );
 }

@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { highwayToFail } from '@/components/slideDecks/highwayToFail';
+import { highwayToFailTalkFr as talk } from '@/data/talks';
 
 import { SlideContent as SlideContentComponent } from './SlideContent';
 import { ColorMode, SlideContentTypes } from './types';
@@ -83,25 +83,25 @@ export const EndTitle: Story = {
 export const Introduction: Story = {
   args: {
     type: SlideContentTypes.introduction,
-    author: highwayToFail.author,
-    descriptions: highwayToFail.descriptions,
-    socials: highwayToFail.socials,
+    author: talk.author,
+    descriptions: talk.descriptions,
+    socials: talk.socials,
   },
 };
 
 export const Title: Story = {
   args: {
     type: SlideContentTypes.title,
-    title: highwayToFail.title,
-    author: highwayToFail.author,
+    title: talk.title,
+    author: talk.author,
   },
 };
 
 export const Promotion: Story = {
   args: {
     type: SlideContentTypes.promotion,
-    author: highwayToFail.author,
-    title: highwayToFail.title,
+    author: talk.author,
+    title: talk.title,
     convention: 'Lyon Craft',
     time: '2024-04-08T10:30:00Z',
     room: 'Room 1',

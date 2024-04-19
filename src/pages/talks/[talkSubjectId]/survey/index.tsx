@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 
 import { PageContainer, SurveyPoll } from '@/components/core';
-import { highwayToFailSurvey } from '@/components/slideDecks/highwayToFail';
+import { highwayToFailSurveyFr as survey } from '@/data/talks';
 
 export default function Page() {
   const router = useRouter();
@@ -9,7 +9,7 @@ export default function Page() {
   console.log(router);
   return (
     <PageContainer>
-      <SurveyPoll survey={highwayToFailSurvey} />
+      <SurveyPoll survey={survey} />
     </PageContainer>
   );
 }
