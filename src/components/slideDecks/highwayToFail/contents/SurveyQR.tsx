@@ -3,13 +3,12 @@ import { Center, ListItem, Stack, Text, UnorderedList } from '@chakra-ui/react';
 import {
   H1Heading,
   InternalLink,
+  QrCode,
   SlideContent,
   SlideContentTypes,
   SlideNote,
 } from '@/components/core';
 import { ColorMode } from '@/components/core/slide/slideContent/types';
-
-import { QrToSurvey } from '../components';
 
 export const content = (
   <SlideContent
@@ -17,7 +16,7 @@ export const content = (
     colormode={ColorMode.light}
     column1={
       <Center width="100%" height="100%">
-        <QrToSurvey />
+        <QrCode value="https://celine.louvet.me/survey" variant="dark" />
       </Center>
     }
   >
