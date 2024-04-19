@@ -1,4 +1,9 @@
-import { type Convention, type Resume, type TalkSubject } from './models';
+import {
+  type Convention,
+  type Resume,
+  type Talk,
+  type TalkSubject,
+} from './models';
 
 const talkSubjects = new Map<string, TalkSubject>([
   ['gcp_datastore_search', { topic: 'Google Datastore & Search API' }],
@@ -140,7 +145,241 @@ const conventions = new Map<string, Convention>([
   ['paattern_talks_2023', { name: 'Paattern Talks 2023', language: 'FR' }],
   ['online_developer_experience', { name: 'Online', language: 'FR' }],
   ['online_avocado_growth', { name: 'Online', language: 'FR' }],
+  ['lyoncraft_2024', { name: 'Lyon Craft 2024', language: 'FR' }],
+  ['devfest_lille_2024', { name: 'DevFest Lille 2024', language: 'FR' }],
+  ['technwine_2024', { name: 'Tech n Wine 2024', language: 'FR' }],
 ]);
+
+const talks = [
+  {
+    subjectId: 'gcp_datastore_search',
+    conventionId: 'sfeir_nosql',
+    when: '2014-12-16',
+    links: {
+      slides:
+        'https://www.slideshare.net/celine_louvet/google-datastore-search-api-93079759',
+    },
+    pictureId: 'Soirée_NoSQL-GoogleDatastoreSearchAPI',
+  },
+  {
+    subjectId: 'rex_polymer',
+    conventionId: 'paris_WebComponents',
+    when: '2015-07-09',
+    links: {
+      slides: 'https://www.slideshare.net/celine_louvet/rex-polymer-50365257',
+    },
+    pictureId: 'Meetup_ParisWebComponents-REX_Polymer',
+  },
+  {
+    subjectId: 'haskell_in_prod',
+    conventionId: 'scala_io_2018',
+    when: '2018-10-31',
+    links: {
+      slides:
+        'https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994',
+    },
+    pictureId: 'Haskell_en_prod',
+  },
+  {
+    subjectId: 'haskell_in_prod',
+    conventionId: 'devfest_toulouse_2018',
+    when: '2018-11-08',
+    links: {
+      slides:
+        'https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994',
+      video: 'https://www.youtube.com/watch?v=5VCIaYvWecM&ab_channel=GDGFrance',
+    },
+    pictureId: 'devfesttoulouse2018-Haskell_en_prod',
+  },
+  {
+    subjectId: 'haskell_in_prod',
+    conventionId: 'codeurs_en_seine_2018',
+    when: '2018-11-22',
+    links: {
+      slides:
+        'https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994',
+      video:
+        'https://www.youtube.com/watch?v=9CKaeJjSKNQ&ab_channel=CodeursenSeine',
+    },
+    pictureId: 'codeursenseine2018-Haskell_en_prod',
+  },
+  {
+    subjectId: 'haskell_in_prod',
+    conventionId: 'functional_programming_montpellier',
+    when: '2019-01-15',
+    links: {
+      slides:
+        'https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994',
+    },
+    pictureId: 'Haskell_en_prod',
+  },
+  {
+    subjectId: 'haskell_in_prod',
+    conventionId: 'web2day_2019',
+    when: '2019-06-05',
+    links: {
+      slides:
+        'https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994',
+      video: 'https://www.youtube.com/watch?v=QnS-Byrmf9c&ab_channel=Web2day',
+    },
+    pictureId: 'web2day2019-Haskell_en_prod',
+  },
+  {
+    subjectId: 'haskell_in_prod',
+    conventionId: 'voxxed_days_luxembourg_2019',
+    when: '2019-06-21',
+    links: {
+      slides:
+        'https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994',
+      video: 'https://www.youtube.com/watch?v=Omj9RvK1TbQ',
+    },
+    pictureId: 'voxxeddaysluxembourg2019-Haskell_en_prod',
+  },
+  {
+    subjectId: 'interview_shirley_almosni_chiche',
+    conventionId: 'online_shirley',
+    when: '2023-03-31',
+    links: {
+      video:
+        'https://www.youtube.com/watch?v=FNStkAKsujI&ab_channel=BUILDRH-Face%C3%A0faceavecTataShishi',
+    },
+    pictureId: 'entretienshirleyalmosnichiche2023',
+  },
+  {
+    subjectId: 'interview_philippe_charriere',
+    conventionId: 'online_k33g',
+    when: '2023-04-06',
+    links: {
+      video:
+        'https://www.youtube.com/watch?v=psQV7zB59hQ&ab_channel=PhilippeCharri%C3%A8re',
+    },
+    pictureId: 'livephilippecharriere2023',
+  },
+  {
+    subjectId: 'event_driven_buzzword',
+    conventionId: 'devfest_lille_2023',
+    when: '2023-05-26',
+    links: {
+      program:
+        'https://devfest.gdglille.org/speaker-page-oyAdLXhQYzWS1j03gz79ADg2TRj2/',
+      video:
+        'https://www.youtube.com/watch?v=RovPh9agiFc&t=1s&ab_channel=GDGFrance',
+    },
+    pictureId: 'devfestlille2023-Event_driven',
+  },
+  {
+    subjectId: 'podcast_punkin_dev',
+    conventionId: 'online_punkin_dev',
+    when: '2023-06-20',
+    links: {
+      audio:
+        'https://podcast.ausha.co/punkindev/s03e12-dev-lead-architecte-non-archidev-avec-celine-louvet',
+    },
+    pictureId: 'podcast_punkindev2023',
+  },
+  {
+    subjectId: 'event_driven_buzzword',
+    conventionId: 'camping_des_speakers_2023',
+    when: '2023-06-15',
+    links: {
+      program:
+        'https://camping-speakers.fr/sessions/event_driven_qu_est_ce_donc/',
+    },
+    pictureId: 'campingdespeakers2023-Event_driven',
+  },
+  {
+    subjectId: 'event_driven_buzzword',
+    conventionId: 'breizhcamp_2023',
+    when: '2023-06-29',
+    links: {
+      program: 'https://www.breizhcamp.org/conference/programme',
+      video:
+        'https://www.youtube.com/watch?v=Tq2-6jfBbOY&ab_channel=C%C3%A9lineLouvet',
+    },
+    pictureId: 'breizhcamp2023-Event_driven',
+  },
+  {
+    subjectId: 'permissions_mysteries',
+    conventionId: 'cloud_est_2023',
+    when: '2023-06-20',
+    links: {
+      program: 'https://cloudest-event.fr',
+      feedbacks:
+        'https://openfeedback.io/lSG3Xl5ALpXqswcFPcu2/2023-05-26/fILn5VfKXqQfzKLsI4a5',
+      video:
+        'https://www.youtube.com/watch?v=0d-_oSqOI68&ab_channel=C%C3%A9lineLouvet',
+    },
+    pictureId: 'cloudest2023-Permissions',
+  },
+  {
+    subjectId: 'permissions_mysteries',
+    conventionId: 'breizhcamp_2023',
+    when: '2023-06-30',
+    links: {
+      program: 'https://www.breizhcamp.org/conference/programme',
+      feedbacks:
+        'https://openfeedback.io/lSG3Xl5ALpXqswcFPcu2/2023-05-26/fILn5VfKXqQfzKLsI4a5',
+      video:
+        'https://www.youtube.com/watch?v=p4VT1DR2RdA&ab_channel=C%C3%A9lineLouvet',
+    },
+    pictureId: 'breizhcamp2023-Permissions',
+  },
+  {
+    subjectId: 'tired_women_revolution',
+    conventionId: 'paattern_talks_2023',
+    when: '2023-11-30',
+    links: {
+      program:
+        'https://www.linkedin.com/feed/update/urn:li:activity:7133839860397694977/',
+    },
+    pictureId: 'paatternTalks2023-Tired_women_revolution',
+  },
+  {
+    subjectId: 'podcast_developer_experience',
+    conventionId: 'online_developer_experience',
+    when: '2023-12-29',
+    links: {
+      audio: 'https://podcast.ausha.co/developer-experience/celine-louvet',
+    },
+    pictureId: 'podcast_devxp2023',
+  },
+  {
+    subjectId: 'podcast_avocado_growth',
+    conventionId: 'online_avocado_growth',
+    when: '2024-01-22',
+    links: {
+      audio:
+        'https://podcast.ausha.co/avocado-growth-portrait-tech/18-parcours-tech-celine',
+    },
+    pictureId: 'podcast_avocadogrowth2024',
+  },
+  {
+    subjectId: 'highway_to_fail',
+    conventionId: 'lyoncraft_2024',
+    when: '2024-04-08',
+    links: {
+      feedbacks:
+        'https://openfeedback.io/xWqPfTd7zpGKrzaETKQe/2024-04-08/NlYROGHjEggs75rLPsz4',
+      video:
+        'https://www.youtube.com/watch?v=wwD-g2MWEYQ&ab_channel=C%C3%A9lineLouvet',
+    },
+    pictureId: 'lyoncraft2024-highway_to_fail',
+  },
+  {
+    subjectId: 'highway_to_fail',
+    conventionId: 'devfest_lille_2024',
+    when: '2024-06-06',
+    links: {},
+    pictureId: 'lyoncraft2024-highway_to_fail',
+  },
+  {
+    subjectId: 'highway_to_fail',
+    conventionId: 'technwine_2024',
+    when: '2024-06-18',
+    links: {},
+    pictureId: 'lyoncraft2024-highway_to_fail',
+  },
+] satisfies Talk[];
 
 const resume: Resume = {
   firstname: 'Céline',
@@ -861,211 +1100,7 @@ const resume: Resume = {
   talkSubjects,
   possibleTalkSubjects,
   conventions,
-  talks: [
-    {
-      subjectId: 'gcp_datastore_search',
-      conventionId: 'sfeir_nosql',
-      when: '2014-12-16',
-      links: {
-        slides:
-          'https://www.slideshare.net/celine_louvet/google-datastore-search-api-93079759',
-      },
-      pictureId: 'Soirée_NoSQL-GoogleDatastoreSearchAPI',
-    },
-    {
-      subjectId: 'rex_polymer',
-      conventionId: 'paris_WebComponents',
-      when: '2015-07-09',
-      links: {
-        slides: 'https://www.slideshare.net/celine_louvet/rex-polymer-50365257',
-      },
-      pictureId: 'Meetup_ParisWebComponents-REX_Polymer',
-    },
-    {
-      subjectId: 'haskell_in_prod',
-      conventionId: 'scala_io_2018',
-      when: '2018-10-31',
-      links: {
-        slides:
-          'https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994',
-      },
-      pictureId: 'Haskell_en_prod',
-    },
-    {
-      subjectId: 'haskell_in_prod',
-      conventionId: 'devfest_toulouse_2018',
-      when: '2018-11-08',
-      links: {
-        slides:
-          'https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994',
-        video:
-          'https://www.youtube.com/watch?v=5VCIaYvWecM&ab_channel=GDGFrance',
-      },
-      pictureId: 'devfesttoulouse2018-Haskell_en_prod',
-    },
-    {
-      subjectId: 'haskell_in_prod',
-      conventionId: 'codeurs_en_seine_2018',
-      when: '2018-11-22',
-      links: {
-        slides:
-          'https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994',
-        video:
-          'https://www.youtube.com/watch?v=9CKaeJjSKNQ&ab_channel=CodeursenSeine',
-      },
-      pictureId: 'codeursenseine2018-Haskell_en_prod',
-    },
-    {
-      subjectId: 'haskell_in_prod',
-      conventionId: 'functional_programming_montpellier',
-      when: '2019-01-15',
-      links: {
-        slides:
-          'https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994',
-      },
-      pictureId: 'Haskell_en_prod',
-    },
-    {
-      subjectId: 'haskell_in_prod',
-      conventionId: 'web2day_2019',
-      when: '2019-06-05',
-      links: {
-        slides:
-          'https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994',
-        video: 'https://www.youtube.com/watch?v=QnS-Byrmf9c&ab_channel=Web2day',
-      },
-      pictureId: 'web2day2019-Haskell_en_prod',
-    },
-    {
-      subjectId: 'haskell_in_prod',
-      conventionId: 'voxxed_days_luxembourg_2019',
-      when: '2019-06-21',
-      links: {
-        slides:
-          'https://www.slideshare.net/celine_louvet/haskell-en-prod-123943994',
-        video: 'https://www.youtube.com/watch?v=Omj9RvK1TbQ',
-      },
-      pictureId: 'voxxeddaysluxembourg2019-Haskell_en_prod',
-    },
-    {
-      subjectId: 'interview_shirley_almosni_chiche',
-      conventionId: 'online_shirley',
-      when: '2023-03-31',
-      links: {
-        video:
-          'https://www.youtube.com/watch?v=FNStkAKsujI&ab_channel=BUILDRH-Face%C3%A0faceavecTataShishi',
-      },
-      pictureId: 'entretienshirleyalmosnichiche2023',
-    },
-    {
-      subjectId: 'interview_philippe_charriere',
-      conventionId: 'online_k33g',
-      when: '2023-04-06',
-      links: {
-        video:
-          'https://www.youtube.com/watch?v=psQV7zB59hQ&ab_channel=PhilippeCharri%C3%A8re',
-      },
-      pictureId: 'livephilippecharriere2023',
-    },
-    {
-      subjectId: 'event_driven_buzzword',
-      conventionId: 'devfest_lille_2023',
-      when: '2023-05-26',
-      links: {
-        program:
-          'https://devfest.gdglille.org/speaker-page-oyAdLXhQYzWS1j03gz79ADg2TRj2/',
-        video:
-          'https://www.youtube.com/watch?v=RovPh9agiFc&t=1s&ab_channel=GDGFrance',
-      },
-      pictureId: 'devfestlille2023-Event_driven',
-    },
-    {
-      subjectId: 'podcast_punkin_dev',
-      conventionId: 'online_punkin_dev',
-      when: '2023-06-20',
-      links: {
-        audio:
-          'https://podcast.ausha.co/punkindev/s03e12-dev-lead-architecte-non-archidev-avec-celine-louvet',
-      },
-      pictureId: 'podcast_punkindev2023',
-    },
-    {
-      subjectId: 'event_driven_buzzword',
-      conventionId: 'camping_des_speakers_2023',
-      when: '2023-06-15',
-      links: {
-        program:
-          'https://camping-speakers.fr/sessions/event_driven_qu_est_ce_donc/',
-      },
-      pictureId: 'campingdespeakers2023-Event_driven',
-    },
-    {
-      subjectId: 'event_driven_buzzword',
-      conventionId: 'breizhcamp_2023',
-      when: '2023-06-29',
-      links: {
-        program: 'https://www.breizhcamp.org/conference/programme',
-        video:
-          'https://www.youtube.com/watch?v=Tq2-6jfBbOY&ab_channel=C%C3%A9lineLouvet',
-      },
-      pictureId: 'breizhcamp2023-Event_driven',
-    },
-    {
-      subjectId: 'permissions_mysteries',
-      conventionId: 'cloud_est_2023',
-      when: '2023-06-20',
-      links: {
-        program: 'https://cloudest-event.fr',
-        feedbacks:
-          'https://openfeedback.io/lSG3Xl5ALpXqswcFPcu2/2023-05-26/fILn5VfKXqQfzKLsI4a5',
-        video:
-          'https://www.youtube.com/watch?v=0d-_oSqOI68&ab_channel=C%C3%A9lineLouvet',
-      },
-      pictureId: 'cloudest2023-Permissions',
-    },
-    {
-      subjectId: 'permissions_mysteries',
-      conventionId: 'breizhcamp_2023',
-      when: '2023-06-30',
-      links: {
-        program: 'https://www.breizhcamp.org/conference/programme',
-        feedbacks:
-          'https://openfeedback.io/lSG3Xl5ALpXqswcFPcu2/2023-05-26/fILn5VfKXqQfzKLsI4a5',
-        video:
-          'https://www.youtube.com/watch?v=p4VT1DR2RdA&ab_channel=C%C3%A9lineLouvet',
-      },
-      pictureId: 'breizhcamp2023-Permissions',
-    },
-    {
-      subjectId: 'tired_women_revolution',
-      conventionId: 'paattern_talks_2023',
-      when: '2023-11-30',
-      links: {
-        program:
-          'https://www.linkedin.com/feed/update/urn:li:activity:7133839860397694977/',
-      },
-      pictureId: 'paatternTalks2023-Tired_women_revolution',
-    },
-    {
-      subjectId: 'podcast_developer_experience',
-      conventionId: 'online_developer_experience',
-      when: '2023-12-29',
-      links: {
-        audio: 'https://podcast.ausha.co/developer-experience/celine-louvet',
-      },
-      pictureId: 'podcast_devxp2023',
-    },
-    {
-      subjectId: 'podcast_avocado_growth',
-      conventionId: 'online_avocado_growth',
-      when: '2024-01-22',
-      links: {
-        audio:
-          'https://podcast.ausha.co/avocado-growth-portrait-tech/18-parcours-tech-celine',
-      },
-      pictureId: 'podcast_avocadogrowth2024',
-    },
-  ],
+  talks,
   educations: [
     {
       from: '2002',
