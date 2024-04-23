@@ -1,8 +1,7 @@
 import { Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
-
-import { talk } from '../data';
+import { highwayToFailTalkFr as talk } from '@/data/talks';
 
 export const content = (
   <SlideContent

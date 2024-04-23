@@ -2,9 +2,12 @@
   "subjects": "Sujets disponibles pour CFP",
   "toCome": "Conférences à venir",
   "alreadyDone": "Conférences & Interviews",
+  "notFound": "Sujet non trouvé",
   "talk": {
     "date": "D MMM YYYY",
     "more": "Voir plus",
     "less": "Voir moins"
-  }
+  },
+
+  "availableForCfp": "Disponible pour CFP"
 }

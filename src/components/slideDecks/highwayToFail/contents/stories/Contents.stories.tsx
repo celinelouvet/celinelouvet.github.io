@@ -2,7 +2,6 @@ import { type Meta, type StoryObj } from '@storybook/react';
 
 import { SlideDeck } from '@/components/core';
 
-import AbstractSlide from '../Abstract';
 import After1Slide from '../After1';
 import After2Slide from '../After2';
 import After3Slide from '../After3';
@@ -166,7 +165,6 @@ import Preface1Slide from '../Preface1';
 import Preface2Slide from '../Preface2';
 import Preface3Slide from '../Preface3';
 import Preface4Slide from '../Preface4';
-import PromotionLyonCraftSlide from '../PromotionLyonCraft';
 import SurverQRSlide from '../SurveyQR';
 import SurveyResultSlide from '../SurveyResult';
 import TimelineSlide from '../Timeline';
@@ -178,18 +176,6 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-export const Abstract: Story = {
-  args: {
-    slides: [AbstractSlide],
-  },
-};
-
-export const PromotionLyonCraft: Story = {
-  args: {
-    slides: [PromotionLyonCraftSlide],
-  },
-};
 
 export const MainTitle: Story = {
   args: {

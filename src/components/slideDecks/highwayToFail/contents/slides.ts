@@ -1,6 +1,5 @@
 'use client';
 
-import Abstract from './Abstract';
 import After1 from './After1';
 import After2 from './After2';
 import After3 from './After3';
@@ -164,7 +163,6 @@ import Preface1 from './Preface1';
 import Preface2 from './Preface2';
 import Preface3 from './Preface3';
 import Preface4 from './Preface4';
-import PromotionLyonCraft from './PromotionLyonCraft';
 import SurveyQR from './SurveyQR';
 import SurveyResult from './SurveyResult';
 import Timeline from './Timeline';
@@ -368,8 +366,5 @@ export const getSlides = () => {
     DuringHaskell13,
     DuringHaskell14,
     DuringHaskell15,
-
-    PromotionLyonCraft,
-    Abstract,
   ];
 };

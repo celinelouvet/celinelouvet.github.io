@@ -9,5 +9,6 @@ export { useSlideSize } from './useSlideSize.hook';
 export { useSortByConventions } from './useSortByConventions.hook';
 export { useSurvey } from './useSurvey.hook';
 export { useSurveyResults } from './useSurveyResults.hook';
+export { useTalk } from './useTalk.hook';
 export { useTalkSubjects } from './useTalkSubjects.hook';
 export { useWindowSize } from './useWindowSize.hook';
