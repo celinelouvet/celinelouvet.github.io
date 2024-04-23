@@ -8,6 +8,8 @@ import {
   asSurveyResults,
 } from '@/models';
 
+import { useSurveyInfos } from './useSurveyInfos.hook';
+
 type ReducedResults = Record<string, Record<string, number>>;
 type QuestionToShow = {
   id: string;
@@ -28,6 +30,7 @@ const reduceQuestion = (question: SurveyPollChoiceQuestion) =>
   question.choices.reduce(
     (accQuestion, choice) => {
       accQuestion[choice.value] = 0;
+
       return accQuestion;
     },
     {} as Record<string, number>
@@ -36,15 +39,41 @@ const reduceQuestion = (question: SurveyPollChoiceQuestion) =>
 const initiateResults = (questionsToShow: QuestionToShow[]) =>
   questionsToShow.reduce((acc: ReducedResults, { id, question }) => {
     acc[id] = { ...reduceQuestion(question) };
+
     return acc;
   }, {} as ReducedResults);
 
-export const useSurveyResults = ({ surveyId, questions }: SurveyPoll) => {
+const reduceResults = (
+  results: SurveyResult[],
+  questionsToShow: QuestionToShow[]
+): ReducedResults => {
+  const initialResults = initiateResults(questionsToShow);
+
+  return results.reduce((acc: ReducedResults, result: SurveyResult) => {
+    const { values } = result;
+
+    Object.entries(values).forEach(([id, value]) => {
+      const accQuestion = acc[id] as Record<string, number> | undefined;
+      if (accQuestion) {
+        const result = accQuestion[value] ?? 0;
+
+        accQuestion[value] = result + 1;
+      }
+    });
+    return acc;
+  }, initialResults);
+};
+
+export const useSurveyResults = (
+  { questions, surveyIds }: SurveyPoll,
+  talkSubjectId?: string | string[]
+) => {
   const [results, setResults] = useState<ReducedResults>({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
   const { get } = useApi();
+  const { surveyId } = useSurveyInfos(surveyIds, talkSubjectId);
 
   const questionsToShow = filterQuestionsToShow(questions);
 
@@ -65,22 +94,4 @@ export const useSurveyResults = ({ surveyId, questions }: SurveyPoll) => {
   }, [get, surveyId, loading, questionsToShow]);
 
   return { results, loading, error };
-};
-
-const reduceResults = (
-  results: SurveyResult[],
-  questionsToShow: QuestionToShow[]
-) => {
-  const initialResults = initiateResults(questionsToShow);
-
-  return results.reduce((acc: ReducedResults, result: SurveyResult) => {
-    const { values } = result;
-
-    Object.entries(values).forEach(([id, value]) => {
-      if (acc[id]) {
-        acc[id]![value] += 1;
-      }
-    });
-    return acc;
-  }, initialResults);
 };

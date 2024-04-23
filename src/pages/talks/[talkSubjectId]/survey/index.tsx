@@ -5,11 +5,11 @@ import { highwayToFailSurveyFr as survey } from '@/data/talks';
 
 export default function Page() {
   const router = useRouter();
+  const talkSubjectId = router.query.talkSubjectId;
 
-  console.log(router);
   return (
     <PageContainer>
-      <SurveyPoll survey={survey} />
+      <SurveyPoll survey={survey} talkSubjectId={talkSubjectId} />
     </PageContainer>
   );
 }

@@ -15,7 +15,8 @@
     "private": "Your answer will be kept private.",
     "submit": "Submit",
     "thanks": "Thank you for answering!",
-    "allVotes": "All votes cast:"
+    "allVotes": "All votes cast:",
+    "closed": "This survey is closed."
   },
   "blog": "Blog"
 }

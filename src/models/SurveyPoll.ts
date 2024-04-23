@@ -42,10 +42,16 @@ const SurveyPollQuestionSchema = z.discriminatedUnion('type', [
   SurveyPollSubmitQuestionSchema,
 ]);
 
+const SurveyByConventionSchema = z.object({
+  name: z.string(),
+  opensAt: z.string(),
+  closesAt: z.string(),
+});
+
 const SurveyPollSchema = z.object({
-  surveyId: z.string(),
   title: z.string(),
   questions: z.map(z.string(), SurveyPollQuestionSchema),
+  surveyIds: z.record(SurveyByConventionSchema),
 });
 
 export type SurveyPollChoice = z.infer<typeof SurveyPollChoiceSchema>;
@@ -60,3 +66,4 @@ export type SurveyPollSubmitQuestion = z.infer<
 >;
 export type SurveyPollQuestion = z.infer<typeof SurveyPollQuestionSchema>;
 export type SurveyPoll = z.infer<typeof SurveyPollSchema>;
+export type SurveyByConvention = z.infer<typeof SurveyByConventionSchema>;
