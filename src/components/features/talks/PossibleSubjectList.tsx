@@ -8,7 +8,7 @@ import { type TalkSubject } from '@/data';
 import { PossibleSubject } from './PossibleSubject';
 
 type PossibleSubjectListProps = {
-  subjects: TalkSubject[];
+  subjects: { subjectId: string; talkSubject: TalkSubject }[];
 };
 
 export const PossibleSubjectList: FC<PossibleSubjectListProps> = ({
@@ -25,8 +25,12 @@ export const PossibleSubjectList: FC<PossibleSubjectListProps> = ({
       <H2Heading>{t('subjects')}</H2Heading>
 
       <Stack spacing="6">
-        {subjects.map((subject, index) => (
-          <PossibleSubject key={index} subject={subject} />
+        {subjects.map(({ subjectId, talkSubject }, index) => (
+          <PossibleSubject
+            key={index}
+            subjectId={subjectId}
+            subject={talkSubject}
+          />
         ))}
       </Stack>
     </Box>
