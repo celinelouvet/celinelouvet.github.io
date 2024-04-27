@@ -4,7 +4,7 @@ import { type FC } from 'react';
 import { H2Heading } from '@/components/core';
 import { type ConventionTalk } from '@/data';
 
-import { TalkDetails } from '../talkDetails';
+import { TalkDetails } from './talkDetails';
 
 type TalkListProps = {
   talks: ConventionTalk[];

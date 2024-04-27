@@ -18,12 +18,16 @@ export const useSortByConventions = ({
   talks,
   talkSubjects,
 }: HookType) => {
-  const allConventionTalks = talks
-    .map((talk) => asConventionTalk({ talk, conventions, talkSubjects }))
-    .sort(({ when: when1 }, { when: when2 }) => dayjs(when2).diff(when1));
+  const allConventionTalks = talks.map((talk) =>
+    asConventionTalk({ talk, conventions, talkSubjects })
+  );
 
-  const alreadyDoneTalks = allConventionTalks.filter((talk) => isDone(talk));
-  const comingTalks = allConventionTalks.filter((talk) => !isDone(talk));
+  const alreadyDoneTalks = allConventionTalks
+    .filter((talk) => isDone(talk))
+    .sort(({ when: when1 }, { when: when2 }) => dayjs(when2).diff(when1));
+  const comingTalks = allConventionTalks
+    .filter((talk) => !isDone(talk))
+    .sort(({ when: when1 }, { when: when2 }) => dayjs(when1).diff(when2));
 
   return { alreadyDoneTalks, comingTalks };
 };

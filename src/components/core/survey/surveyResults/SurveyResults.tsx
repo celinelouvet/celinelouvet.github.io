@@ -14,13 +14,14 @@ import { type SurveyPoll, type SurveyPollChoiceQuestion } from '@/models';
 
 type SurveyResultsProps = {
   survey: SurveyPoll;
+  talkSubjectId?: string | string[];
 };
 
 export const SurveyResults = forwardRef<SurveyResultsProps, 'div'>(
-  ({ survey }, ref) => {
+  ({ survey, talkSubjectId }, ref) => {
     const styles = useStyleConfig('SurveyResults');
 
-    const { loading, results, error } = useSurveyResults(survey);
+    const { loading, results, error } = useSurveyResults(survey, talkSubjectId);
 
     if (error) return <Box>Erreur</Box>;
 

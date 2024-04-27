@@ -1,9 +1,9 @@
 import { Text } from '@chakra-ui/react';
 import { type FC } from 'react';
 
-import { type TalkProps } from './TalkDetails';
+import { type TalkDetailsProps } from './TalkDetails';
 
-export const ConventionName: FC<TalkProps> = ({ talk }) => {
+export const ConventionName: FC<TalkDetailsProps> = ({ talk }) => {
   const { name } = talk;
 
   if (!name) {

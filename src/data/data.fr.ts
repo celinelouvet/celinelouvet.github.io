@@ -359,6 +359,7 @@ const talks = [
     conventionId: 'lyoncraft_2024',
     when: '2024-04-08',
     links: {
+      program: 'https://lyon-craft.fr/#programme',
       feedbacks:
         'https://openfeedback.io/xWqPfTd7zpGKrzaETKQe/2024-04-08/NlYROGHjEggs75rLPsz4',
       video:
@@ -380,14 +381,18 @@ const talks = [
     subjectId: 'highway_to_fail',
     conventionId: 'devfest_lille_2024',
     when: '2024-06-06',
-    links: {},
+    links: {
+      program: 'https://devfest.gdglille.org/agenda/index.html',
+    },
     pictureId: 'lyoncraft2024-highway_to_fail',
   },
   {
     subjectId: 'highway_to_fail',
     conventionId: 'technwine_2024',
     when: '2024-06-18',
-    links: {},
+    links: {
+      program: 'https://technwine.fr/schedule',
+    },
     pictureId: 'lyoncraft2024-highway_to_fail',
   },
 ] satisfies Talk[];

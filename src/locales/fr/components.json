@@ -15,7 +15,8 @@
     "private": "Cette réponse restera confidentielle.",
     "submit": "Valider",
     "thanks": "Merci d'avoir répondu !",
-    "allVotes": "Votes exprimés :"
+    "allVotes": "Votes exprimés :",
+    "closed": "Le sondage est fermé."
   },
   "blog": "Blog"
 }

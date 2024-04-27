@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 
 import { PageContainer } from '@/components/core';
-import { Talk } from '@/components/features/talks';
+import { Talk } from '@/components/features/talk';
 import { useResume } from '@/hooks';
 
 export default function Page() {
