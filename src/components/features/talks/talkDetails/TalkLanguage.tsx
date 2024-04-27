@@ -7,9 +7,7 @@ export type TalkLanguageProps = {
   talk: { language: Convention['language'] };
 };
 
-export const TalkLanguage: FC<TalkLanguageProps> = ({ talk }) => {
-  const { language } = talk;
-
+export const TalkLanguage: FC<TalkLanguageProps> = ({ talk: { language } }) => {
   if (!language) {
     return null;
   }

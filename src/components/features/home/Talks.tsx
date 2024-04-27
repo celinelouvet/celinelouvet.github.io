@@ -7,18 +7,19 @@ import { H2Heading } from '@/components/core';
 import { type ConventionTalk, type Resume } from '@/data';
 import { useLogger, useSortByConventions } from '@/hooks';
 
-import { TalkDetails } from '../talkDetails';
-
-const TALKS_TO_SEE = 2;
+import { Talk } from './Talk';
 
 const key = ({ subjectId, conventionId }: ConventionTalk) => {
   return `${subjectId}-${conventionId}`;
 };
 
-const TalkList: FC<{ talks: ConventionTalk[]; title: string }> = ({
-  talks,
-  title,
-}) => {
+type TalkListProps = {
+  talks: ConventionTalk[];
+  title: string;
+  maxShow: number;
+};
+
+const TalkList: FC<TalkListProps> = ({ talks, title, maxShow }) => {
   const { log } = useLogger();
   const { t } = useTranslation('home', { keyPrefix: 'talks' });
 
@@ -31,8 +32,8 @@ const TalkList: FC<{ talks: ConventionTalk[]; title: string }> = ({
       <H2Heading>{title}</H2Heading>
 
       <Stack spacing="6">
-        {talks.slice(0, TALKS_TO_SEE).map((talk) => (
-          <TalkDetails key={key(talk)} talk={talk} />
+        {talks.slice(0, maxShow).map((talk) => (
+          <Talk key={key(talk)} talk={talk} />
         ))}
 
         <Button
@@ -58,8 +59,8 @@ export const Talks: FC<TalksProps> = ({ resume }) => {
 
   return (
     <>
-      <TalkList talks={comingTalks} title={t('toCome')} />
-      <TalkList talks={alreadyDoneTalks} title={t('alreadyDone')} />
+      <TalkList talks={comingTalks} title={t('toCome')} maxShow={5} />
+      <TalkList talks={alreadyDoneTalks} title={t('alreadyDone')} maxShow={2} />
     </>
   );
 };

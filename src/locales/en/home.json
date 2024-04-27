@@ -12,8 +12,12 @@
     "seeAllTalks": "See all talks",
     "talk": {
       "date": "MMM D YYYY",
-      "more": "View more",
-      "less": "View less"
+      "seeDescription": "See description",
+
+      "audio": "Audio",
+      "program": "Program",
+      "slides": "Slides",
+      "video": "Video"
     }
   }
 }

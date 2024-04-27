@@ -7,8 +7,8 @@ export type TalkProps = {
   talk: { topic: TalkSubject['topic'] };
 };
 
-export const TalkTopic: FC<TalkProps> = ({ talk }) => (
+export const TalkTopic: FC<TalkProps> = ({ talk: { topic } }) => (
   <Text as="span" marginRight="2">
-    {talk.topic}
+    {topic}
   </Text>
 );

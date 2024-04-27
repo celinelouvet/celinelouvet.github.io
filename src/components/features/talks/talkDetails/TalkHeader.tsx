@@ -16,6 +16,7 @@ export type TalkProps = {
 export const TalkHeader: FC<TalkProps> = ({ talk }) => {
   const { t } = useTranslation('components', { keyPrefix: 'talkDetails' });
 
+  const { when } = talk;
   return (
     <>
       <H3Heading>
@@ -24,7 +25,7 @@ export const TalkHeader: FC<TalkProps> = ({ talk }) => {
       </H3Heading>
       <Text>
         <ConventionName talk={talk} />
-        <DateText when={talk.when} dateFormat={t('date')} />
+        <DateText when={when} dateFormat={t('date')} />
       </Text>
     </>
   );
