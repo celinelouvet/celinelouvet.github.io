@@ -146,6 +146,7 @@ const conventions = new Map<string, Convention>([
   ['online_developer_experience', { name: 'Online', language: 'FR' }],
   ['online_avocado_growth', { name: 'Online', language: 'FR' }],
   ['lyoncraft_2024', { name: 'Lyon Craft 2024', language: 'FR' }],
+  ['yeeso', { name: 'IT Woman talk - YEESO', language: 'FR' }],
   ['devfest_lille_2024', { name: 'DevFest Lille 2024', language: 'FR' }],
   ['technwine_2024', { name: 'Tech n Wine 2024', language: 'FR' }],
 ]);
@@ -362,6 +363,16 @@ const talks = [
         'https://openfeedback.io/xWqPfTd7zpGKrzaETKQe/2024-04-08/NlYROGHjEggs75rLPsz4',
       video:
         'https://www.youtube.com/watch?v=wwD-g2MWEYQ&ab_channel=C%C3%A9lineLouvet',
+    },
+    pictureId: 'lyoncraft2024-highway_to_fail',
+  },
+  {
+    subjectId: 'highway_to_fail',
+    conventionId: 'yeeso',
+    when: '2024-04-30',
+    links: {
+      program:
+        'https://www.meetup.com/fr-FR/it-woman-by-yeeso/events/300187105/',
     },
     pictureId: 'lyoncraft2024-highway_to_fail',
   },
