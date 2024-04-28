@@ -77,23 +77,28 @@ const questions = new Map<string, SurveyPollQuestion>([
 ]);
 
 export const survey: SurveyPoll = {
-  surveyIds: {
-    lyoncraft_2024: {
+  surveys: [
+    {
       name: 'lyoncraft_2024',
       opensAt: '2024-04-08T08:30:00Z',
       closesAt: '2024-04-08T18:30:00Z',
     },
-    devfest_lille_2024: {
+    {
+      name: 'yeeso',
+      opensAt: '2024-04-30T08:30:00Z',
+      closesAt: '2024-05-01T00:00:00Z',
+    },
+    {
       name: 'devfest_lille_2024',
       opensAt: '2024-06-06T08:30:00Z',
       closesAt: '2024-06-07T18:30:00Z',
     },
-    technwine_2024: {
+    {
       name: 'technwine_2024',
       opensAt: '2024-06-18T08:30:00Z',
       closesAt: '2024-06-18T18:30:00Z',
     },
-  },
+  ],
   title: 'Highway to fail',
   questions,
 };

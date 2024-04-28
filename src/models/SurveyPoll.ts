@@ -51,7 +51,7 @@ const SurveyByConventionSchema = z.object({
 const SurveyPollSchema = z.object({
   title: z.string(),
   questions: z.map(z.string(), SurveyPollQuestionSchema),
-  surveyIds: z.record(SurveyByConventionSchema),
+  surveys: z.array(SurveyByConventionSchema),
 });
 
 export type SurveyPollChoice = z.infer<typeof SurveyPollChoiceSchema>;

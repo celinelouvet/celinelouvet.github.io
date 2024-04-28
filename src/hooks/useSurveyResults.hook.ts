@@ -1,14 +1,12 @@
 import { useEffect, useState } from 'react';
 
-import { useApi } from '@/hooks';
+import { useApi, useSurveyInfos } from '@/hooks';
 import {
   type SurveyPoll,
   type SurveyPollChoiceQuestion,
   type SurveyResult,
   asSurveyResults,
 } from '@/models';
-
-import { useSurveyInfos } from './useSurveyInfos.hook';
 
 type ReducedResults = Record<string, Record<string, number>>;
 type QuestionToShow = {
@@ -65,22 +63,33 @@ const reduceResults = (
 };
 
 export const useSurveyResults = (
-  { questions, surveyIds }: SurveyPoll,
-  talkSubjectId?: string | string[]
+  talkSubjectId?: string | string[],
+  conventionId?: string | string[]
 ) => {
+  const [surveyId, setSurveyId] = useState<string | null>(null);
+  const [surveyPoll, setSurveyPoll] = useState<SurveyPoll | null>(null);
   const [results, setResults] = useState<ReducedResults>({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-
   const { get } = useApi();
-  const { surveyId } = useSurveyInfos(surveyIds, talkSubjectId);
 
-  const questionsToShow = filterQuestionsToShow(questions);
+  const surveyInfos = useSurveyInfos(talkSubjectId, conventionId);
 
   useEffect(() => {
     if (!loading) return;
 
-    get(`/survey/${surveyId}`)
+    setSurveyId(surveyInfos.surveyId);
+    setSurveyPoll(surveyInfos.surveyPoll);
+
+    if (surveyInfos.surveyId === null || surveyInfos.surveyPoll === null) {
+      return;
+    }
+
+    const questionsToShow = filterQuestionsToShow(
+      surveyInfos.surveyPoll.questions
+    );
+
+    get(`/survey/${surveyInfos.surveyId}`)
       .then((res) => res.json())
       .then((data) => {
         const allSurveyResults = asSurveyResults(data);
@@ -91,7 +100,15 @@ export const useSurveyResults = (
       .catch(() => {
         setError(true);
       });
-  }, [get, surveyId, loading, questionsToShow]);
+  }, [
+    get,
+    setSurveyId,
+    setSurveyPoll,
+    setError,
+    loading,
+    surveyInfos.surveyId,
+    surveyInfos.surveyPoll,
+  ]);
 
-  return { results, loading, error };
+  return { surveyId, surveyPoll, results, loading, error };
 };

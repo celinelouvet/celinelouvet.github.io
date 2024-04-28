@@ -26,6 +26,7 @@ export const useTalk = (resume: Resume, talkSubjectId?: string | string[]) => {
   const isAvailableForCfp = resume.possibleTalkSubjects.includes(id);
 
   return {
+    talkSubjectId: id,
     talkSubject,
     isAvailableForCfp,
   };

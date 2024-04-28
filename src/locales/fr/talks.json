@@ -6,7 +6,11 @@
   "talk": {
     "date": "D MMM YYYY",
     "more": "Voir plus",
-    "less": "Voir moins"
+    "less": "Voir moins",
+
+    "surveys": {
+      "title": "Sondages"
+    }
   },
 
   "availableForCfp": "Disponible pour CFP"

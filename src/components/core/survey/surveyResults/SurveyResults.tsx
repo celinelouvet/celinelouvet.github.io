@@ -7,25 +7,33 @@ import {
   forwardRef,
   useStyleConfig,
 } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 
 import { H2Heading, SurveyResultsChoice } from '@/components/core';
 import { useSurveyResults } from '@/hooks';
-import { type SurveyPoll, type SurveyPollChoiceQuestion } from '@/models';
+import { type SurveyPollChoiceQuestion } from '@/models';
 
 type SurveyResultsProps = {
-  survey: SurveyPoll;
   talkSubjectId?: string | string[];
+  conventionId?: string | string[];
 };
 
 export const SurveyResults = forwardRef<SurveyResultsProps, 'div'>(
-  ({ survey, talkSubjectId }, ref) => {
+  ({ talkSubjectId, conventionId }, ref) => {
     const styles = useStyleConfig('SurveyResults');
+    const { t } = useTranslation('components', {
+      keyPrefix: 'survey',
+    });
 
-    const { loading, results, error } = useSurveyResults(survey, talkSubjectId);
+    const { surveyPoll, loading, results, error } = useSurveyResults(
+      talkSubjectId,
+      conventionId
+    );
 
-    if (error) return <Box>Erreur</Box>;
+    if (surveyPoll === null) return <Box>{t('noSurvey')}</Box>;
+    if (error) return <Box>{t('error')}</Box>;
 
-    const { title, questions } = survey;
+    const { title, questions } = surveyPoll;
 
     const questionsToShow = [...questions.entries()]
       .filter(([, question]) => question.type === 'choice')
