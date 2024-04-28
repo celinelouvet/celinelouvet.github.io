@@ -1,3 +1,5 @@
+import { type SurveyPoll } from '@/models';
+
 export type Certification = {
   topic: string;
   company: string;
@@ -52,6 +54,7 @@ export type Stack = {
 export type TalkSubject = {
   topic: string;
   descriptions?: string[];
+  survey?: SurveyPoll;
 };
 
 export type Talk = {
