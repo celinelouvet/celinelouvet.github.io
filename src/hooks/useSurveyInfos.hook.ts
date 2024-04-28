@@ -1,40 +1,85 @@
-import { type SurveyByConvention } from '@/models';
+import { type TalkSubject } from '@/data';
+import {
+  type SurveyByConvention,
+  type SurveyPoll,
+  SurveyState,
+} from '@/models';
 
-const getTalkSubjectId = (talkSubjectId?: string | string[]): string | null => {
-  if (!talkSubjectId) {
-    return null;
-  }
-  if (Array.isArray(talkSubjectId)) {
-    return talkSubjectId[0] ?? null;
-  }
+import { useResume } from './useResume.hook';
 
-  return talkSubjectId;
+const defaultSurveyId = 'default';
+const emptySurvey = {
+  surveyId: null,
+  surveyPoll: null,
+  state: SurveyState.InProgress,
 };
 
-const isOpen = (survey?: SurveyByConvention): boolean => {
-  if (!survey) {
-    return true;
+const getId = (id?: string | string[]): string | null => {
+  if (!id) {
+    return null;
   }
+  if (Array.isArray(id)) {
+    return id[0] ?? null;
+  }
+
+  return id;
+};
+
+const getState = (survey?: SurveyByConvention): SurveyState => {
+  if (!survey) {
+    return SurveyState.Unknown;
+  }
+
   const now = new Date();
   const startDate = new Date(survey.opensAt);
   const endDate = new Date(survey.closesAt);
-  return startDate <= now && now <= endDate;
+
+  if (startDate > now) {
+    return SurveyState.NotStarted;
+  }
+
+  if (endDate < now) {
+    return SurveyState.Completed;
+  }
+
+  return SurveyState.InProgress;
 };
 
 export const useSurveyInfos = (
-  surveyIds: Record<string, SurveyByConvention>,
-  talkSubjectId?: string | string[]
-): { surveyId: string; isOpen: boolean } => {
-  const defaultSurveyId = 'default';
-  const defaultSurveyInfos = { surveyId: defaultSurveyId, isOpen: true };
+  talkSubjectId?: string | string[],
+  conventionId?: string | string[]
+): {
+  surveyId: string | null;
+  surveyPoll: SurveyPoll | null;
+  state: SurveyState;
+} => {
+  const { talkSubjects } = useResume();
 
-  const id = getTalkSubjectId(talkSubjectId);
-
-  if (id === null) {
-    return defaultSurveyInfos;
+  const parsedTalkSubjectId = getId(talkSubjectId);
+  if (parsedTalkSubjectId === null) {
+    return emptySurvey;
+  }
+  const parsedConventionId = getId(conventionId);
+  if (parsedConventionId === null) {
+    return emptySurvey;
+  }
+  if (!talkSubjects.has(parsedTalkSubjectId)) {
+    return emptySurvey;
   }
 
-  const survey = surveyIds[id];
+  const { survey: surveyPoll } = talkSubjects.get(
+    parsedTalkSubjectId
+  ) as TalkSubject;
 
-  return { surveyId: survey?.name ?? defaultSurveyId, isOpen: isOpen(survey) };
+  if (!surveyPoll) {
+    return emptySurvey;
+  }
+
+  const survey = surveyPoll.surveys.find(({ name }) => name === conventionId);
+
+  return {
+    surveyId: survey?.name ?? defaultSurveyId,
+    surveyPoll,
+    state: getState(survey),
+  };
 };

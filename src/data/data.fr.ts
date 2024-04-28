@@ -4,6 +4,7 @@ import {
   type Talk,
   type TalkSubject,
 } from './models';
+import { highwayToFailSurveyFr } from './talks';
 
 const talkSubjects = new Map<string, TalkSubject>([
   ['gcp_datastore_search', { topic: 'Google Datastore & Search API' }],
@@ -104,6 +105,7 @@ const talkSubjects = new Map<string, TalkSubject>([
         'Fin 2017, je rejoignais 2 autres cofondateurs pour créer notre première startup. Et mi‑2019, nous mettions la clé sous la porte. Pourquoi ? Entre produit, technique, business et humain, il est parfois difficile d’ajuster le curseur.',
         'A travers mon retour d’expérience entrepreneuriale, je souhaite revenir sur certaines de nos erreurs et voir s’il aurait été possible de faire autrement. Peut‑être que cette introspection pleine d’honnêteté pourra vous permettre d’éviter certains écueils.',
       ],
+      survey: highwayToFailSurveyFr,
     },
   ],
 ]);

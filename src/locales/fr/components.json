@@ -11,12 +11,16 @@
     "less": "Voir moins"
   },
   "survey": {
+    "error": "Une erreur est survenue.",
+    "noSurvey": "Aucun sondage disponible pour cette conférence.",
     "optional": "Optionelle",
     "private": "Cette réponse restera confidentielle.",
     "submit": "Valider",
     "thanks": "Merci d'avoir répondu !",
     "allVotes": "Votes exprimés :",
-    "closed": "Le sondage est fermé."
+    "notYetOpened": "Le sondage n'est pas encore ouvert.",
+    "closed": "Le sondage est fermé.",
+    "results": "Résultats"
   },
   "blog": "Blog"
 }

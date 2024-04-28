@@ -24,6 +24,22 @@ module.exports = defineNextConfig({
         destination: '/storybook/index.html',
         permanent: true,
       },
+
+      {
+        source: '/yeeso',
+        destination: '/talks/highway_to_fail/yeeso',
+        permanent: false,
+      },
+      {
+        source: '/devfest',
+        destination: '/talks/highway_to_fail/devfest_lille_2024',
+        permanent: false,
+      },
+      {
+        source: '/technwine',
+        destination: '/talks/highway_to_fail/technwine_2024',
+        permanent: false,
+      },
     ];
   },
 

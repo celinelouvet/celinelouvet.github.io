@@ -1,19 +1,21 @@
 import {
   Box,
+  Button,
   Stack,
   StackItem,
   type StyleConfig,
   forwardRef,
   useStyleConfig,
 } from '@chakra-ui/react';
+import NextLink from 'next/link';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H2Heading } from '@/components/core';
-import { useApi, useLogger, useSurvey, useSurveyInfos } from '@/hooks';
+import { H2Heading, H3Heading } from '@/components/core';
+import { useApi, useLogger, useSurveyPoll } from '@/hooks';
 import {
-  type SurveyPoll as SurveyPollModel,
   type SurveyPollQuestion as SurveyPollQuestionModel,
+  SurveyState,
 } from '@/models';
 
 import { SurveyPollChoiceQuestion } from './SurveyPollChoiceQuestion';
@@ -58,19 +60,32 @@ const QuestionContent: FC<QuestionContentProps> = ({
 };
 
 type SurveyPollProps = {
-  survey: SurveyPollModel;
   talkSubjectId?: string | string[];
+  conventionId?: string | string[];
 };
 
 export const SurveyPoll = forwardRef<SurveyPollProps, 'div'>(
-  ({ survey: { title, questions, surveyIds }, talkSubjectId }, ref) => {
+  ({ talkSubjectId, conventionId }, ref) => {
     const { post } = useApi();
     const { log } = useLogger();
-    const { states, values, setState, setValue } = useSurvey(questions);
-    const { surveyId, isOpen } = useSurveyInfos(surveyIds, talkSubjectId);
-
     const { t } = useTranslation('components', { keyPrefix: 'survey' });
     const styles = useStyleConfig('SurveyPoll');
+
+    const {
+      surveyId,
+      surveyPoll,
+      surveyState,
+      states,
+      values,
+      setState,
+      setValue,
+    } = useSurveyPoll(talkSubjectId, conventionId);
+
+    if (surveyPoll === null || surveyId === null) {
+      return <Box>{t('noSurvey')}</Box>;
+    }
+
+    const { questions, title } = surveyPoll;
 
     const ifOptional = (current: string) => {
       const question = questions.get(current);
@@ -109,6 +124,38 @@ export const SurveyPoll = forwardRef<SurveyPollProps, 'div'>(
       log('Survey submitted', { title });
     };
 
+    const Unknown = <Box textAlign="center">{t('error')}</Box>;
+    const NotYetOpened = <Box textAlign="center">{t('notYetOpened')}</Box>;
+    const AlreadyClosed = (
+      <>
+        <Stack alignItems="center" gap="16">
+          <H3Heading>{t('closed')}</H3Heading>
+          <Button
+            as={NextLink}
+            href={`/talks/${talkSubjectId}/${conventionId}/results`}
+          >
+            {t('results')}
+          </Button>
+        </Stack>
+      </>
+    );
+    const Opened = (
+      <form>
+        <Stack spacing="4">
+          {[...questions.entries()].map(([key, question]) => (
+            <Box key={key} display={states.get(key) ? '' : 'none'}>
+              <QuestionContent
+                id={key}
+                question={question}
+                onAnswer={onAnswer}
+                onSubmit={onSubmit}
+              />
+            </Box>
+          ))}
+        </Stack>
+      </form>
+    );
+
     return (
       <Stack spacing="8" ref={ref} sx={styles}>
         <StackItem>
@@ -116,24 +163,10 @@ export const SurveyPoll = forwardRef<SurveyPollProps, 'div'>(
             {title}
           </H2Heading>
         </StackItem>
-        {isOpen ? (
-          <form>
-            <Stack spacing="4">
-              {[...questions.entries()].map(([key, question]) => (
-                <Box key={key} display={states.get(key) ? '' : 'none'}>
-                  <QuestionContent
-                    id={key}
-                    question={question}
-                    onAnswer={onAnswer}
-                    onSubmit={onSubmit}
-                  />
-                </Box>
-              ))}
-            </Stack>
-          </form>
-        ) : (
-          <Box textAlign="center">{t('closed')}</Box>
-        )}
+        {surveyState === SurveyState.Unknown ? Unknown : null}
+        {surveyState === SurveyState.NotStarted ? NotYetOpened : null}
+        {surveyState === SurveyState.InProgress ? Opened : null}
+        {surveyState === SurveyState.Completed ? AlreadyClosed : null}
       </Stack>
     );
   }

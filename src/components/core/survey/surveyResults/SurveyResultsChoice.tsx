@@ -52,12 +52,13 @@ export const SurveyResultsChoice = forwardRef<SurveyResultsChoiceProps, 'div'>(
     if (!results) return null;
 
     const total = Object.values(results).reduce((acc, value) => acc + value, 0);
-    const data = question.choices.map(({ text, value, color }) => ({
-      text,
-      value: results[value] ?? 0,
-      percentage: Math.round(((results[value] ?? 0) / total) * 100),
-      color,
-    }));
+    const data = question.choices.map(({ text, value, color }) => {
+      const newValue = results[value] ?? 0;
+      const percentage =
+        newValue !== 0 ? Math.round((newValue / total) * 100) : 0;
+
+      return { text, value: newValue, percentage, color };
+    });
 
     const { title } = question;
     return (
