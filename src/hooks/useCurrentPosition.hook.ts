@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react';
 
-const previousKeys = ['ArrowLeft', 'ArrowUp'];
-const nextKeys = ['ArrowRight', 'ArrowDown', ' '];
+const previousKeys = ['ArrowLeft', 'ArrowUp', 'PageUp'];
+const nextKeys = ['ArrowRight', 'ArrowDown', 'PageDown', ' '];
 const defaultPosition = 0;
 
 export const useCurrentPosition = (length: number) => {
