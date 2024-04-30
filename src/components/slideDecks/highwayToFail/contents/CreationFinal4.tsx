@@ -24,9 +24,7 @@ export const content = (
         </ThumbsUp>
       </StackItem>
       <StackItem>
-        <ThumbsDown variant="slide">
-          La répartition est inégale, ils sont donc majoritaires.
-        </ThumbsDown>
+        <ThumbsDown variant="slide">La répartition est inégale.</ThumbsDown>
       </StackItem>
     </Stack>
   </SlideContent>

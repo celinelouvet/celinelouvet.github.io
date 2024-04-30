@@ -7,7 +7,7 @@ import { VerticalTimelineDuring } from '../components';
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="Type Driven Development"
+    title="Type-Driven Development"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
   >

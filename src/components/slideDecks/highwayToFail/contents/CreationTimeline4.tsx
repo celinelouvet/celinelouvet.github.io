@@ -18,7 +18,7 @@ export const content = (
   >
     <Stack spacing="2em" width="100%" height="100%">
       <ThumbsDown variant="slide">Manque d’expérience en startup</ThumbsDown>
-      <ThumbsDown variant="slide">Ne sait pas dire NON</ThumbsDown>
+      <ThumbsDown variant="slide">Je ne sais pas dire NON</ThumbsDown>
     </Stack>
   </SlideContent>
 );

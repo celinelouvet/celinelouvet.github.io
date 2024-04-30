@@ -12,7 +12,7 @@ export const content = (
     column1={<VerticalTimelineCreation />}
     column2={
       <Box width="100%" height="100%">
-        <Text>Ils ont:</Text>
+        <Text>Ils ont :</Text>
         <UnorderedList paddingLeft="1em">
           <ListItem>l’idée,</ListItem>
           <ListItem>fait une étude de marché,</ListItem>

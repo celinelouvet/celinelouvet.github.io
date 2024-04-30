@@ -16,7 +16,7 @@ export const content = (
       <Text>Clients de type TPE et PME</Text>
 
       <Stack spacing="0.5em">
-        <Text as="span">Motivation éthique: 1 avis = 1 micro-don</Text>
+        <Text as="span">Motivation éthique : 1 avis = 1 micro-don</Text>
 
         <Flex alignItems="center" gap="0.5em" marginLeft="1em">
           <Icon as={BsArrowReturnRight} />
