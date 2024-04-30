@@ -165,7 +165,6 @@ import Preface1Slide from '../Preface1';
 import Preface2Slide from '../Preface2';
 import Preface3Slide from '../Preface3';
 import Preface4Slide from '../Preface4';
-import SurverQRSlide from '../SurveyQR';
 import SurveyResultSlide from '../SurveyResult';
 import TimelineSlide from '../Timeline';
 
@@ -181,13 +180,6 @@ export const MainTitle: Story = {
   args: {
     forNotes: true,
     slides: [MainTitleSlide],
-  },
-};
-
-export const SurveyQR: Story = {
-  args: {
-    forNotes: true,
-    slides: [SurverQRSlide],
   },
 };
 

@@ -163,14 +163,12 @@ import Preface1 from './Preface1';
 import Preface2 from './Preface2';
 import Preface3 from './Preface3';
 import Preface4 from './Preface4';
-import SurveyQR from './SurveyQR';
 import SurveyResult from './SurveyResult';
 import Timeline from './Timeline';
 
 export const getSlides = () => {
   return [
     MainTitle,
-    SurveyQR,
 
     Fairvioo1,
     Fairvioo2,
