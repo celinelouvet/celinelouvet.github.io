@@ -1,4 +1,4 @@
-import { ListItem, Text, UnorderedList } from '@chakra-ui/react';
+import { Stack, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -11,11 +11,9 @@ export const content = (
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
   >
-    <Text>Version simplifiée, pour avancer vite:</Text>
-    <UnorderedList paddingLeft="1em">
-      <ListItem>un design allégé,</ListItem>
-      <ListItem>un email pré-rempli pour le formulaire de contact.</ListItem>
-    </UnorderedList>
+    <Stack width="100%" gap="1em">
+      <Text>Version simplifiée, pour avancer vite :</Text>
+    </Stack>
   </SlideContent>
 );
 
@@ -25,11 +23,6 @@ const note = (
       Pour avancer vite, je vais suggérer de faire une version simplifiée qu’on
       enrichira ensuite.
     </Text>
-    <Text>
-      Donc je prévois un design allégé et le formulaire de contact est remplacé
-      par un email pré-rempli.
-    </Text>
-    <Text>Ils sont d’accord.</Text>
   </SlideNote>
 );
 

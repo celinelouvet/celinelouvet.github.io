@@ -1,17 +1,6 @@
-import {
-  ListItem,
-  Stack,
-  StackItem,
-  Text,
-  UnorderedList,
-} from '@chakra-ui/react';
+import { ListItem, Text, UnorderedList } from '@chakra-ui/react';
 
-import {
-  SlideContent,
-  SlideContentTypes,
-  SlideNote,
-  ThumbsUp,
-} from '@/components/core';
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
 import { VerticalTimelineDuring } from '../components';
 
@@ -28,22 +17,12 @@ export const content = (
         <ListItem>Firebase.</ListItem>
       </UnorderedList>
     }
-  >
-    <Stack gap="1em">
-      <StackItem>
-        <ThumbsUp variant="slide">Ça ne coûte rien.</ThumbsUp>
-      </StackItem>
-    </Stack>
-  </SlideContent>
+  ></SlideContent>
 );
 
 const note = (
   <SlideNote>
-    <Text>
-      Avantage important, le système de quota de Firebase et notre utilisation
-      fait que c’est gratuit pour le moment.
-    </Text>
-    <Text>Parfait.</Text>
+    <Text>Je vais héberger tout ça sur du Firebase.</Text>
   </SlideNote>
 );
 

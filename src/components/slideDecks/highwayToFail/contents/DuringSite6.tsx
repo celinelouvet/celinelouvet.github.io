@@ -25,8 +25,7 @@ export const content = (
       <UnorderedList paddingLeft="1em">
         <ListItem>Javascript,</ListItem>
         <ListItem>VueJs,</ListItem>
-        <ListItem>Firebase,</ListItem>
-        <ListItem>CircleCI.</ListItem>
+        <ListItem>Firebase.</ListItem>
       </UnorderedList>
     }
   >
