@@ -18,6 +18,9 @@ const meta = {
 } satisfies Meta<typeof SlideContentComponent>;
 
 export default meta;
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 type Story = StoryObj<typeof meta>;
 
 export const ContentWith2ColumnsLight: Story = {

@@ -24,8 +24,7 @@ export const content = (
         textAlign="center"
       >
         <Text>
-          Une répartition inégale amènera pratiquement toujours un rapport de
-          force inégal.
+          Une répartition inégale amènera souvent un rapport de force inégal.
         </Text>
       </Flex>
     </Flex>
@@ -36,8 +35,7 @@ const note = (
   <SlideNote>
     <Text>En y repensant, je suis persuadée que</Text>
     <Text>
-      Une répartition inégale amènera pratiquement toujours un rapport de force
-      inégal.
+      Une répartition inégale amènera souvent un rapport de force inégal.
     </Text>
     <Text>Pensez-y en vous associant.</Text>
   </SlideNote>
