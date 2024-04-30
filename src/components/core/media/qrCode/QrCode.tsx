@@ -39,7 +39,10 @@ export const QrCode = forwardRef<QrCodeProps, 'img'>(
 );
 
 export const qrCodeStyles = {
-  baseStyle: {},
+  baseStyle: {
+    width: '100%',
+    height: '100%',
+  },
   variants: {
     light: {},
     dark: {},
