@@ -14,6 +14,9 @@ export const content = (
     <Box width="100%" height="100%">
       <UnorderedList paddingLeft="1em">
         <ListItem>2 hommes (~25 ans),</ListItem>
+        <ListItem>se connaissent très bien,</ListItem>
+        <ListItem>XP dans des grands groupes,</ListItem>
+        <ListItem>au chômage et au RSA,</ListItem>
       </UnorderedList>
     </Box>
   </SlideContent>
@@ -24,6 +27,9 @@ const note = (
     <Text>Il s’agit de :</Text>
     <UnorderedList paddingLeft="1em">
       <ListItem>2 hommes,</ListItem>
+      <ListItem>qui se connaissent très bien,</ListItem>
+      <ListItem>ils ont de l’XP dans des grands groupes,</ListItem>
+      <ListItem>l’un est au chômage et l’autre au RSA,</ListItem>
     </UnorderedList>
   </SlideNote>
 );
