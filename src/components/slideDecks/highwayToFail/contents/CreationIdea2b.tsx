@@ -6,7 +6,12 @@ import {
   UnorderedList,
 } from '@chakra-ui/react';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+  ThumbsUp,
+} from '@/components/core';
 
 import { VerticalTimelineCreation } from '../components';
 
@@ -31,6 +36,9 @@ export const content = (
           </ListItem>
         </UnorderedList>
       </StackItem>
+      <StackItem>
+        <ThumbsUp variant="slide">Ça me parait être une bonne idée !</ThumbsUp>
+      </StackItem>
     </Stack>
   </SlideContent>
 );
@@ -38,20 +46,7 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>
-      L’objectif est de profiter de la mise en place d’une nouvelle loi. Jusqu’à
-      cette loi, les faux avis pullulaient sur les plateformes.
-    </Text>
-    <Text>
-      Nous sommes en décembre 2017 et cette loi entre en vigueur le 1er janvier
-      2018.
-    </Text>
-    <Text>
-      Elle va imposer à tous les e-commerces d’avoir des avis de clients
-      vérifiés.
-    </Text>
-    <Text>
-      Par « vérifié », on entend un client ayant vraiment acheté un produit chez
-      ce commerçant.
+      Ça me parait une bonne opportunité de profiter de cette nouvelle loi.
     </Text>
   </SlideNote>
 );
