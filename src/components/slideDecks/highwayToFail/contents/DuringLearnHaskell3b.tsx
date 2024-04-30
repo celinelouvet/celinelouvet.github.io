@@ -22,6 +22,7 @@ export const content = (
         <Code variant="inlineSlide">{`:>`}</Code>,{' '}
         <Code variant="inlineSlide">{`:<|>`}</Code>, etc.),
       </ListItem>
+      <ListItem>Penser de manière fonctionnelle,</ListItem>
     </UnorderedList>
   </SlideContent>
 );
@@ -29,8 +30,8 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>
-      Alors oui, la syntaxe est vraiment différente, avec ce que je vais appeler
-      des symboles cabalistiques.
+      Mais c’est aussi un langage qui demander de penser vraiment de manière
+      fonctionnelle.
     </Text>
   </SlideNote>
 );
