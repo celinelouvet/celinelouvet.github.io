@@ -135,6 +135,8 @@ import DuringPlatform5 from './DuringPlatform5';
 import DuringSectionTitle from './DuringSectionTitle';
 import DuringSeed1 from './DuringSeed1';
 import DuringSeed2 from './DuringSeed2';
+import DuringSeed2b from './DuringSeed2b';
+import DuringSeed2c from './DuringSeed2c';
 import DuringSeed3 from './DuringSeed3';
 import DuringSeed4 from './DuringSeed4';
 import DuringSeed5 from './DuringSeed5';
@@ -401,6 +403,8 @@ export const getSlides = () => {
 
     DuringSeed1,
     DuringSeed2,
+    DuringSeed2b,
+    DuringSeed2c,
     DuringSeed3,
     DuringSeed4,
     DuringSeed5,

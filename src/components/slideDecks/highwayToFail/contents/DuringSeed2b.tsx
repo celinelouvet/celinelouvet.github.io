@@ -1,4 +1,4 @@
-import { Text } from '@chakra-ui/react';
+import { ListItem, Text, UnorderedList } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -12,12 +12,17 @@ export const content = (
     column1={<VerticalTimelineDuring />}
   >
     <Text>2 choses recherchées par les business angels :</Text>
+    <UnorderedList paddingLeft="1em">
+      <ListItem>Un produit coup de cœur ou révolutionnaire</ListItem>
+    </UnorderedList>
   </SlideContent>
 );
 
 const note = (
   <SlideNote>
-    <Text>Les business angels tendent à rechercher 2 choses.</Text>
+    <Text>
+      Soit votre produit les touche personnellement, ou est révolutionnaire,
+    </Text>
   </SlideNote>
 );
 
