@@ -22,6 +22,9 @@ export const content = (
         <Code variant="inlineSlide">{`:>`}</Code>,{' '}
         <Code variant="inlineSlide">{`:<|>`}</Code>, etc.),
       </ListItem>
+      <ListItem>Penser de manière fonctionnelle,</ListItem>
+      <ListItem>Pure / IO,</ListItem>
+      <ListItem>Documentation parfois complexe à comprendre.</ListItem>
     </UnorderedList>
   </SlideContent>
 );
@@ -29,8 +32,9 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>
-      Alors oui, la syntaxe est vraiment différente, avec ce que je vais appeler
-      des symboles cabalistiques.
+      Et la documentation, bien que très complète, est parfois complexe à
+      comprendre. Et je ne vous parle pas des réponses sur StackOverflow… où je
+      comprends les mots, mais pas les phrases qui les utilisent.
     </Text>
   </SlideNote>
 );

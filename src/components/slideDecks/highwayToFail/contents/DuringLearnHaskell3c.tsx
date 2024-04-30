@@ -22,6 +22,8 @@ export const content = (
         <Code variant="inlineSlide">{`:>`}</Code>,{' '}
         <Code variant="inlineSlide">{`:<|>`}</Code>, etc.),
       </ListItem>
+      <ListItem>Penser de manière fonctionnelle,</ListItem>
+      <ListItem>Pure / IO,</ListItem>
     </UnorderedList>
   </SlideContent>
 );
@@ -29,8 +31,8 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>
-      Alors oui, la syntaxe est vraiment différente, avec ce que je vais appeler
-      des symboles cabalistiques.
+      La gestion de l’IO est vraiment particulière et volontairement désagréable
+      pour qu’on l’évite autant que possible.
     </Text>
   </SlideNote>
 );

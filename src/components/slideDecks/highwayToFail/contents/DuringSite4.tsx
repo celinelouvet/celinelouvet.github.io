@@ -14,8 +14,6 @@ export const content = (
       <UnorderedList paddingLeft="1em">
         <ListItem>Javascript,</ListItem>
         <ListItem>VueJs,</ListItem>
-        <ListItem>Firebase,</ListItem>
-        <ListItem>CircleCI.</ListItem>
       </UnorderedList>
     }
   ></SlideContent>
@@ -25,10 +23,6 @@ const note = (
   <SlideNote>
     <Text>Je démarre donc.</Text>
     <Text>J’ai une stack avec VueJs déjà disponible, donc je m’en sers.</Text>
-    <Text>
-      Je vais héberger tout ça sur du Firebase et utiliser CircleCI pour le
-      build.
-    </Text>
   </SlideNote>
 );
 

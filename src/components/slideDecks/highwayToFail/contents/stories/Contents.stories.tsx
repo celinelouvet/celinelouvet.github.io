@@ -22,7 +22,10 @@ import BeforeCC3Slide from '../BeforeCC3';
 import BeforeCC4Slide from '../BeforeCC4';
 import BeforeCC5Slide from '../BeforeCC5';
 import BeforeMe1Slide from '../BeforeMe1';
+import BeforeMe1bSlide from '../BeforeMe1b';
 import BeforeMe2Slide from '../BeforeMe2';
+import BeforeMe2bSlide from '../BeforeMe2b';
+import BeforeMe2cSlide from '../BeforeMe2c';
 import BeforeMe3Slide from '../BeforeMe3';
 import BeforeSectionTitleSlide from '../BeforeSectionTitle';
 import CreationContact1Slide from '../CreationContact1';
@@ -102,7 +105,6 @@ import DuringHaskellConsequences4Slide from '../DuringHaskellConsequences4';
 import DuringHaskellConsequences5Slide from '../DuringHaskellConsequences5';
 import DuringHaskellConsequences6Slide from '../DuringHaskellConsequences6';
 import DuringHaskellConsequences7Slide from '../DuringHaskellConsequences7';
-import DuringHaskellConsequences8Slide from '../DuringHaskellConsequences8';
 import DuringLearnHaskell1Slide from '../DuringLearnHaskell1';
 import DuringLearnHaskell2Slide from '../DuringLearnHaskell2';
 import DuringLearnHaskell3Slide from '../DuringLearnHaskell3';
@@ -285,9 +287,27 @@ export const BeforeMe1: Story = {
   },
 };
 
+export const BeforeMe1b: Story = {
+  args: {
+    slides: [BeforeMe1bSlide],
+  },
+};
+
 export const BeforeMe2: Story = {
   args: {
     slides: [BeforeMe2Slide],
+  },
+};
+
+export const BeforeMe2b: Story = {
+  args: {
+    slides: [BeforeMe2bSlide],
+  },
+};
+
+export const BeforeMe2c: Story = {
+  args: {
+    slides: [BeforeMe2cSlide],
   },
 };
 
@@ -1019,12 +1039,6 @@ export const DuringHaskellConsequences6: Story = {
 export const DuringHaskellConsequences7: Story = {
   args: {
     slides: [DuringHaskellConsequences7Slide],
-  },
-};
-
-export const DuringHaskellConsequences8: Story = {
-  args: {
-    slides: [DuringHaskellConsequences8Slide],
   },
 };
 

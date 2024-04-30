@@ -20,7 +20,10 @@ import BeforeCC3 from './BeforeCC3';
 import BeforeCC4 from './BeforeCC4';
 import BeforeCC5 from './BeforeCC5';
 import BeforeMe1 from './BeforeMe1';
+import BeforeMe1b from './BeforeMe1b';
 import BeforeMe2 from './BeforeMe2';
+import BeforeMe2b from './BeforeMe2b';
+import BeforeMe2c from './BeforeMe2c';
 import BeforeMe3 from './BeforeMe3';
 import BeforeSectionTitle from './BeforeSectionTitle';
 import CreationContact1 from './CreationContact1';
@@ -36,7 +39,9 @@ import CreationFinal7 from './CreationFinal7';
 import CreationFinal8 from './CreationFinal8';
 import CreationIdea1 from './CreationIdea1';
 import CreationIdea2 from './CreationIdea2';
+import CreationIdea2b from './CreationIdea2b';
 import CreationIdea3 from './CreationIdea3';
+import CreationIdea3b from './CreationIdea3b';
 import CreationIdea4 from './CreationIdea4';
 import CreationIdea5 from './CreationIdea5';
 import CreationIdea6 from './CreationIdea6';
@@ -50,9 +55,19 @@ import CreationMarket4 from './CreationMarket4';
 import CreationMarket5 from './CreationMarket5';
 import CreationMarket6 from './CreationMarket6';
 import CreationMeeting1 from './CreationMeeting1';
+import CreationMeeting1b from './CreationMeeting1b';
+import CreationMeeting1c from './CreationMeeting1c';
+import CreationMeeting1d from './CreationMeeting1d';
+import CreationMeeting1e from './CreationMeeting1e';
+import CreationMeeting1f from './CreationMeeting1f';
 import CreationMeeting2 from './CreationMeeting2';
 import CreationMeeting3 from './CreationMeeting3';
 import CreationMeeting4 from './CreationMeeting4';
+import CreationMeeting4b from './CreationMeeting4b';
+import CreationMeeting4c from './CreationMeeting4c';
+import CreationMeeting4d from './CreationMeeting4d';
+import CreationMeeting4e from './CreationMeeting4e';
+import CreationMeeting4f from './CreationMeeting4f';
 import CreationMeeting5 from './CreationMeeting5';
 import CreationMeeting6 from './CreationMeeting6';
 import CreationSectionTitle from './CreationSectionTitle';
@@ -100,13 +115,18 @@ import DuringHaskellConsequences4 from './DuringHaskellConsequences4';
 import DuringHaskellConsequences5 from './DuringHaskellConsequences5';
 import DuringHaskellConsequences6 from './DuringHaskellConsequences6';
 import DuringHaskellConsequences7 from './DuringHaskellConsequences7';
-import DuringHaskellConsequences8 from './DuringHaskellConsequences8';
 import DuringLearnHaskell1 from './DuringLearnHaskell1';
 import DuringLearnHaskell2 from './DuringLearnHaskell2';
 import DuringLearnHaskell3 from './DuringLearnHaskell3';
+import DuringLearnHaskell3b from './DuringLearnHaskell3b';
+import DuringLearnHaskell3c from './DuringLearnHaskell3c';
+import DuringLearnHaskell3d from './DuringLearnHaskell3d';
 import DuringLearnHaskell4 from './DuringLearnHaskell4';
 import DuringLearnHaskell5 from './DuringLearnHaskell5';
 import DuringLearnHaskell6 from './DuringLearnHaskell6';
+import DuringLearnHaskell6b from './DuringLearnHaskell6b';
+import DuringLearnHaskell6c from './DuringLearnHaskell6c';
+import DuringLearnHaskell6d from './DuringLearnHaskell6d';
 import DuringPlatform1 from './DuringPlatform1';
 import DuringPlatform2 from './DuringPlatform2';
 import DuringPlatform3 from './DuringPlatform3';
@@ -123,9 +143,17 @@ import DuringSeed7 from './DuringSeed7';
 import DuringSeed8 from './DuringSeed8';
 import DuringSeed9 from './DuringSeed9';
 import DuringSite1 from './DuringSite1';
+import DuringSite1b from './DuringSite1b';
+import DuringSite1c from './DuringSite1c';
+import DuringSite1d from './DuringSite1d';
+import DuringSite1e from './DuringSite1e';
 import DuringSite2 from './DuringSite2';
 import DuringSite3 from './DuringSite3';
+import DuringSite3b from './DuringSite3b';
+import DuringSite3c from './DuringSite3c';
+import DuringSite3d from './DuringSite3d';
 import DuringSite4 from './DuringSite4';
+import DuringSite4b from './DuringSite4b';
 import DuringSite5 from './DuringSite5';
 import DuringSite6 from './DuringSite6';
 import DuringSite7 from './DuringSite7';
@@ -134,9 +162,20 @@ import DuringSiteMvp10 from './DuringSiteMvp10';
 import DuringSiteMvp11 from './DuringSiteMvp11';
 import DuringSiteMvp2 from './DuringSiteMvp2';
 import DuringSiteMvp3 from './DuringSiteMvp3';
+import DuringSiteMvp3b from './DuringSiteMvp3b';
+import DuringSiteMvp3c from './DuringSiteMvp3c';
 import DuringSiteMvp4 from './DuringSiteMvp4';
+import DuringSiteMvp4b from './DuringSiteMvp4b';
+import DuringSiteMvp4c from './DuringSiteMvp4c';
+import DuringSiteMvp4d from './DuringSiteMvp4d';
+import DuringSiteMvp4e from './DuringSiteMvp4e';
+import DuringSiteMvp4f from './DuringSiteMvp4f';
+import DuringSiteMvp4g from './DuringSiteMvp4g';
+import DuringSiteMvp4h from './DuringSiteMvp4h';
+import DuringSiteMvp4i from './DuringSiteMvp4i';
 import DuringSiteMvp5 from './DuringSiteMvp5';
 import DuringSiteMvp6 from './DuringSiteMvp6';
+import DuringSiteMvp6b from './DuringSiteMvp6b';
 import DuringSiteMvp7 from './DuringSiteMvp7';
 import DuringSiteMvp8 from './DuringSiteMvp8';
 import DuringSiteMvp9 from './DuringSiteMvp9';
@@ -194,7 +233,10 @@ export const getSlides = () => {
 
     BeforeSectionTitle,
     BeforeMe1,
+    BeforeMe1b,
     BeforeMe2,
+    BeforeMe2b,
+    BeforeMe2c,
     BeforeMe3,
 
     BeforeCC1,
@@ -208,15 +250,27 @@ export const getSlides = () => {
     CreationContact2,
 
     CreationMeeting1,
+    CreationMeeting1b,
+    CreationMeeting1c,
+    CreationMeeting1d,
+    CreationMeeting1e,
+    CreationMeeting1f,
     CreationMeeting2,
     CreationMeeting3,
     CreationMeeting4,
+    CreationMeeting4b,
+    CreationMeeting4c,
+    CreationMeeting4d,
+    CreationMeeting4e,
+    CreationMeeting4f,
     CreationMeeting5,
     CreationMeeting6,
 
     CreationIdea1,
     CreationIdea2,
+    CreationIdea2b,
     CreationIdea3,
+    CreationIdea3b,
     CreationIdea4,
     CreationIdea5,
     CreationIdea6,
@@ -262,9 +316,17 @@ export const getSlides = () => {
     DuringDauphine4,
 
     DuringSite1,
+    DuringSite1b,
+    DuringSite1c,
+    DuringSite1d,
+    DuringSite1e,
     DuringSite2,
     DuringSite3,
+    DuringSite3b,
+    DuringSite3c,
+    DuringSite3d,
     DuringSite4,
+    DuringSite4b,
     DuringSite5,
     DuringSite6,
     DuringSite7,
@@ -272,9 +334,20 @@ export const getSlides = () => {
     DuringSiteMvp1,
     DuringSiteMvp2,
     DuringSiteMvp3,
+    DuringSiteMvp3b,
+    DuringSiteMvp3c,
     DuringSiteMvp4,
+    DuringSiteMvp4b,
+    DuringSiteMvp4c,
+    DuringSiteMvp4d,
+    DuringSiteMvp4e,
+    DuringSiteMvp4f,
+    DuringSiteMvp4g,
+    DuringSiteMvp4h,
+    DuringSiteMvp4i,
     DuringSiteMvp5,
     DuringSiteMvp6,
+    DuringSiteMvp6b,
     DuringSiteMvp7,
     DuringSiteMvp8,
     DuringSiteMvp9,
@@ -308,9 +381,15 @@ export const getSlides = () => {
     DuringLearnHaskell1,
     DuringLearnHaskell2,
     DuringLearnHaskell3,
+    DuringLearnHaskell3b,
+    DuringLearnHaskell3c,
+    DuringLearnHaskell3d,
     DuringLearnHaskell4,
     DuringLearnHaskell5,
     DuringLearnHaskell6,
+    DuringLearnHaskell6b,
+    DuringLearnHaskell6c,
+    DuringLearnHaskell6d,
 
     DuringHaskellConsequences1,
     DuringHaskellConsequences2,
@@ -319,7 +398,6 @@ export const getSlides = () => {
     DuringHaskellConsequences5,
     DuringHaskellConsequences6,
     DuringHaskellConsequences7,
-    DuringHaskellConsequences8,
 
     DuringSeed1,
     DuringSeed2,

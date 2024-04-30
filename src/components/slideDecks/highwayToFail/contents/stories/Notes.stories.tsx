@@ -102,7 +102,6 @@ import DuringHaskellConsequences4Slide from '../DuringHaskellConsequences4';
 import DuringHaskellConsequences5Slide from '../DuringHaskellConsequences5';
 import DuringHaskellConsequences6Slide from '../DuringHaskellConsequences6';
 import DuringHaskellConsequences7Slide from '../DuringHaskellConsequences7';
-import DuringHaskellConsequences8Slide from '../DuringHaskellConsequences8';
 import DuringLearnHaskell1Slide from '../DuringLearnHaskell1';
 import DuringLearnHaskell2Slide from '../DuringLearnHaskell2';
 import DuringLearnHaskell3Slide from '../DuringLearnHaskell3';
@@ -1161,13 +1160,6 @@ export const DuringHaskellConsequences7: Story = {
   args: {
     forNotes: true,
     slides: [DuringHaskellConsequences7Slide],
-  },
-};
-
-export const DuringHaskellConsequences8: Story = {
-  args: {
-    forNotes: true,
-    slides: [DuringHaskellConsequences8Slide],
   },
 };
 

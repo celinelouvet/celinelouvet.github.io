@@ -14,6 +14,8 @@ export const content = (
     <Stack spacing="1em">
       <OrderedList paddingLeft="1em">
         <ListItem>Définir les types de ce qu’on a</ListItem>
+        <ListItem>Définir les types de là où on veut aller</ListItem>
+        <ListItem>Laisser le compilateur guider le développement</ListItem>
       </OrderedList>
     </Stack>
   </SlideContent>

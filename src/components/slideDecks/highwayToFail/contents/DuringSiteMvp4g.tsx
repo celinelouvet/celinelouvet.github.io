@@ -13,9 +13,18 @@ export const content = (
     column2={
       <UnorderedList paddingLeft="1em">
         <ListItem>Google analytics,</ListItem>
+        <ListItem>du SEO,</ListItem>
+        <ListItem>du Prerendering,</ListItem>
+        <ListItem>des évènements Facebook,</ListItem>
+        <ListItem>des évènements LinkedIn,</ListItem>
+        <ListItem>des évènements Segment,</ListItem>
       </UnorderedList>
     }
-  ></SlideContent>
+  >
+    <UnorderedList paddingLeft="1em">
+      <ListItem>Zapier pour le formulaire de contact,</ListItem>
+    </UnorderedList>
+  </SlideContent>
 );
 
 const note = (

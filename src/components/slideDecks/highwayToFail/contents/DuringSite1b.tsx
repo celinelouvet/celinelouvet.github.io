@@ -1,4 +1,4 @@
-import { Stack, StackItem, Text } from '@chakra-ui/react';
+import { ListItem, Text, UnorderedList } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -7,24 +7,21 @@ import { VerticalTimelineDuring } from '../components';
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="Première perte de temps"
+    title="Le site vitrine"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
   >
-    <Stack gap="1em">
-      <StackItem>
-        <Text>Version simplifiée ne suffira pas</Text>
-      </StackItem>
-    </Stack>
+    <Text>Réalisation d’un site</Text>
+    <UnorderedList paddingLeft="1em">
+      <ListItem>exposer le produit,</ListItem>
+    </UnorderedList>
   </SlideContent>
 );
 
 const note = (
   <SlideNote>
-    <Text>
-      Je vais donc investir plus de temps pour pousser le CSS et ajouter des
-      fonctionnalités qui sont progressivement demandées.
-    </Text>
+    <Text>On va commencer par réaliser le site vitrine.</Text>
+    <Text>L’idée est de faire un site pour exposer notre produit,</Text>
   </SlideNote>
 );
 

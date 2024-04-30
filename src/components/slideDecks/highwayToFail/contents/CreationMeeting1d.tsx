@@ -1,4 +1,4 @@
-import { Box, Text } from '@chakra-ui/react';
+import { Box, ListItem, Text, UnorderedList } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -13,6 +13,11 @@ export const content = (
     column2={
       <Box width="100%" height="100%">
         <Text>Ils ont :</Text>
+        <UnorderedList paddingLeft="1em">
+          <ListItem>l’idée,</ListItem>
+          <ListItem>fait une étude de marché,</ListItem>
+          <ListItem>le moyen de se démarquer,</ListItem>
+        </UnorderedList>
       </Box>
     }
   ></SlideContent>
@@ -21,6 +26,11 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>Ils ont :</Text>
+    <UnorderedList paddingLeft="1em">
+      <ListItem>l’idée,</ListItem>
+      <ListItem>fait une étude de marché,</ListItem>
+      <ListItem>réfléchi à un moyen de se démarquer,</ListItem>
+    </UnorderedList>
   </SlideNote>
 );
 

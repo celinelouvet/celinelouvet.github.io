@@ -21,6 +21,7 @@ export const content = (
       <StackItem>
         <UnorderedList paddingLeft="1em">
           <ListItem>En couple, avec un enfant et un crédit bancaire</ListItem>
+          <ListItem>Déjà eu un burn‑out</ListItem>
         </UnorderedList>
       </StackItem>
     </Stack>
@@ -29,12 +30,7 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>
-      Je vais commencer par mon historique, car il va avoir un impact.
-    </Text>
-    <Text>
-      J’étais en couple, avec un enfant et un crédit bancaire à rembourser.
-    </Text>
+    <Text>J’avais déjà eu un burn‑out, jamais vraiment guéri.</Text>
   </SlideNote>
 );
 
