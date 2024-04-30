@@ -97,6 +97,42 @@ export const Title: Story = {
   },
 };
 
+export const FullContentLight: Story = {
+  args: {
+    type: SlideContentTypes.fullContent,
+    colormode: ColorMode.light,
+
+    children: (
+      <Box
+        width="100%"
+        height="100%"
+        border="1px solid"
+        borderColor="brand.500"
+      >
+        Content
+      </Box>
+    ),
+  },
+};
+
+export const FullContentDark: Story = {
+  args: {
+    type: SlideContentTypes.fullContent,
+    colormode: ColorMode.dark,
+
+    children: (
+      <Box
+        width="100%"
+        height="100%"
+        border="1px solid"
+        borderColor="brand.500"
+      >
+        Content
+      </Box>
+    ),
+  },
+};
+
 export const Promotion: Story = {
   args: {
     type: SlideContentTypes.promotion,

@@ -8,7 +8,12 @@ import {
 
 import { H2Heading } from '@/components/core';
 
-import { type ContentTitleWith2Columns } from '../../types';
+import {
+  ColorMode,
+  type ContentTitleWith2Columns,
+  SlideContentTypes,
+} from '../../types';
+import { SlideContentFullContent } from '../fullContent';
 
 type SlideContentTitleWith2ColumnsProps = StackProps & ContentTitleWith2Columns;
 
@@ -17,36 +22,38 @@ export const SlideContentTitleWith2Columns = forwardRef<
   'div'
 >(({ title, column1, children, ...props }, ref) => {
   return (
-    <Stack
-      width="100%"
-      height="100%"
-      padding="3em"
-      backgroundColor="brand.900"
-      color="brand.100"
-      alignItems="stretch"
-      spacing="1em"
-      overflow="hidden"
-      ref={ref}
+    <SlideContentFullContent
       {...props}
+      colormode={ColorMode.light}
+      ref={ref}
+      type={SlideContentTypes.fullContent}
     >
-      <StackItem>
-        <H2Heading>{title}</H2Heading>
-      </StackItem>
-
-      <HStack
+      <Stack
         width="100%"
         height="100%"
-        alignItems="flex-start"
-        gap="2%"
+        alignItems="stretch"
+        spacing="1em"
         overflow="hidden"
       >
-        <StackItem width="30%" height="100%">
-          {column1}
+        <StackItem>
+          <H2Heading>{title}</H2Heading>
         </StackItem>
-        <StackItem width="68%" height="100%">
-          {children}
-        </StackItem>
-      </HStack>
-    </Stack>
+
+        <HStack
+          width="100%"
+          height="100%"
+          alignItems="flex-start"
+          gap="2%"
+          overflow="hidden"
+        >
+          <StackItem width="30%" height="100%">
+            {column1}
+          </StackItem>
+          <StackItem width="68%" height="100%">
+            {children}
+          </StackItem>
+        </HStack>
+      </Stack>
+    </SlideContentFullContent>
   );
 });

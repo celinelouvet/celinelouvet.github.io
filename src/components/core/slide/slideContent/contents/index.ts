@@ -1,6 +1,7 @@
 export * from './abstract';
 export * from './content2Columns';
 export * from './endTitle';
+export * from './fullContent';
 export * from './introduction';
 export * from './mainTitle';
 export * from './promotion';
