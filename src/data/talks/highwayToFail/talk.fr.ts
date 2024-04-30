@@ -3,7 +3,7 @@ export const talk = {
   ou l’histoire d’un échec prévisible`,
   author: 'Céline LOUVET',
   descriptions: [
-    'Lead developer chez Shine',
+    'Lead developer',
     'Développeuse backend et architecture cloud',
     'Recherche de stabilité et de qualité',
   ],
