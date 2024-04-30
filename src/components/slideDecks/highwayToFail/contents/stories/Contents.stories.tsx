@@ -22,7 +22,10 @@ import BeforeCC3Slide from '../BeforeCC3';
 import BeforeCC4Slide from '../BeforeCC4';
 import BeforeCC5Slide from '../BeforeCC5';
 import BeforeMe1Slide from '../BeforeMe1';
+import BeforeMe1bSlide from '../BeforeMe1b';
 import BeforeMe2Slide from '../BeforeMe2';
+import BeforeMe2bSlide from '../BeforeMe2b';
+import BeforeMe2cSlide from '../BeforeMe2c';
 import BeforeMe3Slide from '../BeforeMe3';
 import BeforeSectionTitleSlide from '../BeforeSectionTitle';
 import CreationContact1Slide from '../CreationContact1';
@@ -285,9 +288,27 @@ export const BeforeMe1: Story = {
   },
 };
 
+export const BeforeMe1b: Story = {
+  args: {
+    slides: [BeforeMe1bSlide],
+  },
+};
+
 export const BeforeMe2: Story = {
   args: {
     slides: [BeforeMe2Slide],
+  },
+};
+
+export const BeforeMe2b: Story = {
+  args: {
+    slides: [BeforeMe2bSlide],
+  },
+};
+
+export const BeforeMe2c: Story = {
+  args: {
+    slides: [BeforeMe2cSlide],
   },
 };
 

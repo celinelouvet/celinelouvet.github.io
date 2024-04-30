@@ -20,7 +20,11 @@ export const content = (
     <Stack width="100%" gap="1em">
       <StackItem>
         <UnorderedList paddingLeft="1em">
-          <ListItem>En couple, avec un enfant et un crédit bancaire</ListItem>
+          <ListItem>
+            ESN toute ma carrière, beaucoup de régie (chez le client)
+          </ListItem>
+          <ListItem>Marre des gros clients et des cahiers des charges</ListItem>
+          <ListItem>Envie de choisir un projet qui me plaît</ListItem>
         </UnorderedList>
       </StackItem>
     </Stack>
@@ -30,10 +34,9 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>
-      Je vais commencer par mon historique, car il va avoir un impact.
-    </Text>
-    <Text>
-      J’étais en couple, avec un enfant et un crédit bancaire à rembourser.
+      Je me suis rarement sentie concernée par leurs produits. J’ai envie de
+      changer ça en choisissant un produit qui me plait, me motive et me pousse
+      à être pleinement impliquée.
     </Text>
   </SlideNote>
 );

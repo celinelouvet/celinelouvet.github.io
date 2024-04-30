@@ -20,7 +20,10 @@ import BeforeCC3 from './BeforeCC3';
 import BeforeCC4 from './BeforeCC4';
 import BeforeCC5 from './BeforeCC5';
 import BeforeMe1 from './BeforeMe1';
+import BeforeMe1b from './BeforeMe1b';
 import BeforeMe2 from './BeforeMe2';
+import BeforeMe2b from './BeforeMe2b';
+import BeforeMe2c from './BeforeMe2c';
 import BeforeMe3 from './BeforeMe3';
 import BeforeSectionTitle from './BeforeSectionTitle';
 import CreationContact1 from './CreationContact1';
@@ -194,7 +197,10 @@ export const getSlides = () => {
 
     BeforeSectionTitle,
     BeforeMe1,
+    BeforeMe1b,
     BeforeMe2,
+    BeforeMe2b,
+    BeforeMe2c,
     BeforeMe3,
 
     BeforeCC1,

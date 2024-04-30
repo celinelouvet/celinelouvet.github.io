@@ -20,7 +20,10 @@ export const content = (
     <Stack width="100%" gap="1em">
       <StackItem>
         <UnorderedList paddingLeft="1em">
-          <ListItem>En couple, avec un enfant et un crédit bancaire</ListItem>
+          <ListItem>
+            ESN toute ma carrière, beaucoup de régie (chez le client)
+          </ListItem>
+          <ListItem>Marre des gros clients et des cahiers des charges</ListItem>
         </UnorderedList>
       </StackItem>
     </Stack>
@@ -30,10 +33,8 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>
-      Je vais commencer par mon historique, car il va avoir un impact.
-    </Text>
-    <Text>
-      J’étais en couple, avec un enfant et un crédit bancaire à rembourser.
+      Chez beaucoup de gros clients. Ils ont de l’argent et des cahiers des
+      charges parfois monstrueux.
     </Text>
   </SlideNote>
 );

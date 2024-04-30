@@ -23,8 +23,6 @@ export const content = (
           <ListItem>
             ESN toute ma carrière, beaucoup de régie (chez le client)
           </ListItem>
-          <ListItem>Marre des gros clients et des cahiers des charges</ListItem>
-          <ListItem>Envie de choisir un projet qui me plaît</ListItem>
         </UnorderedList>
       </StackItem>
     </Stack>
@@ -36,15 +34,6 @@ const note = (
     <Text>
       A ce moment-là, j’ai effectué toute ma carrière en ESN et j’ai envie de
       quitter ce monde-là.
-    </Text>
-    <Text>
-      Chez beaucoup de gros clients. Ils ont de l’argent et des cahiers des
-      charges parfois monstrueux.
-    </Text>
-    <Text>
-      Je me suis rarement sentie concernée par leurs produits. J’ai envie de
-      changer ça en choisissant un produit qui me plait, me motive et me pousse
-      à être pleinement impliquée.
     </Text>
   </SlideNote>
 );
