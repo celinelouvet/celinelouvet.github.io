@@ -152,7 +152,6 @@ import Fairvioo1 from './Fairvioo1';
 import Fairvioo2 from './Fairvioo2';
 import Fairvioo3 from './Fairvioo3';
 import Fairvioo4 from './Fairvioo4';
-import FeedbacksQR from './FeedbacksQR';
 import Introduction from './Introduction';
 import MainTitle from './MainTitle';
 import Numbers1 from './Numbers1';
@@ -344,8 +343,6 @@ export const getSlides = () => {
     After5,
     After6,
     After7,
-
-    FeedbacksQR,
 
     EndTitle,
 
