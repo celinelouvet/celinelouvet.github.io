@@ -6,8 +6,9 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 import { VerticalTimelineCreation } from '../components';
 
 const data = [
-  { title: `50%`, value: 50, color: '#4990bf' },
-  { title: `50%`, value: 50, color: '#94beda' },
+  { title: `20%`, value: 20, color: '#1f435a' },
+  { title: `40%`, value: 40, color: '#4990bf' },
+  { title: `40%`, value: 40, color: '#94beda' },
 ];
 
 export const content = (
@@ -28,7 +29,7 @@ export const content = (
             fontFamily: 'nunito',
             fontWeight: 'bold',
           }}
-          startAngle={225}
+          startAngle={189}
           radius={42}
         />
       </Box>

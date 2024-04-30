@@ -29,6 +29,7 @@ import CreationContact1Slide from '../CreationContact1';
 import CreationContact2Slide from '../CreationContact2';
 import CreationFinal1Slide from '../CreationFinal1';
 import CreationFinal2Slide from '../CreationFinal2';
+import CreationFinal2bSlide from '../CreationFinal2b';
 import CreationFinal3Slide from '../CreationFinal3';
 import CreationFinal4Slide from '../CreationFinal4';
 import CreationFinal5Slide from '../CreationFinal5';
@@ -502,6 +503,12 @@ export const CreationFinal1: Story = {
 export const CreationFinal2: Story = {
   args: {
     slides: [CreationFinal2Slide],
+  },
+};
+
+export const CreationFinal2b: Story = {
+  args: {
+    slides: [CreationFinal2bSlide],
   },
 };
 

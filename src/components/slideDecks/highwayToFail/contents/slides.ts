@@ -27,6 +27,7 @@ import CreationContact1 from './CreationContact1';
 import CreationContact2 from './CreationContact2';
 import CreationFinal1 from './CreationFinal1';
 import CreationFinal2 from './CreationFinal2';
+import CreationFinal2b from './CreationFinal2b';
 import CreationFinal3 from './CreationFinal3';
 import CreationFinal4 from './CreationFinal4';
 import CreationFinal5 from './CreationFinal5';
@@ -236,6 +237,7 @@ export const getSlides = () => {
 
     CreationFinal1,
     CreationFinal2,
+    CreationFinal2b,
     CreationFinal3,
     CreationFinal4,
     CreationFinal5,
