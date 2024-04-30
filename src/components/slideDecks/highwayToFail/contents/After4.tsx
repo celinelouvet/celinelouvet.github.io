@@ -29,11 +29,9 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>Et par-dessus ça, je ressens un épuisement profond.</Text>
-    <Text>Je viens de passer 1 an, 1 an 1/2 à me donner à 200%</Text>
     <Text>
-      Je me lève le matin avec le départ de mon fils pour l’école. Je code toute
-      la journée. A son retour, je m’arrête pour reprendre après son coucher et
-      ça jusqu’à 2-3h du matin. Les nuits sont courtes et peu reposantes.
+      Je viens de passer 1 an, 1 an 1/2 à me donner à 200%. J’ai eu une hygiène
+      de vie déplorable.
     </Text>
   </SlideNote>
 );

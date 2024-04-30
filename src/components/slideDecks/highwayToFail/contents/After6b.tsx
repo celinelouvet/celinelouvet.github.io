@@ -1,4 +1,4 @@
-import { Stack, Text } from '@chakra-ui/react';
+import { ListItem, Stack, Text, UnorderedList } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -11,7 +11,11 @@ export const content = (
     alignContent="flex-start"
     column1={<VerticalTimelineAfter />}
   >
-    <Stack spacing="1em"></Stack>
+    <Stack spacing="1em">
+      <UnorderedList>
+        <ListItem>Poser des questions lors de la rencontre</ListItem>
+      </UnorderedList>
+    </Stack>
   </SlideContent>
 );
 

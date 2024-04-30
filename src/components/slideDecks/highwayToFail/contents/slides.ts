@@ -6,6 +6,11 @@ import After3 from './After3';
 import After4 from './After4';
 import After5 from './After5';
 import After6 from './After6';
+import After6b from './After6b';
+import After6c from './After6c';
+import After6d from './After6d';
+import After6e from './After6e';
+import After6f from './After6f';
 import After7 from './After7';
 import AfterEnd1 from './AfterEnd1';
 import AfterEnd1b from './AfterEnd1b';
@@ -15,6 +20,7 @@ import AfterEnd2 from './AfterEnd2';
 import AfterEnd3 from './AfterEnd3';
 import AfterEnd4 from './AfterEnd4';
 import AfterEnd5 from './AfterEnd5';
+import AfterEnd5b from './AfterEnd5b';
 import AfterEnd6 from './AfterEnd6';
 import AfterSectionTitle from './AfterSectionTitle';
 import BeforeCC1 from './BeforeCC1';
@@ -85,21 +91,6 @@ import DuringDauphine4 from './DuringDauphine4';
 import DuringEssec1 from './DuringEssec1';
 import DuringEssec2 from './DuringEssec2';
 import DuringEssec3 from './DuringEssec3';
-import DuringHaskell1 from './DuringHaskell1';
-import DuringHaskell10 from './DuringHaskell10';
-import DuringHaskell11 from './DuringHaskell11';
-import DuringHaskell12 from './DuringHaskell12';
-import DuringHaskell13 from './DuringHaskell13';
-import DuringHaskell14 from './DuringHaskell14';
-import DuringHaskell15 from './DuringHaskell15';
-import DuringHaskell2 from './DuringHaskell2';
-import DuringHaskell3 from './DuringHaskell3';
-import DuringHaskell4 from './DuringHaskell4';
-import DuringHaskell5 from './DuringHaskell5';
-import DuringHaskell6 from './DuringHaskell6';
-import DuringHaskell7 from './DuringHaskell7';
-import DuringHaskell8 from './DuringHaskell8';
-import DuringHaskell9 from './DuringHaskell9';
 import DuringHaskellChoice1 from './DuringHaskellChoice1';
 import DuringHaskellChoice10 from './DuringHaskellChoice10';
 import DuringHaskellChoice11 from './DuringHaskellChoice11';
@@ -426,6 +417,7 @@ export const getSlides = () => {
     AfterEnd3,
     AfterEnd4,
     AfterEnd5,
+    AfterEnd5b,
     AfterEnd6,
 
     After1,
@@ -434,24 +426,13 @@ export const getSlides = () => {
     After4,
     After5,
     After6,
+    After6b,
+    After6c,
+    After6d,
+    After6e,
+    After6f,
     After7,
 
     EndTitle,
-
-    DuringHaskell1,
-    DuringHaskell2,
-    DuringHaskell3,
-    DuringHaskell4,
-    DuringHaskell5,
-    DuringHaskell6,
-    DuringHaskell7,
-    DuringHaskell8,
-    DuringHaskell9,
-    DuringHaskell10,
-    DuringHaskell11,
-    DuringHaskell12,
-    DuringHaskell13,
-    DuringHaskell14,
-    DuringHaskell15,
   ];
 };

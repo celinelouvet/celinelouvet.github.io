@@ -1,26 +1,33 @@
 import { Stack, Text } from '@chakra-ui/react';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
+import {
+  Failure,
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+} from '@/components/core';
 
 import { VerticalTimelineAfter } from '../components';
 
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="A refaire ?"
+    title="Le début de la fin"
     alignContent="flex-start"
     column1={<VerticalTimelineAfter />}
   >
-    <Stack spacing="1em"></Stack>
+    <Stack spacing="1em">
+      <Failure variant="slide">Je suis épuisée.</Failure>
+    </Stack>
   </SlideContent>
 );
 
 const note = (
   <SlideNote>
-    <Text>Si on résume, j’ai vraiment fait un burnout.</Text>
+    <Text>Je suis épuisée et pleine d’anxiétés.</Text>
     <Text>
-      On est 5 ans plus tard et je le sens toujours. Dès que j’abuse, il
-      repointe le bout de son nez.
+      Heureusement, j’ai encore quelques mois de chômage devant moi, je vais
+      essayer de me reposer.
     </Text>
   </SlideNote>
 );
