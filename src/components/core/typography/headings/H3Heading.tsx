@@ -7,12 +7,13 @@ import {
 } from '@chakra-ui/react';
 
 export type H3HeadingProps = Omit<ChakraHeadingProps, 'size'> & {
-  size?: 'md' | 'lg';
+  size?: keyof typeof h3HeadingStyles.sizes;
+  variant?: keyof typeof h3HeadingStyles.variants;
 };
 
 export const H3Heading = forwardRef<H3HeadingProps, 'h3'>(
-  ({ children, size, ...props }, ref) => {
-    const styles = useStyleConfig('H3Heading', { size });
+  ({ children, size, variant, ...props }, ref) => {
+    const styles = useStyleConfig('H3Heading', { size, variant });
 
     return (
       <ChakraHeading as="h3" sx={styles} {...props} ref={ref}>
@@ -25,8 +26,6 @@ export const H3Heading = forwardRef<H3HeadingProps, 'h3'>(
 export const h3HeadingStyles = {
   baseStyle: {
     fontFamily: 'PT Sans Narrow',
-    fontWeight: '400',
-    marginBottom: '2',
   },
   sizes: {
     md: {
@@ -36,7 +35,18 @@ export const h3HeadingStyles = {
       fontSize: '1.7em',
     },
   },
+  variants: {
+    basic: {
+      fontWeight: '400',
+      marginBottom: '2',
+    },
+    slide: {
+      fontWeight: '700',
+      marginBottom: '2',
+    },
+  },
   defaultProps: {
     size: 'md',
+    variant: 'basic',
   },
 } satisfies StyleConfig;

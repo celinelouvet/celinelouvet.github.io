@@ -2,6 +2,7 @@ import { z } from 'zod';
 
 export enum SlideContentTypes {
   title = 'title',
+  fullContent = 'fullContent',
   content2Columns = 'content2Columns',
   introduction = 'introduction',
   sectionTitle = 'sectionTitle',
@@ -29,6 +30,12 @@ const ContentTitleSchema = z.object({
   title: z.string(),
   author: z.string(),
 });
+
+const ContentFullContentSchema = z
+  .object({
+    type: z.literal(SlideContentTypes.fullContent),
+  })
+  .merge(WithColorMode);
 
 const Content2ColumnsSchema = z
   .object({
@@ -104,21 +111,23 @@ const ContentAbstractSchema = z.object({
 });
 
 const ContentsSchema = z.discriminatedUnion('type', [
-  ContentTitleSchema,
   Content2ColumnsSchema,
+  ContentAbstractSchema,
+  ContentEndTitleSchema,
+  ContentFullContentSchema,
   ContentIntroductionSchema,
+  ContentPromotionSchema,
   ContentSectionTitleSchema,
   ContentSectionTitleWithThinColumnSchema,
-  ContentTitleWithContentSchema,
+  ContentTitleSchema,
   ContentTitleWith2ColumnsSchema,
-  ContentTitleWithThinColumnSchema,
+  ContentTitleWithContentSchema,
   ContentTitleWithThin2ColumnsSchema,
-  ContentEndTitleSchema,
-  ContentPromotionSchema,
-  ContentAbstractSchema,
+  ContentTitleWithThinColumnSchema,
 ]);
 
 export type ContentTitle = z.infer<typeof ContentTitleSchema>;
+export type ContentFullContent = z.infer<typeof ContentFullContentSchema>;
 export type Content2Columns = z.infer<typeof Content2ColumnsSchema>;
 export type ContentIntroduction = z.infer<typeof ContentIntroductionSchema>;
 export type ContentSectionTitle = z.infer<typeof ContentSectionTitleSchema>;

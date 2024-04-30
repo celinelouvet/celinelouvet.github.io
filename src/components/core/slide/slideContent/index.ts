@@ -1,2 +1,2 @@
 export { SlideContent } from './SlideContent';
-export { SlideContentTypes } from './types';
+export { SlideContentTypes, ColorMode } from './types';

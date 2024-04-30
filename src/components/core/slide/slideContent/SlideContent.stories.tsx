@@ -18,6 +18,9 @@ const meta = {
 } satisfies Meta<typeof SlideContentComponent>;
 
 export default meta;
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 type Story = StoryObj<typeof meta>;
 
 export const ContentWith2ColumnsLight: Story = {
@@ -94,6 +97,42 @@ export const Title: Story = {
     type: SlideContentTypes.title,
     title: talk.title,
     author: talk.author,
+  },
+};
+
+export const FullContentLight: Story = {
+  args: {
+    type: SlideContentTypes.fullContent,
+    colormode: ColorMode.light,
+
+    children: (
+      <Box
+        width="100%"
+        height="100%"
+        border="1px solid"
+        borderColor="brand.500"
+      >
+        Content
+      </Box>
+    ),
+  },
+};
+
+export const FullContentDark: Story = {
+  args: {
+    type: SlideContentTypes.fullContent,
+    colormode: ColorMode.dark,
+
+    children: (
+      <Box
+        width="100%"
+        height="100%"
+        border="1px solid"
+        borderColor="brand.500"
+      >
+        Content
+      </Box>
+    ),
   },
 };
 

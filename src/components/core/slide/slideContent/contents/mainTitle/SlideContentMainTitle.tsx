@@ -8,7 +8,8 @@ import { type FC } from 'react';
 
 import { H1Heading, H2Heading } from '@/components/core';
 
-import { type ContentTitle } from '../../types';
+import { ColorMode, type ContentTitle, SlideContentTypes } from '../../types';
+import { SlideContentFullContent } from '../fullContent';
 
 type SlideContentMainTitleProps = Omit<StackProps, 'children'> & ContentTitle;
 
@@ -16,25 +17,27 @@ export const SlideContentMainTitle = forwardRef<
   SlideContentMainTitleProps,
   'div'
 >(({ title, author, ...props }, ref) => (
-  <Stack
-    width="100%"
-    height="100%"
-    padding="3em"
-    alignItems="center"
-    justifyContent="center"
-    backgroundColor="brand.300"
-    color="brand.900"
-    spacing="4em"
-    ref={ref}
+  <SlideContentFullContent
     {...props}
+    colormode={ColorMode.dark}
+    ref={ref}
+    type={SlideContentTypes.fullContent}
   >
-    <StackItem>
-      <Title title={title} />
-    </StackItem>
-    <StackItem>
-      <H2Heading>{author}</H2Heading>
-    </StackItem>
-  </Stack>
+    <Stack
+      width="100%"
+      height="100%"
+      alignItems="center"
+      justifyContent="center"
+      spacing="4em"
+    >
+      <StackItem>
+        <Title title={title} />
+      </StackItem>
+      <StackItem>
+        <H2Heading>{author}</H2Heading>
+      </StackItem>
+    </Stack>
+  </SlideContentFullContent>
 ));
 
 const Title: FC<{ title: string }> = ({ title }) =>

@@ -7,7 +7,7 @@ import {
 } from '@chakra-ui/react';
 
 export type H1HeadingProps = Omit<ChakraHeadingProps, 'size'> & {
-  size?: 'md' | 'lg';
+  size?: keyof typeof h1HeadingStyles.sizes;
 };
 
 export const H1Heading = forwardRef<H1HeadingProps, 'h1'>(
@@ -27,6 +27,9 @@ export const h1HeadingStyles = {
     fontFamily: 'PT Sans Narrow',
   },
   sizes: {
+    sm: {
+      fontSize: '2.25em',
+    },
     md: {
       fontSize: '2.5em',
     },

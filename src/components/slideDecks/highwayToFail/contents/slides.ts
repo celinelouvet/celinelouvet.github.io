@@ -27,6 +27,7 @@ import CreationContact1 from './CreationContact1';
 import CreationContact2 from './CreationContact2';
 import CreationFinal1 from './CreationFinal1';
 import CreationFinal2 from './CreationFinal2';
+import CreationFinal2b from './CreationFinal2b';
 import CreationFinal3 from './CreationFinal3';
 import CreationFinal4 from './CreationFinal4';
 import CreationFinal5 from './CreationFinal5';
@@ -130,6 +131,7 @@ import DuringSite6 from './DuringSite6';
 import DuringSite7 from './DuringSite7';
 import DuringSiteMvp1 from './DuringSiteMvp1';
 import DuringSiteMvp10 from './DuringSiteMvp10';
+import DuringSiteMvp11 from './DuringSiteMvp11';
 import DuringSiteMvp2 from './DuringSiteMvp2';
 import DuringSiteMvp3 from './DuringSiteMvp3';
 import DuringSiteMvp4 from './DuringSiteMvp4';
@@ -152,7 +154,6 @@ import Fairvioo1 from './Fairvioo1';
 import Fairvioo2 from './Fairvioo2';
 import Fairvioo3 from './Fairvioo3';
 import Fairvioo4 from './Fairvioo4';
-import FeedbacksQR from './FeedbacksQR';
 import Introduction from './Introduction';
 import MainTitle from './MainTitle';
 import Numbers1 from './Numbers1';
@@ -163,14 +164,12 @@ import Preface1 from './Preface1';
 import Preface2 from './Preface2';
 import Preface3 from './Preface3';
 import Preface4 from './Preface4';
-import SurveyQR from './SurveyQR';
 import SurveyResult from './SurveyResult';
 import Timeline from './Timeline';
 
 export const getSlides = () => {
   return [
     MainTitle,
-    SurveyQR,
 
     Fairvioo1,
     Fairvioo2,
@@ -239,6 +238,7 @@ export const getSlides = () => {
 
     CreationFinal1,
     CreationFinal2,
+    CreationFinal2b,
     CreationFinal3,
     CreationFinal4,
     CreationFinal5,
@@ -279,6 +279,7 @@ export const getSlides = () => {
     DuringSiteMvp8,
     DuringSiteMvp9,
     DuringSiteMvp10,
+    DuringSiteMvp11,
 
     DuringPlatform1,
     DuringPlatform2,
@@ -346,8 +347,6 @@ export const getSlides = () => {
     After5,
     After6,
     After7,
-
-    FeedbacksQR,
 
     EndTitle,
 

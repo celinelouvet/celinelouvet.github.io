@@ -26,18 +26,18 @@ module.exports = defineNextConfig({
       },
 
       {
-        source: '/yeeso',
-        destination: '/talks/highway_to_fail/yeeso',
+        source: '/yeeso/:path*',
+        destination: '/talks/highway_to_fail/yeeso/:path*',
         permanent: false,
       },
       {
-        source: '/devfest',
-        destination: '/talks/highway_to_fail/devfest_lille_2024',
+        source: '/devfest/:path*',
+        destination: '/talks/highway_to_fail/devfest_lille_2024/:path*',
         permanent: false,
       },
       {
-        source: '/technwine',
-        destination: '/talks/highway_to_fail/technwine_2024',
+        source: '/technwine/:path*',
+        destination: '/talks/highway_to_fail/technwine_2024/:path*',
         permanent: false,
       },
     ];

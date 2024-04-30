@@ -4,6 +4,7 @@ import { type ForwardedRef } from 'react';
 import {
   SlideContentAbstract,
   SlideContentEndTitle,
+  SlideContentFullContent,
   SlideContentIntroduction,
   SlideContentMainTitle,
   SlideContentPromotion,
@@ -33,6 +34,9 @@ const getContent = (
   switch (props.type) {
     case SlideContentTypes.title:
       return <SlideContentMainTitle {...props} ref={ref} />;
+
+    case SlideContentTypes.fullContent:
+      return <SlideContentFullContent {...props} ref={ref} />;
 
     case SlideContentTypes.content2Columns:
       return <SlideContentWith2Columns {...props} ref={ref} />;

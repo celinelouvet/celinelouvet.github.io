@@ -29,6 +29,7 @@ import CreationContact1Slide from '../CreationContact1';
 import CreationContact2Slide from '../CreationContact2';
 import CreationFinal1Slide from '../CreationFinal1';
 import CreationFinal2Slide from '../CreationFinal2';
+import CreationFinal2bSlide from '../CreationFinal2b';
 import CreationFinal3Slide from '../CreationFinal3';
 import CreationFinal4Slide from '../CreationFinal4';
 import CreationFinal5Slide from '../CreationFinal5';
@@ -132,6 +133,7 @@ import DuringSite6Slide from '../DuringSite6';
 import DuringSite7Slide from '../DuringSite7';
 import DuringSiteMvp1Slide from '../DuringSiteMvp1';
 import DuringSiteMvp10Slide from '../DuringSiteMvp10';
+import DuringSiteMvp11Slide from '../DuringSiteMvp11';
 import DuringSiteMvp2Slide from '../DuringSiteMvp2';
 import DuringSiteMvp3Slide from '../DuringSiteMvp3';
 import DuringSiteMvp4Slide from '../DuringSiteMvp4';
@@ -154,7 +156,6 @@ import Fairvioo1Slide from '../Fairvioo1';
 import Fairvioo2Slide from '../Fairvioo2';
 import Fairvioo3Slide from '../Fairvioo3';
 import Fairvioo4Slide from '../Fairvioo4';
-import FeedbacksQRSlide from '../FeedbacksQR';
 import IntroductionSlide from '../Introduction';
 import MainTitleSlide from '../MainTitle';
 import Numbers1Slide from '../Numbers1';
@@ -165,7 +166,6 @@ import Preface1Slide from '../Preface1';
 import Preface2Slide from '../Preface2';
 import Preface3Slide from '../Preface3';
 import Preface4Slide from '../Preface4';
-import SurverQRSlide from '../SurveyQR';
 import SurveyResultSlide from '../SurveyResult';
 import TimelineSlide from '../Timeline';
 
@@ -181,13 +181,6 @@ export const MainTitle: Story = {
   args: {
     forNotes: true,
     slides: [MainTitleSlide],
-  },
-};
-
-export const SurveyQR: Story = {
-  args: {
-    forNotes: true,
-    slides: [SurverQRSlide],
   },
 };
 
@@ -569,6 +562,13 @@ export const CreationFinal2: Story = {
   },
 };
 
+export const CreationFinal2b: Story = {
+  args: {
+    forNotes: true,
+    slides: [CreationFinal2bSlide],
+  },
+};
+
 export const CreationFinal3: Story = {
   args: {
     forNotes: true,
@@ -811,6 +811,13 @@ export const DuringSiteMvp10: Story = {
   args: {
     forNotes: true,
     slides: [DuringSiteMvp10Slide],
+  },
+};
+
+export const DuringSiteMvp11: Story = {
+  args: {
+    forNotes: true,
+    slides: [DuringSiteMvp11Slide],
   },
 };
 
@@ -1322,13 +1329,6 @@ export const After7: Story = {
   args: {
     forNotes: true,
     slides: [After7Slide],
-  },
-};
-
-export const FeedbacksQR: Story = {
-  args: {
-    forNotes: true,
-    slides: [FeedbacksQRSlide],
   },
 };
 
