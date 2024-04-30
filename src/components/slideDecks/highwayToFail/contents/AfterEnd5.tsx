@@ -1,13 +1,8 @@
-import { Stack, Text } from '@chakra-ui/react';
+import { Box, Center, Text } from '@chakra-ui/react';
 
-import {
-  Failure,
-  SlideContent,
-  SlideContentTypes,
-  SlideNote,
-} from '@/components/core';
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { VerticalTimelineAfter } from '../components';
+import { Commits, VerticalTimelineAfter } from '../components';
 
 export const content = (
   <SlideContent
@@ -16,19 +11,20 @@ export const content = (
     alignContent="flex-start"
     column1={<VerticalTimelineAfter />}
   >
-    <Stack spacing="1em">
-      <Failure variant="slide">Je suis seule.</Failure>
-      <Failure variant="slide">Je suis épuisée.</Failure>
-    </Stack>
+    <Center width="100%" height="100%">
+      <Box height="100%">
+        <Commits />
+      </Box>
+    </Center>
   </SlideContent>
 );
 
 const note = (
   <SlideNote>
-    <Text>Je suis épuisée et pleine d’anxiétés.</Text>
     <Text>
-      Heureusement, j’ai encore quelques mois de chômage devant moi, je vais
-      essayer de me reposer.
+      Je me lève le matin avec le départ de mon fils pour l’école. Je code toute
+      la journée. A son retour, je m’arrête pour reprendre après son coucher et
+      ça jusqu’à 2-3h du matin. Les nuits sont courtes et peu reposantes.
     </Text>
   </SlideNote>
 );

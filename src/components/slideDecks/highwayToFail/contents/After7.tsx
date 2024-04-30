@@ -33,7 +33,8 @@ const note = (
   <SlideNote>
     <Text>
       En résumé, le message que j’ai cherché à faire passer, ce n’est pas de ne
-      pas y aller, mais d’y aller en connaissance de cause.
+      pas y aller, mais d’y aller en connaissance de cause. Faites attention à
+      vous.
     </Text>
   </SlideNote>
 );
