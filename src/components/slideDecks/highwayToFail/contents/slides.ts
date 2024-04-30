@@ -131,6 +131,7 @@ import DuringSite6 from './DuringSite6';
 import DuringSite7 from './DuringSite7';
 import DuringSiteMvp1 from './DuringSiteMvp1';
 import DuringSiteMvp10 from './DuringSiteMvp10';
+import DuringSiteMvp11 from './DuringSiteMvp11';
 import DuringSiteMvp2 from './DuringSiteMvp2';
 import DuringSiteMvp3 from './DuringSiteMvp3';
 import DuringSiteMvp4 from './DuringSiteMvp4';
@@ -278,6 +279,7 @@ export const getSlides = () => {
     DuringSiteMvp8,
     DuringSiteMvp9,
     DuringSiteMvp10,
+    DuringSiteMvp11,
 
     DuringPlatform1,
     DuringPlatform2,

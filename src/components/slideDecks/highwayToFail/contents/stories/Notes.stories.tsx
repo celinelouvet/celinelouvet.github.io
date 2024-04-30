@@ -133,6 +133,7 @@ import DuringSite6Slide from '../DuringSite6';
 import DuringSite7Slide from '../DuringSite7';
 import DuringSiteMvp1Slide from '../DuringSiteMvp1';
 import DuringSiteMvp10Slide from '../DuringSiteMvp10';
+import DuringSiteMvp11Slide from '../DuringSiteMvp11';
 import DuringSiteMvp2Slide from '../DuringSiteMvp2';
 import DuringSiteMvp3Slide from '../DuringSiteMvp3';
 import DuringSiteMvp4Slide from '../DuringSiteMvp4';
@@ -810,6 +811,13 @@ export const DuringSiteMvp10: Story = {
   args: {
     forNotes: true,
     slides: [DuringSiteMvp10Slide],
+  },
+};
+
+export const DuringSiteMvp11: Story = {
+  args: {
+    forNotes: true,
+    slides: [DuringSiteMvp11Slide],
   },
 };
 

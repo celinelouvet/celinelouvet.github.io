@@ -1,12 +1,4 @@
-import {
-  Flex,
-  Icon,
-  ListItem,
-  Stack,
-  StackItem,
-  Text,
-  UnorderedList,
-} from '@chakra-ui/react';
+import { Flex, Icon, Stack, StackItem, Text } from '@chakra-ui/react';
 import { BsArrowReturnRight } from 'react-icons/bs';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
@@ -22,21 +14,11 @@ export const content = (
   >
     <Stack>
       <StackItem>
-        <Text as="span">Utiliser un outil no code / low code</Text>
+        <Text as="span">Ne surtout pas le coder !</Text>
         <Flex alignItems="center" gap="0.5em" marginLeft="1em">
           <Icon as={BsArrowReturnRight} />
-          <Text as="span">
-            Permettre aux autres de faire les modifications fines
-          </Text>
+          <Text as="span">Héberger un PDF ou utiliser un prototype Figma</Text>
         </Flex>
-      </StackItem>
-      <StackItem>
-        <UnorderedList paddingLeft="1em">
-          <ListItem>Webflow,</ListItem>
-          <ListItem>Bubble,</ListItem>
-          <ListItem>Strapi,</ListItem>
-          <ListItem>etc.</ListItem>
-        </UnorderedList>
       </StackItem>
     </Stack>
   </SlideContent>
@@ -45,16 +27,8 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>
-      Les outils no code low code se sont beaucoup développés ces dernières
-      années.
-    </Text>
-    <Text>Donc je m’appuierai dessus.</Text>
-    <Text>
-      C’est parfait pour avancer vite et pouvoir passer la main à quelqu’un qui
-      n’y connait rien.
-    </Text>
-    <Text>
-      Parmi les plus connus, on retrouve Webflow, Bubble, Strapi, par exemple.
+      En le codant, j’ai perdu un temps très précieux qui aurait pu être utilisé
+      à créer le produit.
     </Text>
   </SlideNote>
 );
