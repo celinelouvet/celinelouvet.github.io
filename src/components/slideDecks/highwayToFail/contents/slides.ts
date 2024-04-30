@@ -157,9 +157,20 @@ import DuringSiteMvp10 from './DuringSiteMvp10';
 import DuringSiteMvp11 from './DuringSiteMvp11';
 import DuringSiteMvp2 from './DuringSiteMvp2';
 import DuringSiteMvp3 from './DuringSiteMvp3';
+import DuringSiteMvp3b from './DuringSiteMvp3b';
+import DuringSiteMvp3c from './DuringSiteMvp3c';
 import DuringSiteMvp4 from './DuringSiteMvp4';
+import DuringSiteMvp4b from './DuringSiteMvp4b';
+import DuringSiteMvp4c from './DuringSiteMvp4c';
+import DuringSiteMvp4d from './DuringSiteMvp4d';
+import DuringSiteMvp4e from './DuringSiteMvp4e';
+import DuringSiteMvp4f from './DuringSiteMvp4f';
+import DuringSiteMvp4g from './DuringSiteMvp4g';
+import DuringSiteMvp4h from './DuringSiteMvp4h';
+import DuringSiteMvp4i from './DuringSiteMvp4i';
 import DuringSiteMvp5 from './DuringSiteMvp5';
 import DuringSiteMvp6 from './DuringSiteMvp6';
+import DuringSiteMvp6b from './DuringSiteMvp6b';
 import DuringSiteMvp7 from './DuringSiteMvp7';
 import DuringSiteMvp8 from './DuringSiteMvp8';
 import DuringSiteMvp9 from './DuringSiteMvp9';
@@ -318,9 +329,20 @@ export const getSlides = () => {
     DuringSiteMvp1,
     DuringSiteMvp2,
     DuringSiteMvp3,
+    DuringSiteMvp3b,
+    DuringSiteMvp3c,
     DuringSiteMvp4,
+    DuringSiteMvp4b,
+    DuringSiteMvp4c,
+    DuringSiteMvp4d,
+    DuringSiteMvp4e,
+    DuringSiteMvp4f,
+    DuringSiteMvp4g,
+    DuringSiteMvp4h,
+    DuringSiteMvp4i,
     DuringSiteMvp5,
     DuringSiteMvp6,
+    DuringSiteMvp6b,
     DuringSiteMvp7,
     DuringSiteMvp8,
     DuringSiteMvp9,

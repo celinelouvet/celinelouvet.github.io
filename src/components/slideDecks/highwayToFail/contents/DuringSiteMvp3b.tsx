@@ -1,4 +1,10 @@
-import { Stack, Text } from '@chakra-ui/react';
+import {
+  ListItem,
+  Stack,
+  StackItem,
+  Text,
+  UnorderedList,
+} from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -7,26 +13,26 @@ import { VerticalTimelineDuring } from '../components';
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="Le principe de Pareto (80 — 20)"
+    title="Première perte de temps"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
   >
     <Stack gap="1em">
-      <Text>
-        Les premiers 80% sont les plus faciles à atteindre, car ils demandent
-        20% d’effort.
-      </Text>
+      <StackItem>
+        <Text>Version simplifiée ne suffira pas</Text>
+      </StackItem>
+      <StackItem>
+        <UnorderedList paddingLeft="1em">
+          <ListItem>CSS plus poussé,</ListItem>
+        </UnorderedList>
+      </StackItem>
     </Stack>
   </SlideContent>
 );
 
 const note = (
   <SlideNote>
-    <Text>
-      Quand on applique ce principe au développement, il dit que 80% des
-      fonctionnalités vont demander 20% des efforts, car ils sont faciles à
-      atteindre.
-    </Text>
+    <Text>Je vais donc investir plus de temps pour pousser le CSS</Text>
   </SlideNote>
 );
 

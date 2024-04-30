@@ -1,4 +1,10 @@
-import { Stack, StackItem, Text } from '@chakra-ui/react';
+import {
+  ListItem,
+  Stack,
+  StackItem,
+  Text,
+  UnorderedList,
+} from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -15,6 +21,12 @@ export const content = (
       <StackItem>
         <Text>Version simplifiée ne suffira pas</Text>
       </StackItem>
+      <StackItem>
+        <UnorderedList paddingLeft="1em">
+          <ListItem>CSS plus poussé,</ListItem>
+          <ListItem>Ajout progressif de fonctionnalités.</ListItem>
+        </UnorderedList>
+      </StackItem>
     </Stack>
   </SlideContent>
 );
@@ -22,8 +34,7 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>
-      Je vais donc investir plus de temps pour pousser le CSS et ajouter des
-      fonctionnalités qui sont progressivement demandées.
+      et ajouter des fonctionnalités qui sont progressivement demandées.
     </Text>
   </SlideNote>
 );
