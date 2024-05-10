@@ -15,14 +15,16 @@ export const Trainings: FC<TrainingsProps> = ({ trainings }) => {
   const { t } = useTranslation('resume', { keyPrefix: 'trainings' });
 
   return (
-    <Stack>
+    <Stack spacing="4">
       <H2Heading size={size}>{t('title')}</H2Heading>
 
-      {trainings.map((training) => (
-        <Box key={training.topic}>
-          <TrainingContent training={training} />
-        </Box>
-      ))}
+      <Stack spacing="8">
+        {trainings.map((training) => (
+          <Box key={training.topic}>
+            <TrainingContent training={training} />
+          </Box>
+        ))}
+      </Stack>
     </Stack>
   );
 };
@@ -42,7 +44,7 @@ const TrainingContent: FC<{ training: Training }> = ({ training }) => {
   return (
     <Flex direction="column">
       <TrainingHeader training={training} />
-      <Text>{training.company}</Text>
+      <Text as="span">{training.company}</Text>
     </Flex>
   );
 };
