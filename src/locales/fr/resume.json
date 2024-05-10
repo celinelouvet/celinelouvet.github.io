@@ -47,7 +47,11 @@
     "label": "Afficher le détail"
   },
   "talks": {
-    "title": "Conférences & Interviews"
+    "title": "Conférences"
+  },
+  "podcasts": {
+    "title": "Podcasts & Interviews",
+    "by": "Par"
   },
   "educations": {
     "title": "Formation scolaire"
