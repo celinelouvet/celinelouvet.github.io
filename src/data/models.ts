@@ -29,6 +29,18 @@ export type Platform = {
   technos: string[];
 };
 
+export type Podcast = {
+  name: string;
+  author?: string;
+  title?: string;
+  language: string;
+  episode?: string;
+  description?: string;
+  when: string;
+  links?: Links;
+  pictureId?: string;
+};
+
 export type Project = {
   name: string;
   description: string;
@@ -120,6 +132,7 @@ export type Resume = {
   talkSubjects: Map<string, TalkSubject>;
   possibleTalkSubjects: string[];
   talks: Talk[];
+  podcasts: Podcast[];
   educations: Education[];
   trainings: Training[];
   certifications: Certification[];
