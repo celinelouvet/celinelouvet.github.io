@@ -6,18 +6,19 @@
   "socials": {
     "title": "Réseaux sociaux"
   },
+  "links": {
+    "audio": "Audio",
+    "program": "Programme",
+    "slides": "Slides",
+    "video": "Video"
+  },
   "talks": {
     "toCome": "Conférences à venir",
-    "alreadyDone": "Conférences & Interviews",
-    "seeAllTalks": "Voir toutes mes conférences",
+    "alreadyDone": "Conférences",
+    "seeAll": "Voir toutes mes conférences",
     "talk": {
       "date": "D MMMM YYYY",
-      "seeDescription": "Voir la description",
-
-      "audio": "Audio",
-      "program": "Program",
-      "slides": "Slides",
-      "video": "Video"
+      "seeDescription": "Voir la description"
     }
   }
 }

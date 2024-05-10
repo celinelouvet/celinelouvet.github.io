@@ -42,7 +42,7 @@ const TalkList: FC<TalkListProps> = ({ talks, title, maxShow }) => {
           variant="link"
           onClick={() => log('See talks')}
         >
-          {t('seeAllTalks')}
+          {t('seeAll')}
         </Button>
       </Stack>
     </Box>

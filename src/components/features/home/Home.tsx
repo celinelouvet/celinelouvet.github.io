@@ -6,7 +6,7 @@ import { type Resume } from '@/data';
 import { Biography } from './Biography';
 import { Socials } from './Socials';
 import { Summary } from './Summary';
-import { Talks } from './Talks';
+import { Talks } from './talks';
 
 type HomeProps = {
   resume: Resume;
