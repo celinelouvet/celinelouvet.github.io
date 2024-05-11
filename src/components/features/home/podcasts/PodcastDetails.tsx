@@ -1,5 +1,11 @@
 import {
+  Box,
+  Card,
+  CardBody,
+  CardHeader,
+  Flex,
   HStack,
+  Spacer,
   Stack,
   type StyleConfig,
   Text,
@@ -12,6 +18,7 @@ import { type Podcast } from '@/data';
 import { useHeadingSize } from '@/hooks';
 
 import { AuthorText, DescriptionText, EpisodeText, TitleText } from './parts';
+import { AllLinks } from '../AllLinks';
 
 export type PodcastDetailsProps = {
   podcast: Podcast;
@@ -21,17 +28,33 @@ export const PodcastDetails: FC<PodcastDetailsProps> = ({ podcast }) => {
   const size = useHeadingSize();
 
   const { name, author, title, language, when, episode, description } = podcast;
+
   return (
-    <Stack spacing="2">
-      <Stack sx={containerCss}>
-        <H3Heading size={size}>{name}</H3Heading>
-        <EpisodeText episode={episode} />
-        <DateLanguage language={language} when={when} />
-      </Stack>
-      <TitleText title={title} />
-      <AuthorText author={author} />
-      <DescriptionText description={description} />
-    </Stack>
+    <>
+      <Card size="sm" variant="filled">
+        <CardHeader>
+          <Stack sx={containerCss}>
+            <H3Heading size={size}>{name}</H3Heading>
+            <EpisodeText episode={episode} />
+            <DateLanguage language={language} when={when} />
+          </Stack>
+        </CardHeader>
+
+        <CardBody>
+          <Flex gap="4" direction={{ base: 'column', lg: 'row' }}>
+            <Stack spacing="2">
+              <TitleText title={title} />
+              <AuthorText author={author} />
+              <DescriptionText description={description} />
+            </Stack>
+            <Spacer />
+            <Box>
+              <AllLinks links={podcast.links} />
+            </Box>
+          </Flex>
+        </CardBody>
+      </Card>
+    </>
   );
 };
 

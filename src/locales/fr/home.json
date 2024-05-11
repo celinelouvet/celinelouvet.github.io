@@ -20,5 +20,10 @@
       "date": "D MMMM YYYY",
       "seeDescription": "Voir la description"
     }
+  },
+  "podcasts": {
+    "title": "Podcasts",
+    "seeAll": "Voir tous mes podcasts",
+    "date": "D MMMM YYYY"
   }
 }
