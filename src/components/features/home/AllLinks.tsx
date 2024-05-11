@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next';
 
 import { type Links } from '@/data';
 
-export const TalkLinks: FC<{ links: Links }> = ({ links }) => {
-  const { t } = useTranslation('home', { keyPrefix: 'talks.talk' });
+export const AllLinks: FC<{ links?: Links }> = ({ links = {} }) => {
+  const { t } = useTranslation('home', { keyPrefix: 'links' });
 
   const { audio, video, program } = links;
   return (

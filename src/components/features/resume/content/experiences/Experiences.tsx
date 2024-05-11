@@ -16,12 +16,14 @@ export const Experiences: FC<ExperiencesProps> = ({ experiences }) => {
   const size = useHeadingSize();
   const { t } = useTranslation('resume', { keyPrefix: 'experiences' });
   return (
-    <Stack spacing="8">
+    <Stack spacing="4">
       <H2Heading size={size}>{t('title')}</H2Heading>
 
-      {experiences.map((job) => (
-        <ExperienceDetails key={`${job.company}-${job.from}`} job={job} />
-      ))}
+      <Stack spacing="8">
+        {experiences.map((job) => (
+          <ExperienceDetails key={`${job.company}-${job.from}`} job={job} />
+        ))}
+      </Stack>
     </Stack>
   );
 };

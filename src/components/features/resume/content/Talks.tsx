@@ -24,11 +24,13 @@ export const Talks: FC<TalksProps> = ({ resume }) => {
     <Stack>
       <H2Heading size={size}>{t('title')}</H2Heading>
 
-      {talkSubjects.map((talk) => (
-        <Box key={talk.subjectId}>
-          <TalkContent talk={talk} />
-        </Box>
-      ))}
+      <Stack spacing="8">
+        {talkSubjects.map((talk) => (
+          <Box key={talk.subjectId}>
+            <TalkContent talk={talk} />
+          </Box>
+        ))}
+      </Stack>
     </Stack>
   );
 };

@@ -15,14 +15,16 @@ export const Certifications: FC<CertificationsProps> = ({ certifications }) => {
   const { t } = useTranslation('resume', { keyPrefix: 'certifications' });
 
   return (
-    <Stack>
+    <Stack spacing="4">
       <H2Heading size={size}>{t('title')}</H2Heading>
 
-      {certifications.map((certification) => (
-        <Box key={certification.topic}>
-          <CertificationContent certification={certification} />
-        </Box>
-      ))}
+      <Stack spacing="8">
+        {certifications.map((certification) => (
+          <Box key={certification.topic}>
+            <CertificationContent certification={certification} />
+          </Box>
+        ))}
+      </Stack>
     </Stack>
   );
 };
@@ -46,7 +48,7 @@ const CertificationContent: FC<{ certification: Certification }> = ({
   return (
     <Flex direction="column">
       <CertificationHeader certification={certification} />
-      <Text>{certification.company}</Text>
+      <Text as="span">{certification.company}</Text>
     </Flex>
   );
 };

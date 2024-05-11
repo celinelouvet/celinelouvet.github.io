@@ -20,7 +20,7 @@ import { DateText, H3Heading } from '@/components/core';
 import { type ConventionTalk } from '@/data';
 import { useLogger } from '@/hooks';
 
-import { TalkLinks } from './TalkLinks';
+import { AllLinks } from '../AllLinks';
 
 export type TalkProps = {
   talk: ConventionTalk;
@@ -68,7 +68,7 @@ export const Talk: FC<TalkProps> = ({ talk }) => {
               </Box>
               <Spacer />
               <Box>
-                <TalkLinks links={talk.links ?? {}} />
+                <AllLinks links={talk.links} />
               </Box>
             </Flex>
           </CardBody>

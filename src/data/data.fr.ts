@@ -1,10 +1,82 @@
 import {
   type Convention,
+  type Podcast,
   type Resume,
   type Talk,
   type TalkSubject,
 } from './models';
 import { highwayToFailSurveyFr } from './talks';
+
+const podcasts = [
+  {
+    name: 'Build RH: Entretien',
+    author: 'Shirley Almosni Chiche',
+    description:
+      'Sur mon expérience professionnelle, en tant que femme dans le monde du développement et sur ma conception du mentorat.',
+    language: 'FR',
+    when: '2023-03-31',
+    links: {
+      video:
+        'https://www.youtube.com/watch?v=FNStkAKsujI&ab_channel=BUILDRH-Face%C3%A0faceavecTataShishi',
+    },
+    pictureId: 'entretienshirleyalmosnichiche2023',
+  },
+  {
+    name: 'Live Twitch sur k33g_org',
+    author: 'Philippe Charrière',
+    description:
+      'Sur la gestion des permissions en système distribué, notamment dans le milieu bancaire.',
+    language: 'FR',
+    when: '2023-04-06',
+    links: {
+      video:
+        'https://www.youtube.com/watch?v=psQV7zB59hQ&ab_channel=PhilippeCharri%C3%A8re',
+    },
+    pictureId: 'livephilippecharriere2023',
+  },
+  {
+    name: 'Punkin Dev',
+    title: 'Dev? Lead? Architecte? Non! ARCHIDEV',
+    author: 'Sylvain Coudert',
+    episode: 'S03 E12',
+    description:
+      'Sur mon expérience professionnelle, l’architecture et le mentorat.',
+    language: 'FR',
+    when: '2023-06-20',
+    links: {
+      audio:
+        'https://podcast.ausha.co/punkindev/s03e12-dev-lead-architecte-non-archidev-avec-celine-louvet',
+    },
+    pictureId: 'podcast_punkindev2023',
+  },
+  {
+    name: 'Developer Experience',
+    title: '18 ans d’exploration technique et humaine dans l’informatique',
+    author: 'Donatien Léon',
+    description:
+      'Sur ma recherche de l’expérience parfaite pour moi, mon expérience, l’architecture et le mentorat.',
+    language: 'FR',
+    when: '2023-12-29',
+    links: {
+      audio: 'https://podcast.ausha.co/developer-experience/celine-louvet',
+    },
+    pictureId: 'podcast_devxp2023',
+  },
+  {
+    name: 'Avocado Growth : Portrait Tech',
+    author: 'Mansour Mahamat‑salle',
+    episode: 'Épisode 18',
+    description:
+      'Sur mon parcours dans la tech, notamment comment je suis arrivée où je suis aujourd’hui.',
+    language: 'FR',
+    when: '2024-01-22',
+    links: {
+      audio:
+        'https://podcast.ausha.co/avocado-growth-portrait-tech/18-parcours-tech-celine',
+    },
+    pictureId: 'podcast_avocadogrowth2024',
+  },
+] satisfies Podcast[];
 
 const talkSubjects = new Map<string, TalkSubject>([
   ['gcp_datastore_search', { topic: 'Google Datastore & Search API' }],
@@ -19,33 +91,7 @@ const talkSubjects = new Map<string, TalkSubject>([
       ],
     },
   ],
-  [
-    'interview_shirley_almosni_chiche',
-    {
-      topic: 'Build RH: Entretien avec Shirley Almosni Chiche',
-      descriptions: [
-        'Sur mon expérience professionnelle, en tant que femme dans le monde du développement et sur ma conception du mentorat.',
-      ],
-    },
-  ],
-  [
-    'interview_philippe_charriere',
-    {
-      topic: 'Live avec Philippe Charrière',
-      descriptions: [
-        'Sur la gestion des permissions en système distribué, notamment dans le milieu bancaire.',
-      ],
-    },
-  ],
-  [
-    'podcast_punkin_dev',
-    {
-      topic: 'Podcast Punkin Dev: Dev? Lead? Architecte? Non! ARCHIDEV',
-      descriptions: [
-        'Épisode 12 de la saison 3 des podcast de Punkin Dev, sur mon expérience professionnelle, l’architecture et le mentorat.',
-      ],
-    },
-  ],
+
   [
     'event_driven_buzzword',
     {
@@ -77,25 +123,7 @@ const talkSubjects = new Map<string, TalkSubject>([
       ],
     },
   ],
-  [
-    'podcast_developer_experience',
-    {
-      topic:
-        'Podcast Developer Experience: 18 ans d’exploration technique et humaine dans l’informatique',
-      descriptions: [
-        'Par Donatien Léon, sur ma recherche de l’expérience parfaite pour moi, mon expérience, l’architecture et le mentorat.',
-      ],
-    },
-  ],
-  [
-    'podcast_avocado_growth',
-    {
-      topic: 'Avocado Growth : Portrait Tech',
-      descriptions: [
-        'Épisode 18 des podcasts de Mansour Mahamat‑salle, sur mon parcours dans la tech, notamment comment je suis arrivée où je suis aujourd’hui.',
-      ],
-    },
-  ],
+
   [
     'highway_to_fail',
     {
@@ -134,9 +162,6 @@ const conventions = new Map<string, Convention>([
     'voxxed_days_luxembourg_2019',
     { name: 'Voxxed Days Luxembourg 2019', language: 'FR' },
   ],
-  ['online_shirley', { name: 'En ligne', language: 'FR' }],
-  ['online_k33g', { name: 'En ligne', language: 'FR' }],
-  ['online_punkin_dev', { name: 'En ligne', language: 'FR' }],
   ['devfest_lille_2023', { name: 'DevFest Lille 2023', language: 'FR' }],
   [
     'camping_des_speakers_2023',
@@ -145,8 +170,6 @@ const conventions = new Map<string, Convention>([
   ['cloud_est_2023', { name: 'Cloud Est 2023', language: 'FR' }],
   ['breizhcamp_2023', { name: 'BreizhCamp 2023', language: 'FR' }],
   ['paattern_talks_2023', { name: 'Paattern Talks 2023', language: 'FR' }],
-  ['online_developer_experience', { name: 'En ligne', language: 'FR' }],
-  ['online_avocado_growth', { name: 'En ligne', language: 'FR' }],
   ['lyoncraft_2024', { name: 'Lyon Craft 2024', language: 'FR' }],
   ['yeeso', { name: 'IT Woman talk - YEESO', language: 'FR' }],
   ['devfest_lille_2024', { name: 'DevFest Lille 2024', language: 'FR' }],
@@ -239,26 +262,6 @@ const talks = [
     pictureId: 'voxxeddaysluxembourg2019-Haskell_en_prod',
   },
   {
-    subjectId: 'interview_shirley_almosni_chiche',
-    conventionId: 'online_shirley',
-    when: '2023-03-31',
-    links: {
-      video:
-        'https://www.youtube.com/watch?v=FNStkAKsujI&ab_channel=BUILDRH-Face%C3%A0faceavecTataShishi',
-    },
-    pictureId: 'entretienshirleyalmosnichiche2023',
-  },
-  {
-    subjectId: 'interview_philippe_charriere',
-    conventionId: 'online_k33g',
-    when: '2023-04-06',
-    links: {
-      video:
-        'https://www.youtube.com/watch?v=psQV7zB59hQ&ab_channel=PhilippeCharri%C3%A8re',
-    },
-    pictureId: 'livephilippecharriere2023',
-  },
-  {
     subjectId: 'event_driven_buzzword',
     conventionId: 'devfest_lille_2023',
     when: '2023-05-26',
@@ -269,16 +272,6 @@ const talks = [
         'https://www.youtube.com/watch?v=RovPh9agiFc&t=1s&ab_channel=GDGFrance',
     },
     pictureId: 'devfestlille2023-Event_driven',
-  },
-  {
-    subjectId: 'podcast_punkin_dev',
-    conventionId: 'online_punkin_dev',
-    when: '2023-06-20',
-    links: {
-      audio:
-        'https://podcast.ausha.co/punkindev/s03e12-dev-lead-architecte-non-archidev-avec-celine-louvet',
-    },
-    pictureId: 'podcast_punkindev2023',
   },
   {
     subjectId: 'event_driven_buzzword',
@@ -338,25 +331,6 @@ const talks = [
     pictureId: 'paatternTalks2023-Tired_women_revolution',
   },
   {
-    subjectId: 'podcast_developer_experience',
-    conventionId: 'online_developer_experience',
-    when: '2023-12-29',
-    links: {
-      audio: 'https://podcast.ausha.co/developer-experience/celine-louvet',
-    },
-    pictureId: 'podcast_devxp2023',
-  },
-  {
-    subjectId: 'podcast_avocado_growth',
-    conventionId: 'online_avocado_growth',
-    when: '2024-01-22',
-    links: {
-      audio:
-        'https://podcast.ausha.co/avocado-growth-portrait-tech/18-parcours-tech-celine',
-    },
-    pictureId: 'podcast_avocadogrowth2024',
-  },
-  {
     subjectId: 'highway_to_fail',
     conventionId: 'lyoncraft_2024',
     when: '2024-04-08',
@@ -399,7 +373,7 @@ const talks = [
   },
 ] satisfies Talk[];
 
-const resume: Resume = {
+const resume = {
   firstname: 'Céline',
   lastname: 'Louvet',
   birthdate: '1980-12-02',
@@ -1115,6 +1089,7 @@ const resume: Resume = {
   possibleTalkSubjects,
   conventions,
   talks,
+  podcasts,
   educations: [
     {
       from: '2002',
@@ -1148,6 +1123,6 @@ const resume: Resume = {
       when: '2013-03-01',
     },
   ],
-};
+} satisfies Resume;
 
 export default resume;

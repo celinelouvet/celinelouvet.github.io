@@ -6,18 +6,24 @@
   "socials": {
     "title": "Social networks"
   },
+  "links": {
+    "audio": "Audio",
+    "program": "Program",
+    "slides": "Slides",
+    "video": "Video"
+  },
   "talks": {
     "toCome": "Incoming talks",
-    "alreadyDone": "Talks & Interviews",
-    "seeAllTalks": "See all talks",
+    "alreadyDone": "Talks",
+    "seeAll": "See all talks",
     "talk": {
       "date": "MMM D YYYY",
-      "seeDescription": "See description",
-
-      "audio": "Audio",
-      "program": "Program",
-      "slides": "Slides",
-      "video": "Video"
+      "seeDescription": "See description"
     }
+  },
+  "podcasts": {
+    "title": "Podcasts",
+    "seeAll": "See all podcasts",
+    "date": "MMM D YYYY"
   }
 }

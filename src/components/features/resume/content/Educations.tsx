@@ -15,14 +15,16 @@ export const Educations: FC<EducationsProps> = ({ educations }) => {
   const { t } = useTranslation('resume', { keyPrefix: 'educations' });
 
   return (
-    <Stack>
+    <Stack spacing="4">
       <H2Heading size={size}>{t('title')}</H2Heading>
 
-      {educations.map((education) => (
-        <Box key={education.school}>
-          <EducationContent education={education} />
-        </Box>
-      ))}
+      <Stack spacing="8">
+        {educations.map((education) => (
+          <Box key={education.school}>
+            <EducationContent education={education} />
+          </Box>
+        ))}
+      </Stack>
     </Stack>
   );
 };

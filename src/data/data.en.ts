@@ -1,10 +1,84 @@
 import {
   type Convention,
+  type Podcast,
   type Resume,
   type Talk,
   type TalkSubject,
 } from './models';
 import { highwayToFailSurveyFr } from './talks';
+
+const podcasts = [
+  {
+    name: 'Build RH: Interview',
+    author: 'Shirley Almosni Chiche',
+    description:
+      'About my professional experience, as a woman in tech, and about my view of mentorship.',
+
+    language: 'FR',
+    when: '2023-03-31',
+    links: {
+      video:
+        'https://www.youtube.com/watch?v=FNStkAKsujI&ab_channel=BUILDRH-Face%C3%A0faceavecTataShishi',
+    },
+    pictureId: 'entretienshirleyalmosnichiche2023',
+  },
+  {
+    name: 'Live Twitch on k33g_org',
+    author: 'Philippe Charrière',
+    description:
+      'About authorizations management in a microservices architecture, with banking examples.',
+    language: 'FR',
+    when: '2023-04-06',
+    links: {
+      video:
+        'https://www.youtube.com/watch?v=psQV7zB59hQ&ab_channel=PhilippeCharri%C3%A8re',
+    },
+    pictureId: 'livephilippecharriere2023',
+  },
+  {
+    name: 'Punkin Dev',
+    title: 'Dev? Lead? Architect? No! ARCHIDEV',
+    author: 'Sylvain Coudert',
+    episode: 'S03 E12',
+    description:
+      'About my professional experience, architecture and mentoring.',
+
+    language: 'FR',
+    when: '2023-06-20',
+    links: {
+      audio:
+        'https://podcast.ausha.co/punkindev/s03e12-dev-lead-architecte-non-archidev-avec-celine-louvet',
+    },
+    pictureId: 'podcast_punkindev2023',
+  },
+  {
+    name: 'Developer Experience',
+    title: '18 years of technical and human exploration in IT',
+    author: 'Donatien Léon',
+    description:
+      'About my search for the perfect experience for me, my experience, architecture and mentoring.',
+    language: 'FR',
+    when: '2023-12-29',
+    links: {
+      audio: 'https://podcast.ausha.co/developer-experience/celine-louvet',
+    },
+    pictureId: 'podcast_devxp2023',
+  },
+  {
+    name: 'Avocado Growth : Tech Profile',
+    author: 'Mansour Mahamat‑salle',
+    episode: 'Episode 18',
+    description:
+      'About my journey in tech, including how I got to where I am today.',
+    language: 'FR',
+    when: '2024-01-22',
+    links: {
+      audio:
+        'https://podcast.ausha.co/avocado-growth-portrait-tech/18-parcours-tech-celine',
+    },
+    pictureId: 'podcast_avocadogrowth2024',
+  },
+] satisfies Podcast[];
 
 const talkSubjects = new Map<string, TalkSubject>([
   ['gcp_datastore_search', { topic: 'Google Datastore & Search API' }],
@@ -16,33 +90,6 @@ const talkSubjects = new Map<string, TalkSubject>([
       descriptions: [
         'We hear about Haskell now and then, but it often seems to be complicated to start using it. Haskell can be scary with its Monads, Monoids and other cursing words.',
         'We’ll see together that you don’t really need to understand all this principles to use it. What I suggest is to see what you need to create a small API, with some security and data managment, in simpler words, what you need for a small production application.',
-      ],
-    },
-  ],
-  [
-    'interview_shirley_almosni_chiche',
-    {
-      topic: 'Build RH: Interview with Shirley Almosni Chiche',
-      descriptions: [
-        'About my professional experience, as a woman in tech, and about my view of mentorship.',
-      ],
-    },
-  ],
-  [
-    'interview_philippe_charriere',
-    {
-      topic: 'Live with Philippe Charrière',
-      descriptions: [
-        'On authorizations management in a microservices architecture, with banking examples.',
-      ],
-    },
-  ],
-  [
-    'podcast_punkin_dev',
-    {
-      topic: 'Podcast Punkin Dev: Dev? Lead? Architect? No! ARCHIDEV',
-      descriptions: [
-        'Episode 12 of season 3 of the Punkin Dev podcasts, about my professional experience, architecture and mentoring.',
       ],
     },
   ],
@@ -74,25 +121,6 @@ const talkSubjects = new Map<string, TalkSubject>([
       topic: 'The tired women’s revolution',
       descriptions: [
         'Round table discussions with Angi Guyard and Sonia Prévost. We’ll look at the experience of women in tech and explain why we’re so "tired" of these stereotypes.',
-      ],
-    },
-  ],
-  [
-    'podcast_developer_experience',
-    {
-      topic:
-        'Podcast Developer Experience: 18 years of technical and human exploration in IT',
-      descriptions: [
-        'By Donatien Léon, on my search for the perfect experience for me, my experience, architecture and mentoring.',
-      ],
-    },
-  ],
-  [
-    'podcast_avocado_growth',
-    {
-      topic: 'Avocado Growth : Tech Profile',
-      descriptions: [
-        'Episode 18 of Mansour Mahamat‑salle’s podcasts, about my journey in tech, including how I got to where I am today.',
       ],
     },
   ],
@@ -134,9 +162,6 @@ const conventions = new Map<string, Convention>([
     'voxxed_days_luxembourg_2019',
     { name: 'Voxxed Days Luxembourg 2019', language: 'FR' },
   ],
-  ['online_shirley', { name: 'Online', language: 'FR' }],
-  ['online_k33g', { name: 'Online', language: 'FR' }],
-  ['online_punkin_dev', { name: 'Online', language: 'FR' }],
   ['devfest_lille_2023', { name: 'DevFest Lille 2023', language: 'FR' }],
   [
     'camping_des_speakers_2023',
@@ -145,8 +170,6 @@ const conventions = new Map<string, Convention>([
   ['cloud_est_2023', { name: 'Cloud Est 2023', language: 'FR' }],
   ['breizhcamp_2023', { name: 'BreizhCamp 2023', language: 'FR' }],
   ['paattern_talks_2023', { name: 'Paattern Talks 2023', language: 'FR' }],
-  ['online_developer_experience', { name: 'Online', language: 'FR' }],
-  ['online_avocado_growth', { name: 'Online', language: 'FR' }],
   ['lyoncraft_2024', { name: 'Lyon Craft 2024', language: 'FR' }],
   ['yeeso', { name: 'IT Woman talk - YEESO', language: 'FR' }],
   ['devfest_lille_2024', { name: 'DevFest Lille 2024', language: 'FR' }],
@@ -239,26 +262,6 @@ const talks = [
     pictureId: 'voxxeddaysluxembourg2019-Haskell_en_prod',
   },
   {
-    subjectId: 'interview_shirley_almosni_chiche',
-    conventionId: 'online_shirley',
-    when: '2023-03-31',
-    links: {
-      video:
-        'https://www.youtube.com/watch?v=FNStkAKsujI&ab_channel=BUILDRH-Face%C3%A0faceavecTataShishi',
-    },
-    pictureId: 'entretienshirleyalmosnichiche2023',
-  },
-  {
-    subjectId: 'interview_philippe_charriere',
-    conventionId: 'online_k33g',
-    when: '2023-04-06',
-    links: {
-      video:
-        'https://www.youtube.com/watch?v=psQV7zB59hQ&ab_channel=PhilippeCharri%C3%A8re',
-    },
-    pictureId: 'livephilippecharriere2023',
-  },
-  {
     subjectId: 'event_driven_buzzword',
     conventionId: 'devfest_lille_2023',
     when: '2023-05-26',
@@ -269,16 +272,6 @@ const talks = [
         'https://www.youtube.com/watch?v=RovPh9agiFc&t=1s&ab_channel=GDGFrance',
     },
     pictureId: 'devfestlille2023-Event_driven',
-  },
-  {
-    subjectId: 'podcast_punkin_dev',
-    conventionId: 'online_punkin_dev',
-    when: '2023-06-20',
-    links: {
-      audio:
-        'https://podcast.ausha.co/punkindev/s03e12-dev-lead-architecte-non-archidev-avec-celine-louvet',
-    },
-    pictureId: 'podcast_punkindev2023',
   },
   {
     subjectId: 'event_driven_buzzword',
@@ -338,25 +331,6 @@ const talks = [
     pictureId: 'paatternTalks2023-Tired_women_revolution',
   },
   {
-    subjectId: 'podcast_developer_experience',
-    conventionId: 'online_developer_experience',
-    when: '2023-12-29',
-    links: {
-      audio: 'https://podcast.ausha.co/developer-experience/celine-louvet',
-    },
-    pictureId: 'podcast_devxp2023',
-  },
-  {
-    subjectId: 'podcast_avocado_growth',
-    conventionId: 'online_avocado_growth',
-    when: '2024-01-22',
-    links: {
-      audio:
-        'https://podcast.ausha.co/avocado-growth-portrait-tech/18-parcours-tech-celine',
-    },
-    pictureId: 'podcast_avocadogrowth2024',
-  },
-  {
     subjectId: 'highway_to_fail',
     conventionId: 'lyoncraft_2024',
     when: '2024-04-08',
@@ -399,7 +373,7 @@ const talks = [
   },
 ] satisfies Talk[];
 
-const resume: Resume = {
+const resume = {
   firstname: 'Céline',
   lastname: 'Louvet',
   birthdate: '1980-12-02',
@@ -1119,6 +1093,7 @@ const resume: Resume = {
   possibleTalkSubjects,
   conventions,
   talks,
+  podcasts,
   educations: [
     {
       from: '2002',
@@ -1152,6 +1127,6 @@ const resume: Resume = {
       when: '2013-03-01',
     },
   ],
-};
+} satisfies Resume;
 
 export default resume;

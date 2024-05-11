@@ -4,9 +4,10 @@ import { type FC } from 'react';
 import { type Resume } from '@/data';
 
 import { Biography } from './Biography';
+import { Podcasts } from './podcasts';
 import { Socials } from './Socials';
 import { Summary } from './Summary';
-import { Talks } from './Talks';
+import { Talks } from './talks';
 
 type HomeProps = {
   resume: Resume;
@@ -29,6 +30,7 @@ export const Home: FC<HomeProps> = ({ resume }) => {
           <Biography biographies={resume.biographies} />
           <Socials socials={resume.socials} />
           <Talks resume={resume} />
+          <Podcasts resume={resume} />
         </Stack>
       </Grid>
     </Flex>
