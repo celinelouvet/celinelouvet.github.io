@@ -49,7 +49,7 @@ export const content = (
           <Title title={talk.title} />
         </StackItem>
         <StackItem>
-          <H2Heading>{talk.author}</H2Heading>
+          <H2Heading variant="slide">{talk.author}</H2Heading>
         </StackItem>
         <Spacer />
         <StackItem alignSelf="start">

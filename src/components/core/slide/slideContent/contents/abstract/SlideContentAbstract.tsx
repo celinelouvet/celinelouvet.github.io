@@ -47,7 +47,7 @@ export const SlideContentAbstract = forwardRef<
 const Title: FC<{ title: string }> = ({ title }) => (
   <Center width="100%" flexDirection="column">
     {title.split('\n').map((line, i) => (
-      <H2Heading key={i} textAlign="center">
+      <H2Heading key={i} variant="slide" textAlign="center">
         {line}
       </H2Heading>
     ))}
