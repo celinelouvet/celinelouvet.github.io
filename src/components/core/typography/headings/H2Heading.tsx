@@ -41,7 +41,8 @@ export const h2HeadingStyles = {
       marginBottom: '2',
     },
     slide: {
-      fontWeight: '700',
+      fontWeight: '400',
+      lineHeight: '1.2',
     },
   },
   defaultProps: {
