@@ -41,9 +41,22 @@ const Note: FC<{ slides: Slide[]; position: number }> = ({
 
 const getSize = (preview?: boolean) => {
   if (preview) {
-    return { width: 238, height: 134 };
+    const width = 238;
+    const height = 134;
+    return {
+      width,
+      height,
+      ratio: width / height,
+    };
   }
-  return { width: 507, height: 285 };
+  const width = 507;
+  const height = 285;
+
+  return {
+    width,
+    height,
+    ratio: width / height,
+  };
 };
 
 const Slide: FC<{ slides: Slide[]; position: number; preview?: boolean }> = ({

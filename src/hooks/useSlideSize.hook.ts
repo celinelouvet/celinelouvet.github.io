@@ -4,34 +4,46 @@ const defaultFontSize = 18;
 const defaultContentHeight = 450;
 const ratio = 16 / 9;
 
-export const useSlideSize = ({ height, width }: WindowSize) => {
-  const windowRatio = width / height;
+const defaultConfig = {
+  lineHeight: '2em',
+  fontSize: defaultFontSize,
+  height: defaultContentHeight,
+  width: defaultContentHeight * ratio,
+  marginLeft: 0,
+  marginTop: 0,
+};
 
-  if (windowRatio > ratio) {
-    const fontSize = (defaultFontSize * height) / defaultContentHeight;
-    const newWidth = height * ratio;
-    const marginLeft = (width - newWidth) / 2;
+export const useSlideSize = (windowSize: WindowSize) =>
+  windowSize.ratio > ratio
+    ? screenWiderThanSlide(windowSize)
+    : screenHigherThanSlide(windowSize);
 
-    return {
-      height,
-      width: newWidth,
-      fontSize,
-      lineHeight: '2em',
-      marginLeft,
-      marginTop: 0,
-    };
-  } else {
-    const newHeight = width / ratio;
-    const fontSize = (defaultFontSize * newHeight) / defaultContentHeight;
-    const marginTop = (height - newHeight) / 2;
+const screenWiderThanSlide = ({ height, width }: WindowSize) => {
+  const fontSize = (defaultFontSize * height) / defaultContentHeight;
+  const newWidth = height * ratio;
+  const marginLeft = (width - newWidth) / 2;
 
-    return {
-      width,
-      height: newHeight,
-      fontSize,
-      lineHeight: '2em',
-      marginLeft: 0,
-      marginTop,
-    };
-  }
+  return {
+    ...defaultConfig,
+
+    height,
+    width: newWidth,
+    fontSize,
+    marginLeft,
+  };
+};
+
+const screenHigherThanSlide = ({ height, width }: WindowSize) => {
+  const newHeight = width / ratio;
+  const fontSize = (defaultFontSize * newHeight) / defaultContentHeight;
+  const marginTop = (height - newHeight) / 2;
+
+  return {
+    ...defaultConfig,
+
+    width,
+    height: newHeight,
+    fontSize,
+    marginTop,
+  };
 };
