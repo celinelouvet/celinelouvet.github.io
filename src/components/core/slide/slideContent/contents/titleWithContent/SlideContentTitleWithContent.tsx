@@ -30,7 +30,7 @@ export const SlideContentTitleWithContent = forwardRef<
       {...props}
     >
       <StackItem>
-        <H2Heading>{title}</H2Heading>
+        <H2Heading variant="slide">{title}</H2Heading>
       </StackItem>
       <Flex
         flexGrow="1"

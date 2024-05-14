@@ -48,7 +48,7 @@ export const SlideContentTitleWithThinColumn = forwardRef<
       >
         <Stack width="100%" height="100%" gap="1em" overflow="hidden">
           <StackItem>
-            <H2Heading>{title}</H2Heading>
+            <H2Heading variant="slide">{title}</H2Heading>
           </StackItem>
 
           <StackItem width="100%" flex="1">

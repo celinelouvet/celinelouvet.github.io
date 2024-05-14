@@ -57,7 +57,7 @@ export const SlideContentPromotion = forwardRef<
         </StackItem>
 
         <StackItem textAlign="center" marginBottom="2em">
-          <H3Heading>{author}</H3Heading>
+          <H3Heading variant="slide">{author}</H3Heading>
         </StackItem>
 
         <StackItem flexGrow="1">

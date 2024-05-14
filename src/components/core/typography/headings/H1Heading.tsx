@@ -46,6 +46,7 @@ export const h1HeadingStyles = {
     slide: {
       fontWeight: '700',
       paddingBottom: '4',
+      lineHeight: '1.2',
     },
   },
   defaultProps: {

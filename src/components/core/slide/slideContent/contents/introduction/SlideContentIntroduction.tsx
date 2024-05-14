@@ -49,7 +49,7 @@ export const SlideContentIntroduction = forwardRef<
         gap="1em"
       >
         <StackItem marginBottom="1em">
-          <H2Heading>{author}</H2Heading>
+          <H2Heading variant="slide">{author}</H2Heading>
         </StackItem>
 
         <StackItem>

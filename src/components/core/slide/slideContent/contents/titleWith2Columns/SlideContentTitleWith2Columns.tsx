@@ -36,7 +36,7 @@ export const SlideContentTitleWith2Columns = forwardRef<
         overflow="hidden"
       >
         <StackItem>
-          <H2Heading>{title}</H2Heading>
+          <H2Heading variant="slide">{title}</H2Heading>
         </StackItem>
 
         <HStack

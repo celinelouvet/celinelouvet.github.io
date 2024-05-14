@@ -34,7 +34,7 @@ export const SlideContentMainTitle = forwardRef<
         <Title title={title} />
       </StackItem>
       <StackItem>
-        <H2Heading>{author}</H2Heading>
+        <H2Heading variant="slide">{author}</H2Heading>
       </StackItem>
     </Stack>
   </SlideContentFullContent>
