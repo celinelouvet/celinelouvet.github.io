@@ -1,0 +1,31 @@
+{
+  "name": "slides-generator",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "npm": "please-use-yarn",
+    "yarn": ">=1.22"
+  },
+  "scripts": {
+    "lint:ts": "eslint --ext \".ts\" --ignore-path .gitignore .",
+    "lint": "yarn lint:ts",
+    "slides": "node --no-warnings=ExperimentalWarning --loader ts-node/esm ./generate-slides.ts",
+    "dev:slides": "nodemon --exec node --no-warnings=ExperimentalWarning --loader ts-node/esm ./generate-slides.ts",
+    "conf": "ts-node --showConfig"
+  },
+  "dependencies": {
+    "eslint": "9.2.0",
+    "prettier": "3.2.5",
+    "typescript": "5.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "@types/yargs": "17.0.32",
+    "nodemon": "^3.1.0",
+    "puppeteer": "22.8.1",
+    "ts-node": "10.9.2",
+    "tslib": "^2.6.2",
+    "yargs": "17.7.2"
+  }
+}
