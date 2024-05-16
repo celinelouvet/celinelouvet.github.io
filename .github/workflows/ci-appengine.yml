@@ -13,7 +13,7 @@ concurrency:
 env:
   VERSION: ${{ github.ref_name }}
   PDF_FILE: 'LOUVET_Celine'
-  BUCKET_NAME: '${{ secrets.GCP_PROJECT }}.appspot.com'
+  BUCKET_NAME: '${{ vars.GCP_PROJECT }}.appspot.com'
 
 jobs:
   deploy:
@@ -28,9 +28,6 @@ jobs:
     permissions:
       contents: read
       id-token: write
-
-    outputs:
-      url: ${{ steps.deploy.outputs.url }}
 
     steps:
       - name: Checkout
@@ -91,10 +88,71 @@ jobs:
         name: Deploy to GCP AppEngine
         uses: google-github-actions/deploy-appengine@v2
         with:
-          project_id: ${{ secrets.GCP_PROJECT }}
+          project_id: ${{ vars.GCP_PROJECT }}
           deliverables: app.yaml
           promote: false
           version: ${{ env.VERSION }}
 
       - name: Test deployed version
         run: curl --silent --head "${{ steps.deploy.outputs.version_url }}/test"
+
+    outputs:
+      versionUrl: ${{ steps.deploy.outputs.version_url }}
+
+  slidePdf:
+    name: Generate Slides PDF
+    needs: deploy
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [20]
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Define bucket path
+        id: bucket
+        run: echo "BUCKET_PATH=${{env.BUCKET_NAME}}/${{ env.VERSION }}/slides" >> $GITHUB_OUTPUT
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup node env
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Cache node modules
+        uses: actions/cache@v4
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Generate PDF
+        shell: bash
+        run: cd slides-generator && yarn && yarn slides --pageUrl "$VERSION_URL"
+        env:
+          VERSION_URL: ${{ needs.deploy.outputs.versionUrl }}
+
+      - id: auth
+        name: Auth to GCP
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Upload Slides PDF
+        uses: google-github-actions/upload-cloud-storage@v2
+        with:
+          path: './slides-generator/Highway_to_fail.pdf'
+          destination: ${{ steps.bucket.outputs.BUCKET_PATH }}
+          predefinedAcl: publicRead

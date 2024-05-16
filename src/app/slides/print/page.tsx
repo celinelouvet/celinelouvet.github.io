@@ -9,13 +9,9 @@ export default function Page() {
   return (
     <SlideDeck
       slides={slides}
-      view={ViewTypes.notes}
-      position="absolute"
-      top="0"
-      left="0"
-      right="0"
-      bottom="0"
-      backgroundColor="brand.900"
+      view={ViewTypes.print}
+      backgroundColor="gray.900"
+      color="white"
     />
   );
 }

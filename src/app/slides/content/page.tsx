@@ -1,6 +1,6 @@
 'use client';
 
-import { SlideDeck } from '@/components/core';
+import { SlideDeck, ViewTypes } from '@/components/core';
 import { getSlides } from '@/components/slideDecks/highwayToFail';
 
 export default function Page() {
@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <SlideDeck
       slides={slides}
-      forNotes={false}
+      view={ViewTypes.content}
       position="absolute"
       top="0"
       left="0"

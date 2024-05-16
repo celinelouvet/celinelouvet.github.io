@@ -1,1 +1,1 @@
-export { SlideDeck } from './SlideDeck';
+export { SlideDeck, ViewTypes } from './SlideDeck';

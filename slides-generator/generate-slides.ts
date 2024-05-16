@@ -1,0 +1,137 @@
+import fs from 'fs';
+import yargs from 'yargs';
+import { Browser, launch, Page } from 'puppeteer';
+
+const width = 1600;
+const height = 900;
+const viewPort = { width, height };
+
+type Arguments = {
+  pageUrl: string;
+};
+
+const { pageUrl } = yargs(process.argv.slice(1))
+  .scriptName('generate-slides')
+  .usage('Usage: $0 --pageUrl http://localhost:3000')
+  .options({
+    pageUrl: {
+      type: 'string',
+      demandOption: true,
+      default: 'http://localhost:3000',
+    },
+  }).argv as Arguments;
+
+async function listPdfs(path = './'): Promise<string[]> {
+  try {
+    const items = await fs.promises.readdir(path, { withFileTypes: true });
+    return items
+      .filter((item) => item.isFile())
+      .map((item) => item.name)
+      .filter((name) => name.endsWith('.pdf'));
+  } catch (error: unknown) {
+    return [];
+  }
+}
+
+async function cleanPreviousPdfs() {
+  const pdfs = await listPdfs();
+  if (pdfs.length > 0) {
+    console.log(`[PDF] Deleting ${pdfs.length} files`);
+
+    for (const pdf of pdfs) {
+      await fs.promises.unlink(`./${pdf}`);
+      console.log(`[PDF] File deleted "${pdf}"`);
+    }
+  }
+}
+
+async function openPage(browser: Browser): Promise<Page> {
+  return new Promise((resolve, reject) => {
+    console.info('[PDF] Opening page');
+
+    browser
+      .newPage()
+      .then((page) => {
+        page.once('response', (response) => {
+          const code = response.status();
+
+          if (code !== 200) {
+            const text = response.statusText();
+            return reject(text);
+          }
+          resolve(page);
+        });
+        page.on('error', (error: unknown) => reject(error));
+        page.on('pageerror', (error: unknown) => reject(error));
+
+        resolve(page);
+      })
+      .catch((error: unknown) => reject(error));
+  });
+}
+
+async function printPage(url: string): Promise<void> {
+  try {
+    console.log('[PDF] Generating PDF', { url });
+
+    const browser = await launch({
+      headless: true,
+      args: [
+        '--disable-gpu',
+        '--disable-dev-shm-usage',
+        '--disable-setuid-sandbox',
+        '--no-sandbox',
+      ],
+    });
+
+    const page = await openPage(browser);
+    await page.setViewport(viewPort);
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: 0 });
+    await page.waitForNetworkIdle({ idleTime: 500 });
+
+    const title = await page.title();
+    const filename = title.replaceAll(' ', '_') + '.pdf';
+
+    console.log('[PDF] Page loaded', { url, title, filename });
+
+    await page.pdf({
+      ...viewPort,
+
+      printBackground: true,
+      path: filename,
+      margin: {
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+      },
+    });
+
+    await browser.close();
+    console.log('[PDF] PDF generated');
+  } catch (error: unknown) {
+    console.error("[PDF] Couldn't print the page", { path: url, error });
+    throw error;
+  }
+}
+
+async function printPdf() {
+  try {
+    const url = `${pageUrl}/slides/print`;
+
+    console.log('[PDF] Starting', { url });
+
+    await cleanPreviousPdfs();
+    await printPage(url);
+
+    console.log('[PDF] Finished');
+  } catch (error: unknown) {
+    console.error(`Error while generating: ${error}`);
+  }
+}
+
+export async function run() {
+  await printPdf();
+}
+
+await run();

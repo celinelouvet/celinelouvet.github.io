@@ -28,7 +28,12 @@ export default function Page() {
         <Flex alignItems="baseline" gap="8">
           <Text>{colorMode}</Text>
 
-          <Button as={NextLink} href="/" backgroundColor="red.500">
+          <Button
+            as={NextLink}
+            href="/"
+            backgroundColor="red.500"
+            target="_blank"
+          >
             Change color mode
           </Button>
         </Flex>
@@ -40,6 +45,9 @@ export default function Page() {
         </Button>
         <Button as={NextLink} href="" onClick={() => onClick(true)}>
           Present with notes
+        </Button>
+        <Button as={NextLink} href="/slides/print">
+          Print mode
         </Button>
       </ButtonGroup>
     </Stack>
