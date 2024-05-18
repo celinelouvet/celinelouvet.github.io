@@ -1,4 +1,3 @@
-import { ListItem, Text, UnorderedList } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
 import {
@@ -8,37 +7,11 @@ import {
   SlideNote,
 } from '@/components/core';
 
-import { SlideDeck as SlideDeckComponent } from './SlideDeck';
+import { SlideDeck as SlideDeckComponent, ViewTypes } from './SlideDeck';
 
 const maxSlides = 5;
 
-const contentExample = <Text>Big example</Text>;
-
-const noteExample = (
-  <SlideNote key="text" minutes={2} seconds={56}>
-    <UnorderedList>
-      <ListItem>
-        Qui a eu envie un jour de se lancer dans la création de startup ?
-      </ListItem>
-      <ListItem>Parmi les personnes qui ont dit oui, qui l’a fait ?</ListItem>
-      <ListItem>
-        Parmi celleux qui se sont lancés, est ce que vous considérez avoir
-        réussi votre pari ?
-      </ListItem>
-      <ListItem>
-        Parmi celleux qui ne se sont pas lancés, est ce parce que vous craignez
-        l’échec ?
-      </ListItem>
-    </UnorderedList>
-  </SlideNote>
-);
-
-const slides: Slide[] = [
-  {
-    content: contentExample,
-    note: noteExample,
-  },
-];
+const slides: Slide[] = [];
 
 for (let i = 0; i < maxSlides; i++) {
   slides.push({
@@ -46,7 +19,7 @@ for (let i = 0; i < maxSlides; i++) {
       <SlideContent
         type={SlideContentTypes.title}
         title={`Title ${i + 1}`}
-        author="author"
+        author="Author"
       ></SlideContent>
     ),
     note: <SlideNote minutes={i + 1}>Note {i + 1}</SlideNote>,
@@ -64,13 +37,27 @@ type Story = StoryObj<typeof meta>;
 export const Content: Story = {
   args: {
     slides,
-    forNotes: false,
+    view: ViewTypes.content,
   },
 };
 
 export const Notes: Story = {
   args: {
     slides,
-    forNotes: true,
+    view: ViewTypes.notes,
+  },
+};
+
+export const Print: Story = {
+  args: {
+    slides,
+    view: ViewTypes.print,
+  },
+};
+
+export const PrintNotes: Story = {
+  args: {
+    slides,
+    view: ViewTypes.printNotes,
   },
 };

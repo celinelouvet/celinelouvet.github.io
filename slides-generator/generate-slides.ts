@@ -70,22 +70,10 @@ async function openPage(browser: Browser): Promise<Page> {
   });
 }
 
-async function printPage(url: string): Promise<void> {
+async function printPage(url: string, page: Page): Promise<void> {
   try {
-    console.log('[PDF] Generating PDF', { url });
+    console.log('[PDF] Generating PDF for page', { url });
 
-    const browser = await launch({
-      headless: true,
-      args: [
-        '--disable-gpu',
-        '--disable-dev-shm-usage',
-        '--disable-setuid-sandbox',
-        '--no-sandbox',
-      ],
-    });
-
-    const page = await openPage(browser);
-    await page.setViewport(viewPort);
     await page.goto(url, { waitUntil: 'networkidle2', timeout: 0 });
     await page.waitForNetworkIdle({ idleTime: 500 });
 
@@ -107,8 +95,7 @@ async function printPage(url: string): Promise<void> {
       },
     });
 
-    await browser.close();
-    console.log('[PDF] PDF generated');
+    console.log('[PDF] PDF generated for page', { url });
   } catch (error: unknown) {
     console.error("[PDF] Couldn't print the page", { path: url, error });
     throw error;
@@ -117,14 +104,30 @@ async function printPage(url: string): Promise<void> {
 
 async function printPdf() {
   try {
-    const url = `${pageUrl}/slides/print`;
-
-    console.log('[PDF] Starting', { url });
-
+    const urls = [`${pageUrl}/slides/print`, `${pageUrl}/slides/printNotes`];
     await cleanPreviousPdfs();
-    await printPage(url);
+
+    console.log(`[PDF] Generating ${urls.length} PDFs`);
+    const browser = await launch({
+      headless: true,
+      args: [
+        '--disable-gpu',
+        '--disable-dev-shm-usage',
+        '--disable-setuid-sandbox',
+        '--no-sandbox',
+      ],
+    });
+
+    const page = await openPage(browser);
+    await page.setViewport(viewPort);
+
+    for (const url of urls) {
+      await printPage(url, page);
+    }
 
     console.log('[PDF] Finished');
+
+    await browser.close();
   } catch (error: unknown) {
     console.error(`Error while generating: ${error}`);
   }
