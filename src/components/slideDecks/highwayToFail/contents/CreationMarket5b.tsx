@@ -1,4 +1,4 @@
-import { Text } from '@chakra-ui/react';
+import { Stack, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -10,12 +10,20 @@ export const content = (
     title="Nécessité de se démarquer"
     alignContent="flex-start"
     column1={<VerticalTimelineCreation />}
-  ></SlideContent>
+  >
+    <Stack spacing="1em">
+      <Text>Clients de type TPE et PME</Text>
+    </Stack>
+  </SlideContent>
 );
 
 const note = (
   <SlideNote>
-    <Text>Pour se démarquer,</Text>
+    <Text>Fairvioo va viser les TPE et les PME</Text>
+    <Text>
+      Les concurrents fonctionnent par abonnement mensuel qui sont hors de prix
+      pour les petits commerçants.
+    </Text>
   </SlideNote>
 );
 

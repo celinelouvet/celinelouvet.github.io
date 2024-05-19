@@ -1,10 +1,4 @@
-import {
-  ListItem,
-  Stack,
-  StackItem,
-  Text,
-  UnorderedList,
-} from '@chakra-ui/react';
+import { Stack, Text } from '@chakra-ui/react';
 
 import {
   SlideContent,
@@ -18,31 +12,21 @@ import { VerticalTimelineCreation } from '../components';
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="Le marché"
+    title="Étude de marché"
     alignContent="flex-start"
     column1={<VerticalTimelineCreation />}
   >
     <Stack width="100%" gap="2em">
-      <StackItem>
-        <ThumbsDown variant="slide">
-          <Text>Étude du marché</Text>
-          <UnorderedList paddingLeft="1em">
-            <ListItem>Concurrents nombreux,</ListItem>
-            <ListItem>En place depuis plusieurs années.</ListItem>
-          </UnorderedList>
-        </ThumbsDown>
-      </StackItem>
-      <StackItem>
-        <Text>→ Nécessité de se démarquer rapidement</Text>
-        <Text>→ Contenu du MVP</Text>
-      </StackItem>
+      <ThumbsDown variant="slide">
+        Nécessité de se démarquer rapidement
+      </ThumbsDown>
+      <ThumbsDown variant="slide">Contenu du MVP</ThumbsDown>
     </Stack>
   </SlideContent>
 );
 
 const note = (
   <SlideNote>
-    <Text>Il va donc être vital de se démarquer rapidement</Text>
     <Text>Et de réfléchir au contenu du MVP</Text>
   </SlideNote>
 );

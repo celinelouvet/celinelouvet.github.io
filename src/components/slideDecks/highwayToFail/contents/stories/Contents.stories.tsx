@@ -61,10 +61,17 @@ import CreationIdea8Slide from '../CreationIdea8';
 import CreationIdea9Slide from '../CreationIdea9';
 import CreationMarket1Slide from '../CreationMarket1';
 import CreationMarket2Slide from '../CreationMarket2';
+import CreationMarket2bSlide from '../CreationMarket2b';
 import CreationMarket3Slide from '../CreationMarket3';
 import CreationMarket4Slide from '../CreationMarket4';
 import CreationMarket5Slide from '../CreationMarket5';
+import CreationMarket5bSlide from '../CreationMarket5b';
+import CreationMarket5cSlide from '../CreationMarket5c';
+import CreationMarket5dSlide from '../CreationMarket5d';
 import CreationMarket6Slide from '../CreationMarket6';
+import CreationMarket6bSlide from '../CreationMarket6b';
+import CreationMarket6cSlide from '../CreationMarket6c';
+import CreationMarket6dSlide from '../CreationMarket6d';
 import CreationMeeting1Slide from '../CreationMeeting1';
 import CreationMeeting1bSlide from '../CreationMeeting1b';
 import CreationMeeting1cSlide from '../CreationMeeting1c';
@@ -367,10 +374,17 @@ export const CreationMarket: Story = {
     slides: [
       CreationMarket1Slide,
       CreationMarket2Slide,
+      CreationMarket2bSlide,
       CreationMarket3Slide,
       CreationMarket4Slide,
       CreationMarket5Slide,
+      CreationMarket5bSlide,
+      CreationMarket5cSlide,
+      CreationMarket5dSlide,
       CreationMarket6Slide,
+      CreationMarket6bSlide,
+      CreationMarket6cSlide,
+      CreationMarket6dSlide,
     ],
     view: ViewTypes.print,
   },
