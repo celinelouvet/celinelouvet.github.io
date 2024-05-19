@@ -199,6 +199,7 @@ import DuringStack4Slide from '../DuringStack4';
 import DuringStack5Slide from '../DuringStack5';
 import DuringWhere1Slide from '../DuringWhere1';
 import DuringWhere2Slide from '../DuringWhere2';
+import DuringWhere2bSlide from '../DuringWhere2b';
 import DuringWhere3Slide from '../DuringWhere3';
 import DuringWhere4Slide from '../DuringWhere4';
 import EndTitleSlide from '../EndTitle';
@@ -415,6 +416,7 @@ export const DuringWhere: Story = {
     slides: [
       DuringWhere1Slide,
       DuringWhere2Slide,
+      DuringWhere2bSlide,
       DuringWhere3Slide,
       DuringWhere4Slide,
     ],

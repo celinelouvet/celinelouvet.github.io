@@ -1,8 +1,8 @@
-import { Box, Center, Text } from '@chakra-ui/react';
+import { Stack, StackItem, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { Couch, VerticalTimelineDuring } from '../components';
+import { VerticalTimelineDuring } from '../components';
 
 export const content = (
   <SlideContent
@@ -11,11 +11,11 @@ export const content = (
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
   >
-    <Center width="100%" height="100%">
-      <Box height="100%">
-        <Couch />
-      </Box>
-    </Center>
+    <Stack width="100%" gap="1em">
+      <StackItem>
+        <Text>Canapé & espace de coworking</Text>
+      </StackItem>
+    </Stack>
   </SlideContent>
 );
 

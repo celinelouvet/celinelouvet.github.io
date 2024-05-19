@@ -1,3 +1,4 @@
+export * from './Couch';
 export * from './Design1';
 export * from './Design2';
 export * from './Market1';
