@@ -16,7 +16,7 @@ type SlideNoteProps = StackProps & {
 export const SlideNote = forwardRef<SlideNoteProps, 'div'>(
   ({ hours, minutes, seconds, children, ...props }, ref) => {
     return (
-      <Stack ref={ref} {...props} gap="1em" padding="3em">
+      <Stack gap="1em" padding="3em" ref={ref} {...props}>
         {hours || minutes || seconds ? (
           <StackItem
             textAlign="center"
@@ -27,7 +27,7 @@ export const SlideNote = forwardRef<SlideNoteProps, 'div'>(
             <TimeText {...{ hours, minutes, seconds }} />
           </StackItem>
         ) : null}
-        <StackItem fontSize="3xl" lineHeight="2">
+        <StackItem lineHeight="2" fontSize="1.8em">
           {children}
         </StackItem>
       </Stack>

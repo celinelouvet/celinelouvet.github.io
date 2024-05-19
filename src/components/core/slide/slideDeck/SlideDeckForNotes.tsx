@@ -20,25 +20,6 @@ const slideBorder = {
   borderColor: 'brand.600',
 };
 
-const Note: FC<{ slides: Slide[]; position: number }> = ({
-  slides,
-  position,
-}) => (
-  <>
-    {slides.map(({ note }, index) => (
-      <Box
-        width="100%"
-        height="100%"
-        key={`note-${index}`}
-        display={index !== position ? 'none' : ''}
-        userSelect="none"
-      >
-        {note}
-      </Box>
-    ))}
-  </>
-);
-
 const getSize = (preview?: boolean) => {
   if (preview) {
     const width = 238;
@@ -59,14 +40,33 @@ const getSize = (preview?: boolean) => {
   };
 };
 
+const Note: FC<{ slides: Slide[]; position: number }> = ({
+  slides,
+  position,
+}) => (
+  <>
+    {slides.map(({ note }, index) => (
+      <Stack
+        width="100%"
+        height="100%"
+        key={`note-${index}`}
+        display={index !== position ? 'none' : ''}
+        userSelect="none"
+      >
+        {note}
+      </Stack>
+    ))}
+  </>
+);
+
 const Slide: FC<{ slides: Slide[]; position: number; preview?: boolean }> = ({
   slides,
   position,
   preview = false,
 }) => {
   const size = getSize(preview);
-
   const contentProps = useSlideSize(size);
+
   return (
     <>
       {slides.map(({ content }, index) => {
@@ -86,7 +86,7 @@ const Slide: FC<{ slides: Slide[]; position: number; preview?: boolean }> = ({
   );
 };
 
-export type SlideDeckForNotesProps = Omit<SlideDeckProps, 'forNotes'>;
+export type SlideDeckForNotesProps = Omit<SlideDeckProps, 'view'>;
 
 export const SlideDeckForNotes = forwardRef<SlideDeckForNotesProps, 'div'>(
   ({ slides, ...props }, ref) => {

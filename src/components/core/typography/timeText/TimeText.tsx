@@ -12,7 +12,7 @@ export type TimeTextProps = ChakraHeadingProps & {
   seconds?: number;
 };
 
-export const TimeText = forwardRef<TimeTextProps, 'h2'>(
+export const TimeText = forwardRef<TimeTextProps, 'span'>(
   ({ hours, minutes = 0, seconds = 0, ...props }, ref) => {
     const styles = useStyleConfig('TimeText');
 
