@@ -77,7 +77,9 @@ export const content = (
         <QrCode value="https://celine.louvet.me/devfest" />
 
         <StackItem textAlign="center">
-          <H3Heading variant="slide">Sondage</H3Heading>
+          <H3Heading variant="slide">
+            <Text as="b">Sondage</Text>
+          </H3Heading>
           <Text>celine.louvet.me/devfest</Text>
         </StackItem>
       </Stack>
