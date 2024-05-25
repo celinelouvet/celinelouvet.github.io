@@ -1,6 +1,7 @@
 import {
   Box,
   Center,
+  HStack,
   List,
   Stack,
   StackItem,
@@ -34,6 +35,11 @@ export const SlideContentIntroduction = forwardRef<
     </Center>
   );
 
+  const splitSocials = [] as (typeof socials)[];
+  for (let i = 0; i < socials.length; i += 2) {
+    splitSocials.push(socials.slice(i, i + 2));
+  }
+
   return (
     <SlideContentWith2Columns
       {...props}
@@ -46,9 +52,9 @@ export const SlideContentIntroduction = forwardRef<
         height="100%"
         alignItems="stretch"
         justifyContent="center"
-        gap="1em"
+        gap="2em"
       >
-        <StackItem marginBottom="1em">
+        <StackItem>
           <H2Heading variant="slide">{author}</H2Heading>
         </StackItem>
 
@@ -66,16 +72,20 @@ export const SlideContentIntroduction = forwardRef<
         </StackItem>
 
         <StackItem>
-          <List>
-            {socials.map(({ name, handle }, index) => (
-              <TextListItem
-                key={index}
-                icon={socialIcon(name)}
-                ariaLabel={name}
-                text={handle}
-              />
+          <HStack spacing="2em" alignItems="start">
+            {splitSocials.map((split, splitIndex) => (
+              <List key={splitIndex}>
+                {split.map(({ name, handle }, index) => (
+                  <TextListItem
+                    key={index}
+                    icon={socialIcon(name)}
+                    ariaLabel={name}
+                    text={handle}
+                  />
+                ))}
+              </List>
             ))}
-          </List>
+          </HStack>
         </StackItem>
       </Stack>
     </SlideContentWith2Columns>

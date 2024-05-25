@@ -61,10 +61,16 @@ import CreationIdea8Slide from '../CreationIdea8';
 import CreationIdea9Slide from '../CreationIdea9';
 import CreationMarket1Slide from '../CreationMarket1';
 import CreationMarket2Slide from '../CreationMarket2';
+import CreationMarket2bSlide from '../CreationMarket2b';
 import CreationMarket3Slide from '../CreationMarket3';
 import CreationMarket4Slide from '../CreationMarket4';
 import CreationMarket5Slide from '../CreationMarket5';
+import CreationMarket5bSlide from '../CreationMarket5b';
+import CreationMarket5cSlide from '../CreationMarket5c';
 import CreationMarket6Slide from '../CreationMarket6';
+import CreationMarket6bSlide from '../CreationMarket6b';
+import CreationMarket6cSlide from '../CreationMarket6c';
+import CreationMarket6dSlide from '../CreationMarket6d';
 import CreationMeeting1Slide from '../CreationMeeting1';
 import CreationMeeting1bSlide from '../CreationMeeting1b';
 import CreationMeeting1cSlide from '../CreationMeeting1c';
@@ -207,6 +213,11 @@ import Fairvioo1Slide from '../Fairvioo1';
 import Fairvioo2Slide from '../Fairvioo2';
 import Fairvioo3Slide from '../Fairvioo3';
 import Fairvioo4Slide from '../Fairvioo4';
+import Fairvioo4bSlide from '../Fairvioo4b';
+import Fairvioo4cSlide from '../Fairvioo4c';
+import Fairvioo4dSlide from '../Fairvioo4d';
+import Fairvioo4eSlide from '../Fairvioo4e';
+import Fairvioo4fSlide from '../Fairvioo4f';
 import IntroductionSlide from '../Introduction';
 import MainTitleSlide from '../MainTitle';
 import Numbers1Slide from '../Numbers1';
@@ -244,7 +255,17 @@ export const Introduction: Story = {
 
 export const Fairvioo: Story = {
   args: {
-    slides: [Fairvioo1Slide, Fairvioo2Slide, Fairvioo3Slide, Fairvioo4Slide],
+    slides: [
+      Fairvioo1Slide,
+      Fairvioo2Slide,
+      Fairvioo3Slide,
+      Fairvioo4Slide,
+      Fairvioo4bSlide,
+      Fairvioo4cSlide,
+      Fairvioo4dSlide,
+      Fairvioo4eSlide,
+      Fairvioo4fSlide,
+    ],
     view: ViewTypes.printNotes,
   },
 };
@@ -373,10 +394,16 @@ export const CreationMarket: Story = {
     slides: [
       CreationMarket1Slide,
       CreationMarket2Slide,
+      CreationMarket2bSlide,
       CreationMarket3Slide,
       CreationMarket4Slide,
       CreationMarket5Slide,
+      CreationMarket5bSlide,
+      CreationMarket5cSlide,
       CreationMarket6Slide,
+      CreationMarket6bSlide,
+      CreationMarket6cSlide,
+      CreationMarket6dSlide,
     ],
     view: ViewTypes.printNotes,
   },

@@ -1,25 +1,23 @@
-import { Center, Text } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { Market1, VerticalTimelineCreation } from '../components';
+import { VerticalTimelineCreation } from '../components';
 
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="Le marché"
+    title="Étude de marché"
     alignContent="flex-start"
     column1={<VerticalTimelineCreation />}
-  >
-    <Center width="100%" height="100%">
-      <Market1 />
-    </Center>
-  </SlideContent>
+  ></SlideContent>
 );
 
 const note = (
   <SlideNote>
-    <Text>Voici la représentation des concurrents présents sur le marché.</Text>
+    <Text>
+      Comme je vous disais en préambule, ils ont fait une étude de marché.
+    </Text>
   </SlideNote>
 );
 

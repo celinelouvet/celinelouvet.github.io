@@ -34,6 +34,7 @@ export const content = (
       <Stack flex="1" height="100%" spacing="1em">
         <UnorderedList>
           <ListItem>Nombreux concurrents,</ListItem>
+          <ListItem>En place depuis plusieurs années.</ListItem>
         </UnorderedList>
       </Stack>
 
@@ -47,21 +48,27 @@ export const content = (
         justifyContent="center"
       >
         <GridItem>
-          <Text as="span" {...dateStyle}></Text>
+          <Text as="span" {...dateStyle}>
+            2007
+          </Text>
         </GridItem>
         <GridItem>
           <Trustpilot />
         </GridItem>
 
         <GridItem>
-          <Text as="span" {...dateStyle}></Text>
+          <Text as="span" {...dateStyle}>
+            2011
+          </Text>
         </GridItem>
         <GridItem>
           <Yotpo />
         </GridItem>
 
         <GridItem>
-          <Text as="span" {...dateStyle}></Text>
+          <Text as="span" {...dateStyle}>
+            2012
+          </Text>
         </GridItem>
         <GridItem>
           <AvisVerifies />
@@ -73,10 +80,7 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>
-      Il en est ressorti qu’il y avait déjà de nombreux concurrents, dont parmi
-      les plus connus actuellement, Avis vérifiés, Trustpilot et Yotpo.
-    </Text>
+    <Text>Et certains étaient là depuis de nombreuses années.</Text>
   </SlideNote>
 );
 

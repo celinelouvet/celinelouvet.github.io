@@ -59,10 +59,17 @@ import CreationIdea8 from './CreationIdea8';
 import CreationIdea9 from './CreationIdea9';
 import CreationMarket1 from './CreationMarket1';
 import CreationMarket2 from './CreationMarket2';
+import CreationMarket2b from './CreationMarket2b';
 import CreationMarket3 from './CreationMarket3';
 import CreationMarket4 from './CreationMarket4';
 import CreationMarket5 from './CreationMarket5';
+import CreationMarket5b from './CreationMarket5b';
+import CreationMarket5c from './CreationMarket5c';
+import CreationMarket5d from './CreationMarket5d';
 import CreationMarket6 from './CreationMarket6';
+import CreationMarket6b from './CreationMarket6b';
+import CreationMarket6c from './CreationMarket6c';
+import CreationMarket6d from './CreationMarket6d';
 import CreationMeeting1 from './CreationMeeting1';
 import CreationMeeting1b from './CreationMeeting1b';
 import CreationMeeting1c from './CreationMeeting1c';
@@ -189,6 +196,11 @@ import Fairvioo1 from './Fairvioo1';
 import Fairvioo2 from './Fairvioo2';
 import Fairvioo3 from './Fairvioo3';
 import Fairvioo4 from './Fairvioo4';
+import Fairvioo4b from './Fairvioo4b';
+import Fairvioo4c from './Fairvioo4c';
+import Fairvioo4d from './Fairvioo4d';
+import Fairvioo4e from './Fairvioo4e';
+import Fairvioo4f from './Fairvioo4f';
 import Introduction from './Introduction';
 import MainTitle from './MainTitle';
 import Numbers1 from './Numbers1';
@@ -210,6 +222,11 @@ export const getSlides = () => {
     Fairvioo2,
     Fairvioo3,
     Fairvioo4,
+    Fairvioo4b,
+    Fairvioo4c,
+    Fairvioo4d,
+    Fairvioo4e,
+    Fairvioo4f,
 
     Introduction,
 
@@ -276,10 +293,17 @@ export const getSlides = () => {
 
     CreationMarket1,
     CreationMarket2,
+    CreationMarket2b,
     CreationMarket3,
     CreationMarket4,
     CreationMarket5,
+    CreationMarket5b,
+    CreationMarket5c,
+    CreationMarket5d,
     CreationMarket6,
+    CreationMarket6b,
+    CreationMarket6c,
+    CreationMarket6d,
 
     CreationTimeline1,
     CreationTimeline2,

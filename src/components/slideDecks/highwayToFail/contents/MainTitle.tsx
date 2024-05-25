@@ -74,11 +74,11 @@ export const content = (
         </StackItem>
       </Stack>
       <Stack width="20%" alignItems="center" justifyContent="center" gap="2em">
-        <QrCode value="https://celine.louvet.me/yeeso" />
+        <QrCode value="https://celine.louvet.me/devfest" />
 
         <StackItem textAlign="center">
           <H3Heading variant="slide">Sondage</H3Heading>
-          <Text>celine.louvet.me/yeeso</Text>
+          <Text>celine.louvet.me/devfest</Text>
         </StackItem>
       </Stack>
     </HStack>
