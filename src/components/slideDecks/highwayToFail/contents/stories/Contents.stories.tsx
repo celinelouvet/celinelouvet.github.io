@@ -214,6 +214,11 @@ import Fairvioo1Slide from '../Fairvioo1';
 import Fairvioo2Slide from '../Fairvioo2';
 import Fairvioo3Slide from '../Fairvioo3';
 import Fairvioo4Slide from '../Fairvioo4';
+import Fairvioo4bSlide from '../Fairvioo4b';
+import Fairvioo4cSlide from '../Fairvioo4c';
+import Fairvioo4dSlide from '../Fairvioo4d';
+import Fairvioo4eSlide from '../Fairvioo4e';
+import Fairvioo4fSlide from '../Fairvioo4f';
 import IntroductionSlide from '../Introduction';
 import MainTitleSlide from '../MainTitle';
 import Numbers1Slide from '../Numbers1';
@@ -249,7 +254,17 @@ export const Introduction: Story = {
 
 export const Fairvioo: Story = {
   args: {
-    slides: [Fairvioo1Slide, Fairvioo2Slide, Fairvioo3Slide, Fairvioo4Slide],
+    slides: [
+      Fairvioo1Slide,
+      Fairvioo2Slide,
+      Fairvioo3Slide,
+      Fairvioo4Slide,
+      Fairvioo4bSlide,
+      Fairvioo4cSlide,
+      Fairvioo4dSlide,
+      Fairvioo4eSlide,
+      Fairvioo4fSlide,
+    ],
     view: ViewTypes.print,
   },
 };
