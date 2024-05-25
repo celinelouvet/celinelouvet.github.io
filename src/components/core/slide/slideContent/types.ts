@@ -25,6 +25,10 @@ const WithColorMode = z.object({
   colormode: z.nativeEnum(ColorMode).default(ColorMode.light),
 });
 
+const WithTopRightCorner = z.object({
+  topRightCorner: z.string().optional(),
+});
+
 const ContentTitleSchema = z.object({
   type: z.literal(SlideContentTypes.title),
   title: z.string(),
@@ -61,35 +65,45 @@ const ContentSectionTitleSchema = z.object({
   title: z.string(),
 });
 
-const ContentSectionTitleWithThinColumnSchema = z.object({
-  type: z.literal(SlideContentTypes.sectionTitleWithThinColumn),
-  title: z.string(),
-  column1: z.any(),
-});
+const ContentSectionTitleWithThinColumnSchema = z
+  .object({
+    type: z.literal(SlideContentTypes.sectionTitleWithThinColumn),
+    title: z.string(),
+    column1: z.any(),
+  })
+  .merge(WithTopRightCorner);
 
-const ContentTitleWithContentSchema = z.object({
-  type: z.literal(SlideContentTypes.titleWithContent),
-  title: z.string(),
-});
+const ContentTitleWithContentSchema = z
+  .object({
+    type: z.literal(SlideContentTypes.titleWithContent),
+    title: z.string(),
+  })
+  .merge(WithTopRightCorner);
 
-const ContentTitleWith2ColumnsSchema = z.object({
-  type: z.literal(SlideContentTypes.titleWith2Columns),
-  title: z.string(),
-  column1: z.any(),
-});
+const ContentTitleWith2ColumnsSchema = z
+  .object({
+    type: z.literal(SlideContentTypes.titleWith2Columns),
+    title: z.string(),
+    column1: z.any(),
+  })
+  .merge(WithTopRightCorner);
 
-const ContentTitleWithThinColumnSchema = z.object({
-  type: z.literal(SlideContentTypes.titleWithThinColumn),
-  title: z.string(),
-  column1: z.any(),
-});
+const ContentTitleWithThinColumnSchema = z
+  .object({
+    type: z.literal(SlideContentTypes.titleWithThinColumn),
+    title: z.string(),
+    column1: z.any(),
+  })
+  .merge(WithTopRightCorner);
 
-const ContentTitleWithThin2ColumnsSchema = z.object({
-  type: z.literal(SlideContentTypes.titleWithThin2Columns),
-  title: z.string(),
-  column1: z.any(),
-  column2: z.any(),
-});
+const ContentTitleWithThin2ColumnsSchema = z
+  .object({
+    type: z.literal(SlideContentTypes.titleWithThin2Columns),
+    title: z.string(),
+    column1: z.any(),
+    column2: z.any(),
+  })
+  .merge(WithTopRightCorner);
 
 const ContentEndTitleSchema = z.object({
   type: z.literal(SlideContentTypes.endTitle),
