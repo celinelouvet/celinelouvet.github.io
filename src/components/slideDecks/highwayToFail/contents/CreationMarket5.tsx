@@ -10,6 +10,7 @@ export const content = (
     title="Nécessité de se démarquer"
     alignContent="flex-start"
     column1={<VerticalTimelineCreation />}
+    topRightCorner="Mi-Dec. 2017"
   ></SlideContent>
 );
 

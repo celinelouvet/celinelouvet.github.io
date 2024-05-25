@@ -10,6 +10,7 @@ export const content = (
     title="Étude de marché"
     alignContent="flex-start"
     column1={<VerticalTimelineCreation />}
+    topRightCorner="Mi-Dec. 2017"
   ></SlideContent>
 );
 

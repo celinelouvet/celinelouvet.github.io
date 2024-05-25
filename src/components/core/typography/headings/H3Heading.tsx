@@ -41,7 +41,7 @@ export const h3HeadingStyles = {
       marginBottom: '2',
     },
     slide: {
-      fontWeight: '700',
+      fontWeight: '400',
       marginBottom: '2',
     },
   },

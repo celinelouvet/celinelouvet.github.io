@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Stack, StackItem, Text } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
 import { highwayToFailTalkFr as talk } from '@/data/talks';
@@ -11,9 +11,19 @@ const meta = {
   component: SlideContentComponent,
 
   render: (args) => (
-    <Box width="800px" height="450px">
-      <SlideContentComponent {...args} />
-    </Box>
+    <Stack>
+      <StackItem>
+        {'column1' in args ? <Text>with column1</Text> : null}
+        {'column2' in args ? <Text>with column2</Text> : null}
+        {'topRightCorner' in args ? <Text>with topRightCorner</Text> : null}
+        {'colormode' in args ? (
+          <Text>with colormode : {args.colormode}</Text>
+        ) : null}
+      </StackItem>
+      <Box width="800px" height="450px">
+        <SlideContentComponent {...args} />
+      </Box>
+    </Stack>
   ),
 } satisfies Meta<typeof SlideContentComponent>;
 
@@ -23,30 +33,36 @@ export default meta;
 // @ts-ignore
 type Story = StoryObj<typeof meta>;
 
+const topRightCorner = (
+  <Box width="100%" height="100%" backgroundColor="brand.500" color="white">
+    Corner
+  </Box>
+);
+
+const column1 = (
+  <Box width="100%" height="100%" border="1px solid" borderColor="brand.500">
+    Column 1
+  </Box>
+);
+
+const column2 = (
+  <Box width="100%" height="100%" border="1px solid" borderColor="brand.500">
+    Column 2
+  </Box>
+);
+
+const content = (
+  <Box width="100%" height="100%" border="1px solid" borderColor="brand.500">
+    Content
+  </Box>
+);
+
 export const ContentWith2ColumnsLight: Story = {
   args: {
     type: SlideContentTypes.content2Columns,
     colormode: ColorMode.light,
-    column1: (
-      <Box
-        width="100%"
-        height="100%"
-        border="1px solid"
-        borderColor="brand.500"
-      >
-        Column 1
-      </Box>
-    ),
-    children: (
-      <Box
-        width="100%"
-        height="100%"
-        border="1px solid"
-        borderColor="brand.500"
-      >
-        Content
-      </Box>
-    ),
+    column1,
+    children: content,
   },
 };
 
@@ -54,26 +70,8 @@ export const ContentWith2ColumnsDark: Story = {
   args: {
     type: SlideContentTypes.content2Columns,
     colormode: ColorMode.dark,
-    column1: (
-      <Box
-        width="100%"
-        height="100%"
-        border="1px solid"
-        borderColor="brand.500"
-      >
-        Column 1
-      </Box>
-    ),
-    children: (
-      <Box
-        width="100%"
-        height="100%"
-        border="1px solid"
-        borderColor="brand.500"
-      >
-        Content
-      </Box>
-    ),
+    column1,
+    children: content,
   },
 };
 
@@ -104,17 +102,7 @@ export const FullContentLight: Story = {
   args: {
     type: SlideContentTypes.fullContent,
     colormode: ColorMode.light,
-
-    children: (
-      <Box
-        width="100%"
-        height="100%"
-        border="1px solid"
-        borderColor="brand.500"
-      >
-        Content
-      </Box>
-    ),
+    children: content,
   },
 };
 
@@ -122,17 +110,7 @@ export const FullContentDark: Story = {
   args: {
     type: SlideContentTypes.fullContent,
     colormode: ColorMode.dark,
-
-    children: (
-      <Box
-        width="100%"
-        height="100%"
-        border="1px solid"
-        borderColor="brand.500"
-      >
-        Content
-      </Box>
-    ),
+    children: content,
   },
 };
 
@@ -166,16 +144,7 @@ export const SectionTitleWithThinColumn: Story = {
   args: {
     type: SlideContentTypes.sectionTitleWithThinColumn,
     title: 'Section Title',
-    column1: (
-      <Box
-        width="100%"
-        height="100%"
-        border="1px solid"
-        borderColor="brand.500"
-      >
-        Column 1
-      </Box>
-    ),
+    column1,
   },
 };
 
@@ -183,16 +152,8 @@ export const TitleWithContent: Story = {
   args: {
     type: SlideContentTypes.titleWithContent,
     title: 'Title with content',
-    children: (
-      <Box
-        width="100%"
-        height="100%"
-        border="1px solid"
-        borderColor="brand.500"
-      >
-        Content
-      </Box>
-    ),
+    topRightCorner,
+    children: content,
   },
 };
 
@@ -200,26 +161,9 @@ export const TitleWith2Columns: Story = {
   args: {
     type: SlideContentTypes.titleWith2Columns,
     title: 'Title with 2 columns',
-    column1: (
-      <Box
-        width="100%"
-        height="100%"
-        border="1px solid"
-        borderColor="brand.500"
-      >
-        Column 1
-      </Box>
-    ),
-    children: (
-      <Box
-        width="100%"
-        height="100%"
-        border="1px solid"
-        borderColor="brand.500"
-      >
-        Content
-      </Box>
-    ),
+    column1,
+    topRightCorner,
+    children: content,
   },
 };
 
@@ -227,26 +171,9 @@ export const TitleWithThinColumn: Story = {
   args: {
     type: SlideContentTypes.titleWithThinColumn,
     title: 'Title with 1 thin column',
-    column1: (
-      <Box
-        width="100%"
-        height="100%"
-        border="1px solid"
-        borderColor="brand.500"
-      >
-        Column 1
-      </Box>
-    ),
-    children: (
-      <Box
-        width="100%"
-        height="100%"
-        border="1px solid"
-        borderColor="brand.500"
-      >
-        Content
-      </Box>
-    ),
+    column1,
+    topRightCorner,
+    children: content,
   },
 };
 
@@ -254,35 +181,9 @@ export const TitleWithThinColumn2Columns: Story = {
   args: {
     type: SlideContentTypes.titleWithThin2Columns,
     title: 'Title with 1 thin column and 2 columns',
-    column1: (
-      <Box
-        width="100%"
-        height="100%"
-        border="1px solid"
-        borderColor="brand.500"
-      >
-        Column 1
-      </Box>
-    ),
-    column2: (
-      <Box
-        width="100%"
-        height="100%"
-        border="1px solid"
-        borderColor="brand.500"
-      >
-        Column 2
-      </Box>
-    ),
-    children: (
-      <Box
-        width="100%"
-        height="100%"
-        border="1px solid"
-        borderColor="brand.500"
-      >
-        Children
-      </Box>
-    ),
+    column1,
+    column2,
+    topRightCorner,
+    children: content,
   },
 };
