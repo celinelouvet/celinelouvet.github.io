@@ -16,6 +16,7 @@ export const content = (
     title="Mon historique"
     alignContent="flex-start"
     column1={<VerticalTimelineBefore />}
+    topRightCorner="Début 2017"
   >
     <Stack width="100%" gap="1em">
       <StackItem>

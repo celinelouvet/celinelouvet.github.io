@@ -10,6 +10,7 @@ export const content = (
     title="L’occasion"
     alignContent="flex-start"
     column1={<VerticalTimelineBefore />}
+    topRightCorner="Nov. 2017"
   >
     <Stack width="100%" gap="1em">
       <StackItem>
