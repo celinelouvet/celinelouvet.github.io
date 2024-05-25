@@ -11,6 +11,7 @@ export const content = (
     title="La répartition des parts"
     alignContent="flex-start"
     column1={<VerticalTimelineCreation />}
+    topRightCorner="Mi-Dec. 2017"
   >
     <Flex height="100%" alignItems="center" gap="3em">
       <Box>

@@ -29,6 +29,7 @@ export const content = (
     title="Étude de marché"
     alignContent="flex-start"
     column1={<VerticalTimelineCreation />}
+    topRightCorner="Mi-Dec. 2017"
   >
     <HStack gap="1em" width="100%" height="100%">
       <Stack flex="1" height="100%" spacing="1em">
