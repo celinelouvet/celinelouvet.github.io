@@ -1,0 +1,57 @@
+import {
+  ListItem,
+  Stack,
+  StackItem,
+  Text,
+  UnorderedList,
+} from '@chakra-ui/react';
+
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+  ThumbsDown,
+} from '@/components/core';
+
+import { VerticalTimelineBefore } from '../../components';
+
+export const content = (
+  <SlideContent
+    type={SlideContentTypes.titleWithThinColumn}
+    title="Mon historique"
+    alignContent="flex-start"
+    column1={<VerticalTimelineBefore />}
+    topRightCorner="Début 2017"
+  >
+    <Stack width="100%" gap="1em">
+      <StackItem>
+        <UnorderedList paddingLeft="1em">
+          <ListItem>
+            ESN toute ma carrière, beaucoup de régie (chez le client)
+          </ListItem>
+          <ListItem>Marre des gros clients et des cahiers des charges</ListItem>
+          <ListItem>Envie de choisir un projet qui me plaît</ListItem>
+        </UnorderedList>
+      </StackItem>
+
+      <StackItem marginTop="0.5em">
+        <ThumbsDown variant="slide">
+          Très grande confiance en moi et en mes réalisations.
+        </ThumbsDown>
+      </StackItem>
+    </Stack>
+  </SlideContent>
+);
+
+const note = (
+  <SlideNote>
+    <Text>Un point très important :</Text>
+    <Text>
+      La plupart de mes projets se sont bien passés et j’ai confiance en moi et
+      en mes réalisations.
+    </Text>
+  </SlideNote>
+);
+
+const slide = { content, note };
+export default slide;
