@@ -154,3 +154,10 @@ jobs:
           path: './slides-generator/Highway_to_fail.pdf'
           destination: ${{ steps.bucket.outputs.BUCKET_PATH }}
           predefinedAcl: publicRead
+
+      - name: Upload Notes PDF
+        uses: google-github-actions/upload-cloud-storage@v2
+        with:
+          path: './slides-generator/Notes_-_Highway_to_fail'
+          destination: ${{ steps.bucket.outputs.BUCKET_PATH }}
+          predefinedAcl: publicRead
