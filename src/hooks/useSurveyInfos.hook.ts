@@ -19,7 +19,7 @@ const getId = (id?: string | string[]): string | null => {
     return null;
   }
   if (Array.isArray(id)) {
-    return id[0] ?? null;
+    return getId(id[0]);
   }
 
   return id;
@@ -59,10 +59,7 @@ export const useSurveyInfos = (
   if (parsedTalkSubjectId === null) {
     return emptySurvey;
   }
-  const parsedConventionId = getId(conventionId);
-  if (parsedConventionId === null) {
-    return emptySurvey;
-  }
+
   if (!talkSubjects.has(parsedTalkSubjectId)) {
     return emptySurvey;
   }
@@ -74,8 +71,18 @@ export const useSurveyInfos = (
   if (!surveyPoll) {
     return emptySurvey;
   }
+  const parsedConventionId = getId(conventionId);
+  if (parsedConventionId === null) {
+    return {
+      surveyId: parsedConventionId,
+      surveyPoll,
+      state: SurveyState.InProgress,
+    };
+  }
 
-  const survey = surveyPoll.surveys.find(({ name }) => name === conventionId);
+  const survey = surveyPoll.surveys.find(
+    ({ name }) => name === parsedConventionId
+  );
 
   return {
     surveyId: survey?.name ?? defaultSurveyId,

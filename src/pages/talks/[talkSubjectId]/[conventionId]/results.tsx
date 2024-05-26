@@ -10,7 +10,7 @@ export default function Page() {
     <PageContainer>
       <SurveyResults
         talkSubjectId={talkSubjectId}
-        conventionId={conventionId}
+        conventionId={conventionId !== 'all' ? conventionId : undefined}
       />
     </PageContainer>
   );
