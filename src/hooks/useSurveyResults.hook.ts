@@ -66,7 +66,6 @@ export const useSurveyResults = (
   talkSubjectId?: string | string[],
   conventionId?: string | string[]
 ) => {
-  const [surveyId, setSurveyId] = useState<string | null>(null);
   const [surveyPoll, setSurveyPoll] = useState<SurveyPoll | null>(null);
   const [results, setResults] = useState<ReducedResults>({});
   const [loading, setLoading] = useState(true);
@@ -78,10 +77,9 @@ export const useSurveyResults = (
   useEffect(() => {
     if (!loading) return;
 
-    setSurveyId(surveyInfos.surveyId);
     setSurveyPoll(surveyInfos.surveyPoll);
 
-    if (surveyInfos.surveyId === null || surveyInfos.surveyPoll === null) {
+    if (surveyInfos.surveyPoll === null) {
       return;
     }
 
@@ -89,7 +87,12 @@ export const useSurveyResults = (
       surveyInfos.surveyPoll.questions
     );
 
-    get(`/survey/${surveyInfos.surveyId}`)
+    const path =
+      surveyInfos.surveyId !== null
+        ? `/survey/${surveyInfos.surveyId}`
+        : '/survey';
+
+    get(path)
       .then((res) => res.json())
       .then((data) => {
         const allSurveyResults = asSurveyResults(data);
@@ -102,7 +105,6 @@ export const useSurveyResults = (
       });
   }, [
     get,
-    setSurveyId,
     setSurveyPoll,
     setError,
     loading,
@@ -110,5 +112,5 @@ export const useSurveyResults = (
     surveyInfos.surveyPoll,
   ]);
 
-  return { surveyId, surveyPoll, results, loading, error };
+  return { surveyPoll, results, loading, error };
 };

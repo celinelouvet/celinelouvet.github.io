@@ -6,22 +6,34 @@ import { type SurveyResult } from '@/models';
 const KIND = 'SurveyResults';
 
 export const create = async ({ surveyId, title, values }: SurveyResult) => {
-  const datastore = new Datastore();
+  console.log(`[${KIND}] Create result for surveyId "${surveyId}"`);
 
-  const id = uuid();
-  const key = datastore.key([KIND, id]);
+  try {
+    const datastore = new Datastore();
 
-  const surveyResult = {
-    key,
-    data: {
-      id,
-      surveyId,
-      title,
-      values,
-      timestamp: new Date().toISOString(),
-      version: process.env.VERSION_NAME,
-    },
-  };
+    const id = uuid();
+    const key = datastore.key([KIND, id]);
 
-  await datastore.save(surveyResult);
+    const surveyResult = {
+      key,
+      data: {
+        id,
+        surveyId,
+        title,
+        values,
+        timestamp: new Date().toISOString(),
+        version: process.env.VERSION_NAME,
+      },
+    };
+
+    await datastore.save(surveyResult);
+
+    console.log(`[${KIND}] Created result for surveyId "${surveyId}"`);
+  } catch (error) {
+    console.error(
+      `[${KIND}] Error creating result for surveyId "${surveyId}"`,
+      { error }
+    );
+    throw new Error('Error creating survey result');
+  }
 };

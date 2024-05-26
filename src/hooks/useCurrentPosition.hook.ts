@@ -6,7 +6,7 @@ const previousKeys = ['ArrowLeft', 'ArrowUp', 'PageUp'];
 const nextKeys = ['ArrowRight', 'ArrowDown', 'PageDown', ' '];
 const defaultPosition = 0;
 
-export const useCurrentPosition = (length: number) => {
+export const useCurrentPosition = (root: string, length: number) => {
   const [currentPosition, setCurrentPosition] = useState(defaultPosition);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export const useCurrentPosition = (length: number) => {
     let startPosition: number | null = null;
     let endPosition: number | null = null;
 
-    const channel = new BroadcastChannel('useCurrentPosition');
+    const channel = new BroadcastChannel(`useCurrentPosition-${root}`);
 
     const sendPosition = (position: number) => {
       channel.postMessage(position);
@@ -92,7 +92,7 @@ export const useCurrentPosition = (length: number) => {
       document.removeEventListener('touchmove', onTouchMove);
       document.removeEventListener('touchend', onTouchEnd);
     };
-  }, [currentPosition, length]);
+  }, [currentPosition, length, root]);
 
   return currentPosition;
 };

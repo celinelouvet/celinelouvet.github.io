@@ -1,1 +1,2 @@
-export { SlideDeck, ViewTypes } from './SlideDeck';
+export { SlideDeck } from './SlideDeck';
+export { ViewTypes } from './types';

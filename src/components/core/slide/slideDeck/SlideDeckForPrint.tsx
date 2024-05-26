@@ -1,10 +1,10 @@
-import { Box, forwardRef } from '@chakra-ui/react';
+import { Box, type BoxProps, forwardRef } from '@chakra-ui/react';
 
 import { useSlideSize, useWindowSize } from '@/hooks';
 
-import { type SlideDeckProps } from './SlideDeck';
+import { type Print } from './types';
 
-type SlideDeckForPrintProps = Omit<SlideDeckProps, 'forNotes'>;
+type SlideDeckForPrintProps = Omit<BoxProps, 'children'> & Print;
 
 export const SlideDeckForPrint = forwardRef<SlideDeckForPrintProps, 'div'>(
   ({ slides, ...props }, ref) => {

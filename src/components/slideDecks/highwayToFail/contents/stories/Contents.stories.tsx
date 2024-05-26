@@ -243,12 +243,14 @@ type Story = StoryObj<typeof meta>;
 export const MainTitle: Story = {
   args: {
     slides: [MainTitleSlide],
+    view: ViewTypes.print,
   },
 };
 
 export const Introduction: Story = {
   args: {
     slides: [IntroductionSlide],
+    view: ViewTypes.print,
   },
 };
 
@@ -286,18 +288,21 @@ export const Numbers: Story = {
 export const SurveyResult: Story = {
   args: {
     slides: [SurveyResultSlide],
+    view: ViewTypes.print,
   },
 };
 
 export const Timeline: Story = {
   args: {
     slides: [TimelineSlide],
+    view: ViewTypes.print,
   },
 };
 
 export const BeforeSectionTitle: Story = {
   args: {
     slides: [BeforeSectionTitleSlide],
+    view: ViewTypes.print,
   },
 };
 
@@ -331,6 +336,7 @@ export const BeforeCaptainContrat: Story = {
 export const CreationSectionTitle: Story = {
   args: {
     slides: [CreationSectionTitleSlide],
+    view: ViewTypes.print,
   },
 };
 
@@ -437,6 +443,7 @@ export const CreationFinal: Story = {
 export const DuringSectionTitle: Story = {
   args: {
     slides: [DuringSectionTitleSlide],
+    view: ViewTypes.print,
   },
 };
 
@@ -650,6 +657,7 @@ export const DuringSeed: Story = {
 export const AfterSectionTitle: Story = {
   args: {
     slides: [AfterSectionTitleSlide],
+    view: ViewTypes.print,
   },
 };
 
@@ -694,5 +702,6 @@ export const After: Story = {
 export const EndTitle: Story = {
   args: {
     slides: [EndTitleSlide],
+    view: ViewTypes.print,
   },
 };

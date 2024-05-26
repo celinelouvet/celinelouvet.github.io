@@ -7,7 +7,8 @@ import {
   SlideNote,
 } from '@/components/core';
 
-import { SlideDeck as SlideDeckComponent, ViewTypes } from './SlideDeck';
+import { SlideDeck as SlideDeckComponent } from './SlideDeck';
+import { ViewTypes } from './types';
 
 const maxSlides = 5;
 
@@ -38,6 +39,7 @@ export const Content: Story = {
   args: {
     slides,
     view: ViewTypes.content,
+    messageRoot: 'Content',
   },
 };
 
@@ -45,6 +47,7 @@ export const Notes: Story = {
   args: {
     slides,
     view: ViewTypes.notes,
+    messageRoot: 'Notes',
   },
 };
 

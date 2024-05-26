@@ -1,14 +1,14 @@
-import { Box, forwardRef } from '@chakra-ui/react';
+import { Box, type BoxProps, forwardRef } from '@chakra-ui/react';
 
 import { useCurrentPosition, useSlideSize, useWindowSize } from '@/hooks';
 
-import { type SlideDeckProps } from './SlideDeck';
+import { type Content } from './types';
 
-type SlideDeckForContentProps = Omit<SlideDeckProps, 'forNotes'>;
+type SlideDeckForContentProps = Omit<BoxProps, 'children'> & Content;
 
 export const SlideDeckForContent = forwardRef<SlideDeckForContentProps, 'div'>(
-  ({ slides, ...props }, ref) => {
-    const currentPosition = useCurrentPosition(slides.length);
+  ({ slides, messageRoot, ...props }, ref) => {
+    const currentPosition = useCurrentPosition(messageRoot, slides.length);
 
     const windowSize = useWindowSize(ref);
     const contentProps = useSlideSize(windowSize);
