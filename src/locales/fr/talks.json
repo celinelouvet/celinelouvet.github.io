@@ -9,7 +9,11 @@
     "less": "Voir moins",
 
     "surveys": {
-      "title": "Sondages"
+      "title": "Sondages",
+      "allResults": "Voir tous les résultats",
+      "survey": "Sondage",
+      "results": "Résultats",
+      "notAvailable": "Non disponible"
     }
   },
 

@@ -1,17 +1,16 @@
 import {
-  Button,
   Flex,
+  HStack,
   ListItem,
   Stack,
   Tag,
   Text,
   UnorderedList,
 } from '@chakra-ui/react';
-import NextLink from 'next/link';
 import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H2Heading, H3Heading } from '@/components/core';
+import { H2Heading, H3Heading, InternalLink } from '@/components/core';
 import { type Convention, type Resume, type TalkSubject } from '@/data';
 import { useTalk } from '@/hooks';
 
@@ -70,6 +69,56 @@ const Descriptions: FC<{ descriptions?: string[] }> = ({
   );
 };
 
+const SurveyAction: FC<{
+  name?: string;
+  opensAt: string;
+  closesAt: string;
+  talkLink: string;
+}> = ({ name, opensAt, closesAt, talkLink }) => {
+  const { t } = useTranslation('talks', { keyPrefix: 'talk.surveys' });
+
+  const now = new Date();
+  const opensAtDate = new Date(opensAt);
+  const closesAtDate = new Date(closesAt);
+
+  const surveyLink = `${talkLink}/${name}`;
+  const resultLink = `${surveyLink}/results`;
+
+  if (opensAtDate <= now && now <= closesAtDate) {
+    return <InternalLink href={surveyLink}>{t('survey')}</InternalLink>;
+  }
+
+  if (closesAtDate <= now) {
+    return <InternalLink href={resultLink}>{t('results')}</InternalLink>;
+  }
+
+  return <Text as="span">{t('notAvailable')}</Text>;
+};
+
+const Survey: FC<{
+  name?: string;
+  opensAt: string;
+  closesAt: string;
+  talkLink: string;
+}> = ({ name, opensAt, closesAt, talkLink }) => {
+  return (
+    <ListItem>
+      <HStack alignItems="baseline">
+        <Text as="span" minWidth="12em">
+          {name}
+        </Text>
+
+        <SurveyAction
+          name={name}
+          opensAt={opensAt}
+          closesAt={closesAt}
+          talkLink={talkLink}
+        />
+      </HStack>
+    </ListItem>
+  );
+};
+
 const Surveys: FC<{
   talkSubjectId: string;
   talkSubject: TalkSubject;
@@ -87,36 +136,23 @@ const Surveys: FC<{
   const { surveys } = survey;
 
   return (
-    <Stack width="100%">
+    <Stack gap="4">
       <H3Heading>{t('title')}</H3Heading>
 
-      <UnorderedList>
-        {surveys.map(({ name, opensAt, closesAt }) => {
-          const now = new Date();
-          const opensAtDate = new Date(opensAt);
-          const closesAtDate = new Date(closesAt);
+      <InternalLink href={`${talkLink}/all/results`}>
+        {t('allResults')}
+      </InternalLink>
 
-          const surveyLink = `${talkLink}/${name}`;
-          const resultLink = `${surveyLink}/results`;
-
-          return (
-            <ListItem key={name}>
-              <Flex alignItems="center" gap="8">
-                <Text as="span">{conventions.get(name)?.name}</Text>
-                {opensAtDate <= now && now <= closesAtDate ? (
-                  <Button as={NextLink} href={surveyLink}>
-                    Survey
-                  </Button>
-                ) : null}
-                {closesAtDate <= now ? (
-                  <Button as={NextLink} href={resultLink}>
-                    Results
-                  </Button>
-                ) : null}
-              </Flex>
-            </ListItem>
-          );
-        })}
+      <UnorderedList paddingLeft="1em">
+        {surveys.map(({ name, opensAt, closesAt }) => (
+          <Survey
+            key={name}
+            name={conventions.get(name)?.name}
+            opensAt={opensAt}
+            closesAt={closesAt}
+            talkLink={talkLink}
+          />
+        ))}
       </UnorderedList>
     </Stack>
   );
