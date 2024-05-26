@@ -10,6 +10,7 @@ export default function Page() {
     <SlideDeck
       slides={slides}
       view={ViewTypes.notes}
+      messageRoot="talk"
       position="absolute"
       top="0"
       left="0"

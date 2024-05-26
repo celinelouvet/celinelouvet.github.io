@@ -1,5 +1,6 @@
 import {
   Box,
+  type BoxProps,
   Center,
   Flex,
   Stack,
@@ -10,7 +11,7 @@ import { type FC } from 'react';
 
 import { useCurrentPosition, useSlideSize } from '@/hooks';
 
-import { type SlideDeckProps } from './SlideDeck';
+import { type Notes } from './types';
 import { SlideTimer } from '../slideTimer';
 import { type Slide } from '../types';
 
@@ -86,11 +87,11 @@ const Slide: FC<{ slides: Slide[]; position: number; preview?: boolean }> = ({
   );
 };
 
-export type SlideDeckForNotesProps = Omit<SlideDeckProps, 'view'>;
+export type SlideDeckForNotesProps = Omit<BoxProps, 'children'> & Notes;
 
 export const SlideDeckForNotes = forwardRef<SlideDeckForNotesProps, 'div'>(
-  ({ slides, ...props }, ref) => {
-    const currentPosition = useCurrentPosition(slides.length);
+  ({ slides, messageRoot, ...props }, ref) => {
+    const currentPosition = useCurrentPosition(messageRoot, slides.length);
 
     return (
       <Flex width="100%" height="100%" color="brand.100" {...props} ref={ref}>
