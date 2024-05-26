@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { listSurveyResultsBySurveyId, purgeAllSurveyResults } from '@/api';
+import { listSurveyResultsBySurveyId } from '@/api';
 import { type SurveyResult, asQueryListBySurveyId } from '@/models';
 
 const ACCEPTED_METHODS = ['GET'];
@@ -9,6 +9,8 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<void | SurveyResult[] | { error: unknown }>
 ) {
+  console.log(`${req.method} /api/survey/[surveyId]`);
+
   if (!ACCEPTED_METHODS.includes(req.method ?? '')) {
     return res.status(400).json({ error: 'Bad request' });
   }
@@ -22,11 +24,7 @@ export default async function handler(
 }
 
 const getSurveyResults = async (req: NextApiRequest) => {
-  const { surveyId, purge } = asQueryListBySurveyId(req.query);
-
-  if (purge) {
-    await purgeAllSurveyResults();
-  }
+  const { surveyId } = asQueryListBySurveyId(req.query);
 
   return listSurveyResultsBySurveyId(surveyId);
 };
