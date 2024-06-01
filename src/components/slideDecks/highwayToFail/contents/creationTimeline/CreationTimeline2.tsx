@@ -10,6 +10,7 @@ export const content = (
     title="La roadmap"
     alignContent="flex-start"
     column1={<VerticalTimelineCreation />}
+    topRightCorner="Mi-Dec. 2017"
   >
     <Center height="100%">
       <Timeline2 />
@@ -22,6 +23,10 @@ const note = (
     <Text>
       Au moment de notre discussion, nous sommes mi décembre. Nous avons donc 6
       mois devant nous pour sortir une version beta et 9 pour la version finale.
+    </Text>
+    <Text>
+      On ne peut pas se permettre de prendre plus de temps, car les concurrents
+      vont faire pareil et, eux, ils ont déjà un produit en place.
     </Text>
   </SlideNote>
 );
