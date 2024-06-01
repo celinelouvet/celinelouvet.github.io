@@ -189,6 +189,7 @@ import DuringStack4 from './duringStack/DuringStack4';
 import DuringStack5 from './duringStack/DuringStack5';
 import DuringWhere1 from './duringWhere/DuringWhere1';
 import DuringWhere2 from './duringWhere/DuringWhere2';
+import DuringWhere2b from './duringWhere/DuringWhere2b';
 import DuringWhere3 from './duringWhere/DuringWhere3';
 import DuringWhere4 from './duringWhere/DuringWhere4';
 import EndTitle from './EndTitle';
@@ -323,6 +324,7 @@ export const getSlides = () => {
     DuringSectionTitle,
     DuringWhere1,
     DuringWhere2,
+    DuringWhere2b,
     DuringWhere3,
     DuringWhere4,
 
