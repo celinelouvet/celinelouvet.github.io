@@ -1,4 +1,4 @@
-import { Grid, GridItem } from '@chakra-ui/react';
+import { Grid, GridItem, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -46,7 +46,12 @@ export const content = (
 
 const note = (
   <SlideNote>
-    On en compte actuellement 27 en France. J’en ai listé 6.
+    <Text>
+      On en compte actuellement 22 licornes en France. J’en ai listé 6.
+    </Text>
+    <Text>
+      Payfit, Qonto et Aircall ne sont plus considérées comme des licornes.
+    </Text>
   </SlideNote>
 );
 
