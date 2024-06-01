@@ -36,7 +36,7 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>Elles ont été multiples</Text>
+    <Text>Elles ont été multiples.</Text>
   </SlideNote>
 );
 

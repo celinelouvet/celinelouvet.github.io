@@ -1,10 +1,4 @@
-import {
-  Center,
-  HStack,
-  ListItem,
-  Text,
-  UnorderedList,
-} from '@chakra-ui/react';
+import { Center, HStack, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -42,10 +36,8 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <UnorderedList>
-      <ListItem>technique</ListItem>
-    </UnorderedList>
-
+    <Text>Et technique.</Text>
+    <Text></Text>
     <Text>
       En tant que CTO, j’ai ma part dans cet échec et ça va avoir un impact
       monstrueux sur ma vie.
