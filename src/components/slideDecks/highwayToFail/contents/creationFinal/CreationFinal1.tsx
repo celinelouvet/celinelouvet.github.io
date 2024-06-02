@@ -10,7 +10,7 @@ export const content = (
     title="L'officialisation"
     alignContent="flex-start"
     column1={<VerticalTimelineCreation />}
-    topRightCorner="Mi-Dec. 2017"
+    topRightCorner="Mi-Décembre 2017"
   >
     <Center width="100%" height="100%">
       <Box width="15em">

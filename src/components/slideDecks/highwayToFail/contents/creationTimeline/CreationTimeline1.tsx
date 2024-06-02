@@ -10,7 +10,7 @@ export const content = (
     title="La roadmap"
     alignContent="flex-start"
     column1={<VerticalTimelineCreation />}
-    topRightCorner="Mi-Dec. 2017"
+    topRightCorner="Mi-Décembre 2017"
   >
     <Center height="100%">
       <Timeline1 />

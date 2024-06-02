@@ -10,7 +10,7 @@ export const content = (
     title="Nécessité de se démarquer"
     alignContent="flex-start"
     column1={<VerticalTimelineCreation />}
-    topRightCorner="Mi-Dec. 2017"
+    topRightCorner="Mi-Décembre 2017"
   >
     <Stack spacing="1em">
       <Text>Clients de type TPE et PME</Text>
