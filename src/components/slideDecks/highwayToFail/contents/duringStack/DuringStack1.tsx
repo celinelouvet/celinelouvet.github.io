@@ -1,4 +1,4 @@
-import { Center, Text } from '@chakra-ui/react';
+import { Box, Center, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -10,9 +10,12 @@ export const content = (
     title="En détails"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
+    topRightCorner="Mars 2018"
   >
     <Center width="100%" height="100%">
-      <Platform5 />
+      <Box height="100%">
+        <Platform5 />
+      </Box>
     </Center>
   </SlideContent>
 );

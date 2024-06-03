@@ -10,8 +10,9 @@ export const content = (
     title="En détails"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
+    topRightCorner="Mars 2018"
   >
-    <Center height="100%">
+    <Center width="100%" height="100%">
       <Box height="100%">
         <Stack1 />
       </Box>
