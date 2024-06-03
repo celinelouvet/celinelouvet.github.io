@@ -30,8 +30,8 @@ const note = (
   <SlideNote>
     <Text>Et par-dessus ça, je ressens un épuisement profond.</Text>
     <Text>
-      Je viens de passer 1 an, 1 an 1/2 à me donner à 200%. J’ai eu une hygiène
-      de vie déplorable.
+      Je viens de passer 1 an, 1 an 1/2 à me donner à 200%. Mon fils était ma
+      bouée pour m’obliger à m’arrêter.
     </Text>
   </SlideNote>
 );

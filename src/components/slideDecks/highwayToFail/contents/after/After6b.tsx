@@ -21,10 +21,10 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>Si on résume, j’ai vraiment fait un burnout.</Text>
+    <Text>Au delà de la blague,</Text>
     <Text>
-      On est 5 ans plus tard et je le sens toujours. Dès que j’abuse, il
-      repointe le bout de son nez.
+      Je poserai nettement plus de questions lors de la rencontre de façon à les
+      challenger sur l’idée et ses limites.
     </Text>
   </SlideNote>
 );

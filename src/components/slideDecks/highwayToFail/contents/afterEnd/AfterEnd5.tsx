@@ -10,6 +10,7 @@ export const content = (
     title="Le début de la fin"
     alignContent="flex-start"
     column1={<VerticalTimelineAfter />}
+    topRightCorner="Janvier 2019"
   >
     <Center width="100%" height="100%">
       <Box height="100%">
@@ -21,10 +22,11 @@ export const content = (
 
 const note = (
   <SlideNote>
+    <Text>Je viens de passer 1 an avec un rythme de vie déplorable.</Text>
     <Text>
-      Je me lève le matin avec le départ de mon fils pour l’école. Je code toute
-      la journée. A son retour, je m’arrête pour reprendre après son coucher et
-      ça jusqu’à 2-3h du matin. Les nuits sont courtes et peu reposantes.
+      Je me lève le matin pour le départ de mon fils à l’école. Je code toute la
+      journée. A son retour, je m’arrête pour reprendre après son coucher et ça
+      jusqu’à 2-3h du matin. Les nuits sont courtes et peu reposantes.
     </Text>
   </SlideNote>
 );

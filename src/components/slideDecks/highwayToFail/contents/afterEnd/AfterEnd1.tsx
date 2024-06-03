@@ -1,4 +1,4 @@
-import { Text } from '@chakra-ui/react';
+import { Stack, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -10,15 +10,15 @@ export const content = (
     title="Le début de la fin"
     alignContent="flex-start"
     column1={<VerticalTimelineAfter />}
-  ></SlideContent>
+    topRightCorner="Octobre 2018"
+  >
+    <Stack spacing="1em"></Stack>
+  </SlideContent>
 );
 
 const note = (
   <SlideNote>
-    <Text>On est en octobre / novembre 2018.</Text>
-    <Text>On n’a pas réussi à lever.</Text>
-    <Text>On n’a pas encore de chiffre d’affaires.</Text>
-    <Text>Et c’est la dégringolade.</Text>
+    <Text>On est en octobre 2018.</Text>
   </SlideNote>
 );
 

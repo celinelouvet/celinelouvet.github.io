@@ -17,7 +17,6 @@ import After7Slide from '../after/After7';
 import AfterEnd1Slide from '../afterEnd/AfterEnd1';
 import AfterEnd1bSlide from '../afterEnd/AfterEnd1b';
 import AfterEnd1cSlide from '../afterEnd/AfterEnd1c';
-import AfterEnd1dSlide from '../afterEnd/AfterEnd1d';
 import AfterEnd2Slide from '../afterEnd/AfterEnd2';
 import AfterEnd3Slide from '../afterEnd/AfterEnd3';
 import AfterEnd4Slide from '../afterEnd/AfterEnd4';
@@ -617,7 +616,6 @@ export const AfterEnd: Story = {
       AfterEnd1Slide,
       AfterEnd1bSlide,
       AfterEnd1cSlide,
-      AfterEnd1dSlide,
       AfterEnd2Slide,
       AfterEnd3Slide,
       AfterEnd4Slide,

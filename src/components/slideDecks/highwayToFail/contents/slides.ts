@@ -15,7 +15,6 @@ import After7 from './after/After7';
 import AfterEnd1 from './afterEnd/AfterEnd1';
 import AfterEnd1b from './afterEnd/AfterEnd1b';
 import AfterEnd1c from './afterEnd/AfterEnd1c';
-import AfterEnd1d from './afterEnd/AfterEnd1d';
 import AfterEnd2 from './afterEnd/AfterEnd2';
 import AfterEnd3 from './afterEnd/AfterEnd3';
 import AfterEnd4 from './afterEnd/AfterEnd4';
@@ -426,7 +425,6 @@ export const getSlides = () => {
     AfterEnd1,
     AfterEnd1b,
     AfterEnd1c,
-    AfterEnd1d,
     AfterEnd2,
     AfterEnd3,
     AfterEnd4,
