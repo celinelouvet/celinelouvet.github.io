@@ -10,6 +10,7 @@ export const content = (
     title="Première perte de temps"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
+    topRightCorner="Janvier 2018"
   >
     <Stack gap="1em">
       <StackItem>
@@ -21,17 +22,14 @@ export const content = (
 
 const note = (
   <SlideNote>
+    <Text>En effet, la version simplifiée ne leur suffira pas.</Text>
     <Text>
-      En effet, je me suis faite avoir toute seule en parlant de version allégée
-      et de version enrichie.
+      Je prévoyais faire la version simplifiée, puis passer au développement du
+      produit.
     </Text>
     <Text>
-      Je comptais faire passer à autre chose dès la fin du développement de la
-      version allégée.
-    </Text>
-    <Text>
-      Sauf qu’ils ne l’avaient pas compris comme ça. Ils pensaient que
-      j’enchaînerais sur la version enrichie juste après.
+      Mais, pour eux, j’allais enchaîner sur la version complète du site, juste
+      après avoir fini la version simplifiée.
     </Text>
   </SlideNote>
 );

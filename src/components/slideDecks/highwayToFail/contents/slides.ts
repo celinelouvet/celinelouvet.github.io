@@ -161,27 +161,20 @@ import DuringSite5 from './duringSite/DuringSite5';
 import DuringSite6 from './duringSite/DuringSite6';
 import DuringSite7 from './duringSite/DuringSite7';
 import DuringSiteMvp1 from './duringSiteMvp/DuringSiteMvp1';
-import DuringSiteMvp10 from './duringSiteMvp/DuringSiteMvp10';
-import DuringSiteMvp11 from './duringSiteMvp/DuringSiteMvp11';
 import DuringSiteMvp2 from './duringSiteMvp/DuringSiteMvp2';
 import DuringSiteMvp3 from './duringSiteMvp/DuringSiteMvp3';
 import DuringSiteMvp3b from './duringSiteMvp/DuringSiteMvp3b';
 import DuringSiteMvp3c from './duringSiteMvp/DuringSiteMvp3c';
+import DuringSiteMvp3d from './duringSiteMvp/DuringSiteMvp3d';
 import DuringSiteMvp4 from './duringSiteMvp/DuringSiteMvp4';
-import DuringSiteMvp4b from './duringSiteMvp/DuringSiteMvp4b';
-import DuringSiteMvp4c from './duringSiteMvp/DuringSiteMvp4c';
-import DuringSiteMvp4d from './duringSiteMvp/DuringSiteMvp4d';
-import DuringSiteMvp4e from './duringSiteMvp/DuringSiteMvp4e';
-import DuringSiteMvp4f from './duringSiteMvp/DuringSiteMvp4f';
-import DuringSiteMvp4g from './duringSiteMvp/DuringSiteMvp4g';
-import DuringSiteMvp4h from './duringSiteMvp/DuringSiteMvp4h';
-import DuringSiteMvp4i from './duringSiteMvp/DuringSiteMvp4i';
 import DuringSiteMvp5 from './duringSiteMvp/DuringSiteMvp5';
+import DuringSiteMvp5b from './duringSiteMvp/DuringSiteMvp5b';
 import DuringSiteMvp6 from './duringSiteMvp/DuringSiteMvp6';
 import DuringSiteMvp6b from './duringSiteMvp/DuringSiteMvp6b';
 import DuringSiteMvp7 from './duringSiteMvp/DuringSiteMvp7';
+import DuringSiteMvp7b from './duringSiteMvp/DuringSiteMvp7b';
+import DuringSiteMvp7c from './duringSiteMvp/DuringSiteMvp7c';
 import DuringSiteMvp8 from './duringSiteMvp/DuringSiteMvp8';
-import DuringSiteMvp9 from './duringSiteMvp/DuringSiteMvp9';
 import DuringStack1 from './duringStack/DuringStack1';
 import DuringStack2 from './duringStack/DuringStack2';
 import DuringStack3 from './duringStack/DuringStack3';
@@ -358,23 +351,16 @@ export const getSlides = () => {
     DuringSiteMvp3,
     DuringSiteMvp3b,
     DuringSiteMvp3c,
+    DuringSiteMvp3d,
     DuringSiteMvp4,
-    DuringSiteMvp4b,
-    DuringSiteMvp4c,
-    DuringSiteMvp4d,
-    DuringSiteMvp4e,
-    DuringSiteMvp4f,
-    DuringSiteMvp4g,
-    DuringSiteMvp4h,
-    DuringSiteMvp4i,
     DuringSiteMvp5,
+    DuringSiteMvp5b,
     DuringSiteMvp6,
     DuringSiteMvp6b,
     DuringSiteMvp7,
+    DuringSiteMvp7b,
+    DuringSiteMvp7c,
     DuringSiteMvp8,
-    DuringSiteMvp9,
-    DuringSiteMvp10,
-    DuringSiteMvp11,
 
     DuringPlatform1,
     DuringPlatform2,

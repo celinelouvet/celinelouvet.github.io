@@ -178,27 +178,20 @@ import DuringSite5Slide from '../duringSite/DuringSite5';
 import DuringSite6Slide from '../duringSite/DuringSite6';
 import DuringSite7Slide from '../duringSite/DuringSite7';
 import DuringSiteMvp1Slide from '../duringSiteMvp/DuringSiteMvp1';
-import DuringSiteMvp10Slide from '../duringSiteMvp/DuringSiteMvp10';
-import DuringSiteMvp11Slide from '../duringSiteMvp/DuringSiteMvp11';
 import DuringSiteMvp2Slide from '../duringSiteMvp/DuringSiteMvp2';
 import DuringSiteMvp3Slide from '../duringSiteMvp/DuringSiteMvp3';
 import DuringSiteMvp3bSlide from '../duringSiteMvp/DuringSiteMvp3b';
 import DuringSiteMvp3cSlide from '../duringSiteMvp/DuringSiteMvp3c';
+import DuringSiteMvp3dSlide from '../duringSiteMvp/DuringSiteMvp3d';
 import DuringSiteMvp4Slide from '../duringSiteMvp/DuringSiteMvp4';
-import DuringSiteMvp4bSlide from '../duringSiteMvp/DuringSiteMvp4b';
-import DuringSiteMvp4cSlide from '../duringSiteMvp/DuringSiteMvp4c';
-import DuringSiteMvp4dSlide from '../duringSiteMvp/DuringSiteMvp4d';
-import DuringSiteMvp4eSlide from '../duringSiteMvp/DuringSiteMvp4e';
-import DuringSiteMvp4fSlide from '../duringSiteMvp/DuringSiteMvp4f';
-import DuringSiteMvp4gSlide from '../duringSiteMvp/DuringSiteMvp4g';
-import DuringSiteMvp4hSlide from '../duringSiteMvp/DuringSiteMvp4h';
-import DuringSiteMvp4iSlide from '../duringSiteMvp/DuringSiteMvp4i';
 import DuringSiteMvp5Slide from '../duringSiteMvp/DuringSiteMvp5';
+import DuringSiteMvp5bSlide from '../duringSiteMvp/DuringSiteMvp5b';
 import DuringSiteMvp6Slide from '../duringSiteMvp/DuringSiteMvp6';
 import DuringSiteMvp6bSlide from '../duringSiteMvp/DuringSiteMvp6b';
 import DuringSiteMvp7Slide from '../duringSiteMvp/DuringSiteMvp7';
+import DuringSiteMvp7bSlide from '../duringSiteMvp/DuringSiteMvp7b';
+import DuringSiteMvp7cSlide from '../duringSiteMvp/DuringSiteMvp7c';
 import DuringSiteMvp8Slide from '../duringSiteMvp/DuringSiteMvp8';
-import DuringSiteMvp9Slide from '../duringSiteMvp/DuringSiteMvp9';
 import DuringStack1Slide from '../duringStack/DuringStack1';
 import DuringStack2Slide from '../duringStack/DuringStack2';
 import DuringStack3Slide from '../duringStack/DuringStack3';
@@ -510,23 +503,16 @@ export const DuringSiteMvp: Story = {
       DuringSiteMvp3Slide,
       DuringSiteMvp3bSlide,
       DuringSiteMvp3cSlide,
+      DuringSiteMvp3dSlide,
       DuringSiteMvp4Slide,
-      DuringSiteMvp4bSlide,
-      DuringSiteMvp4cSlide,
-      DuringSiteMvp4dSlide,
-      DuringSiteMvp4eSlide,
-      DuringSiteMvp4fSlide,
-      DuringSiteMvp4gSlide,
-      DuringSiteMvp4hSlide,
-      DuringSiteMvp4iSlide,
       DuringSiteMvp5Slide,
+      DuringSiteMvp5bSlide,
       DuringSiteMvp6Slide,
       DuringSiteMvp6bSlide,
       DuringSiteMvp7Slide,
+      DuringSiteMvp7bSlide,
+      DuringSiteMvp7cSlide,
       DuringSiteMvp8Slide,
-      DuringSiteMvp9Slide,
-      DuringSiteMvp10Slide,
-      DuringSiteMvp11Slide,
     ],
     view: ViewTypes.print,
   },
