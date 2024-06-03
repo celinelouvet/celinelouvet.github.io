@@ -21,10 +21,6 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>
-      Malheureusement pour nous, Fairvioo n’a rien de révolutionnaire, sauf
-      l’aspect éthique.
-    </Text>
     <Text>Donc on va se concentrer sur le chiffre d’affaires</Text>
   </SlideNote>
 );
