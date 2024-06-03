@@ -22,6 +22,7 @@ export const content = (
     type={SlideContentTypes.titleWithThin2Columns}
     title="Pourquoi Haskell ?"
     alignContent="flex-start"
+    topRightCorner="Mars 2018"
     column1={<VerticalTimelineDuring />}
     column2={
       <Stack height="100%" justifyContent="center">
@@ -80,6 +81,7 @@ const note = (
       que j’avais en tête, car le language m’attirait.
     </Text>
     <Text>C’est là qu’on voit que mon choix était totalement biaisé.</Text>
+    <Text>C’est ce qu’on appelle de la Hype Driven Development</Text>
   </SlideNote>
 );
 

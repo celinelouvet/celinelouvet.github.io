@@ -10,6 +10,7 @@ export const content = (
     title="Pourquoi Haskell ?"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
+    topRightCorner="Mars 2018"
   >
     <Box position="relative" width="100%" height="100%">
       <Box position="absolute">

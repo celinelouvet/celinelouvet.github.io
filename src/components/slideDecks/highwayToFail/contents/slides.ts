@@ -101,6 +101,7 @@ import DuringEssec3 from './duringEssec/DuringEssec3';
 import DuringHaskellChoice1 from './duringHaskellChoice/DuringHaskellChoice1';
 import DuringHaskellChoice10 from './duringHaskellChoice/DuringHaskellChoice10';
 import DuringHaskellChoice11 from './duringHaskellChoice/DuringHaskellChoice11';
+import DuringHaskellChoice12 from './duringHaskellChoice/DuringHaskellChoice12';
 import DuringHaskellChoice2 from './duringHaskellChoice/DuringHaskellChoice2';
 import DuringHaskellChoice3 from './duringHaskellChoice/DuringHaskellChoice3';
 import DuringHaskellChoice4 from './duringHaskellChoice/DuringHaskellChoice4';
@@ -385,6 +386,7 @@ export const getSlides = () => {
     DuringHaskellChoice9,
     DuringHaskellChoice10,
     DuringHaskellChoice11,
+    DuringHaskellChoice12,
 
     DuringLearnHaskell1,
     DuringLearnHaskell2,

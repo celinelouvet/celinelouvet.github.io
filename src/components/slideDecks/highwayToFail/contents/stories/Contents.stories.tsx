@@ -118,6 +118,7 @@ import DuringHaskell9Slide from '../duringHaskell/DuringHaskell9';
 import DuringHaskellChoice1Slide from '../duringHaskellChoice/DuringHaskellChoice1';
 import DuringHaskellChoice10Slide from '../duringHaskellChoice/DuringHaskellChoice10';
 import DuringHaskellChoice11Slide from '../duringHaskellChoice/DuringHaskellChoice11';
+import DuringHaskellChoice12Slide from '../duringHaskellChoice/DuringHaskellChoice12';
 import DuringHaskellChoice2Slide from '../duringHaskellChoice/DuringHaskellChoice2';
 import DuringHaskellChoice3Slide from '../duringHaskellChoice/DuringHaskellChoice3';
 import DuringHaskellChoice4Slide from '../duringHaskellChoice/DuringHaskellChoice4';
@@ -558,6 +559,7 @@ export const DuringHaskellChoice: Story = {
       DuringHaskellChoice9Slide,
       DuringHaskellChoice10Slide,
       DuringHaskellChoice11Slide,
+      DuringHaskellChoice12Slide,
     ],
     view: ViewTypes.print,
   },

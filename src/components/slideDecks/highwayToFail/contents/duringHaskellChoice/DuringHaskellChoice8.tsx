@@ -22,6 +22,7 @@ export const content = (
     type={SlideContentTypes.titleWithThin2Columns}
     title="Pourquoi Haskell ?"
     alignContent="flex-start"
+    topRightCorner="Mars 2018"
     column1={<VerticalTimelineDuring />}
     column2={
       <Stack height="100%" justifyContent="center">
