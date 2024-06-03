@@ -19,15 +19,20 @@ import { VerticalTimelineDuring } from '../../components';
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThin2Columns}
-    title="Le site vitrine — La stack choisie"
+    title="Le site vitrine"
     alignContent="flex-start"
+    topRightCorner="Mi-Décembre 2017"
     column1={<VerticalTimelineDuring />}
     column2={
-      <UnorderedList paddingLeft="1em">
-        <ListItem>Javascript,</ListItem>
-        <ListItem>VueJs,</ListItem>
-        <ListItem>Firebase.</ListItem>
-      </UnorderedList>
+      <Stack gap="1em">
+        <Text>Stack choisie :</Text>
+
+        <UnorderedList paddingLeft="1em">
+          <ListItem>Javascript,</ListItem>
+          <ListItem>VueJs,</ListItem>
+          <ListItem>Firebase.</ListItem>
+        </UnorderedList>
+      </Stack>
     }
   >
     <Stack gap="1em">
@@ -56,6 +61,7 @@ const note = (
     <Text>
       Corriger une typo, changer une couleur, ajouter un bouton, bref.
     </Text>
+    <Text>Donc ça va être à moi de les faire.</Text>
   </SlideNote>
 );
 

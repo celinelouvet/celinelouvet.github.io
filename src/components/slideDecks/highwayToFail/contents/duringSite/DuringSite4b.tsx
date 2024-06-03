@@ -1,4 +1,4 @@
-import { ListItem, Text, UnorderedList } from '@chakra-ui/react';
+import { ListItem, Stack, Text, UnorderedList } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -7,15 +7,20 @@ import { VerticalTimelineDuring } from '../../components';
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThin2Columns}
-    title="Le site vitrine — La stack choisie"
+    title="Le site vitrine"
     alignContent="flex-start"
+    topRightCorner="Mi-Décembre 2017"
     column1={<VerticalTimelineDuring />}
     column2={
-      <UnorderedList paddingLeft="1em">
-        <ListItem>Javascript,</ListItem>
-        <ListItem>VueJs,</ListItem>
-        <ListItem>Firebase.</ListItem>
-      </UnorderedList>
+      <Stack gap="1em">
+        <Text>Stack choisie :</Text>
+
+        <UnorderedList paddingLeft="1em">
+          <ListItem>Javascript,</ListItem>
+          <ListItem>VueJs,</ListItem>
+          <ListItem>Firebase.</ListItem>
+        </UnorderedList>
+      </Stack>
     }
   ></SlideContent>
 );

@@ -10,6 +10,7 @@ export const content = (
     title="Le site vitrine"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
+    topRightCorner="Mi-Décembre 2017"
   >
     <Flex
       width="100%"
@@ -32,6 +33,10 @@ const note = (
   <SlideNote>
     <Text>
       Les maquettes sont déjà prêtes. Elles ont servi à faire le prototype.
+    </Text>
+    <Text>
+      On ne voit pas bien sur les screenshots, mais le design est complexe et
+      ultra responsive.
     </Text>
   </SlideNote>
 );
