@@ -15,6 +15,7 @@ export const content = (
     title="Les conséquences ?"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
+    topRightCorner="Eté 2018"
   >
     <Stack spacing="1em">
       <Failure variant="slide">Oups, la roadmap</Failure>
