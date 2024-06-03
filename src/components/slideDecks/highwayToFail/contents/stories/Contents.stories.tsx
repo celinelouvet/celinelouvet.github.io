@@ -100,21 +100,6 @@ import DuringDauphine4Slide from '../duringDauphine/DuringDauphine4';
 import DuringEssec1Slide from '../duringEssec/DuringEssec1';
 import DuringEssec2Slide from '../duringEssec/DuringEssec2';
 import DuringEssec3Slide from '../duringEssec/DuringEssec3';
-import DuringHaskell1Slide from '../duringHaskell/DuringHaskell1';
-import DuringHaskell10Slide from '../duringHaskell/DuringHaskell10';
-import DuringHaskell11Slide from '../duringHaskell/DuringHaskell11';
-import DuringHaskell12Slide from '../duringHaskell/DuringHaskell12';
-import DuringHaskell13Slide from '../duringHaskell/DuringHaskell13';
-import DuringHaskell14Slide from '../duringHaskell/DuringHaskell14';
-import DuringHaskell15Slide from '../duringHaskell/DuringHaskell15';
-import DuringHaskell2Slide from '../duringHaskell/DuringHaskell2';
-import DuringHaskell3Slide from '../duringHaskell/DuringHaskell3';
-import DuringHaskell4Slide from '../duringHaskell/DuringHaskell4';
-import DuringHaskell5Slide from '../duringHaskell/DuringHaskell5';
-import DuringHaskell6Slide from '../duringHaskell/DuringHaskell6';
-import DuringHaskell7Slide from '../duringHaskell/DuringHaskell7';
-import DuringHaskell8Slide from '../duringHaskell/DuringHaskell8';
-import DuringHaskell9Slide from '../duringHaskell/DuringHaskell9';
 import DuringHaskellChoice1Slide from '../duringHaskellChoice/DuringHaskellChoice1';
 import DuringHaskellChoice10Slide from '../duringHaskellChoice/DuringHaskellChoice10';
 import DuringHaskellChoice11Slide from '../duringHaskellChoice/DuringHaskellChoice11';
@@ -560,29 +545,6 @@ export const DuringHaskellChoice: Story = {
       DuringHaskellChoice10Slide,
       DuringHaskellChoice11Slide,
       DuringHaskellChoice12Slide,
-    ],
-    view: ViewTypes.print,
-  },
-};
-
-export const DuringHaskell: Story = {
-  args: {
-    slides: [
-      DuringHaskell1Slide,
-      DuringHaskell2Slide,
-      DuringHaskell3Slide,
-      DuringHaskell4Slide,
-      DuringHaskell5Slide,
-      DuringHaskell6Slide,
-      DuringHaskell7Slide,
-      DuringHaskell8Slide,
-      DuringHaskell9Slide,
-      DuringHaskell10Slide,
-      DuringHaskell11Slide,
-      DuringHaskell12Slide,
-      DuringHaskell13Slide,
-      DuringHaskell14Slide,
-      DuringHaskell15Slide,
     ],
     view: ViewTypes.print,
   },
