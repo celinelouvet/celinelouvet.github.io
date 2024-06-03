@@ -8,6 +8,7 @@ export const content = (
     title="Le produit"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
+    topRightCorner="Mars 2018"
   ></SlideContent>
 );
 
