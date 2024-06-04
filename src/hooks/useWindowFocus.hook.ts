@@ -2,18 +2,16 @@
 
 import { useEffect, useState } from 'react';
 
-export const useWindowFocus = (focusChange: (hasFocus: boolean) => void) => {
-  const document = window && window.document;
-
+export const useWindowFocus = (onFocusChange: (hasFocus: boolean) => void) => {
   const [focus, setFocus] = useState(false);
 
   useEffect(() => {
     const handleFocus = () => {
-      const hasFocus = document.hasFocus();
+      const hasFocus = window.document.hasFocus();
 
       if (hasFocus === focus) return;
 
-      focusChange(hasFocus);
+      onFocusChange(hasFocus);
       setFocus(hasFocus);
     };
 
@@ -26,5 +24,5 @@ export const useWindowFocus = (focusChange: (hasFocus: boolean) => void) => {
       window.removeEventListener('focus', handleFocus);
       window.removeEventListener('blur', handleFocus);
     };
-  }, [document, focus, focusChange]);
+  }, [focus, onFocusChange]);
 };
