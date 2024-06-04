@@ -19,7 +19,7 @@ export const content = (
         </UnorderedList>
       </Box>
     }
-    topRightCorner="Mi-Dec. 2017"
+    topRightCorner="Mi-Décembre 2017"
   ></SlideContent>
 );
 

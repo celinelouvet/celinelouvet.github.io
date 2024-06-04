@@ -46,6 +46,7 @@ const SurveyByConventionSchema = z.object({
   name: z.string(),
   opensAt: z.string(),
   closesAt: z.string(),
+  show: z.boolean(),
 });
 
 const SurveyPollSchema = z.object({

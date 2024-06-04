@@ -10,6 +10,7 @@ export const content = (
     title="La roadmap"
     alignContent="flex-start"
     column1={<VerticalTimelineCreation />}
+    topRightCorner="Mi-Décembre 2017"
   >
     <Center height="100%">
       <Timeline1 />
@@ -19,7 +20,11 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>Une roadmap a été prévue.</Text>
+    <Text>Comme je vous disais, une roadmap a été prévue.</Text>
+    <Text>
+      Donc une promulgation en septembre 2017 pour une entrée en vigueur en
+      Janvier 2018
+    </Text>
   </SlideNote>
 );
 

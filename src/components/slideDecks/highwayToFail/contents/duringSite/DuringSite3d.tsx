@@ -21,6 +21,7 @@ export const content = (
     title="Le site vitrine"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
+    topRightCorner="Mi-Décembre 2017"
   >
     <Stack width="100%" gap="1em">
       <Text>Version simplifiée, pour avancer vite :</Text>
@@ -37,14 +38,6 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>
-      Pour avancer vite, je vais suggérer de faire une version simplifiée qu’on
-      enrichira ensuite.
-    </Text>
-    <Text>
-      Donc je prévois un design allégé et le formulaire de contact est remplacé
-      par un email pré-rempli.
-    </Text>
     <Text>Ils sont d’accord.</Text>
   </SlideNote>
 );

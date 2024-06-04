@@ -10,6 +10,7 @@ export const content = (
     title="Le site vitrine"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
+    topRightCorner="Mi-Décembre 2017"
   >
     <Text>Réalisation d’un site</Text>
     <UnorderedList paddingLeft="1em">
@@ -20,7 +21,6 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>On va commencer par réaliser le site vitrine.</Text>
     <Text>L’idée est de faire un site pour exposer notre produit,</Text>
   </SlideNote>
 );

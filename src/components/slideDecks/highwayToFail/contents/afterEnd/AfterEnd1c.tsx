@@ -10,12 +10,12 @@ export const content = (
     title="Le début de la fin"
     alignContent="flex-start"
     column1={<VerticalTimelineAfter />}
+    topRightCorner="Octobre 2018"
   >
     <Stack spacing="1em">
-      <Text>Octobre - novembre 2018 :</Text>
-
       <UnorderedList paddingLeft="1em">
         <ListItem>Pas de levée</ListItem>
+        <ListItem>Pas de chiffre d’affaires</ListItem>
       </UnorderedList>
     </Stack>
   </SlideContent>
@@ -23,8 +23,8 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>On est en octobre / novembre 2018.</Text>
-    <Text>On n’a pas réussi à lever.</Text>
+    <Text>On n’a pas encore de chiffre d’affaires.</Text>
+    <Text>Et c’est la dégringolade.</Text>
   </SlideNote>
 );
 

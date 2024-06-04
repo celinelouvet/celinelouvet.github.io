@@ -10,6 +10,7 @@ export const content = (
     title="Ce que j’aurais dû faire ?"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
+    topRightCorner="Eté 2018"
   >
     <Text>Changer la stack dès que possible</Text>
   </SlideContent>

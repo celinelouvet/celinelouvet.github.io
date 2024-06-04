@@ -16,6 +16,7 @@ export const content = (
     title="Première perte de temps"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
+    topRightCorner="Janvier 2018"
   >
     <Stack gap="1em">
       <StackItem>
@@ -24,8 +25,12 @@ export const content = (
       <StackItem>
         <UnorderedList paddingLeft="1em">
           <ListItem>CSS plus poussé,</ListItem>
-          <ListItem>Ajout progressif de fonctionnalités.</ListItem>
+          <ListItem>Ajout progressif de fonctionnalités</ListItem>
         </UnorderedList>
+        <Text paddingLeft="3em">
+          Google Analytics, SEO, prerendering, événements Facebook, événements
+          LinkedIn, événements Segment, Zapier, Prefinery, Draft, etc.
+        </Text>
       </StackItem>
     </Stack>
   </SlideContent>

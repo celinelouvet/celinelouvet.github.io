@@ -15,7 +15,7 @@ export const content = (
         <Text>Ils ont :</Text>
       </Box>
     }
-    topRightCorner="Mi-Dec. 2017"
+    topRightCorner="Mi-Décembre 2017"
   ></SlideContent>
 );
 

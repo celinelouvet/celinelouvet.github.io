@@ -23,10 +23,9 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>Si on résume, j’ai vraiment fait un burnout.</Text>
     <Text>
-      On est 5 ans plus tard et je le sens toujours. Dès que j’abuse, il
-      repointe le bout de son nez.
+      Je me renseignerai sur la procédure ou je passerai par un avocat pour
+      éviter de me retrouver dans une situation similaire.
     </Text>
   </SlideNote>
 );

@@ -16,6 +16,7 @@ export const content = (
     title="Première perte de temps"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
+    topRightCorner="Janvier 2018"
   >
     <Stack gap="1em">
       <StackItem>
@@ -24,6 +25,7 @@ export const content = (
       <StackItem>
         <UnorderedList paddingLeft="1em">
           <ListItem>CSS plus poussé,</ListItem>
+          <ListItem>Ajout progressif de fonctionnalités</ListItem>
         </UnorderedList>
       </StackItem>
     </Stack>
@@ -32,7 +34,9 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>Je vais donc investir plus de temps pour pousser le CSS</Text>
+    <Text>
+      et ajouter des fonctionnalités qui sont progressivement demandées.
+    </Text>
   </SlideNote>
 );
 

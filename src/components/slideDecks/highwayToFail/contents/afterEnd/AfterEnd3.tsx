@@ -15,6 +15,7 @@ export const content = (
     title="Le début de la fin"
     alignContent="flex-start"
     column1={<VerticalTimelineAfter />}
+    topRightCorner="Novembre 2018"
   >
     <Stack spacing="1em">
       <ThumbsDown variant="slide">Manque de motivation généralisé</ThumbsDown>

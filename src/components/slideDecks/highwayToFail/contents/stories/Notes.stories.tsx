@@ -17,7 +17,6 @@ import After7Slide from '../after/After7';
 import AfterEnd1Slide from '../afterEnd/AfterEnd1';
 import AfterEnd1bSlide from '../afterEnd/AfterEnd1b';
 import AfterEnd1cSlide from '../afterEnd/AfterEnd1c';
-import AfterEnd1dSlide from '../afterEnd/AfterEnd1d';
 import AfterEnd2Slide from '../afterEnd/AfterEnd2';
 import AfterEnd3Slide from '../afterEnd/AfterEnd3';
 import AfterEnd4Slide from '../afterEnd/AfterEnd4';
@@ -100,24 +99,10 @@ import DuringDauphine4Slide from '../duringDauphine/DuringDauphine4';
 import DuringEssec1Slide from '../duringEssec/DuringEssec1';
 import DuringEssec2Slide from '../duringEssec/DuringEssec2';
 import DuringEssec3Slide from '../duringEssec/DuringEssec3';
-import DuringHaskell1Slide from '../duringHaskell/DuringHaskell1';
-import DuringHaskell10Slide from '../duringHaskell/DuringHaskell10';
-import DuringHaskell11Slide from '../duringHaskell/DuringHaskell11';
-import DuringHaskell12Slide from '../duringHaskell/DuringHaskell12';
-import DuringHaskell13Slide from '../duringHaskell/DuringHaskell13';
-import DuringHaskell14Slide from '../duringHaskell/DuringHaskell14';
-import DuringHaskell15Slide from '../duringHaskell/DuringHaskell15';
-import DuringHaskell2Slide from '../duringHaskell/DuringHaskell2';
-import DuringHaskell3Slide from '../duringHaskell/DuringHaskell3';
-import DuringHaskell4Slide from '../duringHaskell/DuringHaskell4';
-import DuringHaskell5Slide from '../duringHaskell/DuringHaskell5';
-import DuringHaskell6Slide from '../duringHaskell/DuringHaskell6';
-import DuringHaskell7Slide from '../duringHaskell/DuringHaskell7';
-import DuringHaskell8Slide from '../duringHaskell/DuringHaskell8';
-import DuringHaskell9Slide from '../duringHaskell/DuringHaskell9';
 import DuringHaskellChoice1Slide from '../duringHaskellChoice/DuringHaskellChoice1';
 import DuringHaskellChoice10Slide from '../duringHaskellChoice/DuringHaskellChoice10';
 import DuringHaskellChoice11Slide from '../duringHaskellChoice/DuringHaskellChoice11';
+import DuringHaskellChoice12Slide from '../duringHaskellChoice/DuringHaskellChoice12';
 import DuringHaskellChoice2Slide from '../duringHaskellChoice/DuringHaskellChoice2';
 import DuringHaskellChoice3Slide from '../duringHaskellChoice/DuringHaskellChoice3';
 import DuringHaskellChoice4Slide from '../duringHaskellChoice/DuringHaskellChoice4';
@@ -178,27 +163,20 @@ import DuringSite5Slide from '../duringSite/DuringSite5';
 import DuringSite6Slide from '../duringSite/DuringSite6';
 import DuringSite7Slide from '../duringSite/DuringSite7';
 import DuringSiteMvp1Slide from '../duringSiteMvp/DuringSiteMvp1';
-import DuringSiteMvp10Slide from '../duringSiteMvp/DuringSiteMvp10';
-import DuringSiteMvp11Slide from '../duringSiteMvp/DuringSiteMvp11';
 import DuringSiteMvp2Slide from '../duringSiteMvp/DuringSiteMvp2';
 import DuringSiteMvp3Slide from '../duringSiteMvp/DuringSiteMvp3';
 import DuringSiteMvp3bSlide from '../duringSiteMvp/DuringSiteMvp3b';
 import DuringSiteMvp3cSlide from '../duringSiteMvp/DuringSiteMvp3c';
+import DuringSiteMvp3dSlide from '../duringSiteMvp/DuringSiteMvp3d';
 import DuringSiteMvp4Slide from '../duringSiteMvp/DuringSiteMvp4';
-import DuringSiteMvp4bSlide from '../duringSiteMvp/DuringSiteMvp4b';
-import DuringSiteMvp4cSlide from '../duringSiteMvp/DuringSiteMvp4c';
-import DuringSiteMvp4dSlide from '../duringSiteMvp/DuringSiteMvp4d';
-import DuringSiteMvp4eSlide from '../duringSiteMvp/DuringSiteMvp4e';
-import DuringSiteMvp4fSlide from '../duringSiteMvp/DuringSiteMvp4f';
-import DuringSiteMvp4gSlide from '../duringSiteMvp/DuringSiteMvp4g';
-import DuringSiteMvp4hSlide from '../duringSiteMvp/DuringSiteMvp4h';
-import DuringSiteMvp4iSlide from '../duringSiteMvp/DuringSiteMvp4i';
 import DuringSiteMvp5Slide from '../duringSiteMvp/DuringSiteMvp5';
+import DuringSiteMvp5bSlide from '../duringSiteMvp/DuringSiteMvp5b';
 import DuringSiteMvp6Slide from '../duringSiteMvp/DuringSiteMvp6';
 import DuringSiteMvp6bSlide from '../duringSiteMvp/DuringSiteMvp6b';
 import DuringSiteMvp7Slide from '../duringSiteMvp/DuringSiteMvp7';
+import DuringSiteMvp7bSlide from '../duringSiteMvp/DuringSiteMvp7b';
+import DuringSiteMvp7cSlide from '../duringSiteMvp/DuringSiteMvp7c';
 import DuringSiteMvp8Slide from '../duringSiteMvp/DuringSiteMvp8';
-import DuringSiteMvp9Slide from '../duringSiteMvp/DuringSiteMvp9';
 import DuringStack1Slide from '../duringStack/DuringStack1';
 import DuringStack2Slide from '../duringStack/DuringStack2';
 import DuringStack3Slide from '../duringStack/DuringStack3';
@@ -510,23 +488,16 @@ export const DuringSiteMvp: Story = {
       DuringSiteMvp3Slide,
       DuringSiteMvp3bSlide,
       DuringSiteMvp3cSlide,
+      DuringSiteMvp3dSlide,
       DuringSiteMvp4Slide,
-      DuringSiteMvp4bSlide,
-      DuringSiteMvp4cSlide,
-      DuringSiteMvp4dSlide,
-      DuringSiteMvp4eSlide,
-      DuringSiteMvp4fSlide,
-      DuringSiteMvp4gSlide,
-      DuringSiteMvp4hSlide,
-      DuringSiteMvp4iSlide,
       DuringSiteMvp5Slide,
+      DuringSiteMvp5bSlide,
       DuringSiteMvp6Slide,
       DuringSiteMvp6bSlide,
       DuringSiteMvp7Slide,
+      DuringSiteMvp7bSlide,
+      DuringSiteMvp7cSlide,
       DuringSiteMvp8Slide,
-      DuringSiteMvp9Slide,
-      DuringSiteMvp10Slide,
-      DuringSiteMvp11Slide,
     ],
     view: ViewTypes.printNotes,
   },
@@ -572,29 +543,7 @@ export const DuringHaskellChoice: Story = {
       DuringHaskellChoice9Slide,
       DuringHaskellChoice10Slide,
       DuringHaskellChoice11Slide,
-    ],
-    view: ViewTypes.printNotes,
-  },
-};
-
-export const DuringHaskell: Story = {
-  args: {
-    slides: [
-      DuringHaskell1Slide,
-      DuringHaskell2Slide,
-      DuringHaskell3Slide,
-      DuringHaskell4Slide,
-      DuringHaskell5Slide,
-      DuringHaskell6Slide,
-      DuringHaskell7Slide,
-      DuringHaskell8Slide,
-      DuringHaskell9Slide,
-      DuringHaskell10Slide,
-      DuringHaskell11Slide,
-      DuringHaskell12Slide,
-      DuringHaskell13Slide,
-      DuringHaskell14Slide,
-      DuringHaskell15Slide,
+      DuringHaskellChoice12Slide,
     ],
     view: ViewTypes.printNotes,
   },
@@ -667,7 +616,6 @@ export const AfterEnd: Story = {
       AfterEnd1Slide,
       AfterEnd1bSlide,
       AfterEnd1cSlide,
-      AfterEnd1dSlide,
       AfterEnd2Slide,
       AfterEnd3Slide,
       AfterEnd4Slide,

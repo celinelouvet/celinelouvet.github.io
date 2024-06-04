@@ -17,10 +17,14 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>Si on résume, j’ai vraiment fait un burnout.</Text>
+    <Text>Et si c’était à refaire ?</Text>
     <Text>
-      On est 5 ans plus tard et je le sens toujours. Dès que j’abuse, il
-      repointe le bout de son nez.
+      Bon, soyons honnête. A la dernière personne qui m’a posé cette question,
+      j’ai répondu que je rêve d’aller élever des chèvres dans le Larzac.
+    </Text>
+    <Text>
+      Bon, il parait qu’elles sont bruyantes et sentent très mauvais, mais ça
+      vous donne mon état d’esprit.
     </Text>
   </SlideNote>
 );

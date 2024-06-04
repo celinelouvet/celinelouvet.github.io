@@ -16,7 +16,7 @@ export const content = (
     title="Première perte de temps"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
-    topRightCorner="Janvier 2018"
+    topRightCorner="Mars 2018"
   >
     <Stack gap="1em">
       <StackItem>
@@ -25,7 +25,12 @@ export const content = (
       <StackItem>
         <UnorderedList paddingLeft="1em">
           <ListItem>CSS plus poussé,</ListItem>
+          <ListItem>Ajout progressif de fonctionnalités</ListItem>
         </UnorderedList>
+        <Text paddingLeft="3em">
+          Google Analytics, SEO, prerendering, événements Facebook, événements
+          LinkedIn, événements Segment, Zapier, Prefinery, Draft, etc.
+        </Text>
       </StackItem>
     </Stack>
   </SlideContent>
@@ -33,7 +38,15 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>Je vais donc investir plus de temps pour pousser le CSS</Text>
+    <Text>
+      C’est comme ça, que je vais me retrouver à passer plus de temps sur les
+      autres fonctionnalités que sur la version simplifiée, initialement prévue.
+    </Text>
+    <Text>Et ça va nous amener à mi-mars 2018.</Text>
+    <Text>
+      Si on essayait de représenter le temps que j’ai passé sur ces
+      fonctionnalités, ça ressemblerait à ça.
+    </Text>
   </SlideNote>
 );
 

@@ -1,32 +1,34 @@
-import { ListItem, Text, UnorderedList } from '@chakra-ui/react';
+import { Box, Center, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { VerticalTimelineDuring } from '../../components';
+import { ParetoSite, VerticalTimelineDuring } from '../../components';
 
 export const content = (
   <SlideContent
-    type={SlideContentTypes.titleWithThin2Columns}
+    type={SlideContentTypes.titleWithThinColumn}
     title="Première perte de temps"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
-    column2={
-      <UnorderedList paddingLeft="1em">
-        <ListItem>Google analytics,</ListItem>
-      </UnorderedList>
-    }
-  ></SlideContent>
+    topRightCorner="Mars 2018"
+  >
+    <Center width="100%" height="100%">
+      <Box height="100%">
+        <ParetoSite />
+      </Box>
+    </Center>
+  </SlideContent>
 );
 
 const note = (
   <SlideNote>
     <Text>
-      Ça va déraper assez vite, car je vais commencer à ajouter de plus en plus
-      de choses.
+      2-3 semaines sur une version simplifiée, puis 2 mois sur la version
+      complète.
     </Text>
     <Text>
-      Et comme il faut quelqu’un qui s’y connaisse en développement, il n’y a
-      que moi qui peut le faire.
+      Je ne sais pas si vous reconnaissez ce graph, mais il est assez proche de
+      celui du principe de Pareto ou dit des 80-20.
     </Text>
   </SlideNote>
 );

@@ -10,9 +10,10 @@ export const content = (
     title="Le début de la fin"
     alignContent="flex-start"
     column1={<VerticalTimelineAfter />}
+    topRightCorner="Mars 2019"
   >
     <Stack spacing="1em">
-      <Text>Mars 2019 : Freelance</Text>
+      <Text>Freelance</Text>
     </Stack>
   </SlideContent>
 );

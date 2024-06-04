@@ -15,6 +15,7 @@ export const content = (
     title="Le début de la fin"
     alignContent="flex-start"
     column1={<VerticalTimelineAfter />}
+    topRightCorner="Janvier 2019"
   >
     <Stack spacing="1em">
       <Failure variant="slide">Je suis seule.</Failure>

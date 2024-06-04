@@ -1,4 +1,4 @@
-import { Center, HStack, ListItem, UnorderedList } from '@chakra-ui/react';
+import { Center, HStack, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -36,9 +36,7 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <UnorderedList>
-      <ListItem>humaine</ListItem>
-    </UnorderedList>
+    <Text>Humaine</Text>
   </SlideNote>
 );
 

@@ -8,7 +8,7 @@ import { VerticalTimelineDuring } from '../../components';
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="Si je devais le refaire ?"
+    title="Pourquoi Haskell ?"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
   >
@@ -23,7 +23,7 @@ export const content = (
         lineHeight="2em"
         textAlign="center"
       >
-        <Text>Se concentrer sur ce qui apporte de la valeur métier.</Text>
+        <Text>Attention à la Hype Driven Development</Text>
       </Box>
     </Flex>
   </SlideContent>
@@ -31,7 +31,11 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>Concentrez-vous sur ce qui apporte de la valeur métier.</Text>
+    <Text>
+      J’ai fait de la Hype Driven Development en choississant une techno qui
+      m’attirait, mais sans réel besoin.
+    </Text>
+    <Text>Bref, méfiez-vous de la Hype.</Text>
   </SlideNote>
 );
 

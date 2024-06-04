@@ -21,8 +21,7 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>Ca marquera la fin de l’aventure.</Text>
-    <Text>Mais ne partez pas, hein !</Text>
+    <Text>Ça marquera la fin de l’aventure.</Text>
   </SlideNote>
 );
 

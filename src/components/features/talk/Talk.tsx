@@ -144,15 +144,17 @@ const Surveys: FC<{
       </InternalLink>
 
       <UnorderedList paddingLeft="1em">
-        {surveys.map(({ name, opensAt, closesAt }) => (
-          <Survey
-            key={name}
-            name={conventions.get(name)?.name}
-            opensAt={opensAt}
-            closesAt={closesAt}
-            talkLink={talkLink}
-          />
-        ))}
+        {surveys
+          .filter(({ show }) => show)
+          .map(({ name, opensAt, closesAt }) => (
+            <Survey
+              key={name}
+              name={conventions.get(name)?.name}
+              opensAt={opensAt}
+              closesAt={closesAt}
+              talkLink={talkLink}
+            />
+          ))}
       </UnorderedList>
     </Stack>
   );

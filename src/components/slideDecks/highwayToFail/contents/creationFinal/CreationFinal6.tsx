@@ -10,7 +10,7 @@ export const content = (
     title="La déclaration"
     alignContent="flex-start"
     column1={<VerticalTimelineCreation />}
-    topRightCorner="Mi-Dec. 2017"
+    topRightCorner="Mi-Décembre 2017"
   >
     <Stack width="100%" height="100%" gap="2em">
       <StackItem>

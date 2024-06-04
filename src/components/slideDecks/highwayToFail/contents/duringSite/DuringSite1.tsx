@@ -10,6 +10,7 @@ export const content = (
     title="Le site vitrine"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
+    topRightCorner="Mi-Décembre 2017"
   >
     <Text>Réalisation d’un site</Text>
   </SlideContent>
