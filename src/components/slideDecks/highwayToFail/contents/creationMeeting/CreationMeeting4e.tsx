@@ -26,14 +26,10 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>Il s’agit de :</Text>
-    <UnorderedList paddingLeft="1em">
-      <ListItem>2 hommes,</ListItem>
-      <ListItem>qui se connaissent très bien,</ListItem>
-      <ListItem>ils ont de l’XP dans des grands groupes,</ListItem>
-      <ListItem>l’un est au chômage et l’autre au RSA,</ListItem>
-      <ListItem>Ce sont 2 anciens de la fac de Paris Dauphine.</ListItem>
-    </UnorderedList>
+    <Text>
+      Ce sont 2 anciens de la fac de Paris Dauphine, sur des formations
+      orientées business et marketing.
+    </Text>
   </SlideNote>
 );
 

@@ -40,8 +40,6 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>Ils vont me proposer la répartition suivante</Text>
-    <Text>Chacun d’eux me cède 10% de ses parts</Text>
-    <Text>Ce qui m’amène à 20% et eux à 40%.</Text>
   </SlideNote>
 );
 

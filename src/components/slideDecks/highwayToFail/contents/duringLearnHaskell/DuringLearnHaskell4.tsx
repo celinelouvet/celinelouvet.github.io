@@ -31,8 +31,8 @@ const note = (
     </Text>
     <Text>Puis après, bam les monades, nouveau mur à passer.</Text>
     <Text>
-      Je pense que je me suis arrêtée avant de vraiment m’attaquer au mur
-      suivant…
+      Je n’ai pas rencontré le mur suivant, la liquiditation est arrivée avant
+      😅.
     </Text>
   </SlideNote>
 );

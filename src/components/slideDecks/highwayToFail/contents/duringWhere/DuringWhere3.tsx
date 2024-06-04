@@ -34,7 +34,8 @@ const note = (
       squater chez un inconnu.
     </Text>
     <Text>
-      Nous sommes collègues, je n’ai pas besoin de connaître sa vie privée.
+      Nous sommes collègues, je n’ai pas besoin de connaître sa vie privée ou ce
+      que sa copine utilise comme produit hygiénique.
     </Text>
   </SlideNote>
 );

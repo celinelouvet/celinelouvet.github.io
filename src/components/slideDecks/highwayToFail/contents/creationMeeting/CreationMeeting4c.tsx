@@ -24,12 +24,7 @@ export const content = (
 
 const note = (
   <SlideNote>
-    <Text>Il s’agit de :</Text>
-    <UnorderedList paddingLeft="1em">
-      <ListItem>2 hommes,</ListItem>
-      <ListItem>qui se connaissent très bien,</ListItem>
-      <ListItem>ils ont de l’XP dans des grands groupes,</ListItem>
-    </UnorderedList>
+    <Text>ils ont de l’XP dans des grands groupes, moi aussi.</Text>
   </SlideNote>
 );
 

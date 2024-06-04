@@ -25,11 +25,8 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>
-      Il s’agit de penser en termes de types à ce qu’on a et là où on veut
-      aller.
+      Et nommer les choses de manière expressive, c’est un point important.
     </Text>
-    <Text>Ces types représentent nos données métier qu’on veut manipuler.</Text>
-    <Text>Le compilateur va venir nous guider dans le développement.</Text>
   </SlideNote>
 );
 
