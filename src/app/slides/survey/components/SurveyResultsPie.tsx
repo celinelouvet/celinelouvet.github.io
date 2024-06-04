@@ -17,7 +17,7 @@ export const SurveyResultsPie: FC<SurveyResultsPieProps> = ({
 
   const { choices } = question;
 
-  const emptyData = [{ title: 'No votes', value: 1, color: gray500 }];
+  const emptyData = [{ title: 'None', value: 1, color: gray500 }];
 
   const data = choices.map(({ text, value, color }) => {
     const newValue = results[value] ?? 0;
@@ -36,7 +36,7 @@ export const SurveyResultsPie: FC<SurveyResultsPieProps> = ({
           : ({ dataEntry }) => dataEntry.title
       }
       labelStyle={{
-        fontSize: '0.25em',
+        fontSize: '0.2em',
         fill: brand900,
         fontFamily: 'nunito',
         fontWeight: 'bold',

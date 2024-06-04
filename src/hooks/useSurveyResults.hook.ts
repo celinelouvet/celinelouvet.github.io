@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { useApi, useSurveyInfos } from '@/hooks';
 import {
@@ -74,10 +74,9 @@ export const useSurveyResults = (
 
   const surveyInfos = useSurveyInfos(talkSubjectId, conventionId);
 
-  useEffect(() => {
-    if (!loading) return;
-
-    setSurveyPoll(surveyInfos.surveyPoll);
+  const refreshQuery = useCallback(() => {
+    setLoading(true);
+    setError(false);
 
     if (surveyInfos.surveyPoll === null) {
       return;
@@ -103,6 +102,13 @@ export const useSurveyResults = (
       .catch(() => {
         setError(true);
       });
+  }, [get, surveyInfos.surveyId, surveyInfos.surveyPoll]);
+
+  useEffect(() => {
+    if (!loading) return;
+
+    setSurveyPoll(surveyInfos.surveyPoll);
+    refreshQuery();
   }, [
     get,
     setSurveyPoll,
@@ -110,7 +116,8 @@ export const useSurveyResults = (
     loading,
     surveyInfos.surveyId,
     surveyInfos.surveyPoll,
+    refreshQuery,
   ]);
 
-  return { surveyPoll, results, loading, error };
+  return { surveyPoll, results, loading, error, refreshQuery };
 };

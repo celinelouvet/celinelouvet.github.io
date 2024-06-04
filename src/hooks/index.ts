@@ -12,4 +12,5 @@ export { useSurveyPoll } from './useSurveyPoll.hook';
 export { useSurveyResults } from './useSurveyResults.hook';
 export { useTalk } from './useTalk.hook';
 export { useTalkSubjects } from './useTalkSubjects.hook';
+export { useWindowFocus } from './useWindowFocus.hook';
 export { useWindowSize } from './useWindowSize.hook';

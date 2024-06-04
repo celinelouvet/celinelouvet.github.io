@@ -10,11 +10,15 @@ import { SurveyVotes } from './SurveyVotes';
 type SurveyResultsChoiceProps = {
   question?: SurveyPollChoiceQuestion;
   results?: Record<string, number>;
+  currentIndex: number;
+  questionCount: number;
 };
 
 export const SurveyResultsChoice: FC<SurveyResultsChoiceProps> = ({
   question,
   results,
+  currentIndex,
+  questionCount,
 }) => {
   if (!question) return null;
   if (!results) return null;
@@ -30,7 +34,10 @@ export const SurveyResultsChoice: FC<SurveyResultsChoiceProps> = ({
 
   const { title } = question;
   return (
-    <SlideContent type={SlideContentTypes.titleWithContent} title={title}>
+    <SlideContent
+      type={SlideContentTypes.titleWithContent}
+      title={`${currentIndex + 1}/${questionCount} — ${title}`}
+    >
       <HStack width="100%" height="100%" alignItems="center" gap="10%">
         <Box width="45%" height="100%">
           <SurveyResultsPie question={question} results={results} />
