@@ -22,8 +22,9 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>
-      On va donc commencer par un canapé chez l’un d’eux et on ira parfois en
-      espace de coworking, quand ce canapé ne sera pas accessible.
+      Dans les faits, on va commencer par un canapé chez l’un d’eux et on ira
+      parfois en espace de coworking, notamment quand ce canapé ne sera pas
+      accessible.
     </Text>
   </SlideNote>
 );

@@ -42,6 +42,9 @@ const note = (
       Fun fact: si vous regardez sur Pappers la déclaration de Fairvioo, vous ne
       verrez mon nom nulle part.
     </Text>
+    <Text>
+      L’avantage, c’est que je n’ai pas eu à m’occuper de la liquidation 😶
+    </Text>
   </SlideNote>
 );
 

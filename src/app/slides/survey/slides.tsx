@@ -1,11 +1,15 @@
-import { Box } from '@chakra-ui/react';
 import { type FC } from 'react';
 
 import { SlideDeck, SlideNote, ViewTypes } from '@/components/core';
-import { useSurveyResults } from '@/hooks';
+import { useSurveyResults, useWindowFocus } from '@/hooks';
 import { type SurveyPollChoiceQuestion } from '@/models';
 
-import { SurveyResultsChoice } from './SurveyResultsChoice';
+import {
+  Error,
+  Loader,
+  NoSurveyFound,
+  SurveyResultsChoice,
+} from './components';
 
 type SurveyResultsProps = {
   talkSubjectId?: string | string[];
@@ -16,15 +20,16 @@ export const Slides: FC<SurveyResultsProps> = ({
   talkSubjectId,
   conventionId,
 }: SurveyResultsProps) => {
-  const { surveyPoll, loading, results, error } = useSurveyResults(
-    talkSubjectId,
-    conventionId
-  );
+  const { surveyPoll, loading, results, error, refreshQuery } =
+    useSurveyResults(talkSubjectId, conventionId);
+  useWindowFocus((hasFocus) => {
+    if (!hasFocus) return;
+    refreshQuery();
+  });
 
-  if (surveyPoll === null)
-    return <Box>Aucun sondage disponible pour cette conférence.</Box>;
-  if (error) return <Box>Une erreur est survenue.</Box>;
-  if (loading) return <Box>Loading</Box>;
+  if (surveyPoll === null) return <NoSurveyFound />;
+  if (error) return <Error />;
+  if (loading) return <Loader />;
 
   const { questions } = surveyPoll;
 
@@ -35,11 +40,17 @@ export const Slides: FC<SurveyResultsProps> = ({
       question: question as SurveyPollChoiceQuestion,
     }));
 
-  const slides = questionsToShow.map(({ id, question }) => {
+  const slides = questionsToShow.map(({ id, question }, index) => {
     const result = results[id];
     return {
       content: (
-        <SurveyResultsChoice key={id} question={question} results={result} />
+        <SurveyResultsChoice
+          key={id}
+          question={question}
+          results={result}
+          currentIndex={index}
+          questionCount={questionsToShow.length}
+        />
       ),
       note: <SlideNote key={id}></SlideNote>,
     };

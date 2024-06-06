@@ -3,5 +3,7 @@
 import { Slides } from './slides';
 
 export default function Page() {
-  return <Slides talkSubjectId="highway_to_fail" conventionId="yeeso" />;
+  return (
+    <Slides talkSubjectId="highway_to_fail" conventionId="devfest_lille_2024" />
+  );
 }

@@ -25,10 +25,6 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>Et c’est aussi l’intéret de la motivation éthique.</Text>
-    <Text>
-      Petit bonus: les dons aux associations sont déductibles des impots sur le
-      chiffre d’affaire.
-    </Text>
   </SlideNote>
 );
 

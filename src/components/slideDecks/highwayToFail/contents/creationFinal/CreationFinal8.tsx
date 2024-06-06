@@ -8,7 +8,7 @@ import { VerticalTimelineCreation } from '../../components';
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="La répartition des parts"
+    title="La déclaration"
     alignContent="flex-start"
     column1={<VerticalTimelineCreation />}
     topRightCorner="Mi-Décembre 2017"

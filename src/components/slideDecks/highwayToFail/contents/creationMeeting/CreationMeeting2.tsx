@@ -42,6 +42,10 @@ const note = (
     <Text>
       Ça tombe bien, car c’est des connaissances que je n’ai absolument pas.
     </Text>
+    <Text>
+      Je suis issue d’une école d’ingénieurs spécialisée en dev. Je sais faire
+      du dev, du système, et de la compta 😁
+    </Text>
   </SlideNote>
 );
 

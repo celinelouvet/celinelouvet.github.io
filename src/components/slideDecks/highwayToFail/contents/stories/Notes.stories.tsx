@@ -167,7 +167,6 @@ import DuringSiteMvp2Slide from '../duringSiteMvp/DuringSiteMvp2';
 import DuringSiteMvp3Slide from '../duringSiteMvp/DuringSiteMvp3';
 import DuringSiteMvp3bSlide from '../duringSiteMvp/DuringSiteMvp3b';
 import DuringSiteMvp3cSlide from '../duringSiteMvp/DuringSiteMvp3c';
-import DuringSiteMvp3dSlide from '../duringSiteMvp/DuringSiteMvp3d';
 import DuringSiteMvp4Slide from '../duringSiteMvp/DuringSiteMvp4';
 import DuringSiteMvp5Slide from '../duringSiteMvp/DuringSiteMvp5';
 import DuringSiteMvp5bSlide from '../duringSiteMvp/DuringSiteMvp5b';
@@ -488,7 +487,6 @@ export const DuringSiteMvp: Story = {
       DuringSiteMvp3Slide,
       DuringSiteMvp3bSlide,
       DuringSiteMvp3cSlide,
-      DuringSiteMvp3dSlide,
       DuringSiteMvp4Slide,
       DuringSiteMvp5Slide,
       DuringSiteMvp5bSlide,
