@@ -23,16 +23,16 @@ const slideBorder = {
 
 const getSize = (preview?: boolean) => {
   if (preview) {
-    const width = 238;
-    const height = 134;
+    const width = 400;
+    const height = 200;
     return {
       width,
       height,
       ratio: width / height,
     };
   }
-  const width = 507;
-  const height = 285;
+  const width = 868;
+  const height = 488;
 
   return {
     width,
@@ -68,22 +68,16 @@ const Slide: FC<{ slides: Slide[]; position: number; preview?: boolean }> = ({
   const size = getSize(preview);
   const contentProps = useSlideSize(size);
 
+  const slide = slides[position];
+
+  if (!slide) {
+    return null;
+  }
+
   return (
-    <>
-      {slides.map(({ content }, index) => {
-        return (
-          <Box
-            {...contentProps}
-            lineHeight="1.25em"
-            key={`current-${index}`}
-            display={index !== position ? 'none' : ''}
-            {...slideBorder}
-          >
-            {content}
-          </Box>
-        );
-      })}
-    </>
+    <Box {...contentProps} lineHeight="1.25em" {...slideBorder}>
+      {slide.content}
+    </Box>
   );
 };
 
@@ -98,9 +92,10 @@ export const SlideDeckForNotes = forwardRef<SlideDeckForNotesProps, 'div'>(
         <Stack
           backgroundColor="brand.800"
           height="100%"
-          width="30%"
+          width="50%"
           paddingX="4"
           alignItems="center"
+          spacing="1em"
         >
           <StackItem>
             <SlideTimer />
@@ -110,16 +105,13 @@ export const SlideDeckForNotes = forwardRef<SlideDeckForNotesProps, 'div'>(
               <Slide slides={slides} position={currentPosition} />
             </Center>
           </StackItem>
-          <Flex width="100%" justifyContent="space-between" wrap="wrap">
-            <Box>
-              <Slide slides={slides} position={currentPosition - 1} preview />
-            </Box>
+          <Flex width="100%" justifyContent="flex-end" wrap="wrap">
             <Box>
               <Slide slides={slides} position={currentPosition + 1} preview />
             </Box>
           </Flex>
         </Stack>
-        <Box width="70%" height="100%">
+        <Box flex="1" height="100%">
           <Note slides={slides} position={currentPosition} />
         </Box>
       </Flex>
