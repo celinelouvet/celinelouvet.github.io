@@ -26,28 +26,9 @@ module.exports = defineNextConfig({
       },
 
       {
-        source: '/yeeso/:path*',
-        destination: '/talks/highway_to_fail/yeeso/:path*',
-        permanent: false,
-      },
-      {
-        source: '/devfest/:path*',
-        destination: '/talks/highway_to_fail/devfest_lille_2024/:path*',
-        permanent: false,
-      },
-      {
         source: '/technwine/:path*',
         destination: '/talks/highway_to_fail/technwine_2024/:path*',
         permanent: false,
-      },
-      {
-        // Redirect to the slides for MDM Vendome
-        // TODO: remove after the event
-        source: '/mdm',
-        destination:
-          'https://docs.google.com/presentation/d/1iC3M9Y1WbZ6joo-lFONMWi-E3uEJtd-Z6_TkbBMXHkc/edit?usp=sharing',
-        permanent: false,
-        basePath: false,
       },
     ];
   },

@@ -4,6 +4,6 @@ import { Slides } from './slides';
 
 export default function Page() {
   return (
-    <Slides talkSubjectId="highway_to_fail" conventionId="devfest_lille_2024" />
+    <Slides talkSubjectId="highway_to_fail" conventionId="technwine_2024" />
   );
 }

@@ -14,12 +14,12 @@ export const content = (
   >
     <Center width="100%" height="100%">
       <InternalLink
-        href="/devfest/results"
+        href="/technwine/results"
         textAlign="center"
         variant="slideLight"
         target="_blank"
       >
-        celine.louvet.me/devfest/results
+        celine.louvet.me/technwine/results
       </InternalLink>
     </Center>
   </SlideContent>
