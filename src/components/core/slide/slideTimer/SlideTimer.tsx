@@ -19,9 +19,14 @@ export const SlideTimer = forwardRef<SlideTimerProps, 'div'>(
       useStopwatch({ autoStart: false });
 
     return (
-      <Stack alignItems="center" gap="5" padding="4" ref={ref} {...props}>
+      <Stack alignItems="center" gap="2em" padding="4" ref={ref} {...props}>
         <StackItem>
-          <TimeText hours={hours} minutes={minutes} seconds={seconds} />
+          <TimeText
+            hours={hours}
+            minutes={minutes}
+            seconds={seconds}
+            size="2xl"
+          />
         </StackItem>
         <StackItem>
           {!isRunning ? (
@@ -41,13 +46,8 @@ type SlideTimerPlayProps = {
 
 export const SlideTimerPlay = ({ onStart }: SlideTimerPlayProps) => {
   return (
-    <ButtonGroup>
-      <IconButton
-        onClick={onStart}
-        aria-label="Play"
-        icon={<FaPlay />}
-        size="sm"
-      />
+    <ButtonGroup size="md">
+      <IconButton onClick={onStart} aria-label="Play" icon={<FaPlay />} />
     </ButtonGroup>
   );
 };
@@ -62,19 +62,9 @@ export const SlideTimerRunning = ({
   onRestart,
 }: SlideTimerRunningProps) => {
   return (
-    <ButtonGroup>
-      <IconButton
-        onClick={onPause}
-        aria-label="Pause"
-        icon={<FaPause />}
-        size="sm"
-      />
-      <IconButton
-        onClick={onRestart}
-        aria-label="Restart"
-        icon={<FaUndo />}
-        size="sm"
-      />
+    <ButtonGroup size="md">
+      <IconButton onClick={onPause} aria-label="Pause" icon={<FaPause />} />
+      <IconButton onClick={onRestart} aria-label="Restart" icon={<FaUndo />} />
     </ButtonGroup>
   );
 };
