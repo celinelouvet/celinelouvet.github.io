@@ -57,7 +57,6 @@ import CreationIdea5Slide from '../creationIdea/CreationIdea5';
 import CreationIdea6Slide from '../creationIdea/CreationIdea6';
 import CreationIdea7Slide from '../creationIdea/CreationIdea7';
 import CreationIdea8Slide from '../creationIdea/CreationIdea8';
-import CreationIdea9Slide from '../creationIdea/CreationIdea9';
 import CreationMarket1Slide from '../creationMarket/CreationMarket1';
 import CreationMarket2Slide from '../creationMarket/CreationMarket2';
 import CreationMarket2bSlide from '../creationMarket/CreationMarket2b';
@@ -359,7 +358,6 @@ export const CreationIdea: Story = {
       CreationIdea6Slide,
       CreationIdea7Slide,
       CreationIdea8Slide,
-      CreationIdea9Slide,
     ],
     view: ViewTypes.print,
   },

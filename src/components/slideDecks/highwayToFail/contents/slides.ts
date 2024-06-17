@@ -55,7 +55,6 @@ import CreationIdea5 from './creationIdea/CreationIdea5';
 import CreationIdea6 from './creationIdea/CreationIdea6';
 import CreationIdea7 from './creationIdea/CreationIdea7';
 import CreationIdea8 from './creationIdea/CreationIdea8';
-import CreationIdea9 from './creationIdea/CreationIdea9';
 import CreationMarket1 from './creationMarket/CreationMarket1';
 import CreationMarket2 from './creationMarket/CreationMarket2';
 import CreationMarket2b from './creationMarket/CreationMarket2b';
@@ -280,7 +279,6 @@ export const getSlides = () => {
     CreationIdea6,
     CreationIdea7,
     CreationIdea8,
-    CreationIdea9,
 
     CreationMarket1,
     CreationMarket2,
