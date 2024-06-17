@@ -1,8 +1,8 @@
-import { Stack, Text } from '@chakra-ui/react';
+import { Box, Center, Stack, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { VerticalTimelineDuring } from '../../components';
+import { Pareto1, VerticalTimelineDuring } from '../../components';
 
 export const content = (
   <SlideContent
@@ -11,11 +11,16 @@ export const content = (
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
   >
-    <Stack gap="1em">
+    <Stack height="100%" gap="1em">
       <Text>
-        Les premiers 80% sont les plus faciles à atteindre, car ils demandent
-        20% d’effort.
+        Les premiers 80% sont les plus faciles à atteindre, car ils ne demandent
+        que 20% d’effort.
       </Text>
+      <Center width="100%" flex="1">
+        <Box height="100%">
+          <Pareto1 />
+        </Box>
+      </Center>
     </Stack>
   </SlideContent>
 );

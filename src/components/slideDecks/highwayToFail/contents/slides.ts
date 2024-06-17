@@ -170,10 +170,8 @@ import DuringSiteMvp5 from './duringSiteMvp/DuringSiteMvp5';
 import DuringSiteMvp5b from './duringSiteMvp/DuringSiteMvp5b';
 import DuringSiteMvp6 from './duringSiteMvp/DuringSiteMvp6';
 import DuringSiteMvp6b from './duringSiteMvp/DuringSiteMvp6b';
+import DuringSiteMvp6c from './duringSiteMvp/DuringSiteMvp6c';
 import DuringSiteMvp7 from './duringSiteMvp/DuringSiteMvp7';
-import DuringSiteMvp7b from './duringSiteMvp/DuringSiteMvp7b';
-import DuringSiteMvp7c from './duringSiteMvp/DuringSiteMvp7c';
-import DuringSiteMvp8 from './duringSiteMvp/DuringSiteMvp8';
 import DuringStack1 from './duringStack/DuringStack1';
 import DuringStack2 from './duringStack/DuringStack2';
 import DuringStack3 from './duringStack/DuringStack3';
@@ -355,10 +353,8 @@ export const getSlides = () => {
     DuringSiteMvp5b,
     DuringSiteMvp6,
     DuringSiteMvp6b,
+    DuringSiteMvp6c,
     DuringSiteMvp7,
-    DuringSiteMvp7b,
-    DuringSiteMvp7c,
-    DuringSiteMvp8,
 
     DuringPlatform1,
     DuringPlatform2,

@@ -1,27 +1,32 @@
-import { Box, Center, Text } from '@chakra-ui/react';
+import { Stack, StackItem, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
-import { Pareto2, VerticalTimelineDuring } from '../../components';
+import { VerticalTimelineDuring } from '../../components';
 
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithThinColumn}
-    title="Le principe de Pareto (80 — 20)"
+    title="Si je devais le refaire ?"
     alignContent="flex-start"
     column1={<VerticalTimelineDuring />}
+    topRightCorner="Mars 2018"
   >
-    <Center width="100%" height="100%">
-      <Box height="100%">
-        <Pareto2 />
-      </Box>
-    </Center>
+    <Stack>
+      <StackItem>
+        <Text as="span">Ne surtout pas le coder !</Text>
+      </StackItem>
+    </Stack>
   </SlideContent>
 );
 
 const note = (
   <SlideNote>
-    <Text>Et la zone 2 correspond, elle, à ces 20% restants.</Text>
+    <Text>Je ne le ferai surtout pas !</Text>
+    <Text>
+      En le codant, j’ai perdu un temps très précieux qui a servi à créer un
+      truc qui n’apporte aucune valeur !
+    </Text>
   </SlideNote>
 );
 
