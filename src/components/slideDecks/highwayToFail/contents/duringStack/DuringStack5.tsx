@@ -26,14 +26,6 @@ const note = (
       Coté base de données, je pars du PostgreSQL, qui permet de faire beaucoup
       de choses.
     </Text>
-    <Text>
-      Mon idée est de me concentrer sur les fonctionnalités sans me préoccuper
-      de la scalabilité au début.
-    </Text>
-    <Text>
-      En effet, le besoin de scalabilité n’intervient que lorsqu’on on a réussi
-      à avoir beaucoup d’utilisateurs.
-    </Text>
   </SlideNote>
 );
 
