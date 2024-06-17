@@ -1,6 +1,11 @@
 import { Stack, Text } from '@chakra-ui/react';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+  ThumbsDown,
+} from '@/components/core';
 
 import { VerticalTimelineDuring } from '../../components';
 
@@ -12,17 +17,15 @@ export const content = (
     topRightCorner="Mars 2018"
     column1={<VerticalTimelineDuring />}
   >
-    <Stack width="100%" height="100%">
-      <Text>Clever Cloud cherche à promouvoir l’hébergement de Haskell.</Text>
+    <Stack height="100%">
+      <ThumbsDown variant="slide">Hype Driven Development</ThumbsDown>
     </Stack>
   </SlideContent>
 );
 
 const note = (
   <SlideNote>
-    <Text>
-      Au même moment, Clever Cloud cherche à en promouvoir l’hébergement.
-    </Text>
+    <Text>J’ai fait ce qu’on appelle de la Hype Driven Development.</Text>
   </SlideNote>
 );
 

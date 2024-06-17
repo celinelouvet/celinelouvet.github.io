@@ -81,7 +81,7 @@ const note = (
       que j’avais en tête, car le language m’attirait.
     </Text>
     <Text>C’est là qu’on voit que mon choix était totalement biaisé.</Text>
-    <Text>C’est ce qu’on appelle de la Hype Driven Development</Text>
+    <Text>J’ai choisi un langage juste parce qu’il m’intéressait.</Text>
   </SlideNote>
 );
 

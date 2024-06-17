@@ -23,6 +23,9 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>L’API est réalisée en Haskell.</Text>
+    <Text>
+      C’est là où je me suis un peu emballée. Je vais revenir dessus après.
+    </Text>
   </SlideNote>
 );
 

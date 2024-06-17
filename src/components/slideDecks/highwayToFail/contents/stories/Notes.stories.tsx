@@ -57,7 +57,6 @@ import CreationIdea5Slide from '../creationIdea/CreationIdea5';
 import CreationIdea6Slide from '../creationIdea/CreationIdea6';
 import CreationIdea7Slide from '../creationIdea/CreationIdea7';
 import CreationIdea8Slide from '../creationIdea/CreationIdea8';
-import CreationIdea9Slide from '../creationIdea/CreationIdea9';
 import CreationMarket1Slide from '../creationMarket/CreationMarket1';
 import CreationMarket2Slide from '../creationMarket/CreationMarket2';
 import CreationMarket2bSlide from '../creationMarket/CreationMarket2b';
@@ -172,10 +171,8 @@ import DuringSiteMvp5Slide from '../duringSiteMvp/DuringSiteMvp5';
 import DuringSiteMvp5bSlide from '../duringSiteMvp/DuringSiteMvp5b';
 import DuringSiteMvp6Slide from '../duringSiteMvp/DuringSiteMvp6';
 import DuringSiteMvp6bSlide from '../duringSiteMvp/DuringSiteMvp6b';
+import DuringSiteMvp6cSlide from '../duringSiteMvp/DuringSiteMvp6c';
 import DuringSiteMvp7Slide from '../duringSiteMvp/DuringSiteMvp7';
-import DuringSiteMvp7bSlide from '../duringSiteMvp/DuringSiteMvp7b';
-import DuringSiteMvp7cSlide from '../duringSiteMvp/DuringSiteMvp7c';
-import DuringSiteMvp8Slide from '../duringSiteMvp/DuringSiteMvp8';
 import DuringStack1Slide from '../duringStack/DuringStack1';
 import DuringStack2Slide from '../duringStack/DuringStack2';
 import DuringStack3Slide from '../duringStack/DuringStack3';
@@ -361,7 +358,6 @@ export const CreationIdea: Story = {
       CreationIdea6Slide,
       CreationIdea7Slide,
       CreationIdea8Slide,
-      CreationIdea9Slide,
     ],
     view: ViewTypes.printNotes,
   },
@@ -492,10 +488,8 @@ export const DuringSiteMvp: Story = {
       DuringSiteMvp5bSlide,
       DuringSiteMvp6Slide,
       DuringSiteMvp6bSlide,
+      DuringSiteMvp6cSlide,
       DuringSiteMvp7Slide,
-      DuringSiteMvp7bSlide,
-      DuringSiteMvp7cSlide,
-      DuringSiteMvp8Slide,
     ],
     view: ViewTypes.printNotes,
   },

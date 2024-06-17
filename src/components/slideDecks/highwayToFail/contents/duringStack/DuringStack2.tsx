@@ -26,6 +26,14 @@ const note = (
       Pour avancer au plus court, je suis partie sur un monolithe, servant les
       fichiers des front-ends.
     </Text>
+    <Text>
+      Mon idée est de me concentrer sur les fonctionnalités sans me préoccuper
+      de la scalabilité au début.
+    </Text>
+    <Text>
+      En effet, le besoin de scalabilité n’intervient que lorsqu’on on a réussi
+      à avoir beaucoup d’utilisateurs.
+    </Text>
   </SlideNote>
 );
 

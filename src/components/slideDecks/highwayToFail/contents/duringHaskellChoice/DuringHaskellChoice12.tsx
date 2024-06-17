@@ -1,7 +1,11 @@
-import { Box, Flex, Icon, Text } from '@chakra-ui/react';
-import { FaFlag } from 'react-icons/fa';
+import { Stack, Text } from '@chakra-ui/react';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+  ThumbsUp,
+} from '@/components/core';
 
 import { VerticalTimelineDuring } from '../../components';
 
@@ -10,32 +14,22 @@ export const content = (
     type={SlideContentTypes.titleWithThinColumn}
     title="Pourquoi Haskell ?"
     alignContent="flex-start"
+    topRightCorner="Mars 2018"
     column1={<VerticalTimelineDuring />}
   >
-    <Flex height="100%" alignItems="center" gap="3em">
-      <Box>
-        <Icon as={FaFlag} boxSize="4em" color="brand.500" />
-      </Box>
-      <Box
-        flex="1"
-        color="brand.300"
-        fontSize="1.25em"
-        lineHeight="2em"
-        textAlign="center"
-      >
-        <Text>Attention à la Hype Driven Development</Text>
-      </Box>
-    </Flex>
+    <Stack width="100%" height="100%" gap="2em">
+      <Text>Clever Cloud cherche à promouvoir l’hébergement de Haskell.</Text>
+      <ThumbsUp variant="slide">Crédits gratuits.</ThumbsUp>
+    </Stack>
   </SlideContent>
 );
 
 const note = (
   <SlideNote>
     <Text>
-      J’ai fait de la Hype Driven Development en choississant une techno qui
-      m’attirait, mais sans réel besoin.
+      Ce qui va me permettre de profiter de crédits gratuits pour toute la durée
+      du projet.
     </Text>
-    <Text>Bref, méfiez-vous de la Hype.</Text>
   </SlideNote>
 );
 
