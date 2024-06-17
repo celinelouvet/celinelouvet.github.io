@@ -41,9 +41,9 @@ export const content = (
       <Grid
         width="30%"
         height="100%"
-        templateColumns="1fr 2fr"
+        templateColumns="30% 60%"
         templateRows="1fr 1fr 1fr"
-        columnGap="12"
+        columnGap="10%"
         alignItems="center"
         justifyContent="center"
       >
