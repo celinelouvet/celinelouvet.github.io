@@ -37,7 +37,7 @@ export const content = (
         <Title title="Merci pour votre attention" />
       </Center>
       <Stack textAlign="center">
-        <QrCode value="https://openfeedback.io/z5LkRLNe9J8At7OFYDz6/2024-06-06/highway-to-fail" />
+        <QrCode value="https://openfeedback.io/technwine-2024/2024-06-18/lvyAhIjLixfhilfBn5tY" />
         <H2Heading variant="slide">Retours</H2Heading>
       </Stack>
     </Grid>
