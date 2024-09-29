@@ -26,8 +26,8 @@ module.exports = defineNextConfig({
       },
 
       {
-        source: '/technwine/:path*',
-        destination: '/talks/highway_to_fail/technwine_2024/:path*',
+        source: '/bdxio/:path*',
+        destination: '/talks/highway_to_fail/bdxio_2024/:path*',
         permanent: false,
       },
     ];
