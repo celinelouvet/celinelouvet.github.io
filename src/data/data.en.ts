@@ -174,6 +174,7 @@ const conventions = new Map<string, Convention>([
   ['yeeso', { name: 'IT Woman talk - YEESO', language: 'FR' }],
   ['devfest_lille_2024', { name: 'DevFest Lille 2024', language: 'FR' }],
   ['technwine_2024', { name: 'Tech n Wine 2024', language: 'FR' }],
+  ['bdxio_2024', { name: 'BDX.IO 2024', language: 'FR' }],
 ]);
 
 const talks = [
@@ -368,6 +369,15 @@ const talks = [
     when: '2024-06-18',
     links: {
       program: 'https://technwine.fr/schedule',
+    },
+    pictureId: 'lyoncraft2024-highway_to_fail',
+  },
+  {
+    subjectId: 'highway_to_fail',
+    conventionId: 'bdxio_2024',
+    when: '2024-11-08',
+    links: {
+      program: 'https://bdxio.fr/schedule',
     },
     pictureId: 'lyoncraft2024-highway_to_fail',
   },

@@ -103,6 +103,12 @@ export const survey: SurveyPoll = {
       show: true,
     },
     {
+      name: 'bdxio_2024',
+      opensAt: '2024-11-08T08:30:00Z',
+      closesAt: '2024-11-08T18:30:00Z',
+      show: true,
+    },
+    {
       name: 'test',
       opensAt: '2024-01-01T08:30:00Z',
       closesAt: '2024-12-21T18:30:00Z',
