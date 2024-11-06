@@ -205,6 +205,7 @@ import Preface3Slide from '../preface/Preface3';
 import Preface4Slide from '../preface/Preface4';
 import SurveyResultSlide from '../SurveyResult';
 import TimelineSlide from '../Timeline';
+import YeesoSlide from '../Yeeso';
 
 const meta = {
   title: 'Talks/HighwayToFail/Contents',
@@ -223,7 +224,7 @@ export const MainTitle: Story = {
 
 export const Introduction: Story = {
   args: {
-    slides: [IntroductionSlide],
+    slides: [IntroductionSlide, YeesoSlide],
     view: ViewTypes.print,
   },
 };

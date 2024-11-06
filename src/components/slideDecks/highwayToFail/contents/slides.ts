@@ -203,6 +203,7 @@ import Preface3 from './preface/Preface3';
 import Preface4 from './preface/Preface4';
 import SurveyResult from './SurveyResult';
 import Timeline from './Timeline';
+import Yeeso from './Yeeso';
 
 export const getSlides = () => {
   return [
@@ -219,6 +220,7 @@ export const getSlides = () => {
     Fairvioo4f,
 
     Introduction,
+    Yeeso,
 
     Preface1,
     Preface2,

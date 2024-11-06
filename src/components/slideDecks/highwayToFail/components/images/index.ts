@@ -8,3 +8,4 @@ export * from './TalkFairvioo2';
 export * from './TalkFairvioo3';
 export * from './Timeline1';
 export * from './Timeline2';
+export * from './Yeeso';
