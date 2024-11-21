@@ -2495,12 +2495,12 @@
   resolved "https://registry.yarnpkg.com/@fontsource/nunito/-/nunito-5.0.16.tgz#7283fc487d9c2d7edb3be3ce8298647f85e9d463"
   integrity sha512-55Au63Sm2ux/Aef4JenA8HJKEH1mpEMvZCYR7f4pnlOQ9linVwa1/dzPh2GDnt2H5uUK7hK2JmPCyskrldm8+w==
 
-"@fontsource/pt-sans-narrow@5.0.19":
-  version "5.0.19"
-  resolved "https://registry.yarnpkg.com/@fontsource/pt-sans-narrow/-/pt-sans-narrow-5.0.19.tgz#ba0219be0024590d51674ca5eed95a2d491734f4"
-  integrity sha512-fGgGhanvn0Sy0L2pG3Up+HntPt0rTicMws88Fbz798MgJ2sNzIinGW1PLur7gPoVf6/In4TJZt3jNT5Tpm58Sg==
+"@fontsource/pt-sans-narrow@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/pt-sans-narrow/-/pt-sans-narrow-5.1.0.tgz#5548db02bc6981e35824878ebb8b63eff396b8b1"
+  integrity sha512-aTBC21bTyRShCkhpmEhNMJQel4mu33tN42KM3bZxHHg12xEiygqKppstNRV0Xd8FV0axZ0st8V5XSgkB0SHoPA==
 
-"@google-cloud/datastore@^9.2.1":
+"@google-cloud/datastore@9.2.1":
   version "9.2.1"
   resolved "https://registry.yarnpkg.com/@google-cloud/datastore/-/datastore-9.2.1.tgz#0cf049a1fd23a21c09ebd5b93c2d8d8522fad630"
   integrity sha512-55sQB8AmVN+zzvKjexwma3azSoD+V0B46p4/iIZ6UpR7Me7IZd5pU25T3z7mW7lG1SYVX/kgImPnZJjj8Tc45Q==
