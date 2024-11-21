@@ -2480,33 +2480,34 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.1.tgz#16308cea045f0fc777b6ff20a9f25474dd8293d2"
   integrity sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==
 
-"@fontsource/inter@5.0.16":
-  version "5.0.16"
-  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-5.0.16.tgz#b858508cdb56dcbbf3166903122851e2fbd16b50"
-  integrity sha512-qF0aH5UiZvCmneX5orJbVRoc2VTyLTV3X/7laMp03Qt28L+B9tFlZODOGUL64wDWc69YVdi1LeJB0cIgd51lvw==
+"@fontsource/inter@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-5.1.0.tgz#ab629b2c662457022d2d6a29854b8dc8ba538c47"
+  integrity sha512-zKZR3kf1G0noIes1frLfOHP5EXVVm0M7sV/l9f/AaYf+M/DId35FO4LkigWjqWYjTJZGgplhdv4cB+ssvCqr5A==
 
-"@fontsource/noto-mono@5.0.7":
-  version "5.0.7"
-  resolved "https://registry.yarnpkg.com/@fontsource/noto-mono/-/noto-mono-5.0.7.tgz#d83ab7a39de030b6e7190cac00ed65295009eaa7"
-  integrity sha512-bnlKaHQODAbBTLMAN76mRktSNIqnBf1js5V2GNrFICKiL8ygkXk/tOSS4yngfCpSNUXFdAZs96uGldg1p0FSkw==
+"@fontsource/noto-mono@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/noto-mono/-/noto-mono-5.1.0.tgz#61ccb5c6ad6fe5055af57a5952f620c3b0be9d4c"
+  integrity sha512-oobAnMOVSTOLZB0v3yy48ucink9HKsY9Ll1kChX8uNWeCodf21PcAc/VEB2mBsX7+5HWFqVV7+ec+mPbomDwBw==
 
-"@fontsource/nunito@5.0.16":
-  version "5.0.16"
-  resolved "https://registry.yarnpkg.com/@fontsource/nunito/-/nunito-5.0.16.tgz#7283fc487d9c2d7edb3be3ce8298647f85e9d463"
-  integrity sha512-55Au63Sm2ux/Aef4JenA8HJKEH1mpEMvZCYR7f4pnlOQ9linVwa1/dzPh2GDnt2H5uUK7hK2JmPCyskrldm8+w==
+"@fontsource/nunito@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/nunito/-/nunito-5.1.0.tgz#545e703b2c0b6015a34748f628f6027e89ffb611"
+  integrity sha512-+FuA/uyHXZPHAgNOmLq0GtsCAqx9IQjNnUyuGJYDl6xe+B2UIQO2pUFbWiWPfpYM7UfiPU9DBIT7s7Z9iGFoRw==
 
-"@fontsource/pt-sans-narrow@5.0.19":
-  version "5.0.19"
-  resolved "https://registry.yarnpkg.com/@fontsource/pt-sans-narrow/-/pt-sans-narrow-5.0.19.tgz#ba0219be0024590d51674ca5eed95a2d491734f4"
-  integrity sha512-fGgGhanvn0Sy0L2pG3Up+HntPt0rTicMws88Fbz798MgJ2sNzIinGW1PLur7gPoVf6/In4TJZt3jNT5Tpm58Sg==
+"@fontsource/pt-sans-narrow@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/pt-sans-narrow/-/pt-sans-narrow-5.1.0.tgz#5548db02bc6981e35824878ebb8b63eff396b8b1"
+  integrity sha512-aTBC21bTyRShCkhpmEhNMJQel4mu33tN42KM3bZxHHg12xEiygqKppstNRV0Xd8FV0axZ0st8V5XSgkB0SHoPA==
 
-"@google-cloud/datastore@^8.5.0":
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/@google-cloud/datastore/-/datastore-8.5.0.tgz#2fd2df926c1eeee21775b496975dd3c5fa5694b2"
-  integrity sha512-zq4k+4zmTWmQn2f6mbDnBCFD0w7gs65/eMVcev8ubzmL5hRa2vafRPb3WI3KSoOkVBimRhCvysiaol+AZf1MLw==
+"@google-cloud/datastore@9.2.1":
+  version "9.2.1"
+  resolved "https://registry.yarnpkg.com/@google-cloud/datastore/-/datastore-9.2.1.tgz#0cf049a1fd23a21c09ebd5b93c2d8d8522fad630"
+  integrity sha512-55sQB8AmVN+zzvKjexwma3azSoD+V0B46p4/iIZ6UpR7Me7IZd5pU25T3z7mW7lG1SYVX/kgImPnZJjj8Tc45Q==
   dependencies:
     "@google-cloud/promisify" "^4.0.0"
     arrify "^2.0.1"
+    async-mutex "^0.5.0"
     concat-stream "^2.0.0"
     extend "^3.0.2"
     google-gax "^4.0.5"
@@ -5063,6 +5064,13 @@ async-limiter@~1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/async-limiter/-/async-limiter-1.0.1.tgz#dd379e94f0db8310b08291f9d64c3209766617fd"
   integrity sha512-csOlWGAcRFJaI6m+F2WKdnMKr4HhdhFVBk0H/QbJFMCr+uO2kwohwXQPxw/9OCxp05r5ghVBFSyioixx3gfkNQ==
+
+async-mutex@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/async-mutex/-/async-mutex-0.5.0.tgz#353c69a0b9e75250971a64ac203b0ebfddd75482"
+  integrity sha512-1A94B18jkJ3DYq284ohPxoXbfTA5HsQ7/Mf4DEhcyLx3Bz27Rh59iScbB6EPiP+B+joue6YCxcMXSbFC1tZKwA==
+  dependencies:
+    tslib "^2.4.0"
 
 async@^3.2.3:
   version "3.2.5"

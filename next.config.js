@@ -24,12 +24,6 @@ module.exports = defineNextConfig({
         destination: '/storybook/index.html',
         permanent: true,
       },
-
-      {
-        source: '/bdxio/:path*',
-        destination: '/talks/highway_to_fail/bdxio_2024/:path*',
-        permanent: false,
-      },
     ];
   },
 
