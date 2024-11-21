@@ -2485,10 +2485,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-5.0.16.tgz#b858508cdb56dcbbf3166903122851e2fbd16b50"
   integrity sha512-qF0aH5UiZvCmneX5orJbVRoc2VTyLTV3X/7laMp03Qt28L+B9tFlZODOGUL64wDWc69YVdi1LeJB0cIgd51lvw==
 
-"@fontsource/noto-mono@5.0.7":
-  version "5.0.7"
-  resolved "https://registry.yarnpkg.com/@fontsource/noto-mono/-/noto-mono-5.0.7.tgz#d83ab7a39de030b6e7190cac00ed65295009eaa7"
-  integrity sha512-bnlKaHQODAbBTLMAN76mRktSNIqnBf1js5V2GNrFICKiL8ygkXk/tOSS4yngfCpSNUXFdAZs96uGldg1p0FSkw==
+"@fontsource/noto-mono@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/noto-mono/-/noto-mono-5.1.0.tgz#61ccb5c6ad6fe5055af57a5952f620c3b0be9d4c"
+  integrity sha512-oobAnMOVSTOLZB0v3yy48ucink9HKsY9Ll1kChX8uNWeCodf21PcAc/VEB2mBsX7+5HWFqVV7+ec+mPbomDwBw==
 
 "@fontsource/nunito@5.1.0":
   version "5.1.0"
