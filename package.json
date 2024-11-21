@@ -80,7 +80,7 @@
     "prettier": "3.2.5",
     "storybook": "7.6.17",
     "storybook-dark-mode": "3.0.3",
-    "tsx": "4.7.1",
+    "tsx": "4.19.2",
     "typescript": "5.6.3"
   },
   "resolutions": {
