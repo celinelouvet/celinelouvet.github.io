@@ -33,7 +33,7 @@
     "@fontsource/nunito": "5.1.0",
     "@fontsource/pt-sans-narrow": "5.1.0",
     "@google-cloud/datastore": "9.2.1",
-    "dayjs": "1.11.10",
+    "dayjs": "1.11.13",
     "framer-motion": "11.0.8",
     "i18next": "23.10.0",
     "next": "14.1.1",
