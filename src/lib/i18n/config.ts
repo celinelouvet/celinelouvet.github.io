@@ -8,6 +8,7 @@ import locales from '@/locales';
 
 dayjs.locale(DEFAULT_LANGUAGE_KEY);
 
+// eslint-disable-next-line react-hooks/rules-of-hooks
 use(initReactI18next).init({
   defaultNS: DEFAULT_NAMESPACE,
   ns: Object.keys(locales[DEFAULT_LANGUAGE_KEY]),
