@@ -4,6 +4,8 @@ import { initReactI18next } from "react-i18next/initReactI18next";
 import { DEFAULT_NAMESPACE, getOptions, Languages } from "./settings";
 import { FallbackNs } from "react-i18next";
 
+export * from "./settings";
+
 const initI18next = async (language: string, namespace: string | string[]) => {
   const i18nInstance = createInstance();
   await i18nInstance

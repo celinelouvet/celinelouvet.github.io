@@ -1,5 +1,5 @@
 import { dir } from "i18next";
-import { LANGUAGES } from "../i18n/settings";
+import { LANGUAGES } from "@/app/i18n";
 import { PageParams } from "./types";
 
 export async function generateStaticParams() {
