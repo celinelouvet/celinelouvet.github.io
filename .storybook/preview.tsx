@@ -1,24 +1,36 @@
 import * as React from "react";
 import { ChakraProvider, defaultSystem } from "@chakra-ui/react";
-import { StoryFn, type Parameters, type Preview } from "@storybook/react";
+import {
+  Decorator,
+  StoryFn,
+  type Parameters,
+  type Preview,
+} from "@storybook/react";
+import { withThemeByClassName } from "@storybook/addon-themes";
 
 const WithStoryThemeProvider = (Story: StoryFn) => (
   <ChakraProvider value={defaultSystem}>
     <Story />
   </ChakraProvider>
 );
-const decorators = [WithStoryThemeProvider];
+const decorators: Decorator[] = [
+  WithStoryThemeProvider,
+
+  withThemeByClassName({
+    defaultTheme: "light",
+    themes: { light: "", dark: "dark" },
+  }),
+];
 
 const parameters: Parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/i,
-    },
-  },
   chakra: {
     defaultSystem,
+  },
+
+  parameters: {
+    nextjs: {
+      appDirectory: true,
+    },
   },
 };
 
