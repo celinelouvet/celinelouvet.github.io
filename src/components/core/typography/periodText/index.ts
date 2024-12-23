@@ -1,0 +1,1 @@
+export { PeriodText } from "./PeriodText";

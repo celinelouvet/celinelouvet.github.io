@@ -24,6 +24,12 @@ export default tseslint.config(
   ...storybook.configs["flat/recommended"],
 
   {
+    rules: {
+      "no-irregular-whitespace": "off",
+    },
+  },
+
+  {
     ignores: ["!.storybook"],
   }
 );

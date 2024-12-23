@@ -1,4 +1,14 @@
 {
-  "plop": "EN plop",
-  "plop2": "EN plop 2"
+  "languages": {
+    "en": "English",
+    "fr": "French"
+  },
+  "dates": {
+    "today": "today",
+
+    "years_one": "{{count}} year",
+    "years_other": "{{count}} years",
+    "months_one": "{{count}} month",
+    "months_other": "{{count}} months"
+  }
 }
