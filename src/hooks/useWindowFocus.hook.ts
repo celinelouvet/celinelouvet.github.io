@@ -1,6 +1,4 @@
-'use client';
-
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export const useWindowFocus = (onFocusChange: (hasFocus: boolean) => void) => {
   const [focus, setFocus] = useState(false);
@@ -17,12 +15,12 @@ export const useWindowFocus = (onFocusChange: (hasFocus: boolean) => void) => {
 
     handleFocus();
 
-    window.addEventListener('focus', handleFocus);
-    window.addEventListener('blur', handleFocus);
+    window.addEventListener("focus", handleFocus);
+    window.addEventListener("blur", handleFocus);
 
     return () => {
-      window.removeEventListener('focus', handleFocus);
-      window.removeEventListener('blur', handleFocus);
+      window.removeEventListener("focus", handleFocus);
+      window.removeEventListener("blur", handleFocus);
     };
   }, [focus, onFocusChange]);
 };

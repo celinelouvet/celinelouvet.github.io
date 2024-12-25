@@ -1,11 +1,11 @@
-import { Grid, GridItem, Text } from "@chakra-ui/react";
-import { type Meta, type StoryObj } from "@storybook/react";
+import { Grid, GridItem, Text } from '@chakra-ui/react';
+import { type Meta, type StoryObj } from '@storybook/react';
 
-import { TimeText as TimeTextComponent } from "./TimeText";
-import { H2Heading } from "../headings";
+import { TimeText as TimeTextComponent } from './TimeText';
+import { H2Heading } from '../headings';
 
 const meta = {
-  title: "Core/Typography",
+  title: 'Core/Typography',
   component: TimeTextComponent,
   args: {
     hours: 1,

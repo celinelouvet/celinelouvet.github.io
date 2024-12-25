@@ -1,0 +1,157 @@
+name: cd-appengine
+
+on:
+  push:
+    branches:
+      - 'v2**'
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  VERSION: ${{ github.ref_name }}
+  PDF_FILE: 'LOUVET_Celine'
+  BUCKET_NAME: '${{ vars.GCP_PROJECT }}.appspot.com'
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [20]
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup node env
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Cache node modules
+        uses: actions/cache@v4
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Clean
+        run: rm -fr dist
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build
+        run: yarn build
+
+      - name: Lint code and types
+        run: yarn lint
+
+      - name: Prepare for AppEngine
+        run: yarn appengine:prepare
+
+      - name: Prepare appengine env file
+        run: cp app.prod.yaml app.yaml
+
+      - id: auth
+        name: Auth to GCP
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - id: deploy
+        name: Deploy to GCP AppEngine
+        uses: google-github-actions/deploy-appengine@v1
+        with:
+          project_id: ${{ vars.GCP_PROJECT }}
+          deliverables: app.yaml
+          promote: false
+          version: ${{ env.VERSION }}
+
+      - name: Test deployed version
+        run: curl --silent --head "${{ steps.deploy.outputs.version_url }}/test"
+
+      - name: Output version URL
+        run: echo "url=${{ steps.deploy.outputs.version_url }}" >> "$GITHUB_OUTPUT"
+
+    outputs:
+      versionUrl: ${{ steps.deploy.outputs.version_url }}
+
+  slidePdf:
+    name: Generate Slides PDF
+    needs: deploy
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [20]
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Define bucket path
+        id: bucket
+        run: echo "BUCKET_PATH=${{env.BUCKET_NAME}}/slides" >> $GITHUB_OUTPUT
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup node env
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Cache node modules
+        uses: actions/cache@v4
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Generate PDF
+        shell: bash
+        run: cd slides-generator && yarn && yarn slides --pageUrl "$VERSION_URL"
+        env:
+          VERSION_URL: ${{ needs.deploy.outputs.versionUrl }}
+
+      - id: auth
+        name: Auth to GCP
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Upload Slides PDF
+        uses: google-github-actions/upload-cloud-storage@v2
+        with:
+          path: './slides-generator/Highway_to_fail.pdf'
+          destination: ${{ steps.bucket.outputs.BUCKET_PATH }}
+          predefinedAcl: publicRead
+
+      - name: Upload Notes PDF
+        uses: google-github-actions/upload-cloud-storage@v2
+        with:
+          path: './slides-generator/Notes_-_Highway_to_fail.pdf'
+          destination: ${{ steps.bucket.outputs.BUCKET_PATH }}
+          predefinedAcl: publicRead

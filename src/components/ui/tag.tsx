@@ -1,7 +1,6 @@
-import { Tag as ChakraTag } from "@chakra-ui/react";
-import * as React from "react";
+import { Tag as ChakraTag } from '@chakra-ui/react';
+import * as React from 'react';
 
-// eslint-disable-next-line import/namespace
 export interface TagProps extends ChakraTag.RootProps {
   startElement?: React.ReactNode;
   endElement?: React.ReactNode;
@@ -11,7 +10,7 @@ export interface TagProps extends ChakraTag.RootProps {
 
 export const Tag = React.forwardRef<HTMLSpanElement, TagProps>(function Tag(
   props,
-  ref
+  ref,
 ) {
   const {
     startElement,

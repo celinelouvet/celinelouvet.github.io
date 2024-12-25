@@ -1,0 +1,21 @@
+{
+  "subjects": "Available subjects for CFP",
+  "toCome": "Incoming talks",
+  "alreadyDone": "Talks & Interviews",
+  "notFound": "Talk not found",
+  "talk": {
+    "date": "MMM D YYYY",
+    "more": "View more",
+    "less": "View less",
+
+    "surveys": {
+      "title": "Surveys",
+      "allResults": "All results",
+      "survey": "Survey",
+      "results": "Results",
+      "notAvailable": "No yet available"
+    }
+  },
+
+  "availableForCfp": "Available for CFP"
+}

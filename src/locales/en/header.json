@@ -1,0 +1,21 @@
+{
+  "languages": {
+    "title": "Language",
+    "en": "English",
+    "fr": "Français"
+  },
+  "colorModes": {
+    "title": "Color mode",
+    "dark": "Dark",
+    "light": "Light",
+    "system": "System"
+  },
+  "nav": {
+    "home": "Home",
+    "resume": "Resume",
+    "talks": "Talks",
+    "blog": "Blog",
+    "open": "Open the navigation menu",
+    "close": "Close the navigation menu"
+  }
+}

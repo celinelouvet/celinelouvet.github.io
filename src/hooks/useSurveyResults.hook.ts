@@ -1,12 +1,13 @@
 import { useCallback, useEffect, useState } from 'react';
 
 import { useApi, useSurveyInfos } from '@/hooks';
+
 import {
   type SurveyPoll,
   type SurveyPollChoiceQuestion,
   type SurveyResult,
   asSurveyResults,
-} from '@/models';
+} from '../models';
 
 type ReducedResults = Record<string, Record<string, number>>;
 type QuestionToShow = {
@@ -15,7 +16,7 @@ type QuestionToShow = {
 };
 
 const filterQuestionsToShow = (
-  questions: SurveyPoll['questions']
+  questions: SurveyPoll['questions'],
 ): QuestionToShow[] =>
   [...questions.entries()]
     .filter(([, question]) => question.type === 'choice')
@@ -25,14 +26,11 @@ const filterQuestionsToShow = (
     }));
 
 const reduceQuestion = (question: SurveyPollChoiceQuestion) =>
-  question.choices.reduce(
-    (accQuestion, choice) => {
-      accQuestion[choice.value] = 0;
+  question.choices.reduce((accQuestion, choice) => {
+    accQuestion[choice.value] = 0;
 
-      return accQuestion;
-    },
-    {} as Record<string, number>
-  );
+    return accQuestion;
+  }, {} as Record<string, number>);
 
 const initiateResults = (questionsToShow: QuestionToShow[]) =>
   questionsToShow.reduce((acc: ReducedResults, { id, question }) => {
@@ -43,7 +41,7 @@ const initiateResults = (questionsToShow: QuestionToShow[]) =>
 
 const reduceResults = (
   results: SurveyResult[],
-  questionsToShow: QuestionToShow[]
+  questionsToShow: QuestionToShow[],
 ): ReducedResults => {
   const initialResults = initiateResults(questionsToShow);
 
@@ -64,7 +62,7 @@ const reduceResults = (
 
 export const useSurveyResults = (
   talkSubjectId?: string | string[],
-  conventionId?: string | string[]
+  conventionId?: string | string[],
 ) => {
   const [surveyPoll, setSurveyPoll] = useState<SurveyPoll | null>(null);
   const [results, setResults] = useState<ReducedResults>({});
@@ -83,7 +81,7 @@ export const useSurveyResults = (
     }
 
     const questionsToShow = filterQuestionsToShow(
-      surveyInfos.surveyPoll.questions
+      surveyInfos.surveyPoll.questions,
     );
 
     const path =

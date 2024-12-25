@@ -56,10 +56,10 @@ const asConventionTalk = ({
 
 const groupBySubjectId = (
   acc: TalkWithConventions[],
-  { convention, ...currentTalk }: FullTalk
+  { convention, ...currentTalk }: FullTalk,
 ) => {
   const index = acc.findIndex(
-    ({ subjectId }) => subjectId === currentTalk.subjectId
+    ({ subjectId }) => subjectId === currentTalk.subjectId,
   );
 
   if (index === -1) {

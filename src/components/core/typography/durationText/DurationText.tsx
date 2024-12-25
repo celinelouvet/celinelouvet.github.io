@@ -1,16 +1,17 @@
 import {
-  chakra,
+  type RecipeVariantProps,
   type TextProps,
-  defineRecipe,
-  RecipeVariantProps,
+  chakra,
   useRecipe,
-} from "@chakra-ui/react";
-import dayjs from "dayjs";
-import { type FC } from "react";
-import * as React from "react";
+} from '@chakra-ui/react';
+import dayjs from 'dayjs';
+import { type FC } from 'react';
+import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { type Period } from "@/data";
-import { useTranslation } from "@/app/i18n";
+import { type Period } from '@/data';
+
+import { durationTextRecipe } from './DurationText.recipe';
 
 type DurationTextVariantProps = RecipeVariantProps<
   typeof durationTextRecipe
@@ -19,7 +20,7 @@ type DurationTextVariantProps = RecipeVariantProps<
 };
 
 export interface DurationTextProps
-  extends Omit<TextProps, "children">,
+  extends Omit<TextProps, 'children'>,
     React.PropsWithChildren<DurationTextVariantProps> {}
 
 export const DurationText = React.forwardRef<
@@ -34,9 +35,9 @@ export const DurationText = React.forwardRef<
   const from = dayjs(period.from);
   const to = period.to ? dayjs(period.to) : dayjs();
 
-  const years = to.diff(from, "year");
+  const years = to.diff(from, 'year');
 
-  const months = to.diff(from, "month", true) - years * 12;
+  const months = to.diff(from, 'month', true) - years * 12;
   const roundedMonths = Math.round(months);
 
   return (
@@ -46,41 +47,16 @@ export const DurationText = React.forwardRef<
   );
 });
 
-export const durationTextRecipe = defineRecipe({
-  base: {
-    fontFamily: "Nunito",
-    color: "gray.500",
-
-    _dark: {
-      color: "gray.400",
-    },
-  },
-  variants: {
-    size: {
-      sm: {
-        fontSize: "sm",
-      },
-      xs: {
-        fontSize: "xs",
-      },
-    },
-  },
-  defaultVariants: {
-    size: "sm",
-  },
-});
-
 type DurationContentProps = {
   years: number;
   months: number;
 };
 
-const DurationContent: FC<DurationContentProps> = async ({ years, months }) => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { t } = await useTranslation("fr", "common", { keyPrefix: "dates" });
+const DurationContent: FC<DurationContentProps> = ({ years, months }) => {
+  const { t } = useTranslation('common', { keyPrefix: 'dates' });
 
-  const yearsText = t("years", { count: years });
-  const monthsText = t("months", { count: months });
+  const yearsText = t('years', { count: years });
+  const monthsText = t('months', { count: months });
 
   if (years > 0 && months === 0) {
     return <>{yearsText}</>;

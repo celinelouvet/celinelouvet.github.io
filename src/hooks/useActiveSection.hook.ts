@@ -1,20 +1,20 @@
-import { type Section, url2slugs } from "@/data";
+import { type Section, url2slugs } from '@/data';
 
 export const useActiveSection = (asPath: string): Section => {
   const root = keepRoot(asPath);
 
   if (!url2slugs.has(root)) {
     return {
-      href: "/",
-      slug: "home",
+      href: '/',
+      slug: 'home',
     };
   }
   const slug = url2slugs.get(root);
 
   if (!slug) {
     return {
-      href: "/",
-      slug: "home",
+      href: '/',
+      slug: 'home',
     };
   }
 

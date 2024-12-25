@@ -1,16 +1,16 @@
-import { Grid, GridItem, Heading } from "@chakra-ui/react";
-import { type Meta, type StoryObj } from "@storybook/react";
+import { Grid, GridItem, Heading } from '@chakra-ui/react';
+import { type Meta, type StoryObj } from '@storybook/react';
 
-import { Tag } from "@/components/ui/tag";
+import { Tag } from '@/components/ui/tag';
 
-import { H1Heading, h1HeadingRecipe } from "./H1Heading";
-import { H2Heading, h2HeadingRecipe } from "./H2Heading";
-import { H3Heading, h3HeadingRecipe } from "./H3Heading";
-import { H4Heading, h4HeadingRecipe } from "./H4Heading";
-import { H5Heading, h5HeadingRecipe } from "./H5Heading";
+import { H1Heading, h1HeadingRecipe } from './h1Heading';
+import { H2Heading, h2HeadingRecipe } from './h2Heading';
+import { H3Heading, h3HeadingRecipe } from './h3Heading';
+import { H4Heading, h4HeadingRecipe } from './h4Heading';
+import { H5Heading, h5HeadingRecipe } from './h5Heading';
 
 const meta = {
-  title: "Core/Typography",
+  title: 'Core/Typography',
   component: Heading,
 } satisfies Meta<typeof Heading>;
 

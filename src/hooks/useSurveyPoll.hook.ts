@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 
-import { type SurveyPoll, SurveyState } from "@/models";
-
 import { useSurveyInfos } from "./useSurveyInfos.hook";
+import { type SurveyPoll, SurveyState } from "../models";
 
 export const useSurveyPoll = (
   talkSubjectId?: string | string[],

@@ -1,13 +1,15 @@
-"use client";
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable @typescript-eslint/no-empty-object-type */
+'use client';
 
-import type { IconButtonProps } from "@chakra-ui/react";
-import { ClientOnly, IconButton, Skeleton } from "@chakra-ui/react";
-import { ThemeProvider, useTheme } from "next-themes";
-import type { ThemeProviderProps } from "next-themes";
-import * as React from "react";
-import { BsMoon, BsSun } from "react-icons/bs";
+import type { IconButtonProps } from '@chakra-ui/react';
+import { ClientOnly, IconButton, Skeleton } from '@chakra-ui/react';
+import { ThemeProvider, useTheme } from 'next-themes';
+import type { ThemeProviderProps } from 'next-themes';
+import * as React from 'react';
+import { LuMoon, LuSun } from 'react-icons/lu';
 
-export type ColorModeProviderProps = ThemeProviderProps;
+export interface ColorModeProviderProps extends ThemeProviderProps {}
 
 export function ColorModeProvider(props: ColorModeProviderProps) {
   return (
@@ -18,7 +20,7 @@ export function ColorModeProvider(props: ColorModeProviderProps) {
 export function useColorMode() {
   const { resolvedTheme, setTheme } = useTheme();
   const toggleColorMode = () => {
-    setTheme(resolvedTheme === "light" ? "dark" : "light");
+    setTheme(resolvedTheme === 'light' ? 'dark' : 'light');
   };
   return {
     colorMode: resolvedTheme,
@@ -27,17 +29,17 @@ export function useColorMode() {
   };
 }
 
-export function useColorModeVaBse<T>(light: T, dark: T) {
+export function useColorModeValue<T>(light: T, dark: T) {
   const { colorMode } = useColorMode();
-  return colorMode === "light" ? light : dark;
+  return colorMode === 'light' ? light : dark;
 }
 
 export function ColorModeIcon() {
   const { colorMode } = useColorMode();
-  return colorMode === "light" ? <BsSun /> : <BsMoon />;
+  return colorMode === 'light' ? <LuSun /> : <LuMoon />;
 }
 
-type ColorModeButtonProps = Omit<IconButtonProps, "aria-label">;
+interface ColorModeButtonProps extends Omit<IconButtonProps, 'aria-label'> {}
 
 export const ColorModeButton = React.forwardRef<
   HTMLButtonElement,
@@ -55,8 +57,8 @@ export const ColorModeButton = React.forwardRef<
         {...props}
         css={{
           _icon: {
-            width: "5",
-            height: "5",
+            width: '5',
+            height: '5',
           },
         }}
       >

@@ -1,11 +1,10 @@
-import { useMemo } from "react";
-import { useTranslation } from "react-i18next";
+import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { type Resume, enResume, frResume } from "@/data";
-import { Languages } from "@/app/i18n";
+import { type Resume, enResume, frResume } from '@/data';
 
-const getResume = (language: Languages): Resume => {
-  if (language === "fr") {
+const getResume = (language: string): Resume => {
+  if (language === 'fr') {
     return frResume;
   }
   return enResume;
@@ -13,5 +12,5 @@ const getResume = (language: Languages): Resume => {
 
 export const useResume = () => {
   const { i18n } = useTranslation();
-  return useMemo(() => getResume(i18n.language as Languages), [i18n.language]);
+  return useMemo(() => getResume(i18n.language), [i18n.language]);
 };

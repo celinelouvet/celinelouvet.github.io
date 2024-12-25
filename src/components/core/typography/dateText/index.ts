@@ -1,1 +1,1 @@
-export { DateText } from "./DateText";
+export { DateText } from './DateText';

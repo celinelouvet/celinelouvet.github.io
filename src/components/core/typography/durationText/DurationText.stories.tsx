@@ -1,14 +1,15 @@
-import { Separator, Grid, GridItem, Stack, Text } from "@chakra-ui/react";
-import { type Meta, type StoryObj } from "@storybook/react";
+import { Grid, GridItem, Separator, Stack, Text } from '@chakra-ui/react';
+import { type Meta, type StoryObj } from '@storybook/react';
 
-import { DurationText, durationTextRecipe } from "./DurationText";
-import { H2Heading } from "../headings";
+import { DurationText } from './DurationText';
+import { durationTextRecipe } from './DurationText.recipe';
+import { H2Heading } from '../headings';
 
-const from = "2021-01-01";
-const to = "2022-04-25";
+const from = '2021-01-01';
+const to = '2022-04-25';
 
 const meta = {
-  title: "Core/Typography",
+  title: 'Core/Typography',
   component: DurationText,
   args: {
     period: { from },

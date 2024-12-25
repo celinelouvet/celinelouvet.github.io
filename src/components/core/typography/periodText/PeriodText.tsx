@@ -1,23 +1,24 @@
 import {
-  chakra,
+  type RecipeVariantProps,
   type TextProps,
-  defineRecipe,
-  RecipeVariantProps,
+  chakra,
   useRecipe,
-} from "@chakra-ui/react";
-import * as React from "react";
-import { type FC } from "react";
-import { useTranslation } from "react-i18next";
+} from '@chakra-ui/react';
+import * as React from 'react';
+import { type FC } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { type Period } from "@/data";
-import { DateText } from "../dateText";
+import { type Period } from '@/data';
+
+import { periodTextRecipe } from './PeriodText.recipe';
+import { DateText } from '../dateText';
 
 type PeriodTextVariantProps = RecipeVariantProps<typeof periodTextRecipe> & {
   period: Period;
 };
 
 export interface PeriodTextProps
-  extends Omit<TextProps, "children">,
+  extends Omit<TextProps, 'children'>,
     React.PropsWithChildren<PeriodTextVariantProps> {}
 
 export const PeriodText = React.forwardRef<HTMLSpanElement, PeriodTextProps>(
@@ -34,38 +35,14 @@ export const PeriodText = React.forwardRef<HTMLSpanElement, PeriodTextProps>(
         <ToComponent period={period} />
       </chakra.span>
     );
-  }
+  },
 );
 
-export const periodTextRecipe = defineRecipe({
-  base: {
-    fontFamily: "Nunito",
-    color: "gray.500",
-
-    _dark: {
-      color: "gray.400",
-    },
-  },
-  variants: {
-    size: {
-      sm: {
-        fontSize: "sm",
-      },
-      xs: {
-        fontSize: "xs",
-      },
-    },
-  },
-  defaultVariants: {
-    size: "sm",
-  },
-});
-
 const ToComponent: FC<PeriodTextProps> = ({ period }) => {
-  const { t } = useTranslation("common", { keyPrefix: "dates" });
+  const { t } = useTranslation('common', { keyPrefix: 'dates' });
 
   if (!period.to) {
-    return <chakra.span>{t("today")}</chakra.span>;
+    return <chakra.span>{t('today')}</chakra.span>;
   }
 
   return <DateText when={period.to} dateFormat="MMM YYYY" as="span" />;

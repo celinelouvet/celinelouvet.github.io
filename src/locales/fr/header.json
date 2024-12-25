@@ -1,0 +1,19 @@
+{
+  "languages": {
+    "title": "Langue",
+    "en": "English",
+    "fr": "Français"
+  },
+  "colorModes": {
+    "title": "Mode de couleur",
+    "dark": "Sombre",
+    "light": "Lumineux",
+    "system": "Système"
+  },
+  "nav": {
+    "home": "Accueil",
+    "resume": "CV",
+    "talks": "Conférences",
+    "blog": "Blog"
+  }
+}

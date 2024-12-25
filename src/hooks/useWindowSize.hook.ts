@@ -1,10 +1,8 @@
-'use client';
+import { type ForwardedRef, useEffect, useState } from "react";
 
-import { type ForwardedRef, useEffect, useState } from 'react';
+import { type WindowSize } from "./types";
 
-import { type WindowSize } from './types';
-
-export const useWindowSize = (ref: ForwardedRef<'div'>): WindowSize => {
+export const useWindowSize = (ref: ForwardedRef<"div">): WindowSize => {
   const [size, setSize] = useState({ width: 0, height: 0, ratio: 0 });
 
   useEffect(() => {
@@ -18,12 +16,12 @@ export const useWindowSize = (ref: ForwardedRef<'div'>): WindowSize => {
 
     handleResize();
 
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('orientationchange', handleResize);
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("orientationchange", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('orientationchange', handleResize);
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("orientationchange", handleResize);
     };
   }, [ref]);
 

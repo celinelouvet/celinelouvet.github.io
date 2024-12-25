@@ -1,12 +1,15 @@
-import * as React from "react";
-import { ChakraProvider, defaultSystem } from "@chakra-ui/react";
+import * as React from 'react';
+import { ChakraProvider, defaultSystem } from '@chakra-ui/react';
+import { withThemeByClassName } from '@storybook/addon-themes';
 import {
   Decorator,
-  StoryFn,
   type Parameters,
   type Preview,
-} from "@storybook/react";
-import { withThemeByClassName } from "@storybook/addon-themes";
+  StoryFn,
+} from '@storybook/react';
+
+import '../src/lib/dayjs/config';
+import '../src/lib/i18n/config';
 
 const WithStoryThemeProvider = (Story: StoryFn) => (
   <ChakraProvider value={defaultSystem}>
@@ -17,8 +20,8 @@ const decorators: Decorator[] = [
   WithStoryThemeProvider,
 
   withThemeByClassName({
-    defaultTheme: "light",
-    themes: { light: "", dark: "dark" },
+    defaultTheme: 'light',
+    themes: { light: '', dark: 'dark' },
   }),
 ];
 

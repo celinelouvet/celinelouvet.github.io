@@ -1,13 +1,13 @@
-import { type TalkSubject } from "@/data";
+import { type TalkSubject } from '@/data';
+
+import { useResume } from './useResume.hook';
 import {
   type SurveyByConvention,
   type SurveyPoll,
   SurveyState,
-} from "@/models";
+} from '../models';
 
-import { useResume } from "./useResume.hook";
-
-const defaultSurveyId = "default";
+const defaultSurveyId = 'default';
 const emptySurvey = {
   surveyId: null,
   surveyPoll: null,
@@ -47,7 +47,7 @@ const getState = (survey?: SurveyByConvention): SurveyState => {
 
 export const useSurveyInfos = (
   talkSubjectId?: string | string[],
-  conventionId?: string | string[]
+  conventionId?: string | string[],
 ): {
   surveyId: string | null;
   surveyPoll: SurveyPoll | null;
@@ -65,7 +65,7 @@ export const useSurveyInfos = (
   }
 
   const { survey: surveyPoll } = talkSubjects.get(
-    parsedTalkSubjectId
+    parsedTalkSubjectId,
   ) as TalkSubject;
 
   if (!surveyPoll) {
@@ -81,7 +81,7 @@ export const useSurveyInfos = (
   }
 
   const survey = surveyPoll.surveys.find(
-    ({ name }) => name === parsedConventionId
+    ({ name }) => name === parsedConventionId,
   );
 
   return {

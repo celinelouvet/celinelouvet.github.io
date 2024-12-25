@@ -1,15 +1,16 @@
-import { Grid, GridItem, Text } from "@chakra-ui/react";
-import { type Meta, type StoryObj } from "@storybook/react";
+import { Grid, GridItem, Text } from '@chakra-ui/react';
+import { type Meta, type StoryObj } from '@storybook/react';
 
-import { DateText, dateTextRecipe } from "./DateText";
-import { H2Heading } from "../headings";
+import { DateText } from './DateText';
+import { dateTextRecipe } from './DateText.recipe';
+import { H2Heading } from '../headings';
 
 const meta = {
-  title: "Core/Typography",
+  title: 'Core/Typography',
   component: DateText,
   args: {
-    when: "2023/07/31",
-    dateFormat: "MMMM D, YYYY",
+    when: '2023/07/31',
+    dateFormat: 'MMMM D, YYYY',
   },
 } satisfies Meta<typeof DateText>;
 

@@ -19,7 +19,7 @@ export const useSortByConventions = ({
   talkSubjects,
 }: HookType) => {
   const allConventionTalks = talks.map((talk) =>
-    asConventionTalk({ talk, conventions, talkSubjects })
+    asConventionTalk({ talk, conventions, talkSubjects }),
   );
 
   const alreadyDoneTalks = allConventionTalks

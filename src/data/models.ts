@@ -1,4 +1,4 @@
-import { type SurveyPoll } from '@/models';
+import { type SurveyPoll } from "../models";
 
 export type Certification = {
   topic: string;
@@ -46,7 +46,7 @@ export type Project = {
   description: string;
 };
 
-export type RemoteType = 'FULLTIME' | 'HYBRID' | 'NONE';
+export type RemoteType = "FULLTIME" | "HYBRID" | "NONE";
 export type Remote = {
   type: RemoteType;
   where: string;

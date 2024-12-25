@@ -1,11 +1,12 @@
 import {
-  chakra,
+  type RecipeVariantProps,
   type TextProps,
-  RecipeVariantProps,
-  defineRecipe,
+  chakra,
   useRecipe,
-} from "@chakra-ui/react";
-import * as React from "react";
+} from '@chakra-ui/react';
+import * as React from 'react';
+
+import { timeTextRecipe } from './TimeText.recipe';
 
 type TimeTextVariantProps = RecipeVariantProps<typeof timeTextRecipe> & {
   hours?: number;
@@ -14,7 +15,7 @@ type TimeTextVariantProps = RecipeVariantProps<typeof timeTextRecipe> & {
 };
 
 export interface TimeTextProps
-  extends Omit<TextProps, "children">,
+  extends Omit<TextProps, 'children'>,
     React.PropsWithChildren<TimeTextVariantProps> {}
 
 export const TimeText = React.forwardRef<HTMLSpanElement, TimeTextProps>(
@@ -25,25 +26,17 @@ export const TimeText = React.forwardRef<HTMLSpanElement, TimeTextProps>(
     const styles = recipe();
 
     const pad = (value?: number) =>
-      value !== undefined ? value.toString().padStart(2, "0") : "";
+      value !== undefined ? value.toString().padStart(2, '0') : '';
 
     const text = [hours, minutes, seconds]
       .filter((value) => value !== undefined)
       .map((value) => pad(value))
-      .join(":");
+      .join(':');
 
     return (
       <chakra.span css={styles} {...restProps} ref={ref}>
         {text}
       </chakra.span>
     );
-  }
-);
-
-export const timeTextRecipe = defineRecipe({
-  base: {
-    fontFamily: "Noto Mono",
-    fontWeight: "400",
-    textAlign: "center",
   },
-});
+);
