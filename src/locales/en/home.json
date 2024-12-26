@@ -1,0 +1,29 @@
+{
+  "biography": {
+    "title": "Biography",
+    "seeDetails": "See my full CV"
+  },
+  "socials": {
+    "title": "Social networks"
+  },
+  "links": {
+    "audio": "Audio",
+    "program": "Program",
+    "slides": "Slides",
+    "video": "Video"
+  },
+  "talks": {
+    "toCome": "Incoming talks",
+    "alreadyDone": "Talks",
+    "seeAll": "See all talks",
+    "talk": {
+      "date": "MMM D YYYY",
+      "seeDescription": "See description"
+    }
+  },
+  "podcasts": {
+    "title": "Podcasts",
+    "seeAll": "See all podcasts",
+    "date": "MMM D YYYY"
+  }
+}

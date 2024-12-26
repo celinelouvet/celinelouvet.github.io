@@ -1,0 +1,26 @@
+{
+  "talkDetails": {
+    "date": "MMM D YYYY",
+    "audio": "Audio",
+    "program": "Program",
+    "slides": "Slides",
+    "video": "Video"
+  },
+  "moreLessCollapsible": {
+    "more": "View more",
+    "less": "View less"
+  },
+  "survey": {
+    "error": "An error occurred.",
+    "noSurvey": "No survey available for this talk.",
+    "optional": "Optional",
+    "private": "Your answer will be kept private.",
+    "submit": "Submit",
+    "thanks": "Thank you for answering!",
+    "allVotes": "All votes cast:",
+    "notYetOpened": "This survey is not yet open.",
+    "closed": "This survey is closed.",
+    "results": "Results"
+  },
+  "blog": "Blog"
+}

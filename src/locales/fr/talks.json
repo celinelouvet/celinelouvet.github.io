@@ -1,0 +1,21 @@
+{
+  "subjects": "Sujets disponibles pour CFP",
+  "toCome": "Conférences à venir",
+  "alreadyDone": "Conférences & Interviews",
+  "notFound": "Sujet non trouvé",
+  "talk": {
+    "date": "D MMM YYYY",
+    "more": "Voir plus",
+    "less": "Voir moins",
+
+    "surveys": {
+      "title": "Sondages",
+      "allResults": "Voir tous les résultats",
+      "survey": "Sondage",
+      "results": "Résultats",
+      "notAvailable": "Non disponible"
+    }
+  },
+
+  "availableForCfp": "Disponible pour CFP"
+}

@@ -1,0 +1,49 @@
+import { type WindowSize } from './types';
+
+const defaultFontSize = 18;
+const defaultContentHeight = 450;
+const ratio = 16 / 9;
+
+const defaultConfig = {
+  lineHeight: '2em',
+  fontSize: defaultFontSize,
+  height: defaultContentHeight,
+  width: defaultContentHeight * ratio,
+  marginLeft: 0,
+  marginTop: 0,
+};
+
+export const useSlideSize = (windowSize: WindowSize) =>
+  windowSize.ratio > ratio
+    ? screenWiderThanSlide(windowSize)
+    : screenHigherThanSlide(windowSize);
+
+const screenWiderThanSlide = ({ height, width }: WindowSize) => {
+  const fontSize = (defaultFontSize * height) / defaultContentHeight;
+  const newWidth = height * ratio;
+  const marginLeft = (width - newWidth) / 2;
+
+  return {
+    ...defaultConfig,
+
+    height,
+    width: newWidth,
+    fontSize,
+    marginLeft,
+  };
+};
+
+const screenHigherThanSlide = ({ height, width }: WindowSize) => {
+  const newHeight = width / ratio;
+  const fontSize = (defaultFontSize * newHeight) / defaultContentHeight;
+  const marginTop = (height - newHeight) / 2;
+
+  return {
+    ...defaultConfig,
+
+    width,
+    height: newHeight,
+    fontSize,
+    marginTop,
+  };
+};
