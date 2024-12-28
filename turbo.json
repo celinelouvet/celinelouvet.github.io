@@ -1,17 +1,21 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "envMode": "loose",
   "tasks": {
+    "clean": {},
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": ["dist/**"]
     },
-    "lint": {},
-    "lint:fix": {},
+    "typecheck": {},
     "dev": {
       "cache": false,
       "persistent": true
     },
+    "lint": {},
+    "lint:fix": {},
+    "appengine:prepare": {},
     "test": {}
   }
 }

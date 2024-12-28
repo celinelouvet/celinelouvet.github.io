@@ -13,7 +13,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "tsc --noEmit",
-    "test": "jest"
+    "test": "jest",
+    "clean": "rm -rf dist"
   },
   "jest": {
     "preset": "@repo/jest-presets/node"

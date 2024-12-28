@@ -1,0 +1,12 @@
+{
+  "name": "celinelouvet-resume",
+  "version": "3.0.0",
+  "private": true,
+  "engines": {
+    "yarn": ">=1.22"
+  },
+  "scripts": {
+    "start": "node dist/index.js",
+    "appengine:prepare": "node appengine.prepare.mjs"
+  }
+}

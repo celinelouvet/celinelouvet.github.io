@@ -1,4 +1,4 @@
-runtime: nodejs20
+runtime: nodejs22
 
 instance_class: F2
 
@@ -12,6 +12,6 @@ handlers:
 
 env_variables:
   HOST: '0.0.0.0'
-  NEXT_PUBLIC_BASE_URL: 'https://celine.louvet.me'
-  NEXT_PUBLIC_API_BASE_URL: 'https://celine.louvet.me/api'
+  VITE_BASE_URL: 'https://celine.louvet.me'
+  VITE_API_BASE_URL: 'https://celine.louvet.me/api'
   VERSION_NAME: 'prod'

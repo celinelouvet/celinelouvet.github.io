@@ -20,7 +20,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
     "test": "turbo run test",
-    "typecheck": "turbo run typecheck"
+    "typecheck": "turbo run typecheck",
+    "appengine:prepare": "turbo run appengine:prepare --"
   },
   "devDependencies": {
     "prettier": "3.4.2",

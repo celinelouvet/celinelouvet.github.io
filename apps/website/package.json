@@ -1,33 +1,22 @@
 {
   "name": "website",
+  "version": "0.0.0",
   "private": true,
-  "version": "3.0.0",
-  "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/celinelouvet/celinelouvet.github.io.git"
-  },
-  "author": {
-    "name": "Céline Louvet",
-    "email": "celine@louvet.me",
-    "url": "https://github.com/celinelouvet"
-  },
-  "contributors": [],
-  "license": "MIT",
   "engines": {
-    "npm": "please-use-yarn",
     "yarn": ">=1.22"
   },
+  "type": "module",
   "scripts": {
     "dev": "vite",
+    "clean": "rm -rf dist",
     "aliases": "tsc-alias -p tsconfig.json",
+    "typecheck": "tsc --noEmit",
     "build": "tsc -b && tsc-alias -p tsconfig.json && vite build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "appengine:prepare": "node --loader ts-node/esm appengine.prepare.mts"
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@chakra-ui/react": "3.2.3",

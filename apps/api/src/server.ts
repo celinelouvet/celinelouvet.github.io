@@ -12,9 +12,12 @@ export const createServer = (): Express => {
   app.use(json());
   app.use(cors());
 
+  //@ts-expect-error - This is a test route
   app.get('/message/:name', (req, res) => {
     return res.json({ message: `hello ${req.params.name}` });
   });
+
+  //@ts-expect-error - This is a test route
   app.get('/status', (_, res) => {
     return res.json({ ok: true });
   });

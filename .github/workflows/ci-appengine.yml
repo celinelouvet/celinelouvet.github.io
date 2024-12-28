@@ -23,7 +23,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [20]
+        node: [22]
 
     permissions:
       contents: read
@@ -50,25 +50,42 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
-      - name: Clean
-        run: rm -fr dist
-
       - name: Install dependencies
         run: yarn install
 
-      - name: Build
-        run: yarn build
+      - name: Clean
+        run: yarn clean
+
+      - name: Build packages
+        run: |
+          yarn turbo @repo/eslint-config#build
+          yarn turbo @repo/jest-presets#build
+          yarn turbo @repo/logger#build
+          yarn turbo @repo/typescript-config#build
+
+      - name: Build apps
+        run: |
+          yarn turbo api#build
+          yarn turbo website#build
+
+      - name: Typechecks
+        run: yarn typecheck
 
       - name: Lint code and types
         run: yarn lint
 
       - name: Prepare for AppEngine
-        run: yarn appengine:prepare
+        run: yarn appengine:prepare --env=staging --version=${{ env.VERSION }}
 
-      - name: Prepare appengine file
+      - name: Prepare dist
         run: |
-          cat app.staging.yaml | sed "s+__VERSION_NAME__+${{ env.VERSION }}+g" > app.yaml
-          cat app.yaml
+          mkdir -p apps/deploy/dist
+          cp -r apps/api/dist/* apps/deploy/dist
+          cp -r apps/website/dist/* apps/deploy/dist
+
+      - name: Show deploy folder
+        run: |
+          ls -l apps/deploy
 
       - id: auth
         name: Auth to GCP
@@ -79,11 +96,14 @@ jobs:
       - id: deploy
         name: Deploy to GCP AppEngine
         uses: google-github-actions/deploy-appengine@v2
+        env:
+          CLOUDSDK_APP_CLOUD_BUILD_TIMEOUT: 1800 # 30 minutes
         with:
           project_id: ${{ vars.GCP_PROJECT }}
           deliverables: app.yaml
           promote: false
           version: ${{ env.VERSION }}
+          working_directory: apps/deploy
 
       - name: Test deployed version
         run: curl --silent --head "${{ steps.deploy.outputs.version_url }}/test"
