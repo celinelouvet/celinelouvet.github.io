@@ -1,0 +1,10 @@
+{
+  "extends": "@repo/typescript-config/base.json",
+  "compilerOptions": {
+    "lib": ["ES2022"],
+    "outDir": "./dist"
+  },
+  "exclude": ["node_modules"],
+  "include": ["."],
+  "tsBuildInfoFile": "./.tsconfig.tsbuildinfo"
+}
