@@ -37,56 +37,49 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Cache node modules
+      - name: Cache turbo build setup
         uses: actions/cache@v4
-        env:
-          cache-name: cache-node-modules
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          path: .turbo
+          key: ${{ runner.os }}-turbo-${{ github.sha }}
           restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-
-      - name: Clean
-        run: rm -fr dist
+            ${{ runner.os }}-turbo-
 
       - name: Install dependencies
         run: yarn install
 
-      - name: Build
-        run: yarn build
+      - name: Clean
+        run: yarn clean
+
+      - name: Build packages
+        run: |
+          yarn turbo @repo/eslint-config#build
+          yarn turbo @repo/jest-presets#build
+          yarn turbo @repo/logger#build
+          yarn turbo @repo/typescript-config#build
+
+      - name: Build apps
+        run: |
+          yarn turbo api#build
+          yarn turbo website#build
+
+      - name: Typechecks
+        run: yarn typecheck
 
       - name: Lint code and types
         run: yarn lint
 
-      - name: Prepare for AppEngine
-        run: yarn appengine:prepare
-
-      - name: Prepare appengine env file
-        run: cp app.prod.yaml app.yaml
-
-      - id: auth
-        name: Auth to GCP
-        uses: google-github-actions/auth@v1
-        with:
-          credentials_json: ${{ secrets.GCP_SA_KEY }}
-
       - id: deploy
         name: Deploy to GCP AppEngine
-        uses: google-github-actions/deploy-appengine@v1
+        uses: ./.github/actions/turbo-deploy-gae
         with:
-          project_id: ${{ vars.GCP_PROJECT }}
-          deliverables: app.yaml
-          promote: false
-          version: ${{ env.VERSION }}
-
-      - name: Test deployed version
-        run: curl --silent --head "${{ steps.deploy.outputs.version_url }}/test"
-
-      - name: Output version URL
-        run: echo "url=${{ steps.deploy.outputs.version_url }}" >> "$GITHUB_OUTPUT"
+          apps_directory: apps
+          target_app: website
+          env: prod
+          test_endpoint: /test
+          gcloud_project_id: ${{ vars.GCP_PROJECT }}
+          gcloud_credentials_json: ${{ secrets.GCP_SA_KEY }}
+          should_promote: false
 
     outputs:
       versionUrl: ${{ steps.deploy.outputs.version_url }}

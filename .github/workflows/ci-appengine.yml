@@ -38,17 +38,13 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Cache node modules
+      - name: Cache turbo build setup
         uses: actions/cache@v4
-        env:
-          cache-name: cache-node-modules
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          path: .turbo
+          key: ${{ runner.os }}-turbo-${{ github.sha }}
           restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+            ${{ runner.os }}-turbo-
 
       - name: Install dependencies
         run: yarn install
@@ -74,39 +70,17 @@ jobs:
       - name: Lint code and types
         run: yarn lint
 
-      - name: Prepare for AppEngine
-        run: yarn appengine:prepare --env=staging --version=${{ env.VERSION }}
-
-      - name: Prepare dist
-        run: |
-          mkdir -p apps/deploy/dist
-          cp -r apps/api/dist/* apps/deploy/dist
-          cp -r apps/website/dist/* apps/deploy/dist
-
-      - name: Show deploy folder
-        run: |
-          ls -l apps/deploy
-
-      - id: auth
-        name: Auth to GCP
-        uses: google-github-actions/auth@v2
-        with:
-          credentials_json: ${{ secrets.GCP_SA_KEY }}
-
       - id: deploy
         name: Deploy to GCP AppEngine
-        uses: google-github-actions/deploy-appengine@v2
-        env:
-          CLOUDSDK_APP_CLOUD_BUILD_TIMEOUT: 1800 # 30 minutes
+        uses: ./.github/actions/turbo-deploy-gae
         with:
-          project_id: ${{ vars.GCP_PROJECT }}
-          deliverables: app.yaml
-          promote: false
-          version: ${{ env.VERSION }}
-          working_directory: apps/deploy
-
-      - name: Test deployed version
-        run: curl --silent --head "${{ steps.deploy.outputs.version_url }}/test"
+          apps_directory: apps
+          target_app: website
+          env: staging
+          test_endpoint: /test
+          gcloud_project_id: ${{ vars.GCP_PROJECT }}
+          gcloud_credentials_json: ${{ secrets.GCP_SA_KEY }}
+          should_promote: false
 
     outputs:
       versionUrl: ${{ steps.deploy.outputs.version_url }}

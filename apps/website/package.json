@@ -8,6 +8,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "start": "vite",
     "clean": "rm -rf dist",
     "aliases": "tsc-alias -p tsconfig.json",
     "typecheck": "tsc --noEmit",

@@ -1,0 +1,105 @@
+name: 'Deploy TurboRepo website to Google App Engine'
+description: 'Deploy TurboRepo Apps to Google App Engine using a flexible nodejs runtime and yarn.'
+author: Céline Louvet
+branding:
+  color: 'purple'
+  icon: 'briefcase'
+
+inputs:
+  gcloud_project_id:
+    description: ID of the Google Cloud project.
+    required: true
+
+  gcloud_credentials_json:
+    description: Service account key used to authenticate with Google Cloud.
+    required: true
+
+  env:
+    description: staging or prod
+    required: true
+
+  should_promote:
+    description: Whether to promote the app and route all traffic to the new version.
+    required: false
+    default: 'false'
+
+  target_app:
+    description: App name to deploy
+    required: true
+
+  apps_directory:
+    description: Folder name containing the apps
+    default: apps
+    required: false
+
+  test_endpoint:
+    description: This endpoint will be called (GET) after deployment. For example, "/test"
+    required: true
+
+outputs:
+  version_url:
+    description: URL of the new version deployed
+    value: ${{ steps.deploy.outputs.version_url }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Checks
+      shell: bash
+      run: node ${{ github.action_path }}/src/checks.mjs --folder=${{ github.workspace }}
+
+    - name: Define working directory
+      shell: bash
+      run: echo "TARGET_DIRECTORY=${{ inputs.apps_directory }}/${{ inputs.target_app }}" >> $GITHUB_ENV
+
+    - name: Define package name
+      shell: bash
+      run: echo "PACKAGE_NAME=$(jq -r '.name' $TARGET_DIRECTORY/package.json)" >> $GITHUB_ENV
+
+    - name: Build target app
+      shell: bash
+      run: yarn turbo run build --filter ${{ inputs.target_app }}
+
+    - name: Simplify monorepo
+      shell: bash
+      run: yarn turbo prune --scope=$PACKAGE_NAME
+
+    - name: Overwrite package.json
+      shell: bash
+      run: node ${{ github.action_path }}/src/overwritePackages.mjs --folder=${{ github.workspace }}
+
+    - name: Prepare .gcloudignore
+      shell: bash
+      run: node ${{ github.action_path }}/src/createGcloudIgnore.mjs --folder=${{ github.workspace }}
+
+    - name: Prepare app.yaml
+      shell: bash
+      run: node ${{ github.action_path }}/src/createAppFile.mjs --folder=${{ github.workspace }} --env=staging --version=${{ github.ref_name }}
+
+    - name: Set up Google Cloud SDK
+      uses: google-github-actions/setup-gcloud@v2
+      with:
+        project_id: ${{ inputs.gcloud_project_id }}
+
+    - name: Authenticate with Google Cloud
+      uses: google-github-actions/auth@v2
+      with:
+        project_id: ${{ inputs.gcloud_project_id }}
+        credentials_json: ${{ inputs.gcloud_credentials_json }}
+
+    - id: deploy
+      name: Deploy to GCP AppEngine
+      uses: google-github-actions/deploy-appengine@v2
+      env:
+        CLOUDSDK_APP_CLOUD_BUILD_TIMEOUT: 1800 # 30 minutes
+      with:
+        project_id: ${{ inputs.gcloud_project_id }}
+        deliverables: app.yaml
+        promote: false
+        version: ${{ github.ref_name }}
+        working_directory: out
+
+    - id: test
+      name: Test deployed version
+      run: node ${{ github.action_path }}/src/testDeployment.mjs --testUrl=${{ steps.deploy.outputs.version_url }}${{ inputs.test_endpoint }}
+      shell: bash

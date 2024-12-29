@@ -9,6 +9,10 @@
       "outputs": ["dist/**"]
     },
     "typecheck": {},
+    "start": {
+      "cache": false,
+      "persistent": false
+    },
     "dev": {
       "cache": false,
       "persistent": true
