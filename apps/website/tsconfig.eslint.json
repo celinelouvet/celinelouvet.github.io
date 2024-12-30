@@ -1,6 +1,12 @@
 {
   "extends": "./tsconfig.json",
 
-  "include": ["src", "eslint.config.mjs", "vite.config.mts"],
+  "include": [
+    "src",
+    "server",
+    "eslint.config.mjs",
+    "tsup.config.ts",
+    "vite.config.mts"
+  ],
   "exclude": [".storybook"]
 }

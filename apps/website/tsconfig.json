@@ -2,7 +2,7 @@
   "extends": "@repo/typescript-config/react-app.json",
 
   "exclude": ["node_modules"],
-  "include": ["."],
+  "include": ["src", "server"],
 
   "compilerOptions": {
     "rootDir": ".",

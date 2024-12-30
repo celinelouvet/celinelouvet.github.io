@@ -76,11 +76,6 @@ runs:
       shell: bash
       run: node ${{ github.action_path }}/src/createAppFile.mjs --folder=${{ github.workspace }} --env=staging --version=${{ github.ref_name }}
 
-    - name: Set up Google Cloud SDK
-      uses: google-github-actions/setup-gcloud@v2
-      with:
-        project_id: ${{ inputs.gcloud_project_id }}
-
     - name: Authenticate with Google Cloud
       uses: google-github-actions/auth@v2
       with:
