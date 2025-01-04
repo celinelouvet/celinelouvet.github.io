@@ -3,16 +3,14 @@ import { defineRecipe } from '@chakra-ui/react';
 export const dateTextRecipe = defineRecipe({
   base: {
     fontFamily: 'Nunito',
+    color: 'gray.500',
+
+    _dark: {
+      color: 'gray.400',
+    },
   },
   variants: {
-    visual: {
-      basic: {
-        color: 'gray.500',
-
-        _dark: {
-          color: 'gray.400',
-        },
-      },
+    variant: {
       slide: {
         fontSize: '1em',
       },
@@ -34,6 +32,5 @@ export const dateTextRecipe = defineRecipe({
   },
   defaultVariants: {
     size: 'sm',
-    visual: 'basic',
   },
 });

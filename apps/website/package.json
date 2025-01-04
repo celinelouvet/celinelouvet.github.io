@@ -12,7 +12,8 @@
     "clean": "rm -rf dist",
     "aliases": "tsc-alias -p tsconfig.json",
     "typecheck": "tsc --noEmit",
-    "build": "yarn build:types && yarn build:app && yarn build:server",
+    "build": "yarn build:theme && yarn build:types && yarn build:app && yarn build:server",
+    "build:theme": "npx @chakra-ui/cli typegen ./src/theme/system.config.ts",
     "build:types": "tsc -b && tsc-alias -p tsconfig.json",
     "build:app": "vite build",
     "build:server": "tsup",
@@ -23,7 +24,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@chakra-ui/react": "3.2.3",
+    "@chakra-ui/react": "3.8.0",
     "@emotion/react": "11.14.0",
     "@fontsource/inter": "5.1.1",
     "@fontsource/noto-mono": "5.1.0",

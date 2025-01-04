@@ -3,14 +3,12 @@ import { defineRecipe } from '@chakra-ui/react';
 export const h1HeadingRecipe = defineRecipe({
   base: {
     fontFamily: 'PT Sans Narrow',
+    textTransform: 'uppercase',
+    fontWeight: '400',
+    paddingBottom: '3',
   },
   variants: {
-    visual: {
-      basic: {
-        textTransform: 'uppercase',
-        fontWeight: '400',
-        paddingBottom: '3',
-      },
+    variant: {
       slide: {
         fontWeight: '700',
         paddingBottom: '4',
@@ -31,6 +29,5 @@ export const h1HeadingRecipe = defineRecipe({
   },
   defaultVariants: {
     size: 'md',
-    visual: 'basic',
   },
 });

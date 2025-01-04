@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ChakraProvider, defaultSystem } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import {
   Decorator,
@@ -8,11 +8,13 @@ import {
   StoryFn,
 } from '@storybook/react';
 
+import { customSystem } from '../src/theme';
+
 import '../src/lib/dayjs/config';
 import '../src/lib/i18n/config';
 
 const WithStoryThemeProvider = (Story: StoryFn) => (
-  <ChakraProvider value={defaultSystem}>
+  <ChakraProvider value={customSystem}>
     <Story />
   </ChakraProvider>
 );
@@ -26,7 +28,7 @@ const decorators: Decorator[] = [
 
 const parameters: Parameters = {
   chakra: {
-    system: defaultSystem,
+    system: customSystem,
   },
 
   parameters: {
