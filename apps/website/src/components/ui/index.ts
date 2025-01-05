@@ -8,4 +8,3 @@ export * from './provider';
 export * from './radio';
 export * from './slider';
 export * from './tag';
-export * from './tooltip';
