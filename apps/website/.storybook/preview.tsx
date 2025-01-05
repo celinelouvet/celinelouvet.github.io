@@ -7,6 +7,7 @@ import {
   type Preview,
   StoryFn,
 } from '@storybook/react';
+import { MemoryRouter } from 'react-router-dom';
 
 import { customSystem } from '../src/theme';
 
@@ -18,12 +19,19 @@ const WithStoryThemeProvider = (Story: StoryFn) => (
     <Story />
   </ChakraProvider>
 );
+const WithRouter = (Story: StoryFn) => (
+  <MemoryRouter initialEntries={['/']}>
+    <Story />
+  </MemoryRouter>
+);
+
 const decorators: Decorator[] = [
   withThemeByClassName({
     defaultTheme: 'light',
     themes: { light: '', dark: 'dark' },
   }),
   WithStoryThemeProvider,
+  WithRouter,
 ];
 
 const parameters: Parameters = {

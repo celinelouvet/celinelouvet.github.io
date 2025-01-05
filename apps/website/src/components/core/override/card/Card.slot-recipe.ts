@@ -5,21 +5,17 @@ export const cardSlotRecipe = defineSlotRecipe({
 
   variants: {
     variant: {
-      // TODO see if should use `subtle` instead of `filled`
-      filled: {
+      subtle: {
         root: {
           backgroundColor: { base: 'brand.900', _dark: 'brand.200' },
-        },
-        header: {
-          paddingBottom: 0,
-        },
-        body: {
-          paddingTop: 0,
         },
       },
       outline: {
         header: {
           backgroundColor: { base: 'brand.900', _dark: 'brand.200' },
+        },
+        body: {
+          backgroundColor: { base: 'white', _dark: 'brand.100' },
         },
       },
     },

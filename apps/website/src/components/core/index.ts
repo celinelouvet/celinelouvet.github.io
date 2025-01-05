@@ -4,13 +4,11 @@ import { typographyRecipes } from './typography';
 
 export * from './disclosure';
 export * from './feedback';
+export * from './navigation';
 export * from './override';
 export * from './typography';
 
-export const coreRecipes = {
-  ...overrideRecipes,
-  ...typographyRecipes,
-};
+export const coreRecipes = { ...overrideRecipes, ...typographyRecipes };
 
 export const coreSlotRecipes = {
   ...feedbackSlotRecipes,
