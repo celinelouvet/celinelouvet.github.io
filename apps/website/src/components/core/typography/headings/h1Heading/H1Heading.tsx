@@ -16,10 +16,10 @@ export interface H1HeadingProps
 
 export const H1Heading = React.forwardRef<HTMLHeadingElement, H1HeadingProps>(
   function H1Heading(props, ref) {
-    const { visual, size, children, ...restProps } = props;
+    const { children, ...restProps } = props;
 
     const recipe = useRecipe({ recipe: h1HeadingRecipe });
-    const styles = recipe({ visual, size });
+    const styles = recipe(props);
 
     return (
       <chakra.h1 css={styles} {...restProps} ref={ref}>

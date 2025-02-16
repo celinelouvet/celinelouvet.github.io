@@ -41,4 +41,11 @@ export const reactConfig = tseslint.config(
       sourceType: 'module',
     },
   },
+
+  {
+    files: ['**/*.tsx'],
+    rules: {
+      'import-x/no-named-as-default-member': 'off',
+    },
+  },
 );

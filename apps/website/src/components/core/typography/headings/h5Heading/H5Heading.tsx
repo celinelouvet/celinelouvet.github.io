@@ -16,10 +16,10 @@ export interface H5HeadingProps
 
 export const H5Heading = React.forwardRef<HTMLHeadingElement, H5HeadingProps>(
   function H5Heading(props, ref) {
-    const { size, children, ...restProps } = props;
+    const { children, ...restProps } = props;
 
     const recipe = useRecipe({ recipe: h5HeadingRecipe });
-    const styles = recipe({ size });
+    const styles = recipe(props);
 
     return (
       <chakra.h5 css={styles} {...restProps} ref={ref}>

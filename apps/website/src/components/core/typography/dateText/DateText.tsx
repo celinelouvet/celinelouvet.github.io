@@ -20,10 +20,10 @@ export interface DateTextProps
 
 export const DateText = React.forwardRef<HTMLSpanElement, DateTextProps>(
   function DateText(props, ref) {
-    const { dateFormat, size, visual, when, ...restProps } = props;
+    const { dateFormat, when, ...restProps } = props;
 
     const recipe = useRecipe({ recipe: dateTextRecipe });
-    const styles = recipe({ visual, size });
+    const styles = recipe(props);
 
     return (
       <chakra.span css={styles} {...restProps} ref={ref}>

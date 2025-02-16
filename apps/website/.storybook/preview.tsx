@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ChakraProvider, defaultSystem } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import {
   Decorator,
@@ -7,27 +7,36 @@ import {
   type Preview,
   StoryFn,
 } from '@storybook/react';
+import { MemoryRouter } from 'react-router-dom';
+
+import { customSystem } from '../src/theme';
 
 import '../src/lib/dayjs/config';
 import '../src/lib/i18n/config';
 
 const WithStoryThemeProvider = (Story: StoryFn) => (
-  <ChakraProvider value={defaultSystem}>
+  <ChakraProvider value={customSystem}>
     <Story />
   </ChakraProvider>
 );
-const decorators: Decorator[] = [
-  WithStoryThemeProvider,
+const WithRouter = (Story: StoryFn) => (
+  <MemoryRouter initialEntries={['/']}>
+    <Story />
+  </MemoryRouter>
+);
 
+const decorators: Decorator[] = [
   withThemeByClassName({
     defaultTheme: 'light',
     themes: { light: '', dark: 'dark' },
   }),
+  WithStoryThemeProvider,
+  WithRouter,
 ];
 
 const parameters: Parameters = {
   chakra: {
-    defaultSystem,
+    system: customSystem,
   },
 
   parameters: {

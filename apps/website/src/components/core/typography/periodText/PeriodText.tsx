@@ -23,10 +23,10 @@ export interface PeriodTextProps
 
 export const PeriodText = React.forwardRef<HTMLSpanElement, PeriodTextProps>(
   function PeriodText(props, ref) {
-    const { period, size, ...restProps } = props;
+    const { period, ...restProps } = props;
 
     const recipe = useRecipe({ recipe: periodTextRecipe });
-    const styles = recipe({ size });
+    const styles = recipe(props);
 
     return (
       <chakra.span css={styles} {...restProps} ref={ref}>

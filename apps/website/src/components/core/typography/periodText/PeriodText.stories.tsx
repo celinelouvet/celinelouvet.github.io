@@ -1,8 +1,7 @@
-import { Grid, GridItem, Separator, Stack, Text } from '@chakra-ui/react';
+import { For, Grid, GridItem, Separator, Stack, Text } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
 import { PeriodText } from './PeriodText';
-import { periodTextRecipe } from './PeriodText.recipe';
 import { H2Heading } from '../headings';
 
 const from = '2021-01-01';
@@ -16,8 +15,7 @@ const meta = {
   },
 } satisfies Meta<typeof PeriodText>;
 
-const sizes = periodTextRecipe.variants!.size;
-const keys = Object.keys(sizes) as Array<keyof typeof sizes>;
+const sizes = ['xs', 'sm'] as const;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -49,16 +47,18 @@ export const PeriodTexts: Story = {
         <GridItem colSpan={2}>
           <H2Heading>Sizes</H2Heading>
         </GridItem>
-        {keys.map((key) => (
-          <>
-            <GridItem>
-              <Text fontWeight="700">{sizes[key].fontSize}</Text>
-            </GridItem>
-            <GridItem>
-              <PeriodText period={period} size={key} />
-            </GridItem>
-          </>
-        ))}
+        <For each={sizes}>
+          {(size) => (
+            <>
+              <GridItem>
+                <Text fontWeight="700">{size}</Text>
+              </GridItem>
+              <GridItem>
+                <PeriodText period={period} size={size} />
+              </GridItem>
+            </>
+          )}
+        </For>
       </Grid>
     </Stack>
   ),

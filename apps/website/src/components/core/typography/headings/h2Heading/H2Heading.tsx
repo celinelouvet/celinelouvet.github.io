@@ -16,10 +16,10 @@ export interface H2HeadingProps
 
 export const H2Heading = React.forwardRef<HTMLHeadingElement, H2HeadingProps>(
   function H2Heading(props, ref) {
-    const { visual, size, children, ...restProps } = props;
+    const { children, ...restProps } = props;
 
     const recipe = useRecipe({ recipe: h2HeadingRecipe });
-    const styles = recipe({ visual, size });
+    const styles = recipe(props);
 
     return (
       <chakra.h2 css={styles} {...restProps} ref={ref}>

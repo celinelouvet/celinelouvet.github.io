@@ -6,15 +6,14 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-themes',
     'storybook-dark-mode',
+    'storybook-addon-react-router-v6',
   ],
 
   framework: '@storybook/react-vite', // 👈 Add this
   staticDirs: ['../public'],
 
   refs: {
-    '@chakra-ui/react': {
-      disable: true,
-    },
+    '@chakra-ui/react': { disable: true },
   },
 };
 
