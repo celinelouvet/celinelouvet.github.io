@@ -12,9 +12,7 @@ const config: StorybookConfig = {
   staticDirs: ['../public'],
 
   refs: {
-    '@chakra-ui/react': {
-      disable: true,
-    },
+    '@chakra-ui/react': { disable: true },
   },
 };
 

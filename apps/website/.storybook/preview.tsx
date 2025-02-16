@@ -17,17 +17,16 @@ const WithStoryThemeProvider = (Story: StoryFn) => (
   </ChakraProvider>
 );
 const decorators: Decorator[] = [
-  WithStoryThemeProvider,
-
   withThemeByClassName({
     defaultTheme: 'light',
     themes: { light: '', dark: 'dark' },
   }),
+  WithStoryThemeProvider,
 ];
 
 const parameters: Parameters = {
   chakra: {
-    defaultSystem,
+    system: defaultSystem,
   },
 
   parameters: {

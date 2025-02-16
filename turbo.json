@@ -2,33 +2,18 @@
   "$schema": "https://turbo.build/schema.json",
   "envMode": "loose",
   "tasks": {
-    "clean": {
-      "dependsOn": ["^clean"]
-    },
+    "clean": { "dependsOn": ["^clean"] },
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": ["dist/**"]
     },
-    "typecheck": {
-      "dependsOn": ["^typecheck"]
-    },
-    "start": {
-      "cache": false,
-      "persistent": false
-    },
-    "dev": {
-      "cache": false,
-      "persistent": true
-    },
-    "lint": {
-      "dependsOn": ["^lint"]
-    },
-    "lint:fix": {
-      "dependsOn": ["^lint:fix"]
-    },
-    "test": {
-      "dependsOn": ["^test"]
-    }
+    "typecheck": { "dependsOn": ["^typecheck"] },
+    "start": { "cache": false, "persistent": false },
+    "dev": { "cache": false, "persistent": true },
+    "lint": { "dependsOn": ["^lint"] },
+    "lint:fix": { "dependsOn": ["^lint:fix"] },
+    "test": { "dependsOn": ["^test"] },
+    "storybook": { "dependsOn": ["^storybook"] }
   }
 }
