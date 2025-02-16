@@ -1,4 +1,3 @@
-export * from './avatar';
 export * from './checkbox';
 export * from './color-mode';
 export * from './dialog';

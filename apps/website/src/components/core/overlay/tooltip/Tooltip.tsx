@@ -3,7 +3,7 @@ import * as React from 'react';
 
 export interface TooltipProps extends ChakraTooltip.RootProps {
   portalled?: boolean;
-  portalRef?: React.RefObject<HTMLElement>;
+  portalRef?: React.RefObject<HTMLElement | null>;
   label: React.ReactNode;
   labelProps?: ChakraTooltip.ContentProps;
   disabled?: boolean;
