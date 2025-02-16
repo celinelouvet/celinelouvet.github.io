@@ -7,7 +7,8 @@ export interface InputGroupProps extends BoxProps {
   endElementProps?: InputElementProps;
   startElement?: React.ReactNode;
   endElement?: React.ReactNode;
-  children: React.ReactElement;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  children: React.ReactElement<any>;
   startOffset?: InputElementProps['paddingStart'];
   endOffset?: InputElementProps['paddingEnd'];
 }
