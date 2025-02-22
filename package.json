@@ -24,7 +24,7 @@
     "storybook": "turbo run storybook"
   },
   "devDependencies": {
-    "prettier": "3.5.1",
+    "prettier": "3.5.2",
     "turbo": "2.4.2"
   },
   "engines": {

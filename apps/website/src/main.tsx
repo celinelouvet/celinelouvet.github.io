@@ -6,6 +6,7 @@ import { Provider } from '@/components/ui';
 
 import '@/lib/dayjs/config';
 import '@/lib/i18n';
+import './fonts.css';
 import './index.css';
 import App from './App';
 
