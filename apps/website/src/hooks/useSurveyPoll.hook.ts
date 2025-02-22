@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import { useSurveyInfos } from "./useSurveyInfos.hook";
-import { type SurveyPoll, SurveyState } from "../models";
+import { useSurveyInfos } from './useSurveyInfos.hook';
+import { type SurveyPoll, SurveyState } from '../models';
 
 export const useSurveyPoll = (
   talkSubjectId?: string | string[],
-  conventionId?: string | string[]
+  conventionId?: string | string[],
 ) => {
   const [surveyId, setSurveyId] = useState<string | null>(null);
   const [surveyPoll, setSurveyPoll] = useState<SurveyPoll | null>(null);
   const [surveyState, setSurveyState] = useState<SurveyState>(
-    SurveyState.Unknown
+    SurveyState.Unknown,
   );
   const [states, setStates] = useState(new Map<string, boolean>());
   const [values, setValues] = useState(new Map<string, boolean | string>());
@@ -30,9 +30,9 @@ export const useSurveyPoll = (
     setStates(
       new Map<string, boolean>(
         [...surveyInfos.surveyPoll.questions.entries()].map(
-          ([key, { initialState }]) => [key, initialState]
-        )
-      )
+          ([key, { initialState }]) => [key, initialState],
+        ),
+      ),
     );
   }, [
     surveyInfos.state,

@@ -25,5 +25,5 @@ export const sections = [
 ] satisfies Section[];
 
 export const url2slugs: Map<string, Slug> = new Map(
-  sections.map((section) => [section.href, section.slug])
+  sections.map((section) => [section.href, section.slug]),
 );

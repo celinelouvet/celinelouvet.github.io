@@ -9,12 +9,10 @@ const config: StorybookConfig = {
     'storybook-addon-react-router-v6',
   ],
 
-  framework: '@storybook/react-vite', // 👈 Add this
+  framework: '@storybook/react-vite',
   staticDirs: ['../public'],
 
-  refs: {
-    '@chakra-ui/react': { disable: true },
-  },
+  refs: { '@chakra-ui/react': { disable: true } },
 };
 
 export default config;
