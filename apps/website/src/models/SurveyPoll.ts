@@ -11,7 +11,6 @@ const SurveyPollChoiceSchema = z.object({
   text: z.string(),
   value: z.enum(['yes', 'no']),
   next: NextSchema,
-  color: z.string(),
 });
 
 const SurveyPollChoiceQuestionSchema = z
@@ -23,17 +22,11 @@ const SurveyPollChoiceQuestionSchema = z
   .merge(WithInitialStateSchema);
 
 const SurveyPollTextQuestionSchema = z
-  .object({
-    type: z.literal('text'),
-    title: z.string(),
-    next: NextSchema,
-  })
+  .object({ type: z.literal('text'), title: z.string(), next: NextSchema })
   .merge(WithInitialStateSchema);
 
 const SurveyPollSubmitQuestionSchema = z
-  .object({
-    type: z.literal('submit'),
-  })
+  .object({ type: z.literal('submit') })
   .merge(WithInitialStateSchema);
 
 const SurveyPollQuestionSchema = z.discriminatedUnion('type', [

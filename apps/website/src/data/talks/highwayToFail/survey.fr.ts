@@ -9,8 +9,8 @@ const questions = new Map<string, SurveyPollQuestion>([
       optional: false,
       type: 'choice',
       choices: [
-        { text: 'Oui', value: 'yes', next: 'question2', color: '#4990bf' },
-        { text: 'Non', value: 'no', next: 'submit', color: '#1f435a' },
+        { text: 'Oui', value: 'yes', next: 'question2' },
+        { text: 'Non', value: 'no', next: 'submit' },
       ],
     },
   ],
@@ -22,8 +22,8 @@ const questions = new Map<string, SurveyPollQuestion>([
       optional: false,
       type: 'choice',
       choices: [
-        { text: 'Oui', value: 'yes', next: 'question3', color: '#4990bf' },
-        { text: 'Non', value: 'no', next: 'question5', color: '#1f435a' },
+        { text: 'Oui', value: 'yes', next: 'question3' },
+        { text: 'Non', value: 'no', next: 'question5' },
       ],
     },
   ],
@@ -35,8 +35,8 @@ const questions = new Map<string, SurveyPollQuestion>([
       optional: false,
       type: 'choice',
       choices: [
-        { text: 'Oui', value: 'yes', next: 'submit', color: '#4990bf' },
-        { text: 'Non', value: 'no', next: 'question4', color: '#1f435a' },
+        { text: 'Oui', value: 'yes', next: 'submit' },
+        { text: 'Non', value: 'no', next: 'question4' },
       ],
     },
   ],
@@ -58,8 +58,8 @@ const questions = new Map<string, SurveyPollQuestion>([
       optional: false,
       type: 'choice',
       choices: [
-        { text: 'Oui', value: 'yes', next: 'submit', color: '#4990bf' },
-        { text: 'Non', value: 'no', next: 'question6', color: '#1f435a' },
+        { text: 'Oui', value: 'yes', next: 'submit' },
+        { text: 'Non', value: 'no', next: 'question6' },
       ],
     },
   ],

@@ -1,5 +1,6 @@
 export { useActiveSection } from './useActiveSection.hook';
 export { useApi } from './useApi.hook';
+export { useColorModeToken } from './useColorModeToken.hook';
 export { useCurrentPosition } from './useCurrentPosition.hook';
 export { useHeadingSize } from './useHeadingSize.hook';
 export { useLogger } from './useLogger.hook';

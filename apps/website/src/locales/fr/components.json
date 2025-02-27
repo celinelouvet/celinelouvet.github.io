@@ -20,7 +20,8 @@
     "allVotes": "Votes exprimés :",
     "notYetOpened": "Le sondage n'est pas encore ouvert.",
     "closed": "Le sondage est fermé.",
-    "results": "Résultats"
+    "results": "Résultats",
+    "noVotes": "Aucun"
   },
   "blog": "Blog"
 }

@@ -4,6 +4,5 @@ export * from './dialog';
 export * from './input-group';
 export * from './popover';
 export * from './provider';
-export * from './radio';
 export * from './slider';
 export * from './tag';
