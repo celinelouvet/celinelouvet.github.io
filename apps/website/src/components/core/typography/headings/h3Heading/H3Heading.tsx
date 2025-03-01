@@ -18,7 +18,7 @@ export const H3Heading = React.forwardRef<HTMLHeadingElement, H3HeadingProps>(
   function H3Heading(props, ref) {
     const { children, ...restProps } = props;
     const recipe = useRecipe({ recipe: h3HeadingRecipe });
-    const styles = recipe(props);
+    const styles = recipe(restProps);
 
     return (
       <chakra.h3 css={styles} {...restProps} ref={ref}>

@@ -23,7 +23,7 @@ export const DateText = React.forwardRef<HTMLSpanElement, DateTextProps>(
     const { dateFormat, when, ...restProps } = props;
 
     const recipe = useRecipe({ recipe: dateTextRecipe });
-    const styles = recipe(props);
+    const styles = recipe(restProps);
 
     return (
       <chakra.span css={styles} {...restProps} ref={ref}>

@@ -19,7 +19,7 @@ export const H4Heading = React.forwardRef<HTMLHeadingElement, H4HeadingProps>(
     const { children, ...restProps } = props;
 
     const recipe = useRecipe({ recipe: h4HeadingRecipe });
-    const styles = recipe(props);
+    const styles = recipe(restProps);
 
     return (
       <chakra.h4 css={styles} {...restProps} ref={ref}>

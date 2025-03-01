@@ -31,7 +31,7 @@ export const SurveyResultsPie = React.forwardRef<
   const { data } = useQuestionResults(question, results);
 
   const recipe = useRecipe({ recipe: surveyResultsPieRecipe });
-  const styles = recipe(props);
+  const styles = recipe(restProps);
 
   const labelColor = useColorModeToken('brand.900', 'brand.100');
 

@@ -26,10 +26,10 @@ export const SurveyQuestionResults = React.forwardRef<
   HTMLDivElement,
   SurveyQuestionResultsProps
 >(function (props, ref) {
-  const { question, results } = props;
+  const { question, results, ...restProps } = props;
 
   const recipe = useSlotRecipe({ key: 'surveyQuestionResults' });
-  const styles = recipe(props);
+  const styles = recipe(restProps);
 
   if (!question) return null;
   if (!results) return null;

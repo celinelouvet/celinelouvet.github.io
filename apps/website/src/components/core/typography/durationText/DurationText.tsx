@@ -30,7 +30,7 @@ export const DurationText = React.forwardRef<
   const { period, ...restProps } = props;
 
   const recipe = useRecipe({ recipe: durationTextRecipe });
-  const styles = recipe(props);
+  const styles = recipe(restProps);
 
   const from = dayjs(period.from);
   const to = period.to ? dayjs(period.to) : dayjs();

@@ -16,7 +16,7 @@ export const QrCode = React.forwardRef<HTMLDivElement, QrCodeProps>(
     const { value, ...restProps } = props;
 
     const recipe = useSlotRecipe({ key: 'qrCode' });
-    const styles = recipe(props);
+    const styles = recipe(restProps);
 
     return (
       <ChakraQrCode.Root

@@ -52,7 +52,7 @@ export const SurveyResultsBreakdown = React.forwardRef<
   const { total, data } = useQuestionResults(question, results);
 
   const recipe = useRecipe({ recipe: surveyResultsBreakdownRecipe });
-  const styles = recipe(props);
+  const styles = recipe(restProps);
 
   const { t } = useTranslation('components', { keyPrefix: 'survey' });
 

@@ -31,7 +31,7 @@ export const SurveyPollSubmit = React.forwardRef<
 
   const [sent, setSent] = React.useState(false);
   const recipe = useRecipe({ recipe: surveyPollSubmitRecipe });
-  const styles = recipe(props);
+  const styles = recipe(restProps);
 
   const toaster = useToaster();
   const { t } = useTranslation('components', { keyPrefix: 'survey' });

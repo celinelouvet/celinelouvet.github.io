@@ -29,7 +29,7 @@ export const SurveyPollChoiceQuestion = React.forwardRef<
   const { question, onAnswer, ...restProps } = props;
 
   const recipe = useSlotRecipe({ key: 'surveyPollChoiceQuestion' });
-  const styles = recipe(props);
+  const styles = recipe(restProps);
 
   const [value, setValue] = React.useState('');
   const { t } = useTranslation('components', { keyPrefix: 'survey' });
