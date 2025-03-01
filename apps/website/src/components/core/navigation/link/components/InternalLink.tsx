@@ -3,7 +3,7 @@
 import { Link, type LinkProps, type RecipeProps } from '@chakra-ui/react';
 import * as React from 'react';
 import { type To } from 'react-router';
-import { Link as ReactRouterLink } from 'react-router-dom';
+import { Link as ReactRouterLink } from 'react-router';
 
 type InternalLinkVariantProps = RecipeProps<'link'> & {
   to: To;
