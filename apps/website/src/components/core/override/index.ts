@@ -6,12 +6,14 @@ import { slotRecipe as cardSlotRecipe } from './card';
 import { recipe as closeButtonRecipe } from './closeButton';
 import { recipe as codeRecipe } from './code';
 import { slotRecipe as drawerSlotRecipe } from './drawer';
+import { recipe as iconButtonRecipe } from './iconButton';
 import { recipe as linkRecipe } from './link';
 
 export const overrideRecipes = {
   ...buttonRecipe,
   ...closeButtonRecipe,
   ...codeRecipe,
+  ...iconButtonRecipe,
   ...linkRecipe,
 } as ThemingConfig['recipes'];
 
@@ -22,4 +24,3 @@ export const overrideSlotRecipes = {
 } as ThemingConfig['slotRecipes'];
 
 export { CloseButton } from './closeButton';
-export { Drawer } from './drawer';

@@ -9,7 +9,7 @@ const brandGradient = `180deg, rgba(${brand100_rgb}, 1), rgba(${brand100_rgb}, 1
 
 export const semanticTokens = {
   gradients: {
-    brand: { value: brandGradient },
+    brand: { value: `linear-gradient(${brandGradient})` },
   },
   sizes: {
     'picture.size': { value: `${pictureInPx}px` },

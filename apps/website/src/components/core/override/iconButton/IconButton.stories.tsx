@@ -1,19 +1,20 @@
 import {
-  Button as ButtonComponent,
   Card,
   Center,
   For,
   Grid,
+  IconButton as IconButtonComponent,
   Stack,
 } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
+import { BsList } from 'react-icons/bs';
 
 import { H3Heading } from '@/components/core';
 
 const meta = {
   title: 'Core/Override',
-  component: ButtonComponent,
-} satisfies Meta<typeof ButtonComponent>;
+  component: IconButtonComponent,
+} satisfies Meta<typeof IconButtonComponent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -29,7 +30,7 @@ const variants = [
 
 const sizes = ['2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl'] as const;
 
-export const Button: Story = {
+export const IconButton: Story = {
   render: () => {
     return (
       <Stack gap="4">
@@ -39,7 +40,9 @@ export const Button: Story = {
           </Card.Header>
           <Card.Body>
             <Center>
-              <ButtonComponent>Default</ButtonComponent>
+              <IconButtonComponent>
+                <BsList />
+              </IconButtonComponent>
             </Center>
           </Card.Body>
         </Card.Root>
@@ -53,9 +56,9 @@ export const Button: Story = {
               <For each={variants}>
                 {(variant) => (
                   <Center key={variant}>
-                    <ButtonComponent variant={variant}>
-                      {variant}
-                    </ButtonComponent>
+                    <IconButtonComponent variant={variant}>
+                      <BsList />
+                    </IconButtonComponent>
                   </Center>
                 )}
               </For>
@@ -72,9 +75,9 @@ export const Button: Story = {
               <For each={sizes}>
                 {(size) => (
                   <Center key={size}>
-                    <ButtonComponent key={size} size={size} variant="solid">
+                    <IconButtonComponent key={size} size={size} variant="solid">
                       {size}
-                    </ButtonComponent>
+                    </IconButtonComponent>
                   </Center>
                 )}
               </For>
