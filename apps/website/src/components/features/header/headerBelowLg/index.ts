@@ -1,0 +1,1 @@
+export { HeaderBelowLg } from './HeaderBelowLg';

@@ -1,7 +1,8 @@
 import { defineSlotRecipe } from '@chakra-ui/react';
+import { alertAnatomy } from '@chakra-ui/react/anatomy';
 
 export const alertSlotRecipe = defineSlotRecipe({
-  slots: ['title', 'description', 'root', 'indicator', 'content'],
+  slots: alertAnatomy.keys(),
 
   variants: {
     variant: {

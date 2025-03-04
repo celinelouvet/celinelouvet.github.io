@@ -26,7 +26,7 @@ export const PeriodText = React.forwardRef<HTMLSpanElement, PeriodTextProps>(
     const { period, ...restProps } = props;
 
     const recipe = useRecipe({ recipe: periodTextRecipe });
-    const styles = recipe(props);
+    const styles = recipe(restProps);
 
     return (
       <chakra.span css={styles} {...restProps} ref={ref}>

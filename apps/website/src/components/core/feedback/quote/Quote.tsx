@@ -20,7 +20,7 @@ export const Quote = React.forwardRef<HTMLDivElement, QuoteProps>(
     const { title, children, ...restProps } = props;
 
     const recipe = useSlotRecipe({ key: 'quote' });
-    const styles = recipe(props);
+    const styles = recipe(restProps);
 
     return (
       <Alert.Root status="info" css={styles.root} ref={ref} {...restProps}>

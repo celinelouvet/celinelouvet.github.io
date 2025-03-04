@@ -26,11 +26,14 @@ const filterQuestionsToShow = (
     }));
 
 const reduceQuestion = (question: SurveyPollChoiceQuestion) =>
-  question.choices.reduce((accQuestion, choice) => {
-    accQuestion[choice.value] = 0;
+  question.choices.reduce(
+    (accQuestion, choice) => {
+      accQuestion[choice.value] = 0;
 
-    return accQuestion;
-  }, {} as Record<string, number>);
+      return accQuestion;
+    },
+    {} as Record<string, number>,
+  );
 
 const initiateResults = (questionsToShow: QuestionToShow[]) =>
   questionsToShow.reduce((acc: ReducedResults, { id, question }) => {

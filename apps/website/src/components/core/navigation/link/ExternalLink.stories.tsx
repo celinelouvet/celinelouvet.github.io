@@ -8,10 +8,7 @@ import { ExternalLink as ExternalLinkComponent } from './components/ExternalLink
 const meta = {
   title: 'Core/Navigation',
   component: ExternalLinkComponent,
-  args: {
-    children: 'Google',
-    href: 'http://google.com',
-  },
+  args: { children: 'Google', href: 'http://google.com' },
 } satisfies Meta<typeof ExternalLinkComponent>;
 
 export default meta;
@@ -20,10 +17,7 @@ type Story = StoryObj<typeof meta>;
 const sizes = ['sm', 'md'] as const;
 type Size = (typeof sizes)[number];
 
-type ItemProps = {
-  label: string;
-  size?: Size;
-};
+type ItemProps = { label: string; size?: Size };
 
 export const ExternalLink: Story = {
   render: ({ children, href }) => {

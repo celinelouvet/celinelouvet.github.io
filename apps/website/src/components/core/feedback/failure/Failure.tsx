@@ -20,7 +20,7 @@ export const Failure = React.forwardRef<HTMLDivElement, FailureProps>(
     const { title, children, ...restProps } = props;
 
     const recipe = useSlotRecipe({ key: 'failure' });
-    const styles = recipe(props);
+    const styles = recipe(restProps);
 
     return (
       <Alert.Root css={styles.root} status="error" ref={ref} {...restProps}>

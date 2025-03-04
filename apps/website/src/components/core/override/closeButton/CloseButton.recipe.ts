@@ -1,18 +1,19 @@
 import { defineRecipe } from '@chakra-ui/react';
 
 export const closeButtonRecipe = defineRecipe({
+  base: {
+    _hover: {
+      backgroundColor: { base: 'brand.800', _dark: 'brand.400' },
+    },
+  },
   variants: {
     sizes: {
       xl: {
-        fontSize: 'xl',
-        px: '6',
-        h: '16',
+        fontSize: '2xl',
         borderRadius: 'md',
       },
       '2xl': {
         fontSize: '2xl',
-        px: '8',
-        h: '16',
         borderRadius: 'lg',
       },
     },

@@ -1,6 +1,6 @@
-import { z } from "zod";
+import { z } from 'zod';
 
-const NextSchema = z.union([z.literal("submit"), z.string()]);
+const NextSchema = z.union([z.literal('submit'), z.string()]);
 
 const WithInitialStateSchema = z.object({
   initialState: z.boolean(),
@@ -9,34 +9,27 @@ const WithInitialStateSchema = z.object({
 
 const SurveyPollChoiceSchema = z.object({
   text: z.string(),
-  value: z.enum(["yes", "no"]),
+  value: z.enum(['yes', 'no']),
   next: NextSchema,
-  color: z.string(),
 });
 
 const SurveyPollChoiceQuestionSchema = z
   .object({
-    type: z.literal("choice"),
+    type: z.literal('choice'),
     title: z.string(),
     choices: z.array(SurveyPollChoiceSchema),
   })
   .merge(WithInitialStateSchema);
 
 const SurveyPollTextQuestionSchema = z
-  .object({
-    type: z.literal("text"),
-    title: z.string(),
-    next: NextSchema,
-  })
+  .object({ type: z.literal('text'), title: z.string(), next: NextSchema })
   .merge(WithInitialStateSchema);
 
 const SurveyPollSubmitQuestionSchema = z
-  .object({
-    type: z.literal("submit"),
-  })
+  .object({ type: z.literal('submit') })
   .merge(WithInitialStateSchema);
 
-const SurveyPollQuestionSchema = z.discriminatedUnion("type", [
+const SurveyPollQuestionSchema = z.discriminatedUnion('type', [
   SurveyPollChoiceQuestionSchema,
   SurveyPollTextQuestionSchema,
   SurveyPollSubmitQuestionSchema,

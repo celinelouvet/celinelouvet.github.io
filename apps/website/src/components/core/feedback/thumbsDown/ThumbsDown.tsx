@@ -20,7 +20,7 @@ export const ThumbsDown = React.forwardRef<HTMLDivElement, ThumbsDownProps>(
     const { title, children, ...restProps } = props;
 
     const recipe = useSlotRecipe({ key: 'thumbsDown' });
-    const styles = recipe(props);
+    const styles = recipe(restProps);
 
     return (
       <Alert.Root status="warning" css={styles.root} ref={ref} {...restProps}>

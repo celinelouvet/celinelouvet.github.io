@@ -5,7 +5,7 @@ export const useActiveSection = (asPath: string): Section => {
 
   if (!url2slugs.has(root)) {
     return {
-      href: '/',
+      to: '/',
       slug: 'home',
     };
   }
@@ -13,13 +13,13 @@ export const useActiveSection = (asPath: string): Section => {
 
   if (!slug) {
     return {
-      href: '/',
+      to: '/',
       slug: 'home',
     };
   }
 
   return {
-    href: root,
+    to: root,
     slug,
   };
 };

@@ -8,10 +8,7 @@ import { InternalLink as InternalLinkComponent } from './components/InternalLink
 const meta = {
   title: 'Core/Navigation',
   component: InternalLinkComponent,
-  args: {
-    children: 'Blog',
-    to: '/blog',
-  },
+  args: { children: 'Blog', to: '/blog' },
 } satisfies Meta<typeof InternalLinkComponent>;
 
 export default meta;
@@ -20,10 +17,7 @@ type Story = StoryObj<typeof meta>;
 const sizes = ['sm', 'md'] as const;
 type Size = (typeof sizes)[number];
 
-type ItemProps = {
-  label: string;
-  size?: Size;
-};
+type ItemProps = { label: string; size?: Size };
 
 export const InternalLink: Story = {
   render: ({ children, to }) => {

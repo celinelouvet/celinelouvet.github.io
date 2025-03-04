@@ -22,11 +22,7 @@ export function useColorMode() {
   const toggleColorMode = () => {
     setTheme(resolvedTheme === 'light' ? 'dark' : 'light');
   };
-  return {
-    colorMode: resolvedTheme,
-    setColorMode: setTheme,
-    toggleColorMode,
-  };
+  return { colorMode: resolvedTheme, setColorMode: setTheme, toggleColorMode };
 }
 
 export function useColorModeValue<T>(light: T, dark: T) {
@@ -55,12 +51,7 @@ export const ColorModeButton = React.forwardRef<
         size="sm"
         ref={ref}
         {...props}
-        css={{
-          _icon: {
-            width: '5',
-            height: '5',
-          },
-        }}
+        css={{ _icon: { width: '5', height: '5' } }}
       >
         <ColorModeIcon />
       </IconButton>

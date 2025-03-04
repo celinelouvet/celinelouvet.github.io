@@ -23,7 +23,7 @@ export const HeaderContainer = React.forwardRef<
   const { children, ...restProps } = props;
 
   const recipe = useRecipe({ recipe: headerContainerRecipe });
-  const styles = recipe(props);
+  const styles = recipe(restProps);
 
   return (
     <ChakraContainer css={styles} ref={ref} {...restProps}>

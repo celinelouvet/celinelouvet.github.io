@@ -7,7 +7,7 @@ import {
   type Preview,
   StoryFn,
 } from '@storybook/react';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router';
 
 import { customSystem } from '../src/theme';
 
@@ -28,22 +28,16 @@ const WithRouter = (Story: StoryFn) => (
 const decorators: Decorator[] = [
   withThemeByClassName({
     defaultTheme: 'light',
-    themes: { light: '', dark: 'dark' },
+    themes: { light: 'light', dark: 'dark' },
   }),
   WithStoryThemeProvider,
   WithRouter,
 ];
 
 const parameters: Parameters = {
-  chakra: {
-    system: customSystem,
-  },
+  chakra: { system: customSystem },
 
-  parameters: {
-    nextjs: {
-      appDirectory: true,
-    },
-  },
+  parameters: { nextjs: { appDirectory: true } },
 };
 
 const preview: Preview = { parameters, decorators };

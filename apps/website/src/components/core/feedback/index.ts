@@ -11,6 +11,7 @@ export { Question } from './question';
 export { Quote } from './quote';
 export { ThumbsDown } from './thumbsDown';
 export { ThumbsUp } from './thumbsUp';
+export { Toaster, useToaster } from './toaster';
 
 export const feedbackSlotRecipes = {
   ...failureSlotRecipe,

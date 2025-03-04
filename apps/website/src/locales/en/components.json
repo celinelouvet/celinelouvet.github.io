@@ -20,7 +20,8 @@
     "allVotes": "All votes cast:",
     "notYetOpened": "This survey is not yet open.",
     "closed": "This survey is closed.",
-    "results": "Results"
+    "results": "Results",
+    "noVotes": "None"
   },
   "blog": "Blog"
 }
