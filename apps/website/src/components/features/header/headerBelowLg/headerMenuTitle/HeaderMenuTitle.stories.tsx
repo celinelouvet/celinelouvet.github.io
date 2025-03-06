@@ -1,3 +1,4 @@
+import { Flex } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
 import { HeaderMenuTitle as HeaderMenuTitleComponent } from './HeaderMenuTitle';
@@ -16,4 +17,15 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const MenuTitle: Story = {};
+export const MenuTitle: Story = {
+  render: ({ slug }) => (
+    <Flex
+      backgroundGradient="brand"
+      marginBottom="3"
+      paddingBottom="1.5"
+      paddingLeft="4"
+    >
+      <HeaderMenuTitleComponent slug={slug} />
+    </Flex>
+  ),
+};
