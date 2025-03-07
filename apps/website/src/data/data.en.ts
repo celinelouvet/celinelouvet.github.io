@@ -420,9 +420,9 @@ const resume = {
   ],
   socials: [
     {
-      name: 'twitter',
-      handle: 'celine_louvet',
-      link: 'https://twitter.com/celine_louvet',
+      name: 'bluesky',
+      handle: 'celinelouvet.bsky.social',
+      link: 'https://bsky.app/profile/celinelouvet.bsky.social',
     },
     {
       name: 'linkedin',
@@ -430,9 +430,9 @@ const resume = {
       link: 'https://www.linkedin.com/in/celinelouvet',
     },
     {
-      name: 'bluesky',
-      handle: 'celinelouvet.bsky.social',
-      link: 'https://bsky.app/profile/celinelouvet.bsky.social',
+      name: 'twitter',
+      handle: 'celine_louvet',
+      link: 'https://twitter.com/celine_louvet',
     },
     {
       name: 'mastodon',

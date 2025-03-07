@@ -25,6 +25,7 @@ const variants = [
   'outline',
   'ghost',
   'plain',
+  'solid-link',
 ] as const;
 
 const sizes = ['2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl'] as const;

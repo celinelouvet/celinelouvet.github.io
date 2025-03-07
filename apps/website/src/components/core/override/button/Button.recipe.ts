@@ -17,6 +17,23 @@ export const buttonRecipe = defineRecipe({
           backgroundColor: { base: 'brand.800', _dark: 'brand.300' },
         },
       },
+
+      'solid-link': {
+        color: 'white',
+        backgroundColor: 'brand.500',
+
+        _dark: { color: 'white' },
+        _hover: {
+          textDecoration: 'underline',
+
+          color: 'white',
+          backgroundColor: 'brand.400',
+
+          _dark: { color: 'white', backgroundColor: 'brand.400' },
+        },
+        _active: { backgroundColor: 'brand.600' },
+        _expanded: { backgroundColor: 'brand.600' },
+      },
     },
 
     sizes: {

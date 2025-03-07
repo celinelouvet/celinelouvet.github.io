@@ -1,7 +1,6 @@
 import { List, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { type IconType } from 'react-icons';
-import { type To } from 'react-router';
 
 import { Link, Tooltip } from '@/components/core';
 import { capitalize } from '@/lib';
@@ -11,7 +10,7 @@ export type LinkItemProps = {
   ariaLabel: string;
   text: string;
   href?: string;
-  to?: To;
+  to?: string;
 };
 
 export const LinkItem: React.FC<LinkItemProps> = ({

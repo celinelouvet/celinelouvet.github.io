@@ -1,0 +1,24 @@
+import { Box, Stack } from '@chakra-ui/react';
+import * as React from 'react';
+
+import { H1Heading, H2Heading, Picture } from '@/components/core';
+import { type Resume } from '@/data';
+
+export type SummaryProps = {
+  resume: Pick<Resume, 'firstname' | 'lastname' | 'title'>;
+};
+
+export const Summary: React.FC<SummaryProps> = ({ resume }) => {
+  const fullname = `${resume.firstname} ${resume.lastname}`;
+
+  return (
+    <Stack alignItems="center" gap="6">
+      <Picture size="lg" />
+
+      <Box textAlign="center">
+        <H1Heading>{fullname}</H1Heading>
+        <H2Heading>{resume.title}</H2Heading>
+      </Box>
+    </Stack>
+  );
+};

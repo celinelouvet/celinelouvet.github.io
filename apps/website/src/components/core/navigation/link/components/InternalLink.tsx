@@ -2,11 +2,10 @@
 
 import { Link, type LinkProps, type RecipeProps } from '@chakra-ui/react';
 import * as React from 'react';
-import { type To } from 'react-router';
-import { Link as ReactRouterLink } from 'react-router';
+import { NavLink } from 'react-router';
 
 type InternalLinkVariantProps = RecipeProps<'link'> & {
-  to: To;
+  to: string;
 };
 
 export interface InternalLinkProps
@@ -20,8 +19,8 @@ export const InternalLink = React.forwardRef<
   const { children, to, ...restProps } = props;
 
   return (
-    <Link asChild ref={ref} {...restProps}>
-      <ReactRouterLink to={to}>{children}</ReactRouterLink>
+    <Link as={NavLink} variant="plain" href={to} ref={ref} {...restProps}>
+      {children}
     </Link>
   );
 });
