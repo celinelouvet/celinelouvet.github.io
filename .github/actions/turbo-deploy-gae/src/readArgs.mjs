@@ -32,6 +32,15 @@ export const readAppVersionArg = () => {
 };
 
 /** @type {() => string} */
+export const readServiceArg = () => {
+  const nameArg = process.argv.find((arg) => arg.startsWith('--service='));
+  const name = Boolean(nameArg) ? nameArg.split('=')[1] : 'default';
+
+  console.log(`\tVersion: ${name}`);
+  return name;
+};
+
+/** @type {() => string} */
 export const readFolderArg = () => {
   const folderArg = process.argv.find((arg) => arg.startsWith('--folder='));
   const folder = Boolean(folderArg) ? folderArg.split('=')[1] : undefined;

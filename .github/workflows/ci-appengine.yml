@@ -83,8 +83,8 @@ jobs:
       - name: Lint code and types
         run: yarn lint
 
-      - id: deploy
-        name: Deploy to GCP AppEngine
+      - id: deploy_website
+        name: Deploy website to GCP AppEngine
         uses: ./.github/actions/turbo-deploy-gae
         with:
           apps_directory: apps
@@ -95,8 +95,21 @@ jobs:
           gcloud_credentials_json: ${{ secrets.GCP_SA_KEY }}
           should_promote: false
 
+      - id: deploy_api
+        name: Deploy api to GCP AppEngine
+        uses: ./.github/actions/turbo-deploy-gae
+        with:
+          apps_directory: apps
+          target_app: api
+          target_service: api
+          env: staging
+          test_endpoint: /test
+          gcloud_project_id: ${{ vars.GCP_PROJECT }}
+          gcloud_credentials_json: ${{ secrets.GCP_SA_KEY }}
+          should_promote: false
+
     outputs:
-      versionUrl: ${{ steps.deploy.outputs.version_url }}
+      versionUrl: ${{ steps.deploy_website.outputs.version_url }}
 
   # slidePdf:
   #   name: Generate Slides PDF

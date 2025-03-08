@@ -27,6 +27,11 @@ inputs:
     description: App name to deploy
     required: true
 
+  target_service:
+    description: Service name to deploy
+    required: false
+    default: 'default'
+
   apps_directory:
     description: Folder name containing the apps
     default: apps
@@ -84,7 +89,7 @@ runs:
 
     - name: Prepare $OUT/app.yaml
       shell: bash
-      run: node ${{ github.action_path }}/src/createAppFile.mjs --folder=$OUT --env=staging --version=${{ github.ref_name }}
+      run: node ${{ github.action_path }}/src/createAppFile.mjs --folder=$OUT --env=staging --version=${{ github.ref_name }} --service=${{inputs.target_service}}
 
     - name: Authenticate with Google Cloud
       uses: google-github-actions/auth@v2

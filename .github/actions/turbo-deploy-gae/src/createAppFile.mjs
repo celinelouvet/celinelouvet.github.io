@@ -3,10 +3,15 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
-import { readEnvArg, readAppVersionArg, readFolderArg } from './readArgs.mjs';
+import {
+  readEnvArg,
+  readAppVersionArg,
+  readFolderArg,
+  readServiceArg,
+} from './readArgs.mjs';
 
-/** @type {(content: string, version: string) => string} */
-const getContent = (env, version) => {
+/** @type {(content: string, version: string, service: string) => string} */
+const getContent = (env, version, service) => {
   const versionName = env === 'prod' ? 'prod' : version;
   const baseUrl =
     env === 'prod'
@@ -15,6 +20,7 @@ const getContent = (env, version) => {
   const apiBaseUrl = `${baseUrl}/api`;
 
   return `runtime: nodejs22
+service: ${service}
 
 instance_class: F2
 
@@ -51,10 +57,10 @@ const writeAppFile = async (content, root) => {
   }
 };
 
-/** @type {(env:string, version: string, root: string) => Promise<void>} */
-export const createAppFile = async (env, version, root) => {
+/** @type {(env:string, version: string, service: string, root: string) => Promise<void>} */
+export const createAppFile = async (env, version, service, root) => {
   try {
-    const content = getContent(env, version);
+    const content = getContent(env, version, service);
     await writeAppFile(content, root);
 
     console.log(`\t→ app.yml is ready`);
@@ -67,8 +73,9 @@ const run = async () => {
   const env = readEnvArg();
   const version = readAppVersionArg();
   const root = readFolderArg();
+  const service = readServiceArg();
 
-  await createAppFile(env, version, root);
+  await createAppFile(env, version, service, root);
 };
 
 run().catch((error) => {
