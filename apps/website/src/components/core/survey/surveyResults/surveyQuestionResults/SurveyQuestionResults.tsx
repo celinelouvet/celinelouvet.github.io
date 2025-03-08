@@ -4,10 +4,10 @@ import {
   type SlotRecipeProps,
   useSlotRecipe,
 } from '@chakra-ui/react';
+import { type SurveyPollChoiceQuestion } from '@repo/models';
 import * as React from 'react';
 
 import { H2Heading } from '@/components/core';
-import { type SurveyPollChoiceQuestion } from '@/models';
 
 import { SurveyResultsBreakdown } from '../surveyResultsBreakdown';
 import { SurveyResultsPie } from '../surveyResultsPie';

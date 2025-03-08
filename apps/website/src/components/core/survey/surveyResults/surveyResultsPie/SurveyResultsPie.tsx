@@ -5,11 +5,11 @@ import {
   type RecipeVariantProps,
   useRecipe,
 } from '@chakra-ui/react';
+import { type SurveyPollChoiceQuestion } from '@repo/models';
 import * as React from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
 
 import { useColorModeToken } from '@/hooks';
-import { type SurveyPollChoiceQuestion } from '@/models';
 
 import { surveyResultsPieRecipe } from './SurveyResultsPie.recipe';
 import { useQuestionResults } from '../useQuestionResults';

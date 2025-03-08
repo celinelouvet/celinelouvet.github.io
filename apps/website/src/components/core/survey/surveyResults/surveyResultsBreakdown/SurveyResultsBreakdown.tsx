@@ -7,10 +7,9 @@ import {
   Text,
   useRecipe,
 } from '@chakra-ui/react';
+import { type SurveyPollChoiceQuestion } from '@repo/models';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
-
-import { type SurveyPollChoiceQuestion } from '@/models';
 
 import { surveyResultsBreakdownRecipe } from './SurveyResultsBreakdown.recipe';
 import { useQuestionResults } from '../useQuestionResults';

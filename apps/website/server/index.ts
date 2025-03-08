@@ -1,6 +1,5 @@
 import path from 'node:path';
 
-import { log } from '@repo/logger';
 import { json, urlencoded } from 'body-parser';
 import cors from 'cors';
 import express, { type Express, type Request, type Response } from 'express';
@@ -29,5 +28,5 @@ const port = process.env.PORT ?? 5001;
 const server = createServer();
 
 server.listen(port, () => {
-  log(`Website is served on ${port}`);
+  console.log(`Website is served on ${port}`);
 });

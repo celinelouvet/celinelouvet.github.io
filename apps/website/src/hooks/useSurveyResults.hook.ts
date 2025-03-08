@@ -1,13 +1,12 @@
-import { useCallback, useEffect, useState } from 'react';
-
-import { useApi, useSurveyInfos } from '@/hooks';
-
 import {
   type SurveyPoll,
   type SurveyPollChoiceQuestion,
   type SurveyResult,
   asSurveyResults,
-} from '../models';
+} from '@repo/models';
+import { useCallback, useEffect, useState } from 'react';
+
+import { useApi, useSurveyInfos } from '@/hooks';
 
 type ReducedResults = Record<string, Record<string, number>>;
 type QuestionToShow = {

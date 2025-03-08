@@ -1,9 +1,9 @@
 import { Box, Stack } from '@chakra-ui/react';
+import { type SurveyPollTextQuestion as SurveyPollTextQuestionModel } from '@repo/models';
 import { type Meta, type StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
 import { H1Heading } from '@/components/core';
-import { type SurveyPollTextQuestion as SurveyPollTextQuestionModel } from '@/models';
 
 import { SurveyPollTextQuestion as SurveyPollTextQuestionComponent } from './SurveyPollTextQuestion';
 

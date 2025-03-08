@@ -19,7 +19,8 @@
     "preset": "@repo/jest-presets/node"
   },
   "dependencies": {
-    "@repo/logger": "*",
+    "@google-cloud/datastore": "9.2.1",
+    "@repo/models": "*",
     "body-parser": "1.20.3",
     "cors": "2.8.5",
     "express": "5.0.0",

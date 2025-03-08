@@ -55,8 +55,8 @@ jobs:
         run: |
           yarn turbo @repo/eslint-config#build
           yarn turbo @repo/jest-presets#build
-          yarn turbo @repo/logger#build
           yarn turbo @repo/typescript-config#build
+          yarn turbo @repo/models#build
 
       - name: Build apps
         run: |

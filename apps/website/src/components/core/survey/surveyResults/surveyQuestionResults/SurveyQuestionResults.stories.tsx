@@ -1,8 +1,11 @@
 import { Box, Stack } from '@chakra-ui/react';
+import {
+  type SurveyPollChoice,
+  type SurveyPollChoiceQuestion,
+} from '@repo/models';
 import { type Meta, type StoryObj } from '@storybook/react';
 
 import { ColorModeButton, ColorModeProvider } from '@/components/ui';
-import { type SurveyPollChoice, type SurveyPollChoiceQuestion } from '@/models';
 
 import { SurveyQuestionResults as SurveyQuestionResultsComponent } from './SurveyQuestionResults';
 

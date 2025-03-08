@@ -6,11 +6,11 @@ import {
   Text,
   useSlotRecipe,
 } from '@chakra-ui/react';
+import { type SurveyPollChoiceQuestion as SurveyPollChoiceQuestionModel } from '@repo/models';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { H2Heading } from '@/components/core';
-import { type SurveyPollChoiceQuestion as SurveyPollChoiceQuestionModel } from '@/models';
 
 type SurveyPollChoiceQuestionVariantProps =
   SlotRecipeProps<'surveyPollChoiceQuestion'> & {

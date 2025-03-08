@@ -1,9 +1,9 @@
 import { Box, Card, Center, Stack } from '@chakra-ui/react';
+import { type SurveyPollChoice } from '@repo/models';
 import { type Meta, type StoryObj } from '@storybook/react';
 
 import { H3Heading } from '@/components/core';
 import { ColorModeButton, ColorModeProvider } from '@/components/ui';
-import { type SurveyPollChoice } from '@/models';
 
 import { SurveyResultsBreakdown as SurveyResultsBreakdownComponent } from './SurveyResultsBreakdown';
 
