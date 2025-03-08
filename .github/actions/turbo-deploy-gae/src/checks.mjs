@@ -15,21 +15,10 @@ const checkNodeModulesExist = async (root) => {
   }
 };
 
-/** @type {(root: string) => Promise<void>} */
-const checkGitFolderExists = async (root) => {
-  try {
-    const gitFolder = join(root, '.git');
-    await access(gitFolder);
-  } catch (error) {
-    throw new Error(`Couldn't find .git folder`);
-  }
-};
-
 /** @type {() => Promise<void>} */
 const run = async () => {
   const folder = readFolderArg();
 
-  await checkGitFolderExists(folder);
   await checkNodeModulesExist(folder);
 };
 

@@ -1,12 +1,13 @@
 //@ts-check
 
-import { writeFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
 import { readEnvArg, readAppVersionArg, readFolderArg } from './readArgs.mjs';
 
 /** @type {(content: string, version: string) => string} */
 const getContent = (env, version) => {
+  const versionName = env === 'prod' ? 'prod' : version;
   const baseUrl =
     env === 'prod'
       ? 'https://celine.louvet.me'
@@ -29,7 +30,7 @@ env_variables:
   HOST: '0.0.0.0'
   VITE_BASE_URL: '${baseUrl}'
   VITE_API_BASE_URL: '${apiBaseUrl}'
-  VERSION_NAME: 'prod'
+  VERSION_NAME: '${versionName}'
 
 `;
 };
@@ -37,8 +38,13 @@ env_variables:
 /** @type {(content: string, root: string) => Promise<void>} */
 const writeAppFile = async (content, root) => {
   try {
-    const filePath = join(root, 'out/app.yaml');
-    return await writeFile(filePath, content, 'utf8');
+    const filePath = join(root, 'app.yaml');
+    await writeFile(filePath, content, 'utf8');
+
+    console.log(`\t→ app.yml written at ${filePath}`);
+
+    const readContent = await readFile(filePath, 'utf8');
+    console.log('content', readContent);
   } catch (err) {
     console.error(`Couldn't write app.yaml`, err);
     throw err;

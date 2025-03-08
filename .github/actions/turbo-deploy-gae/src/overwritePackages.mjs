@@ -33,7 +33,7 @@ const writePackages = async (filePath, packages) => {
 /** @type {(root: string) => Promise<void>} */
 export const overwritePackages = async (root) => {
   try {
-    const filePath = join(root, 'out/package.json');
+    const filePath = join(root, 'package.json');
     const content = await readFile(filePath, 'utf8');
 
     const packages = JSON.parse(content);

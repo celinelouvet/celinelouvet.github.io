@@ -37,6 +37,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
+          cache: 'yarn'
+
+      - name: Cache node modules
+        uses: actions/cache@v4
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
 
       - name: Cache turbo build setup
         uses: actions/cache@v4
@@ -85,67 +98,67 @@ jobs:
     outputs:
       versionUrl: ${{ steps.deploy.outputs.version_url }}
 
-  slidePdf:
-    name: Generate Slides PDF
-    needs: deploy
-    runs-on: ${{ matrix.os }}
+  # slidePdf:
+  #   name: Generate Slides PDF
+  #   needs: deploy
+  #   runs-on: ${{ matrix.os }}
 
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [20]
+  #   strategy:
+  #     matrix:
+  #       os: [ubuntu-latest]
+  #       node: [20]
 
-    permissions:
-      contents: read
-      id-token: write
+  #   permissions:
+  #     contents: read
+  #     id-token: write
 
-    steps:
-      - name: Define bucket path
-        id: bucket
-        run: echo "BUCKET_PATH=${{env.BUCKET_NAME}}/${{ env.VERSION }}/slides" >> $GITHUB_OUTPUT
+  #   steps:
+  #     - name: Define bucket path
+  #       id: bucket
+  #       run: echo "BUCKET_PATH=${{env.BUCKET_NAME}}/${{ env.VERSION }}/slides" >> $GITHUB_OUTPUT
 
-      - name: Checkout
-        uses: actions/checkout@v4
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
 
-      - name: Setup node env
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node }}
+  #     - name: Setup node env
+  #       uses: actions/setup-node@v4
+  #       with:
+  #         node-version: ${{ matrix.node }}
 
-      - name: Cache node modules
-        uses: actions/cache@v4
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+  #     - name: Cache node modules
+  #       uses: actions/cache@v4
+  #       env:
+  #         cache-name: cache-node-modules
+  #       with:
+  #         path: ~/.npm
+  #         key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+  #         restore-keys: |
+  #           ${{ runner.os }}-build-${{ env.cache-name }}-
+  #           ${{ runner.os }}-build-
+  #           ${{ runner.os }}-
 
-      - name: Generate PDF
-        shell: bash
-        run: cd slides-generator && yarn && yarn slides --pageUrl "$VERSION_URL"
-        env:
-          VERSION_URL: ${{ needs.deploy.outputs.versionUrl }}
+  #     - name: Generate PDF
+  #       shell: bash
+  #       run: cd slides-generator && yarn && yarn slides --pageUrl "$VERSION_URL"
+  #       env:
+  #         VERSION_URL: ${{ needs.deploy.outputs.versionUrl }}
 
-      - id: auth
-        name: Auth to GCP
-        uses: google-github-actions/auth@v2
-        with:
-          credentials_json: ${{ secrets.GCP_SA_KEY }}
+  #     - id: auth
+  #       name: Auth to GCP
+  #       uses: google-github-actions/auth@v2
+  #       with:
+  #         credentials_json: ${{ secrets.GCP_SA_KEY }}
 
-      - name: Upload Slides PDF
-        uses: google-github-actions/upload-cloud-storage@v2
-        with:
-          path: './slides-generator/Highway_to_fail.pdf'
-          destination: ${{ steps.bucket.outputs.BUCKET_PATH }}
-          predefinedAcl: publicRead
+  #     - name: Upload Slides PDF
+  #       uses: google-github-actions/upload-cloud-storage@v2
+  #       with:
+  #         path: './slides-generator/Highway_to_fail.pdf'
+  #         destination: ${{ steps.bucket.outputs.BUCKET_PATH }}
+  #         predefinedAcl: publicRead
 
-      - name: Upload Notes PDF
-        uses: google-github-actions/upload-cloud-storage@v2
-        with:
-          path: './slides-generator/Notes_-_Highway_to_fail.pdf'
-          destination: ${{ steps.bucket.outputs.BUCKET_PATH }}
-          predefinedAcl: publicRead
+  #     - name: Upload Notes PDF
+  #       uses: google-github-actions/upload-cloud-storage@v2
+  #       with:
+  #         path: './slides-generator/Notes_-_Highway_to_fail.pdf'
+  #         destination: ${{ steps.bucket.outputs.BUCKET_PATH }}
+  #         predefinedAcl: publicRead

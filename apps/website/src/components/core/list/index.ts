@@ -17,7 +17,7 @@ export type ListParts = typeof ChakraList & {
 
 export type ListProps = ChakraListRootProps & LinkItemProps & TextItemProps;
 
-export const List = ChakraList as ListParts;
+export const List = { ...ChakraList } as ListParts;
 
 List.TextItem = TextItem;
 List.LinkItem = LinkItem;
