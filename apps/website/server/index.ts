@@ -15,7 +15,7 @@ export const createServer = (): Express => {
   app.use(cors());
 
   app.get('/test', (_req: Request, res: Response) => {
-    res.send('Started');
+    res.send('Website started');
   });
 
   // eslint-disable-next-line import-x/no-named-as-default-member

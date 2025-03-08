@@ -3,13 +3,13 @@ import {
   type CollapsibleRootProps,
   useCollapsible,
 } from '@chakra-ui/react';
-import { type FC, type ReactNode } from 'react';
+import * as React from 'react';
 
 import { useLogger } from '@/hooks';
 
 import { CollapsibleTrigger } from './CollapsibleTrigger';
 
-const hasContent = (children?: ReactNode) => {
+const hasContent = (children?: React.ReactNode) => {
   if (!children) {
     return false;
   }
@@ -30,23 +30,22 @@ type MoreLessCollapsibleProps = CollapsibleRootProps & {
   logMetadata?: Record<string, string | boolean | null | undefined>;
 };
 
-export const MoreLessCollapsible: FC<MoreLessCollapsibleProps> = ({
+export const MoreLessCollapsible: React.FC<MoreLessCollapsibleProps> = ({
   children,
   shown = true,
   logMetadata = {},
   ...props
 }) => {
+  const { log } = useLogger();
+
   const collapsible = useCollapsible({
     defaultOpen: false,
     lazyMount: true,
-    onOpenChange: () => {
-      log('Collapsible', {
-        newState: collapsible.open ? 'Open' : 'Close',
-        ...logMetadata,
-      });
+    onOpenChange: async ({ open }) => {
+      const content = { newState: open ? 'Open' : 'Close', ...logMetadata };
+      await log('Collapsible', content);
     },
   });
-  const { log } = useLogger();
 
   if (!hasContent(children) || !shown) {
     return null;

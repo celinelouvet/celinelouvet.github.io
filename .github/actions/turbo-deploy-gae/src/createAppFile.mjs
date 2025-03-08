@@ -17,7 +17,10 @@ const getContent = (env, version, service) => {
     env === 'prod'
       ? 'https://celine.louvet.me'
       : `https://${version}-dot-celinelouvet-cv.ew.r.appspot.com`;
-  const apiBaseUrl = `${baseUrl}/api`;
+  const apiBaseUrl =
+    env === 'prod'
+      ? `https://api-dot-celinelouvet-cv.ew.r.appspot.com`
+      : `https://${version}-dot-api-dot-celinelouvet-cv.ew.r.appspot.com`;
 
   return `runtime: nodejs22
 service: ${service}

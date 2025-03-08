@@ -15,10 +15,10 @@ export const createServer = (): Express => {
   app.use(cors());
 
   app.get('/test', (_req: Request, res: Response) => {
-    res.send('Started');
+    res.send('Server started');
   });
 
-  app.post('/log', createLog);
+  app.post('/logger', createLog);
 
   return app;
 };

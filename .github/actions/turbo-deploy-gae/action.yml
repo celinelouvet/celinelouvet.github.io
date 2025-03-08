@@ -1,4 +1,4 @@
-name: 'Deploy TurboRepo website to Google App Engine'
+name: 'Deploy TurboRepo app to Google App Engine'
 description: 'Deploy TurboRepo Apps to Google App Engine using a flexible nodejs runtime and yarn.'
 author: Céline Louvet
 branding:
@@ -113,3 +113,7 @@ runs:
       name: Test deployed version
       run: node ${{ github.action_path }}/src/testDeployment.mjs --testUrl=${{ steps.deploy.outputs.version_url }}${{ inputs.test_endpoint }}
       shell: bash
+
+    - name: Clean
+      shell: bash
+      run: rm -fr $OUT

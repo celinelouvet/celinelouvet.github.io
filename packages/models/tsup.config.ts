@@ -4,7 +4,8 @@ export default defineConfig((options: Options) => ({
   entryPoints: ['src/index.ts'],
   clean: true,
   dts: true,
-  format: ['cjs'],
+  sourcemap: true,
+  format: ['cjs', 'esm'],
   target: 'node22',
   ...options,
 }));

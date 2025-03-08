@@ -29,19 +29,21 @@ export const ColorModeMenuInner: React.FC<ColorModeMenuInnerProps> = ({
   const { t } = useTranslation('header', { keyPrefix: 'colorModes' });
   const { colorMode, setColorMode } = useColorMode();
 
-  const changeColorMode = (value?: string | string[]): void => {
-    if (!value) {
-      return;
-    }
-    if (Array.isArray(value)) {
-      return changeColorMode(value[0]);
-    }
-    if (isColorMode(value)) {
-      log(`Color mode change`, { from: colorMode, to: value });
-
-      setColorMode(value);
-    }
-  };
+  const changeColorMode = React.useCallback(
+    (value?: string | string[]): void => {
+      if (!value) {
+        return;
+      }
+      if (Array.isArray(value)) {
+        return changeColorMode(value[0]);
+      }
+      if (isColorMode(value)) {
+        setColorMode(value);
+        log(`Color mode change`, { from: colorMode, to: value });
+      }
+    },
+    [colorMode, log, setColorMode],
+  );
 
   return (
     <Menu.Root>
