@@ -1,9 +1,8 @@
-import { Box, Center, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Center, Stack, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router';
 
-import { H2Heading } from '@/components/core';
+import { H2Heading, Link } from '@/components/core';
 import { useLogger } from '@/hooks';
 
 export type BiographyProps = {
@@ -25,14 +24,13 @@ export const Biography: React.FC<BiographyProps> = ({ biographies }) => {
       </Box>
 
       <Center>
-        <Link
-          as={NavLink}
-          href="/resume"
+        <Link.Internal
+          to="/resume"
           variant="underline"
           onClick={() => log('See full resume')}
         >
           {t('seeDetails')}
-        </Link>
+        </Link.Internal>
       </Center>
     </Stack>
   );

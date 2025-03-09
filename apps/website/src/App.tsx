@@ -1,19 +1,19 @@
 import { BrowserRouter, Route, Routes } from 'react-router';
 
 import { PageContainer } from '@/components/core';
-import { Header, Home, Talks } from '@/components/features';
-import { useResume } from '@/hooks';
+import { Header } from '@/components/features';
+import { Home, Talk, Talks } from '@/pages';
 
 function App() {
-  const resume = useResume();
   return (
     <>
       <BrowserRouter>
         <Header />
         <PageContainer>
           <Routes>
-            <Route path="/" element={<Home resume={resume} />} />
-            <Route path="/talks" element={<Talks resume={resume} />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/talks/:talkSubjectId" element={<Talk />} />
+            <Route path="/talks" element={<Talks />}></Route>
           </Routes>
         </PageContainer>
       </BrowserRouter>

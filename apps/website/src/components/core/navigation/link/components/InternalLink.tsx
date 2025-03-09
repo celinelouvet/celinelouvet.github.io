@@ -19,8 +19,8 @@ export const InternalLink = React.forwardRef<
   const { children, to, ...restProps } = props;
 
   return (
-    <Link as={NavLink} variant="plain" href={to} ref={ref} {...restProps}>
-      {children}
+    <Link asChild variant="plain" ref={ref} {...restProps}>
+      <NavLink to={to}>{children}</NavLink>
     </Link>
   );
 });

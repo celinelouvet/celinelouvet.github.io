@@ -2,7 +2,6 @@ import {
   Box,
   Card,
   Flex,
-  Link,
   LinkBox,
   LinkOverlay,
   Spacer,
@@ -12,7 +11,7 @@ import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router';
 
-import { DateText, H3Heading } from '@/components/core';
+import { DateText, H3Heading, Link } from '@/components/core';
 import { type ConventionTalk } from '@/data';
 import { useLogger } from '@/hooks';
 
@@ -34,26 +33,27 @@ export const Talk: React.FC<TalkProps> = ({ talk }) => {
       <LinkBox as="div">
         <Card.Root size="sm" variant="subtle">
           <Card.Header>
-            <LinkOverlay
-              as={NavLink}
-              href={link}
-              onClick={() => log('Talk from home', { topic })}
-            >
-              <H3Heading>
-                <Flex
-                  gap="2"
-                  alignItems="baseline"
-                  direction={{ base: 'column', xl: 'row' }}
-                >
-                  <Text as="span">{name}</Text>
-                  <Text as="span" display={{ base: 'none', xl: 'inline' }}>
-                    –
-                  </Text>
-                  <Text as="span">
-                    {topic} ({language.toUpperCase()})
-                  </Text>
-                </Flex>
-              </H3Heading>
+            <LinkOverlay asChild>
+              <NavLink
+                to={link}
+                onClick={() => log('Talk from home', { topic })}
+              >
+                <H3Heading>
+                  <Flex
+                    gap="2"
+                    alignItems="baseline"
+                    direction={{ base: 'column', xl: 'row' }}
+                  >
+                    <Text as="span">{name}</Text>
+                    <Text as="span" display={{ base: 'none', xl: 'inline' }}>
+                      –
+                    </Text>
+                    <Text as="span">
+                      {topic} ({language.toUpperCase()})
+                    </Text>
+                  </Flex>
+                </H3Heading>
+              </NavLink>
             </LinkOverlay>
           </Card.Header>
 
@@ -70,9 +70,7 @@ export const Talk: React.FC<TalkProps> = ({ talk }) => {
           </Card.Body>
 
           <Card.Footer textAlign="center" padding="4">
-            <Link as={NavLink} href={link} variant="underline">
-              {t('seeDescription')}
-            </Link>
+            <Link.Internal to={link}>{t('seeDescription')}</Link.Internal>
           </Card.Footer>
         </Card.Root>
       </LinkBox>

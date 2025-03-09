@@ -25,12 +25,10 @@ export const PossibleSubject: React.FC<PossibleSubjectProps> = ({
       <LinkBox as="div">
         <Card.Root size="sm" variant="subtle">
           <Card.Header>
-            <LinkOverlay
-              as={NavLink}
-              href={link}
-              onClick={() => log('Talk', { topic })}
-            >
-              <H3Heading>{topic}</H3Heading>
+            <LinkOverlay asChild>
+              <NavLink to={link} onClick={() => log('Talk', { topic })}>
+                <H3Heading>{topic}</H3Heading>
+              </NavLink>
             </LinkOverlay>
           </Card.Header>
 

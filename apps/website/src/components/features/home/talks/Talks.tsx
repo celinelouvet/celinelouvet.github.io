@@ -1,9 +1,8 @@
-import { Box, Center, Link, Stack } from '@chakra-ui/react';
+import { Box, Center, Stack } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router';
 
-import { H2Heading } from '@/components/core';
+import { H2Heading, Link } from '@/components/core';
 import { type ConventionTalk, type Resume } from '@/data';
 import { useLogger, useSortByConventions } from '@/hooks';
 
@@ -37,14 +36,13 @@ const TalkList: React.FC<TalkListProps> = ({ talks, title, maxShow }) => {
         ))}
 
         <Center>
-          <Link
-            as={NavLink}
+          <Link.Internal
             variant="underline"
-            href="/talks"
+            to="/talks"
             onClick={() => log('See talks')}
           >
             {t('seeAll')}
-          </Link>
+          </Link.Internal>
         </Center>
       </Stack>
     </Box>
