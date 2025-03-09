@@ -4,11 +4,11 @@ import { PageContainer } from '@/components/core';
 import { ColorModeProvider } from '@/components/ui';
 import resume from '@/data/data.fr';
 
-import { Home as HomeComponent } from './Home';
+import { Talk as TalkComponent } from './Talk';
 
 const meta = {
-  title: 'Features/Home',
-  component: HomeComponent,
+  title: 'Features/Talk',
+  component: TalkComponent,
   decorators: [
     (Story) => (
       <ColorModeProvider attribute="class">
@@ -20,8 +20,9 @@ const meta = {
   ],
   args: {
     resume,
+    talkSubjectId: 'highway_to_fail',
   },
-} satisfies Meta<typeof HomeComponent>;
+} satisfies Meta<typeof TalkComponent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

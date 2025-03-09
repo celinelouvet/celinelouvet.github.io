@@ -2,7 +2,6 @@ import { Box, Card, Flex, HStack, Spacer, Stack, Text } from '@chakra-ui/react';
 import * as React from 'react';
 
 import { DateText, H3Heading } from '@/components/core';
-import { useColorModeValue } from '@/components/ui';
 import { type Podcast } from '@/data';
 import { useHeadingSize } from '@/hooks';
 
@@ -54,16 +53,16 @@ export const PodcastDetails: React.FC<PodcastDetailsProps> = ({ podcast }) => {
 
 type DateLanguageProps = Pick<Podcast, 'language' | 'when'>;
 
-const DateLanguage: React.FC<DateLanguageProps> = ({ language, when }) => {
-  const color = useColorModeValue('gray.500', 'gray.400');
-
-  return (
-    <>
-      <HStack alignItems="baseline" color={color} fontSize="sm">
-        <DateText when={when} dateFormat="MMM YYYY" as="span" />
-        <Text as="span">–</Text>
-        <Text as="span">{language.toUpperCase()}</Text>
-      </HStack>
-    </>
-  );
-};
+const DateLanguage: React.FC<DateLanguageProps> = ({ language, when }) => (
+  <>
+    <HStack
+      alignItems="baseline"
+      color={{ base: 'brand.300', _dark: 'brand.700' }}
+      fontSize="sm"
+    >
+      <DateText when={when} dateFormat="MMM YYYY" as="span" />
+      <Text as="span">–</Text>
+      <Text as="span">{language.toUpperCase()}</Text>
+    </HStack>
+  </>
+);

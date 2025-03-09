@@ -4,11 +4,11 @@ import { PageContainer } from '@/components/core';
 import { ColorModeProvider } from '@/components/ui';
 import resume from '@/data/data.fr';
 
-import { Home as HomeComponent } from './Home';
+import { Talks as TalksComponent } from './Talks';
 
 const meta = {
-  title: 'Features/Home',
-  component: HomeComponent,
+  title: 'Features/Talks',
+  component: TalksComponent,
   decorators: [
     (Story) => (
       <ColorModeProvider attribute="class">
@@ -21,7 +21,7 @@ const meta = {
   args: {
     resume,
   },
-} satisfies Meta<typeof HomeComponent>;
+} satisfies Meta<typeof TalksComponent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

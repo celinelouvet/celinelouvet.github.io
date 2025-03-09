@@ -5,7 +5,6 @@ import {
   useRecipe,
 } from '@chakra-ui/react';
 import dayjs from 'dayjs';
-import { type FC } from 'react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -52,7 +51,7 @@ type DurationContentProps = {
   months: number;
 };
 
-const DurationContent: FC<DurationContentProps> = ({ years, months }) => {
+const DurationContent: React.FC<DurationContentProps> = ({ years, months }) => {
   const { t } = useTranslation('common', { keyPrefix: 'dates' });
 
   const yearsText = t('years', { count: years });
