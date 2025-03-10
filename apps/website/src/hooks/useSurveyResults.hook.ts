@@ -4,7 +4,7 @@ import {
   type SurveyResult,
   asSurveyResults,
 } from '@repo/models';
-import { useCallback, useEffect, useState } from 'react';
+import * as React from 'react';
 
 import { useApi, useSurveyInfos } from '@/hooks';
 
@@ -66,15 +66,15 @@ export const useSurveyResults = (
   talkSubjectId?: string | string[],
   conventionId?: string | string[],
 ) => {
-  const [surveyPoll, setSurveyPoll] = useState<SurveyPoll | null>(null);
-  const [results, setResults] = useState<ReducedResults>({});
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  const [surveyPoll, setSurveyPoll] = React.useState<SurveyPoll | null>(null);
+  const [results, setResults] = React.useState<ReducedResults>({});
+  const [loading, setLoading] = React.useState(true);
+  const [error, setError] = React.useState(false);
   const { get } = useApi();
 
   const surveyInfos = useSurveyInfos(talkSubjectId, conventionId);
 
-  const refreshQuery = useCallback(() => {
+  const refreshQuery = React.useCallback(() => {
     setLoading(true);
     setError(false);
 
@@ -104,7 +104,7 @@ export const useSurveyResults = (
       });
   }, [get, surveyInfos.surveyId, surveyInfos.surveyPoll]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (!loading) return;
 
     setSurveyPoll(surveyInfos.surveyPoll);

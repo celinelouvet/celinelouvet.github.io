@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import * as React from 'react';
 
 export const useWindowFocus = (onFocusChange: (hasFocus: boolean) => void) => {
-  const [focus, setFocus] = useState(false);
+  const [focus, setFocus] = React.useState(false);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleFocus = () => {
       const hasFocus = window.document.hasFocus();
 

@@ -1,15 +1,15 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import * as React from 'react';
 
 const previousKeys = ['ArrowLeft', 'ArrowUp', 'PageUp'];
 const nextKeys = ['ArrowRight', 'ArrowDown', 'PageDown', ' '];
 const defaultPosition = 0;
 
 export const useCurrentPosition = (root: string, length: number) => {
-  const [currentPosition, setCurrentPosition] = useState(defaultPosition);
+  const [currentPosition, setCurrentPosition] = React.useState(defaultPosition);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const maxPosition = length - 1;
 
     let startPosition: number | null = null;
