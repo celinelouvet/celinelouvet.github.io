@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 
 import { PageContainer } from '@/components/core';
 import { Header } from '@/components/features';
-import { Home, Talk, Talks } from '@/pages';
+import { Home, Resume, Talk, Talks } from '@/pages';
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
         <PageContainer>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/resume" element={<Resume />} />
             <Route path="/talks/:talkSubjectId" element={<Talk />} />
             <Route path="/talks" element={<Talks />}></Route>
           </Routes>

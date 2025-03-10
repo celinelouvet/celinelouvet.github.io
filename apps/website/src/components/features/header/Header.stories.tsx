@@ -26,7 +26,7 @@ type Story = StoryObj<typeof meta>;
 
 export const HeaderBelowLg: Story = {
   parameters: {
-    viewport: { defaultViewport: 'mobile2' },
+    viewport: { defaultViewport: 'tablet' },
   },
 };
 
@@ -34,12 +34,4 @@ export const HeaderAboveLg: Story = {
   parameters: {
     viewport: { defaultViewport: 'desktop' },
   },
-  render: () => (
-    <Stack>
-      <HeaderComponent />
-      <PageContainer>
-        <Text>Content</Text>
-      </PageContainer>
-    </Stack>
-  ),
 };

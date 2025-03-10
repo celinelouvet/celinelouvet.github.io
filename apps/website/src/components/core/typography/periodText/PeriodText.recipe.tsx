@@ -3,11 +3,7 @@ import { defineRecipe } from '@chakra-ui/react';
 export const periodTextRecipe = defineRecipe({
   base: {
     fontFamily: 'Nunito',
-    color: 'gray.500',
-
-    _dark: {
-      color: 'gray.400',
-    },
+    color: { base: 'brand.300', _dark: 'brand.700' },
   },
   variants: {
     size: {

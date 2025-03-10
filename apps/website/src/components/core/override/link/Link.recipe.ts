@@ -41,6 +41,13 @@ export const linkRecipe = defineRecipe({
         textUnderlineOffset: '2px',
         textDecorationColor: 'currentColor',
       },
+      solid: {
+        color: 'white',
+        backgroundColor: 'brand.500',
+        _hover: { color: 'white', backgroundColor: 'brand.400' },
+        _active: { backgroundColor: 'brand.600' },
+        _expanded: { backgroundColor: 'brand.600' },
+      },
       slideDark: {
         textDecoration: 'underline',
         color: 'brand.900',
