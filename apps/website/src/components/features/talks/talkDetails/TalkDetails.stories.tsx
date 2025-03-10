@@ -1,13 +1,18 @@
 import { type Meta, type StoryObj } from '@storybook/react';
 
 import { PageContainer } from '@/components/core';
-import { ColorModeProvider } from '@/components/ui';
 
 import { TalkDetails as TalkDetailsComponent } from './TalkDetails';
 
 const meta = {
   title: 'Features/Talks',
   component: TalkDetailsComponent,
+} satisfies Meta<typeof TalkDetailsComponent>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const TalkDetails: Story = {
   args: {
     talk: {
       subjectId: 'permissions_mysteries',
@@ -27,18 +32,12 @@ const meta = {
       },
     },
   },
+
   decorators: [
     (Story) => (
-      <ColorModeProvider attribute="class">
-        <PageContainer>
-          <Story />
-        </PageContainer>
-      </ColorModeProvider>
+      <PageContainer>
+        <Story />
+      </PageContainer>
     ),
   ],
-} satisfies Meta<typeof TalkDetailsComponent>;
-
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const TalkDetails: Story = {};
+};

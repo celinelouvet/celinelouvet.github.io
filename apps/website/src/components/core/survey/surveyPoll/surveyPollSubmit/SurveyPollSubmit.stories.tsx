@@ -6,12 +6,13 @@ import { SurveyPollSubmit as SurveyPollSubmitComponent } from './SurveyPollSubmi
 const meta = {
   title: 'Core/Survey/Poll',
   component: SurveyPollSubmitComponent,
-  args: {
-    onSubmit: fn(),
-  },
 } satisfies Meta<typeof SurveyPollSubmitComponent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Submit: Story = {};
+export const Submit: Story = {
+  args: {
+    onSubmit: fn(),
+  },
+};

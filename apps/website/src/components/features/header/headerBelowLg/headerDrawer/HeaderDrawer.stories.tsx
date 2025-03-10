@@ -6,6 +6,12 @@ import { HeaderDrawer as HeaderDrawerComponent } from './HeaderDrawer';
 const meta = {
   title: 'Features/Header/BelowLg/Parts',
   component: HeaderDrawerComponent,
+} satisfies Meta<typeof HeaderDrawerComponent>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Menu: Story = {
   args: {
     title: 'Céline Louvet',
     open: true,
@@ -14,9 +20,4 @@ const meta = {
   parameters: {
     viewport: { defaultViewport: 'mobile2' },
   },
-} satisfies Meta<typeof HeaderDrawerComponent>;
-
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const Menu: Story = {};
+};

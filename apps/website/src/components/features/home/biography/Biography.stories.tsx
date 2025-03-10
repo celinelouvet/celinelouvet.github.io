@@ -1,22 +1,16 @@
-import { Box } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
-
-import { ColorModeProvider } from '@/components/ui';
 
 import { Biography as BiographyComponent } from './Biography';
 
 const meta = {
   title: 'Features/Home/Parts',
   component: BiographyComponent,
-  decorators: [
-    (Story) => (
-      <ColorModeProvider attribute="class">
-        <Box padding="4">
-          <Story />
-        </Box>
-      </ColorModeProvider>
-    ),
-  ],
+} satisfies Meta<typeof BiographyComponent>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Biography: Story = {
   args: {
     biographies: [
       'Développeuse backend et passionnée, depuis 18 ans, aimant la recherche de stabilité et de qualité d’une application.',
@@ -24,9 +18,4 @@ const meta = {
       'Actuellement lead developer chez Shine.',
     ],
   },
-} satisfies Meta<typeof BiographyComponent>;
-
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const Biography: Story = {};
+};

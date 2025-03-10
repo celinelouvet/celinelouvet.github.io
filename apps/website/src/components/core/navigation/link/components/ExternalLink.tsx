@@ -1,9 +1,14 @@
-import { Link, type LinkProps } from '@chakra-ui/react';
+import { Link, type LinkProps, type RecipeProps } from '@chakra-ui/react';
 import * as React from 'react';
 import { LuExternalLink } from 'react-icons/lu';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-export interface ExternalLinkProps extends LinkProps {}
+type ExternalLinkVariantProps = RecipeProps<'link'> & {
+  href: string;
+};
+
+export interface ExternalLinkProps
+  extends Omit<LinkProps, 'href'>,
+    React.PropsWithChildren<ExternalLinkVariantProps> {}
 
 export const ExternalLink = React.forwardRef<
   HTMLAnchorElement,

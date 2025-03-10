@@ -7,9 +7,6 @@ import { H2Heading } from '../../typography';
 const meta = {
   title: 'Core/Feedback',
   component: FailureComponent,
-  args: {
-    children: 'Nope everything is very bad',
-  },
 } satisfies Meta<typeof FailureComponent>;
 
 export default meta;
@@ -23,6 +20,10 @@ type ItemProps = {
 };
 
 export const Failure: Story = {
+  args: {
+    children: 'Nope everything is very bad',
+  },
+
   render: ({ children }) => {
     const Item = ({ variant }: ItemProps) => (
       <>

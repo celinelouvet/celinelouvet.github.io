@@ -6,7 +6,6 @@ import { H3Heading, Link as LinkComponent } from '@/components/core';
 const meta = {
   title: 'Core/Navigation',
   component: LinkComponent,
-  args: { children: 'Google', href: 'http://google.com' },
 } satisfies Meta<typeof LinkComponent>;
 
 export default meta;
@@ -18,6 +17,8 @@ type Size = (typeof sizes)[number];
 type ItemProps = { label: string; size?: Size };
 
 export const Link: Story = {
+  args: { children: 'Google' },
+
   render: ({ children }) => {
     const href = 'http://google.com';
     const to = '/blog';

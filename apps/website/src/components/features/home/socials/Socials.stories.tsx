@@ -1,22 +1,16 @@
-import { Box } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
-
-import { ColorModeProvider } from '@/components/ui';
 
 import { Socials as SocialsComponent } from './Socials';
 
 const meta = {
   title: 'Features/Home/Parts',
   component: SocialsComponent,
-  decorators: [
-    (Story) => (
-      <ColorModeProvider attribute="class">
-        <Box padding="4">
-          <Story />
-        </Box>
-      </ColorModeProvider>
-    ),
-  ],
+} satisfies Meta<typeof SocialsComponent>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Socials: Story = {
   args: {
     socials: [
       {
@@ -46,9 +40,4 @@ const meta = {
       },
     ],
   },
-} satisfies Meta<typeof SocialsComponent>;
-
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const Socials: Story = {};
+};

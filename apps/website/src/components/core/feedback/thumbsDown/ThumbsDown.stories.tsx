@@ -7,9 +7,6 @@ import { H2Heading } from '../../typography';
 const meta = {
   title: 'Core/Feedback',
   component: ThumbsDownComponent,
-  args: {
-    children: 'Nope everything is bad',
-  },
 } satisfies Meta<typeof ThumbsDownComponent>;
 
 export default meta;
@@ -23,6 +20,10 @@ type ItemProps = {
 };
 
 export const ThumbsDown: Story = {
+  args: {
+    children: 'Nope everything is bad',
+  },
+
   render: ({ children }) => {
     const Item = ({ variant }: ItemProps) => (
       <>

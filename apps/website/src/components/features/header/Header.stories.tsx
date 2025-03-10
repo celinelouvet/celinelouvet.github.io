@@ -1,8 +1,7 @@
-import { Box, Stack, Text } from '@chakra-ui/react';
+import { Stack, Text } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
 import { PageContainer } from '@/components/core';
-import { ColorModeProvider } from '@/components/ui';
 
 import { Header as HeaderComponent } from './Header';
 
@@ -12,11 +11,12 @@ const meta = {
 
   decorators: [
     (Story) => (
-      <ColorModeProvider attribute="class">
-        <Box>
-          <Story />
-        </Box>
-      </ColorModeProvider>
+      <Stack>
+        <Story />
+        <PageContainer>
+          <Text>Content</Text>
+        </PageContainer>
+      </Stack>
     ),
   ],
 } satisfies Meta<typeof HeaderComponent>;
@@ -28,14 +28,6 @@ export const HeaderBelowLg: Story = {
   parameters: {
     viewport: { defaultViewport: 'mobile2' },
   },
-  render: () => (
-    <Stack>
-      <HeaderComponent />
-      <PageContainer>
-        <Text>Content</Text>
-      </PageContainer>
-    </Stack>
-  ),
 };
 
 export const HeaderAboveLg: Story = {

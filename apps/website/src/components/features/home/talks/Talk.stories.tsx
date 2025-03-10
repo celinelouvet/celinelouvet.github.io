@@ -1,22 +1,16 @@
-import { Box } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
-
-import { ColorModeProvider } from '@/components/ui';
 
 import { Talk as TalkComponent } from './Talk';
 
 const meta = {
   title: 'Features/Home/Parts',
   component: TalkComponent,
-  decorators: [
-    (Story) => (
-      <ColorModeProvider attribute="class">
-        <Box padding="4">
-          <Story />
-        </Box>
-      </ColorModeProvider>
-    ),
-  ],
+} satisfies Meta<typeof TalkComponent>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Talk: Story = {
   args: {
     talk: {
       subjectId: 'permissions_mysteries',
@@ -37,14 +31,5 @@ const meta = {
         audio: 'https://www.breizhcamp.org/conference/programme',
       },
     },
-  },
-} satisfies Meta<typeof TalkComponent>;
-
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const Talk: Story = {
-  render: ({ talk }) => {
-    return <TalkComponent talk={talk} />;
   },
 };

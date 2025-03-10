@@ -5,7 +5,7 @@ import {
 } from '@repo/models';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { ColorModeButton, ColorModeProvider } from '@/components/ui';
+import { ColorModeButton } from '@/components/ui';
 
 import { SurveyQuestionResults as SurveyQuestionResultsComponent } from './SurveyQuestionResults';
 
@@ -42,23 +42,21 @@ type Story = StoryObj<typeof meta>;
 export const SurveyQuestionResults: Story = {
   render: () => {
     return (
-      <ColorModeProvider attribute="class">
-        <Stack gap="4">
-          <Box alignItems="flex-end">
-            <ColorModeButton />
-          </Box>
+      <Stack gap="4">
+        <Box alignItems="flex-end">
+          <ColorModeButton />
+        </Box>
 
-          <SurveyQuestionResultsComponent
-            question={questionWithoutResults}
-            results={{}}
-          />
+        <SurveyQuestionResultsComponent
+          question={questionWithoutResults}
+          results={{}}
+        />
 
-          <SurveyQuestionResultsComponent
-            question={questionWithResults}
-            results={results}
-          />
-        </Stack>
-      </ColorModeProvider>
+        <SurveyQuestionResultsComponent
+          question={questionWithResults}
+          results={results}
+        />
+      </Stack>
     );
   },
 };

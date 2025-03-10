@@ -3,18 +3,10 @@ import { type Meta, type StoryObj } from '@storybook/react';
 import { HiCheck } from 'react-icons/hi';
 
 import { H3Heading } from '@/components/core';
-import { ColorModeProvider } from '@/components/ui';
 
 const meta = {
   title: 'Core/Override',
   component: TagComponent.Root,
-  decorators: [
-    (Story) => (
-      <ColorModeProvider attribute="class">
-        <Story />
-      </ColorModeProvider>
-    ),
-  ],
 } satisfies Meta<typeof TagComponent.Root>;
 
 export default meta;

@@ -7,9 +7,6 @@ import { H2Heading } from '../../typography';
 const meta = {
   title: 'Core/Feedback',
   component: QuestionComponent,
-  args: {
-    children: 'This is a question.',
-  },
 } satisfies Meta<typeof QuestionComponent>;
 
 export default meta;
@@ -23,6 +20,10 @@ type ItemProps = {
 };
 
 export const Question: Story = {
+  args: {
+    children: 'This is a question.',
+  },
+
   render: ({ children }) => {
     const Item = ({ variant }: ItemProps) => (
       <>
