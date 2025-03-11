@@ -21,7 +21,7 @@ export const Link: Story = {
 
   render: ({ children }) => {
     const href = 'http://google.com';
-    const to = '/blog';
+    const to = '/resume';
     const Item = ({ label, size }: ItemProps) => (
       <>
         <GridItem>

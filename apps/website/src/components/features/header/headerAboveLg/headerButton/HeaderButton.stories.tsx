@@ -14,15 +14,15 @@ type Story = StoryObj<typeof meta>;
 export const HeaderButton: Story = {
   args: {
     section: {
-      to: '/blog',
-      slug: 'blog',
+      to: '/resume',
+      slug: 'resume',
     },
   },
 
   render: () => (
     <HStack gap="8">
       <HeaderButtonComponent section={{ to: '/', slug: 'home' }} />
-      <HeaderButtonComponent section={{ to: '/blog', slug: 'blog' }} />
+      <HeaderButtonComponent section={{ to: '/resume', slug: 'resume' }} />
     </HStack>
   ),
 };

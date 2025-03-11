@@ -37,12 +37,12 @@ export const List: Story = {
         icon={BsBlockquoteLeft}
         ariaLabel="Internal link with icon"
         text="Internal link with icon"
-        to="/blog"
+        to="/resume"
       />
       <ListComponent.LinkItem
         ariaLabel="Internal link without icon"
         text="Internal link without icon"
-        to="/blog"
+        to="/resume"
       />
     </ListComponent.Root>
   ),

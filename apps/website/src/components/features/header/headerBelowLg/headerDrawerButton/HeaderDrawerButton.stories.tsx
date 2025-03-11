@@ -14,8 +14,8 @@ type Story = StoryObj<typeof meta>;
 export const MenuButton: Story = {
   args: {
     section: {
-      to: '/blog',
-      slug: 'blog',
+      to: '/resume',
+      slug: 'resume',
     },
   },
   parameters: {
@@ -25,7 +25,9 @@ export const MenuButton: Story = {
   render: () => (
     <Stack gap="8">
       <HeaderDrawerButtonComponent section={{ to: '/', slug: 'home' }} />
-      <HeaderDrawerButtonComponent section={{ to: '/blog', slug: 'blog' }} />
+      <HeaderDrawerButtonComponent
+        section={{ to: '/resume', slug: 'resume' }}
+      />
     </Stack>
   ),
 };
