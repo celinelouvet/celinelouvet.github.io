@@ -1,4 +1,4 @@
-import { type SurveyPoll, type SurveyPollQuestion } from '../../../models';
+import { type SurveyPoll, type SurveyPollQuestion } from '@repo/models';
 
 const questions = new Map<string, SurveyPollQuestion>([
   [

@@ -6,11 +6,11 @@ import {
   Textarea,
   useSlotRecipe,
 } from '@chakra-ui/react';
+import { type SurveyPollTextQuestion as SurveyPollTextQuestionModel } from '@repo/models';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { H2Heading } from '@/components/core';
-import { type SurveyPollTextQuestion as SurveyPollTextQuestionModel } from '@/models';
 
 type SurveyPollTextQuestionVariantProps =
   SlotRecipeProps<'surveyPollTextQuestion'> & {

@@ -6,7 +6,6 @@ import { H2Heading, QrCode as QrCodeComponent } from '@/components/core';
 const meta = {
   title: 'Core/Media',
   component: QrCodeComponent,
-  args: { value: 'https://chakra-ui.com/docs/components/qr-code' },
 } satisfies Meta<typeof QrCodeComponent>;
 
 export default meta;
@@ -18,6 +17,8 @@ type Variant = (typeof variants)[number];
 type ItemProps = { variant: Variant };
 
 export const QrCode: Story = {
+  args: { value: 'https://chakra-ui.com/docs/components/qr-code' },
+
   render: ({ value }) => {
     const Item = ({ variant }: ItemProps) => (
       <>

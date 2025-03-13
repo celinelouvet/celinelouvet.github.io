@@ -1,19 +1,29 @@
 //@ts-check
 
-import { writeFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
-import { readEnvArg, readAppVersionArg, readFolderArg } from './readArgs.mjs';
+import {
+  readEnvArg,
+  readAppVersionArg,
+  readFolderArg,
+  readServiceArg,
+} from './readArgs.mjs';
 
-/** @type {(content: string, version: string) => string} */
-const getContent = (env, version) => {
+/** @type {(content: string, version: string, service: string) => string} */
+const getContent = (env, version, service) => {
+  const versionName = env === 'prod' ? 'prod' : version;
   const baseUrl =
     env === 'prod'
       ? 'https://celine.louvet.me'
       : `https://${version}-dot-celinelouvet-cv.ew.r.appspot.com`;
-  const apiBaseUrl = `${baseUrl}/api`;
+  const apiBaseUrl =
+    env === 'prod'
+      ? `https://api-dot-celinelouvet-cv.ew.r.appspot.com`
+      : `https://${version}-dot-api-dot-celinelouvet-cv.ew.r.appspot.com`;
 
   return `runtime: nodejs22
+service: ${service}
 
 instance_class: F2
 
@@ -29,7 +39,7 @@ env_variables:
   HOST: '0.0.0.0'
   VITE_BASE_URL: '${baseUrl}'
   VITE_API_BASE_URL: '${apiBaseUrl}'
-  VERSION_NAME: 'prod'
+  VERSION_NAME: '${versionName}'
 
 `;
 };
@@ -37,18 +47,23 @@ env_variables:
 /** @type {(content: string, root: string) => Promise<void>} */
 const writeAppFile = async (content, root) => {
   try {
-    const filePath = join(root, 'out/app.yaml');
-    return await writeFile(filePath, content, 'utf8');
+    const filePath = join(root, 'app.yaml');
+    await writeFile(filePath, content, 'utf8');
+
+    console.log(`\t→ app.yml written at ${filePath}`);
+
+    const readContent = await readFile(filePath, 'utf8');
+    console.log('content', readContent);
   } catch (err) {
     console.error(`Couldn't write app.yaml`, err);
     throw err;
   }
 };
 
-/** @type {(env:string, version: string, root: string) => Promise<void>} */
-export const createAppFile = async (env, version, root) => {
+/** @type {(env:string, version: string, service: string, root: string) => Promise<void>} */
+export const createAppFile = async (env, version, service, root) => {
   try {
-    const content = getContent(env, version);
+    const content = getContent(env, version, service);
     await writeAppFile(content, root);
 
     console.log(`\t→ app.yml is ready`);
@@ -61,8 +76,9 @@ const run = async () => {
   const env = readEnvArg();
   const version = readAppVersionArg();
   const root = readFolderArg();
+  const service = readServiceArg();
 
-  await createAppFile(env, version, root);
+  await createAppFile(env, version, service, root);
 };
 
 run().catch((error) => {

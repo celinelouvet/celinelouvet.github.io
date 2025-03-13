@@ -1,23 +1,25 @@
-import { useEffect, useState } from 'react';
+import { type SurveyPoll, SurveyState } from '@repo/models';
+import * as React from 'react';
 
 import { useSurveyInfos } from './useSurveyInfos.hook';
-import { type SurveyPoll, SurveyState } from '../models';
 
 export const useSurveyPoll = (
   talkSubjectId?: string | string[],
   conventionId?: string | string[],
 ) => {
-  const [surveyId, setSurveyId] = useState<string | null>(null);
-  const [surveyPoll, setSurveyPoll] = useState<SurveyPoll | null>(null);
-  const [surveyState, setSurveyState] = useState<SurveyState>(
+  const [surveyId, setSurveyId] = React.useState<string | null>(null);
+  const [surveyPoll, setSurveyPoll] = React.useState<SurveyPoll | null>(null);
+  const [surveyState, setSurveyState] = React.useState<SurveyState>(
     SurveyState.Unknown,
   );
-  const [states, setStates] = useState(new Map<string, boolean>());
-  const [values, setValues] = useState(new Map<string, boolean | string>());
+  const [states, setStates] = React.useState(new Map<string, boolean>());
+  const [values, setValues] = React.useState(
+    new Map<string, boolean | string>(),
+  );
 
   const surveyInfos = useSurveyInfos(talkSubjectId, conventionId);
 
-  useEffect(() => {
+  React.useEffect(() => {
     setSurveyState(surveyInfos.state);
 
     setSurveyId(surveyInfos.surveyId);

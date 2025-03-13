@@ -12,10 +12,31 @@ export const buttonRecipe = defineRecipe({
       },
 
       outline: {
-        backgroundColor: { base: 'brand.700', _dark: 'brand.400' },
+        color: { base: 'brand.200', _dark: 'brand.800' },
+        borderColor: { base: 'brand.700', _dark: 'brand.400' },
         _hover: {
           backgroundColor: { base: 'brand.800', _dark: 'brand.300' },
         },
+        _focus: {
+          backgroundColor: { base: 'brand.800', _dark: 'brand.300' },
+        },
+        _expanded: {
+          backgroundColor: { base: 'brand.800', _dark: 'brand.300' },
+        },
+      },
+
+      'solid-link': {
+        color: { base: 'white', _dark: 'white' },
+        backgroundColor: 'brand.500',
+
+        _hover: {
+          textDecoration: 'underline',
+
+          color: { base: 'white', _dark: 'white' },
+          backgroundColor: { base: 'brand.400', _dark: 'brand.400' },
+        },
+        _active: { backgroundColor: 'brand.600' },
+        _expanded: { backgroundColor: 'brand.600' },
       },
     },
 

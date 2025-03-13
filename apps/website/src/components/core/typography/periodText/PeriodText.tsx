@@ -5,7 +5,6 @@ import {
   useRecipe,
 } from '@chakra-ui/react';
 import * as React from 'react';
-import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { type Period } from '@/data';
@@ -38,7 +37,7 @@ export const PeriodText = React.forwardRef<HTMLSpanElement, PeriodTextProps>(
   },
 );
 
-const ToComponent: FC<PeriodTextProps> = ({ period }) => {
+const ToComponent: React.FC<PeriodTextProps> = ({ period }) => {
   const { t } = useTranslation('common', { keyPrefix: 'dates' });
 
   if (!period.to) {

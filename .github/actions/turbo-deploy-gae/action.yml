@@ -1,4 +1,4 @@
-name: 'Deploy TurboRepo website to Google App Engine'
+name: 'Deploy TurboRepo app to Google App Engine'
 description: 'Deploy TurboRepo Apps to Google App Engine using a flexible nodejs runtime and yarn.'
 author: Céline Louvet
 branding:
@@ -27,6 +27,11 @@ inputs:
     description: App name to deploy
     required: true
 
+  target_service:
+    description: Service name to deploy
+    required: false
+    default: 'default'
+
   apps_directory:
     description: Folder name containing the apps
     default: apps
@@ -44,37 +49,47 @@ outputs:
 runs:
   using: 'composite'
   steps:
+    - name: Simplify monorepo to ${{inputs.target_app}}
+      shell: bash
+      run: yarn turbo prune --scope=${{ inputs.target_app }}
+
+    - name: Add out dir from turbo prune to env
+      shell: bash
+      run: echo "OUT=${{ github.workspace }}/out" >> $GITHUB_ENV
+
+    - name: Install dependencies
+      shell: bash
+      run: yarn install
+      working-directory: out
+
+    - name: Build app
+      shell: bash
+      run: yarn turbo ${{ inputs.target_app }}#build
+      working-directory: out
+
     - name: Checks
       shell: bash
-      run: node ${{ github.action_path }}/src/checks.mjs --folder=${{ github.workspace }}
+      run: node ${{ github.action_path }}/src/checks.mjs --folder=$OUT
 
     - name: Define working directory
       shell: bash
-      run: echo "TARGET_DIRECTORY=${{ inputs.apps_directory }}/${{ inputs.target_app }}" >> $GITHUB_ENV
+      run: echo "TARGET_DIRECTORY=$OUT/${{ inputs.apps_directory }}/${{ inputs.target_app }}" >> $GITHUB_ENV
 
     - name: Define package name
       shell: bash
       run: echo "PACKAGE_NAME=$(jq -r '.name' $TARGET_DIRECTORY/package.json)" >> $GITHUB_ENV
 
-    - name: Build target app
+    - name: Overwrite $OUT/package.json
       shell: bash
-      run: yarn turbo run build --filter ${{ inputs.target_app }}
+      run: node ${{ github.action_path }}/src/overwritePackages.mjs --folder=$OUT
 
-    - name: Simplify monorepo
+    - name: Prepare $OUT/.gcloudignore
       shell: bash
-      run: yarn turbo prune --scope=$PACKAGE_NAME
+      run: node ${{ github.action_path }}/src/createGcloudIgnore.mjs --folder=$OUT
 
-    - name: Overwrite package.json
+    - name: Prepare $OUT/app.yaml
       shell: bash
-      run: node ${{ github.action_path }}/src/overwritePackages.mjs --folder=${{ github.workspace }}
-
-    - name: Prepare .gcloudignore
-      shell: bash
-      run: node ${{ github.action_path }}/src/createGcloudIgnore.mjs --folder=${{ github.workspace }}
-
-    - name: Prepare app.yaml
-      shell: bash
-      run: node ${{ github.action_path }}/src/createAppFile.mjs --folder=${{ github.workspace }} --env=staging --version=${{ github.ref_name }}
+      run: node ${{ github.action_path }}/src/createAppFile.mjs --folder=$OUT --env=staging --version=${{ github.ref_name }} --service=${{inputs.target_service}}
 
     - name: Authenticate with Google Cloud
       uses: google-github-actions/auth@v2
@@ -90,7 +105,7 @@ runs:
       with:
         project_id: ${{ inputs.gcloud_project_id }}
         deliverables: app.yaml
-        promote: false
+        promote: ${{inputs.should_promote}}
         version: ${{ github.ref_name }}
         working_directory: out
 
@@ -98,3 +113,7 @@ runs:
       name: Test deployed version
       run: node ${{ github.action_path }}/src/testDeployment.mjs --testUrl=${{ steps.deploy.outputs.version_url }}${{ inputs.test_endpoint }}
       shell: bash
+
+    - name: Clean
+      shell: bash
+      run: rm -fr $OUT

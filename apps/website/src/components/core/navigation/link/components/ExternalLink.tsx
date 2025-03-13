@@ -1,9 +1,14 @@
-import { Link, type LinkProps, chakra } from '@chakra-ui/react';
+import { Link, type LinkProps, type RecipeProps } from '@chakra-ui/react';
 import * as React from 'react';
-import { BsBoxArrowUpRight } from 'react-icons/bs';
+import { LuExternalLink } from 'react-icons/lu';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-export interface ExternalLinkProps extends LinkProps {}
+type ExternalLinkVariantProps = RecipeProps<'link'> & {
+  href: string;
+};
+
+export interface ExternalLinkProps
+  extends Omit<LinkProps, 'href'>,
+    React.PropsWithChildren<ExternalLinkVariantProps> {}
 
 export const ExternalLink = React.forwardRef<
   HTMLAnchorElement,
@@ -12,10 +17,15 @@ export const ExternalLink = React.forwardRef<
   const { children, href, ...restProps } = props;
 
   return (
-    <Link asChild ref={ref} {...restProps}>
-      <chakra.a href={href} target="_blank" rel="noopener noreferrer">
-        {children} <BsBoxArrowUpRight />
-      </chakra.a>
+    <Link
+      href={href}
+      variant="plain"
+      target="_blank"
+      rel="noopener noreferrer"
+      ref={ref}
+      {...restProps}
+    >
+      {children} <LuExternalLink />
     </Link>
   );
 });

@@ -1,6 +1,5 @@
 import path from 'node:path';
 
-import { log } from '@repo/logger';
 import { json, urlencoded } from 'body-parser';
 import cors from 'cors';
 import express, { type Express, type Request, type Response } from 'express';
@@ -16,7 +15,7 @@ export const createServer = (): Express => {
   app.use(cors());
 
   app.get('/test', (_req: Request, res: Response) => {
-    res.send('Started');
+    res.send('Website started');
   });
 
   // eslint-disable-next-line import-x/no-named-as-default-member
@@ -29,5 +28,5 @@ const port = process.env.PORT ?? 5001;
 const server = createServer();
 
 server.listen(port, () => {
-  log(`Website is served on ${port}`);
+  console.log(`Website is served on ${port}`);
 });

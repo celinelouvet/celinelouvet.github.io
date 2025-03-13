@@ -7,7 +7,6 @@ import { readFolderArg } from './readArgs.mjs';
 
 const content = [
   '.gcloudignore',
-  '.git',
   '.gitignore',
   'README.md',
   '.turbo',
@@ -16,7 +15,7 @@ const content = [
 
 /** @type {(root: string) => Promise<void>} */
 const createGcloudIgnore = async (root) => {
-  const filePath = join(root, 'out/.gcloudignore');
+  const filePath = join(root, '.gcloudignore');
   await writeFile(filePath, content);
 
   console.log(`\t→ .gcloudignore is ready`);

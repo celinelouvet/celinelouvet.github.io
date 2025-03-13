@@ -26,6 +26,11 @@ type ItemProps = {
 };
 
 export const DateTexts: Story = {
+  args: {
+    when: '2023/07/31',
+    dateFormat: 'MMMM D, YYYY',
+  },
+
   render: ({ when, dateFormat }) => {
     const Item = ({ title, size, variant }: ItemProps) => (
       <>

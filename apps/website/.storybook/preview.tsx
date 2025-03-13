@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ChakraProvider } from '@chakra-ui/react';
+import { Box, ChakraProvider } from '@chakra-ui/react';
 import { withThemeByClassName } from '@storybook/addon-themes';
 import {
   Decorator,
@@ -9,6 +9,7 @@ import {
 } from '@storybook/react';
 import { MemoryRouter } from 'react-router';
 
+import { ColorModeProvider } from '../src/components/ui';
 import { customSystem } from '../src/theme';
 
 import '../src/lib/dayjs/config';
@@ -16,9 +17,14 @@ import '../src/lib/i18n/config';
 
 const WithStoryThemeProvider = (Story: StoryFn) => (
   <ChakraProvider value={customSystem}>
-    <Story />
+    <ColorModeProvider attribute="class">
+      <Box padding={4}>
+        <Story />
+      </Box>
+    </ColorModeProvider>
   </ChakraProvider>
 );
+
 const WithRouter = (Story: StoryFn) => (
   <MemoryRouter initialEntries={['/']}>
     <Story />

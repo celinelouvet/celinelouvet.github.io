@@ -4,7 +4,7 @@ export default defineConfig((options: Options) => ({
   entryPoints: ['src/index.mjs'],
   clean: true,
   dts: true,
-  format: ['cjs'],
+  format: ['cjs', 'esm'],
   target: 'node22',
   ...options,
 }));

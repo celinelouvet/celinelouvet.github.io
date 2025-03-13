@@ -1,7 +1,9 @@
 import { json, urlencoded } from 'body-parser';
 import cors from 'cors';
-import express, { type Express } from 'express';
+import express, { type Express, type Request, type Response } from 'express';
 import morgan from 'morgan';
+
+import { createLog } from './logger';
 
 export const createServer = (): Express => {
   const app = express();
@@ -12,15 +14,11 @@ export const createServer = (): Express => {
   app.use(json());
   app.use(cors());
 
-  //@ts-expect-error - This is a test route
-  app.get('/message/:name', (req, res) => {
-    return res.json({ message: `hello ${req.params.name}` });
+  app.get('/test', (_req: Request, res: Response) => {
+    res.send('Server started');
   });
 
-  //@ts-expect-error - This is a test route
-  app.get('/status', (_, res) => {
-    return res.json({ ok: true });
-  });
+  app.post('/logger', createLog);
 
   return app;
 };

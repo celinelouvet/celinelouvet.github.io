@@ -1,11 +1,11 @@
-import { type ForwardedRef, useEffect, useState } from 'react';
+import * as React from 'react';
 
 import { type WindowSize } from './types';
 
-export const useWindowSize = (ref: ForwardedRef<'div'>): WindowSize => {
-  const [size, setSize] = useState({ width: 0, height: 0, ratio: 0 });
+export const useWindowSize = (ref: React.ForwardedRef<'div'>): WindowSize => {
+  const [size, setSize] = React.useState({ width: 0, height: 0, ratio: 0 });
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleResize = () => {
       setSize({
         width: window.innerWidth,

@@ -1,20 +1,29 @@
+import * as React from 'react';
+
+interface Window {
+  __API_BASE_URL__: string;
+}
+
 export const useApi = () => {
-  return {
-    get: async (path: string) => {
-      return fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}${path}`, {
+  const get = React.useMemo(
+    () => async (path: string) =>
+      fetch(`${(window as unknown as Window).__API_BASE_URL__}${path}`, {
         method: 'GET',
         headers: { 'Accepted-Type': 'application/json' },
         cache: 'no-store',
-      });
-    },
+      }),
+    [],
+  );
 
-    post: async (path: string, body: Record<string, unknown>) => {
-      return fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}${path}`, {
+  const post = React.useMemo(
+    () => async (path: string, body: Record<string, unknown>) =>
+      fetch(`${(window as unknown as Window).__API_BASE_URL__}${path}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
         cache: 'no-store',
-      });
-    },
-  };
+      }),
+    [],
+  );
+  return React.useMemo(() => ({ get, post }), [get, post]);
 };

@@ -1,11 +1,12 @@
-import { type TalkSubject } from '@/data';
-
-import { useResume } from './useResume.hook';
 import {
   type SurveyByConvention,
   type SurveyPoll,
   SurveyState,
-} from '../models';
+} from '@repo/models';
+
+import { type TalkSubject } from '@/data';
+
+import { useResume } from './useResume.hook';
 
 const defaultSurveyId = 'default';
 const emptySurvey = {

@@ -17,7 +17,7 @@ export type LinkParts = typeof ChakraLink & {
 
 export type LinkProps = ChakraLinkProps & ExternalLinkProps & InternalLinkProps;
 
-export const Link = ChakraLink as LinkParts;
+export const Link = { ...ChakraLink } as LinkParts;
 
 Link.External = ExternalLink;
 Link.Internal = InternalLink;

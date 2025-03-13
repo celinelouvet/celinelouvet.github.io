@@ -1,4 +1,4 @@
-import { type SurveyPoll } from '../models';
+import { type SurveyPoll } from '@repo/models';
 
 export type Certification = {
   topic: string;

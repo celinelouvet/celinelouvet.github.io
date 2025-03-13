@@ -2,31 +2,35 @@ import { useTranslation } from 'react-i18next';
 
 import { useApi } from './useApi.hook';
 
+interface Window {
+  __DEV__: boolean;
+}
+
 export const useLogger = () => {
   const { post } = useApi();
   const { i18n } = useTranslation();
 
   const language = i18n.language;
 
-  const getColorMode = () => {
-    const theme = document
-      .getElementsByTagName('body')[0]!
-      .getAttribute('class');
-    return theme?.includes('dark') ? 'dark' : 'light';
-  };
-
   return {
     log: async (
       message: string,
       metadata: Record<string, string | boolean | null | undefined> = {},
     ) => {
-      const colorMode = getColorMode();
+      const theme = document
+        .getElementsByTagName('body')[0]!
+        .getAttribute('class');
 
+      const colorMode = theme?.includes('dark') ? 'dark' : 'light';
       const body = { message, metadata: { ...metadata, colorMode, language } };
 
-      return post('/logger', body).catch((res) =>
-        console.log('Error logging: ', res),
-      );
+      if ((window as unknown as Window).__DEV__) {
+        console.log('Logging: ', body);
+      } else {
+        await post('/logger', body).catch((res) =>
+          console.log('Error logging: ', res),
+        );
+      }
     },
   };
 };

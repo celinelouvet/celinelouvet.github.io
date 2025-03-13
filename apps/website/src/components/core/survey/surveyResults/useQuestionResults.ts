@@ -1,7 +1,7 @@
+import { type SurveyPollChoiceQuestion } from '@repo/models';
 import { useTranslation } from 'react-i18next';
 
 import { useColorModeToken } from '@/hooks';
-import { type SurveyPollChoiceQuestion } from '@/models';
 
 const defaultQuestion = {
   choices: [] as SurveyPollChoiceQuestion['choices'],

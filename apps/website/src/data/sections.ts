@@ -18,10 +18,6 @@ export const sections = [
     to: '/talks',
     slug: 'talks',
   },
-  {
-    to: '/blog',
-    slug: 'blog',
-  },
 ] satisfies Section[];
 
 export const url2slugs: Map<string, Slug> = new Map(

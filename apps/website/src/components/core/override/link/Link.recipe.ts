@@ -9,7 +9,6 @@ export const linkRecipe = defineRecipe({
     fontFamily: 'Nunito',
     textWrap: 'wrap',
     paddingX: '1',
-    textDecoration: 'underline',
     cursor: 'pointer',
 
     _dark: {
@@ -28,7 +27,27 @@ export const linkRecipe = defineRecipe({
   },
   variants: {
     variant: {
-      basic: {},
+      plain: {
+        color: 'brand.500',
+
+        _hover: {
+          textUnderlineOffset: '2px',
+          textDecorationColor: 'currentColor',
+        },
+      },
+      underline: {
+        color: 'brand.500',
+
+        textUnderlineOffset: '2px',
+        textDecorationColor: 'currentColor',
+      },
+      solid: {
+        color: 'white',
+        backgroundColor: 'brand.500',
+        _hover: { color: 'white', backgroundColor: 'brand.400' },
+        _active: { backgroundColor: 'brand.600' },
+        _expanded: { backgroundColor: 'brand.600' },
+      },
       slideDark: {
         textDecoration: 'underline',
         color: 'brand.900',
@@ -51,6 +70,6 @@ export const linkRecipe = defineRecipe({
     },
   },
   defaultVariants: {
-    variant: 'basic',
+    variant: 'plain',
   },
 });
