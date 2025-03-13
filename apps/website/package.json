@@ -12,7 +12,7 @@
     "clean": "rm -rf dist",
     "aliases": "tsc-alias -p tsconfig.json",
     "typecheck": "tsc --noEmit",
-    "build": "yarn build:theme && yarn build:types && yarn build:app && yarn build:server",
+    "build": "yarn build:theme && yarn build:types && yarn build:server && yarn build:app",
     "build:theme": "npx @chakra-ui/cli typegen ./src/theme/system.config.ts",
     "build:types": "tsc -b && tsc-alias -p tsconfig.json",
     "build:app": "vite build",

@@ -19,7 +19,7 @@ export const createServer = (): Express => {
   });
 
   // eslint-disable-next-line import-x/no-named-as-default-member
-  app.use(express.static(path.resolve(__dirname)));
+  app.use(express.static(path.join(__dirname, 'app')));
 
   return app;
 };
