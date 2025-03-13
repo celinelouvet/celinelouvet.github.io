@@ -1,4 +1,4 @@
-import { type Section, url2slugs } from '@/data';
+import { type Section, url2slugs } from './sections';
 
 export const useActiveSection = (asPath: string): Section => {
   const root = keepRoot(asPath);

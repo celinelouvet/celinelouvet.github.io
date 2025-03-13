@@ -8,9 +8,8 @@ import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router';
 
-import { type Section } from '@/data';
-
 import { headerButtonRecipe } from './HeaderButton.recipe';
+import { type Section } from '../../sections';
 
 type HeaderButtonVariantProps = RecipeVariantProps<
   typeof headerButtonRecipe

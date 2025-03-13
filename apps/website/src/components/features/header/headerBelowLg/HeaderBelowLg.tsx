@@ -3,13 +3,14 @@ import * as React from 'react';
 import { useLocation } from 'react-router';
 
 import { HeaderContainer } from '@/components/core';
-import { useActiveSection, useResume } from '@/hooks';
+import { useResume } from '@/hooks';
 
 import { HeaderDrawer } from './headerDrawer';
 import { HeaderMenuTitle } from './headerMenuTitle';
 import { HeaderMenuTrigger } from './headerMenuTrigger';
 import { ColorModeMenu } from '../colorModeMenu';
 import { LanguageMenu } from '../languageMenu';
+import { useActiveSection } from '../useActiveSection.hook';
 
 export const HeaderBelowLg = React.forwardRef<HTMLDivElement, BoxProps>(
   function (props, ref) {
