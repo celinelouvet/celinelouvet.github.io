@@ -20,6 +20,7 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       target: 'modules',
+      outDir: 'dist/app',
     },
   };
 }) satisfies UserConfig;
