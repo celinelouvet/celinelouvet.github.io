@@ -10,6 +10,7 @@ export const h1HeadingRecipe = defineRecipe({
   variants: {
     variant: {
       slide: {
+        textTransform: 'none',
         fontWeight: '700',
         paddingBottom: '4',
         lineHeight: '1.2',

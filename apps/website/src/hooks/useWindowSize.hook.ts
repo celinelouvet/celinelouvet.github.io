@@ -2,7 +2,9 @@ import * as React from 'react';
 
 import { type WindowSize } from './types';
 
-export const useWindowSize = (ref: React.ForwardedRef<'div'>): WindowSize => {
+export const useWindowSize = (
+  ref: React.ForwardedRef<HTMLDivElement>,
+): WindowSize => {
   const [size, setSize] = React.useState({ width: 0, height: 0, ratio: 0 });
 
   React.useEffect(() => {
