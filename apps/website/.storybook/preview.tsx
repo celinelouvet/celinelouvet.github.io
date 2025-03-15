@@ -12,8 +12,7 @@ import { MemoryRouter } from 'react-router';
 import { ColorModeProvider } from '../src/components/ui';
 import { customSystem } from '../src/theme';
 
-import '../src/lib/dayjs/config';
-import '../src/lib/i18n/config';
+import '../src/lib/config';
 
 const WithStoryThemeProvider = (Story: StoryFn) => (
   <ChakraProvider value={customSystem}>
