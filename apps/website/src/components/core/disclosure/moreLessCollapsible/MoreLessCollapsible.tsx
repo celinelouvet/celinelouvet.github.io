@@ -25,10 +25,11 @@ const hasContent = (children?: React.ReactNode) => {
   return true;
 };
 
-type MoreLessCollapsibleProps = CollapsibleRootProps & {
-  shown?: boolean;
-  logMetadata?: Record<string, string | boolean | null | undefined>;
-};
+type MoreLessCollapsibleProps = CollapsibleRootProps &
+  React.PropsWithChildren<{
+    shown?: boolean;
+    logMetadata?: Record<string, string | boolean | null | undefined>;
+  }>;
 
 export const MoreLessCollapsible: React.FC<MoreLessCollapsibleProps> = ({
   children,
