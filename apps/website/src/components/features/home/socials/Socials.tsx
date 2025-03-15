@@ -4,8 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import { H2Heading, List } from '@/components/core';
 import { type Social } from '@/data';
-
-import { socialIcon } from '../../icons';
+import { socialIcon } from '@/lib';
 
 export type SocialsProps = {
   socials: Social[];
