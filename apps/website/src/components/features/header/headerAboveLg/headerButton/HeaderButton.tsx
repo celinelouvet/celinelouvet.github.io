@@ -22,7 +22,7 @@ export interface HeaderButtonProps
 export const HeaderButton = React.forwardRef<
   HTMLButtonElement,
   HeaderButtonProps
->(function (props, ref) {
+>(function HeaderButton(props, ref) {
   const { section, ...restProps } = props;
 
   const recipe = useRecipe({ recipe: headerButtonRecipe });

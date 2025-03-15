@@ -14,7 +14,7 @@ export interface SlideNoteProps
     React.PropsWithChildren<SlideNotePropsVariantProps> {}
 
 export const SlideNote = React.forwardRef<HTMLDivElement, SlideNoteProps>(
-  function (props, ref) {
+  function SlideNote(props, ref) {
     const { hours, minutes, seconds, children, ...restProps } = props;
     return (
       <Stack gap="1em" padding="3em" ref={ref} {...restProps}>

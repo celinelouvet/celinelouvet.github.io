@@ -8,7 +8,7 @@ export interface PictureProps
     React.PropsWithChildren<PictureVariantProps> {}
 
 export const Picture = React.forwardRef<HTMLDivElement, PictureProps>(
-  function (props, ref) {
+  function Picture(props, ref) {
     const { size, ...restProps } = props;
     const recipe = useSlotRecipe({ key: 'picture' });
     const styles = recipe(props);

@@ -13,7 +13,7 @@ import { LanguageMenu } from '../languageMenu';
 import { useActiveSection } from '../useActiveSection.hook';
 
 export const HeaderBelowLg = React.forwardRef<HTMLDivElement, BoxProps>(
-  function (props, ref) {
+  function HeaderBelowLg(props, ref) {
     const { pathname } = useLocation();
     const { slug: activeSlug } = useActiveSection(pathname);
 

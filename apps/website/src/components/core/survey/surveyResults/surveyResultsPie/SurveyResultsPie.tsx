@@ -25,7 +25,7 @@ export interface SurveyResultsPieProps
 export const SurveyResultsPie = React.forwardRef<
   HTMLDivElement,
   SurveyResultsPieProps
->(function (props, ref) {
+>(function SurveyResultsPie(props, ref) {
   const { question, results, ...restProps } = props;
 
   const { data } = useQuestionResults(question, results);

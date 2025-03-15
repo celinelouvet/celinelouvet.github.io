@@ -26,7 +26,7 @@ export interface SurveyPollSubmitProps
 export const SurveyPollSubmit = React.forwardRef<
   HTMLDivElement,
   SurveyPollSubmitProps
->(function (props, ref) {
+>(function SurveyPollSubmit(props, ref) {
   const { onSubmit, ...restProps } = props;
 
   const [sent, setSent] = React.useState(false);

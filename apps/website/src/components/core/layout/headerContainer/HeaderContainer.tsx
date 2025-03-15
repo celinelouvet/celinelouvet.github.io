@@ -19,7 +19,7 @@ export interface HeaderContainerProps
 export const HeaderContainer = React.forwardRef<
   HTMLDivElement,
   HeaderContainerProps
->(function (props, ref) {
+>(function HeaderContainer(props, ref) {
   const { children, ...restProps } = props;
 
   const recipe = useRecipe({ recipe: headerContainerRecipe });

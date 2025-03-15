@@ -45,7 +45,7 @@ export interface SurveyResultsBreakdownProps
 export const SurveyResultsBreakdown = React.forwardRef<
   HTMLDivElement,
   SurveyResultsBreakdownProps
->(function (props, ref) {
+>(function SurveyResultsBreakdown(props, ref) {
   const { question, results, ...restProps } = props;
 
   const { total, data } = useQuestionResults(question, results);

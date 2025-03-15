@@ -17,7 +17,7 @@ export interface PageContainerProps
 export const PageContainer = React.forwardRef<
   HTMLDivElement,
   PageContainerProps
->(function (props, ref) {
+>(function PageContainer(props, ref) {
   const { children, ...restProps } = props;
 
   const recipe = useRecipe({ recipe: pageContainerRecipe });
