@@ -1,0 +1,40 @@
+import { Code, List, Text } from '@chakra-ui/react';
+
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
+
+import { VerticalTimelineDuring } from '../../components';
+
+export const content = (
+  <SlideContent
+    type={SlideContentTypes.titleWithThinColumn}
+    title="Courbe d’apprentissage"
+    alignContent="flex-start"
+    column1={<VerticalTimelineDuring />}
+  >
+    <Text>Apprentissage très douloureux.</Text>
+    <List.Root paddingLeft="1em">
+      <List.Item>
+        Syntaxe particulière (<Code variant="inlineSlide">{`->`}</Code>,{' '}
+        <Code variant="inlineSlide">{`<-`}</Code>,{' '}
+        <Code variant="inlineSlide">{`=>`}</Code>,{' '}
+        <Code variant="inlineSlide">{`>>=`}</Code>,{' '}
+        <Code variant="inlineSlide">{`<$>`}</Code>,{' '}
+        <Code variant="inlineSlide">{`:>`}</Code>,{' '}
+        <Code variant="inlineSlide">{`:<|>`}</Code>, etc.),
+      </List.Item>
+      <List.Item>Penser de manière fonctionnelle,</List.Item>
+    </List.Root>
+  </SlideContent>
+);
+
+const note = (
+  <SlideNote>
+    <Text>
+      Mais c’est aussi un langage qui demander de penser vraiment de manière
+      fonctionnelle.
+    </Text>
+  </SlideNote>
+);
+
+const slide = { content, note };
+export default slide;

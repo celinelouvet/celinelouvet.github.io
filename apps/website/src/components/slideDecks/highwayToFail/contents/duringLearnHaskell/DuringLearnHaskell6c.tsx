@@ -1,0 +1,31 @@
+import { List, Stack, Text } from '@chakra-ui/react';
+
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
+
+import { VerticalTimelineDuring } from '../../components';
+
+export const content = (
+  <SlideContent
+    type={SlideContentTypes.titleWithThinColumn}
+    title="Type-Driven Development"
+    alignContent="flex-start"
+    column1={<VerticalTimelineDuring />}
+  >
+    <Stack gap="1em">
+      <List.Root paddingLeft="1em">
+        <List.Item>Définir les types de ce qu’on a</List.Item>
+        <List.Item>Définir les types de là où on veut aller</List.Item>
+        <List.Item>Laisser le compilateur guider le développement</List.Item>
+      </List.Root>
+    </Stack>
+  </SlideContent>
+);
+
+const note = (
+  <SlideNote>
+    <Text>Le compilateur va venir nous guider dans le développement.</Text>
+  </SlideNote>
+);
+
+const slide = { content, note };
+export default slide;
