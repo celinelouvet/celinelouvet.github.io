@@ -1,4 +1,4 @@
-import { Grid, GridItem, HStack, List, Stack, Text } from '@chakra-ui/react';
+import { Grid, GridItem, HStack, List, Text, chakra } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -24,11 +24,9 @@ export const content = (
     topRightCorner="Mi-Décembre 2017"
   >
     <HStack gap="1em" width="100%" height="100%">
-      <Stack flex="1" height="100%" gap="1em">
-        <List.Root>
-          <List.Item>Nombreux concurrents,</List.Item>
-        </List.Root>
-      </Stack>
+      <List.Root variant="slide" flex="1" alignSelf="start">
+        <List.Item>Nombreux concurrents,</List.Item>
+      </List.Root>
 
       <Grid
         width="30%"
@@ -40,21 +38,21 @@ export const content = (
         justifyContent="center"
       >
         <GridItem>
-          <Text as="span" {...dateStyle}></Text>
+          <chakra.span {...dateStyle}></chakra.span>
         </GridItem>
         <GridItem>
           <Trustpilot />
         </GridItem>
 
         <GridItem>
-          <Text as="span" {...dateStyle}></Text>
+          <chakra.span {...dateStyle}></chakra.span>
         </GridItem>
         <GridItem>
           <Yotpo />
         </GridItem>
 
         <GridItem>
-          <Text as="span" {...dateStyle}></Text>
+          <chakra.span {...dateStyle}></chakra.span>
         </GridItem>
         <GridItem>
           <AvisVerifies />

@@ -1,4 +1,4 @@
-import { Stack, Text } from '@chakra-ui/react';
+import { Stack, Text, chakra } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -15,7 +15,7 @@ export const content = (
     <Stack width="100%" gap="1em">
       <Text>
         <Text as="b">MVP : </Text>
-        <Text as="span">Minimum Viable Product</Text>
+        <chakra.span>Minimum Viable Product</chakra.span>
       </Text>
     </Stack>
   </SlideContent>

@@ -1,4 +1,4 @@
-import { Box, Stack, Text } from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -12,11 +12,7 @@ export const content = (
     column1={<VerticalTimelineDuring />}
     topRightCorner="Janvier 2018"
   >
-    <Stack gap="1em">
-      <Box>
-        <Text>Version simplifiée ne suffira pas</Text>
-      </Box>
-    </Stack>
+    <Text>Version simplifiée ne suffira pas</Text>
   </SlideContent>
 );
 

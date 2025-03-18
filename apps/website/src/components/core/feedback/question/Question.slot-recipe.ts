@@ -14,6 +14,7 @@ export const questionSlotRecipe = defineSlotRecipe({
     title: {
       lineHeight: '1.5em',
       marginBottom: '0.5em',
+      fontWeight: 'bold',
     },
   },
 
@@ -27,30 +28,21 @@ export const questionSlotRecipe = defineSlotRecipe({
       slide: {
         root: {
           borderRadius: '0.25em',
-          backgroundColor: '#eadcbf',
-          borderLeftColor: '#cf8b5e',
+          backgroundColor: { base: '#eadcbf', _dark: '#eadcbf' },
+          borderLeftColor: { base: '#cf8b5e', _dark: '#cf8b5e' },
           borderLeftWidth: '0.25em',
           borderLeftStyle: 'solid',
           fontSize: '1em',
-          color: '#443c37',
-
-          _dark: {
-            backgroundColor: '#eadcbf',
-            borderLeftColor: '#cf8b5e',
-            color: '#443c37',
-          },
+          color: { base: '#443c37', _dark: '#443c37' },
+          alignItems: 'center',
         },
         description: {
           lineHeight: '1.5em',
         },
         indicator: {
-          color: '#cf8b5e',
-          boxSize: '1em',
+          color: { base: '#cf8b5e', _dark: '#cc5152' },
           marginRight: '1em',
-
-          _dark: {
-            color: '#cc5152',
-          },
+          fontSize: '1em',
         },
         title: {
           lineHeight: '1.5em',

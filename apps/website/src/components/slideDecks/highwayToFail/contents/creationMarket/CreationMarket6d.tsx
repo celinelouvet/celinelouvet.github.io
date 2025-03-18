@@ -1,4 +1,4 @@
-import { List, Stack, Text } from '@chakra-ui/react';
+import { List, Stack, Text, chakra } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -15,10 +15,10 @@ export const content = (
     <Stack width="100%" gap="1em">
       <Text>
         <Text as="b">MVP : </Text>
-        <Text as="span">Minimum Viable Product</Text>
+        <chakra.span>Minimum Viable Product</chakra.span>
       </Text>
 
-      <List.Root>
+      <List.Root variant="slide">
         <List.Item>Nombreuses fonctionnalités,</List.Item>
         <List.Item>Plugins Shopify, Prestashop, etc.</List.Item>
       </List.Root>

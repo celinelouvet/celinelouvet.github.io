@@ -1,5 +1,12 @@
-import { Center, Grid, Stack, Text } from '@chakra-ui/react';
-import * as React from 'react';
+import {
+  Box,
+  Center,
+  HStack,
+  Icon,
+  Stack,
+  Text,
+  chakra,
+} from '@chakra-ui/react';
 
 import {
   ColorMode,
@@ -9,29 +16,63 @@ import {
   SlideContentTypes,
   SlideNote,
 } from '@/components/core';
+import { highwayToFailTalkFr as talk } from '@/data/talks';
+import { socialIcon } from '@/lib';
 
 import { Title } from './Title.component';
 
 export const content = (
   <SlideContent colormode={ColorMode.dark} type={SlideContentTypes.fullContent}>
-    <Grid
-      templateColumns="3fr 2fr"
-      gap="1em"
+    <HStack
       width="100%"
       height="100%"
-      justifyContent="stretch"
+      gap="2em"
+      alignItems="center"
+      justifyContent="space-between"
     >
-      <Center>
-        <Title title="Merci pour votre attention" />
-      </Center>
-      <Stack textAlign="center">
+      <Stack
+        height="100%"
+        alignItems="center"
+        justifyContent="center"
+        gap="3em"
+      >
+        <Center>
+          <Title title="Merci pour votre attention" />
+        </Center>
+
+        <HStack gap="2em">
+          {talk.socials.map(({ name, handle, onMain }, index) => {
+            if (!onMain) return null;
+            return (
+              <Box key={index}>
+                <chakra.span fontSize="0.8em">
+                  <Icon
+                    as={socialIcon(name)}
+                    marginTop="-1"
+                    marginRight="2"
+                    verticalAlign="middle"
+                  />
+                  {handle}
+                </chakra.span>
+              </Box>
+            );
+          })}
+        </HStack>
+      </Stack>
+      <Stack
+        width="25%"
+        alignItems="center"
+        justifyContent="space-around"
+        gap="2em"
+      >
         <QrCode
+          width="100%"
           variant="light"
           value="https://openfeedback.io/bdxio2024/2024-11-08/639"
         />
         <H2Heading variant="slide">Retours</H2Heading>
       </Stack>
-    </Grid>
+    </HStack>
   </SlideContent>
 );
 

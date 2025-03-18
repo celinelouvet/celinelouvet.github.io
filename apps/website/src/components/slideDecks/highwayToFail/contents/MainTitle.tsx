@@ -1,5 +1,13 @@
-import { Box, HStack, Icon, List, Spacer, Stack, Text } from '@chakra-ui/react';
-import * as React from 'react';
+import {
+  Box,
+  HStack,
+  Icon,
+  List,
+  Spacer,
+  Stack,
+  Text,
+  chakra,
+} from '@chakra-ui/react';
 
 import {
   ColorMode,
@@ -43,7 +51,7 @@ export const content = (
               if (!onMain) return null;
               return (
                 <Box key={index}>
-                  <Text as="span" fontSize="0.8em">
+                  <chakra.span fontSize="0.8em">
                     <Icon
                       as={socialIcon(name)}
                       marginTop="-1"
@@ -51,7 +59,7 @@ export const content = (
                       verticalAlign="middle"
                     />
                     {handle}
-                  </Text>
+                  </chakra.span>
                 </Box>
               );
             })}
@@ -59,7 +67,11 @@ export const content = (
         </Box>
       </Stack>
       <Stack width="20%" alignItems="center" justifyContent="center" gap="2em">
-        <QrCode variant="light" value="https://celine.louvet.me/bdxio" />
+        <QrCode
+          width="100%"
+          variant="light"
+          value="https://celine.louvet.me/bdxio"
+        />
 
         <Box textAlign="center">
           <H3Heading variant="slide">

@@ -12,7 +12,7 @@ export const content = (
     column1={<VerticalTimelineDuring />}
   >
     <Text>Apprentissage très douloureux.</Text>
-    <List.Root paddingLeft="1em">
+    <List.Root variant="slide">
       <List.Item>
         Syntaxe particulière (<Code variant="inlineSlide">{`->`}</Code>,{' '}
         <Code variant="inlineSlide">{`<-`}</Code>,{' '}

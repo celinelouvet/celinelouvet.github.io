@@ -13,7 +13,7 @@ export const content = (
     topRightCorner="Mi-Décembre 2017"
   >
     <Text>Réalisation d’un site</Text>
-    <List.Root paddingLeft="1em">
+    <List.Root variant="slide">
       <List.Item>exposer le produit,</List.Item>
       <List.Item>toucher les investisseurs,</List.Item>
       <List.Item>convaincre les incubateurs,</List.Item>

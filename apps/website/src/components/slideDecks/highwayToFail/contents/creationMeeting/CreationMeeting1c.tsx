@@ -13,7 +13,7 @@ export const content = (
     column2={
       <Box width="100%" height="100%">
         <Text>Ils ont :</Text>
-        <List.Root paddingLeft="1em">
+        <List.Root variant="slide">
           <List.Item>l’idée,</List.Item>
           <List.Item>fait une étude de marché,</List.Item>
         </List.Root>
@@ -26,7 +26,7 @@ export const content = (
 const note = (
   <SlideNote>
     <Text>Ils ont :</Text>
-    <List.Root paddingLeft="1em">
+    <List.Root variant="slide">
       <List.Item>l’idée,</List.Item>
       <List.Item>fait une étude de marché,</List.Item>
     </List.Root>

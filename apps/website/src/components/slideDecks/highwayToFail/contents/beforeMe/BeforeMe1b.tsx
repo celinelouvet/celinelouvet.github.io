@@ -14,7 +14,7 @@ export const content = (
   >
     <Stack width="100%" gap="1em">
       <Box>
-        <List.Root paddingLeft="1em">
+        <List.Root variant="slide">
           <List.Item>En couple, avec un enfant et un crédit bancaire</List.Item>
           <List.Item>Déjà eu un burn‑out</List.Item>
         </List.Root>

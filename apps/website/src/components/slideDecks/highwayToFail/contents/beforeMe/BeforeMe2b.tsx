@@ -14,7 +14,7 @@ export const content = (
   >
     <Stack width="100%" gap="1em">
       <Box>
-        <List.Root paddingLeft="1em">
+        <List.Root variant="slide">
           <List.Item>
             ESN toute ma carrière, beaucoup de régie (chez le client)
           </List.Item>

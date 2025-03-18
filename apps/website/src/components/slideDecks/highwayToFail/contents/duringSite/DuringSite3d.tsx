@@ -1,4 +1,4 @@
-import { Box, List, Stack, Text } from '@chakra-ui/react';
+import { List, Text } from '@chakra-ui/react';
 
 import {
   SlideContent,
@@ -17,18 +17,14 @@ export const content = (
     column1={<VerticalTimelineDuring />}
     topRightCorner="Mi-Décembre 2017"
   >
-    <Stack width="100%" gap="1em">
-      <Text>Version simplifiée, pour avancer vite :</Text>
-      <List.Root paddingLeft="1em">
-        <List.Item>un design allégé,</List.Item>
-        <List.Item>
-          un email pré-rempli pour le formulaire de contact.
-        </List.Item>
-      </List.Root>
-      <Box marginTop="0.5em">
-        <ThumbsUp variant="slide">Ils sont d’accord.</ThumbsUp>
-      </Box>
-    </Stack>
+    <Text>Version simplifiée, pour avancer vite :</Text>
+
+    <List.Root variant="slide">
+      <List.Item>un design allégé,</List.Item>
+      <List.Item>un email pré-rempli pour le formulaire de contact.</List.Item>
+    </List.Root>
+
+    <ThumbsUp variant="slide">Ils sont d’accord.</ThumbsUp>
   </SlideContent>
 );
 

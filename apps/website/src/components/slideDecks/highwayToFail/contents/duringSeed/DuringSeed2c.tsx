@@ -12,7 +12,7 @@ export const content = (
     column1={<VerticalTimelineDuring />}
   >
     <Text>2 choses recherchées par les business angels :</Text>
-    <List.Root paddingLeft="1em">
+    <List.Root variant="slide">
       <List.Item>Un produit coup de cœur ou révolutionnaire</List.Item>
       <List.Item>Un chiffre d’affaires assuré</List.Item>
     </List.Root>

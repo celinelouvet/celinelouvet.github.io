@@ -22,6 +22,7 @@ export const listSlotRecipe = defineSlotRecipe({
         root: {
           paddingLeft: '1em',
           listStyle: 'revert',
+          marginBottom: '2em',
         },
 
         item: {

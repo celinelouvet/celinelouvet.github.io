@@ -12,7 +12,7 @@ export const content = (
     column1={<VerticalTimelineAfter />}
   >
     <Stack gap="1em">
-      <List.Root>
+      <List.Root variant="slide">
         <List.Item>Poser des questions lors de la rencontre</List.Item>
       </List.Root>
     </Stack>

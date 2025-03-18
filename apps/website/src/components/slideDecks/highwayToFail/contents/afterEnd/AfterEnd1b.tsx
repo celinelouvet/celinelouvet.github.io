@@ -13,7 +13,7 @@ export const content = (
     topRightCorner="Octobre 2018"
   >
     <Stack gap="1em">
-      <List.Root paddingLeft="1em">
+      <List.Root variant="slide">
         <List.Item>Pas de levée</List.Item>
       </List.Root>
     </Stack>

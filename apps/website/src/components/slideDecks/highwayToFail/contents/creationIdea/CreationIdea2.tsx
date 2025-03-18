@@ -1,4 +1,4 @@
-import { Box, List, Stack, Text } from '@chakra-ui/react';
+import { List, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -11,21 +11,18 @@ export const content = (
     alignContent="flex-start"
     column1={<VerticalTimelineCreation />}
   >
-    <Stack gap="2em">
-      <Box>
-        <Text as="span">
-          Nouvelle loi (décret promulgué en <strong>sept. 2017</strong>)
-        </Text>
-        <List.Root paddingLeft="1em">
-          <List.Item>
-            Entre en vigueur le <strong>1er janvier 2018</strong>
-          </List.Item>
-          <List.Item>
-            Impose aux e‑commerces d’avoir des avis de clients vérifiés.
-          </List.Item>
-        </List.Root>
-      </Box>
-    </Stack>
+    <Text>
+      Nouvelle loi (décret promulgué en <strong>sept. 2017</strong>)
+    </Text>
+
+    <List.Root variant="slide">
+      <List.Item>
+        Entre en vigueur le <strong>1er janvier 2018</strong>
+      </List.Item>
+      <List.Item>
+        Impose aux e‑commerces d’avoir des avis de clients vérifiés.
+      </List.Item>
+    </List.Root>
   </SlideContent>
 );
 

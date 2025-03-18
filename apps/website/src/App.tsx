@@ -1,22 +1,39 @@
 import { BrowserRouter, Route, Routes } from 'react-router';
 
-import { PageContainer } from '@/components/core';
-import { Header } from '@/components/features';
-import { Home, Resume, Talk, Talks } from '@/pages';
+import {
+  Home,
+  PresenterPage,
+  Resume,
+  SlidesContentPage,
+  SlidesNotesPage,
+  SlidesPrintPage,
+  Talk,
+  Talks,
+} from '@/pages';
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Header />
-        <PageContainer>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/resume" element={<Resume />} />
-            <Route path="/talks/:talkSubjectId" element={<Talk />} />
-            <Route path="/talks" element={<Talks />}></Route>
-          </Routes>
-        </PageContainer>
+        <Routes>
+          <Route
+            path="/slides/:talkSubjectId/content"
+            element={<SlidesContentPage />}
+          />
+          <Route
+            path="/slides/:talkSubjectId/notes"
+            element={<SlidesNotesPage />}
+          />
+          <Route
+            path="/slides/:talkSubjectId/print"
+            element={<SlidesPrintPage />}
+          />
+          <Route path="/slides" element={<PresenterPage />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/talks/:talkSubjectId" element={<Talk />} />
+          <Route path="/talks" element={<Talks />}></Route>
+          <Route path="/" element={<Home />} />
+        </Routes>
       </BrowserRouter>
     </>
   );

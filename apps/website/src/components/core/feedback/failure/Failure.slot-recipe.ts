@@ -14,6 +14,7 @@ export const failureSlotRecipe = defineSlotRecipe({
     title: {
       lineHeight: '1.5em',
       marginBottom: '0.5em',
+      fontWeight: 'bold',
     },
   },
 
@@ -27,30 +28,21 @@ export const failureSlotRecipe = defineSlotRecipe({
       slide: {
         root: {
           borderRadius: '0.25em',
-          backgroundColor: '#e3b4b7',
-          borderLeftColor: '#cc5152',
+          backgroundColor: { base: '#e3b4b7', _dark: '#e3b4b7' },
+          borderLeftColor: { base: '#cc5152', _dark: '#cc5152' },
           borderLeftWidth: '0.25em',
           borderLeftStyle: 'solid',
           fontSize: '1em',
-          color: '#3d3b46',
-
-          _dark: {
-            backgroundColor: '#e3b4b7',
-            borderLeftColor: '#cc5152',
-            color: '#3d3b46',
-          },
+          color: { base: '#3d3b46', _dark: '#3d3b46' },
+          alignItems: 'center',
         },
         description: {
           lineHeight: '1.5em',
         },
         indicator: {
-          color: '#cc5152',
-          boxSize: '1em',
+          color: { base: '#cc5152', _dark: '#cc5152' },
           marginRight: '1em',
-
-          _dark: {
-            color: '#cc5152',
-          },
+          fontSize: '1em',
         },
         title: {
           lineHeight: '1.5em',

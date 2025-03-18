@@ -6,9 +6,9 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 import { VerticalTimelineCreation } from '../../components';
 
 const data = [
-  { title: `20%`, value: 20, color: '#1f435a' },
-  { title: `40%`, value: 40, color: '#4990bf' },
-  { title: `40%`, value: 40, color: '#94beda' },
+  { title: `20%`, value: 20, color: '#1f435a', labelColor: '#f3f8fb' },
+  { title: `40%`, value: 40, color: '#4990bf', labelColor: '#f3f8fb' },
+  { title: `40%`, value: 40, color: '#94beda', labelColor: '#f3f8fb' },
 ];
 
 export const content = (
@@ -24,11 +24,14 @@ export const content = (
         <PieChart
           data={data}
           label={({ dataEntry }) => dataEntry.title}
-          labelStyle={{
-            fontSize: '0.25em',
-            fill: '#f3f8fb',
-            fontFamily: 'nunito',
-            fontWeight: 'bold',
+          labelStyle={(dataIndex) => {
+            const dataEntry = data[dataIndex];
+            return {
+              fontSize: '0.25em',
+              fill: dataEntry.labelColor,
+              fontFamily: 'nunito',
+              fontWeight: 'bold',
+            };
           }}
           startAngle={189}
           radius={42}

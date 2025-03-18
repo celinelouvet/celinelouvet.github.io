@@ -1,4 +1,4 @@
-import { Center, Grid, Icon, Stack, Text } from '@chakra-ui/react';
+import { Center, Grid, Icon, Stack, Text, chakra } from '@chakra-ui/react';
 import { BsLink45Deg } from 'react-icons/bs';
 
 import {
@@ -33,18 +33,18 @@ export const content = (
       >
         <H3Heading variant="slide">Réseau IT WOMEN</H3Heading>
         <H3Heading variant="slide">Sensibilisation, accompagnement</H3Heading>
-        <Text as="span">Rôle modèles, mentorat, meetups, etc.</Text>
-        <Text as="span">Ecoles, entreprises, etc.</Text>
+        <chakra.span>Rôle modèles, mentorat, meetups, etc.</chakra.span>
+        <chakra.span>Ecoles, entreprises, etc.</chakra.span>
       </Grid>
-      <Text as="span">
+      <chakra.span>
         <Icon
           as={BsLink45Deg}
           marginRight="2"
           marginTop="-1"
           verticalAlign="middle"
         />
-        <Text as="span">yeeso.fr</Text>
-      </Text>
+        <chakra.span>yeeso.fr</chakra.span>
+      </chakra.span>
     </Stack>
   </SlideContent>
 );

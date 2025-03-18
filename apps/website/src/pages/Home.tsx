@@ -1,10 +1,18 @@
 import * as React from 'react';
 
-import { Home as HomeContent } from '@/components/features';
+import { PageContainer } from '@/components/core';
+import { Header, Home as HomeContent } from '@/components/features';
 import { useResume } from '@/hooks';
 
 export const Home: React.FC = () => {
   const resume = useResume();
 
-  return <HomeContent resume={resume} />;
+  return (
+    <>
+      <Header />
+      <PageContainer>
+        <HomeContent resume={resume} />
+      </PageContainer>
+    </>
+  );
 };

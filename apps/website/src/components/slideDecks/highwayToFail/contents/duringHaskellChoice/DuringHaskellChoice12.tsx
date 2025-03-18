@@ -17,7 +17,7 @@ export const content = (
     topRightCorner="Mars 2018"
     column1={<VerticalTimelineDuring />}
   >
-    <Stack width="100%" height="100%" gap="2em">
+    <Stack width="100%" height="100%" gap="1em">
       <Text>Clever Cloud cherche à promouvoir l’hébergement de Haskell.</Text>
       <ThumbsUp variant="slide">Crédits gratuits.</ThumbsUp>
     </Stack>

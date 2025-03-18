@@ -13,7 +13,7 @@ export const content = (
     topRightCorner="Mi-Décembre 2017"
   >
     <Box width="100%" height="100%">
-      <List.Root paddingLeft="1em">
+      <List.Root variant="slide">
         <List.Item>2 hommes (~25 ans),</List.Item>
       </List.Root>
     </Box>

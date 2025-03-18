@@ -1,10 +1,8 @@
-import { chakra } from '@chakra-ui/react';
+import { chakra, useToken } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { useColorModeToken } from '@/hooks';
-
 export const YeesoLight: React.FC = () => {
-  const fill = useColorModeToken('brand.900', 'brand.300');
+  const [fill] = useToken('colors', 'brand.900');
   return (
     <chakra.svg
       width="100%"
@@ -42,7 +40,7 @@ export const YeesoLight: React.FC = () => {
       </g>
       <defs>
         <clipPath id="clip_yeesoLight">
-          <rect width="1782" height="419" fill="white" />
+          <rect width="1782" height="419" fill={fill} />
         </clipPath>
       </defs>
     </chakra.svg>

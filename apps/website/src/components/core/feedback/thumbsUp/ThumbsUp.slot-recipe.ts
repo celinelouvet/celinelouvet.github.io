@@ -14,6 +14,7 @@ export const thumbsUpSlotRecipe = defineSlotRecipe({
     title: {
       lineHeight: '1.5em',
       marginBottom: '0.5em',
+      fontWeight: 'bold',
     },
   },
 
@@ -27,27 +28,19 @@ export const thumbsUpSlotRecipe = defineSlotRecipe({
       slide: {
         root: {
           borderRadius: '0.25em',
-          backgroundColor: '#cbeedc',
-          borderColor: '#517c71',
+          backgroundColor: { base: '#cbeedc', _dark: '#cbeedc' },
+          borderColor: { base: '#517c71', _dark: '#517c71' },
           borderLeftWidth: '0.25em',
           borderLeftStyle: 'solid',
           fontSize: '1em',
           color: '#304a4f',
           lineHeight: '1.5em',
-
-          _dark: {
-            backgroundColor: '#cbeedc',
-            borderColor: '#517c71',
-          },
+          alignItems: 'center',
         },
         indicator: {
-          color: '#517c71',
-          boxSize: '1em',
+          color: { base: '#517c71', _dark: '#517c71' },
           marginRight: '1em',
-
-          _dark: {
-            color: '#517c71',
-          },
+          fontSize: '1em',
         },
         title: {
           lineHeight: '1.5em',

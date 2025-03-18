@@ -20,6 +20,7 @@ export const quoteSlotRecipe = defineSlotRecipe({
       colorPalette: 'brand',
       lineHeight: '1.5em',
       marginBottom: '0.5em',
+      fontWeight: 'bold',
     },
   },
 
@@ -27,71 +28,38 @@ export const quoteSlotRecipe = defineSlotRecipe({
     variant: {
       subtle: {
         root: {
-          backgroundColor: 'brand.700',
-          color: 'brand.200',
-
-          _dark: {
-            backgroundColor: 'brand.300',
-            color: 'brand.700',
-          },
+          backgroundColor: { base: 'brand.700', _dark: 'brand.300' },
+          color: { base: 'brand.200', _dark: 'brand.700' },
         },
         indicator: {
-          color: 'brand.400',
-
-          _dark: {
-            color: 'brand.800',
-          },
+          color: { base: 'brand.400', _dark: 'brand.800' },
         },
       },
       surface: {
         root: {
-          backgroundColor: 'brand.700',
-          color: 'brand.200',
+          backgroundColor: { base: 'brand.700', _dark: 'brand.300' },
+          color: { base: 'brand.200', _dark: 'brand.700' },
           borderColor: 'brand.500',
           shadowColor: 'brand.500',
-
-          _dark: {
-            backgroundColor: 'brand.300',
-            color: 'brand.700',
-          },
         },
         indicator: {
-          color: 'brand.400',
-
-          _dark: {
-            color: 'brand.800',
-          },
+          color: { base: 'brand.400', _dark: 'brand.800' },
         },
       },
       solid: {
         root: {
-          backgroundColor: 'brand.400',
-          color: 'brand.900',
-
-          _dark: {
-            backgroundColor: 'brand.700',
-            color: 'brand.200',
-          },
+          backgroundColor: { base: 'brand.400', _dark: 'brand.700' },
+          color: { base: 'brand.900', _dark: 'brand.200' },
         },
         indicator: {
-          color: 'brand.900',
-
-          _dark: {
-            color: 'brand.300',
-          },
+          color: { base: 'brand.900', _dark: 'brand.300' },
         },
       },
       outline: {
         root: {
-          color: 'brand.200',
-          borderColor: 'brand.400',
-          shadowColor: 'brand.400',
-
-          _dark: {
-            color: 'brand.800',
-            borderColor: 'brand.600',
-            shadowColor: 'brand.600',
-          },
+          color: { base: 'brand.200', _dark: 'brand.800' },
+          borderColor: { base: 'brand.400', _dark: 'brand.600' },
+          shadowColor: { base: 'brand.400', _dark: 'brand.600' },
         },
         description: {
           colorPalette: 'brand',
@@ -99,38 +67,25 @@ export const quoteSlotRecipe = defineSlotRecipe({
         },
         indicator: {
           colorPalette: 'brand',
-          color: 'brand.300',
-
-          _dark: {
-            color: 'brand.800',
-          },
+          color: { base: 'brand.300', _dark: 'brand.800' },
         },
       },
 
       slide: {
         root: {
           borderRadius: '0.25em',
-          backgroundColor: 'brand.800',
-          borderLeftColor: 'brand.400',
+          backgroundColor: { base: 'brand.800', _dark: 'brand.800' },
+          borderLeftColor: { base: 'brand.400', _dark: 'brand.500' },
           borderLeftWidth: '0.25em',
           borderLeftStyle: 'solid',
           fontSize: '1em',
-          color: 'brand.200',
-
-          _dark: {
-            backgroundColor: 'brand.800',
-            borderLeftColor: 'brand.500',
-            color: 'brand.200',
-          },
+          color: { base: 'brand.200', _dark: 'brand.200' },
+          alignItems: 'center',
         },
         indicator: {
-          color: 'brand.300',
-          boxSize: '1em',
+          color: { base: 'brand.300', _dark: 'brand.300' },
           marginRight: '1em',
-
-          _dark: {
-            color: 'brand.300',
-          },
+          fontSize: '1em',
         },
         title: {
           lineHeight: '1.5em',

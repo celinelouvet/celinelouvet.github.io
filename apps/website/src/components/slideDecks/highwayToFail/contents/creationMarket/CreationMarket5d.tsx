@@ -1,4 +1,4 @@
-import { Flex, Icon, Stack, Text } from '@chakra-ui/react';
+import { Flex, Icon, Stack, Text, chakra } from '@chakra-ui/react';
 import { BsArrowReturnRight } from 'react-icons/bs';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
@@ -17,11 +17,11 @@ export const content = (
       <Text>Clients de type TPE et PME</Text>
 
       <Stack gap="0.5em">
-        <Text as="span">Motivation éthique : 1 avis = 1 micro-don</Text>
+        <chakra.span>Motivation éthique : 1 avis = 1 micro-don</chakra.span>
 
         <Flex alignItems="center" gap="0.5em" marginLeft="1em">
           <Icon as={BsArrowReturnRight} />
-          <Text as="span">Déductible des impots de Fairvioo</Text>
+          <chakra.span>Déductible des impots de Fairvioo</chakra.span>
         </Flex>
       </Stack>
     </Stack>

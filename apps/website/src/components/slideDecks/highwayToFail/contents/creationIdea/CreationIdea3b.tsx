@@ -1,4 +1,4 @@
-import { Box, Stack, Text } from '@chakra-ui/react';
+import { Stack, Text } from '@chakra-ui/react';
 
 import {
   SlideContent,
@@ -16,13 +16,10 @@ export const content = (
     alignContent="flex-start"
     column1={<VerticalTimelineCreation />}
   >
-    <Stack gap="2em">
-      <Box>
-        <Text as="span">1 avis laissé = 1 micro-don généré</Text>
-      </Box>
-      <Box>
-        <ThumbsUp variant="slide">J’aime le côté éthique !</ThumbsUp>
-      </Box>
+    <Stack gap="1em">
+      <Text>1 avis laissé = 1 micro-don généré</Text>
+
+      <ThumbsUp variant="slide">J’aime le côté éthique !</ThumbsUp>
     </Stack>
   </SlideContent>
 );

@@ -1,4 +1,4 @@
-import { Box, Flex, Icon, Stack, Text } from '@chakra-ui/react';
+import { Box, Flex, Icon, Stack, Text, chakra } from '@chakra-ui/react';
 import { BsArrowReturnRight } from 'react-icons/bs';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
@@ -17,7 +17,7 @@ export const content = (
         <Text>Anciens de Paris-Dauphine PSL.</Text>
         <Flex alignItems="center" gap="0.5em" marginLeft="1em">
           <Icon as={BsArrowReturnRight} />
-          <Text as="span">Inscription au programme de l’incubateur</Text>
+          <chakra.span>Inscription au programme de l’incubateur</chakra.span>
         </Flex>
       </Box>
     </Stack>

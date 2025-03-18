@@ -1,10 +1,9 @@
+import { useToken } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { useColorModeToken } from '@/hooks';
-
 export const Timeline1: React.FC = () => {
-  const pathColor = useColorModeToken('brand.300', 'brand.900');
-  const fillColor = useColorModeToken('brand.900', 'brand.300');
+  const [pathColor] = useToken('colors', 'brand.300');
+  const [fillColor] = useToken('colors', 'brand.900');
 
   return (
     <svg

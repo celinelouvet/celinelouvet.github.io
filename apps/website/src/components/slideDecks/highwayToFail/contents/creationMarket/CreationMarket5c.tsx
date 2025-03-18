@@ -1,4 +1,4 @@
-import { Stack, Text } from '@chakra-ui/react';
+import { Stack, Text, chakra } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
 
@@ -16,7 +16,7 @@ export const content = (
       <Text>Clients de type TPE et PME</Text>
 
       <Stack gap="0.5em">
-        <Text as="span">Motivation éthique : 1 avis = 1 micro-don</Text>
+        <chakra.span>Motivation éthique : 1 avis = 1 micro-don</chakra.span>
       </Stack>
     </Stack>
   </SlideContent>
