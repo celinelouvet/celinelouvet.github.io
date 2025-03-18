@@ -44,5 +44,5 @@ const ToComponent: React.FC<PeriodTextProps> = ({ period }) => {
     return <chakra.span>{t('today')}</chakra.span>;
   }
 
-  return <DateText when={period.to} dateFormat="MMM YYYY" as="span" />;
+  return <DateText when={period.to} dateFormat="MMM YYYY" />;
 };

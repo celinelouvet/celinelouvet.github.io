@@ -7,7 +7,7 @@ import {
   GridItem,
   Icon,
   Stack,
-  Text,
+  chakra,
 } from '@chakra-ui/react';
 import * as React from 'react';
 
@@ -114,7 +114,7 @@ const Day: React.FC<{ time?: string }> = ({ time }) => (
         color="white"
       />
     ) : (
-      <Text as="span">Date inconnue</Text>
+      <chakra.span>Date inconnue</chakra.span>
     )}
   </Flex>
 );
@@ -125,7 +125,7 @@ const Time: React.FC<{ time?: string }> = ({ time }) => (
     {time ? (
       <DateText dateFormat="h:mm" when={time} variant="slide" color="white" />
     ) : (
-      <Text as="span">Heure inconnue</Text>
+      <chakra.span>Heure inconnue</chakra.span>
     )}
   </Flex>
 );
@@ -133,7 +133,7 @@ const Time: React.FC<{ time?: string }> = ({ time }) => (
 const Convention: React.FC<{ convention: string }> = ({ convention }) => (
   <Flex w="100%" gap="0.5em" alignItems="center">
     <Icon as={promotionIcon('convention')} boxSize="1.25em" />
-    <Text as="span">{convention}</Text>
+    <chakra.span>{convention}</chakra.span>
   </Flex>
 );
 
@@ -141,9 +141,9 @@ const Room: React.FC<{ room?: string }> = ({ room }) => (
   <Flex w="100%" gap="0.5em" alignItems="center">
     <Icon as={promotionIcon('room')} boxSize="1.25em" />
     {room ? (
-      <Text as="span">{room}</Text>
+      <chakra.span>{room}</chakra.span>
     ) : (
-      <Text as="span">Salle inconnue</Text>
+      <chakra.span>Salle inconnue</chakra.span>
     )}
   </Flex>
 );

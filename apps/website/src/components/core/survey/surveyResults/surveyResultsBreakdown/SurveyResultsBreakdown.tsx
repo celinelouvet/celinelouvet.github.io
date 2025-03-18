@@ -5,6 +5,7 @@ import {
   Stack,
   type StackProps,
   Text,
+  chakra,
   useRecipe,
 } from '@chakra-ui/react';
 import { type SurveyPollChoiceQuestion } from '@repo/models';
@@ -24,12 +25,10 @@ const SurveyVotes: React.FC<{ result: VoteResult }> = ({ result }) => {
   const { title, value, percentage } = result;
   return (
     <>
-      <Text fontWeight="700" as="span">
-        {title}
-      </Text>
-      <Text as="span">{percentage}%</Text>
-      <Text as="span">→</Text>
-      <Text as="span">{value}</Text>
+      <chakra.span fontWeight="700">{title}</chakra.span>
+      <chakra.span>{percentage}%</chakra.span>
+      <chakra.span>→</chakra.span>
+      <chakra.span>{value}</chakra.span>
     </>
   );
 };

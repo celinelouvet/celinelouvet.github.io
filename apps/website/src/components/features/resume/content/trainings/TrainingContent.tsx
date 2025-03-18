@@ -1,4 +1,4 @@
-import { Flex, Text } from '@chakra-ui/react';
+import { Flex, chakra } from '@chakra-ui/react';
 import * as React from 'react';
 
 import type { Training } from '@/data';
@@ -11,7 +11,7 @@ export const TrainingContent: React.FC<{ training: Training }> = ({
   return (
     <Flex direction="column">
       <TrainingHeader training={training} />
-      <Text as="span">{training.company}</Text>
+      <chakra.span>{training.company}</chakra.span>
     </Flex>
   );
 };

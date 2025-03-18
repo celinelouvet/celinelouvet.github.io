@@ -1,4 +1,4 @@
-import { Box, Text } from '@chakra-ui/react';
+import { Box, chakra } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -22,18 +22,15 @@ export const RemoteText: React.FC<RemoteTextProps> = ({
   }
 
   return (
-    <Text
-      as="span"
+    <chakra.span
       fontSize={size}
       fontFamily="Nunito"
       color={{ base: 'brand.300', _dark: 'brand.700' }}
     >
       <Box display={{ base: 'none', md: 'inline' }}>
-        <Text as="span" marginRight="2">
-          —
-        </Text>
+        <chakra.span marginRight="2">—</chakra.span>
       </Box>
-      <Text as="span">{t(remote)}</Text>
-    </Text>
+      <chakra.span>{t(remote)}</chakra.span>
+    </chakra.span>
   );
 };

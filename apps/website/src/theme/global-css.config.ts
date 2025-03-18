@@ -1,3 +1,5 @@
+import { type SystemConfig } from '@chakra-ui/react';
+
 const nunito = 'Nunito';
 
 export const globalCss = {
@@ -7,4 +9,4 @@ export const globalCss = {
     fontFamily: nunito,
     fontWeight: '400',
   },
-};
+} satisfies SystemConfig['globalCss'];

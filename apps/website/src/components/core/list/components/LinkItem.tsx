@@ -1,4 +1,4 @@
-import { List, Text } from '@chakra-ui/react';
+import { List, chakra } from '@chakra-ui/react';
 import * as React from 'react';
 import { type IconType } from 'react-icons';
 
@@ -30,7 +30,7 @@ export const LinkItem: React.FC<LinkItemProps> = ({
     <Tooltip label={capitalizedAriaLabel}>
       <Link.External href={href}>
         {Icon}
-        <Text as="span">{text}</Text>
+        <chakra.span>{text}</chakra.span>
       </Link.External>
     </Tooltip>
   ) : null;
@@ -39,7 +39,7 @@ export const LinkItem: React.FC<LinkItemProps> = ({
     <Tooltip label={capitalizedAriaLabel}>
       <Link.Internal to={to}>
         {Icon}
-        <Text as="span">{text}</Text>
+        <chakra.span>{text}</chakra.span>
       </Link.Internal>
     </Tooltip>
   ) : null;

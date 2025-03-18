@@ -5,7 +5,7 @@ import {
   LinkBox,
   LinkOverlay,
   Spacer,
-  Text,
+  chakra,
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -44,13 +44,13 @@ export const Talk: React.FC<TalkProps> = ({ talk }) => {
                     alignItems="baseline"
                     direction={{ base: 'column', xl: 'row' }}
                   >
-                    <Text as="span">{name}</Text>
-                    <Text as="span" display={{ base: 'none', xl: 'inline' }}>
+                    <chakra.span>{name}</chakra.span>
+                    <chakra.span display={{ base: 'none', xl: 'inline' }}>
                       –
-                    </Text>
-                    <Text as="span">
+                    </chakra.span>
+                    <chakra.span>
                       {topic} ({language.toUpperCase()})
-                    </Text>
+                    </chakra.span>
                   </Flex>
                 </H3Heading>
               </NavLink>
