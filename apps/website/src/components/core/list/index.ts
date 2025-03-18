@@ -1,6 +1,7 @@
 import {
   List as ChakraList,
   type ListRootProps as ChakraListRootProps,
+  type ThemingConfig,
 } from '@chakra-ui/react';
 
 import {
@@ -9,6 +10,11 @@ import {
   TextItem,
   type TextItemProps,
 } from './components';
+import { listSlotRecipe } from './List.slot-recipe';
+
+export const listSlotRecipes = {
+  list: listSlotRecipe,
+} as ThemingConfig['slotRecipes'];
 
 export type ListParts = typeof ChakraList & {
   TextItem: typeof TextItem;

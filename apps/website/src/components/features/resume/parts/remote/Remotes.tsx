@@ -18,7 +18,7 @@ export const Remotes: React.FC<RemotesProps> = ({ remotes }) => {
     <Box>
       <H2Heading size={size}>{t('title')}</H2Heading>
 
-      <List.Root gap="1" listStyleType="none">
+      <List.Root gap="1" variant="plain">
         {remotes.map(({ type, where }, index) => (
           <List.Item key={index}>
             {t(`remoteType.${type}`, { location: where })}

@@ -55,7 +55,7 @@ export const SlideContentIntroduction = React.forwardRef<
         </Box>
 
         <Box>
-          <List.Root listStyleType="none" gap="0.5em">
+          <List.Root variant="plain">
             {descriptions.map((description, index) => (
               <List.TextItem
                 key={index}
@@ -70,7 +70,7 @@ export const SlideContentIntroduction = React.forwardRef<
         <Box>
           <HStack gap="2em" alignItems="start">
             {splitSocials.map((split, splitIndex) => (
-              <List.Root key={splitIndex} listStyleType="none" gap="0.5em">
+              <List.Root key={splitIndex} variant="plain" gap="0.5em">
                 {split.map(({ name, handle }, index) => (
                   <List.TextItem
                     key={index}

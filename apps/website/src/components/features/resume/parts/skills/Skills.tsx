@@ -17,7 +17,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
     <Box>
       <H2Heading size={size}>{t('title')}</H2Heading>
 
-      <List.Root gap="1" listStyleType="none">
+      <List.Root gap="1" variant="plain">
         {skills.map((skill, index) => (
           <List.Item key={index}>{skill}</List.Item>
         ))}
