@@ -57,10 +57,10 @@ export const Presenter: React.FC = () => {
 
           <Center>
             <ButtonGroup gap="8">
-              <Button onClick={() => onClick('highwayToFail', false)}>
+              <Button onClick={() => onClick('highway-to-fail', false)}>
                 Present
               </Button>
-              <Button onClick={() => onClick('highwayToFail', true)}>
+              <Button onClick={() => onClick('highway-to-fail', true)}>
                 Present with notes
               </Button>
             </ButtonGroup>
@@ -68,11 +68,11 @@ export const Presenter: React.FC = () => {
 
           <Center>
             <ButtonGroup gap="8">
-              <Link.Internal to="/slides/highwayToFail/print">
-                Print mode
+              <Link.Internal to="/slides/highway-to-fail/print">
+                Print content
               </Link.Internal>
-              <Link.Internal to="/slides/highwayToFail/printNotes">
-                Print mode
+              <Link.Internal to="/slides/highway-to-fail/print-notes">
+                Print content with notes
               </Link.Internal>
             </ButtonGroup>
           </Center>

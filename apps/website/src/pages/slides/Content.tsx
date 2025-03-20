@@ -6,7 +6,6 @@ import { Content } from '@/components/features';
 
 export const SlidesContentPage: React.FC = () => {
   const { talkSubjectId } = useParams();
-  console.log(talkSubjectId);
 
   return (
     <Box
@@ -16,8 +15,9 @@ export const SlidesContentPage: React.FC = () => {
       bottom="0"
       position="absolute"
       backgroundColor="gray.900"
+      color="white"
     >
-      <Content />
+      <Content talkSubjectId={talkSubjectId} />
     </Box>
   );
 };

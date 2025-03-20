@@ -6,6 +6,7 @@ import {
   Resume,
   SlidesContentPage,
   SlidesNotesPage,
+  SlidesPrintNotesPage,
   SlidesPrintPage,
   Talk,
   Talks,
@@ -27,6 +28,10 @@ function App() {
           <Route
             path="/slides/:talkSubjectId/print"
             element={<SlidesPrintPage />}
+          />
+          <Route
+            path="/slides/:talkSubjectId/print-notes"
+            element={<SlidesPrintNotesPage />}
           />
           <Route path="/slides" element={<PresenterPage />} />
           <Route path="/resume" element={<Resume />} />
