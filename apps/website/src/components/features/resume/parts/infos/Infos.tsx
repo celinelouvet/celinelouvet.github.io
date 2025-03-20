@@ -31,7 +31,7 @@ export const Infos: React.FC<InfosProps> = ({ resume }) => {
     <Stack>
       <H2Heading size={size}>{t('title')}</H2Heading>
 
-      <List.Root listStyleType="none">
+      <List.Root variant="plain">
         <List.LinkItem
           icon={BsEnvelopeFill}
           ariaLabel={t('email')}

@@ -1,4 +1,4 @@
-import { Drawer, Flex, Portal, Stack, Text } from '@chakra-ui/react';
+import { Drawer, Flex, Portal, Stack, chakra } from '@chakra-ui/react';
 import * as React from 'react';
 
 import { CloseButton } from '@/components/core';
@@ -31,9 +31,9 @@ export const HeaderDrawer: React.FC<HeaderDrawerProps> = ({
           <Drawer.Content>
             <Drawer.Header>
               <Flex justifyContent="space-between" alignItems="center">
-                <Text fontSize="3xl" flexGrow={1} as="span">
+                <chakra.span fontSize="3xl" flexGrow={1}>
                   {title}
-                </Text>
+                </chakra.span>
 
                 <Drawer.CloseTrigger asChild>
                   <CloseButton />

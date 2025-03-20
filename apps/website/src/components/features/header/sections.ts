@@ -1,4 +1,4 @@
-export type Slug = 'home' | 'resume' | 'talks' | 'blog';
+export type Slug = 'home' | 'resume' | 'talks';
 
 export type Section = {
   to: string;
@@ -17,10 +17,6 @@ export const sections = [
   {
     to: '/talks',
     slug: 'talks',
-  },
-  {
-    to: '/blog',
-    slug: 'blog',
   },
 ] satisfies Section[];
 

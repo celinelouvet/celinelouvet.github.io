@@ -22,7 +22,7 @@ export interface HeaderDrawerButtonProps
 export const HeaderDrawerButton = React.forwardRef<
   HTMLButtonElement,
   HeaderDrawerButtonProps
->(function (props, ref) {
+>(function HeaderDrawerButton(props, ref) {
   const { section, ...restProps } = props;
 
   const recipe = useRecipe({ recipe: headerDrawerButtonRecipe });

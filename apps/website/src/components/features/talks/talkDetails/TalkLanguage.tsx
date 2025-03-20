@@ -1,4 +1,4 @@
-import { Text } from '@chakra-ui/react';
+import { chakra } from '@chakra-ui/react';
 import * as React from 'react';
 
 import { type Convention } from '@/data';
@@ -13,5 +13,5 @@ export const TalkLanguage: React.FC<TalkLanguageProps> = ({
   if (!language) {
     return null;
   }
-  return <Text as="span">({language.toUpperCase()})</Text>;
+  return <chakra.span>({language.toUpperCase()})</chakra.span>;
 };

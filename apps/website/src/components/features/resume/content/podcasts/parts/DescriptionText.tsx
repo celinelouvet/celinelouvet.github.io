@@ -1,4 +1,4 @@
-import { Text } from '@chakra-ui/react';
+import { chakra } from '@chakra-ui/react';
 import * as React from 'react';
 
 import { type Podcast } from '@/data';
@@ -12,5 +12,5 @@ export const DescriptionText: React.FC<DescriptionTextProps> = ({
     return null;
   }
 
-  return <Text as="span">{description}</Text>;
+  return <chakra.span>{description}</chakra.span>;
 };

@@ -1,4 +1,4 @@
-import { HStack, Stack, Text } from '@chakra-ui/react';
+import { HStack, Stack, chakra } from '@chakra-ui/react';
 import * as React from 'react';
 
 import { DateText, H3Heading } from '@/components/core';
@@ -44,9 +44,9 @@ const DateLanguage: React.FC<DateLanguageProps> = ({ language, when }) => {
         color={{ base: 'brand.300', _dark: 'brand.700' }}
         fontSize="sm"
       >
-        <DateText when={when} dateFormat="MMM YYYY" as="span" />
-        <Text as="span">–</Text>
-        <Text as="span">{language.toUpperCase()}</Text>
+        <DateText when={when} dateFormat="MMM YYYY" />
+        <chakra.span>–</chakra.span>
+        <chakra.span>{language.toUpperCase()}</chakra.span>
       </HStack>
     </>
   );

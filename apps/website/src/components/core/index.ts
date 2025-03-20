@@ -1,5 +1,6 @@
 import { feedbackSlotRecipes } from './feedback';
 import { layoutRecipes } from './layout';
+import { listSlotRecipes } from './list';
 import { mediaSlotRecipes } from './media';
 import { overrideRecipes, overrideSlotRecipes } from './override';
 import { surveyRecipes, surveySlotRecipes } from './survey';
@@ -13,6 +14,7 @@ export * from './media';
 export * from './navigation';
 export * from './overlay';
 export * from './override';
+export * from './slide';
 export * from './survey';
 export * from './typography';
 
@@ -25,6 +27,7 @@ export const coreRecipes = {
 
 export const coreSlotRecipes = {
   ...feedbackSlotRecipes,
+  ...listSlotRecipes,
   ...mediaSlotRecipes,
   ...overrideSlotRecipes,
   ...surveySlotRecipes,

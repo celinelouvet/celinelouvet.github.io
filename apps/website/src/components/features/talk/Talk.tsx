@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Stack, Tag, Text } from '@chakra-ui/react';
+import { Box, Flex, HStack, Stack, Tag, Text, chakra } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -92,7 +92,7 @@ const SurveyAction: React.FC<{
     );
   }
 
-  return <Text as="span">{t('notAvailable')}</Text>;
+  return <chakra.span>{t('notAvailable')}</chakra.span>;
 };
 
 const Survey: React.FC<{
@@ -104,9 +104,7 @@ const Survey: React.FC<{
   return (
     <List.Item>
       <HStack alignItems="baseline">
-        <Text as="span" minWidth="12em">
-          {name}
-        </Text>
+        <chakra.span minWidth="chakra.span">{name}</chakra.span>
 
         <SurveyAction
           name={name}

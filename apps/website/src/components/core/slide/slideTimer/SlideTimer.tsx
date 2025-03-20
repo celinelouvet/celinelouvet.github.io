@@ -14,7 +14,7 @@ import { TimeText } from '@/components/core';
 type SlideTimerProps = StackProps;
 
 export const SlideTimer = React.forwardRef<HTMLDivElement, SlideTimerProps>(
-  function (props, ref) {
+  function SlideTimer(props, ref) {
     const { seconds, minutes, hours, isRunning, start, pause, reset } =
       useStopwatch({ autoStart: false });
 

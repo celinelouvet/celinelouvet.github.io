@@ -8,9 +8,8 @@ import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router';
 
-import { type Section } from '@/data';
-
 import { headerButtonRecipe } from './HeaderButton.recipe';
+import { type Section } from '../../sections';
 
 type HeaderButtonVariantProps = RecipeVariantProps<
   typeof headerButtonRecipe
@@ -23,7 +22,7 @@ export interface HeaderButtonProps
 export const HeaderButton = React.forwardRef<
   HTMLButtonElement,
   HeaderButtonProps
->(function (props, ref) {
+>(function HeaderButton(props, ref) {
   const { section, ...restProps } = props;
 
   const recipe = useRecipe({ recipe: headerButtonRecipe });

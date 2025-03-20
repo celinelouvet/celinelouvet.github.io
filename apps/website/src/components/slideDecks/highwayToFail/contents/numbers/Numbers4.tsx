@@ -1,0 +1,46 @@
+import { Box, Center, Icon, Stack, Text } from '@chakra-ui/react';
+import { FaHashtag } from 'react-icons/fa';
+
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
+
+export const content = (
+  <SlideContent
+    type={SlideContentTypes.titleWith2Columns}
+    title="Consensus"
+    column1={
+      <Center width="100%" height="70%">
+        <Icon as={FaHashtag} boxSize="5em" color="brand.500" />
+      </Center>
+    }
+  >
+    <Stack
+      width="100%"
+      height="100%"
+      justifyContent="center"
+      alignItems="center"
+      gap="1em"
+    >
+      <Box>
+        <Text fontSize="2.5em" color="brand.400" fontWeight="900">
+          Entre 60% et 90%
+        </Text>
+      </Box>
+      <Box marginBottom="1em">
+        <Text>des start‑ups échouent</Text>
+      </Box>
+    </Stack>
+  </SlideContent>
+);
+
+const note = (
+  <SlideNote>
+    <Text>
+      Bref, ça reste assez flou, mais il y a un consensus qui s’est formé autour
+      d’un taux d’échecs entre 60% et 90%.
+    </Text>
+    <Text>Ça reste plus d’une startup sur deux.</Text>
+  </SlideNote>
+);
+
+const slide = { content, note };
+export default slide;

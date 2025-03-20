@@ -2,7 +2,7 @@ import { Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { type Slug } from '@/data';
+import { type Slug } from '../../sections';
 
 type HeaderMenuTitleProps = {
   slug: Slug;

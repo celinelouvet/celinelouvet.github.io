@@ -13,7 +13,7 @@ type Story = StoryObj<typeof meta>;
 
 export const MenuTitle: Story = {
   args: {
-    slug: 'blog',
+    slug: 'resume',
   },
   parameters: {
     viewport: { defaultViewport: 'mobile2' },

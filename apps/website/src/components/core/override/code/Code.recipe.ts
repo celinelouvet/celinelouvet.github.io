@@ -4,26 +4,17 @@ export const codeRecipe = defineRecipe({
   variants: {
     variant: {
       slide: {
-        color: 'brand.100',
-        backgroundColor: 'brand.800',
-        fontFamily: 'Noto Mono',
+        color: { base: 'brand.100', _dark: 'brand.900' },
+        backgroundColor: { base: 'brand.800', _dark: 'brand.300' },
         padding: '1em',
         fontSize: '1em',
-
-        _dark: {
-          color: 'brand.900',
-          backgroundColor: 'brand.300',
-        },
       },
       inlineSlide: {
-        color: 'brand.100',
-        backgroundColor: 'brand.800',
+        color: { base: 'brand.100', _dark: 'brand.900' },
+        backgroundColor: { base: 'brand.800', _dark: 'brand.300' },
+        textStyle: '4xl',
         fontSize: '1em',
-
-        _dark: {
-          color: 'brand.900',
-          backgroundColor: 'brand.300',
-        },
+        padding: '0.5em',
       },
     },
   },

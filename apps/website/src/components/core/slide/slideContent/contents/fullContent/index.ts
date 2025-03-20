@@ -1,0 +1,1 @@
+export { SlideContentFullContent } from './SlideContentFullContent';

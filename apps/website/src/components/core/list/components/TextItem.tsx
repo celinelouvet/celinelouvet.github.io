@@ -1,4 +1,4 @@
-import { List, Text } from '@chakra-ui/react';
+import { List, chakra } from '@chakra-ui/react';
 import * as React from 'react';
 import { type IconType } from 'react-icons';
 
@@ -25,10 +25,10 @@ export const TextItem: React.FC<TextItemProps> = ({
   return (
     <List.Item aria-label={capitalizedAriaLabel}>
       <Tooltip label={capitalizedAriaLabel}>
-        <Text as="span">
+        <chakra.span>
           {Icon}
           {text}
-        </Text>
+        </chakra.span>
       </Tooltip>
     </List.Item>
   );

@@ -9,6 +9,7 @@ import { slotRecipe as drawerSlotRecipe } from './drawer';
 import { recipe as iconButtonRecipe } from './iconButton';
 import { recipe as linkRecipe } from './link';
 import { slotRecipe as tagSlotRecipe } from './tag';
+import { recipe as textRecipe } from './text';
 
 export const overrideRecipes = {
   ...buttonRecipe,
@@ -16,6 +17,7 @@ export const overrideRecipes = {
   ...codeRecipe,
   ...iconButtonRecipe,
   ...linkRecipe,
+  ...textRecipe,
 } as ThemingConfig['recipes'];
 
 export const overrideSlotRecipes = {

@@ -25,7 +25,7 @@ export interface SurveyPollChoiceQuestionProps
 export const SurveyPollChoiceQuestion = React.forwardRef<
   HTMLDivElement,
   SurveyPollChoiceQuestionProps
->(function (props, ref) {
+>(function SurveyPollChoiceQuestion(props, ref) {
   const { question, onAnswer, ...restProps } = props;
 
   const recipe = useSlotRecipe({ key: 'surveyPollChoiceQuestion' });

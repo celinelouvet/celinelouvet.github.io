@@ -9,7 +9,7 @@ import { LanguageMenu } from '../languageMenu';
 import { type Section, sections } from '../sections';
 
 export const HeaderAboveLg = React.forwardRef<HTMLDivElement, BoxProps>(
-  function (props, ref) {
+  function HeaderAboveLg(props, ref) {
     return (
       <Box ref={ref} {...props}>
         <Flex bgGradient="brand" marginBottom="3" paddingBottom="1.5">
