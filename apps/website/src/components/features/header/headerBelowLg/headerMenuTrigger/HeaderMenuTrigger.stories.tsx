@@ -8,7 +8,7 @@ const meta = {
   component: HeaderMenuTriggerComponent,
   args: {
     open: false,
-    onOpen: fn(),
+    toggle: fn(),
   },
   parameters: {
     viewport: { defaultViewport: 'mobile2' },

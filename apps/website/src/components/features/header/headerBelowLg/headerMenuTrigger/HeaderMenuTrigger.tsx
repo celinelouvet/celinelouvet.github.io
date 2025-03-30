@@ -15,7 +15,7 @@ type HeaderMenuTriggerVariantProps = RecipeVariantProps<
   typeof headerMenuTriggerRecipe
 > & {
   open: boolean;
-  onOpen: () => void;
+  toggle: () => void;
 };
 
 export interface HeaderMenuTriggerProps
@@ -26,7 +26,7 @@ export const HeaderMenuTrigger = React.forwardRef<
   HTMLButtonElement,
   HeaderMenuTriggerProps
 >(function HeaderMenuTrigger(props, ref) {
-  const { open, onOpen } = props;
+  const { open, toggle } = props;
 
   const recipe = useRecipe({ recipe: headerMenuTriggerRecipe });
   const styles = recipe(props);
@@ -37,7 +37,7 @@ export const HeaderMenuTrigger = React.forwardRef<
   return (
     <IconButton
       aria-label={buttonLabel}
-      onClick={onOpen}
+      onClick={() => toggle()}
       size="2xl"
       variant="plain"
       ref={ref}

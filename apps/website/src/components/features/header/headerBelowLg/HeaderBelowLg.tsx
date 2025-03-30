@@ -17,7 +17,7 @@ export const HeaderBelowLg = React.forwardRef<HTMLDivElement, BoxProps>(
     const { pathname } = useLocation();
     const { slug: activeSlug } = useActiveSection(pathname);
 
-    const { open, onOpen, onClose } = useDisclosure();
+    const { open, onToggle } = useDisclosure();
     const { firstname, lastname } = useResume();
 
     const fullname = `${firstname} ${lastname}`;
@@ -32,7 +32,7 @@ export const HeaderBelowLg = React.forwardRef<HTMLDivElement, BoxProps>(
         >
           <HeaderContainer justifyContent="space-between">
             <HeaderMenuTitle slug={activeSlug} />
-            <HeaderMenuTrigger open={open} onOpen={onOpen} />
+            <HeaderMenuTrigger open={open} toggle={onToggle} />
           </HeaderContainer>
         </Flex>
 
@@ -48,7 +48,7 @@ export const HeaderBelowLg = React.forwardRef<HTMLDivElement, BoxProps>(
           <ColorModeMenu />
         </Flex>
 
-        <HeaderDrawer title={fullname} open={open} onClose={onClose} />
+        <HeaderDrawer title={fullname} open={open} toggle={onToggle} />
       </Box>
     );
   },
