@@ -38,6 +38,7 @@ function App() {
           <Route path="/talks/:talkSubjectId" element={<Talk />} />
           <Route path="/talks" element={<Talks />}></Route>
           <Route path="/" element={<Home />} />
+          <Route index element={<Home />} />
         </Routes>
       </BrowserRouter>
     </>
