@@ -6,7 +6,6 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-themes',
     'storybook-dark-mode',
-    'storybook-addon-react-router-v6',
   ],
 
   framework: '@storybook/react-vite',

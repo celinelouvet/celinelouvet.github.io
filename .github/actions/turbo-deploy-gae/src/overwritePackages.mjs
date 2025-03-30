@@ -5,13 +5,13 @@ import { join } from 'node:path';
 
 import { readFolderArg } from './readArgs.mjs';
 
-const TARGET_VERSION = '1.22.22';
+// const TARGET_VERSION = '1.22.22';
 
-/** @type {(packages: object) => object} */
-const newEngineVersion = (packages) =>
-  Boolean(packages.engines)
-    ? { ...packages.engines, yarn: TARGET_VERSION }
-    : { yarn: TARGET_VERSION };
+// /** @type {(packages: object) => object} */
+// const newEngineVersion = (packages) =>
+//   Boolean(packages.engines)
+//     ? { ...packages.engines, yarn: TARGET_VERSION }
+//     : { yarn: TARGET_VERSION };
 
 /** @type {() => object} */
 const newScripts = () => ({
@@ -39,7 +39,6 @@ export const overwritePackages = async (root) => {
     const packages = JSON.parse(content);
     const newPackages = {
       ...packages,
-      engines: newEngineVersion(packages),
       scripts: newScripts(),
     };
 

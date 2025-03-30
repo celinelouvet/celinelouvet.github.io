@@ -34,7 +34,11 @@ export const SurveyPollChoiceQuestion = React.forwardRef<
   const [value, setValue] = React.useState('');
   const { t } = useTranslation('components', { keyPrefix: 'survey' });
 
-  const onSelect = (newValue: string) => {
+  const onSelect = (newValue: string | null) => {
+    if (!newValue) {
+      return;
+    }
+
     const oldValue = value;
 
     setValue(newValue);

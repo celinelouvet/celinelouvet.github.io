@@ -25,12 +25,12 @@
   },
   "devDependencies": {
     "prettier": "3.5.2",
-    "turbo": "2.4.2"
+    "turbo": "2.4.4"
   },
   "engines": {
-    "node": ">=22"
+    "node": "~22"
   },
-  "packageManager": "yarn@1.22.22",
+  "packageManager": "npm@10.9.0",
   "workspaces": [
     "apps/*",
     "packages/*"
