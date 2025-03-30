@@ -39,6 +39,7 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           cache: 'yarn'
+          cache-dependency-path: '**/yarn.lock'
 
       - name: Cache node modules
         uses: actions/cache@v4
@@ -46,10 +47,9 @@ jobs:
           cache-name: cache-node-modules
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-modules-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-modules-${{ env.cache-name }}-
-            ${{ runner.os }}-modules-
+            ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
 
       - name: Cache turbo build setup
