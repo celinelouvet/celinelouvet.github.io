@@ -14,6 +14,7 @@ env:
   VERSION: ${{ github.ref_name }}
   PDF_FILE: 'LOUVET_Celine'
   BUCKET_NAME: '${{ vars.GCP_PROJECT }}.appspot.com'
+  FORCE_COLOR: true
 
 jobs:
   deploy:
