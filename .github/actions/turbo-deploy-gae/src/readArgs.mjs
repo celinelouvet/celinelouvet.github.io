@@ -41,16 +41,33 @@ export const readServiceArg = () => {
 };
 
 /** @type {() => string} */
-export const readFolderArg = () => {
-  const folderArg = process.argv.find((arg) => arg.startsWith('--folder='));
-  const folder = Boolean(folderArg) ? folderArg.split('=')[1] : undefined;
+export const readRootFolderArg = () => {
+  const rootFolderArg = process.argv.find((arg) => arg.startsWith('--root='));
+  const rootFolder = Boolean(rootFolderArg)
+    ? rootFolderArg.split('=')[1]
+    : undefined;
 
-  if (folder === undefined) {
-    throw new Error(`Unknown folder: ${folder}`);
+  if (rootFolder === undefined) {
+    throw new Error(`Unknown root folder: ${rootFolder}`);
   }
 
-  console.log(`\tFolder: ${folder}`);
-  return folder;
+  console.log(`\tRoot folder: ${rootFolder}`);
+  return rootFolder;
+};
+
+/** @type {() => string} */
+export const readDistFolderArg = () => {
+  const distFolderArg = process.argv.find((arg) => arg.startsWith('--dist='));
+  const distFolder = Boolean(distFolderArg)
+    ? distFolderArg.split('=')[1]
+    : undefined;
+
+  if (distFolder === undefined) {
+    throw new Error(`Unknown dist folder: ${distFolder}`);
+  }
+
+  console.log(`\tDist folder: ${distFolder}`);
+  return distFolder;
 };
 
 /** @type {() => string} */

@@ -3,7 +3,7 @@
 import { access } from 'node:fs/promises';
 import { join } from 'node:path';
 
-import { readFolderArg } from './readArgs.mjs';
+import { readRootFolderArg } from './readArgs.mjs';
 
 /** @type {(root: string) => Promise<void>} */
 const checkNodeModulesExist = async (root) => {
@@ -17,9 +17,9 @@ const checkNodeModulesExist = async (root) => {
 
 /** @type {() => Promise<void>} */
 const run = async () => {
-  const folder = readFolderArg();
+  const rootFolder = readRootFolderArg();
 
-  await checkNodeModulesExist(folder);
+  await checkNodeModulesExist(rootFolder);
 };
 
 run().catch((error) => {

@@ -51,51 +51,76 @@ runs:
   steps:
     - name: Simplify monorepo to ${{inputs.target_app}}
       shell: bash
-      run: npx turbo prune --scope=${{ inputs.target_app }}
+      run: npx turbo prune --scope="${{ inputs.target_app }}"
 
     - name: Add out dir from turbo prune to env
+      id: out
       shell: bash
-      run: echo "OUT=${{ github.workspace }}/out" >> $GITHUB_ENV
+      run: |
+        echo "path=${{ github.workspace }}/out" >> "$GITHUB_OUTPUT"
+
+    - name: Define base urls
+      id: base_urls
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const { getBaseUrls } = await import('${{ github.action_path }}/src/getBaseUrls.mjs')
+          return getBaseUrls("${{ inputs.env }}", "${{ github.ref_name }}")
 
     - name: Install dependencies
       shell: bash
       run: npm install
-      working-directory: out
+      working-directory: '${{ steps.out.outputs.path }}'
 
     - name: Build app
       shell: bash
       run: npx turbo ${{ inputs.target_app }}#build
-      working-directory: out
+      working-directory: '${{ steps.out.outputs.path }}'
+      env:
+        VITE_BASE_URL: '${{ fromJson(steps.base_urls.outputs.result).app }}'
+        VITE_API_BASE_URL: '${{ fromJson(steps.base_urls.outputs.result).api }}'
+        VERSION_NAME: '${{ github.ref_name }}'
 
     - name: Checks
       shell: bash
-      run: node ${{ github.action_path }}/src/checks.mjs --folder=$OUT
+      run: |
+        node ${{ github.action_path }}/src/checks.mjs \
+          --root="${{ steps.out.outputs.path }}"
 
     - name: Define working directory
+      id: target
       shell: bash
-      run: echo "TARGET_DIRECTORY=$OUT/${{ inputs.apps_directory }}/${{ inputs.target_app }}" >> $GITHUB_ENV
+      run: |
+        echo "directory=${{ steps.out.outputs.path }}/${{ inputs.apps_directory }}/${{ inputs.target_app }}" >> "$GITHUB_OUTPUT"
+        echo "source=${{ inputs.apps_directory }}/${{ inputs.target_app }}" >> "$GITHUB_OUTPUT"
 
-    - name: Define package name
+    - name: Overwrite ${{ steps.out.outputs.path }}/package.json
       shell: bash
-      run: echo "PACKAGE_NAME=$(jq -r '.name' $TARGET_DIRECTORY/package.json)" >> $GITHUB_ENV
+      run: |
+        node ${{ github.action_path }}/src/overwritePackages.mjs \
+          --root="${{ steps.out.outputs.path }}"
 
-    - name: Overwrite $OUT/package.json
+    - name: Prepare ${{ steps.out.outputs.path }}/.gcloudignore
       shell: bash
-      run: node ${{ github.action_path }}/src/overwritePackages.mjs --folder=$OUT
+      run: |
+        node ${{ github.action_path }}/src/createGcloudIgnore.mjs \
+          --root="${{ steps.out.outputs.path }}"
 
-    - name: Prepare $OUT/.gcloudignore
+    - name: Prepare ${{ steps.out.outputs.path }}/app.yaml
       shell: bash
-      run: node ${{ github.action_path }}/src/createGcloudIgnore.mjs --folder=$OUT
-
-    - name: Prepare $OUT/app.yaml
-      shell: bash
-      run: node ${{ github.action_path }}/src/createAppFile.mjs --folder=$OUT --env=staging --version=${{ github.ref_name }} --service=${{inputs.target_service}}
+      run: |
+        node ${{ github.action_path }}/src/createAppFile.mjs \
+          --root="${{ steps.out.outputs.path }}" \
+          --dist="${{ steps.target.outputs.source }}/dist/app" \
+          --env="${{ inputs.env }}" \
+          --version="${{ github.ref_name }}" \
+          --service="${{inputs.target_service}}"
 
     - name: Authenticate with Google Cloud
       uses: google-github-actions/auth@v2
       with:
-        project_id: ${{ inputs.gcloud_project_id }}
-        credentials_json: ${{ inputs.gcloud_credentials_json }}
+        project_id: '${{ inputs.gcloud_project_id }}'
+        credentials_json: '${{ inputs.gcloud_credentials_json }}'
 
     - id: deploy
       name: Deploy to GCP AppEngine
@@ -103,17 +128,19 @@ runs:
       env:
         CLOUDSDK_APP_CLOUD_BUILD_TIMEOUT: 1800 # 30 minutes
       with:
-        project_id: ${{ inputs.gcloud_project_id }}
-        deliverables: app.yaml
-        promote: ${{inputs.should_promote}}
-        version: ${{ github.ref_name }}
-        working_directory: out
+        project_id: '${{ inputs.gcloud_project_id }}'
+        deliverables: 'app.yaml'
+        promote: '${{inputs.should_promote}}'
+        version: '${{ github.ref_name }}'
+        working_directory: '${{ steps.out.outputs.path }}'
 
     - id: test
       name: Test deployed version
-      run: node ${{ github.action_path }}/src/testDeployment.mjs --testUrl=${{ steps.deploy.outputs.version_url }}${{ inputs.test_endpoint }}
       shell: bash
+      run: |
+        node ${{ github.action_path }}/src/testDeployment.mjs \
+          --testUrl="${{ steps.deploy.outputs.version_url }}${{ inputs.test_endpoint }}"
 
     - name: Clean
       shell: bash
-      run: rm -fr $OUT
+      run: rm -fr "${{ steps.out.outputs.path }}"
