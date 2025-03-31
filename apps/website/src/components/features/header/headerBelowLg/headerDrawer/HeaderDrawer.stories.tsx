@@ -15,7 +15,7 @@ export const Menu: Story = {
   args: {
     title: 'Céline Louvet',
     open: true,
-    onClose: fn(),
+    toggle: fn(),
   },
   parameters: {
     viewport: { defaultViewport: 'mobile2' },

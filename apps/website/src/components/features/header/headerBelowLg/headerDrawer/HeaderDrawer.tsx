@@ -9,17 +9,17 @@ import { HeaderDrawerButton } from '../headerDrawerButton';
 type HeaderDrawerProps = {
   title: string;
   open: boolean;
-  onClose: () => void;
+  toggle: () => void;
 };
 
 export const HeaderDrawer: React.FC<HeaderDrawerProps> = ({
   title,
   open,
-  onClose,
+  toggle,
 }) => {
   return (
     <Drawer.Root
-      onOpenChange={onClose}
+      onOpenChange={() => toggle()}
       open={open}
       size="full"
       placement="start"

@@ -46,28 +46,28 @@ jobs:
             ${{ runner.os }}-turbo-
 
       - name: Install dependencies
-        run: yarn install
+        run: npm install
 
       - name: Clean
-        run: yarn clean
+        run: npm run clean
 
       - name: Build packages
         run: |
-          yarn turbo @repo/eslint-config#build
-          yarn turbo @repo/jest-presets#build
-          yarn turbo @repo/typescript-config#build
-          yarn turbo @repo/models#build
+          npx turbo @repo/eslint-config#build
+          npx turbo @repo/jest-presets#build
+          npx turbo @repo/typescript-config#build
+          npx turbo @repo/models#build
 
       - name: Build apps
         run: |
-          yarn turbo api#build
-          yarn turbo website#build
+          npx turbo api#build
+          npx turbo website#build
 
       - name: Typechecks
-        run: yarn typecheck
+        run: npm run typecheck
 
       - name: Lint code and types
-        run: yarn lint
+        run: npm run lint
 
       - id: deploy
         name: Deploy to GCP AppEngine
@@ -117,15 +117,14 @@ jobs:
           cache-name: cache-node-modules
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
-            ${{ runner.os }}-
 
       - name: Generate PDF
         shell: bash
-        run: cd slides-generator && yarn && yarn slides --pageUrl "$VERSION_URL"
+        run: cd slides-generator && npm run && npm run slides --pageUrl "$VERSION_URL"
         env:
           VERSION_URL: ${{ needs.deploy.outputs.versionUrl }}
 

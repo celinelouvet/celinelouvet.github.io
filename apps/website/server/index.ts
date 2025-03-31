@@ -2,7 +2,12 @@ import path from 'node:path';
 
 import { json, urlencoded } from 'body-parser';
 import cors from 'cors';
-import express, { type Express, type Request, type Response } from 'express';
+import express, {
+  type Express,
+  type Request,
+  type Response,
+  static as serveStatic,
+} from 'express';
 import morgan from 'morgan';
 
 export const createServer = (): Express => {
@@ -18,8 +23,14 @@ export const createServer = (): Express => {
     res.send('Website started');
   });
 
-  // eslint-disable-next-line import-x/no-named-as-default-member
-  app.use(express.static(path.join(__dirname, 'app')));
+  app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, 'app/index.html'));
+    res.setHeader('Cache-Control', 'public, max-age=0');
+    return;
+  });
+
+  const oneDay = 1000 * 60 * 60 * 24;
+  app.use(serveStatic(path.join(__dirname, 'app'), { maxAge: oneDay }));
 
   return app;
 };

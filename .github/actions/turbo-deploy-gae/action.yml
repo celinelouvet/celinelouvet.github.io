@@ -1,5 +1,5 @@
 name: 'Deploy TurboRepo app to Google App Engine'
-description: 'Deploy TurboRepo Apps to Google App Engine using a flexible nodejs runtime and yarn.'
+description: 'Deploy TurboRepo Apps to Google App Engine using a flexible nodejs runtime and npm.'
 author: Céline Louvet
 branding:
   color: 'purple'
@@ -51,7 +51,7 @@ runs:
   steps:
     - name: Simplify monorepo to ${{inputs.target_app}}
       shell: bash
-      run: yarn turbo prune --scope=${{ inputs.target_app }}
+      run: npx turbo prune --scope=${{ inputs.target_app }}
 
     - name: Add out dir from turbo prune to env
       shell: bash
@@ -59,12 +59,12 @@ runs:
 
     - name: Install dependencies
       shell: bash
-      run: yarn install
+      run: npm install
       working-directory: out
 
     - name: Build app
       shell: bash
-      run: yarn turbo ${{ inputs.target_app }}#build
+      run: npx turbo ${{ inputs.target_app }}#build
       working-directory: out
 
     - name: Checks
