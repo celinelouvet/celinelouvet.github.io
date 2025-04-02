@@ -21,18 +21,21 @@
     "lint": "turbo run lint",
     "test": "turbo run test",
     "typecheck": "turbo run typecheck",
-    "storybook": "turbo run storybook"
+    "storybook": "turbo run storybook",
+    "slides": "turbo run slides"
   },
   "devDependencies": {
     "prettier": "3.5.2",
     "turbo": "2.4.4"
   },
   "engines": {
-    "node": "~22"
+    "node": "~22",
+    "bun": "*"
   },
   "packageManager": "npm@10.9.0",
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "tools/*"
   ]
 }
