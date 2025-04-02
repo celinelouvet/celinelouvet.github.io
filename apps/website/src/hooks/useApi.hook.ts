@@ -1,13 +1,9 @@
 import * as React from 'react';
 
-interface Window {
-  __API_BASE_URL__: string;
-}
-
 export const useApi = () => {
   const get = React.useMemo(
     () => async (path: string) =>
-      fetch(`${(window as unknown as Window).__API_BASE_URL__}${path}`, {
+      fetch(`${__API_BASE_URL__}${path}`, {
         method: 'GET',
         headers: { 'Accepted-Type': 'application/json' },
         cache: 'no-store',
@@ -17,7 +13,7 @@ export const useApi = () => {
 
   const post = React.useMemo(
     () => async (path: string, body: Record<string, unknown>) =>
-      fetch(`${(window as unknown as Window).__API_BASE_URL__}${path}`, {
+      fetch(`${__API_BASE_URL__}${path}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),

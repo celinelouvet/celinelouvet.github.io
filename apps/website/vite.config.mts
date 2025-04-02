@@ -1,5 +1,5 @@
 import react from '@vitejs/plugin-react';
-import { type UserConfig, defineConfig, loadEnv } from 'vite';
+import { type UserConfigFnObject, defineConfig, loadEnv } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
@@ -16,11 +16,11 @@ export default defineConfig(({ mode }) => {
     env,
     define: {
       __API_BASE_URL__: JSON.stringify(env.VITE_API_BASE_URL),
-      __DEV__: JSON.stringify(env.DEV),
+      __DEV__: mode === 'development',
     },
     build: {
       target: 'modules',
       outDir: 'dist/app',
     },
   };
-}) satisfies UserConfig;
+}) satisfies UserConfigFnObject;

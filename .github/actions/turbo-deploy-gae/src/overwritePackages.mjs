@@ -3,15 +3,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
-import { readFolderArg } from './readArgs.mjs';
-
-// const TARGET_VERSION = '1.22.22';
-
-// /** @type {(packages: object) => object} */
-// const newEngineVersion = (packages) =>
-//   Boolean(packages.engines)
-//     ? { ...packages.engines, yarn: TARGET_VERSION }
-//     : { yarn: TARGET_VERSION };
+import { readRootFolderArg } from './readArgs.mjs';
 
 /** @type {() => object} */
 const newScripts = () => ({
@@ -52,7 +44,7 @@ export const overwritePackages = async (root) => {
 
 /** @type {() => Promise<void>} */
 const run = async () => {
-  const root = readFolderArg();
+  const root = readRootFolderArg();
 
   await overwritePackages(root);
 };

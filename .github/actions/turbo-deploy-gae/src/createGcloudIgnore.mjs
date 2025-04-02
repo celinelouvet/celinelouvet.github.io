@@ -3,7 +3,7 @@
 import { writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
-import { readFolderArg } from './readArgs.mjs';
+import { readRootFolderArg } from './readArgs.mjs';
 
 const content = [
   '.gcloudignore',
@@ -23,7 +23,7 @@ const createGcloudIgnore = async (root) => {
 
 /** @type {() => Promise<void>} */
 const run = async () => {
-  const root = readFolderArg();
+  const root = readRootFolderArg();
 
   await createGcloudIgnore(root);
 };

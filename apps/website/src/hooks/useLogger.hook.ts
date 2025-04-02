@@ -2,10 +2,6 @@ import { useTranslation } from 'react-i18next';
 
 import { useApi } from './useApi.hook';
 
-interface Window {
-  __DEV__: boolean;
-}
-
 export const useLogger = () => {
   const { post } = useApi();
   const { i18n } = useTranslation();
@@ -24,7 +20,7 @@ export const useLogger = () => {
       const colorMode = theme?.includes('dark') ? 'dark' : 'light';
       const body = { message, metadata: { ...metadata, colorMode, language } };
 
-      if ((window as unknown as Window).__DEV__) {
+      if (__DEV__) {
         console.log('Logging: ', body);
       } else {
         await post('/logger', body).catch((res) =>
