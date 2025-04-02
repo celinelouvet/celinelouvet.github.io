@@ -1,0 +1,20 @@
+{
+  "name": "@repo/slides-generator",
+  "license": "MIT",
+  "version": "1.0.0",
+  "module": "src/run.ts",
+  "type": "module",
+  "scripts": {
+    "slides": "bun run src/run.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "5.7.3"
+  },
+  "dependencies": {
+    "commander": "13.1.0",
+    "puppeteer": "^24.5.0"
+  }
+}

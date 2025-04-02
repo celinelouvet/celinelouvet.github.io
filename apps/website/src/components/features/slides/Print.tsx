@@ -1,18 +1,20 @@
 import * as React from 'react';
 
 import { SlideDeck, ViewTypes } from '@/components/core';
-import { type SlideDecks, slideDecks } from '@/components/slideDecks';
+
+import { useSlideDeck } from './useSlideDeck.hook';
 
 type PrintProps = {
   talkSubjectId?: string;
 };
 
 export const Print: React.FC<PrintProps> = ({ talkSubjectId }) => {
-  if (!talkSubjectId || !(talkSubjectId in slideDecks)) {
+  const { error, slideDeck } = useSlideDeck(talkSubjectId);
+
+  if (error || !slideDeck) {
     return <div>Talk not found</div>;
   }
 
-  const slides = slideDecks[talkSubjectId as SlideDecks]();
-
+  const slides = slideDeck.slides();
   return <SlideDeck slides={slides} view={ViewTypes.print} />;
 };
