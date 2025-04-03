@@ -5,10 +5,12 @@ export const h2HeadingRecipe = defineRecipe({
     fontFamily: 'PT Sans Narrow',
     fontWeight: '400',
     marginBottom: '2',
+    textTransform: 'uppercase',
   },
   variants: {
     variant: {
       slide: {
+        textTransform: 'none',
         fontWeight: '400',
         lineHeight: '1.2',
       },
@@ -19,7 +21,6 @@ export const h2HeadingRecipe = defineRecipe({
       },
       lg: {
         fontSize: '2.25em',
-        textTransform: 'uppercase',
       },
     },
   },

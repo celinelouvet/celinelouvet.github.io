@@ -31,6 +31,7 @@
     "@fontsource/noto-mono": "5.1.0",
     "@fontsource/nunito": "5.1.1",
     "@fontsource/pt-sans-narrow": "5.1.1",
+    "@fontsource/the-girl-next-door": "5.2.5",
     "@repo/models": "*",
     "body-parser": "1.20.3",
     "cors": "2.8.5",

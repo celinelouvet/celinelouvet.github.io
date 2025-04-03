@@ -39,44 +39,85 @@ export const Presenter: React.FC = () => {
           </Flex>
         ) : null}
 
-        <SimpleGrid
-          columns={3}
-          gap="8"
-          width="100%"
-          height="8em"
-          backgroundColor={{ base: 'brand.900', _dark: 'brand.200' }}
-          borderRadius="md"
-        >
-          <Center
-            backgroundColor="brand.400"
-            color="brand.900"
-            borderLeftRadius="md"
+        <Stack gap="8" width="100%">
+          <SimpleGrid
+            columns={3}
+            gap="8"
+            width="100%"
+            height="8em"
+            backgroundColor={{ base: 'brand.900', _dark: 'brand.200' }}
+            borderRadius="md"
           >
-            <H2Heading>Highway to fail</H2Heading>
-          </Center>
+            <Center
+              backgroundColor="brand.400"
+              color="brand.900"
+              borderLeftRadius="md"
+            >
+              <H2Heading>Highway to fail</H2Heading>
+            </Center>
 
-          <Center>
-            <ButtonGroup gap="8">
-              <Button onClick={() => onClick('highway-to-fail', false)}>
-                Present
-              </Button>
-              <Button onClick={() => onClick('highway-to-fail', true)}>
-                Present with notes
-              </Button>
-            </ButtonGroup>
-          </Center>
+            <Center>
+              <ButtonGroup gap="8">
+                <Button onClick={() => onClick('highway-to-fail', false)}>
+                  Present
+                </Button>
+                <Button onClick={() => onClick('highway-to-fail', true)}>
+                  Present with notes
+                </Button>
+              </ButtonGroup>
+            </Center>
 
-          <Center>
-            <ButtonGroup gap="8">
-              <Link.Internal to="/slides/highway-to-fail/print">
-                Print content
-              </Link.Internal>
-              <Link.Internal to="/slides/highway-to-fail/print-notes">
-                Print content with notes
-              </Link.Internal>
-            </ButtonGroup>
-          </Center>
-        </SimpleGrid>
+            <Center>
+              <ButtonGroup gap="8">
+                <Link.Internal to="/slides/highway-to-fail/print">
+                  Print content
+                </Link.Internal>
+                <Link.Internal to="/slides/highway-to-fail/print-notes">
+                  Print content with notes
+                </Link.Internal>
+              </ButtonGroup>
+            </Center>
+          </SimpleGrid>
+
+          <SimpleGrid
+            columns={3}
+            gap="8"
+            width="100%"
+            height="8em"
+            backgroundColor={{ base: 'brand.900', _dark: 'brand.200' }}
+            borderRadius="md"
+          >
+            <Center
+              backgroundColor="brand.400"
+              color="brand.900"
+              borderLeftRadius="md"
+            >
+              <H2Heading>The choice must go on</H2Heading>
+            </Center>
+
+            <Center>
+              <ButtonGroup gap="8">
+                <Button onClick={() => onClick('choice-must-go-on', false)}>
+                  Present
+                </Button>
+                <Button onClick={() => onClick('choice-must-go-on', true)}>
+                  Present with notes
+                </Button>
+              </ButtonGroup>
+            </Center>
+
+            <Center>
+              <ButtonGroup gap="8">
+                <Link.Internal to="/slides/choice-must-go-on/print">
+                  Print content
+                </Link.Internal>
+                <Link.Internal to="/slides/choice-must-go-on/print-notes">
+                  Print content with notes
+                </Link.Internal>
+              </ButtonGroup>
+            </Center>
+          </SimpleGrid>
+        </Stack>
       </Stack>
     </PageContainer>
   );

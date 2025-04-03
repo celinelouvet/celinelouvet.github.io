@@ -194,3 +194,16 @@
     url(@fontsource/noto-mono/files/noto-mono-latin-400-normal.woff)
       format('woff');
 }
+
+/* the-girl-next-door-latin-400-normal */
+@font-face {
+  font-family: 'The Girl Next Door';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    url(@fontsource/the-girl-next-door/files/the-girl-next-door-latin-400-normal.woff2)
+      format('woff2'),
+    url(@fontsource/the-girl-next-door/files/the-girl-next-door-latin-400-normal.woff)
+      format('woff');
+}
