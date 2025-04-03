@@ -25,14 +25,14 @@ const getContent = (env, version, service, dist) => {
 `;
 
   const appHandlers = `
+  - url: /test
+    secure: always
+    script: auto
+
   - url: /
     static_files: ${dist}/index.html
     upload: ${dist}/index.html
     secure: always
-
-  - url: /test
-    secure: always
-    script: auto
 
   - url: /(.*)
     static_files: ${dist}/\\1
