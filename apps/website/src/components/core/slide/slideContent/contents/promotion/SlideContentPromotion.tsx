@@ -24,74 +24,75 @@ import { SlideContentWith2Columns } from '../content2Columns';
 type SlideContentPromotionProps = Omit<BoxProps, 'children'> &
   React.PropsWithChildren<ContentPromotion>;
 
-export const SlideContentPromotion = React.forwardRef<
-  HTMLDivElement,
-  SlideContentPromotionProps
->(function SlideContentPromotion(
-  { author, title, time, convention, room, ...props },
-  ref,
-) {
-  const Column1 = (
-    <Center width="100%" height="100%">
-      <Box width="80%" height="70%">
-        <Picture size="full" />
-      </Box>
-    </Center>
-  );
+export const SlideContentPromotion: React.FC<SlideContentPromotionProps> =
+  function SlideContentPromotion({
+    author,
+    title,
+    time,
+    convention,
+    room,
+    ...props
+  }) {
+    const column1 = (
+      <Center width="100%" height="100%">
+        <Box width="80%" height="70%">
+          <Picture size="full" />
+        </Box>
+      </Center>
+    );
 
-  return (
-    <SlideContentWith2Columns
-      {...props}
-      column1={Column1}
-      colormode={ColorMode.dark}
-      ref={ref}
-      type={SlideContentTypes.content2Columns}
-    >
-      <Stack
-        height="100%"
-        alignItems="stretch"
-        justifyContent="center"
-        gap="1em"
+    return (
+      <SlideContentWith2Columns
+        {...props}
+        colormode={ColorMode.dark}
+        type={SlideContentTypes.content2Columns}
+        column1={column1}
       >
-        <Box>
-          <Title title={title} />
-        </Box>
+        <Stack
+          height="100%"
+          alignItems="stretch"
+          justifyContent="center"
+          gap="1em"
+        >
+          <Box>
+            <Title title={title} />
+          </Box>
 
-        <Box textAlign="center" marginBottom="2em">
-          <H3Heading variant="slide">{author}</H3Heading>
-        </Box>
+          <Box textAlign="center" marginBottom="2em">
+            <H3Heading variant="slide">{author}</H3Heading>
+          </Box>
 
-        <Box flexGrow="1">
-          <Center width="100%" height="100%">
-            <Grid
-              templateColumns="1fr 1fr"
-              templateRows="1fr 1fr"
-              gap="1em"
-              width="80%"
-              height="100%"
-            >
-              <GridItem>
-                <Day time={time} />
-              </GridItem>
+          <Box flexGrow="1">
+            <Center width="100%" height="100%">
+              <Grid
+                templateColumns="1fr 1fr"
+                templateRows="1fr 1fr"
+                gap="1em"
+                width="80%"
+                height="100%"
+              >
+                <GridItem>
+                  <Day time={time} />
+                </GridItem>
 
-              <GridItem>
-                <Convention convention={convention} />
-              </GridItem>
+                <GridItem>
+                  <Convention convention={convention} />
+                </GridItem>
 
-              <GridItem>
-                <Time time={time} />
-              </GridItem>
+                <GridItem>
+                  <Time time={time} />
+                </GridItem>
 
-              <GridItem>
-                <Room room={room} />
-              </GridItem>
-            </Grid>
-          </Center>
-        </Box>
-      </Stack>
-    </SlideContentWith2Columns>
-  );
-});
+                <GridItem>
+                  <Room room={room} />
+                </GridItem>
+              </Grid>
+            </Center>
+          </Box>
+        </Stack>
+      </SlideContentWith2Columns>
+    );
+  };
 
 const Title: React.FC<{ title: string }> = ({ title }) => (
   <Center w="100%" flexDirection="column">

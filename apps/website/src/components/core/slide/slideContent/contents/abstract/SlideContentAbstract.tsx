@@ -8,37 +8,34 @@ import { type ContentAbstract } from '../../types';
 type SlideContentAbstractProps = Omit<BoxProps, 'children'> &
   React.PropsWithChildren<ContentAbstract>;
 
-export const SlideContentAbstract = React.forwardRef<
-  HTMLDivElement,
-  SlideContentAbstractProps
->(function SlideContentAbstract(props, ref) {
-  const { topic, descriptions, ...restProps } = props;
-  return (
-    <Box
-      width="100%"
-      height="100%"
-      padding="3em"
-      backgroundColor="brand.300"
-      color="brand.900"
-      ref={ref}
-      {...restProps}
-    >
-      <Stack gap="1.5em">
-        <Box>
-          <Title title={topic} />
-        </Box>
+export const SlideContentAbstract: React.FC<SlideContentAbstractProps> =
+  function SlideContentAbstract(props) {
+    const { topic, descriptions, ...restProps } = props;
+    return (
+      <Box
+        width="100%"
+        height="100%"
+        padding="3em"
+        backgroundColor="brand.300"
+        color="brand.900"
+        {...restProps}
+      >
+        <Stack gap="1.5em">
+          <Box>
+            <Title title={topic} />
+          </Box>
 
-        <Box>
-          {descriptions.map((description, i) => (
-            <Text key={i} fontSize="0.75em" marginBottom="1.1em">
-              {description}
-            </Text>
-          ))}
-        </Box>
-      </Stack>
-    </Box>
-  );
-});
+          <Box>
+            {descriptions.map((description, i) => (
+              <Text key={i} fontSize="0.75em" marginBottom="1.1em">
+                {description}
+              </Text>
+            ))}
+          </Box>
+        </Stack>
+      </Box>
+    );
+  };
 
 const Title: React.FC<{ title: string }> = ({ title }) => (
   <Center width="100%" flexDirection="column">

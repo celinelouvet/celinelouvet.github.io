@@ -1,0 +1,55 @@
+import { Box } from '@chakra-ui/react';
+import { type Meta, type StoryObj } from '@storybook/react';
+
+import { SlideContentTitleWithThinColumn } from './SlideContentTitleWithThinColumn';
+import { SlideContentTypes } from '../../types';
+
+const meta = {
+  title: 'SlideDeck/SlideContent',
+  component: SlideContentTitleWithThinColumn,
+
+  decorators: [
+    (Story) => (
+      <Box width="800px" height="450px">
+        <Story />
+      </Box>
+    ),
+  ],
+} satisfies Meta<typeof SlideContentTitleWithThinColumn>;
+
+export default meta;
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+type Story = StoryObj<typeof meta>;
+
+const topRightCorner = 'Top right corner';
+
+const column1 = (
+  <Box width="100%" height="100%" border="1px solid" borderColor="brand.500">
+    Column 1
+  </Box>
+);
+
+const content = (
+  <Box width="100%" height="100%" border="1px solid" borderColor="brand.500">
+    Content
+  </Box>
+);
+
+export const TitleWithThinColumn: Story = {
+  args: {
+    type: SlideContentTypes.titleWithThinColumn,
+    title: 'Title with 1 thin column',
+  },
+  render: () => (
+    <SlideContentTitleWithThinColumn
+      type={SlideContentTypes.titleWithThinColumn}
+      title="Title with 1 thin column"
+      column1={column1}
+      topRightCorner={topRightCorner}
+    >
+      {content}
+    </SlideContentTitleWithThinColumn>
+  ),
+};
