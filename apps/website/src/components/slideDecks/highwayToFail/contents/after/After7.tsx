@@ -1,7 +1,7 @@
 import { Box, Flex, Icon, Text } from '@chakra-ui/react';
 import { FaFlag } from 'react-icons/fa';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { VerticalTimelineAfter } from '../../components';
 

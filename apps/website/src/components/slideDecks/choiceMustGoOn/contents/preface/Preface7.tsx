@@ -1,7 +1,7 @@
 import { Center, HStack, Icon, Stack, Text } from '@chakra-ui/react';
 import { LuCircleAlert } from 'react-icons/lu';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 export const content = (
   <SlideContent

@@ -1,6 +1,6 @@
 'use client';
 
-import type { Slide } from '@/components/core';
+import type { Slide } from '@/components/slide';
 
 import EndTitle from './endTitle';
 import Introduction from './introduction';

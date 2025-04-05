@@ -1,12 +1,8 @@
 import { Box, Flex, Icon, Stack, Text, chakra } from '@chakra-ui/react';
 import { BsArrowReturnRight } from 'react-icons/bs';
 
-import {
-  SlideContent,
-  SlideContentTypes,
-  SlideNote,
-  ThumbsUp,
-} from '@/components/core';
+import { ThumbsUp } from '@/components/core';
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { VerticalTimelineDuring } from '../../components';
 

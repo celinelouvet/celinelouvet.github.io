@@ -1,11 +1,7 @@
 import { Stack, Text } from '@chakra-ui/react';
 
-import {
-  List,
-  SlideContent,
-  SlideContentTypes,
-  SlideNote,
-} from '@/components/core';
+import { List } from '@/components/core';
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 export const content = (
   <SlideContent

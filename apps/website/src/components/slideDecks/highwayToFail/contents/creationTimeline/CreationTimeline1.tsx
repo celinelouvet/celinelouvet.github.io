@@ -1,6 +1,6 @@
 import { Center, Text } from '@chakra-ui/react';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { Timeline1, VerticalTimelineCreation } from '../../components';
 

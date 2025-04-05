@@ -1,12 +1,12 @@
 import { Box, HStack, Icon, Stack, Text, chakra } from '@chakra-ui/react';
 
+import { H2Heading } from '@/components/core';
 import {
   ColorMode,
-  H2Heading,
   SlideContent,
   SlideContentTypes,
   SlideNote,
-} from '@/components/core';
+} from '@/components/slide';
 import { choiceMustGoOnTalkFr as talk } from '@/data/talks';
 import { socialIcon } from '@/lib';
 
