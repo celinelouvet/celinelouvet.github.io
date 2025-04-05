@@ -1,10 +1,10 @@
 'use client';
 
-import EndTitle from './EndTitle';
-import Introduction from './Introduction';
-import MainTitle from './mainTitle/MainTitle';
-import Yeeso from './Yeeso';
+import EndTitle from './endTitle';
+import Introduction from './introduction';
+import MainTitle from './mainTitle';
+import Preface from './preface';
 
 export const getSlides = () => {
-  return [MainTitle, Introduction, Yeeso, EndTitle];
+  return [MainTitle, Preface, Introduction, EndTitle];
 };

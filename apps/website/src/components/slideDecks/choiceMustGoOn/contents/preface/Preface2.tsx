@@ -14,7 +14,14 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote></SlideNote>;
+const note = (
+  <SlideNote>
+    <Text>Il est produit par le Standish group.</Text>
+    <Text>
+      Malheureusement, les dernières versions sont payantes (hum 400€)...
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

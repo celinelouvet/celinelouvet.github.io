@@ -10,7 +10,7 @@ import {
   SlideNote,
 } from '@/components/core';
 
-import { YeesoLight } from '../components';
+import { YeesoLight } from '../../components';
 
 export const content = (
   <SlideContent type={SlideContentTypes.fullContent} colormode={ColorMode.dark}>

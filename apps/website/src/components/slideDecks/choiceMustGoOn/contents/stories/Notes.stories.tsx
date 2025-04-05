@@ -2,36 +2,46 @@ import { type Meta, type StoryObj } from '@storybook/react';
 
 import { SlideDeck, ViewTypes } from '@/components/core';
 
-import EndTitleSlide from '../EndTitle';
-import IntroductionSlide from '../Introduction';
-import MainTitleSlide from '../mainTitle/MainTitle';
-import YeesoSlide from '../Yeeso';
-
+import EndTitleSlides from '../endTitle';
+import IntroductionSlides from '../introduction';
+import MainTitleSlides from '../mainTitle';
+import PrefaceSlides from '../preface';
 const meta = {
   title: 'Talks/TheChoiceMustGoOn/Notes',
   component: SlideDeck,
+  args: {
+    view: ViewTypes.printNotes,
+    slides: [],
+  },
 } satisfies Meta<typeof SlideDeck>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const MainTitle: Story = {
-  args: {
-    slides: [MainTitleSlide],
-    view: ViewTypes.printNotes,
+  render: () => {
+    const slides = MainTitleSlides;
+    return <SlideDeck view={ViewTypes.printNotes} slides={slides} />;
+  },
+};
+
+export const Preface: Story = {
+  render: () => {
+    const slides = PrefaceSlides;
+    return <SlideDeck view={ViewTypes.printNotes} slides={slides} />;
   },
 };
 
 export const Introduction: Story = {
-  args: {
-    slides: [IntroductionSlide, YeesoSlide],
-    view: ViewTypes.printNotes,
+  render: () => {
+    const slides = IntroductionSlides;
+    return <SlideDeck view={ViewTypes.printNotes} slides={slides} />;
   },
 };
 
 export const EndTitle: Story = {
-  args: {
-    slides: [EndTitleSlide],
-    view: ViewTypes.printNotes,
+  render: () => {
+    const slides = EndTitleSlides;
+    return <SlideDeck view={ViewTypes.printNotes} slides={slides} />;
   },
 };

@@ -19,7 +19,7 @@ import {
 import { choiceMustGoOnTalkFr as talk } from '@/data/talks';
 import { socialIcon } from '@/lib';
 
-import { Title } from './Title.component';
+import { Title } from '../Title.component';
 
 export const content = (
   <SlideContent colormode={ColorMode.dark} type={SlideContentTypes.fullContent}>
