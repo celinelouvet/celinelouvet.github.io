@@ -29,15 +29,23 @@ const getContent = (env, version, service, dist) => {
     secure: always
     script: auto
 
-  - url: /
+  - url: /static
+    secure: always
+    static_dir: ${dist}/static
+
+  - url: /talks
+    secure: always
+    static_dir: ${dist}/talks
+
+  - url: /(.*\.(gif|media|json|ico|eot|ttf|woff|woff2|png|jpg|css|js|svg))$
+    secure: always
+    static_files: ${dist}/\\1
+    upload: ${dist}/.*\.(gif|media|json|ico|eot|ttf|woff|woff2|png|jpg|css|js|svg)$
+
+  - url: .*
+    secure: always
     static_files: ${dist}/index.html
     upload: ${dist}/index.html
-    secure: always
-
-  - url: /(.*)
-    static_files: ${dist}/\\1
-    upload: ${dist}/(.*)
-    secure: always
 `;
 
   return `runtime: nodejs22
