@@ -1,8 +1,7 @@
 import { Box, type BoxProps } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { useSlideSize, useWindowSize } from '@/hooks';
-
+import { useSlideSize, useWindowSize } from './hooks';
 import { type Print } from './types';
 
 type SlideDeckForPrintProps = Omit<BoxProps, 'children'> &

@@ -1,11 +1,9 @@
 export { useApi } from './useApi.hook';
 export { useColorModeToken } from './useColorModeToken.hook';
-export { useCurrentPosition } from './useCurrentPosition.hook';
 export { useHeadingSize } from './useHeadingSize.hook';
 export { useLogger } from './useLogger.hook';
 export { usePossibleTalkSubjects } from './usePossibleTalkSubjects.hook';
 export { useResume } from './useResume.hook';
-export { useSlideSize } from './useSlideSize.hook';
 export { useSortByConventions } from './useSortByConventions.hook';
 export { useSurveyInfos } from './useSurveyInfos.hook';
 export { useSurveyPoll } from './useSurveyPoll.hook';
@@ -13,4 +11,3 @@ export { useSurveyResults } from './useSurveyResults.hook';
 export { useTalk } from './useTalk.hook';
 export { useTalkSubjects } from './useTalkSubjects.hook';
 export { useWindowFocus } from './useWindowFocus.hook';
-export { useWindowSize } from './useWindowSize.hook';

@@ -1,8 +1,7 @@
 import { Box, type BoxProps } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { useCurrentPosition, useSlideSize, useWindowSize } from '@/hooks';
-
+import { useCurrentPosition, useSlideSize, useWindowSize } from './hooks';
 import { type Content } from './types';
 
 type SlideDeckForContentProps = Omit<BoxProps, 'children'> &
