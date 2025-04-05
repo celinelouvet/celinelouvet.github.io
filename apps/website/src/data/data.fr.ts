@@ -136,12 +136,25 @@ const talkSubjects = new Map<string, TalkSubject>([
       survey: highwayToFailSurveyFr,
     },
   ],
+
+  [
+    'choice_must_go_on',
+    {
+      topic: 'The choice must go on, le bon (de préférence)',
+      descriptions: [
+        'Vous avez déjà subi un mauvais choix ? Ou vous avez vous‑même fait un mauvais choix ? En effet, qu’il ait été fait pour une raison technique, produit ou encore méthodo, on a été nombreux et nombreuses à vivre ce moment où on se dit « mais quelle idiotie ?! » ou encore « Mais que c’est tordu !!! ».',
+        'On le sait, faire le bon choix est parfois très difficile. Celui qui a fonctionné une fois ne sera pas forcément pertinent ailleurs. De plus, un mauvais choix peut avoir un impact désastreux, tant sur la qualité du résultat produit que sur les équipes.',
+        'Je vous proposerai une approche personnelle pour que ça se passe au mieux possible. Peut‑être qu’elle pourra vous permettre d’éviter certains écueils.',
+      ],
+    },
+  ],
 ]);
 
 const possibleTalkSubjects = [
   'event_driven_buzzword',
   'permissions_mysteries',
   'highway_to_fail',
+  'choice_must_go_on',
 ];
 
 const conventions = new Map<string, Convention>([
@@ -175,6 +188,7 @@ const conventions = new Map<string, Convention>([
   ['devfest_lille_2024', { name: 'DevFest Lille 2024', language: 'FR' }],
   ['technwine_2024', { name: 'Tech n Wine 2024', language: 'FR' }],
   ['bdxio_2024', { name: 'BDX.IO 2024', language: 'FR' }],
+  ['lyoncraft_2025', { name: 'Lyon Craft 2025', language: 'FR' }],
 ]);
 
 const talks = [
@@ -378,6 +392,15 @@ const talks = [
     when: '2024-11-08',
     links: {
       program: 'https://bdxio.fr/schedule',
+    },
+    pictureId: 'lyoncraft2024-highway_to_fail',
+  },
+  {
+    subjectId: 'choice_must_go_on',
+    conventionId: 'lyoncraft_2025',
+    when: '2025-04-14',
+    links: {
+      program: 'https://lyon-craft.fr/#programme',
     },
     pictureId: 'lyoncraft2024-highway_to_fail',
   },
