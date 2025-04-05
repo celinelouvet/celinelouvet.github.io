@@ -1,0 +1,14 @@
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+
+export const content = (
+  <SlideContent
+    type={SlideContentTypes.titleWithContent}
+    title="Connaître son besoin"
+    alignContent="flex-start"
+  ></SlideContent>
+);
+
+const note = <SlideNote></SlideNote>;
+
+const slide = { content, note };
+export default slide;

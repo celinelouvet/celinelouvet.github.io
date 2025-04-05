@@ -4,6 +4,7 @@ import { SlideDeck, ViewTypes } from '@/components/slide';
 
 import EndTitleSlides from '../endTitle';
 import IntroductionSlides from '../introduction';
+import KnowYourNeedSlides from '../knowYourNeed';
 import MainTitleSlides from '../mainTitle';
 import PrefaceSlides from '../preface';
 
@@ -29,6 +30,13 @@ export const MainTitle: Story = {
 export const Preface: Story = {
   render: () => {
     const slides = PrefaceSlides;
+    return <SlideDeck view={ViewTypes.print} slides={slides} />;
+  },
+};
+
+export const KnowYourNeed: Story = {
+  render: () => {
+    const slides = KnowYourNeedSlides;
     return <SlideDeck view={ViewTypes.print} slides={slides} />;
   },
 };

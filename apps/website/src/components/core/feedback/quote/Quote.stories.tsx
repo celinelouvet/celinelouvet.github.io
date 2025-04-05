@@ -12,7 +12,14 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const variants = ['subtle', 'surface', 'solid', 'outline', 'slide'] as const;
+const variants = [
+  'subtle',
+  'surface',
+  'solid',
+  'outline',
+  'slide',
+  'rightSlide',
+] as const;
 type Variant = (typeof variants)[number];
 
 type ItemProps = {
