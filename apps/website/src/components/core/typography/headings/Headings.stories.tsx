@@ -25,17 +25,32 @@ const h5Sizes = h5HeadingRecipe.variants?.size;
 
 export const Headings: Story = {
   render: () => (
-    <Grid templateColumns="50px 200px 250px" gap="4">
+    <Grid templateColumns="50px 200px 250px 250px 250px 250px 250px" gap="4">
       <GridItem></GridItem>
+      <GridItem>
+        <Tag size="lg">sm</Tag>
+      </GridItem>
       <GridItem>
         <Tag size="lg">md</Tag>
       </GridItem>
       <GridItem>
         <Tag size="lg">lg</Tag>
       </GridItem>
+      <GridItem>
+        <Tag size="lg">slide + sm</Tag>
+      </GridItem>
+      <GridItem>
+        <Tag size="lg">slide + md</Tag>
+      </GridItem>
+      <GridItem>
+        <Tag size="lg">slide + lg</Tag>
+      </GridItem>
 
       <GridItem>
         <Tag size="lg">H1</Tag>
+      </GridItem>
+      <GridItem>
+        <H1Heading size="sm">H1 - {h1Sizes?.sm.fontSize}</H1Heading>
       </GridItem>
       <GridItem>
         <H1Heading>H1 - {h1Sizes?.md.fontSize}</H1Heading>
@@ -43,46 +58,87 @@ export const Headings: Story = {
       <GridItem>
         <H1Heading size="lg">H1 - {h1Sizes?.lg.fontSize}</H1Heading>
       </GridItem>
+      <GridItem>
+        <H1Heading variant="slide" size="sm">
+          H1 - {h1Sizes?.sm.fontSize}
+        </H1Heading>
+      </GridItem>
+      <GridItem>
+        <H1Heading variant="slide">H1 - {h1Sizes?.md.fontSize}</H1Heading>
+      </GridItem>
+      <GridItem>
+        <H1Heading variant="slide" size="lg">
+          H1 - {h1Sizes?.lg.fontSize}
+        </H1Heading>
+      </GridItem>
 
       <GridItem>
         <Tag size="lg">H2</Tag>
       </GridItem>
+      <GridItem></GridItem>
       <GridItem>
         <H2Heading>H2 - {h2Sizes?.md.fontSize}</H2Heading>
       </GridItem>
       <GridItem>
         <H2Heading size="lg">H2 - {h2Sizes?.lg.fontSize}</H2Heading>
       </GridItem>
+      <GridItem></GridItem>
+      <GridItem>
+        <H2Heading variant="slide">H2 - {h2Sizes?.md.fontSize}</H2Heading>
+      </GridItem>
+      <GridItem>
+        <H2Heading variant="slide" size="lg">
+          H2 - {h2Sizes?.lg.fontSize}
+        </H2Heading>
+      </GridItem>
 
       <GridItem>
         <Tag size="lg">H3</Tag>
       </GridItem>
+      <GridItem></GridItem>
       <GridItem>
         <H3Heading>H3 - {h3Sizes?.md.fontSize}</H3Heading>
       </GridItem>
       <GridItem>
         <H3Heading size="lg">H3 - {h3Sizes?.lg.fontSize}</H3Heading>
       </GridItem>
+      <GridItem></GridItem>
+      <GridItem>
+        <H3Heading variant="slide">H3 - {h3Sizes?.md.fontSize}</H3Heading>
+      </GridItem>
+      <GridItem>
+        <H3Heading variant="slide" size="lg">
+          H3 - {h3Sizes?.lg.fontSize}
+        </H3Heading>
+      </GridItem>
 
       <GridItem>
         <Tag size="lg">H4</Tag>
       </GridItem>
+      <GridItem></GridItem>
       <GridItem>
         <H4Heading>H4 - {h4Sizes?.md.fontSize}</H4Heading>
       </GridItem>
       <GridItem>
         <H4Heading size="lg">H4 - {h4Sizes?.lg.fontSize}</H4Heading>
       </GridItem>
+      <GridItem></GridItem>
+      <GridItem></GridItem>
+      <GridItem></GridItem>
 
       <GridItem>
         <Tag size="lg">H5</Tag>
       </GridItem>
+      <GridItem></GridItem>
       <GridItem>
         <H5Heading>H5 - {h5Sizes?.md.fontSize}</H5Heading>
       </GridItem>
       <GridItem>
         <H5Heading size="lg">H5 - {h5Sizes?.lg.fontSize}</H5Heading>
       </GridItem>
+      <GridItem></GridItem>
+      <GridItem></GridItem>
+      <GridItem></GridItem>
     </Grid>
   ),
 };

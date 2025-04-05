@@ -13,30 +13,27 @@ import { SlideContentFullContent } from '../fullContent';
 type SlideContentEndTitleProps = Omit<BoxProps, 'children'> &
   React.PropsWithChildren<ContentEndTitle>;
 
-export const SlideContentEndTitle = React.forwardRef<
-  HTMLDivElement,
-  SlideContentEndTitleProps
->(function SlideContentEndTitle(props, ref) {
-  return (
-    <SlideContentFullContent
-      {...props}
-      colormode={ColorMode.dark}
-      ref={ref}
-      type={SlideContentTypes.fullContent}
-    >
-      <Stack
-        width="100%"
-        height="100%"
-        alignItems="center"
-        justifyContent="center"
+export const SlideContentEndTitle: React.FC<SlideContentEndTitleProps> =
+  function SlideContentEndTitle(props) {
+    return (
+      <SlideContentFullContent
+        {...props}
+        colormode={ColorMode.dark}
+        type={SlideContentTypes.fullContent}
       >
-        <Box>
-          <Title title="Merci pour votre attention" />
-        </Box>
-      </Stack>
-    </SlideContentFullContent>
-  );
-});
+        <Stack
+          width="100%"
+          height="100%"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Box>
+            <Title title="Merci pour votre attention" />
+          </Box>
+        </Stack>
+      </SlideContentFullContent>
+    );
+  };
 
 const Title: React.FC<{ title: string }> = ({ title }) =>
   title.split('\n').map((line, i) => (
