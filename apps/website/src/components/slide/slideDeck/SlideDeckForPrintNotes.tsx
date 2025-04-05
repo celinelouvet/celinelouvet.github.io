@@ -1,8 +1,7 @@
 import { Box, type BoxProps, Center, Grid } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { useSlideSize, useWindowSize } from '@/hooks';
-
+import { useSlideSize, useWindowSize } from './hooks';
 import { type PrintNotes } from './types';
 import { type Slide } from '../types';
 

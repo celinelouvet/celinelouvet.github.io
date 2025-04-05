@@ -9,7 +9,7 @@ const config: StorybookConfig = {
   ],
 
   framework: '@storybook/react-vite',
-  staticDirs: ['../public'],
+  staticDirs: ['./public'],
 
   refs: { '@chakra-ui/react': { disable: true } },
 };

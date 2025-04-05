@@ -1,14 +1,10 @@
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import {
-  type Slide,
-  SlideContent,
-  SlideContentTypes,
-  SlideNote,
-} from '@/components/core';
-
 import { SlideDeck as SlideDeckComponent } from './SlideDeck';
 import { ViewTypes } from './types';
+import { SlideContent, SlideContentTypes } from '../slideContent';
+import { SlideNote } from '../slideNote';
+import type { Slide } from '../types';
 
 const maxSlides = 5;
 

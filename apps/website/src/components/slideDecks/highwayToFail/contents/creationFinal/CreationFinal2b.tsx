@@ -1,7 +1,7 @@
 import { Box, Center, Text } from '@chakra-ui/react';
 import { PieChart } from 'react-minimal-pie-chart';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { VerticalTimelineCreation } from '../../components';
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { SlideDeck, ViewTypes } from '@/components/core';
+import { SlideDeck, ViewTypes } from '@/components/slide';
 
 import { useSlideDeck } from './useSlideDeck.hook';
 

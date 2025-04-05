@@ -1,11 +1,7 @@
 import { Text } from '@chakra-ui/react';
 
-import {
-  Failure,
-  SlideContent,
-  SlideContentTypes,
-  SlideNote,
-} from '@/components/core';
+import { Failure } from '@/components/core';
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { VerticalTimelineDuring } from '../../components';
 

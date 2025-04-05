@@ -1,7 +1,7 @@
 import { Flex, Icon, Stack, Text, chakra } from '@chakra-ui/react';
 import { BsArrowReturnRight } from 'react-icons/bs';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { VerticalTimelineCreation } from '../../components';
 

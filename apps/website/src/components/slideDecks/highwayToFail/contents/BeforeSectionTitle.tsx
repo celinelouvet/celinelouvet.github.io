@@ -1,4 +1,4 @@
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { VerticalTimelineBefore } from '../components';
 

@@ -1,10 +1,19 @@
 'use client';
 
-import EndTitle from './EndTitle';
-import Introduction from './Introduction';
-import MainTitle from './mainTitle/MainTitle';
-import Yeeso from './Yeeso';
+import type { Slide } from '@/components/slide';
+
+import EndTitle from './endTitle';
+import Introduction from './introduction';
+import KnowYourNeed from './knowYourNeed';
+import MainTitle from './mainTitle';
+import Preface from './preface';
 
 export const getSlides = () => {
-  return [MainTitle, Introduction, Yeeso, EndTitle];
+  return ([] as Slide[]).concat(
+    MainTitle,
+    Preface,
+    KnowYourNeed,
+    Introduction,
+    EndTitle,
+  );
 };

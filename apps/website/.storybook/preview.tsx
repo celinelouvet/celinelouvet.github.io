@@ -41,8 +41,6 @@ const decorators: Decorator[] = [
 
 const parameters: Parameters = {
   chakra: { system: customSystem },
-
-  parameters: { nextjs: { appDirectory: true } },
 };
 
 const preview: Preview = { parameters, decorators };

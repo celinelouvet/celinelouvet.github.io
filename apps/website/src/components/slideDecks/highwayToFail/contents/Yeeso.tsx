@@ -1,14 +1,13 @@
 import { Center, Grid, Icon, Stack, Text, chakra } from '@chakra-ui/react';
 import { BsLink45Deg } from 'react-icons/bs';
 
+import { H2Heading, H3Heading } from '@/components/core';
 import {
   ColorMode,
-  H2Heading,
-  H3Heading,
   SlideContent,
   SlideContentTypes,
   SlideNote,
-} from '@/components/core';
+} from '@/components/slide';
 
 import { YeesoLight } from '../components';
 

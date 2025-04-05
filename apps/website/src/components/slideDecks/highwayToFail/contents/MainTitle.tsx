@@ -9,15 +9,13 @@ import {
   chakra,
 } from '@chakra-ui/react';
 
+import { H2Heading, H3Heading, QrCode } from '@/components/core';
 import {
   ColorMode,
-  H2Heading,
-  H3Heading,
-  QrCode,
   SlideContent,
   SlideContentTypes,
   SlideNote,
-} from '@/components/core';
+} from '@/components/slide';
 import { highwayToFailTalkFr as talk } from '@/data/talks';
 import { socialIcon } from '@/lib';
 

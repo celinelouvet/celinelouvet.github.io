@@ -1,9 +1,9 @@
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithContent}
-    title="Chaos report"
+    title="Connaître son besoin"
     alignContent="flex-start"
   ></SlideContent>
 );

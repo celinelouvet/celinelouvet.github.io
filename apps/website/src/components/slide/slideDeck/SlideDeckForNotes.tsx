@@ -1,8 +1,7 @@
 import { Box, type BoxProps, Center, Flex, Stack } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { useCurrentPosition, useSlideSize } from '@/hooks';
-
+import { useCurrentPosition, useSlideSize } from './hooks';
 import { type Notes } from './types';
 import { SlideTimer } from '../slideTimer';
 import { type Slide } from '../types';

@@ -14,7 +14,6 @@ export * from './media';
 export * from './navigation';
 export * from './overlay';
 export * from './override';
-export * from './slide';
 export * from './survey';
 export * from './typography';
 

@@ -4,26 +4,6 @@ import { alertAnatomy } from '@chakra-ui/react/anatomy';
 export const quoteSlotRecipe = defineSlotRecipe({
   slots: alertAnatomy.keys(),
 
-  base: {
-    root: {
-      colorPalette: 'brand',
-      borderRadius: 'md',
-    },
-    description: {
-      colorPalette: 'brand',
-      lineHeight: '1.5em',
-    },
-    indicator: {
-      colorPalette: 'brand',
-    },
-    title: {
-      colorPalette: 'brand',
-      lineHeight: '1.5em',
-      marginBottom: '0.5em',
-      fontWeight: 'bold',
-    },
-  },
-
   variants: {
     variant: {
       subtle: {
@@ -73,23 +53,27 @@ export const quoteSlotRecipe = defineSlotRecipe({
 
       slide: {
         root: {
-          borderRadius: '0.25em',
+          fontSize: '1em',
           backgroundColor: { base: 'brand.800', _dark: 'brand.800' },
           borderLeftColor: { base: 'brand.400', _dark: 'brand.500' },
-          borderLeftWidth: '0.25em',
-          borderLeftStyle: 'solid',
-          fontSize: '1em',
           color: { base: 'brand.200', _dark: 'brand.200' },
-          alignItems: 'center',
         },
         indicator: {
-          color: { base: 'brand.300', _dark: 'brand.300' },
-          marginRight: '1em',
           fontSize: '1em',
+          color: { base: 'brand.300', _dark: 'brand.300' },
         },
-        title: {
-          lineHeight: '1.5em',
-          marginBottom: '0.5em',
+      },
+
+      rightSlide: {
+        root: {
+          fontSize: '1em',
+          backgroundColor: { base: 'brand.800', _dark: 'brand.800' },
+          borderRightColor: { base: 'brand.400', _dark: 'brand.500' },
+          color: { base: 'brand.200', _dark: 'brand.200' },
+        },
+        indicator: {
+          fontSize: '1em',
+          color: { base: 'brand.300', _dark: 'brand.300' },
         },
       },
     },

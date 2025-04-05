@@ -1,7 +1,7 @@
 import { Box, Center, Icon, Stack, Text } from '@chakra-ui/react';
 import { FaHashtag } from 'react-icons/fa';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/core';
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 export const content = (
   <SlideContent

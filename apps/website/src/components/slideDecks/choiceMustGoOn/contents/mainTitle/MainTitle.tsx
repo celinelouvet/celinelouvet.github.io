@@ -1,12 +1,12 @@
-import { Box, HStack, Icon, List, Stack, Text, chakra } from '@chakra-ui/react';
+import { Box, HStack, Icon, Stack, Text, chakra } from '@chakra-ui/react';
 
+import { H2Heading } from '@/components/core';
 import {
   ColorMode,
-  H2Heading,
   SlideContent,
   SlideContentTypes,
   SlideNote,
-} from '@/components/core';
+} from '@/components/slide';
 import { choiceMustGoOnTalkFr as talk } from '@/data/talks';
 import { socialIcon } from '@/lib';
 
@@ -63,38 +63,15 @@ const note = (
       Avant toutes choses, je voulais vous remercier d’être venus m’écouter.
     </Text>
     <Text>
-      C’est un sujet qui me tient à coeur. J’espère qu’il pourra vous apprendre
-      des choses.
+      Je vais vous présenter mon approche d’un choix. Ca découle de mon
+      expérience personnelle, donc n’hésitez pas à venir me voir ensuite pour en
+      discuter.
     </Text>
 
     <Text>
-      Par curiosité, j’aimerais faire un petit sondage. Est-ce que vous arrivez
-      à accéder à internet ?
+      Avant de se jeter dans le vif du sujet, j’aimerais qu’on revienne sur la
+      raison de l’importance d'un choix.
     </Text>
-    <Text>
-      Si oui: Parfait, pouvez-vous scanner ce QR code ? Il vous amènera sur un
-      sondage. On regardera les résultats un peu plus loin.
-    </Text>
-    <Text>Si non: Bon, tant pis, on va le faire à mains levées.</Text>
-
-    <List.Root>
-      <List.Item>
-        Qui a eu envie un jour de se lancer dans la création de startup ?
-      </List.Item>
-      <List.Item>Parmi les personnes qui ont dit oui, qui l’a fait ?</List.Item>
-      <List.Item>
-        Pour les personnes qui l’ont fait, considérez vous avoir réussi votre
-        pari ?
-      </List.Item>
-      <List.Item>
-        Pour les personnes qui en ont créé une, considérez vous avoir réussi
-        votre pari ?
-      </List.Item>
-      <List.Item>
-        Pour les personnes qui en avait envie, mais qui n’en ont pas créé,
-        est-ce que c’est parce que vous avez peur de l’échec ou de l’inconnu ?
-      </List.Item>
-    </List.Root>
   </SlideNote>
 );
 

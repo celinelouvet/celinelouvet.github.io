@@ -1,11 +1,7 @@
 import { Stack, Text } from '@chakra-ui/react';
 
-import {
-  SlideContent,
-  SlideContentTypes,
-  SlideNote,
-  ThumbsDown,
-} from '@/components/core';
+import { ThumbsDown } from '@/components/core';
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { VerticalTimelineAfter } from '../../components';
 
