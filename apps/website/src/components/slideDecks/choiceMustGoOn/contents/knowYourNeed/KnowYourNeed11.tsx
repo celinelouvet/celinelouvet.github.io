@@ -1,4 +1,4 @@
-import { Stack, Text } from '@chakra-ui/react';
+import { HStack, Stack, Text } from '@chakra-ui/react';
 
 import { Quote } from '@/components/core';
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
@@ -6,7 +6,7 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithContent}
-    title="Connaître son besoin"
+    title="Ne pas créer un faux besoin"
     alignContent="flex-start"
   >
     <Stack gap="1em" width="100%">
@@ -15,9 +15,16 @@ export const content = (
           Je m’en sers pour comparer les résultats des 3 derniers mois.
         </Text>
       </Quote>
-      <Quote title="Moi" variant="rightSlide">
-        <Text>Et, vous faites quoi des résultats ?</Text>
-      </Quote>
+      <HStack gap="1em" alignItems="stretch">
+        <Quote title="Moi" variant="rightSlide">
+          <Text>Et, vous faites quoi des résultats ?</Text>
+        </Quote>
+        <Quote title="Moi" variant="rightSlide">
+          <Text>
+            Est-ce que vous comparez aussi avec ceux des années précédentes ?
+          </Text>
+        </Quote>
+      </HStack>
     </Stack>
   </SlideContent>
 );

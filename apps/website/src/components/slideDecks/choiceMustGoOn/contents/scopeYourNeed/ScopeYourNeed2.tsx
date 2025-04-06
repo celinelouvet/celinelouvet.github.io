@@ -6,17 +6,12 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithContent}
-    title="Connaître son besoin"
+    title="Cadrer le besoin"
     alignContent="flex-start"
   >
     <Stack gap="1em" width="100%">
       <Quote title="Le client" variant="slide">
-        <Text>
-          Je m’en sers pour comparer les résultats des 3 derniers mois.
-        </Text>
-      </Quote>
-      <Quote title="Moi" variant="rightSlide">
-        <Text>Et, vous faites quoi des résultats ?</Text>
+        <Text>J’ai besoin de gérer les permissions de mes utilisateurs.</Text>
       </Quote>
     </Stack>
   </SlideContent>

@@ -19,7 +19,8 @@ export const content = (
       </Center>
       <Quote title="Le client" variant="slide">
         <Text>
-          J’envoie un rapport comparatif aux stakeholders, en début de mois.
+          J’envoie un rapport comparant les 3 derniers mois aux stakeholders, en
+          début de mois.
         </Text>
       </Quote>
     </Stack>

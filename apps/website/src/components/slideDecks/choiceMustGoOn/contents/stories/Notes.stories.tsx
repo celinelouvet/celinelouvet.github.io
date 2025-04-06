@@ -7,6 +7,8 @@ import IntroductionSlides from '../introduction';
 import KnowYourNeedSlides from '../knowYourNeed';
 import MainTitleSlides from '../mainTitle';
 import PrefaceSlides from '../preface';
+import ScopeYourNeedSlides from '../scopeYourNeed';
+
 const meta = {
   title: 'Talks/TheChoiceMustGoOn/Notes',
   component: SlideDeck,
@@ -36,6 +38,13 @@ export const Preface: Story = {
 export const KnowYourNeed: Story = {
   render: () => {
     const slides = KnowYourNeedSlides;
+    return <SlideDeck view={ViewTypes.printNotes} slides={slides} />;
+  },
+};
+
+export const ScopeYourNeed: Story = {
+  render: () => {
+    const slides = ScopeYourNeedSlides;
     return <SlideDeck view={ViewTypes.printNotes} slides={slides} />;
   },
 };
