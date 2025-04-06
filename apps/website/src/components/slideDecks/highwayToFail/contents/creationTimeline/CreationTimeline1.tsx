@@ -1,8 +1,16 @@
 import { Center, Text } from '@chakra-ui/react';
+import * as React from "react";
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
-import { Timeline1, VerticalTimelineCreation } from '../../components';
+import { VerticalTimelineCreation } from '../../components';
+
+
+const Timeline1 = React.lazy(() =>
+  import('./components/Timeline1').then((module) => ({
+    default: module.Timeline1,
+  })),
+);
 
 export const content = (
   <SlideContent
@@ -18,7 +26,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>Comme je vous disais, une roadmap a été prévue.</Text>
     <Text>

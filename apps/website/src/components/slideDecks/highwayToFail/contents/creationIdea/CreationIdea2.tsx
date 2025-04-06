@@ -26,7 +26,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       L’objectif est de profiter de la mise en place d’une nouvelle loi. Jusqu’à

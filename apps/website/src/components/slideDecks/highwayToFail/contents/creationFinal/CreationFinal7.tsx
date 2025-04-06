@@ -28,7 +28,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       C’est une lettre d’intention, pas un pacte d’associés. Ça n’a aucune

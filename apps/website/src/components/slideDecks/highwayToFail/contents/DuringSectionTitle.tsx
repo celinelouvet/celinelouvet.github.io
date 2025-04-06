@@ -10,7 +10,7 @@ export const content = (
   />
 );
 
-const note = <SlideNote>On a signé, c’est parti.</SlideNote>;
+export const note = <SlideNote>On a signé, c’est parti.</SlideNote>;
 
 const slide = { content, note };
 export default slide;

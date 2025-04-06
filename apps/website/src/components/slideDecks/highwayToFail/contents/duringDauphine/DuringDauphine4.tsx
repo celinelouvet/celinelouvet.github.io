@@ -29,7 +29,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       C’est pas nouveau, mais si l’établissement où vous avez fait votre

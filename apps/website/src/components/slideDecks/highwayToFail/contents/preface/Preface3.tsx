@@ -12,7 +12,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>A l’opposé, si je vous demande des « failure stories ».</SlideNote>
 );
 

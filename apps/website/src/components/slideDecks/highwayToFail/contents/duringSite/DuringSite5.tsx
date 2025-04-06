@@ -32,7 +32,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Avantage important, le système de quota de Firebase et notre utilisation

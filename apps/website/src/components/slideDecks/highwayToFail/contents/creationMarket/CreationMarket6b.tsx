@@ -21,7 +21,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Déjà, qu’est-ce que le MVP ? C’est le minimum viable product, c’est-à-dire

@@ -1,7 +1,7 @@
 import {
   Alert,
-  Box,
   type SlotRecipeProps,
+  Stack,
   useSlotRecipe,
 } from '@chakra-ui/react';
 import * as React from 'react';
@@ -25,12 +25,12 @@ export const Quote = React.forwardRef<HTMLDivElement, QuoteProps>(
     return (
       <Alert.Root status="info" css={styles.root} ref={ref} {...restProps}>
         <Alert.Indicator css={styles.indicator} as={FaQuoteRight} />
-        <Box width="100%" height="100%">
+        <Stack width="100%" height="100%">
           {title ? <Alert.Title css={styles.title}>{title}</Alert.Title> : null}
           <Alert.Description css={styles.description}>
             {children}
           </Alert.Description>
-        </Box>
+        </Stack>
       </Alert.Root>
     );
   },

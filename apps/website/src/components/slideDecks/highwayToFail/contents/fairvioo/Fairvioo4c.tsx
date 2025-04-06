@@ -34,7 +34,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>Business</Text>
   </SlideNote>

@@ -24,7 +24,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     Deux semaines plus tard, Fairvioo envoie un email au consommateur pour lui
     demander son avis.

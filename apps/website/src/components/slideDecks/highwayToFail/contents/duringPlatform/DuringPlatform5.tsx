@@ -18,7 +18,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Et enfin, l’API sert aussi les plugins des plateformes d’e-commerce, comme

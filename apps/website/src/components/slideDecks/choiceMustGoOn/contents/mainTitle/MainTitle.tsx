@@ -1,4 +1,5 @@
 import { Box, HStack, Icon, Stack, Text, chakra } from '@chakra-ui/react';
+import * as React from 'react';
 
 import { H2Heading } from '@/components/core';
 import {
@@ -10,8 +11,13 @@ import {
 import { choiceMustGoOnTalkFr as talk } from '@/data/talks';
 import { socialIcon } from '@/lib';
 
-import { Subtitle } from './Subtitle.component';
 import { Title } from '../Title.component';
+
+const Subtitle = React.lazy(() =>
+  import('./Subtitle.component').then((module) => ({
+    default: module.Subtitle,
+  })),
+);
 
 export const content = (
   <SlideContent colormode={ColorMode.dark} type={SlideContentTypes.fullContent}>
@@ -56,7 +62,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>Bonjour à tous et à toutes,</Text>
     <Text>

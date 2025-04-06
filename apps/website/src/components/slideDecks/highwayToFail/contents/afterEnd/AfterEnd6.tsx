@@ -18,7 +18,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       On est en mars 2019. Je me suis un peu reposée et je retourne à la vie

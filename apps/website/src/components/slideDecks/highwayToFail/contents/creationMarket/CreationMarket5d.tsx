@@ -28,7 +28,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Petit bonus: les dons aux associations sont déductibles des impots sur le

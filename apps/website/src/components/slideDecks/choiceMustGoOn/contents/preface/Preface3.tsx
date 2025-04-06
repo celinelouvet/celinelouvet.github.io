@@ -57,7 +57,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Cette version de 2015 s’appuie, non pas sur le respect du besoin.

@@ -55,7 +55,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Je suis partie d’une liste de technos usuelles, Node, Ruby, PHP, Java,

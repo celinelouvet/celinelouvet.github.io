@@ -37,6 +37,15 @@ const getContent = (env, version, service, dist) => {
     secure: always
     static_dir: ${dist}/talks
 
+  - url: /assets
+    secure: always
+    static_dir: ${dist}/assets
+
+  - url: /assets/(.*\.(gif|media|json|ico|eot|ttf|woff|woff2|png|jpg|css|js|svg))$
+    secure: always
+    static_files: ${dist}/assets/\\1
+    upload: ${dist}/assets/.*\.(gif|media|json|ico|eot|ttf|woff|woff2|png|jpg|css|js|svg)$
+
   - url: /(.*\.(gif|media|json|ico|eot|ttf|woff|woff2|png|jpg|css|js|svg))$
     secure: always
     static_files: ${dist}/\\1

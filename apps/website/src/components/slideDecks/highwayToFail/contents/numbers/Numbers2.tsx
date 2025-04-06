@@ -35,7 +35,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Wydden qui est spécialisé dans l’accompagnement de startups, annonce un

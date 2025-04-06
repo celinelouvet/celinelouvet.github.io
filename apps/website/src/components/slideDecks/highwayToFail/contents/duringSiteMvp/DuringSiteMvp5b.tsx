@@ -25,7 +25,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Par contre, les 20% restantes demanderont, elles, 80% des efforts.

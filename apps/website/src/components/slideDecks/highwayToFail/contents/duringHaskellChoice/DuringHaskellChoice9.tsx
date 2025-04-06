@@ -74,7 +74,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Et « magiquement », j’atterris sur Haskell, c’est-à-dire précisément ce

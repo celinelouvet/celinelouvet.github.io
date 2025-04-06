@@ -21,7 +21,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>le formulaire de contact est remplacé par un email pré-rempli.</Text>
   </SlideNote>

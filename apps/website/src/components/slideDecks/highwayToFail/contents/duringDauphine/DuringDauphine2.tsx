@@ -24,7 +24,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       On va donc pouvoir s’inscrire au programme de l’incubateur Paris-Dauphine.

@@ -62,7 +62,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Il en est ressorti qu’il y avait déjà de nombreux concurrents, dont parmi

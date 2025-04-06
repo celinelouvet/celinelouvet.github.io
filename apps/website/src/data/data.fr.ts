@@ -142,7 +142,7 @@ const talkSubjects = new Map<string, TalkSubject>([
     {
       topic: 'The choice must go on, le bon (de préférence)',
       descriptions: [
-        'Vous avez déjà subi un mauvais choix ? Ou vous avez vous‑même fait un mauvais choix ? En effet, qu’il ait été fait pour une raison technique, produit ou encore méthodo, on a été nombreux et nombreuses à vivre ce moment où on se dit « mais quelle idiotie ?! » ou encore « Mais que c’est tordu !!! ».',
+        'Vous avez déjà subi un mauvais choix ? Ou vous avez vous‑même fait un mauvais choix ? En effet, qu’il ait été fait pour une raison technique, produit ou encore méthodo, on a été nombreux et nombreuses à vivre ce moment où on se dit « mais quelle idiotie ?! » ou encore « Mais que c’est tordu !!! ».',
         'On le sait, faire le bon choix est parfois très difficile. Celui qui a fonctionné une fois ne sera pas forcément pertinent ailleurs. De plus, un mauvais choix peut avoir un impact désastreux, tant sur la qualité du résultat produit que sur les équipes.',
         'Je vous proposerai une approche personnelle pour que ça se passe au mieux possible. Peut‑être qu’elle pourra vous permettre d’éviter certains écueils.',
       ],
@@ -402,7 +402,7 @@ const talks = [
     links: {
       program: 'https://lyon-craft.fr/#programme',
     },
-    pictureId: 'lyoncraft2024-highway_to_fail',
+    pictureId: 'lyoncraft2025-choice_must_go_on',
   },
 ] satisfies Talk[];
 

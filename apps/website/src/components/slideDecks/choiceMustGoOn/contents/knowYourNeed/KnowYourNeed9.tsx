@@ -1,6 +1,7 @@
 import { Center, HStack, Icon, Stack, Text } from '@chakra-ui/react';
 import { LuMessageCircleQuestion } from 'react-icons/lu';
 
+import { H3Heading } from '@/components/core';
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 export const content = (
@@ -20,14 +21,14 @@ export const content = (
         <Icon as={LuMessageCircleQuestion} boxSize="4em" color="brand.500" />
       </Center>
       <Stack flex="1" color="brand.300" fontSize="1.25em" gap="1em">
-        <Text>Méthode des « 5 pourquoi »</Text>
+        <H3Heading variant="slide">Méthode des « 5 pourquoi »</H3Heading>
         <Text>Utilisée pour comprendre la cause profonde d’un problème.</Text>
       </Stack>
     </HStack>
   </SlideContent>
 );
 
-const note = <SlideNote></SlideNote>;
+export const note = <SlideNote></SlideNote>;
 
 const slide = { content, note };
 export default slide;

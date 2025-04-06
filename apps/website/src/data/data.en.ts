@@ -136,12 +136,24 @@ const talkSubjects = new Map<string, TalkSubject>([
       survey: highwayToFailSurveyFr,
     },
   ],
+  [
+    'choice_must_go_on',
+    {
+      topic: 'The choice must go on, the good (if possible)',
+      descriptions: [
+        'Have you ever suffered from a bad choice? Or made one yourself? Whether it was made for technical, product or methodological reasons, many of us have experienced that moment when we say to ourselves, « What kind of idiocy is this?! ».',
+        'As we all know, making the right choice can be very difficult. What worked once may not work elsewhere. Moreover, the wrong decision can have a disastrous impact, not only on the quality of the result produced, but also on the teams involved.',
+        'I’ll suggest a very personal approach to make it as smooth as possible. Perhaps it will help you steer away from some pitfalls.',
+      ],
+    },
+  ],
 ]);
 
 const possibleTalkSubjects = [
   'event_driven_buzzword',
   'permissions_mysteries',
   'highway_to_fail',
+  'choice_must_go_on',
 ];
 
 const conventions = new Map<string, Convention>([
@@ -175,6 +187,7 @@ const conventions = new Map<string, Convention>([
   ['devfest_lille_2024', { name: 'DevFest Lille 2024', language: 'FR' }],
   ['technwine_2024', { name: 'Tech n Wine 2024', language: 'FR' }],
   ['bdxio_2024', { name: 'BDX.IO 2024', language: 'FR' }],
+  ['lyoncraft_2025', { name: 'Lyon Craft 2025', language: 'FR' }],
 ]);
 
 const talks = [
@@ -380,6 +393,15 @@ const talks = [
       program: 'https://bdxio.fr/schedule',
     },
     pictureId: 'lyoncraft2024-highway_to_fail',
+  },
+  {
+    subjectId: 'choice_must_go_on',
+    conventionId: 'lyoncraft_2025',
+    when: '2025-04-14',
+    links: {
+      program: 'https://lyon-craft.fr/#programme',
+    },
+    pictureId: 'lyoncraft2025-choice_must_go_on',
   },
 ] satisfies Talk[];
 

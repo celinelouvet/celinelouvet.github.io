@@ -19,14 +19,15 @@ export const content = (
       </Center>
       <Quote title="Le client" variant="slide">
         <Text>
-          J’envoie un rapport comparatif aux stakeholders, en début de mois.
+          J’envoie un rapport comparant les 3 derniers mois aux stakeholders, en
+          début de mois.
         </Text>
       </Quote>
     </Stack>
   </SlideContent>
 );
 
-const note = <SlideNote></SlideNote>;
+export const note = <SlideNote></SlideNote>;
 
 const slide = { content, note };
 export default slide;

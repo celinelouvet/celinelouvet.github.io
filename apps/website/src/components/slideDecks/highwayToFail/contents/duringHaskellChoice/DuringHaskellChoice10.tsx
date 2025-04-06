@@ -19,7 +19,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>J’ai fait ce qu’on appelle de la Hype Driven Development.</Text>
   </SlideNote>

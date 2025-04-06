@@ -62,6 +62,7 @@ export const alertSlotRecipe = defineSlotRecipe({
         description: {
           float: 'right',
           lineHeight: '1.5em',
+          textAlign: 'right',
         },
       },
     },

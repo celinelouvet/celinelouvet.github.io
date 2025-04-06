@@ -14,7 +14,7 @@ export const content = (
   ></SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Comme je vous disais en préambule, ils ont fait une étude de marché.

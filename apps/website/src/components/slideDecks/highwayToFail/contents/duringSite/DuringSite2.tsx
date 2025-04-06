@@ -1,8 +1,21 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
+import * as React from 'react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
-import { Design1, Design2, VerticalTimelineDuring } from '../../components';
+import { VerticalTimelineDuring } from '../../components';
+
+const Design1 = React.lazy(() =>
+  import('./components/Design1').then((module) => ({
+    default: module.Design1,
+  })),
+);
+
+const Design2 = React.lazy(() =>
+  import('./components/Design2').then((module) => ({
+    default: module.Design2,
+  })),
+);
 
 export const content = (
   <SlideContent
@@ -29,7 +42,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Les maquettes sont déjà prêtes. Elles ont servi à faire le prototype.

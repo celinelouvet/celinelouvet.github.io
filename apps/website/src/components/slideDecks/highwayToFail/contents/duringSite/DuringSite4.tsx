@@ -24,7 +24,7 @@ export const content = (
   ></SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>Je démarre donc.</Text>
     <Text>J’ai une stack avec VueJs déjà disponible, donc je m’en sers.</Text>

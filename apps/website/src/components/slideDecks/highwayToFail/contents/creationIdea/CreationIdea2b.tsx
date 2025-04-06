@@ -29,7 +29,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Ça me parait une bonne opportunité de profiter de cette nouvelle loi.

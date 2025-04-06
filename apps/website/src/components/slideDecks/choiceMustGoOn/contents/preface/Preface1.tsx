@@ -42,7 +42,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>Qu’est ce qui défini qu’un projet a été réussi ?</Text>
     <Text>Le budget initialement prévu a été respecté.</Text>

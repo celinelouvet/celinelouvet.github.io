@@ -20,7 +20,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>On va se concentrer sur cette partie-là.</Text>
     <Text>En effet, le plugin n’a rien de particulier.</Text>

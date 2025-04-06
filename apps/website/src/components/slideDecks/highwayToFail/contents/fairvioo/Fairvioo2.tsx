@@ -1,8 +1,13 @@
 import { Center, Text } from '@chakra-ui/react';
+import * as React from 'react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
-import { TalkFairvioo2 } from '../../components';
+const TalkFairvioo2 = React.lazy(() =>
+  import('./components/TalkFairvioo2').then((module) => ({
+    default: module.TalkFairvioo2,
+  })),
+);
 
 export const content = (
   <SlideContent
@@ -31,7 +36,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     En 2018 et 2019, je présente en conférence un talk « votre mission ?
     Découvrir Haskell et le mettre en prod » en m’appuyant sur l’exemple

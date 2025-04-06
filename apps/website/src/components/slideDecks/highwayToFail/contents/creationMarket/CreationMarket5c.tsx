@@ -22,7 +22,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>Et c’est aussi l’intéret de la motivation éthique.</Text>
   </SlideNote>

@@ -19,7 +19,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Comme on vise des TPE et PME, on ne peut acquérir de commerçants que via

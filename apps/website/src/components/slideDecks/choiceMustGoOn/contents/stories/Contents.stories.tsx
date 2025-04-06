@@ -7,6 +7,8 @@ import IntroductionSlides from '../introduction';
 import KnowYourNeedSlides from '../knowYourNeed';
 import MainTitleSlides from '../mainTitle';
 import PrefaceSlides from '../preface';
+import ScopeYourNeedSlides from '../scopeYourNeed';
+import { getSlides } from '../slides';
 
 const meta = {
   title: 'Talks/TheChoiceMustGoOn/Contents',
@@ -19,6 +21,13 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
+
+export const AllSlides: Story = {
+  render: () => {
+    const slides = getSlides();
+    return <SlideDeck view={ViewTypes.print} slides={slides} />;
+  },
+};
 
 export const MainTitle: Story = {
   render: () => {
@@ -37,6 +46,13 @@ export const Preface: Story = {
 export const KnowYourNeed: Story = {
   render: () => {
     const slides = KnowYourNeedSlides;
+    return <SlideDeck view={ViewTypes.print} slides={slides} />;
+  },
+};
+
+export const ScopeYourNeed: Story = {
+  render: () => {
+    const slides = ScopeYourNeedSlides;
     return <SlideDeck view={ViewTypes.print} slides={slides} />;
   },
 };

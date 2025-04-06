@@ -20,7 +20,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       2-3 semaines sur une version simplifiée, puis 2 mois sur la version

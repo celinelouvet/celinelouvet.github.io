@@ -26,7 +26,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Alors oui, la syntaxe est vraiment différente, avec ce que je vais appeler

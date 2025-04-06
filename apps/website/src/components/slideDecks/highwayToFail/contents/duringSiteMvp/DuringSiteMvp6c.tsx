@@ -21,7 +21,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       A la place, on aurait pu héberger un PDF ou utiliser un prototype Figma et

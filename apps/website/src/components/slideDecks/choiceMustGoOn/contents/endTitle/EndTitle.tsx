@@ -77,7 +77,7 @@ export const content = (
 
 // export const content = <SlideContent type={SlideContentTypes.endTitle} />;
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>Voilà, merci pour votre attention.</Text>
     <Text>

@@ -41,7 +41,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Chacun d’eux me cède 10% de ses parts. Je dis bien « céder », le mot est

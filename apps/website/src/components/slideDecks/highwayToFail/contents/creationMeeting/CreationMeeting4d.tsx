@@ -23,7 +23,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>l’un est au chômage et l’autre au RSA,</Text>
   </SlideNote>

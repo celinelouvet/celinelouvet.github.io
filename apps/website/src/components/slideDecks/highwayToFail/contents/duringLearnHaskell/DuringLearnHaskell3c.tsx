@@ -28,7 +28,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       La gestion de l’IO est vraiment particulière et volontairement désagréable

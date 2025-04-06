@@ -12,7 +12,7 @@ export const content = (
   ></SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     Maintenant qu’on a un site vitrine, je peux me concentrer sur le produit
     principal.

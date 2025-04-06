@@ -24,7 +24,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       A ce moment-là, j’ai effectué toute ma carrière en ESN et j’ai envie de

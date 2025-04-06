@@ -12,8 +12,7 @@ export const content = (
     <Stack gap="1em" width="100%">
       <Quote title="Le client" variant="slide">
         <Text>
-          Je m’en sers pour comparer les résultats avec ceux des mois
-          précédents.
+          Je m’en sers pour comparer les résultats des 3 derniers mois.
         </Text>
       </Quote>
       <Quote title="Moi" variant="rightSlide">
@@ -23,7 +22,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote></SlideNote>;
+export const note = <SlideNote></SlideNote>;
 
 const slide = { content, note };
 export default slide;

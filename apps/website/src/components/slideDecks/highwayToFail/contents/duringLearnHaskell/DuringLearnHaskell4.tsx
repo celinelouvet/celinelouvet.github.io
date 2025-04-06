@@ -1,8 +1,15 @@
 import { Box, Center, Text } from '@chakra-ui/react';
+import * as React from 'react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
-import { LearnHaskell, VerticalTimelineDuring } from '../../components';
+import { VerticalTimelineDuring } from '../../components';
+
+const LearnHaskell = React.lazy(() =>
+  import('./components/LearnHaskell').then((module) => ({
+    default: module.LearnHaskell,
+  })),
+);
 
 export const content = (
   <SlideContent
@@ -19,7 +26,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>En fait, ce que j’ai vécu, c’est exactement ça.</Text>
     <Text>

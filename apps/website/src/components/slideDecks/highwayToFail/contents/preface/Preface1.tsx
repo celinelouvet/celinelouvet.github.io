@@ -15,7 +15,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     Si je vous demande des noms de success stories, je pense que vous en aurez
     rapidement en tête et ce sera potentiellement des startups françaises.
