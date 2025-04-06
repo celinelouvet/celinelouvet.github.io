@@ -20,7 +20,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Coté base de données, je pars du PostgreSQL, qui permet de faire beaucoup

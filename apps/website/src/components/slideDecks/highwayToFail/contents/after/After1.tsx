@@ -21,7 +21,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Mais, j’y ai gagné des nouvelles connaissances dans des métiers inconnus,

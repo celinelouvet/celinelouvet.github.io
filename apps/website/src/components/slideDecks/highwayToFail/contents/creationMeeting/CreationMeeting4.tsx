@@ -20,7 +20,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>2 hommes de 25 ans, moi j’en ai 38, à ce moment-là</Text>
   </SlideNote>

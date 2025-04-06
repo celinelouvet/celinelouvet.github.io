@@ -12,7 +12,7 @@ export const content = (
   />
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>Ca marquera la fin de l’aventure.</Text>
   </SlideNote>

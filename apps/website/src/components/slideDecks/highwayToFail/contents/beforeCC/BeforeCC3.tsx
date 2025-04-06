@@ -20,7 +20,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     Après discussion, ils vont me proposer une rupture de la période d’essai. Il
     s’agit de me permettre de bénéficier des allocations chômage.

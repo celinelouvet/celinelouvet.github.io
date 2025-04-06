@@ -24,7 +24,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = <SlideNote>Le micro-don est comptabilisé.</SlideNote>;
+export const note = <SlideNote>Le micro-don est comptabilisé.</SlideNote>;
 
 const slide = { content, note };
 export default slide;

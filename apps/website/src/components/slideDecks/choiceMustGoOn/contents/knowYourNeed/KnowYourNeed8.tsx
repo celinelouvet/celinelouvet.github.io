@@ -1,46 +1,32 @@
-import { Box, Stack, Text } from '@chakra-ui/react';
+import { Center, HStack, Icon, Stack, Text } from '@chakra-ui/react';
+import { LuMessageCircleWarning } from 'react-icons/lu';
 
-import { ThumbsUp } from '@/components/core';
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithContent}
-    title="Réponse au besoin"
+    title="Connaître son besoin"
     alignContent="flex-start"
   >
-    <Stack
-      width="100%"
+    <HStack
       height="100%"
-      direction="row"
-      gap="2em"
-      alignItems="stretch"
+      width="100%"
+      alignItems="center"
+      justifyContent="flex-start"
+      gap="3em"
     >
-      <Stack width="40%" gap="1em">
-        <Box>
-          <Text fontWeight="bold">Page WEB</Text>
-          <Text>Affichage dynamique des données des mois précédents</Text>
-        </Box>
-        <Box>
-          <Text fontWeight="bold">Script</Text>
-          <Text>Envoi des emails</Text>
-        </Box>
+      <Center width="20%">
+        <Icon as={LuMessageCircleWarning} boxSize="4em" color="brand.orange" />
+      </Center>
+      <Stack flex="1" color="brand.300" fontSize="1.25em" gap="1em">
+        <Text>Expression d’une solution à la place d’un besoin</Text>
       </Stack>
-      <Stack width="30%" flexGrow="1" gap="1em">
-        <ThumbsUp title="Pour l’utilisateur" variant="slide">
-          <Text>Gain de temps énorme, chaque mois</Text>
-          <Text>Pas d’erreur dans le rapport</Text>
-          <Text>Assurance de l’envoi de l’email</Text>
-        </ThumbsUp>
-        <ThumbsUp title="Pour les stakeholders" variant="slide">
-          <Text>Des graphes explorables</Text>
-        </ThumbsUp>
-      </Stack>
-    </Stack>
+    </HStack>
   </SlideContent>
 );
 
-const note = <SlideNote></SlideNote>;
+export const note = <SlideNote></SlideNote>;
 
 const slide = { content, note };
 export default slide;

@@ -11,7 +11,7 @@ export const content = (
   ></SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     Il y a une question qui arrive assez vite quand on se lance, c’est comment
     on s’organise et où on s’installe.

@@ -26,7 +26,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Comme on veut toucher les TPE et PME, le plus simple est de s’intégrer

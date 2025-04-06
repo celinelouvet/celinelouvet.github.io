@@ -28,7 +28,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       On va pouvoir s’installer à partir d’avril 2018 à la FAC de Dauphine.

@@ -20,7 +20,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>Les front-ends sont réalisés en VueJs.</Text>
     <Text>

@@ -20,7 +20,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     En discutant lors d’un meetup, au-dessus d’une part de pizza, un ami me dit
     connaître 2 personnes recherchant quelqu’un pour le développement

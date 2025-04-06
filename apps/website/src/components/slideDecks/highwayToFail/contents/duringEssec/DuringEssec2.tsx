@@ -24,7 +24,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Ce qui a permi de nous inscrire pour bénéficier de l’accompagnement de

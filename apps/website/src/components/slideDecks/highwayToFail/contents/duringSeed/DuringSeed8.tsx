@@ -18,7 +18,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Et là, le couperet : Les investisseurs nous disent de revenir après avoir

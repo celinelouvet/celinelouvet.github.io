@@ -18,7 +18,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>là où on veut aller.</Text>
     <Text>Ces types représentent nos données métier qu’on veut manipuler.</Text>

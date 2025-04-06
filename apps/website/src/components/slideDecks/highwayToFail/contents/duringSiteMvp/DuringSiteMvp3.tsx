@@ -20,7 +20,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>Je vais donc investir plus de temps pour pousser le CSS</Text>
   </SlideNote>

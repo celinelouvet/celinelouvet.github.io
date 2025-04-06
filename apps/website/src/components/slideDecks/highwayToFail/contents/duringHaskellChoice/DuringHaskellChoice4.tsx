@@ -68,7 +68,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>Donc ça élimine Node, Ruby et PHP.</Text>
   </SlideNote>

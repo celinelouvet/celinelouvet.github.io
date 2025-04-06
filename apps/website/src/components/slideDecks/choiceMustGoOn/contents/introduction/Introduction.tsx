@@ -12,7 +12,7 @@ export const content = (
   />
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>Je m’appelle Céline LOUVET.</Text>
     <Text>Je suis lead developer chez Shine.</Text>

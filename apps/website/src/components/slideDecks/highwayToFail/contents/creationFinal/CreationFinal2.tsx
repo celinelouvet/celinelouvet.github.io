@@ -40,7 +40,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>Ils vont me proposer la répartition suivante</Text>
   </SlideNote>

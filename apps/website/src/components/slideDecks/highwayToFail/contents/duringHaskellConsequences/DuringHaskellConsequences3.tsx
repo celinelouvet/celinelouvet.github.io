@@ -20,7 +20,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Mais, en n’arrivant pas à tenir la roadmap, j’ai perdu la crédibilité que

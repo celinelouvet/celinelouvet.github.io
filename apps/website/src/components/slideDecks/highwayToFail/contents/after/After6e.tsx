@@ -22,7 +22,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Je ferai en sorte qu’il y ait une répartition équitable des parts dès le

@@ -24,7 +24,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     Le consommateur va donc déposer son avis et sélectionner une association
     pour le don.

@@ -17,7 +17,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       De plus, pour chaque avis laissé par un client, un micro-don est

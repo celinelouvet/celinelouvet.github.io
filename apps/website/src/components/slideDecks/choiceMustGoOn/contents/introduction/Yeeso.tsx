@@ -9,7 +9,7 @@ import {
   SlideNote,
 } from '@/components/slide';
 
-import { YeesoLight } from '../../components';
+import { YeesoLight } from './components/YeesoLight';
 
 export const content = (
   <SlideContent type={SlideContentTypes.fullContent} colormode={ColorMode.dark}>
@@ -48,7 +48,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>Je fais partie de l’association Yeeso.</Text>
     <Text>

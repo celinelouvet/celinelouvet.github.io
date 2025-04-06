@@ -68,7 +68,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Ce qui va éliminer Java. Attention, c’est entièrement subjectif :D

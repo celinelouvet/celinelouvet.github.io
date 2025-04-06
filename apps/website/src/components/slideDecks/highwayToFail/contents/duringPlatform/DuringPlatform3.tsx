@@ -18,7 +18,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>Elle va servir un front-end d’administration</Text>
     <Text>Le but est de pouvoir gérer les associations,</Text>

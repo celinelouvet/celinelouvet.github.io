@@ -1,8 +1,15 @@
 import { Box, Center, Text } from '@chakra-ui/react';
+import * as React from 'react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
-import { Couch, VerticalTimelineDuring } from '../../components';
+import { VerticalTimelineDuring } from '../../components';
+
+const Couch = React.lazy(() =>
+  import('./components/Couch').then((module) => ({
+    default: module.Couch,
+  })),
+);
 
 export const content = (
   <SlideContent
@@ -19,7 +26,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>Le canapé !</Text>
   </SlideNote>

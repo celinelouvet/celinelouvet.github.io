@@ -24,7 +24,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Ce sont 2 anciens de la fac de Paris Dauphine, sur des formations

@@ -25,7 +25,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>Vous allez me dire, mais pourquoi Haskell ?</Text>
     <Text>Lors de mon talk sur Haskell, j’avais expliqué le choix ainsi.</Text>

@@ -27,7 +27,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Chez beaucoup de gros clients. Ils ont de l’argent et des cahiers des

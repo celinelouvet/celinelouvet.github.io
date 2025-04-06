@@ -19,7 +19,7 @@ export default defineConfig(({ mode }) => {
       __DEV__: mode === 'development',
     },
     build: {
-      target: 'modules',
+      target: 'ESNext',
       outDir: 'dist/app',
     },
   };

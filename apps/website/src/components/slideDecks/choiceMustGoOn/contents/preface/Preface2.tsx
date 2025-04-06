@@ -22,7 +22,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       En préparant ce talk, j’ai voulu trouver des chiffres sur les échecs.

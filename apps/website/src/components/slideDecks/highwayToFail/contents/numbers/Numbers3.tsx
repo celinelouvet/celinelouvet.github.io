@@ -35,7 +35,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Dynamique Mag annonce un taux entre 80% d’échecs. Pareil, aucune source ne

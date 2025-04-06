@@ -10,7 +10,7 @@ export const content = (
   />
 );
 
-const note = (
+export const note = (
   <SlideNote>
     Commençons par le contexte qui a amené à cette création.
   </SlideNote>

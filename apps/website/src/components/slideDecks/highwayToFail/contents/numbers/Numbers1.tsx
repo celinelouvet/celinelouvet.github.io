@@ -35,7 +35,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Dans l’abstract, j’annonce 90% d’échecs dont 10% la premère année.

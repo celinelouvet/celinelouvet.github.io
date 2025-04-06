@@ -19,7 +19,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Du même ordre d’idée, ils ont tous les 2 faits leurs études à la fac de

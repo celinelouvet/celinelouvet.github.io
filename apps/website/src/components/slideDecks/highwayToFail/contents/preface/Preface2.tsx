@@ -44,7 +44,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       On en compte actuellement 22 licornes en France. J’en ai listé 6.

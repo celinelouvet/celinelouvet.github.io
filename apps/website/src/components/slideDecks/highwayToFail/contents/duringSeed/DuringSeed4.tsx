@@ -19,7 +19,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Pour générer du chiffre, il faut avoir des clients (des commerçants, chez

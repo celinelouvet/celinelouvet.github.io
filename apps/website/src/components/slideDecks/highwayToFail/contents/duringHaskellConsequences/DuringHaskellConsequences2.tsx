@@ -19,7 +19,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Haha, et bien là, j’ai totalement explosé les dates indiquées dans la

@@ -29,7 +29,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       En résumé, le message que j’ai cherché à faire passer, ce n’est pas de ne

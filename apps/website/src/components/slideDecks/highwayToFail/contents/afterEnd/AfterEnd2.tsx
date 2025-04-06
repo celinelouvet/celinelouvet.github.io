@@ -19,7 +19,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Le plus dur à ce moment-là, c’est de garder la motivation et de continuer

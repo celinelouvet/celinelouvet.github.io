@@ -68,7 +68,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>Or, j’avais déjà fait du scala.</Text>
   </SlideNote>

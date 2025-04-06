@@ -18,7 +18,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>L’API va aussi servir le front-end publique</Text>
     <Text>Ce front-end permet de voir les avis laissés, </Text>

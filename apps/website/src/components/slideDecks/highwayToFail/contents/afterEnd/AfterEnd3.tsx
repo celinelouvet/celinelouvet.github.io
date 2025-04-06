@@ -20,7 +20,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Celui qui est au RSA, n’a plus le choix et doit retrouver un emploi, ne

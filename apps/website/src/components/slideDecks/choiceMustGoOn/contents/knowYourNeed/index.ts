@@ -1,4 +1,7 @@
+import type { Slide } from '@/components/slide';
+
 import KnowYourNeed1 from './KnowYourNeed1';
+import KnowYourNeed10 from './KnowYourNeed10';
 import KnowYourNeed2 from './KnowYourNeed2';
 import KnowYourNeed3 from './KnowYourNeed3';
 import KnowYourNeed4 from './KnowYourNeed4';
@@ -18,4 +21,5 @@ export default [
   KnowYourNeed7,
   KnowYourNeed8,
   KnowYourNeed9,
-];
+  KnowYourNeed10,
+] satisfies Slide[];

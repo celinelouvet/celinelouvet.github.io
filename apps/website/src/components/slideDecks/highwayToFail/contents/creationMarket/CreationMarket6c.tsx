@@ -25,7 +25,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Par contre, c’est difficile de prévoir un contenu plus réduit que le dépot

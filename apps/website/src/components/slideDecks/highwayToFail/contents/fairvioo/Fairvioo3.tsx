@@ -1,8 +1,13 @@
 import { Center, Text } from '@chakra-ui/react';
+import * as React from 'react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
-import { TalkFairvioo3 } from '../../components';
+const TalkFairvioo3 = React.lazy(() =>
+  import('./components/TalkFairvioo3').then((module) => ({
+    default: module.TalkFairvioo3,
+  })),
+);
 
 export const content = (
   <SlideContent
@@ -29,7 +34,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     Juin 2019, Fairvioo met la clé sous la porte et passe en liquidation.
   </SlideNote>

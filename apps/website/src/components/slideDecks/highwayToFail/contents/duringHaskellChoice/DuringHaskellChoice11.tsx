@@ -18,7 +18,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Au même moment, Clever Cloud cherche à en promouvoir l’hébergement.

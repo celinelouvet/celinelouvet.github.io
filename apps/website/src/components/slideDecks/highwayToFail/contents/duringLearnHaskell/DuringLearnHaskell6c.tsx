@@ -19,7 +19,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>Le compilateur va venir nous guider dans le développement.</Text>
   </SlideNote>

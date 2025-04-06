@@ -1,8 +1,15 @@
 import { Center, Text } from '@chakra-ui/react';
+import * as React from 'react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
-import { Timeline2, VerticalTimelineCreation } from '../../components';
+import { VerticalTimelineCreation } from '../../components';
+
+const Timeline2 = React.lazy(() =>
+  import('./components/Timeline2').then((module) => ({
+    default: module.Timeline2,
+  })),
+);
 
 export const content = (
   <SlideContent
@@ -18,7 +25,7 @@ export const content = (
   </SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>
       Au moment de notre discussion, nous sommes mi décembre. Nous avons donc 6

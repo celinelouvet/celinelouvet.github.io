@@ -25,7 +25,7 @@ export const content = (
   ></SlideContent>
 );
 
-const note = (
+export const note = (
   <SlideNote>
     <Text>Je vais héberger tout ça sur du Firebase.</Text>
   </SlideNote>
