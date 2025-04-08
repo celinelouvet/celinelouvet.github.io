@@ -4,6 +4,10 @@ import KnowYourNeed1 from './KnowYourNeed1';
 import KnowYourNeed10 from './KnowYourNeed10';
 import KnowYourNeed11 from './KnowYourNeed11';
 import KnowYourNeed12 from './KnowYourNeed12';
+import KnowYourNeed13 from './KnowYourNeed13';
+import KnowYourNeed14 from './KnowYourNeed14';
+import KnowYourNeed15 from './KnowYourNeed15';
+import KnowYourNeed16 from './KnowYourNeed16';
 import KnowYourNeed2 from './KnowYourNeed2';
 import KnowYourNeed3 from './KnowYourNeed3';
 import KnowYourNeed4 from './KnowYourNeed4';
@@ -26,4 +30,8 @@ export default [
   KnowYourNeed10,
   KnowYourNeed11,
   KnowYourNeed12,
+  KnowYourNeed13,
+  KnowYourNeed14,
+  KnowYourNeed15,
+  KnowYourNeed16,
 ] satisfies Slide[];

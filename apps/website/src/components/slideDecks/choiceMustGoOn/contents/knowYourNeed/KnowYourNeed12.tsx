@@ -20,7 +20,7 @@ export const content = (
       <Center width="20%">
         <Icon as={LuMessageCircleQuestion} boxSize="4em" color="brand.500" />
       </Center>
-      <Stack flex="1" color="brand.300" fontSize="1.25em" gap="1em">
+      <Stack flex="1" fontSize="1.25em" gap="1em">
         <H3Heading variant="slide">XY problem</H3Heading>
         <Text>La question influence la réponse</Text>
       </Stack>
