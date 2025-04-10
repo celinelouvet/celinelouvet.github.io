@@ -2,6 +2,7 @@
 
 import type { Slide } from '@/components/slide';
 
+import DefineYourObjectives from './defineYourObjectives';
 import EndTitle from './endTitle';
 import Introduction from './introduction';
 import KnowYourNeed from './knowYourNeed';
@@ -15,6 +16,7 @@ export const getSlides = () => {
     Preface,
     KnowYourNeed,
     ScopeYourNeed,
+    DefineYourObjectives,
     Introduction,
     EndTitle,
   );

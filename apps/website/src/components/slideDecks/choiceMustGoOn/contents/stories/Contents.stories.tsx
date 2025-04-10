@@ -2,6 +2,7 @@ import { type Meta, type StoryObj } from '@storybook/react';
 
 import { SlideDeck, ViewTypes } from '@/components/slide';
 
+import DefineYourObjectivesSlides from '../defineYourObjectives';
 import EndTitleSlides from '../endTitle';
 import IntroductionSlides from '../introduction';
 import KnowYourNeedSlides from '../knowYourNeed';
@@ -53,6 +54,13 @@ export const KnowYourNeed: Story = {
 export const ScopeYourNeed: Story = {
   render: () => {
     const slides = ScopeYourNeedSlides;
+    return <SlideDeck view={ViewTypes.print} slides={slides} />;
+  },
+};
+
+export const DefineYourObjectives: Story = {
+  render: () => {
+    const slides = DefineYourObjectivesSlides;
     return <SlideDeck view={ViewTypes.print} slides={slides} />;
   },
 };

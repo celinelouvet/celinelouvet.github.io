@@ -9,5 +9,12 @@
   ],
   "i18n-ally.namespace": true,
   "i18n-ally.defaultNamespace": "common",
-  "i18n-ally.extract.autoDetect": true
+  "i18n-ally.extract.autoDetect": true,
+  "eslint.format.enable": true,
+  "eslint.useESLintClass": true,
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": true,
+  "javascript.inlayHints.parameterNames.enabled": "none",
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "vite.autoStart": false
 }
