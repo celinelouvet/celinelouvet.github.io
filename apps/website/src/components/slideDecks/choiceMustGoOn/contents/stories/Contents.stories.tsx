@@ -4,6 +4,7 @@ import { SlideDeck, ViewTypes } from '@/components/slide';
 
 import DefineYourObjectivesSlides from '../defineYourObjectives';
 import EndTitleSlides from '../endTitle';
+import ForEachPossibleChoiceSlides from '../forEachPossibleChoice';
 import IntroductionSlides from '../introduction';
 import KnowYourExistingSlides from '../knowYourExisting';
 import KnowYourNeedSlides from '../knowYourNeed';
@@ -69,6 +70,13 @@ export const DefineYourObjectives: Story = {
 export const KnowYourExisting: Story = {
   render: () => {
     const slides = KnowYourExistingSlides;
+    return <SlideDeck view={ViewTypes.print} slides={slides} />;
+  },
+};
+
+export const ForEachPossibleChoice: Story = {
+  render: () => {
+    const slides = ForEachPossibleChoiceSlides;
     return <SlideDeck view={ViewTypes.print} slides={slides} />;
   },
 };

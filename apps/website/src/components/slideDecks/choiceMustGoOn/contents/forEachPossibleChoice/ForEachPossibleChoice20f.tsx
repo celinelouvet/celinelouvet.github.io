@@ -1,0 +1,50 @@
+import { Box, HStack, Stack, Text, chakra } from '@chakra-ui/react';
+
+import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+
+import { ProgressiveList } from '../../components/progressiveList';
+
+const items = [
+  { text: 'Répondent au besoin et aux contraintes' },
+  { text: 'Ont des inconvénients' },
+  { text: 'Avec des méthodes d’évaluation' },
+  { text: 'Avec des méthodes de mise en place' },
+];
+
+export const content = (
+  <SlideContent
+    type={SlideContentTypes.titleWithContent}
+    title="En résumé"
+    alignContent="flex-start"
+  >
+    <Stack width="100%" height="100%" gap="1em">
+      <chakra.span>Liste de solutions</chakra.span>
+      <HStack width="100%" gap="3em">
+        <ProgressiveList
+          items={items}
+          type="numbered"
+          flex="2"
+          marginBottom="0"
+        />
+
+        <Box flex="1">
+          <Stack
+            textAlign="center"
+            backgroundColor="brand.800"
+            padding="1em"
+            borderRadius="md"
+          >
+            <Text marginBottom="0">
+              La <chakra.strong>moins</chakra.strong> pire
+            </Text>
+          </Stack>
+        </Box>
+      </HStack>
+    </Stack>
+  </SlideContent>
+);
+
+export const note = <SlideNote></SlideNote>;
+
+const slide = { content, note };
+export default slide;
