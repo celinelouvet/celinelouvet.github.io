@@ -6,7 +6,7 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithContent}
-    title="Un projet réussi ?"
+    title="Réussir un projet"
     alignContent="flex-start"
   >
     <HStack

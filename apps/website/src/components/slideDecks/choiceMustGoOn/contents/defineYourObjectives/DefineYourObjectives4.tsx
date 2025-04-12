@@ -7,12 +7,15 @@ import { GivenWhenThen } from './components/givenWhenThen';
 const data = {
   given: {
     text: 'Je suis admin',
+    shown: [],
   },
   when: {
     text: 'J’ajoute un utilisateur',
+    shown: [],
   },
   then: {
     text: 'Il reçoit un email pour se connecter',
+    shown: [],
   },
 };
 

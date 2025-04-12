@@ -6,7 +6,7 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithContent}
-    title="Connaître son besoin"
+    title="Besoins flous"
     alignContent="flex-start"
   >
     <HStack
@@ -26,7 +26,11 @@ export const content = (
   </SlideContent>
 );
 
-export const note = <SlideNote></SlideNote>;
+export const note = (
+  <SlideNote>
+    <Text>Expression d’une solution à la place d’un besoin</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

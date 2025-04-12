@@ -2,8 +2,8 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 export const content = (
   <SlideContent
-    type={SlideContentTypes.titleWithContent}
-    title="Connaître son besoin"
+    type={SlideContentTypes.sectionTitle}
+    title="Besoins flous"
     alignContent="flex-start"
   ></SlideContent>
 );

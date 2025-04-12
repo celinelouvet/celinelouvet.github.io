@@ -1,46 +1,27 @@
-import { Center, HStack } from '@chakra-ui/react';
+import { Center, HStack, Icon, Stack, Text } from '@chakra-ui/react';
+import { LuTarget } from 'react-icons/lu';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
-
-const boxStyle = {
-  width: '25%',
-  height: '50%',
-  borderRadius: 'md',
-  color: 'white',
-  fontWeight: 'bold',
-  padding: '0.5em',
-};
-
-const data = [
-  { text: 'Budget disponible', color: 'brand.200' },
-  { text: 'Temps disponible', color: 'brand.300' },
-  { text: 'Réglementation', color: 'brand.400' },
-  { text: 'etc.', color: 'brand.500', style: { width: '10%' } },
-];
 
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithContent}
-    title="Contraintes impossibles à ignorer"
+    title="Critères d'acceptation"
     alignContent="flex-start"
   >
     <HStack
-      width="100%"
       height="100%"
+      width="100%"
       alignItems="center"
-      justifyContent="space-evenly"
+      justifyContent="flex-start"
+      gap="3em"
     >
-      {data.map(({ color, text, style }) => (
-        <Center
-          key={color}
-          {...boxStyle}
-          {...style}
-          backgroundColor={color}
-          textAlign="center"
-        >
-          {text}
-        </Center>
-      ))}
+      <Center width="20%">
+        <Icon as={LuTarget} boxSize="4em" color="brand.500" />
+      </Center>
+      <Stack flex="1" fontSize="1.25em" gap="1em">
+        <Text>Se concentrer sur la valeur à apporter</Text>
+      </Stack>
     </HStack>
   </SlideContent>
 );

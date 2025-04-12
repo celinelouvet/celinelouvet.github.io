@@ -1,28 +1,27 @@
-import { Center, HStack, Icon, Stack, Text } from '@chakra-ui/react';
-import { LuTarget } from 'react-icons/lu';
+import { Stack, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+
+import { ProgressiveList } from '../../components/progressiveList';
+
+const items = [
+  { text: 'Réponse en moins de 1ms jusqu’à 100 requêtes par seconde' },
+  {
+    text: 'Endpoints idempotents : Quand on reçoit 2 fois la même requête, alors le résultat doit être le même.',
+  },
+];
 
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithContent}
-    title="Critères d'acceptation"
+    title="Définition d’une API"
     alignContent="flex-start"
   >
-    <HStack
-      height="100%"
-      width="100%"
-      alignItems="center"
-      justifyContent="flex-start"
-      gap="3em"
-    >
-      <Center width="20%">
-        <Icon as={LuTarget} boxSize="4em" color="brand.500" />
-      </Center>
-      <Stack flex="1" fontSize="1.25em" gap="1em">
-        <Text>Se concentrer sur la valeur à apporter</Text>
-      </Stack>
-    </HStack>
+    <Stack width="100%" height="100%" gap="1em" opacity={0}>
+      <Text>Définition de SLA (Service Level Agreement)</Text>
+
+      <ProgressiveList items={items} />
+    </Stack>
   </SlideContent>
 );
 

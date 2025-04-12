@@ -1,6 +1,21 @@
-import { List, Stack, Text } from '@chakra-ui/react';
+import { Stack, Text } from '@chakra-ui/react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+
+import { ProgressiveList } from '../../components/progressiveList';
+
+const items = [
+  { text: 'Gestion de l’accès aux pages,', shown: false },
+  { text: 'Les utilisateurs sont organisés en équipes,', shown: false },
+  {
+    text: 'Des permissions temporaires seront données pour des besoins de support,',
+    shown: false,
+  },
+  {
+    text: 'Des permissions supplémentaires seront données à des utilisateurs qui appartiennent à plusieurs équipes.',
+    shown: false,
+  },
+];
 
 export const content = (
   <SlideContent
@@ -9,19 +24,9 @@ export const content = (
     alignContent="flex-start"
   >
     <Stack gap="1em" width="100%">
-      <Text>Le besoin s’éclaricit:</Text>
-      <List.Root variant="slide">
-        <List.Item>Gestion de l’accès à des pages.</List.Item>
-        <List.Item>Les utilisateurs sont organisés en équipes.</List.Item>
-        <List.Item>
-          Des permissions temporaires seront données pour des besoins de
-          support.
-        </List.Item>
-        <List.Item>
-          Des permissions supplémentaires seront données à des utilisateurs qui
-          appartiennent à plusieurs équipes.
-        </List.Item>
-      </List.Root>
+      <Text>Le besoin s’éclaircit :</Text>
+
+      <ProgressiveList items={items} />
     </Stack>
   </SlideContent>
 );

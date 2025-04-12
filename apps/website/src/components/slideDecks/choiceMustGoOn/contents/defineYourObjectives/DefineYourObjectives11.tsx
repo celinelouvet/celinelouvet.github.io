@@ -1,26 +1,42 @@
-import { Center, HStack, Icon, Stack, Text } from '@chakra-ui/react';
-import { LuHandCoins } from 'react-icons/lu';
+import { Flex, HStack, Icon, Stack, chakra } from '@chakra-ui/react';
+import { BsArrowReturnRight } from 'react-icons/bs';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithContent}
-    title="Coût réel"
+    title="Budget / Temps"
     alignContent="flex-start"
   >
-    <HStack
-      height="100%"
-      width="100%"
-      alignItems="center"
-      justifyContent="flex-start"
-      gap="3em"
-    >
-      <Center width="20%">
-        <Icon as={LuHandCoins} boxSize="4em" color="brand.orange" />
-      </Center>
-      <Stack flex="1" fontSize="1.25em" gap="1em">
-        <Text>Make-or-Buy</Text>
+    <HStack gap="1em" height="100%" width="100%" justifyContent="space-between">
+      <Stack gap="0.5em" height="100%">
+        <chakra.span>Un jour de développement</chakra.span>
+
+        <Flex alignItems="center" gap="0.5em" marginLeft="1em">
+          <Icon as={BsArrowReturnRight} />
+          <chakra.span>~ 500 €</chakra.span>
+        </Flex>
+      </Stack>
+
+      <Stack gap="0.5em" height="100%" opacity={0}>
+        <chakra.span>2 personnes pendant un trimestre</chakra.span>
+
+        <Flex alignItems="center" gap="0.5em" marginLeft="1em">
+          <Icon as={BsArrowReturnRight} />
+          <chakra.span>500 €</chakra.span>
+          <chakra.span>x 2 personnes</chakra.span>
+          <chakra.span>x 20 jours</chakra.span>
+          <chakra.span>x 3 mois</chakra.span>
+        </Flex>
+        <Flex alignItems="center" gap="0.5em" marginLeft="1em">
+          <Icon as={BsArrowReturnRight} />
+          <chakra.span>~ 60 k€</chakra.span>
+        </Flex>
+        <Flex alignItems="center" gap="0.5em" marginLeft="1em">
+          <Icon as={BsArrowReturnRight} />
+          <chakra.span>+ la maintenance</chakra.span>
+        </Flex>
       </Stack>
     </HStack>
   </SlideContent>

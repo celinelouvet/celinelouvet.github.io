@@ -6,7 +6,7 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithContent}
-    title="Connaître son besoin"
+    title="Besoins flous"
     alignContent="flex-start"
   >
     <Stack gap="1em" width="100%">
@@ -16,14 +16,20 @@ export const content = (
           rapport.
         </Text>
       </Quote>
-      <Quote title="Moi" variant="rightSlide">
+      <Quote title="Moi" variant="rightSlide" opacity={0}>
         <Text>Et, vous faites quoi de ce rapport ?</Text>
       </Quote>
     </Stack>
   </SlideContent>
 );
 
-export const note = <SlideNote></SlideNote>;
+export const note = (
+  <SlideNote>
+    <Text>
+      Je les affiche sous forme de camembert pour les coller dans un rapport.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

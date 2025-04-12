@@ -8,13 +8,16 @@ const data = {
   given: {
     text: 'Un backup a été fait à 3h',
     and: 'Les données ont été corrompues à 9h',
+    shown: [],
   },
   when: {
     text: 'Le backup est injecté',
+    shown: [],
   },
   then: {
     text: 'Les données avant 3h sont récupérées',
     and: 'Celles entre 3h et 9h sont perdues',
+    shown: [],
   },
 };
 

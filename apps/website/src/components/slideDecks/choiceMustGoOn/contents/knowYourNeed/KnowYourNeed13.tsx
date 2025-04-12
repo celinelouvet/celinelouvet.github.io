@@ -6,7 +6,7 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithContent}
-    title="Connaître son besoin"
+    title="Besoins flous"
     alignContent="flex-start"
   >
     <Stack gap="1em" width="100%">
@@ -20,7 +20,15 @@ export const content = (
   </SlideContent>
 );
 
-export const note = <SlideNote></SlideNote>;
+export const note = (
+  <SlideNote>
+    S'il m'avait dit :
+    <Text>
+      L’Excel appelle une API pour faire les calculs. Il faudra voir avec Martin
+      de l’équipe Core.
+    </Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

@@ -1,4 +1,5 @@
 import { Center, Grid, Icon, Stack, Text, chakra } from '@chakra-ui/react';
+import * as React from 'react';
 import { BsLink45Deg } from 'react-icons/bs';
 
 import { H2Heading, H3Heading } from '@/components/core';
@@ -9,14 +10,22 @@ import {
   SlideNote,
 } from '@/components/slide';
 
-import { YeesoLight } from './components/YeesoLight';
+import { Loading } from '../../components/loading';
+
+const YeesoLight = React.lazy(() =>
+  import('./components/YeesoLight').then((module) => ({
+    default: module.YeesoLight,
+  })),
+);
 
 export const content = (
   <SlideContent type={SlideContentTypes.fullContent} colormode={ColorMode.dark}>
     <Stack height="100%" width="100%" textAlign="center" gap="1em">
       <Stack height="40%" gap="2em" marginBottom="3em">
         <Center height="45%">
-          <YeesoLight />
+          <React.Suspense fallback={<Loading />}>
+            <YeesoLight />
+          </React.Suspense>
         </Center>
 
         <H2Heading variant="slide">

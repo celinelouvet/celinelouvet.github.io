@@ -16,7 +16,7 @@ const reasons = [
   {
     color: 'brand.500',
     oldText: 'Besoin satisfait',
-    text: 'Périmètre respecté',
+    text: undefined,
   },
 ];
 
@@ -42,15 +42,11 @@ export const content = (
           flexDirection="column"
         >
           {oldText ? (
-            <>
-              <Text as="s" textDecorationThickness="2px">
-                {oldText}
-              </Text>
-              <Text>{text}</Text>
-            </>
-          ) : (
-            <Text>{text}</Text>
-          )}
+            <Text as="s" textDecorationThickness="2px">
+              {oldText}
+            </Text>
+          ) : null}
+          {text ? <Text>{text}</Text> : null}
         </Center>
       ))}
     </HStack>
@@ -59,10 +55,7 @@ export const content = (
 
 export const note = (
   <SlideNote>
-    <Text>
-      Cette version de 2015 s’appuie, non pas sur le respect du besoin.
-    </Text>
-    <Text>Mais sur le respect des fonctionnalités initialement prévues.</Text>
+    <Text>Cette version s’appuie, non pas sur le satisfaction du besoin.</Text>
   </SlideNote>
 );
 

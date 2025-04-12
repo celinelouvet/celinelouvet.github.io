@@ -28,7 +28,12 @@ export const content = (
   </SlideContent>
 );
 
-export const note = <SlideNote></SlideNote>;
+export const note = (
+  <SlideNote>
+    Et j'aurais créé un faux besoin. La question et la manière de la poser va
+    influencer la réponse.
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

@@ -1,6 +1,12 @@
-import { Center, Text } from '@chakra-ui/react';
-
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+
+import { type Tile, Tiles } from '../../components/tiles';
+
+const data = [
+  { text: 'Besoin défini', shown: false },
+  { text: 'Priorités définies', shown: false },
+  { text: 'Faire des choix', shown: false },
+] satisfies Tile[];
 
 export const content = (
   <SlideContent
@@ -8,9 +14,7 @@ export const content = (
     title="Réponse au besoin"
     alignContent="flex-start"
   >
-    <Center width="100%" height="100%">
-      <Text>Est-ce qu’il y a des quick-wins ?</Text>
-    </Center>
+    <Tiles data={data} />
   </SlideContent>
 );
 
