@@ -1,33 +1,11 @@
-import fs from 'fs';
+import path from 'path';
 import { Browser, launch, Page } from 'puppeteer';
+
+import { prepareOutputFolder } from './folder';
 
 const width = 1600;
 const height = 900;
 const viewPort = { width, height };
-
-async function listPdfs(path = './'): Promise<string[]> {
-  try {
-    const items = await fs.promises.readdir(path, { withFileTypes: true });
-    return items
-      .filter((item) => item.isFile())
-      .map((item) => item.name)
-      .filter((name) => name.endsWith('.pdf'));
-  } catch (error: unknown) {
-    return [];
-  }
-}
-
-async function cleanPreviousPdfs() {
-  const pdfs = await listPdfs();
-  if (pdfs.length > 0) {
-    console.log(`[PDF] Deleting ${pdfs.length} files`);
-
-    for (const pdf of pdfs) {
-      await fs.promises.unlink(`./${pdf}`);
-      console.log(`[PDF] File deleted "${pdf}"`);
-    }
-  }
-}
 
 async function openPage(browser: Browser): Promise<Page> {
   return new Promise((resolve, reject) => {
@@ -54,7 +32,11 @@ async function openPage(browser: Browser): Promise<Page> {
   });
 }
 
-async function printPage(url: string, page: Page): Promise<void> {
+async function printPage(
+  url: string,
+  page: Page,
+  outFolder: string,
+): Promise<void> {
   try {
     console.log('[PDF] Generating PDF for page', { url });
 
@@ -64,13 +46,15 @@ async function printPage(url: string, page: Page): Promise<void> {
     const title = await page.title();
     const filename = title.replaceAll(' ', '_') + '.pdf';
 
-    console.log('[PDF] Page loaded', { url, title, filename });
+    const filepath = path.join(path.resolve(outFolder), filename);
+
+    console.log('[PDF] Page loaded', { url, title, filepath });
 
     await page.pdf({
       ...viewPort,
 
       printBackground: true,
-      path: filename,
+      path: filepath,
       margin: {
         top: 0,
         left: 0,
@@ -79,7 +63,7 @@ async function printPage(url: string, page: Page): Promise<void> {
       },
     });
 
-    console.log('[PDF] PDF generated for page', { url });
+    console.log('[PDF] PDF generated for page', { url, filepath });
   } catch (error: unknown) {
     console.error("[PDF] Couldn't print the page", { path: url, error });
     throw error;
@@ -89,15 +73,17 @@ async function printPage(url: string, page: Page): Promise<void> {
 export async function printPdf(
   pageUrl: string,
   talkSubjectId: string,
+  outFolder: string = '_generated',
 ): Promise<void> {
-  console.log('[PDF] Generating slides', { pageUrl, talkSubjectId });
+  console.log('[PDF] Generating slides', { pageUrl, talkSubjectId, outFolder });
 
   try {
     const urls = [
       `${pageUrl}/slides/${talkSubjectId}/print`,
       `${pageUrl}/slides/${talkSubjectId}/print-notes`,
     ];
-    await cleanPreviousPdfs();
+
+    await prepareOutputFolder(outFolder);
 
     console.log(`[PDF] Generating ${urls.length} PDFs`);
     const browser = await launch({
@@ -114,7 +100,7 @@ export async function printPdf(
     await page.setViewport(viewPort);
 
     for (const url of urls) {
-      await printPage(url, page);
+      await printPage(url, page, outFolder);
     }
 
     console.log('[PDF] Finished');
@@ -122,5 +108,6 @@ export async function printPdf(
     await browser.close();
   } catch (error: unknown) {
     console.error(`Error while generating: ${error}`);
+    throw error;
   }
 }

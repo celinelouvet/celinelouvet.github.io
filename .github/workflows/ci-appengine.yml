@@ -59,7 +59,7 @@ jobs:
             ${{ runner.os }}-turbo-
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Clean
         run: npm run clean
@@ -110,67 +110,75 @@ jobs:
     outputs:
       versionUrl: ${{ steps.deploy_website.outputs.version_url }}
 
-  # slidePdf:
-  #   name: Generate Slides PDF
-  #   needs: deploy
-  #   runs-on: ${{ matrix.os }}
+  slidePdf:
+    name: Generate Slides PDF
+    needs: deploy
+    runs-on: ${{ matrix.os }}
 
-  #   strategy:
-  #     matrix:
-  #       os: [ubuntu-latest]
-  #       node: [20]
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [20]
+        talkSubjectId: [highway-to-fail, choice-must-go-on]
 
-  #   permissions:
-  #     contents: read
-  #     id-token: write
+    permissions:
+      contents: read
+      id-token: write
 
-  #   steps:
-  #     - name: Define bucket path
-  #       id: bucket
-  #       run: echo "BUCKET_PATH=${{env.BUCKET_NAME}}/${{ env.VERSION }}/slides" >> $GITHUB_OUTPUT
+    steps:
+      - name: Define bucket path
+        id: bucket
+        run: echo "BUCKET_PATH=${{env.BUCKET_NAME}}/${{ env.VERSION }}/slides" >> $GITHUB_OUTPUT
 
-  #     - name: Checkout
-  #       uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-  #     - name: Setup node env
-  #       uses: actions/setup-node@v4
-  #       with:
-  #         node-version: ${{ matrix.node }}
+      - name: Setup node env
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
 
-  #     - name: Cache node modules
-  #       uses: actions/cache@v4
-  #       env:
-  #         cache-name: cache-node-modules
-  #       with:
-  #         path: ~/.npm
-  #         key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-  #         restore-keys: |
-  #           ${{ runner.os }}-build-${{ env.cache-name }}-
-  #           ${{ runner.os }}-build-
-  #           ${{ runner.os }}-
+      - name: Cache node modules
+        uses: actions/cache@v4
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
 
-  #     - name: Generate PDF
-  #       shell: bash
-  #       run: cd slides-generator && npm run && npm run slides --pageUrl "$VERSION_URL"
-  #       env:
-  #         VERSION_URL: ${{ needs.deploy.outputs.versionUrl }}
+      - name: Cache turbo build setup
+        uses: actions/cache@v4
+        with:
+          path: .turbo
+          key: ${{ runner.os }}-turbo-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-turbo-
 
-  #     - id: auth
-  #       name: Auth to GCP
-  #       uses: google-github-actions/auth@v2
-  #       with:
-  #         credentials_json: ${{ secrets.GCP_SA_KEY }}
+      - id: auth
+        name: Auth to GCP
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
 
-  #     - name: Upload Slides PDF
-  #       uses: google-github-actions/upload-cloud-storage@v2
-  #       with:
-  #         path: './slides-generator/Highway_to_fail.pdf'
-  #         destination: ${{ steps.bucket.outputs.BUCKET_PATH }}
-  #         predefinedAcl: publicRead
+      - name: Install dependencies
+        run: npm ci
 
-  #     - name: Upload Notes PDF
-  #       uses: google-github-actions/upload-cloud-storage@v2
-  #       with:
-  #         path: './slides-generator/Notes_-_Highway_to_fail.pdf'
-  #         destination: ${{ steps.bucket.outputs.BUCKET_PATH }}
-  #         predefinedAcl: publicRead
+      - name: Generate PDF
+        shell: bash
+        run: npx turbo run slides --  --pageUrl="${{ env.VERSION_URL }}" --talkSubjectId="${{ env.TALK_SUBJECT_ID }}" --out="_generated"
+        env:
+          VERSION_URL: ${{ needs.deploy.outputs.versionUrl }}
+          TALK_SUBJECT_ID: ${{ matrix.talkSubjectId }}
+
+      - name: Upload PDF
+        uses: google-github-actions/upload-cloud-storage@v2
+        with:
+          path: tools/slides-generator/_generated
+          destination: ${{ steps.bucket.outputs.BUCKET_PATH }}
+          parent: false
+          glob: '**/*.pdf'
+          predefinedAcl: publicRead
+          process_gcloudignore: false

@@ -4,6 +4,7 @@ import type * as React from 'react';
 const highlightedText = {
   color: 'brand.900',
   backgroundColor: 'brand.400',
+  opacity: 1,
 };
 type Factor = {
   item: string;
@@ -12,25 +13,25 @@ type Factor = {
 const FactorLine: React.FC<{
   factor: { item: string; highlighted: boolean };
   index: number;
-}> = ({ factor, index }) => {
-  const leftStyle = factor.highlighted
-    ? {
-        ...highlightedText,
-        borderLeftRadius: 'md',
-      }
-    : {};
-  const rightStyle = factor.highlighted
-    ? {
-        ...highlightedText,
-        borderRightRadius: 'md',
-      }
-    : {};
+  contrast: boolean;
+}> = ({ factor, index, contrast }) => {
   return (
     <>
-      <chakra.span textAlign="right" {...leftStyle}>
+      <chakra.span
+        textAlign="right"
+        borderLeftRadius="md"
+        {...(contrast && { opacity: '0.4' })}
+        {...(factor.highlighted && highlightedText)}
+      >
         {index + 1}.
       </chakra.span>
-      <chakra.span paddingLeft="0.5em" paddingRight="0.5em" {...rightStyle}>
+      <chakra.span
+        paddingLeft="0.5em"
+        paddingRight="0.5em"
+        borderRightRadius="md"
+        {...(contrast && { opacity: '0.4' })}
+        {...(factor.highlighted && highlightedText)}
+      >
         {factor.item}
       </chakra.span>
     </>
@@ -39,7 +40,8 @@ const FactorLine: React.FC<{
 export const FactorList: React.FC<{
   factors: Factor[];
   starts: number;
-}> = ({ factors, starts }) => {
+  contrast?: boolean;
+}> = ({ factors, starts, contrast = false }) => {
   return (
     <Grid
       templateColumns="2em 1fr"
@@ -49,7 +51,12 @@ export const FactorList: React.FC<{
       lineHeight="1.5em"
     >
       {factors.map((factor, index) => (
-        <FactorLine key={index} factor={factor} index={starts - 1 + index} />
+        <FactorLine
+          key={index}
+          contrast={contrast}
+          factor={factor}
+          index={starts - 1 + index}
+        />
       ))}
     </Grid>
   );

@@ -7,7 +7,7 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 export const content = (
   <SlideContent
     type={SlideContentTypes.titleWithContent}
-    title="Connaître son besoin"
+    title="Besoins flous"
     alignContent="flex-start"
   >
     <HStack
@@ -20,7 +20,7 @@ export const content = (
       <Center width="20%">
         <Icon as={LuMessageCircleQuestion} boxSize="4em" color="brand.500" />
       </Center>
-      <Stack flex="1" color="brand.300" fontSize="1.25em" gap="1em">
+      <Stack flex="1" fontSize="1.25em" gap="1em">
         <H3Heading variant="slide">Méthode des « 5 pourquoi »</H3Heading>
         <Text>Utilisée pour comprendre la cause profonde d’un problème.</Text>
       </Stack>
@@ -28,7 +28,12 @@ export const content = (
   </SlideContent>
 );
 
-export const note = <SlideNote></SlideNote>;
+export const note = (
+  <SlideNote>
+    <H3Heading variant="slide">Méthode des « 5 pourquoi »</H3Heading>
+    <Text>Utilisée pour comprendre la cause profonde d’un problème.</Text>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

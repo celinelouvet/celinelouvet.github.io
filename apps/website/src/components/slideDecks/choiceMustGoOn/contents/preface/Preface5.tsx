@@ -1,4 +1,4 @@
-import { Box, Center, Grid, HStack } from '@chakra-ui/react';
+import { Box, Center, Grid, HStack, Stack, Text } from '@chakra-ui/react';
 import { PieChart } from 'react-minimal-pie-chart';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
@@ -65,7 +65,18 @@ export const content = (
   </SlideContent>
 );
 
-export const note = <SlideNote></SlideNote>;
+export const note = (
+  <SlideNote>
+    <Stack gap="1em">
+      <Text>Autres chiffres: on a </Text>
+      {data.map(({ title, value }) => (
+        <Text key={title}>
+          {title} : {value}%
+        </Text>
+      ))}
+    </Stack>
+  </SlideNote>
+);
 
 const slide = { content, note };
 export default slide;

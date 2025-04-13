@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "commander": "13.1.0",
-    "puppeteer": "^24.5.0"
+    "puppeteer": "^24.5.0",
+    "bun": "latest"
   }
 }

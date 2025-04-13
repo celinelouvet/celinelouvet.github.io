@@ -6,24 +6,32 @@ import { type Item, Line } from './components/Line';
 
 const data = [
   {
-    need: 'Gestion de l’accès à des pages',
+    need: 'Gestion de l’accès aux pages',
     type: 'Besoin principal',
     priority: 'Obligatoire',
+    shown: ['need'],
+    highlighted: false,
   },
   {
     need: 'Organisation en équipes',
     type: 'Notion de groupe',
     priority: 'Utile',
+    shown: ['need'],
+    highlighted: false,
   },
   {
     need: 'Permissions temporaires',
     type: 'Ajout manuel à un autre groupe',
     priority: 'Facultatif',
+    shown: ['need'],
+    highlighted: false,
   },
   {
     need: 'Permissions supplémentaires en fonction de l’utilisateur',
     type: 'Ajout à plusieurs groupes',
     priority: 'Non nécessaire',
+    shown: ['need'],
+    highlighted: false,
   },
 ] satisfies Item[];
 
@@ -37,8 +45,7 @@ export const content = (
       width="100%"
       height="100%"
       templateColumns="2fr 2em 2fr 2em 1fr"
-      fontSize="0.8em"
-      lineHeight="2"
+      templateRows="repeat(4, 1fr)"
       gap="0"
       alignItems="center"
     >

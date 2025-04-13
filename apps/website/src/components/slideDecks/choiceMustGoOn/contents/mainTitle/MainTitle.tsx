@@ -11,6 +11,7 @@ import {
 import { choiceMustGoOnTalkFr as talk } from '@/data/talks';
 import { socialIcon } from '@/lib';
 
+import { Loading } from '../../components/loading';
 import { Title } from '../Title.component';
 
 const Subtitle = React.lazy(() =>
@@ -31,7 +32,9 @@ export const content = (
       <Stack gap="0" alignItems="center" justifyContent="center">
         <Title title={talk.title} />
         <Box width="70%">
-          <Subtitle />
+          <React.Suspense fallback={<Loading />}>
+            <Subtitle />
+          </React.Suspense>
         </Box>
       </Stack>
       <Box marginBottom={'auto'}>
@@ -66,17 +69,17 @@ export const note = (
   <SlideNote>
     <Text>Bonjour à tous et à toutes,</Text>
     <Text>
-      Avant toutes choses, je voulais vous remercier d’être venus m’écouter.
+      Avant toute chose, je voulais vous remercier d’être venues m’écouter.
     </Text>
     <Text>
-      Je vais vous présenter mon approche d’un choix. Ca découle de mon
-      expérience personnelle, donc n’hésitez pas à venir me voir ensuite pour en
-      discuter.
+      Pour ce qui va suivre, je vais vous présenter mon approche pour faire un
+      choix. Ça découle de mon expérience personnelle, donc n’hésitez pas à
+      venir me voir ensuite pour en discuter.
     </Text>
 
     <Text>
-      Avant de se jeter dans le vif du sujet, j’aimerais qu’on revienne sur la
-      raison de l’importance d'un choix.
+      Avant de se jeter dans le vif du sujet, j’aimerais qu’on se pose une
+      question.
     </Text>
   </SlideNote>
 );

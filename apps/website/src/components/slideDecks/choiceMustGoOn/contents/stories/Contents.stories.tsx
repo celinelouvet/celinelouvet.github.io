@@ -2,8 +2,13 @@ import { type Meta, type StoryObj } from '@storybook/react';
 
 import { SlideDeck, ViewTypes } from '@/components/slide';
 
+import ChoiceIsMadeSlides from '../choiceIsMade';
+import ConclusionSlides from '../conclusion';
+import DefineYourObjectivesSlides from '../defineYourObjectives';
 import EndTitleSlides from '../endTitle';
+import ForEachPossibleChoiceSlides from '../forEachPossibleChoice';
 import IntroductionSlides from '../introduction';
+import KnowYourExistingSlides from '../knowYourExisting';
 import KnowYourNeedSlides from '../knowYourNeed';
 import MainTitleSlides from '../mainTitle';
 import PrefaceSlides from '../preface';
@@ -53,6 +58,41 @@ export const KnowYourNeed: Story = {
 export const ScopeYourNeed: Story = {
   render: () => {
     const slides = ScopeYourNeedSlides;
+    return <SlideDeck view={ViewTypes.print} slides={slides} />;
+  },
+};
+
+export const DefineYourObjectives: Story = {
+  render: () => {
+    const slides = DefineYourObjectivesSlides;
+    return <SlideDeck view={ViewTypes.print} slides={slides} />;
+  },
+};
+
+export const KnowYourExisting: Story = {
+  render: () => {
+    const slides = KnowYourExistingSlides;
+    return <SlideDeck view={ViewTypes.print} slides={slides} />;
+  },
+};
+
+export const ForEachPossibleChoice: Story = {
+  render: () => {
+    const slides = ForEachPossibleChoiceSlides;
+    return <SlideDeck view={ViewTypes.print} slides={slides} />;
+  },
+};
+
+export const ChoiceIsMade: Story = {
+  render: () => {
+    const slides = ChoiceIsMadeSlides;
+    return <SlideDeck view={ViewTypes.print} slides={slides} />;
+  },
+};
+
+export const Conclusion: Story = {
+  render: () => {
+    const slides = ConclusionSlides;
     return <SlideDeck view={ViewTypes.print} slides={slides} />;
   },
 };

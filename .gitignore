@@ -27,6 +27,7 @@ dist-ssr
 *.sw?
 
 out/
+_generated/
 .turbo/
 .tsconfig.tsbuildinfo
 

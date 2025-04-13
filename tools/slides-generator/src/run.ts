@@ -11,6 +11,10 @@ const { values } = parseArgs({
     talkSubjectId: {
       type: 'string',
     },
+    out: {
+      type: 'string',
+      default: '_generated',
+    },
   },
   strict: true,
   allowPositionals: true,
@@ -18,10 +22,16 @@ const { values } = parseArgs({
 
 const pageUrl = values.pageUrl;
 const talkSubjectId = values.talkSubjectId;
+const outFolder = values.out;
 
 if (!talkSubjectId) {
   console.error('Please provide a talkSubjectId');
   process.exit(1);
 }
 
-await printPdf(pageUrl, talkSubjectId);
+try {
+  await printPdf(pageUrl, talkSubjectId, outFolder);
+} catch (error) {
+  console.error('Error while generating slides', { error });
+  process.exit(1);
+}
