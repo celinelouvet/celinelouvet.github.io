@@ -14,8 +14,8 @@ const slideBorder = {
 
 const getSize = (preview?: boolean) => {
   if (preview) {
-    const width = 400;
-    const height = 200;
+    const width = 600;
+    const height = 400;
     return {
       width,
       height,
@@ -67,8 +67,10 @@ const Slide: React.FC<SlideProps> = ({ slides, position, preview = false }) => {
   }
 
   return (
-    <Box {...contentProps} lineHeight="1.25em" {...slideBorder}>
-      {slide.content}
+    <Box {...contentProps} {...slideBorder}>
+      <Box width="100%" height="100%" fontSize="0.8em">
+        {slide.content}
+      </Box>
     </Box>
   );
 };
