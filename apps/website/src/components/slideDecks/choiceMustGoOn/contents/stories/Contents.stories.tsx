@@ -3,6 +3,7 @@ import { type Meta, type StoryObj } from '@storybook/react';
 import { SlideDeck, ViewTypes } from '@/components/slide';
 
 import ChoiceIsMadeSlides from '../choiceIsMade';
+import ConclusionSlides from '../conclusion';
 import DefineYourObjectivesSlides from '../defineYourObjectives';
 import EndTitleSlides from '../endTitle';
 import ForEachPossibleChoiceSlides from '../forEachPossibleChoice';
@@ -85,6 +86,13 @@ export const ForEachPossibleChoice: Story = {
 export const ChoiceIsMade: Story = {
   render: () => {
     const slides = ChoiceIsMadeSlides;
+    return <SlideDeck view={ViewTypes.print} slides={slides} />;
+  },
+};
+
+export const Conclusion: Story = {
+  render: () => {
+    const slides = ConclusionSlides;
     return <SlideDeck view={ViewTypes.print} slides={slides} />;
   },
 };
