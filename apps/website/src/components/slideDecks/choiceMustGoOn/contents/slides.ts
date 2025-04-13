@@ -2,6 +2,7 @@
 
 import type { Slide } from '@/components/slide';
 
+import ChoiceIsMade from './choiceIsMade';
 import DefineYourObjectives from './defineYourObjectives';
 import EndTitle from './endTitle';
 import ForEachPossibleChoice from './forEachPossibleChoice';
@@ -21,6 +22,7 @@ export const getSlides = () => {
     DefineYourObjectives,
     KnowYourExisting,
     ForEachPossibleChoice,
+    ChoiceIsMade,
     Introduction,
     EndTitle,
   );
