@@ -67,7 +67,7 @@ export const content = (
         <QrCode
           width="100%"
           variant="light"
-          value="https://openfeedback.io/bdxio2024/2024-11-08/639"
+          value="https://mixitconf.org/2025/highway-to-fail-ou-l-39-histoire-d-39-un-echec-previsible#feedback"
         />
         <H2Heading variant="slide">Retours</H2Heading>
       </Stack>
