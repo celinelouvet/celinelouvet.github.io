@@ -6,7 +6,8 @@ import {
 } from '@repo/models';
 import * as React from 'react';
 
-import { useApi, useSurveyInfos } from '@/hooks';
+import { useSurveyInfos } from '@/components/features/talkSurvey/useSurveyInfos.hook';
+import { useApi } from '@/hooks';
 
 type ReducedResults = Record<string, Record<string, number>>;
 type QuestionToShow = {
@@ -119,5 +120,5 @@ export const useSurveyResults = (
     refreshQuery,
   ]);
 
-  return { surveyPoll, results, loading, error, refreshQuery };
+  return { surveyPoll, results, loading, error };
 };

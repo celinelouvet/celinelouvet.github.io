@@ -3,6 +3,7 @@ import {
   ButtonGroup,
   Center,
   Flex,
+  HStack,
   SimpleGrid,
   Stack,
   Text,
@@ -40,8 +41,7 @@ export const Presenter: React.FC = () => {
         ) : null}
 
         <Stack gap="8" width="100%">
-          <SimpleGrid
-            columns={3}
+          <HStack
             gap="8"
             width="100%"
             height="8em"
@@ -49,6 +49,8 @@ export const Presenter: React.FC = () => {
             borderRadius="md"
           >
             <Center
+              width="30%"
+              height="100%"
               backgroundColor="brand.400"
               color="brand.900"
               borderLeftRadius="md"
@@ -56,28 +58,37 @@ export const Presenter: React.FC = () => {
               <H2Heading>Highway to fail</H2Heading>
             </Center>
 
-            <Center>
-              <ButtonGroup gap="8">
-                <Button onClick={() => onClick('highway-to-fail', false)}>
-                  Present
-                </Button>
-                <Button onClick={() => onClick('highway-to-fail', true)}>
-                  Present with notes
-                </Button>
-              </ButtonGroup>
-            </Center>
+            <SimpleGrid columns={2} gap="8" flex="1">
+              <Center>
+                <ButtonGroup gap="8">
+                  <Button onClick={() => onClick('highway-to-fail', false)}>
+                    Present
+                  </Button>
+                  <Button onClick={() => onClick('highway-to-fail', true)}>
+                    Present with notes
+                  </Button>
+                </ButtonGroup>
+              </Center>
 
-            <Center>
-              <ButtonGroup gap="8">
-                <Link.Internal to="/slides/highway-to-fail/print">
-                  Print content
-                </Link.Internal>
-                <Link.Internal to="/slides/highway-to-fail/print-notes">
-                  Print content with notes
-                </Link.Internal>
-              </ButtonGroup>
-            </Center>
-          </SimpleGrid>
+              <Center>
+                <ButtonGroup gap="8">
+                  <Link.Internal to="/slides/highway-to-fail/print">
+                    Print content
+                  </Link.Internal>
+                  <Link.Internal to="/slides/highway-to-fail/print-notes">
+                    Print content with notes
+                  </Link.Internal>
+                </ButtonGroup>
+              </Center>
+              <Center>
+                <ButtonGroup gap="8">
+                  <Link.Internal to="/slides/highway_to_fail/results/mixit_2025">
+                    Results
+                  </Link.Internal>
+                </ButtonGroup>
+              </Center>
+            </SimpleGrid>
+          </HStack>
 
           <SimpleGrid
             columns={3}

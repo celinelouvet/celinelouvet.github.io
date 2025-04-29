@@ -1,6 +1,12 @@
 {
   "extends": ["//"],
   "tasks": {
+    "dev": {
+      "env": ["VERSION_NAME"]
+    },
+    "start": {
+      "env": ["VERSION_NAME"]
+    },
     "build": {
       "outputs": ["dist/**"]
     }

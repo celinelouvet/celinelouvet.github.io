@@ -40,7 +40,9 @@ export const SurveyResultsPie = React.forwardRef<
       <Box {...restProps}>
         <PieChart
           data={data}
-          label={({ dataEntry }) => dataEntry.title}
+          label={({ dataEntry }) =>
+            dataEntry.value !== 0 ? dataEntry.title : ''
+          }
           labelStyle={{
             fontSize: '0.5em',
             fill: labelColor,

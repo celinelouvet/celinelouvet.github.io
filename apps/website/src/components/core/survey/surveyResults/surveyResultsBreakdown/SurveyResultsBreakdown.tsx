@@ -1,16 +1,13 @@
 import {
-  Flex,
   Grid,
   type RecipeVariantProps,
-  Stack,
   type StackProps,
-  Text,
   chakra,
   useRecipe,
 } from '@chakra-ui/react';
 import { type SurveyPollChoiceQuestion } from '@repo/models';
 import * as React from 'react';
-import { useTranslation } from 'react-i18next';
+import { BsArrowRight } from 'react-icons/bs';
 
 import { surveyResultsBreakdownRecipe } from './SurveyResultsBreakdown.recipe';
 import { useQuestionResults } from '../useQuestionResults';
@@ -27,7 +24,9 @@ const SurveyVotes: React.FC<{ result: VoteResult }> = ({ result }) => {
     <>
       <chakra.span fontWeight="700">{title}</chakra.span>
       <chakra.span>{percentage}%</chakra.span>
-      <chakra.span>→</chakra.span>
+      <chakra.span>
+        <BsArrowRight />
+      </chakra.span>
       <chakra.span>{value}</chakra.span>
     </>
   );
@@ -52,30 +51,25 @@ export const SurveyResultsBreakdown = React.forwardRef<
   const recipe = useRecipe({ recipe: surveyResultsBreakdownRecipe });
   const styles = recipe(restProps);
 
-  const { t } = useTranslation('components', { keyPrefix: 'survey' });
-
   if (!question) return null;
   if (!results) return null;
 
   return (
-    <Stack css={styles} ref={ref} {...restProps}>
-      <Flex fontSize="xl" flexDirection="row" gap="1em">
-        <Text fontWeight="700">{t('allVotes')}</Text>
-        <Text>{total}</Text>
-      </Flex>
-      <Grid
-        templateColumns="3em auto auto auto"
-        columnGap="1em"
-        rowGap="0.5em"
-        alignItems="center"
-        justifyItems="start"
-      >
-        {total !== 0
-          ? data.map((result) => (
-              <SurveyVotes result={result} key={result.title} />
-            ))
-          : null}
-      </Grid>
-    </Stack>
+    <Grid
+      templateColumns="3em 4em auto 4em"
+      columnGap="1em"
+      rowGap="0.5em"
+      alignItems="center"
+      justifyItems="start"
+      css={styles}
+      ref={ref}
+      {...restProps}
+    >
+      {total !== 0
+        ? data.map((result) => (
+            <SurveyVotes result={result} key={result.title} />
+          ))
+        : null}
+    </Grid>
   );
 });

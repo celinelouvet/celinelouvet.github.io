@@ -3,7 +3,7 @@ import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { H2Heading, H3Heading, Link, List } from '@/components/core';
-import { type Convention, type Resume, type TalkSubject } from '@/data';
+import { type Resume, type TalkSubject } from '@/data';
 import { useTalk } from '@/hooks';
 
 type TalkProps = {
@@ -36,11 +36,7 @@ export const Talk: React.FC<TalkProps> = ({ resume, talkSubjectId }) => {
       </Flex>
 
       <Descriptions descriptions={talkSubject.descriptions} />
-      <Surveys
-        talkSubjectId={subjectId}
-        talkSubject={talkSubject}
-        conventions={resume.conventions}
-      />
+      <Surveys talkSubjectId={subjectId} talkSubject={talkSubject} />
     </Stack>
   );
 };
@@ -120,8 +116,7 @@ const Survey: React.FC<{
 const Surveys: React.FC<{
   talkSubjectId: string;
   talkSubject: TalkSubject;
-  conventions: Map<string, Convention>;
-}> = ({ talkSubjectId, talkSubject, conventions }) => {
+}> = ({ talkSubjectId, talkSubject }) => {
   const { t } = useTranslation('talks', { keyPrefix: 'talk.surveys' });
 
   const talkLink = `/talks/${talkSubjectId}`;
@@ -149,7 +144,7 @@ const Surveys: React.FC<{
           .map(({ name, opensAt, closesAt }) => (
             <Survey
               key={name}
-              name={conventions.get(name)?.name}
+              name={name}
               opensAt={opensAt}
               closesAt={closesAt}
               talkLink={talkLink}

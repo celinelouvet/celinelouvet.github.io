@@ -68,14 +68,14 @@ export const content = (
         <QrCode
           width="100%"
           variant="light"
-          value="https://celine.louvet.me/bdxio"
+          value="https://celine.louvet.me/mixit"
         />
 
         <Box textAlign="center">
           <H3Heading variant="slide">
             <Text as="b">Sondage</Text>
           </H3Heading>
-          <Text>celine.louvet.me/bdxio</Text>
+          <Text>celine.louvet.me/mixit</Text>
         </Box>
       </Stack>
     </HStack>

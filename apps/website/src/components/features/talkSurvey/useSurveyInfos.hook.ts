@@ -5,8 +5,7 @@ import {
 } from '@repo/models';
 
 import { type TalkSubject } from '@/data';
-
-import { useResume } from './useResume.hook';
+import { useResume } from '@/hooks';
 
 const defaultSurveyId = 'default';
 const emptySurvey = {

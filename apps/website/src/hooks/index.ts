@@ -5,8 +5,6 @@ export { useLogger } from './useLogger.hook';
 export { usePossibleTalkSubjects } from './usePossibleTalkSubjects.hook';
 export { useResume } from './useResume.hook';
 export { useSortByConventions } from './useSortByConventions.hook';
-export { useSurveyInfos } from './useSurveyInfos.hook';
-export { useSurveyPoll } from './useSurveyPoll.hook';
 export { useSurveyResults } from './useSurveyResults.hook';
 export { useTalk } from './useTalk.hook';
 export { useTalkSubjects } from './useTalkSubjects.hook';

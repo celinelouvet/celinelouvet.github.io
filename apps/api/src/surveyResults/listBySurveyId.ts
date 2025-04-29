@@ -1,9 +1,11 @@
 import { Datastore, PropertyFilter, and } from '@google-cloud/datastore';
-import { asSurveyResults } from '@repo/models';
+import { asQueryListBySurveyId, asSurveyResults } from '@repo/models';
 
-import { KIND } from './kind';
+import type { APIHandler } from '../type';
 
-export const listBySurveyId = async (surveyId: string) => {
+const KIND = 'SurveyResults';
+
+const listBySurveyId = async (surveyId: string) => {
   console.log(`[${KIND}] Listing by surveyId "${surveyId}"`);
   try {
     const datastore = new Datastore();
@@ -30,5 +32,24 @@ export const listBySurveyId = async (surveyId: string) => {
       error,
     });
     return [];
+  }
+};
+
+export const listSurveyResultsBySurveyId: APIHandler = async (req, res) => {
+  try {
+    const { surveyId } = asQueryListBySurveyId(req.params);
+    console.log(`[${KIND}] Listing survey results for surveyId "${surveyId}"`);
+
+    const results = await listBySurveyId(surveyId);
+
+    res.status(200).json(results);
+    return;
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+
+    res.sendStatus(500);
+    return;
   }
 };

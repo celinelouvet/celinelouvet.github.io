@@ -109,6 +109,12 @@ export const survey: SurveyPoll = {
       show: true,
     },
     {
+      name: 'mixit_2025',
+      opensAt: '2025-04-29T00:00:00Z',
+      closesAt: '2025-05-01T00:00:00Z',
+      show: true,
+    },
+    {
       name: 'test',
       opensAt: '2024-01-01T08:30:00Z',
       closesAt: '2024-12-21T18:30:00Z',

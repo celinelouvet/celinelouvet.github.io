@@ -19,8 +19,6 @@ export const SlideContentIntroduction: React.FC<SlideContentIntroductionProps> =
   function SlideContentIntroduction(props) {
     const { author, descriptions, socials, ...restProps } = props;
 
-    console.log('Render: SlideContentIntroduction');
-
     const Column1 = (
       <Center width="100%" height="100%">
         <Box width="80%" height="70%">
