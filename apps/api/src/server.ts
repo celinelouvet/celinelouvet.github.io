@@ -4,6 +4,11 @@ import express, { type Express, type Request, type Response } from 'express';
 import morgan from 'morgan';
 
 import { createLog } from './logger';
+import {
+  createSurveyResult,
+  listAllSurveyResults,
+  listSurveyResultsBySurveyId,
+} from './surveyResults';
 
 export const createServer = (): Express => {
   const app = express();
@@ -19,6 +24,9 @@ export const createServer = (): Express => {
   });
 
   app.post('/logger', createLog);
+  app.get('/survey/:surveyId', listSurveyResultsBySurveyId);
+  app.get('/survey', listAllSurveyResults);
+  app.post('/survey', createSurveyResult);
 
   return app;
 };

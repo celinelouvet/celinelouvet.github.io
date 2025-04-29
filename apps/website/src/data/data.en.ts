@@ -188,6 +188,7 @@ const conventions = new Map<string, Convention>([
   ['technwine_2024', { name: 'Tech n Wine 2024', language: 'FR' }],
   ['bdxio_2024', { name: 'BDX.IO 2024', language: 'FR' }],
   ['lyoncraft_2025', { name: 'Lyon Craft 2025', language: 'FR' }],
+  ['mixit_2025', { name: 'MixIT 2025', language: 'FR' }],
 ]);
 
 const talks = [
@@ -402,6 +403,15 @@ const talks = [
       program: 'https://lyon-craft.fr/#programme',
     },
     pictureId: 'lyoncraft2025-choice_must_go_on',
+  },
+  {
+    subjectId: 'highway_to_fail',
+    conventionId: 'mixit_2025',
+    when: '2025-04-30',
+    links: {
+      program: 'https://mixitconf.org/2025?agenda=true',
+    },
+    pictureId: 'lyoncraft2024-highway_to_fail',
   },
 ] satisfies Talk[];
 

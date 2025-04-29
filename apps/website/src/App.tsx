@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
 
 import { Loading } from './components/features';
 
@@ -23,6 +23,11 @@ const SlidesContentPage = lazy(() =>
     default: module.SlidesContentPage,
   })),
 );
+const SlidesSurveyResultsPage = lazy(() =>
+  import('@/pages/slides').then((module) => ({
+    default: module.SlidesSurveyResultsPage,
+  })),
+);
 const SlidesNotesPage = lazy(() =>
   import('@/pages/slides').then((module) => ({
     default: module.SlidesNotesPage,
@@ -43,6 +48,16 @@ const TalkPage = lazy(() =>
     default: module.Talk,
   })),
 );
+const TalkSurveyPollPage = lazy(() =>
+  import('@/pages').then((module) => ({
+    default: module.TalkSurveyPoll,
+  })),
+);
+const TalkSurveyResultsPage = lazy(() =>
+  import('@/pages').then((module) => ({
+    default: module.TalkSurveyResults,
+  })),
+);
 const TalksPage = lazy(() =>
   import('@/pages').then((module) => ({
     default: module.Talks,
@@ -59,6 +74,14 @@ function App() {
             element={
               <Suspense fallback={<Loading />}>
                 <SlidesContentPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/slides/:talkSubjectId/results/:conventionId"
+            element={
+              <Suspense fallback={<Loading />}>
+                <SlidesSurveyResultsPage />
               </Suspense>
             }
           />
@@ -103,6 +126,22 @@ function App() {
             }
           />
           <Route
+            path="/talks/:talkSubjectId/:conventionId/results"
+            element={
+              <Suspense fallback={<Loading />}>
+                <TalkSurveyResultsPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/talks/:talkSubjectId/:conventionId"
+            element={
+              <Suspense fallback={<Loading />}>
+                <TalkSurveyPollPage />
+              </Suspense>
+            }
+          />
+          <Route
             path="/talks/:talkSubjectId"
             element={
               <Suspense fallback={<Loading />}>
@@ -116,6 +155,12 @@ function App() {
               <Suspense fallback={<Loading />}>
                 <TalksPage />
               </Suspense>
+            }
+          ></Route>
+          <Route
+            path="/mixit"
+            element={
+              <Navigate to="/talks/highway_to_fail/mixit_2025" replace />
             }
           ></Route>
           <Route

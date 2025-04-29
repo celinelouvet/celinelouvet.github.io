@@ -1,10 +1,12 @@
 import { Datastore } from '@google-cloud/datastore';
-import { type SurveyResult } from '@repo/models';
+import { type SurveyResult, asSurveyResult } from '@repo/models';
 import { v4 as uuid } from 'uuid';
+
+import type { APIHandler } from '../type';
 
 const KIND = 'SurveyResults';
 
-export const create = async ({ surveyId, title, values }: SurveyResult) => {
+const create = async ({ surveyId, title, values }: SurveyResult) => {
   console.log(`[${KIND}] Create result for surveyId "${surveyId}"`);
 
   try {
@@ -34,5 +36,28 @@ export const create = async ({ surveyId, title, values }: SurveyResult) => {
       { error },
     );
     throw new Error('Error creating survey result');
+  }
+};
+
+export const createSurveyResult: APIHandler = async (req, res) => {
+  try {
+    const body = asSurveyResult(req.body);
+
+    await create(body);
+
+    res.sendStatus(201);
+    return;
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error(error.message);
+
+      if (error.message === 'Invalid content') {
+        res.sendStatus(400);
+        return;
+      }
+    }
+
+    res.sendStatus(500);
+    return;
   }
 };

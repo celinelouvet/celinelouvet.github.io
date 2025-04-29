@@ -8,7 +8,7 @@
   "type": "module",
   "scripts": {
     "start": "node dist/index.cjs",
-    "dev": "tsup --watch --onSuccess \"node dist/index.cjs\"",
+    "dev": "VERSION_NAME=dev tsup --watch --onSuccess \"node dist/index.cjs\"",
     "build": "tsup",
     "clean": "rm -rf dist",
     "typecheck": "tsc --noEmit",

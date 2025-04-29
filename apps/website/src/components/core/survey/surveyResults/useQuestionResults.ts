@@ -40,7 +40,7 @@ const useResultsData = (
     const percentage = total !== 0 ? Math.round((newValue / total) * 100) : 0;
 
     return {
-      title: newValue !== 0 ? text : '',
+      title: text,
       value: newValue,
       percentage,
       color: colors[value],
