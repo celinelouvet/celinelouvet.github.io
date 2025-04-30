@@ -3,6 +3,7 @@ name: ci-appengine
 on:
   push:
     branches-ignore:
+      - 'v3'
       - 'v2**'
       - main
 
