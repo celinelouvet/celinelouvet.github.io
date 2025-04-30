@@ -2,14 +2,16 @@ import {
   type BoxProps,
   Button,
   Center,
+  Dialog,
   type RecipeVariantProps,
+  Text,
   useRecipe,
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { BsCheckCircleFill } from 'react-icons/bs';
 
-import { Toaster, useToaster } from '@/components/core';
+import { CloseButton } from '@/components/core';
 
 import { surveyPollSubmitRecipe } from './SurveyPollSubmit.recipe';
 
@@ -30,23 +32,21 @@ export const SurveyPollSubmit = React.forwardRef<
   const { onSubmit, ...restProps } = props;
 
   const [sent, setSent] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
+  const { t } = useTranslation('components', { keyPrefix: 'survey' });
+
   const recipe = useRecipe({ recipe: surveyPollSubmitRecipe });
   const styles = recipe(restProps);
-
-  const toaster = useToaster();
-  const { t } = useTranslation('components', { keyPrefix: 'survey' });
 
   const onClick: React.FormEventHandler = (event) => {
     event.preventDefault();
 
     setSent(true);
-    onSubmit();
 
-    toaster.create({
-      title: t('thanks'),
-      type: 'success',
-      duration: 9000,
-    });
+    setTimeout(() => {
+      setOpen(true);
+    }, 500);
+    onSubmit();
   };
 
   return (
@@ -63,7 +63,31 @@ export const SurveyPollSubmit = React.forwardRef<
           {t('submit')}
         </Button>
       )}
-      <Toaster />
+
+      <Dialog.Root
+        placement="center"
+        motionPreset="slide-in-bottom"
+        open={open}
+        lazyMount
+        onOpenChange={(event) => {
+          setOpen(event.open);
+        }}
+      >
+        <Dialog.Backdrop />
+        <Dialog.Positioner>
+          <Dialog.Content>
+            <Dialog.CloseTrigger asChild>
+              <CloseButton />
+            </Dialog.CloseTrigger>
+            <Dialog.Title> </Dialog.Title>
+            <Dialog.Body>
+              <Center width="100%" height="100%">
+                <Text>{t('thanks')}</Text>
+              </Center>
+            </Dialog.Body>
+          </Dialog.Content>
+        </Dialog.Positioner>
+      </Dialog.Root>
     </Center>
   );
 });
