@@ -26,10 +26,10 @@ const screenWiderThanSlide = ({ height, width }: WindowSize) => {
   return {
     ...defaultConfig,
 
-    height,
-    width: newWidth,
-    fontSize,
-    marginLeft,
+    height: Math.floor(height),
+    width: Math.floor(newWidth),
+    fontSize: Math.floor(fontSize),
+    marginLeft: Math.floor(marginLeft),
   };
 };
 
@@ -41,9 +41,9 @@ const screenHigherThanSlide = ({ height, width }: WindowSize) => {
   return {
     ...defaultConfig,
 
-    width,
-    height: newHeight,
-    fontSize,
-    marginTop,
+    width: Math.floor(width),
+    height: Math.floor(newHeight),
+    fontSize: Math.floor(fontSize),
+    marginTop: Math.floor(marginTop),
   };
 };
