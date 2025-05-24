@@ -6,6 +6,6 @@ import AfterSectionTitle from './AfterSectionTitle';
 
 export const slides = [
   AfterSectionTitle,
-  ...After,
   ...AfterEnd,
+  ...After,
 ] satisfies Slide[];
