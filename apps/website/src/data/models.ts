@@ -134,7 +134,6 @@ export type Resume = {
   experiences: Experience[];
   conventions: Map<string, Convention>;
   talkSubjects: Map<string, TalkSubject>;
-  possibleTalkSubjects: string[];
   talks: Talk[];
   podcasts: Podcast[];
   educations: Education[];

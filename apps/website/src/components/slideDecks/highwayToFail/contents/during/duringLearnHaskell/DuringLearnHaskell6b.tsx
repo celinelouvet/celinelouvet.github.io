@@ -3,7 +3,6 @@ import * as React from 'react';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
-
 import { Loading } from '../../../components/loading';
 
 const VerticalTimelineDuring = React.lazy(() =>

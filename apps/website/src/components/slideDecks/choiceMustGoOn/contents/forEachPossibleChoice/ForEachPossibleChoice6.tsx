@@ -5,7 +5,6 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { Loading } from '../../components/loading';
 
-
 const AwsCosts = React.lazy(() =>
   import('./components/awsCosts').then((module) => ({
     default: module.AwsCosts,

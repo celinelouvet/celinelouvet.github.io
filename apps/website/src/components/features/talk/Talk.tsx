@@ -12,12 +12,11 @@ type TalkProps = {
 };
 
 export const Talk: React.FC<TalkProps> = ({ resume, talkSubjectId }) => {
-  const { t } = useTranslation('talks');
-  const {
-    talkSubject,
-    isAvailableForCfp,
-    talkSubjectId: subjectId,
-  } = useTalk(resume, talkSubjectId);
+  const { t } = useTranslation('talks', { keyPrefix: 'talk' });
+  const { talkSubject, talkSubjectId: subjectId } = useTalk(
+    resume,
+    talkSubjectId,
+  );
 
   if (!talkSubject) {
     return <Text>{t('notFound')}</Text>;
@@ -28,7 +27,7 @@ export const Talk: React.FC<TalkProps> = ({ resume, talkSubjectId }) => {
       <Flex width="100%" gap="4">
         <H2Heading flex="1">{talkSubject.topic}</H2Heading>
 
-        {isAvailableForCfp ? (
+        {talkSubject.availableForCfp ? (
           <Tag.Root variant="subtle" size="lg">
             <Tag.Label>{t('availableForCfp')}</Tag.Label>
           </Tag.Root>

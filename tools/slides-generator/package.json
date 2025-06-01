@@ -14,8 +14,8 @@
     "typescript": "5.7.3"
   },
   "dependencies": {
-    "commander": "13.1.0",
-    "puppeteer": "^24.5.0",
+    "commander": "14.0.0",
+    "puppeteer": "24.9.0",
     "bun": "latest"
   }
 }

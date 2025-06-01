@@ -3,7 +3,7 @@ import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { type Resume } from '@/data';
-import { useGroupByConventions } from '@/hooks/useSortByConventions.hook';
+import { useGroupByConventions } from '@/hooks';
 
 import { ConventionList } from './ConventionList';
 import { Menu } from './Menu';

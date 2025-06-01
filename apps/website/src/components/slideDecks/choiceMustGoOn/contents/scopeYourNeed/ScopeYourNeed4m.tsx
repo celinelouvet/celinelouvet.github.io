@@ -4,7 +4,6 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { type Item, Line } from './components/Line';
 
-
 const data = [
   {
     need: 'Gestion de l’accès aux pages',

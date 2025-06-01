@@ -2,7 +2,6 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { type Tile, Tiles } from '../../components/tiles';
 
-
 const data = [
   { title: 'Adopt', text: 'Recommandée et maîtrisée', shown: false },
   { title: 'Trial', text: 'Recommandée et non maîtrisée', shown: false },

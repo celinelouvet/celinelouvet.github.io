@@ -2,7 +2,6 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { type Tile, Tiles } from '../../components/tiles';
 
-
 const data = [{ text: 'Tech radar' }, { text: 'Golden path' }] satisfies Tile[];
 
 export const content = (

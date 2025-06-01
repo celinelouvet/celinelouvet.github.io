@@ -4,7 +4,6 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { ProgressiveList } from '../../components/progressiveList';
 
-
 const items = [
   { text: 'Savoir ce qui se fait,', shown: false },
   { text: 'Aider à choisir,', shown: false },

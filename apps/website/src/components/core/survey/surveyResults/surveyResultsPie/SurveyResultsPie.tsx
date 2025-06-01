@@ -9,9 +9,8 @@ import { type SurveyPollChoiceQuestion } from '@repo/models';
 import * as React from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
 
-import { useColorModeToken } from '@/hooks';
-
 import { surveyResultsPieRecipe } from './SurveyResultsPie.recipe';
+import { useColorModeToken } from '../useColorModeToken.hook';
 import { useQuestionResults } from '../useQuestionResults';
 
 type SurveyResultsPieVariantProps = RecipeVariantProps<

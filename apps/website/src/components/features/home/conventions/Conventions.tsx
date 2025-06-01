@@ -4,8 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import { H2Heading, Link } from '@/components/core';
 import { type ConventionWithTalks, type Resume } from '@/data';
-import { useLogger } from '@/hooks';
-import { useGroupByConventions } from '@/hooks/useSortByConventions.hook';
+import { useGroupByConventions, useLogger } from '@/hooks';
 
 import { ConventionDetails } from './ConventionDetails';
 

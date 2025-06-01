@@ -1,4 +1,5 @@
-import { json, urlencoded } from 'body-parser';
+/* eslint-disable import-x/no-named-as-default-member */
+
 import cors from 'cors';
 import express, { type Express, type Request, type Response } from 'express';
 import morgan from 'morgan';
@@ -15,8 +16,8 @@ export const createServer = (): Express => {
 
   app.disable('x-powered-by');
   app.use(morgan('dev'));
-  app.use(urlencoded({ extended: true }));
-  app.use(json());
+  app.use(express.urlencoded({ extended: true }));
+  app.use(express.json());
   app.use(cors());
 
   app.get('/test', (_req: Request, res: Response) => {

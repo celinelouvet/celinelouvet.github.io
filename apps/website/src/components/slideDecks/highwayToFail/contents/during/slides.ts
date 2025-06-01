@@ -13,7 +13,6 @@ import DuringSiteMvp from './duringSiteMvp';
 import DuringStack from './duringStack';
 import DuringWhere from './duringWhere';
 
-
 export const slides = [
   DuringSectionTitle,
   ...DuringWhere,

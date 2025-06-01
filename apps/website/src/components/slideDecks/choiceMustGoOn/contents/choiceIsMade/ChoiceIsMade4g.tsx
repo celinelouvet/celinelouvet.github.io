@@ -4,7 +4,6 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { ProgressiveList } from '../../components/progressiveList';
 
-
 const items = [
   { text: 'Titre' },
   { text: 'Statut (Acceptée, Refusée, Annulée, Remplacée)' },

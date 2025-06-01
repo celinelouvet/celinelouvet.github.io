@@ -6,7 +6,6 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { Loading } from '../../components/loading';
 
-
 const Back1 = React.lazy(() =>
   import('./components/Back').then((module) => ({
     default: module.Back1,

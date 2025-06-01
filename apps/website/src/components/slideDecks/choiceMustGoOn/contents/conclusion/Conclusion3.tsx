@@ -5,7 +5,6 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { Loading } from '../../components/loading';
 
-
 const IsOk = React.lazy(() =>
   import('./components/IsOk').then((module) => ({
     default: module.default,
