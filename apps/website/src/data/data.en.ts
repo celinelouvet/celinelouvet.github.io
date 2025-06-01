@@ -171,13 +171,6 @@ const talkSubjects = new Map<string, TalkSubject>([
   ],
 ]);
 
-const possibleTalkSubjects = [
-  'choice_must_go_on',
-  'highway_to_fail',
-  'permissions_mysteries',
-  'event_driven_buzzword',
-];
-
 const conventions = new Map<string, Convention>([
   [
     'sfeir_nosql',
@@ -1274,7 +1267,6 @@ const resume = {
     },
   ],
   talkSubjects,
-  possibleTalkSubjects,
   conventions,
   talks,
   podcasts,

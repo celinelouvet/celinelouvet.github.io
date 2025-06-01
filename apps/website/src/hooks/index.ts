@@ -2,7 +2,6 @@ export { useApi } from './useApi.hook';
 export { useColorModeToken } from './useColorModeToken.hook';
 export { useHeadingSize } from './useHeadingSize.hook';
 export { useLogger } from './useLogger.hook';
-export { usePossibleTalkSubjects } from './usePossibleTalkSubjects.hook';
 export { useResume } from './useResume.hook';
 export { useSortByConventions } from './useSortByConventions.hook';
 export { useSurveyResults } from './useSurveyResults.hook';
