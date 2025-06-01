@@ -20,7 +20,7 @@
     "preset": "@repo/jest-presets/node"
   },
   "dependencies": {
-    "@google-cloud/datastore": "10.0.1",
+    "@google-cloud/datastore": "9.2.1",
     "@repo/models": "*",
     "body-parser": "1.20.3",
     "cors": "2.8.5",
