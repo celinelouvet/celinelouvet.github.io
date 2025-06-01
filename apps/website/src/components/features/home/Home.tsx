@@ -4,10 +4,10 @@ import * as React from 'react';
 import { type Resume } from '@/data';
 
 import { Biography } from './biography';
+import { Conventions } from './conventions';
 import { Podcasts } from './podcasts';
 import { Socials } from './socials';
 import { Summary } from './summary';
-import { Talks } from './talks';
 
 type HomeProps = {
   resume: Resume;
@@ -30,7 +30,7 @@ export const Home: React.FC<HomeProps> = ({ resume }) => {
         <Stack gap="8">
           <Biography biographies={resume.biographies} />
           <Socials socials={resume.socials} />
-          <Talks resume={resume} />
+          <Conventions resume={resume} />
           <Podcasts resume={resume} />
         </Stack>
       </Grid>

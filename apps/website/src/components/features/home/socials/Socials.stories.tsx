@@ -14,11 +14,6 @@ export const Socials: Story = {
   args: {
     socials: [
       {
-        name: 'twitter',
-        handle: 'twitter_handle',
-        link: 'https://twitter.com/handle',
-      },
-      {
         name: 'linkedin',
         handle: 'likedin_handle',
         link: 'https://www.linkedin.com/in/handle',

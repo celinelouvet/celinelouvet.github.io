@@ -12,18 +12,19 @@ const slideBorder = {
   borderColor: 'brand.600',
 };
 
-const getSize = (preview?: boolean) => {
+const getSize = (preview: boolean) => {
   if (preview) {
-    const width = 600;
-    const height = 400;
+    const width = 400;
+    const height = 200;
     return {
       width,
       height,
       ratio: width / height,
     };
   }
-  const width = 868;
-  const height = 488;
+
+  const width = 686;
+  const height = 385;
 
   return {
     width,
@@ -43,6 +44,7 @@ const Note: React.FC<NoteProps> = ({ slides, position }) => (
         key={`note-${index}`}
         display={index !== position ? 'none' : ''}
         userSelect="none"
+        fontSize={'0.75em'}
       >
         {note}
       </Stack>
@@ -67,10 +69,12 @@ const Slide: React.FC<SlideProps> = ({ slides, position, preview = false }) => {
   }
 
   return (
-    <Box {...contentProps} {...slideBorder}>
-      <Box width="100%" height="100%" fontSize="0.8em">
-        {slide.content}
-      </Box>
+    <Box
+      {...slideBorder}
+      {...contentProps}
+      fontSize={preview ? '0.5em' : '0.75em'}
+    >
+      {slide.content}
     </Box>
   );
 };
@@ -92,6 +96,7 @@ export const SlideDeckForNotes = React.forwardRef<
       height="100%"
       color="brand.100"
       display="flex"
+      overflow="hidden"
       {...restProps}
       ref={ref}
     >

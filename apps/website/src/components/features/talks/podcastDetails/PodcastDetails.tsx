@@ -86,7 +86,6 @@ export const PodcastDetails: React.FC<PodcastDetailsProps> = ({ podcast }) => {
 };
 
 type DateLanguageProps = Pick<Podcast, 'language' | 'when'>;
-
 const DateLanguage: React.FC<DateLanguageProps> = ({ language, when }) => (
   <>
     <HStack

@@ -18,12 +18,20 @@ export const Podcasts: React.FC<PodcastsProps> = ({ resume }) => {
 
   const { podcasts } = resume;
 
+  const sortedPodcasts = React.useMemo(() => {
+    return [...podcasts].sort((a, b) => {
+      const aDate = new Date(a.when);
+      const bDate = new Date(b.when);
+      return bDate.getTime() - aDate.getTime();
+    });
+  }, [podcasts]);
+
   return (
     <Stack>
       <H2Heading size={size}>{t('title')}</H2Heading>
 
       <Stack gap="8">
-        {podcasts.map((podcast) => (
+        {sortedPodcasts.map((podcast) => (
           <Box key={podcast.name}>
             <PodcastDetails podcast={podcast} />
           </Box>

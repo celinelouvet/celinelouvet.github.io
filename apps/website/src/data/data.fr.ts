@@ -79,48 +79,68 @@ const podcasts = [
 ] satisfies Podcast[];
 
 const talkSubjects = new Map<string, TalkSubject>([
-  ['gcp_datastore_search', { topic: 'Google Datastore & Search API' }],
-  ['rex_polymer', { topic: 'Retour d’expérience: Polymer chez Deloitte' }],
+  [
+    'gcp_datastore_search',
+    { topic: 'Google Datastore & Search API', availableForCfp: false },
+  ],
+  [
+    'rex_polymer',
+    {
+      topic: 'Retour d’expérience: Polymer chez Deloitte',
+      availableForCfp: false,
+    },
+  ],
   [
     'haskell_in_prod',
     {
       topic: 'Votre mission ? Découvrir Haskell et le mettre en prod',
+      summary: 'Découverte de Haskell et comment l’utiliser pour créer une API',
       descriptions: [
         'On entend parler de Haskell de plus en plus, mais il parait souvent bien compliqué de se lancer. Haskell fait peur, avec ses Monades, Monoïdes et autres gros mots.',
         'On verra ensemble que vous n’avez absolument pas besoin de savoir ce que ces termes signifient pour vous lancer. Je vous propose de regarder ce dont vous aurez besoin pour créer une petite API, avec de la sécurité et de la gestion de données, soit de quoi mettre une petite application en prod.',
       ],
+      availableForCfp: false,
     },
   ],
 
   [
     'event_driven_buzzword',
     {
-      topic: 'Event Driven, qu’est‑ce donc ?! Un nouveau buzzword ?',
+      topic: 'Event Driven, qu’est‑ce donc ?! Un nouveau buzzword ?',
+      summary:
+        'Appels asynchrones, architecture événementielle, pub/sub, avantages et inconvénients de chaque solution',
       descriptions: [
         'On entend, de plus en plus, parler d’Event Driven Systems. C’est un peu le nouveau truc à la mode, mais en quoi ça consiste réellement ? Pour le comprendre, nous repartirons des fondamentaux, pour progressivement voir ce que peut nous apporter le modèle événementiel publisher / subscriber, ses avantages et ses inconvénients. Nous verrons comment l’utiliser dans certains cas fréquents.',
         'Par le passé, j’ai eu à travailler sur un SI qui a grossi au fil du temps. A chaque nouveau service ajouté, à chaque nouvelle fonctionnalité ajoutée, de la complexité s’est cumulée jusqu’à rendre des évolutions impossibles, voire dangereuses. De plus, soyons honnête, parfois de fausses "bonnes" idées ont pu empirer la situation. Nous allons nous inspirer de ce SI tout au long de cette présentation pour voir ce que nous pourrions y apporter.',
         'Pour chaque situation, nous pourrons voir les besoins auxquels elle répond, ses avantages ainsi que ses défauts, défauts que nous essayerons de corriger ensuite. Notre objectif ? Des services moins interdépendants et qui y gagneront en performance et en stabilité !',
       ],
+      availableForCfp: true,
     },
   ],
   [
     'permissions_mysteries',
     {
       topic: 'Les mystères des permissions',
+      summary:
+        'Principes de gestion des permissions des utilisateurs et types d’autorisations possibles',
       descriptions: [
         'Au début de votre projet, vous avez simplement géré l’authentification de votre utilisateur, puis petit à petit, vous avez ajouté une notion de rôles utilisateur. Et plus le temps passe, plus votre product manager vous demande d’affiner cette gestion et moins cette gestion par rôle va suffire.',
         'Peut‑être avez‑vous eu déjà eu l’impression que la gestion des permissions est quelque d’assez obscure ou complexe. On sait qu’on doit le faire, mais on ne sait pas trop comment, ni même pourquoi. Parfois, on confond même avec l’authentification. Mais alors, en quoi ça consiste rellement et comment on peut l’appliquer ?',
         'A chaque situation, sa solution. Nous pourrons voir comment répondre aux besoins les plus fréquents, ainsi que leurs avantages et leurs inconvénients. Notre objectif ? Avoir la gestion des permissions adaptée à notre situation, sans pour autant ajouter une masse de complexité dans toute notre application.',
       ],
+      availableForCfp: true,
     },
   ],
   [
     'tired_women_revolution',
     {
       topic: 'La révolution des fatiguées',
+      summary:
+        'Table ronde avec Angi Guyard et Sonia Prévost sur l’expérience des femmes dans la tech',
       descriptions: [
         'Table ronde avec Angi Guyard et Sonia Prévost. Nous aborderons l’expérience des femmes dans la tech et nous vous expliquerons pourquoi nous sommes "fatiguées" par ces stéréotypes.',
       ],
+      availableForCfp: false,
     },
   ],
 
@@ -128,12 +148,15 @@ const talkSubjects = new Map<string, TalkSubject>([
     'highway_to_fail',
     {
       topic: 'Highway to fail, ou l’histoire d’un échec prévisible',
+      summary:
+        'Retour d’expérience sur la création d’une startup, avec ses erreurs et ses écueils',
       descriptions: [
         'Vous hésitez à vous lancer dans l’aventure de la startup ? Vous vous verriez bien créer votre propre société, mais vous n’osez pas ? En effet, on le sait maintenant, 90 % des start‑ups font faillite, dont 10 % dès la première année.',
         'Fin 2017, je rejoignais 2 autres cofondateurs pour créer notre première startup. Et mi‑2019, nous mettions la clé sous la porte. Pourquoi ? Entre produit, technique, business et humain, il est parfois difficile d’ajuster le curseur.',
         'A travers mon retour d’expérience entrepreneuriale, je souhaite revenir sur certaines de nos erreurs et voir s’il aurait été possible de faire autrement. Peut‑être que cette introspection pleine d’honnêteté pourra vous permettre d’éviter certains écueils.',
       ],
       survey: highwayToFailSurveyFr,
+      availableForCfp: true,
     },
   ],
 
@@ -141,55 +164,209 @@ const talkSubjects = new Map<string, TalkSubject>([
     'choice_must_go_on',
     {
       topic: 'The choice must go on, le bon (de préférence)',
+      summary:
+        'Approche heuristique pour affiner les besoins et faire un choix',
       descriptions: [
         'Vous avez déjà subi un mauvais choix ? Ou vous avez vous‑même fait un mauvais choix ? En effet, qu’il ait été fait pour une raison technique, produit ou encore méthodo, on a été nombreux et nombreuses à vivre ce moment où on se dit « mais quelle idiotie ?! » ou encore « Mais que c’est tordu !!! ».',
         'On le sait, faire le bon choix est parfois très difficile. Celui qui a fonctionné une fois ne sera pas forcément pertinent ailleurs. De plus, un mauvais choix peut avoir un impact désastreux, tant sur la qualité du résultat produit que sur les équipes.',
         'Je vous proposerai une approche personnelle pour que ça se passe au mieux possible. Peut‑être qu’elle pourra vous permettre d’éviter certains écueils.',
       ],
+      availableForCfp: true,
     },
   ],
 ]);
 
 const possibleTalkSubjects = [
-  'event_driven_buzzword',
-  'permissions_mysteries',
-  'highway_to_fail',
   'choice_must_go_on',
+  'highway_to_fail',
+  'permissions_mysteries',
+  'event_driven_buzzword',
 ];
 
 const conventions = new Map<string, Convention>([
-  ['sfeir_nosql', { name: 'SFEIR - Soirée NoSQL', language: 'FR' }],
+  [
+    'sfeir_nosql',
+    { name: 'SFEIR - Soirée NoSQL', language: 'FR', start: '2014-12-16' },
+  ],
   [
     'paris_WebComponents',
-    { name: 'Meetup Paris-WebComponents', language: 'FR' },
+    { name: 'Meetup Paris-WebComponents', language: 'FR', start: '2015-07-09' },
   ],
-  ['scala_io_2018', { name: 'Scala.io 2018', language: 'FR' }],
-  ['devfest_toulouse_2018', { name: 'DevFest Toulouse 2018', language: 'FR' }],
-  ['codeurs_en_seine_2018', { name: 'Codeurs en Seine 2018', language: 'FR' }],
+  [
+    'scala_io_2018',
+    {
+      name: 'Scala.io 2018',
+      language: 'FR',
+      start: '2018-10-29',
+      end: '2018-10-31',
+    },
+  ],
+  [
+    'devfest_toulouse_2018',
+    {
+      name: 'DevFest Toulouse 2018',
+      language: 'FR',
+      start: '2018-11-08',
+      program: 'https://2018.devfesttoulouse.fr/speakers/celine_louvet',
+    },
+  ],
+  [
+    'codeurs_en_seine_2018',
+    { name: 'Codeurs en Seine 2018', language: 'FR', start: '2018-11-22' },
+  ],
   [
     'functional_programming_montpellier',
-    { name: 'Functional programming Montpellier', language: 'FR' },
+    {
+      name: 'Functional programming Montpellier',
+      language: 'FR',
+      start: '2019-01-15',
+    },
   ],
-  ['web2day_2019', { name: 'Web2Day 2019', language: 'FR' }],
+  [
+    'web2day_2019',
+    {
+      name: 'Web2Day 2019',
+      language: 'FR',
+      start: '2019-06-05',
+      end: '2019-06-07',
+      program:
+        'https://2019.web2day.co/event/votre-mission-decouvrir-haskell-et-le-mettre-en-prod/',
+    },
+  ],
   [
     'voxxed_days_luxembourg_2019',
-    { name: 'Voxxed Days Luxembourg 2019', language: 'FR' },
+    {
+      name: 'Voxxed Days Luxembourg 2019',
+      language: 'FR',
+      start: '2019-06-21',
+    },
   ],
-  ['devfest_lille_2023', { name: 'DevFest Lille 2023', language: 'FR' }],
+  [
+    'devfest_lille_2023',
+    {
+      name: 'DevFest Lille 2023',
+      language: 'FR',
+      start: '2023-05-26',
+      program:
+        'https://2023.devlille.fr/speaker-page-oyAdLXhQYzWS1j03gz79ADg2TRj2/',
+    },
+  ],
   [
     'camping_des_speakers_2023',
-    { name: 'Camping des Speakers 2023', language: 'FR' },
+    {
+      name: 'Camping des Speakers 2023',
+      language: 'FR',
+      start: '2023-06-15',
+      end: '2023-06-16',
+      program:
+        'https://camping-speakers.fr/sessions/event_driven_qu_est_ce_donc/',
+    },
   ],
-  ['cloud_est_2023', { name: 'Cloud Est 2023', language: 'FR' }],
-  ['breizhcamp_2023', { name: 'BreizhCamp 2023', language: 'FR' }],
-  ['paattern_talks_2023', { name: 'Paattern Talks 2023', language: 'FR' }],
-  ['lyoncraft_2024', { name: 'Lyon Craft 2024', language: 'FR' }],
-  ['yeeso', { name: 'IT Woman talk - YEESO', language: 'FR' }],
-  ['devfest_lille_2024', { name: 'DevFest Lille 2024', language: 'FR' }],
-  ['technwine_2024', { name: 'Tech n Wine 2024', language: 'FR' }],
-  ['bdxio_2024', { name: 'BDX.IO 2024', language: 'FR' }],
-  ['lyoncraft_2025', { name: 'Lyon Craft 2025', language: 'FR' }],
-  ['mixit_2025', { name: 'MixIT 2025', language: 'FR' }],
+  [
+    'cloud_est_2023',
+    {
+      name: 'Cloud Est 2023',
+      language: 'FR',
+      start: '2023-06-20',
+      program: 'https://cloudest-event.fr',
+    },
+  ],
+  [
+    'breizhcamp_2023',
+    {
+      name: 'BreizhCamp 2023',
+      language: 'FR',
+      start: '2023-06-29',
+      end: '2023-06-30',
+      program: 'https://www.breizhcamp.org/conference/programme',
+    },
+  ],
+  [
+    'paattern_talks_2023',
+    {
+      name: 'Paattern Talks 2023',
+      language: 'FR',
+      start: '2023-11-30',
+      program:
+        'https://www.linkedin.com/feed/update/urn:li:activity:7133839860397694977/',
+    },
+  ],
+  [
+    'lyoncraft_2024',
+    {
+      name: 'Lyon Craft 2024',
+      language: 'FR',
+      start: '2024-04-08',
+      program: 'https://lyon-craft.fr/#programme',
+    },
+  ],
+  [
+    'yeeso_2024-04',
+    {
+      name: 'IT Woman talk - YEESO',
+      language: 'FR',
+      start: '2024-04-30',
+      program:
+        'https://www.meetup.com/fr-FR/it-woman-by-yeeso/events/300187105/',
+    },
+  ],
+  [
+    'devfest_lille_2024',
+    {
+      name: 'DevFest Lille 2024',
+      language: 'FR',
+      start: '2024-06-06',
+      end: '2024-06-07',
+      program: 'https://2024.devlille.fr/talk-page-highway-to-fail/',
+    },
+  ],
+  [
+    'technwine_2024',
+    {
+      name: 'Tech n Wine 2024',
+      language: 'FR',
+      start: '2024-06-18',
+      program: 'https://technwine.fr/schedule',
+    },
+  ],
+  [
+    'bdxio_2024',
+    {
+      name: 'BDX.IO 2024',
+      language: 'FR',
+      start: '2024-11-08',
+      program: 'https://bdxio.fr/schedule',
+    },
+  ],
+  [
+    'lyoncraft_2025',
+    {
+      name: 'Lyon Craft 2025',
+      language: 'FR',
+      start: '2025-04-14',
+      program: 'https://lyon-craft.fr/#programme',
+    },
+  ],
+  [
+    'mixit_2025',
+    {
+      name: 'MixIT 2025',
+      language: 'FR',
+      start: '2025-04-29',
+      end: '2025-04-30',
+      program: 'https://mixitconf.org/2025?agenda=true',
+    },
+  ],
+  [
+    'voxxed_days_luxembourg_2025',
+    {
+      name: 'Voxxed Days Luxembourg 2025',
+      language: 'FR',
+      start: '2025-06-19',
+      end: '2025-06-20',
+      program: 'https://luxembourg.voxxeddays.com/fr/#schedule',
+    },
+  ],
 ]);
 
 const talks = [
@@ -282,8 +459,6 @@ const talks = [
     conventionId: 'devfest_lille_2023',
     when: '2023-05-26',
     links: {
-      program:
-        'https://devfest.gdglille.org/speaker-page-oyAdLXhQYzWS1j03gz79ADg2TRj2/',
       video:
         'https://www.youtube.com/watch?v=RovPh9agiFc&t=1s&ab_channel=GDGFrance',
     },
@@ -293,10 +468,6 @@ const talks = [
     subjectId: 'event_driven_buzzword',
     conventionId: 'camping_des_speakers_2023',
     when: '2023-06-15',
-    links: {
-      program:
-        'https://camping-speakers.fr/sessions/event_driven_qu_est_ce_donc/',
-    },
     pictureId: 'campingdespeakers2023-Event_driven',
   },
   {
@@ -304,7 +475,6 @@ const talks = [
     conventionId: 'breizhcamp_2023',
     when: '2023-06-29',
     links: {
-      program: 'https://www.breizhcamp.org/conference/programme',
       video:
         'https://www.youtube.com/watch?v=Tq2-6jfBbOY&ab_channel=C%C3%A9lineLouvet',
     },
@@ -315,7 +485,6 @@ const talks = [
     conventionId: 'cloud_est_2023',
     when: '2023-06-20',
     links: {
-      program: 'https://cloudest-event.fr',
       feedbacks:
         'https://openfeedback.io/lSG3Xl5ALpXqswcFPcu2/2023-05-26/fILn5VfKXqQfzKLsI4a5',
       video:
@@ -328,7 +497,6 @@ const talks = [
     conventionId: 'breizhcamp_2023',
     when: '2023-06-30',
     links: {
-      program: 'https://www.breizhcamp.org/conference/programme',
       feedbacks:
         'https://openfeedback.io/lSG3Xl5ALpXqswcFPcu2/2023-05-26/fILn5VfKXqQfzKLsI4a5',
       video:
@@ -340,10 +508,6 @@ const talks = [
     subjectId: 'tired_women_revolution',
     conventionId: 'paattern_talks_2023',
     when: '2023-11-30',
-    links: {
-      program:
-        'https://www.linkedin.com/feed/update/urn:li:activity:7133839860397694977/',
-    },
     pictureId: 'paatternTalks2023-Tired_women_revolution',
   },
   {
@@ -351,7 +515,6 @@ const talks = [
     conventionId: 'lyoncraft_2024',
     when: '2024-04-08',
     links: {
-      program: 'https://lyon-craft.fr/#programme',
       feedbacks:
         'https://openfeedback.io/xWqPfTd7zpGKrzaETKQe/2024-04-08/NlYROGHjEggs75rLPsz4',
       video:
@@ -361,58 +524,46 @@ const talks = [
   },
   {
     subjectId: 'highway_to_fail',
-    conventionId: 'yeeso',
+    conventionId: 'yeeso_2024-04',
     when: '2024-04-30',
-    links: {
-      program:
-        'https://www.meetup.com/fr-FR/it-woman-by-yeeso/events/300187105/',
-    },
     pictureId: 'lyoncraft2024-highway_to_fail',
   },
   {
     subjectId: 'highway_to_fail',
     conventionId: 'devfest_lille_2024',
     when: '2024-06-06',
-    links: {
-      program: 'https://devfest.gdglille.org/agenda/index.html',
-    },
     pictureId: 'lyoncraft2024-highway_to_fail',
   },
   {
     subjectId: 'highway_to_fail',
     conventionId: 'technwine_2024',
     when: '2024-06-18',
-    links: {
-      program: 'https://technwine.fr/schedule',
-    },
     pictureId: 'lyoncraft2024-highway_to_fail',
   },
   {
     subjectId: 'highway_to_fail',
     conventionId: 'bdxio_2024',
     when: '2024-11-08',
-    links: {
-      program: 'https://bdxio.fr/schedule',
-    },
+
     pictureId: 'lyoncraft2024-highway_to_fail',
   },
   {
     subjectId: 'choice_must_go_on',
     conventionId: 'lyoncraft_2025',
     when: '2025-04-14',
-    links: {
-      program: 'https://lyon-craft.fr/#programme',
-    },
     pictureId: 'lyoncraft2025-choice_must_go_on',
   },
   {
     subjectId: 'highway_to_fail',
     conventionId: 'mixit_2025',
     when: '2025-04-30',
-    links: {
-      program: 'https://mixitconf.org/2025?agenda=true',
-    },
     pictureId: 'lyoncraft2024-highway_to_fail',
+  },
+  {
+    subjectId: 'highway_to_fail',
+    conventionId: 'voxxed_days_luxembourg_2025',
+    when: '2025-06-19',
+    links: {},
   },
 ] satisfies Talk[];
 
@@ -461,11 +612,6 @@ const resume = {
       name: 'linkedin',
       handle: 'celinelouvet',
       link: 'https://www.linkedin.com/in/celinelouvet',
-    },
-    {
-      name: 'twitter',
-      handle: 'celine_louvet',
-      link: 'https://twitter.com/celine_louvet',
     },
     {
       name: 'mastodon',

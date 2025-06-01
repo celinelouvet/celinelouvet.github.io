@@ -18,7 +18,11 @@
     "seeAll": "Voir toutes mes conférences",
     "talk": {
       "date": "D MMMM YYYY",
-      "seeDescription": "Voir la description"
+
+      "seeAbstract": "Voir l’abstract",
+      "program": "Programme",
+
+      "availableForCfp": "Disponible pour CFP"
     }
   },
   "podcasts": {

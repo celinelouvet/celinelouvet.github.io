@@ -1,8 +1,8 @@
 import {
   Box,
   ButtonGroup,
+  HStack,
   IconButton,
-  Stack,
   type StackProps,
 } from '@chakra-ui/react';
 import * as React from 'react';
@@ -19,8 +19,8 @@ export const SlideTimer = React.forwardRef<HTMLDivElement, SlideTimerProps>(
       useStopwatch({ autoStart: false });
 
     return (
-      <Stack alignItems="center" gap="2em" padding="4" ref={ref} {...props}>
-        <Box>
+      <HStack alignItems="center" gap="2em" padding="4" ref={ref} {...props}>
+        <Box flex="1">
           <TimeText
             hours={hours}
             minutes={minutes}
@@ -28,14 +28,14 @@ export const SlideTimer = React.forwardRef<HTMLDivElement, SlideTimerProps>(
             fontSize="2xl"
           />
         </Box>
-        <Box>
+        <Box flex="1">
           {!isRunning ? (
             <SlideTimerPlay onStart={start} />
           ) : (
             <SlideTimerRunning onPause={pause} onRestart={() => reset()} />
           )}
         </Box>
-      </Stack>
+      </HStack>
     );
   },
 );
