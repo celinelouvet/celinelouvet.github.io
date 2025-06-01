@@ -5,7 +5,6 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { ProgressiveList } from '../../components/progressiveList';
 
-
 const cons = [
   { text: 'Schemaless' },
   { text: '« Pay as you go »' },

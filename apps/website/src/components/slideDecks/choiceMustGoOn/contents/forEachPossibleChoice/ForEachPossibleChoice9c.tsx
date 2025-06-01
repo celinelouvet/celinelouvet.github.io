@@ -5,7 +5,6 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { ProgressiveList } from '../../components/progressiveList';
 
-
 const items = [
   { text: 'Doit être disponible sur GCP' },
   { text: 'Doit avoir un SDK pour NodeJs' },

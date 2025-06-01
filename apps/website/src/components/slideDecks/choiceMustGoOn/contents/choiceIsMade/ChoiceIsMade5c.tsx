@@ -2,7 +2,6 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { type Tile, Tiles } from '../../components/tiles';
 
-
 const data = [
   { text: 'Méthode définie' },
   { text: 'Moyens de mesure' },

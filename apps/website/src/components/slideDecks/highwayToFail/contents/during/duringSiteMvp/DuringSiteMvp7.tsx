@@ -4,7 +4,6 @@ import { FaFlag } from 'react-icons/fa';
 
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
-
 import { Loading } from '../../../components/loading';
 
 const VerticalTimelineDuring = React.lazy(() =>

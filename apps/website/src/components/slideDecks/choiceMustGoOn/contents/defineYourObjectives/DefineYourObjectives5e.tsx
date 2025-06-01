@@ -4,7 +4,6 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { GivenWhenThen } from './components/givenWhenThen';
 
-
 const data = {
   given: {
     text: 'Un backup a été fait à 3h',

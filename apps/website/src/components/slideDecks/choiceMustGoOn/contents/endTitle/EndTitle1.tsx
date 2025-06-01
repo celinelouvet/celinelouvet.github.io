@@ -8,7 +8,6 @@ import {
   chakra,
 } from '@chakra-ui/react';
 
-
 import {
   ColorMode,
   SlideContent,

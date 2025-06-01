@@ -4,7 +4,6 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { type Tile, Tiles } from '../../components/tiles';
 
-
 const items = [
   { title: 'Essentielle', text: 'Problème à résoudre', shown: false },
   { title: 'Obligatoire', text: 'Contraintes techniques', shown: false },

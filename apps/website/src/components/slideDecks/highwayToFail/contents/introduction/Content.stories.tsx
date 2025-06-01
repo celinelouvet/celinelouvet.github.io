@@ -4,7 +4,6 @@ import { SlideDeck, ViewTypes } from '@/components/slide';
 
 import { slides } from './slides';
 
-
 const meta = {
   title: 'Talks/HighwayToFail/Contents',
   component: SlideDeck,

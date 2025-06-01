@@ -4,7 +4,6 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { ProgressiveList } from '../../components/progressiveList';
 
-
 const pros = [
   { text: 'Auto managé, sans downtime' },
   { text: 'Temps de query toujours stable' },

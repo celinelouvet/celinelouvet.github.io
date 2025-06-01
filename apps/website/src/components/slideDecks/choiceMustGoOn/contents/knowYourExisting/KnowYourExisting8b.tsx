@@ -4,7 +4,6 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { ProgressiveList } from '../../components/progressiveList';
 
-
 const items = [
   { text: 'template de démarrage d’un projet,' },
   { text: 'doc pour ajouter un logger,', shown: false },

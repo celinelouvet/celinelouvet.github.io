@@ -5,7 +5,6 @@ import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
 import { Loading } from '../../components/loading';
 
-
 const WhyHaskell = React.lazy(() =>
   import('./components/WhyHaskell').then((module) => ({
     default: module.WhyHaskell,

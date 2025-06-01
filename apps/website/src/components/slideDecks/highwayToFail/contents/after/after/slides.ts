@@ -13,7 +13,6 @@ import After6e from './After6e';
 import After6f from './After6f';
 import After7 from './After7';
 
-
 export const slides = [
   After1,
   After2,

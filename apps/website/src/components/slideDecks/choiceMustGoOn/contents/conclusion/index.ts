@@ -13,7 +13,6 @@ import Conclusion3 from './Conclusion3';
 import Conclusion4 from './Conclusion4';
 import Conclusion4b from './Conclusion4b';
 
-
 export default [
   Conclusion1,
   Conclusion2,

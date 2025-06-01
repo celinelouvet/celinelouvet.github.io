@@ -4,7 +4,6 @@ import * as React from 'react';
 import { ThumbsDown, ThumbsUp } from '@/components/core';
 import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
 
-
 import { Loading } from '../../../components/loading';
 
 const VerticalTimelineDuring = React.lazy(() =>
