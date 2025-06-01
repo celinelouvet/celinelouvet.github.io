@@ -614,11 +614,6 @@ const resume = {
       link: 'https://www.linkedin.com/in/celinelouvet',
     },
     {
-      name: 'twitter',
-      handle: 'celine_louvet',
-      link: 'https://twitter.com/celine_louvet',
-    },
-    {
       name: 'mastodon',
       handle: 'celine_louvet@pouet.chapril.org',
       link: 'https://pouet.chapril.org/@celine_louvet',
