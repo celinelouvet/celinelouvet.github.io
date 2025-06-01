@@ -4,9 +4,10 @@ import { useTranslation } from 'react-i18next';
 
 import { H2Heading } from '@/components/core';
 import { type Resume } from '@/data';
-import { useHeadingSize, useTalkSubjects } from '@/hooks';
+import { useHeadingSize } from '@/hooks';
 
 import { TalkContent } from './TalkContent';
+import { useTalkSubjects } from './useTalkSubjects.hook';
 
 export type TalksProps = {
   resume: Resume;
