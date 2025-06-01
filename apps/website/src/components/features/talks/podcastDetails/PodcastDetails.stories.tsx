@@ -26,7 +26,6 @@ export const PodcastDetails: Story = {
         'Technical leader with a mid-management role and a strategic involvement, while being glue for the team, and developing backend features.',
       links: {
         audio: 'https://example.com/audio.mp3',
-        program: 'https://conf-example.com',
         video: 'https://example.com',
       },
       pictureId: 'podcast_avocadogrowth2024',

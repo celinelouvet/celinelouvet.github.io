@@ -1,4 +1,5 @@
 import { Box, Center, Stack } from '@chakra-ui/react';
+import dayjs from 'dayjs';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -26,12 +27,16 @@ const PodcastList: React.FC<PodcastListProps> = ({
     return null;
   }
 
+  const sortedPodcasts = [...podcasts].sort((p1, p2) =>
+    dayjs(p2.when).diff(dayjs(p1.when)),
+  );
+
   return (
     <Box>
       <H2Heading>{title}</H2Heading>
 
       <Stack gap="6">
-        {podcasts.slice(0, maxShow).map((podcast) => (
+        {sortedPodcasts.slice(0, maxShow).map((podcast) => (
           <PodcastDetails key={podcast.name} podcast={podcast} />
         ))}
 

@@ -18,7 +18,8 @@
     "seeAll": "See all talks",
     "talk": {
       "date": "MMM D YYYY",
-      "seeDescription": "See description"
+      "seeAbstract": "See abstract",
+      "program": "Program"
     }
   },
   "podcasts": {
