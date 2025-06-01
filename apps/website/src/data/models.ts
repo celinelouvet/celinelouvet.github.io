@@ -9,6 +9,9 @@ export type Certification = {
 export type Convention = {
   name: string;
   language: string;
+  start: string;
+  end?: string;
+  program?: string;
 };
 
 export type Links = {
@@ -16,7 +19,6 @@ export type Links = {
   video?: string;
   audio?: string;
   feedbacks?: string;
-  program?: string;
 };
 
 export type Period = {
@@ -64,7 +66,9 @@ export type Stack = {
 };
 
 export type TalkSubject = {
+  availableForCfp: boolean;
   topic: string;
+  summary?: string;
   descriptions?: string[];
   survey?: SurveyPoll;
 };
@@ -142,3 +146,10 @@ export type ConventionTalk = Convention & TalkSubject & Talk;
 export type ConventionWithDate = Convention & { when: string };
 export type TalkWithConventions = TalkSubject &
   Talk & { conventions: ConventionWithDate[] };
+
+export type TalkWithSubject = Talk & TalkSubject;
+
+export type ConventionWithTalks = Convention & {
+  talks: TalkWithSubject[];
+  coming: boolean;
+};

@@ -1,7 +1,8 @@
 {
-  "subjects": "Available subjects for CFP",
+  "subjects": "Subjects",
   "toCome": "Incoming talks",
-  "alreadyDone": "Talks & Interviews",
+  "alreadyDone": "Talks",
+  "podcasts": "Interviews",
   "notFound": "Talk not found",
   "seeSlides": "See slides",
   "talk": {
@@ -9,14 +10,23 @@
     "more": "View more",
     "less": "View less",
 
+    "seeAbstract": "See abstract",
+    "program": "Program",
     "surveys": {
       "title": "Surveys",
       "allResults": "All results",
       "survey": "Survey",
       "results": "Results",
       "notAvailable": "No yet available"
-    }
+    },
+
+    "availableForCfp": "Available for CFP"
   },
 
-  "availableForCfp": "Available for CFP"
+  "links": {
+    "audio": "Audio",
+    "program": "Program",
+    "slides": "Slides",
+    "video": "Video"
+  }
 }
