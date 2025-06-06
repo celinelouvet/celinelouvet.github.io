@@ -37,6 +37,7 @@ const SurveyPollQuestionSchema = z.discriminatedUnion('type', [
 
 const SurveyByConventionSchema = z.object({
   name: z.string(),
+  conventionId: z.string(),
   opensAt: z.string(),
   closesAt: z.string(),
   show: z.boolean(),

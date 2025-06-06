@@ -9,6 +9,7 @@ import {
   createSurveyResult,
   listAllSurveyResults,
   listSurveyResultsBySurveyId,
+  updateSurveyId,
 } from './surveyResults';
 
 export const createServer = (): Express => {
@@ -28,6 +29,7 @@ export const createServer = (): Express => {
   app.get('/survey/:surveyId', listSurveyResultsBySurveyId);
   app.get('/survey', listAllSurveyResults);
   app.post('/survey', createSurveyResult);
+  app.post('/survey/update', updateSurveyId);
 
   return app;
 };

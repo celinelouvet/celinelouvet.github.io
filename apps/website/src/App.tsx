@@ -69,54 +69,62 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route
-            path="/slides/:talkSubjectId/content"
-            element={
-              <Suspense fallback={<Loading />}>
-                <SlidesContentPage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/slides/:talkSubjectId/results/:conventionId"
-            element={
-              <Suspense fallback={<Loading />}>
-                <SlidesSurveyResultsPage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/slides/:talkSubjectId/notes"
-            element={
-              <Suspense fallback={<Loading />}>
-                <SlidesNotesPage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/slides/:talkSubjectId/print"
-            element={
-              <Suspense fallback={<Loading />}>
-                <SlidesPrintPage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/slides/:talkSubjectId/print-notes"
-            element={
-              <Suspense fallback={<Loading />}>
-                <SlidesPrintNotesPage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/slides"
-            element={
-              <Suspense fallback={<Loading />}>
-                <PresenterPage />
-              </Suspense>
-            }
-          />
+          <Route path="/slides">
+            <Route
+              index
+              element={
+                <Suspense fallback={<Loading />}>
+                  <PresenterPage />
+                </Suspense>
+              }
+            />
+
+            <Route path=":talkSubjectId">
+              <Route
+                path="content"
+                element={
+                  <Suspense fallback={<Loading />}>
+                    <SlidesContentPage />
+                  </Suspense>
+                }
+              />
+
+              <Route
+                path="results/:conventionId"
+                element={
+                  <Suspense fallback={<Loading />}>
+                    <SlidesSurveyResultsPage />
+                  </Suspense>
+                }
+              />
+
+              <Route
+                path="notes"
+                element={
+                  <Suspense fallback={<Loading />}>
+                    <SlidesNotesPage />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="print"
+                element={
+                  <Suspense fallback={<Loading />}>
+                    <SlidesPrintPage />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="print-notes"
+                element={
+                  <Suspense fallback={<Loading />}>
+                    <SlidesPrintNotesPage />
+                  </Suspense>
+                }
+              />
+            </Route>
+          </Route>
+
           <Route
             path="/resume"
             element={
@@ -125,50 +133,57 @@ function App() {
               </Suspense>
             }
           />
-          <Route
-            path="/talks/:talkSubjectId/:conventionId/results"
-            element={
-              <Suspense fallback={<Loading />}>
-                <TalkSurveyResultsPage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/talks/:talkSubjectId/:conventionId"
-            element={
-              <Suspense fallback={<Loading />}>
-                <TalkSurveyPollPage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/talks/:talkSubjectId"
-            element={
-              <Suspense fallback={<Loading />}>
-                <TalkPage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/talks"
-            element={
-              <Suspense fallback={<Loading />}>
-                <TalksPage />
-              </Suspense>
-            }
-          ></Route>
-          <Route
-            path="/mixit"
-            element={
-              <Navigate to="/talks/highway_to_fail/mixit_2025" replace />
-            }
-          ></Route>
+          <Route path="/talks">
+            <Route path=":talkSubjectId">
+              <Route path=":conventionId">
+                <Route
+                  path="results"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <TalkSurveyResultsPage />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  index
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <TalkSurveyPollPage />
+                    </Suspense>
+                  }
+                />
+              </Route>
+              <Route
+                index
+                element={
+                  <Suspense fallback={<Loading />}>
+                    <TalkPage />
+                  </Suspense>
+                }
+              />
+            </Route>
+            <Route
+              index
+              element={
+                <Suspense fallback={<Loading />}>
+                  <TalksPage />
+                </Suspense>
+              }
+            ></Route>
+          </Route>
+
           <Route
             index
             element={
               <Suspense fallback={<Loading />}>
                 <HomePage />
               </Suspense>
+            }
+          />
+          <Route
+            path="/voxxedlux"
+            element={
+              <Navigate to="/talks/highway_to_fail/voxxedlux_2025" replace />
             }
           />
         </Routes>
