@@ -181,9 +181,9 @@ function App() {
             }
           />
           <Route
-            path="/mixit"
+            path="/voxxedlux"
             element={
-              <Navigate to="/talks/highway_to_fail/mixit_2025" replace />
+              <Navigate to="/talks/highway_to_fail/voxxedlux_2025" replace />
             }
           />
         </Routes>
