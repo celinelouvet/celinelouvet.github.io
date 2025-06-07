@@ -11,6 +11,7 @@ import { SurveyQuestionResults as SurveyQuestionResultsComponent } from './Surve
 
 const baseQuestion = {
   type: 'choice',
+  sankey: 'Sankey title',
   choices: [
     { text: 'Oui', value: 'yes', next: '' },
     { text: 'Non', value: 'no', next: '' },

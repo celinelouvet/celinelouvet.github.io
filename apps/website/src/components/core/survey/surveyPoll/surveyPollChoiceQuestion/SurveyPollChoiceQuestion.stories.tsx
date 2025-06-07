@@ -19,6 +19,7 @@ export const ChoiceQuestion: Story = {
   args: {
     question: {
       type: 'choice',
+      sankey: 'Sankey title',
       title: 'Did you accept?',
       initialState: true,
       optional: false,
