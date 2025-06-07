@@ -43,7 +43,7 @@ export const TalkSurveySankey = React.forwardRef<
   const options = {
     title,
     sankey: {
-      iterations: 30000,
+      iterations: 3000,
       link: { color: { fill: brand_600 } },
       node: {
         nodePadding: 20,

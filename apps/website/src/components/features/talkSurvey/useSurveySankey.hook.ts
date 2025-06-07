@@ -24,17 +24,6 @@ export const filterQuestionsToShow = (
 const getSankey = (id: string): string =>
   survey.questions.get(id)?.sankey ?? id;
 
-const positions = [
-  { id: 'question1', choice: 'yes' },
-  { id: 'question2', choice: 'yes' },
-  { id: 'question3', choice: 'yes' },
-  { id: 'question3', choice: 'no' },
-  { id: 'question2', choice: 'no' },
-  { id: 'question5', choice: 'yes' },
-  { id: 'question5', choice: 'no' },
-  { id: 'question1', choice: 'no' },
-];
-
 export const useSurveySankeyData = (
   talkSubjectId?: string | string[],
   conventionId?: string | string[],
@@ -72,16 +61,11 @@ export const useSurveySankeyData = (
         const targetId = choice.next;
         const value = questionResults[choice.value];
 
-        const index = positions.findIndex(
-          (pos) => pos.id === sourceId && pos.choice === choice.value,
-        );
-        if (index === -1 || value === undefined) return;
-
-        data[index] = [
+        data.push([
           getSankey(sourceId),
           getSankey(targetId),
           value,
-        ] satisfies DataNode;
+        ] satisfies DataNode);
       });
     });
     setData([['From', 'To', 'Weight'], ...data]);

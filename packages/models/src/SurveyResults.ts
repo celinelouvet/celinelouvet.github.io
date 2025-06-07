@@ -3,7 +3,7 @@ import { z } from 'zod';
 const surveySchema = z.object({
   surveyId: z.string(),
   title: z.string(),
-  values: z.record(z.enum(['yes', 'no'])),
+  values: z.record(z.enum(['yes', 'no']).or(z.string())),
 });
 export type SurveyResult = z.infer<typeof surveySchema>;
 

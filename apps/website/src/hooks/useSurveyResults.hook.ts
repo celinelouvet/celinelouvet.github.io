@@ -41,9 +41,11 @@ const reduceResults = (
 
   return results.reduce((acc: ReducedResults, result: SurveyResult) => {
     Object.entries(result.values).forEach(([id, value]) => {
-      const accQuestion = acc[id];
-      const result = accQuestion[value];
-      accQuestion[value] = result + 1;
+      if (value === 'yes' || value === 'no') {
+        const accQuestion = acc[id];
+        const result = accQuestion[value];
+        accQuestion[value] = result + 1;
+      }
     });
     return acc;
   }, initialResults);
