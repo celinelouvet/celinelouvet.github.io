@@ -58,6 +58,11 @@ const TalkSurveyResultsPage = lazy(() =>
     default: module.TalkSurveyResults,
   })),
 );
+const TalkSurveySankeyPage = lazy(() =>
+  import('@/pages').then((module) => ({
+    default: module.TalkSurveySankey,
+  })),
+);
 const TalksPage = lazy(() =>
   import('@/pages').then((module) => ({
     default: module.Talks,
@@ -141,6 +146,14 @@ function App() {
                   element={
                     <Suspense fallback={<Loading />}>
                       <TalkSurveyResultsPage />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="sankey"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <TalkSurveySankeyPage />
                     </Suspense>
                   }
                 />

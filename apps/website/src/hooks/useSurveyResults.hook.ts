@@ -9,13 +9,14 @@ import * as React from 'react';
 import { useSurveyInfos } from '@/components/features/talkSurvey/useSurveyInfos.hook';
 import { useApi } from '@/hooks';
 
-type ReducedResults = Record<string, Record<string, number>>;
+type ChoiceValue = 'yes' | 'no';
+type ReducedResults = Record<string, Record<ChoiceValue, number>>;
 type QuestionToShow = {
   id: string;
   question: SurveyPollChoiceQuestion;
 };
 
-const filterQuestionsToShow = (
+export const filterQuestionsToShow = (
   questions: SurveyPoll['questions'],
 ): QuestionToShow[] =>
   [...questions.entries()]
@@ -25,19 +26,9 @@ const filterQuestionsToShow = (
       question: question as SurveyPollChoiceQuestion,
     }));
 
-const reduceQuestion = (question: SurveyPollChoiceQuestion) =>
-  question.choices.reduce(
-    (accQuestion, choice) => {
-      accQuestion[choice.value] = 0;
-
-      return accQuestion;
-    },
-    {} as Record<string, number>,
-  );
-
 const initiateResults = (questionsToShow: QuestionToShow[]) =>
-  questionsToShow.reduce((acc: ReducedResults, { id, question }) => {
-    acc[id] = { ...reduceQuestion(question) };
+  questionsToShow.reduce((acc: ReducedResults, { id }) => {
+    acc[id] = { no: 0, yes: 0 };
 
     return acc;
   }, {} as ReducedResults);
@@ -49,15 +40,10 @@ const reduceResults = (
   const initialResults = initiateResults(questionsToShow);
 
   return results.reduce((acc: ReducedResults, result: SurveyResult) => {
-    const { values } = result;
-
-    Object.entries(values).forEach(([id, value]) => {
-      const accQuestion = acc[id] as Record<string, number> | undefined;
-      if (accQuestion) {
-        const result = accQuestion[value] ?? 0;
-
-        accQuestion[value] = result + 1;
-      }
+    Object.entries(result.values).forEach(([id, value]) => {
+      const accQuestion = acc[id];
+      const result = accQuestion[value];
+      accQuestion[value] = result + 1;
     });
     return acc;
   }, initialResults);
@@ -103,7 +89,7 @@ export const useSurveyResults = (
       .catch(() => {
         setError(true);
       });
-  }, [get, surveyInfos.surveyId, surveyInfos.surveyPoll]);
+  }, [get, surveyInfos.surveyId, surveyInfos.surveyPoll, setLoading]);
 
   React.useEffect(() => {
     if (!loading) return;

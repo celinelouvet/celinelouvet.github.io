@@ -19,6 +19,7 @@ export const SurveyResultsBreakdown: Story = {
   args: {
     question: {
       type: 'choice',
+      sankey: 'Sankey title',
       title: 'Question title',
       choices: [
         { text: 'Oui', value: 'yes', next: '' },

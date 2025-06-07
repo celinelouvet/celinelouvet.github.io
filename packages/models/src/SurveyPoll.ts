@@ -5,6 +5,7 @@ const NextSchema = z.union([z.literal('submit'), z.string()]);
 const WithInitialStateSchema = z.object({
   initialState: z.boolean(),
   optional: z.boolean(),
+  sankey: z.string().optional(),
 });
 
 const SurveyPollChoiceSchema = z.object({
@@ -22,7 +23,11 @@ const SurveyPollChoiceQuestionSchema = z
   .merge(WithInitialStateSchema);
 
 const SurveyPollTextQuestionSchema = z
-  .object({ type: z.literal('text'), title: z.string(), next: NextSchema })
+  .object({
+    type: z.literal('text'),
+    title: z.string(),
+    next: NextSchema,
+  })
   .merge(WithInitialStateSchema);
 
 const SurveyPollSubmitQuestionSchema = z

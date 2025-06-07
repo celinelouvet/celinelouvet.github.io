@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  datastore-dsui:
+    image: docker.io/joemugen/datastore-dsui
+    environment:
+      - DATASTORE_PROJECT_ID=celinelouvet-cv
+      - DATASTORE_LISTEN_ADDRESS=0.0.0.0:8081
+      - DATASTORE_DATASET=celinelouvet-cv
+      - DATASTORE_EMULATOR_HOST=localhost:8081
+      - PROJECT_ID=celinelouvet-cv
+    ports:
+      - '8081:8081'
+      - '3000:3000'

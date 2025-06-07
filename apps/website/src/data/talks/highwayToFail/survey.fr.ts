@@ -5,12 +5,13 @@ const questions = new Map<string, SurveyPollQuestion>([
     'question1',
     {
       title: 'Avez–vous déjà eu envie de créer une startup ?',
+      sankey: 'Envie de créer ?',
       initialState: true,
       optional: false,
       type: 'choice',
       choices: [
         { text: 'Oui', value: 'yes', next: 'question2' },
-        { text: 'Non', value: 'no', next: 'submit' },
+        { text: 'Non', value: 'no', next: 'submit1' },
       ],
     },
   ],
@@ -18,6 +19,7 @@ const questions = new Map<string, SurveyPollQuestion>([
     'question2',
     {
       title: 'L’avez–vous créée ?',
+      sankey: 'Création faite ?',
       initialState: false,
       optional: false,
       type: 'choice',
@@ -31,11 +33,12 @@ const questions = new Map<string, SurveyPollQuestion>([
     'question3',
     {
       title: 'Considérez–vous que ça a été une réussite ?',
+      sankey: 'Réussite ?',
       initialState: false,
       optional: false,
       type: 'choice',
       choices: [
-        { text: 'Oui', value: 'yes', next: 'submit' },
+        { text: 'Oui', value: 'yes', next: 'submit2' },
         { text: 'Non', value: 'no', next: 'question4' },
       ],
     },
@@ -44,21 +47,23 @@ const questions = new Map<string, SurveyPollQuestion>([
     'question4',
     {
       title: 'Savez–vous pourquoi ?',
+      sankey: 'Échec',
       initialState: false,
       optional: true,
       type: 'text',
-      next: 'submit',
+      next: 'submit3',
     },
   ],
   [
     'question5',
     {
       title: 'Est–ce parce que vous avez peur de l’échec ?',
+      sankey: 'Peur de l’echec ?',
       initialState: false,
       optional: false,
       type: 'choice',
       choices: [
-        { text: 'Oui', value: 'yes', next: 'submit' },
+        { text: 'Oui', value: 'yes', next: 'submit4' },
         { text: 'Non', value: 'no', next: 'question6' },
       ],
     },
@@ -67,13 +72,56 @@ const questions = new Map<string, SurveyPollQuestion>([
     'question6',
     {
       title: 'Quelle en est la raison ?',
+      sankey: 'Autre raison',
       initialState: false,
       optional: true,
       type: 'text',
-      next: 'submit',
+      next: 'submit5',
     },
   ],
-  ['submit', { initialState: false, optional: false, type: 'submit' }],
+  [
+    'submit1',
+    {
+      initialState: false,
+      optional: false,
+      type: 'submit',
+      sankey: 'Pas envie',
+    },
+  ],
+  [
+    'submit2',
+    {
+      initialState: false,
+      optional: false,
+      type: 'submit',
+      sankey: 'Réussite',
+    },
+  ],
+  [
+    'submit3',
+    {
+      initialState: false,
+      optional: false,
+      type: 'submit',
+    },
+  ],
+  [
+    'submit4',
+    {
+      initialState: false,
+      optional: false,
+      type: 'submit',
+      sankey: 'Peur',
+    },
+  ],
+  [
+    'submit5',
+    {
+      initialState: false,
+      optional: false,
+      type: 'submit',
+    },
+  ],
 ]);
 
 export const survey: SurveyPoll = {

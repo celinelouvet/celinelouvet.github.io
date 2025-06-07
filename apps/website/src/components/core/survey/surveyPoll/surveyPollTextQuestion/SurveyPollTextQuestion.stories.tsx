@@ -19,6 +19,7 @@ export const TextQuestion: Story = {
   args: {
     question: {
       type: 'text',
+      sankey: 'Sankey title',
       title: 'What is your name?',
       next: 'next-question',
       initialState: true,

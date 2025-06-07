@@ -5,3 +5,4 @@ export * from './Talk';
 export * from './Talks';
 export * from './TalkSurveyPoll';
 export * from './TalkSurveyResults';
+export * from './TalkSurveySankey';
