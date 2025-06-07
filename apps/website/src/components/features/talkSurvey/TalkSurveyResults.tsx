@@ -3,7 +3,7 @@ import { type SurveyPollChoiceQuestion } from '@repo/models';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H2Heading, SurveyQuestionResults } from '@/components/core';
+import { H2Heading, Link, SurveyQuestionResults } from '@/components/core';
 import { useSurveyResults } from '@/hooks';
 
 export interface SurveyResultsProps
@@ -50,6 +50,11 @@ export const TalkSurveyResults = React.forwardRef<
           </Skeleton>
         </Box>
       ))}
+      <Box>
+        <Link.Internal to={`/talks/${talkSubjectId}/${conventionId}/sankey`}>
+          As sankey graph
+        </Link.Internal>
+      </Box>
     </Stack>
   );
 });
