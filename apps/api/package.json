@@ -10,7 +10,7 @@
     "start": "node dist/index.cjs",
     "dev": "VERSION_NAME=dev tsup --watch --onSuccess \"node dist/index.cjs\"",
     "build": "tsup",
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist && rm -rf .turbo",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vite --mode development",
     "start": "node dist/index.cjs",
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist && rm -rf .turbo",
     "aliases": "tsc-alias -p tsconfig.json",
     "typecheck": "tsc --noEmit",
     "build": "npm run build:theme && npm run build:types && npm run build:server && npm run build:app",

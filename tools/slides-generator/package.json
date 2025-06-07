@@ -5,7 +5,8 @@
   "module": "src/run.ts",
   "type": "module",
   "scripts": {
-    "slides": "bun run src/run.ts"
+    "slides": "bun run src/run.ts",
+    "clean": "rm -rf .turbo && rm -fr _generated"
   },
   "devDependencies": {
     "@types/bun": "latest"
