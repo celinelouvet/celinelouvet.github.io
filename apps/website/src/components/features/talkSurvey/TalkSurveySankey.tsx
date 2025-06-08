@@ -23,7 +23,7 @@ export interface TalkSurveySankeyProps
 export const TalkSurveySankey = React.forwardRef<
   HTMLDivElement,
   TalkSurveySankeyProps
->(({ talkSubjectId, conventionId }, ref) => {
+>(function TalkSurveySankey({ talkSubjectId, conventionId }, ref) {
   const { t } = useTranslation('components', { keyPrefix: 'survey' });
 
   const { hasFoundSurvey, title, loading, error, data } = useSurveySankeyData(

@@ -12,7 +12,9 @@ export type ExperiencesProps = {
   experiences: Experience[];
 };
 
-export const Experiences: React.FC<ExperiencesProps> = ({ experiences }) => {
+export const Experiences: React.FC<ExperiencesProps> = function Experiences({
+  experiences,
+}) {
   const size = useHeadingSize();
   const { t } = useTranslation('resume', { keyPrefix: 'experiences' });
   return (

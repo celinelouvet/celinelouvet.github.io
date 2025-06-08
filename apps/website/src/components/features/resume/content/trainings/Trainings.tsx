@@ -12,7 +12,9 @@ export type TrainingsProps = {
   trainings: Training[];
 };
 
-export const Trainings: React.FC<TrainingsProps> = ({ trainings }) => {
+export const Trainings: React.FC<TrainingsProps> = function Trainings({
+  trainings,
+}) {
   const size = useHeadingSize();
   const { t } = useTranslation('resume', { keyPrefix: 'trainings' });
 

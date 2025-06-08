@@ -6,7 +6,9 @@ import { useHeadingSize } from '@/hooks';
 
 export type EpisodeTextProps = Pick<Podcast, 'episode'>;
 
-export const EpisodeText: React.FC<EpisodeTextProps> = ({ episode }) => {
+export const EpisodeText: React.FC<EpisodeTextProps> = function EpisodeText({
+  episode,
+}) {
   const size = useHeadingSize();
 
   if (!episode) {

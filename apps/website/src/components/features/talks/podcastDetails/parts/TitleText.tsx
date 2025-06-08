@@ -6,7 +6,9 @@ import { useHeadingSize } from '@/hooks';
 
 export type TitleTextProps = Pick<Podcast, 'title'>;
 
-export const TitleText: React.FC<TitleTextProps> = ({ title }) => {
+export const TitleText: React.FC<TitleTextProps> = function TitleText({
+  title,
+}) {
   const size = useHeadingSize();
   if (!title) {
     return null;

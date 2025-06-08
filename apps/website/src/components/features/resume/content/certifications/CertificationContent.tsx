@@ -7,7 +7,7 @@ import { CertificationHeader } from './CertificationHeader';
 
 export const CertificationContent: React.FC<{
   certification: Certification;
-}> = ({ certification }) => {
+}> = function CertificationContent({ certification }) {
   return (
     <Flex direction="column">
       <CertificationHeader certification={certification} />

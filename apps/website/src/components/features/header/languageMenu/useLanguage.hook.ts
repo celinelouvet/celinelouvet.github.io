@@ -3,11 +3,11 @@ import { useTranslation } from 'react-i18next';
 
 import { AVAILABLE_LANGUAGES } from '@/lib/i18n';
 
-type UseLanguage = {
+type UseLanguageProps = {
   onChange: (newValue: string, oldValue: string) => void;
 };
 
-export const useLanguage = ({ onChange }: UseLanguage) => {
+export function useLanguage({ onChange }: UseLanguageProps) {
   const { i18n } = useTranslation();
   const [language, setLanguage] = React.useState<string>(i18n.language);
 
@@ -26,4 +26,4 @@ export const useLanguage = ({ onChange }: UseLanguage) => {
     [i18n, language, onChange],
   );
   return { language, changeLanguage };
-};
+}

@@ -16,13 +16,13 @@ type MenuProps = {
   onClick: (id: string) => void;
 };
 
-export const Menu: React.FC<MenuProps> = ({
+export const Menu: React.FC<MenuProps> = function Menu({
   subjects,
   comingConventions,
   alreadyDoneConventions,
   podcasts,
   onClick,
-}) => {
+}) {
   const { t } = useTranslation('talks');
 
   const links = linksContent({
@@ -57,16 +57,16 @@ type LinksContent = {
   podcasts: Podcast[];
 };
 
-const linksContent = ({
+function linksContent({
   subjects,
   comingConventions,
   alreadyDoneConventions,
   podcasts,
-}: LinksContent): string[] => {
+}: LinksContent): string[] {
   const linksArray: string[] = [];
   if (subjects.size > 0) linksArray.push('subjects');
   if (comingConventions.length > 0) linksArray.push('toCome');
   if (alreadyDoneConventions.length > 0) linksArray.push('alreadyDone');
   if (podcasts.length > 0) linksArray.push('podcasts');
   return linksArray;
-};
+}

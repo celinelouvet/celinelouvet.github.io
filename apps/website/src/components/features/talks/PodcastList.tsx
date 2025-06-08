@@ -12,12 +12,10 @@ type PodcastListProps = {
   title: string;
 };
 
-const key = ({ name, title }: Podcast) => `${name}-${title}`;
-
-export const PodcastList: React.FC<PodcastListProps> = ({
+export const PodcastList: React.FC<PodcastListProps> = function PodcastList({
   podcasts,
   title,
-}) => {
+}) {
   if (podcasts.length === 0) {
     return null;
   }
@@ -37,3 +35,7 @@ export const PodcastList: React.FC<PodcastListProps> = ({
     </Box>
   );
 };
+
+function key({ name, title }: Podcast) {
+  return `${name}-${title}`;
+}

@@ -11,8 +11,6 @@ type ConventionListProps = {
   conventions: ConventionWithTalks[];
 };
 
-const key = ({ name, start }: ConventionWithTalks) => `${name}-${start}`;
-
 export const ConventionList = React.forwardRef<
   HTMLDivElement,
   ConventionListProps
@@ -33,3 +31,7 @@ export const ConventionList = React.forwardRef<
     </Box>
   );
 });
+
+function key({ name, start }: ConventionWithTalks) {
+  return `${name}-${start}`;
+}

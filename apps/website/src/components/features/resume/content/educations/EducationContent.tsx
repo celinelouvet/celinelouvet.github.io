@@ -7,14 +7,13 @@ import { EducationDiploma } from './EducationDiploma';
 import { EducationFullname } from './EducationFullname';
 import { EducationHeader } from './EducationHeader';
 
-export const EducationContent: React.FC<{ education: Education }> = ({
-  education,
-}) => {
-  return (
-    <Flex direction="column">
-      <EducationHeader education={education} />
-      <EducationFullname education={education} />
-      <EducationDiploma education={education} />
-    </Flex>
-  );
-};
+export const EducationContent: React.FC<{ education: Education }> =
+  function EducationContent({ education }) {
+    return (
+      <Flex direction="column">
+        <EducationHeader education={education} />
+        <EducationFullname education={education} />
+        <EducationDiploma education={education} />
+      </Flex>
+    );
+  };

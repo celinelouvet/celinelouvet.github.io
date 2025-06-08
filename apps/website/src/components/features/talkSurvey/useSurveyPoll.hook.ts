@@ -3,10 +3,10 @@ import * as React from 'react';
 
 import { useSurveyInfos } from './useSurveyInfos.hook';
 
-export const useSurveyPoll = (
+export function useSurveyPoll(
   talkSubjectId?: string | string[],
   conventionId?: string | string[],
-) => {
+) {
   const [surveyId, setSurveyId] = React.useState<string | null>(null);
   const [surveyPoll, setSurveyPoll] = React.useState<SurveyPoll | null>(null);
   const [surveyState, setSurveyState] = React.useState<SurveyState>(
@@ -46,11 +46,29 @@ export const useSurveyPoll = (
     setSurveyState,
   ]);
 
-  const setState = (key: string, value: boolean) =>
-    setStates(new Map(states.set(key, value)));
+  function setState(key: string, value: boolean) {
+    return setStates(new Map(states.set(key, value)));
+  }
 
-  const setValue = (key: string, value: boolean | string) =>
-    setValues(new Map(values.set(key, value)));
+  function setValue(key: string, value: boolean | string, wasModified = false) {
+    const newValues = new Map(values);
+    newValues.set(key, value);
+
+    if (wasModified) {
+      const currentQuestion = surveyPoll?.questions.get(key);
+      if (currentQuestion?.type === 'choice') {
+        const previousChoiceValue = value ? 'no' : 'yes';
+        const previousChoice = currentQuestion.choices.find(
+          (choice) => choice.value === previousChoiceValue,
+        );
+
+        if (previousChoice) {
+          newValues.delete(previousChoice.next);
+        }
+      }
+    }
+    setValues(newValues);
+  }
 
   return {
     surveyId,
@@ -61,4 +79,4 @@ export const useSurveyPoll = (
     setState,
     setValue,
   };
-};
+}

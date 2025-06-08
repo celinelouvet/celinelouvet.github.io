@@ -12,7 +12,7 @@ export type PodcastsProps = {
   resume: Resume;
 };
 
-export const Podcasts: React.FC<PodcastsProps> = ({ resume }) => {
+export const Podcasts: React.FC<PodcastsProps> = function Podcasts({ resume }) {
   const size = useHeadingSize();
   const { t } = useTranslation('resume', { keyPrefix: 'podcasts' });
 

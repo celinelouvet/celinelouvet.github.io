@@ -10,7 +10,7 @@ export type TasksProps = {
   tasks?: Task[];
 };
 
-export const Tasks: React.FC<TasksProps> = ({ tasks }) => {
+export const Tasks: React.FC<TasksProps> = function Tasks({ tasks }) {
   const size = useHeadingSize();
   const { t } = useTranslation('resume', {
     keyPrefix: 'experiences.experience',

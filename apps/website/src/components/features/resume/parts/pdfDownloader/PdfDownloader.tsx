@@ -8,7 +8,7 @@ import { useLogger } from '@/hooks';
 const root =
   'https://storage.googleapis.com/celinelouvet-cv.appspot.com/resume';
 
-export const PdfDownloader: React.FC = () => {
+export const PdfDownloader: React.FC = function PdfDownloader() {
   const { log } = useLogger();
   const { i18n } = useTranslation();
 

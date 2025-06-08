@@ -12,23 +12,22 @@ export type CertificationsProps = {
   certifications: Certification[];
 };
 
-export const Certifications: React.FC<CertificationsProps> = ({
-  certifications,
-}) => {
-  const size = useHeadingSize();
-  const { t } = useTranslation('resume', { keyPrefix: 'certifications' });
+export const Certifications: React.FC<CertificationsProps> =
+  function Certifications({ certifications }) {
+    const size = useHeadingSize();
+    const { t } = useTranslation('resume', { keyPrefix: 'certifications' });
 
-  return (
-    <Stack gap="4">
-      <H2Heading size={size}>{t('title')}</H2Heading>
+    return (
+      <Stack gap="4">
+        <H2Heading size={size}>{t('title')}</H2Heading>
 
-      <Stack gap="8">
-        {certifications.map((certification) => (
-          <Box key={certification.topic}>
-            <CertificationContent certification={certification} />
-          </Box>
-        ))}
+        <Stack gap="8">
+          {certifications.map((certification) => (
+            <Box key={certification.topic}>
+              <CertificationContent certification={certification} />
+            </Box>
+          ))}
+        </Stack>
       </Stack>
-    </Stack>
-  );
-};
+    );
+  };

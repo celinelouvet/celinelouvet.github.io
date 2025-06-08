@@ -10,7 +10,7 @@ export type RemotesProps = {
   remotes: Remote[];
 };
 
-export const Remotes: React.FC<RemotesProps> = ({ remotes }) => {
+export const Remotes: React.FC<RemotesProps> = function Remotes({ remotes }) {
   const size = useHeadingSize();
   const { t } = useTranslation('resume', { keyPrefix: 'remote' });
 

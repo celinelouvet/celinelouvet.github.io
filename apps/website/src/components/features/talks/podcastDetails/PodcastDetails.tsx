@@ -1,22 +1,12 @@
-import {
-  Card,
-  Flex,
-  HStack,
-  Spacer,
-  Stack,
-  Text,
-  chakra,
-} from '@chakra-ui/react';
+import { Card, Flex, HStack, Spacer, Stack, Text } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { DateText, H3Heading } from '@/components/core';
 import { type Podcast } from '@/data';
-import { useHeadingSize } from '@/hooks';
 
 import {
   AuthorText,
   DescriptionText,
-  EpisodeText,
+  Header,
   PodcastLink,
   PodcastPicture,
   TitleText,
@@ -26,30 +16,14 @@ export type PodcastDetailsProps = {
   podcast: Podcast;
 };
 
-export const PodcastDetails: React.FC<PodcastDetailsProps> = ({ podcast }) => {
-  const { name, author, title, language, when, episode, description, links } =
-    podcast;
+export const PodcastDetails: React.FC<PodcastDetailsProps> =
+  function PodcastDetails({ podcast }) {
+    const { author, title, description, links } = podcast;
 
-  const size = useHeadingSize();
-
-  const Header = () => (
-    <Flex
-      gap="2"
-      alignItems="baseline"
-      direction={{ base: 'column', xl: 'row' }}
-      flexWrap="wrap"
-    >
-      <H3Heading size={size}>{name}</H3Heading>
-      <EpisodeText episode={episode} />
-      <DateLanguage language={language} when={when} />
-    </Flex>
-  );
-
-  return (
-    <>
+    return (
       <Card.Root size="sm" variant="subtle">
         <Card.Header>
-          <Header />
+          <Header podcast={podcast} />
         </Card.Header>
 
         <Card.Body>
@@ -81,21 +55,5 @@ export const PodcastDetails: React.FC<PodcastDetailsProps> = ({ podcast }) => {
           </Flex>
         </Card.Body>
       </Card.Root>
-    </>
-  );
-};
-
-type DateLanguageProps = Pick<Podcast, 'language' | 'when'>;
-const DateLanguage: React.FC<DateLanguageProps> = ({ language, when }) => (
-  <>
-    <HStack
-      alignItems="baseline"
-      color={{ base: 'brand.300', _dark: 'brand.700' }}
-      fontSize="sm"
-    >
-      <DateText when={when} dateFormat="MMM YYYY" />
-      <chakra.span>–</chakra.span>
-      <chakra.span>{language.toUpperCase()}</chakra.span>
-    </HStack>
-  </>
-);
+    );
+  };

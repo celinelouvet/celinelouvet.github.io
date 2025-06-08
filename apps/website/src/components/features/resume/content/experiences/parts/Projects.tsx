@@ -10,7 +10,9 @@ export type ProjectsProps = {
   projects?: Project[];
 };
 
-export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
+export const Projects: React.FC<ProjectsProps> = function Projects({
+  projects,
+}) {
   const size = useHeadingSize();
   const { t } = useTranslation('resume', {
     keyPrefix: 'experiences.experience',

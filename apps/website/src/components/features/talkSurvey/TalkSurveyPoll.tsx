@@ -1,59 +1,13 @@
 import { Box, Stack, type StackProps } from '@chakra-ui/react';
-import {
-  type SurveyPollQuestion as SurveyPollQuestionModel,
-  SurveyState,
-} from '@repo/models';
+import { SurveyState } from '@repo/models';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  H2Heading,
-  H3Heading,
-  Link,
-  SurveyPollChoiceQuestion,
-  SurveyPollSubmit,
-  SurveyPollTextQuestion,
-} from '@/components/core';
+import { H2Heading, H3Heading, Link } from '@/components/core';
 import { useApi, useLogger } from '@/hooks';
 
+import { QuestionContent } from './QuestionContent';
 import { useSurveyPoll } from './useSurveyPoll.hook';
-
-type QuestionContentProps = {
-  id: string;
-  question: SurveyPollQuestionModel;
-  onAnswer: (id: string, value: string, next: string, oldNext?: string) => void;
-  onSubmit: () => void;
-};
-
-const QuestionContent: React.FC<QuestionContentProps> = ({
-  id,
-  question,
-  onAnswer,
-  onSubmit,
-}) => {
-  const { type } = question;
-
-  switch (type) {
-    case 'choice':
-      return (
-        <SurveyPollChoiceQuestion
-          question={question}
-          onAnswer={(value: string, next: string, oldNext?: string) =>
-            onAnswer(id, value, next, oldNext)
-          }
-        />
-      );
-    case 'text':
-      return (
-        <SurveyPollTextQuestion
-          question={question}
-          onAnswer={(value: string, next: string) => onAnswer(id, value, next)}
-        />
-      );
-    case 'submit':
-      return <SurveyPollSubmit onSubmit={onSubmit} />;
-  }
-};
 
 export interface SurveyPollProps
   extends StackProps,
@@ -63,7 +17,7 @@ export interface SurveyPollProps
     }> {}
 
 export const TalkSurveyPoll = React.forwardRef<HTMLDivElement, SurveyPollProps>(
-  ({ talkSubjectId, conventionId }, ref) => {
+  function TalkSurveyPoll({ talkSubjectId, conventionId }, ref) {
     const { post } = useApi();
     const { log } = useLogger();
     const { t } = useTranslation('components', { keyPrefix: 'survey' });
@@ -84,29 +38,30 @@ export const TalkSurveyPoll = React.forwardRef<HTMLDivElement, SurveyPollProps>(
 
     const { questions, title } = surveyPoll;
 
-    const ifOptional = (current: string) => {
+    function ifOptional(current: string) {
       const question = questions.get(current);
 
       if (question && question.optional && 'next' in question) {
         setState(question.next, true);
       }
-    };
+    }
 
-    const logAnswer = async (key: string) => {
+    async function logAnswer(key: string) {
       const question = questions.get(key);
 
       if (question && 'title' in question) {
         await log('Answer selected', { title, question: question.title });
       }
-    };
+    }
 
-    const onAnswer = async (
+    async function onAnswer(
       key: string,
       value: string,
       next: string,
       oldNext?: string,
-    ) => {
-      setValue(key, value);
+    ) {
+      setValue(key, value, oldNext !== undefined);
+
       if (oldNext) {
         setState(oldNext, false);
       }
@@ -114,12 +69,12 @@ export const TalkSurveyPoll = React.forwardRef<HTMLDivElement, SurveyPollProps>(
 
       ifOptional(next);
       await logAnswer(key);
-    };
+    }
 
-    const onSubmit = () => {
+    function onSubmit() {
       post('/survey', { surveyId, title, values: Object.fromEntries(values) });
       log('Survey submitted', { title });
-    };
+    }
 
     const Unknown = <Box textAlign="center">{t('error')}</Box>;
     const NotYetOpened = <Box textAlign="center">{t('notYetOpened')}</Box>;

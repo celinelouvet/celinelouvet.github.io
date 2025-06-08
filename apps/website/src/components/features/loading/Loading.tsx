@@ -2,7 +2,7 @@ import { Spinner, Stack, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-export const Loading: React.FC = () => {
+export const Loading: React.FC = function Loading() {
   const { t } = useTranslation('common');
 
   return (

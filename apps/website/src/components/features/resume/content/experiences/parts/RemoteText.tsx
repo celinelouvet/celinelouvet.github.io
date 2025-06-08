@@ -9,10 +9,10 @@ export type RemoteTextProps = {
   size?: 'sm' | 'xs';
 };
 
-export const RemoteText: React.FC<RemoteTextProps> = ({
+export const RemoteText: React.FC<RemoteTextProps> = function RemoteText({
   remote,
   size = 'sm',
-}) => {
+}) {
   const { t } = useTranslation('resume', {
     keyPrefix: 'experiences.experience.remoteType',
   });

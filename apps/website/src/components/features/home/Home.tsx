@@ -13,7 +13,7 @@ type HomeProps = {
   resume: Resume;
 };
 
-export const Home: React.FC<HomeProps> = ({ resume }) => {
+export const Home: React.FC<HomeProps> = function Home({ resume }) {
   const [summaryWidth] = useToken('spacing', ['summary.space']);
 
   return (

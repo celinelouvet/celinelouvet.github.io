@@ -10,7 +10,9 @@ type ResumeProps = {
   resume: Resume;
 };
 
-export const ResumeLayout: React.FC<ResumeProps> = ({ resume }) => {
+export const ResumeLayout: React.FC<ResumeProps> = function ResumeLayout({
+  resume,
+}) {
   return (
     <>
       <Box display={{ base: 'block', lg: 'none' }}>

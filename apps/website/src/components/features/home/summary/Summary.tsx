@@ -8,7 +8,7 @@ export type SummaryProps = {
   resume: Pick<Resume, 'firstname' | 'lastname' | 'title'>;
 };
 
-export const Summary: React.FC<SummaryProps> = ({ resume }) => {
+export const Summary: React.FC<SummaryProps> = function Summary({ resume }) {
   const fullname = `${resume.firstname} ${resume.lastname}`;
 
   return (

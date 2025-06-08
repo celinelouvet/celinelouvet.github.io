@@ -9,7 +9,9 @@ export type DescriptionProps = {
   descriptions: string[];
 };
 
-export const Description: React.FC<DescriptionProps> = ({ descriptions }) => {
+export const Description: React.FC<DescriptionProps> = function Description({
+  descriptions,
+}) {
   const size = useHeadingSize();
   const { t } = useTranslation('resume', { keyPrefix: 'description' });
 

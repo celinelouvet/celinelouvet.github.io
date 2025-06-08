@@ -5,7 +5,9 @@ export type DescriptionsProps = {
   descriptions?: string[];
 };
 
-export const Descriptions: React.FC<DescriptionsProps> = ({ descriptions }) => {
+export const Descriptions: React.FC<DescriptionsProps> = function Descriptions({
+  descriptions,
+}) {
   if (!descriptions) {
     return null;
   }

@@ -11,7 +11,9 @@ type ResumeProps = {
   resume: Resume;
 };
 
-export const ResumeAboveLg: React.FC<ResumeProps> = ({ resume }) => {
+export const ResumeAboveLg: React.FC<ResumeProps> = function ResumeAboveLg({
+  resume,
+}) {
   const [summaryWidth] = useToken('space', ['summary.space']);
 
   return (

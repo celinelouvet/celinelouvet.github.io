@@ -12,11 +12,11 @@ type HeaderDrawerProps = {
   toggle: () => void;
 };
 
-export const HeaderDrawer: React.FC<HeaderDrawerProps> = ({
+export const HeaderDrawer: React.FC<HeaderDrawerProps> = function HeaderDrawer({
   title,
   open,
   toggle,
-}) => {
+}) {
   return (
     <Drawer.Root
       onOpenChange={() => toggle()}

@@ -10,24 +10,24 @@ type SurveyResultsPieProps = {
   results: Record<string, number>;
 };
 
-export const SurveyResultsPie: React.FC<SurveyResultsPieProps> = ({
-  question,
-  results,
-}) => {
-  const { data } = useQuestionResults(question, results);
-  const [brand900] = useToken('colors', 'brand.900');
+export const SurveyResultsPie: React.FC<SurveyResultsPieProps> =
+  function SurveyResultsPie({ question, results }) {
+    const { data } = useQuestionResults(question, results);
+    const [brand900] = useToken('colors', 'brand.900');
 
-  return (
-    <PieChart
-      data={data}
-      label={({ dataEntry }) => (dataEntry.value !== 0 ? dataEntry.title : '')}
-      labelStyle={{
-        fontSize: '0.2em',
-        fill: brand900,
-        fontFamily: 'nunito',
-        fontWeight: 'bold',
-      }}
-      radius={42}
-    />
-  );
-};
+    return (
+      <PieChart
+        data={data}
+        label={({ dataEntry }) =>
+          dataEntry.value !== 0 ? dataEntry.title : ''
+        }
+        labelStyle={{
+          fontSize: '0.2em',
+          fill: brand900,
+          fontFamily: 'nunito',
+          fontWeight: 'bold',
+        }}
+        radius={42}
+      />
+    );
+  };

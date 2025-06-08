@@ -7,7 +7,7 @@ import { useHeadingSize } from '@/hooks';
 
 export const CertificationHeader: React.FC<{
   certification: Certification;
-}> = ({ certification }) => {
+}> = function CertificationHeader({ certification }) {
   const size = useHeadingSize();
 
   return (
