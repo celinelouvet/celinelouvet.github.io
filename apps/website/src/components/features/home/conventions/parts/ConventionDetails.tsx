@@ -17,32 +17,30 @@ export const ConventionDetails: React.FC<ConventionDetailsProps> =
     const { t } = useTranslation('home', { keyPrefix: 'talks.talk' });
 
     return (
-      <>
-        <Card.Root size="sm" variant="subtle">
-          <Card.Header>
-            <Header convention={convention} />
-          </Card.Header>
+      <Card.Root size="sm" variant="subtle">
+        <Card.Header>
+          <Header convention={convention} />
+        </Card.Header>
 
-          <Card.Body>
-            <Flex gap="4" direction={{ base: 'column', lg: 'row' }}>
-              <Stack gap="6" width="100%">
-                {convention.talks.map((talk) => (
-                  <TalkDetails key={talk.subjectId} talk={talk} />
-                ))}
-              </Stack>
-              <Spacer />
-              {convention.coming && convention.program ? (
-                <Center>
-                  <Button asChild variant="solid-link">
-                    <Link.External href={convention.program}>
-                      {t('program')}
-                    </Link.External>
-                  </Button>
-                </Center>
-              ) : null}
-            </Flex>
-          </Card.Body>
-        </Card.Root>
-      </>
+        <Card.Body>
+          <Flex gap="4" direction={{ base: 'column', lg: 'row' }}>
+            <Stack gap="6" width="100%">
+              {convention.talks.map((talk) => (
+                <TalkDetails key={talk.subjectId} talk={talk} />
+              ))}
+            </Stack>
+            <Spacer />
+            {convention.coming && convention.program ? (
+              <Center>
+                <Button asChild variant="solid-link">
+                  <Link.External href={convention.program}>
+                    {t('program')}
+                  </Link.External>
+                </Button>
+              </Center>
+            ) : null}
+          </Flex>
+        </Card.Body>
+      </Card.Root>
     );
   };
