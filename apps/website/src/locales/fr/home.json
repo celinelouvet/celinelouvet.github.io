@@ -29,5 +29,9 @@
     "title": "Podcasts",
     "seeAll": "Voir tous mes podcasts",
     "date": "D MMMM YYYY"
+  },
+  "volunteering": {
+    "title": "Bénévolat",
+    "seeSite": "Voir le site de l'association"
   }
 }

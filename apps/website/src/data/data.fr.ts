@@ -562,6 +562,35 @@ const talks = [
   },
 ] satisfies Talk[];
 
+const volunteering = [
+  {
+    name: 'Crafts Records',
+    role: 'Coach',
+    description:
+      'Collectif d’orateurs et oratrices expérimentés accompagnant des intervenants débutants pour les aider à se lancer en conférences.',
+    from: '2024-09-01',
+    site: 'https://craftsrecords.org',
+    lightLogoId: 'crafts-records.svg',
+    darkLogoId: 'crafts-records.svg',
+    tasks: [
+      { name: 'Snowcamp 2025' },
+      { name: 'DevLille 2025' },
+      { name: 'Cloud Nord 2025' },
+      { name: 'Snowcamp 2026 (à venir)' },
+    ],
+  },
+  {
+    name: 'Yeeso',
+    role: 'Squad Leader mentorat',
+    description:
+      'Association visant à accélérer la féminisation des équipes informatiques, via des programmes de sensibilisation, de mentorat et du réseau.',
+    from: '2024-09-01',
+    site: 'https://yeeso.fr',
+    lightLogoId: 'yeeso-light.svg',
+    darkLogoId: 'yeeso-dark.svg',
+  },
+];
+
 const firstExperience = '2006-02-01';
 const fromFirstExperience = dayjs().diff(firstExperience, 'year');
 
@@ -1313,6 +1342,7 @@ const resume = {
       when: '2013-03-01',
     },
   ],
+  volunteering,
 } satisfies Resume;
 
 export default resume;

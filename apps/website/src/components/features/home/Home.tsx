@@ -8,6 +8,7 @@ import { Conventions } from './conventions';
 import { Podcasts } from './podcasts';
 import { Socials } from './socials';
 import { Summary } from './summary';
+import { VolunteeringWorks } from './volunteeringWorks';
 
 type HomeProps = {
   resume: Resume;
@@ -32,6 +33,7 @@ export const Home: React.FC<HomeProps> = function Home({ resume }) {
           <Socials socials={resume.socials} />
           <Conventions resume={resume} />
           <Podcasts resume={resume} />
+          <VolunteeringWorks resume={resume} />
         </Stack>
       </Grid>
     </Flex>
