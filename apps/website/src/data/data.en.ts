@@ -1,3 +1,5 @@
+import dayjs from 'dayjs';
+
 import {
   type Convention,
   type Podcast,
@@ -555,11 +557,14 @@ const talks = [
   },
 ] satisfies Talk[];
 
+const firstExperience = '2006-02-01';
+const fromFirstExperience = dayjs().diff(firstExperience, 'year');
+
 const resume = {
   firstname: 'Céline',
   lastname: 'Louvet',
   birthdate: '1980-12-02',
-  firstExperience: '2006-02-01',
+  firstExperience,
   email: 'celine.louvet@gmail.com',
   website: 'https://celine.louvet.me',
   title: 'Staff engineer / Senior lead developer',
@@ -571,14 +576,18 @@ const resume = {
   ],
   hobbies: 'Drawing, painting, clay modeling, sports',
   biographies: [
-    'Backend developer and passionate, for 18 years, loves reaching stability and quality for production applications.',
+    `Backend developer and passionate, for ${fromFirstExperience} years, loves reaching stability and quality for production applications.`,
     'Specializing into cloud architectures, with a liking for functional languages.',
+    'Speaker at conferences on technology topics, experience sharing, and methodologies.',
+    'Volunteer for NGOs dedicated to mentoring, Crafts Records as first-time speakers coach and Yeeso as Mentoring Squad Leader.',
     'Currently lead developer at Shine.',
   ],
   descriptions: [
     'Backend Senior Developer, in Typescript, with a liking for functional languages.',
     'Several experiences as lead developer or staff engineer, with developers teams management.',
     'Several experiences as Technical Leader, with legacy rework or from scratch creation, architecture and methodology practices set up.',
+    'Speaker at conferences on technology topics, experience sharing, and methodologies.',
+    'Volunteer for NGOs dedicated to mentoring, Crafts Records as first-time speakers coach and Yeeso as Mentoring Squad Leader.',
   ],
   skills: [
     'Build phase, wih stability and quality as a goal',
