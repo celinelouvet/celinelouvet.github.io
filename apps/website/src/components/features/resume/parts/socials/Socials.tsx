@@ -11,7 +11,7 @@ export type SocialsProps = {
   socials: Social[];
 };
 
-export const Socials: React.FC<SocialsProps> = ({ socials }) => {
+export const Socials: React.FC<SocialsProps> = function Socials({ socials }) {
   const size = useHeadingSize();
   const { t } = useTranslation('resume', { keyPrefix: 'socials' });
 

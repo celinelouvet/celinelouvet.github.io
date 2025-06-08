@@ -11,23 +11,10 @@ type QuestionToShow = {
 
 type DataNode = [string, string, number | string];
 
-export const filterQuestionsToShow = (
-  questions: SurveyPoll['questions'],
-): QuestionToShow[] =>
-  [...questions.entries()]
-    .filter(([, question]) => question.type === 'choice')
-    .map(([id, question]) => ({
-      id,
-      question: question as SurveyPollChoiceQuestion,
-    }));
-
-const getSankey = (id: string): string =>
-  survey.questions.get(id)?.sankey ?? id;
-
-export const useSurveySankeyData = (
+export function useSurveySankeyData(
   talkSubjectId?: string | string[],
   conventionId?: string | string[],
-) => {
+) {
   const [hasFoundSurvey, setHasFoundSurvey] = React.useState<boolean>(false);
   const [title, setTitle] = React.useState<string>('');
   const [questionsToShow, setQuestionsToShow] = React.useState<
@@ -78,4 +65,19 @@ export const useSurveySankeyData = (
     error,
     data,
   };
-};
+}
+
+function filterQuestionsToShow(
+  questions: SurveyPoll['questions'],
+): QuestionToShow[] {
+  return [...questions.entries()]
+    .filter(([, question]) => question.type === 'choice')
+    .map(([id, question]) => ({
+      id,
+      question: question as SurveyPollChoiceQuestion,
+    }));
+}
+
+function getSankey(id: string): string {
+  return survey.questions.get(id)?.sankey ?? id;
+}

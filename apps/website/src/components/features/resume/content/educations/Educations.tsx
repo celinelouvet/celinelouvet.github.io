@@ -12,7 +12,9 @@ export type EducationsProps = {
   educations: Education[];
 };
 
-export const Educations: React.FC<EducationsProps> = ({ educations }) => {
+export const Educations: React.FC<EducationsProps> = function Educations({
+  educations,
+}) {
   const size = useHeadingSize();
   const { t } = useTranslation('resume', { keyPrefix: 'educations' });
 

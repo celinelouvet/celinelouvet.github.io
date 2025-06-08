@@ -13,10 +13,10 @@ import * as React from 'react';
 import { H2Heading, Link, PageContainer } from '@/components/core';
 import { useColorMode } from '@/components/ui';
 
-export const Presenter: React.FC = () => {
+export const Presenter: React.FC = function Presenter() {
   const { colorMode } = useColorMode();
 
-  const onClick = (talkId: string, withNotes: boolean) => {
+  function onClick(talkId: string, withNotes: boolean) {
     window.open(`/slides/${talkId}/content`, '_blank');
 
     if (withNotes) {
@@ -24,7 +24,7 @@ export const Presenter: React.FC = () => {
         window.open(`/slides/${talkId}/notes`, '_blank');
       }, 500);
     }
-  };
+  }
   return (
     <PageContainer>
       <Stack

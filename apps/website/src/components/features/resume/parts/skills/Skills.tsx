@@ -9,7 +9,7 @@ export type SkillsProps = {
   skills: string[];
 };
 
-export const Skills: React.FC<SkillsProps> = ({ skills }) => {
+export const Skills: React.FC<SkillsProps> = function Skills({ skills }) {
   const size = useHeadingSize();
   const { t } = useTranslation('resume', { keyPrefix: 'skills' });
 

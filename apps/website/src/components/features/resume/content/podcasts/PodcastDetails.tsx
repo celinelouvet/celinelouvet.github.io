@@ -11,28 +11,30 @@ export type PodcastDetailsProps = {
   podcast: Podcast;
 };
 
-export const PodcastDetails: React.FC<PodcastDetailsProps> = ({ podcast }) => {
-  const size = useHeadingSize();
+export const PodcastDetails: React.FC<PodcastDetailsProps> =
+  function PodcastDetails({ podcast }) {
+    const size = useHeadingSize();
 
-  const { name, author, title, language, when, episode, description } = podcast;
-  return (
-    <Stack gap="2">
-      <Stack
-        alignItems="baseline"
-        gap="2"
-        flexWrap="wrap"
-        flexDirection={{ base: 'row', md: 'row' }}
-      >
-        <H3Heading size={size}>{name}</H3Heading>
-        <EpisodeText episode={episode} />
-        <DateLanguage language={language} when={when} />
+    const { name, author, title, language, when, episode, description } =
+      podcast;
+    return (
+      <Stack gap="2">
+        <Stack
+          alignItems="baseline"
+          gap="2"
+          flexWrap="wrap"
+          flexDirection={{ base: 'row', md: 'row' }}
+        >
+          <H3Heading size={size}>{name}</H3Heading>
+          <EpisodeText episode={episode} />
+          <DateLanguage language={language} when={when} />
+        </Stack>
+        <TitleText title={title} />
+        <AuthorText author={author} />
+        <DescriptionText description={description} />
       </Stack>
-      <TitleText title={title} />
-      <AuthorText author={author} />
-      <DescriptionText description={description} />
-    </Stack>
-  );
-};
+    );
+  };
 
 type DateLanguageProps = Pick<Podcast, 'language' | 'when'>;
 

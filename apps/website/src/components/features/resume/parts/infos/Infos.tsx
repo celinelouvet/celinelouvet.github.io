@@ -20,7 +20,7 @@ type InfosProps = {
   resume: Resume;
 };
 
-export const Infos: React.FC<InfosProps> = ({ resume }) => {
+export const Infos: React.FC<InfosProps> = function Infos({ resume }) {
   const size = useHeadingSize();
   const { t } = useTranslation('resume', { keyPrefix: 'infos' });
 

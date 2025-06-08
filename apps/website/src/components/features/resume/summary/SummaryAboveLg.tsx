@@ -3,13 +3,13 @@ import * as React from 'react';
 
 import { Picture } from '@/components/core';
 
-import { type SummaryProps } from './Summary';
 import { Infos, Remotes, Skills, Socials } from '../parts';
+import { type SummaryProps } from './Summary';
 
-export const SummaryAboveLg: React.FC<SummaryProps> = ({
+export const SummaryAboveLg: React.FC<SummaryProps> = function SummaryAboveLg({
   resume,
   ...props
-}) => {
+}) {
   return (
     <Stack
       backgroundColor={{ base: 'brand.900', _dark: 'brand.200' }}

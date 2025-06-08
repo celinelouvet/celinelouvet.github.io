@@ -8,7 +8,9 @@ type ContentProps = {
   talkSubjectId?: string;
 };
 
-export const Content: React.FC<ContentProps> = ({ talkSubjectId }) => {
+export const Content: React.FC<ContentProps> = function Content({
+  talkSubjectId,
+}) {
   const { error, slideDeck } = useSlideDeck(talkSubjectId);
 
   if (error || !slideDeck) {

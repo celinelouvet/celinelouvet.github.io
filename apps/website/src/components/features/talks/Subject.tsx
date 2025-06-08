@@ -23,10 +23,10 @@ export type PossibleSubjectProps = {
   subject: TalkSubject;
 };
 
-export const Subject: React.FC<PossibleSubjectProps> = ({
+export const Subject: React.FC<PossibleSubjectProps> = function Subject({
   subjectId,
   subject,
-}) => {
+}) {
   const { topic, summary, availableForCfp, descriptions } = subject;
   const { log } = useLogger();
   const { t } = useTranslation('talks', { keyPrefix: 'talk' });

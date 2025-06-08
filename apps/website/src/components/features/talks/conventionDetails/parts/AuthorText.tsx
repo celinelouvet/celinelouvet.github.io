@@ -6,7 +6,9 @@ import { type Podcast } from '@/data';
 
 export type AuthorTextProps = Pick<Podcast, 'author'>;
 
-export const AuthorText: React.FC<AuthorTextProps> = ({ author }) => {
+export const AuthorText: React.FC<AuthorTextProps> = function AuthorText({
+  author,
+}) {
   const { t } = useTranslation('resume', { keyPrefix: 'podcasts' });
   if (!author) {
     return null;

@@ -14,7 +14,7 @@ const emptySurvey = {
   state: SurveyState.InProgress,
 };
 
-const getId = (id?: string | string[]): string | null => {
+function getId(id?: string | string[]): string | null {
   if (!id) {
     return null;
   }
@@ -23,9 +23,9 @@ const getId = (id?: string | string[]): string | null => {
   }
 
   return id;
-};
+}
 
-const getState = (survey?: SurveyByConvention): SurveyState => {
+function getState(survey?: SurveyByConvention): SurveyState {
   if (!survey) {
     return SurveyState.Unknown;
   }
@@ -43,16 +43,16 @@ const getState = (survey?: SurveyByConvention): SurveyState => {
   }
 
   return SurveyState.InProgress;
-};
+}
 
-export const useSurveyInfos = (
+export function useSurveyInfos(
   talkSubjectId?: string | string[],
   conventionId?: string | string[],
 ): {
   surveyId: string | null;
   surveyPoll: SurveyPoll | null;
   state: SurveyState;
-} => {
+} {
   const { talkSubjects } = useResume();
 
   const parsedTalkSubjectId = getId(talkSubjectId);
@@ -89,4 +89,4 @@ export const useSurveyInfos = (
     surveyPoll,
     state: getState(survey),
   };
-};
+}

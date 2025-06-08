@@ -15,39 +15,40 @@ type SurveyResultsChoiceProps = {
   questionCount: number;
 };
 
-export const SurveyResultsChoice: React.FC<SurveyResultsChoiceProps> = ({
-  question,
-  results,
-  currentIndex,
-  questionCount,
-}) => {
-  const { t } = useTranslation('components', { keyPrefix: 'survey' });
+export const SurveyResultsChoice: React.FC<SurveyResultsChoiceProps> =
+  function SurveyResultsChoice({
+    question,
+    results,
+    currentIndex,
+    questionCount,
+  }) {
+    const { t } = useTranslation('components', { keyPrefix: 'survey' });
 
-  const { total } = useQuestionResults(question, results);
+    const { total } = useQuestionResults(question, results);
 
-  if (!question) return null;
-  if (!results) return null;
+    if (!question) return null;
+    if (!results) return null;
 
-  const { title } = question;
-  return (
-    <SlideContent
-      type={SlideContentTypes.titleWithContent}
-      title={`${currentIndex + 1}/${questionCount} — ${title}`}
-    >
-      <HStack width="100%" height="100%" alignItems="center" gap="10%">
-        <Box width="45%" height="100%">
-          <SurveyResultsPie question={question} results={results} />
-        </Box>
+    const { title } = question;
+    return (
+      <SlideContent
+        type={SlideContentTypes.titleWithContent}
+        title={`${currentIndex + 1}/${questionCount} — ${title}`}
+      >
+        <HStack width="100%" height="100%" alignItems="center" gap="10%">
+          <Box width="45%" height="100%">
+            <SurveyResultsPie question={question} results={results} />
+          </Box>
 
-        <Stack width="45%" height="100%" justifyContent="center" gap="2em">
-          <Flex flexDirection="row" gap="1em" fontSize="1.25em">
-            <Text fontWeight="700">{t('allVotes')}</Text>
-            <Text>{total}</Text>
-          </Flex>
+          <Stack width="45%" height="100%" justifyContent="center" gap="2em">
+            <Flex flexDirection="row" gap="1em" fontSize="1.25em">
+              <Text fontWeight="700">{t('allVotes')}</Text>
+              <Text>{total}</Text>
+            </Flex>
 
-          <SurveyResultsBreakdown question={question} results={results} />
-        </Stack>
-      </HStack>
-    </SlideContent>
-  );
-};
+            <SurveyResultsBreakdown question={question} results={results} />
+          </Stack>
+        </HStack>
+      </SlideContent>
+    );
+  };

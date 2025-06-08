@@ -6,7 +6,7 @@ import {
   slideDecks,
 } from '@/components/slideDecks';
 
-export const useSlideDeck = (talkSubjectId?: string, prefix = '') => {
+export function useSlideDeck(talkSubjectId?: string, prefix = '') {
   const [slideDeck, setSlideDeck] = React.useState<SlideDeck | null>(null);
   const [error, setError] = React.useState<string | null>(null);
 
@@ -29,4 +29,4 @@ export const useSlideDeck = (talkSubjectId?: string, prefix = '') => {
     error,
     slideDeck,
   };
-};
+}

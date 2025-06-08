@@ -11,7 +11,7 @@ export type SummaryProps = Omit<ChakraStackProps, 'children'> & {
   resume: Resume;
 };
 
-export const Summary: React.FC<SummaryProps> = ({ resume }) => {
+export const Summary: React.FC<SummaryProps> = function Summary({ resume }) {
   return (
     <>
       <Box display={{ base: 'block', md: 'none' }}>

@@ -7,7 +7,7 @@ export type RoleTextProps = {
   role?: string;
 };
 
-export const RoleText: React.FC<RoleTextProps> = ({ role }) => {
+export const RoleText: React.FC<RoleTextProps> = function RoleText({ role }) {
   const size = useHeadingSize();
 
   if (!role) {

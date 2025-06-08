@@ -14,15 +14,15 @@ type TalksProps = {
   resume: Resume;
 };
 
-export const Talks: React.FC<TalksProps> = ({ resume }) => {
+export const Talks: React.FC<TalksProps> = function Talks({ resume }) {
   const { t } = useTranslation('talks');
 
   const { comingConventions, alreadyDoneConventions } =
     useGroupByConventions(resume);
 
-  const scrollTo = (id: string) => {
+  function scrollTo(id: string) {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  };
+  }
 
   return (
     <Stack gap="16">

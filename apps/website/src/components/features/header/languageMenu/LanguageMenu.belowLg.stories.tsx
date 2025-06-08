@@ -2,7 +2,7 @@ import { Flex } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
-import { LanguageMenuInner as LanguageMenuComponent } from './LanguageMenu';
+import { LanguageMenuInner as LanguageMenuComponent } from './LanguageMenuInner';
 
 const meta = {
   title: 'Features/Header/BelowLg/Parts',

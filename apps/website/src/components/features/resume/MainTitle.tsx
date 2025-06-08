@@ -9,7 +9,9 @@ type MainTitleProps = {
   resume: Resume;
 };
 
-export const MainTitle: React.FC<MainTitleProps> = ({ resume }) => {
+export const MainTitle: React.FC<MainTitleProps> = function MainTitle({
+  resume,
+}) {
   const size = useHeadingSize();
 
   const fullname = `${resume.firstname} ${resume.lastname}`;

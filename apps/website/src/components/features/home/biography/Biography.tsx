@@ -9,7 +9,9 @@ export type BiographyProps = {
   biographies: string[];
 };
 
-export const Biography: React.FC<BiographyProps> = ({ biographies }) => {
+export const Biography: React.FC<BiographyProps> = function Biography({
+  biographies,
+}) {
   const { t } = useTranslation('home', { keyPrefix: 'biography' });
   const { log } = useLogger();
 

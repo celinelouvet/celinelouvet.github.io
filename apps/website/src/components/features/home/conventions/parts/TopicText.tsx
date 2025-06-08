@@ -6,7 +6,9 @@ import { useHeadingSize } from '@/hooks';
 
 export type TopicTextProps = Pick<TalkSubject, 'topic'>;
 
-export const TopicText: React.FC<TopicTextProps> = ({ topic }) => {
+export const TopicText: React.FC<TopicTextProps> = function TopicText({
+  topic,
+}) {
   const size = useHeadingSize();
   if (!topic) {
     return null;

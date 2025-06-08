@@ -1,6 +1,6 @@
 import { type Section, url2slugs } from './sections';
 
-export const useActiveSection = (asPath: string): Section => {
+export function useActiveSection(asPath: string): Section {
   const root = keepRoot(asPath);
 
   if (!url2slugs.has(root)) {
@@ -22,9 +22,9 @@ export const useActiveSection = (asPath: string): Section => {
     to: root,
     slug,
   };
-};
+}
 
-export const keepRoot = (path: string): string => {
+export function keepRoot(path: string): string {
   const [, second] = [...path.matchAll(/\//g)];
 
   if (!second) {
@@ -32,4 +32,4 @@ export const keepRoot = (path: string): string => {
   }
 
   return path.slice(0, second.index);
-};
+}

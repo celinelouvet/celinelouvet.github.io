@@ -1,13 +1,13 @@
 import { Stack } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { type SummaryProps } from './Summary';
 import { Infos, Remotes, Skills, Socials } from '../parts';
+import { type SummaryProps } from './Summary';
 
-export const SummaryBelowMd: React.FC<SummaryProps> = ({
+export const SummaryBelowMd: React.FC<SummaryProps> = function SummaryBelowMd({
   resume,
   ...props
-}) => {
+}) {
   return (
     <Stack
       backgroundColor={{ base: 'brand.900', _dark: 'brand.200' }}

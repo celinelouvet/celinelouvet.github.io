@@ -3,10 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { Link } from '@/components/core';
 import type { Links } from '@/data';
 
-type LinksType = keyof Links;
-
 type PodcastLinkProps = {
-  type: LinksType;
+  type: keyof Links;
   links?: Links;
 };
 

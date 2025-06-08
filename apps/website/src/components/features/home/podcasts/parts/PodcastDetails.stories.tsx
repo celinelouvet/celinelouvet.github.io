@@ -1,7 +1,7 @@
 import { Stack } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { basicPodcast, fullPodcast } from './fixtures';
+import { basicPodcast, fullPodcast } from '../fixtures';
 import { PodcastDetails as PodcastDetailsComponent } from './PodcastDetails';
 
 const meta = {

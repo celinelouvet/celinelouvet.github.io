@@ -1,9 +1,12 @@
+import dayjs from 'dayjs';
+
 import {
   type Convention,
   type Podcast,
   type Resume,
   type Talk,
   type TalkSubject,
+  type Volunteering,
 } from './models';
 import { highwayToFailSurveyFr } from './talks';
 
@@ -555,11 +558,43 @@ const talks = [
   },
 ] satisfies Talk[];
 
+const volunteering = [
+  {
+    name: 'Crafts Records',
+    role: 'Coach for first-time speakers',
+    description:
+      'A collective of experienced speakers coaching first-time speakers to help them get started at conferences.',
+    from: '2024-09-01',
+    site: 'https://craftsrecords.org',
+    lightLogoId: 'crafts-records.svg',
+    darkLogoId: 'crafts-records.svg',
+    tasks: [
+      { name: 'Snowcamp 2025' },
+      { name: 'DevLille 2025' },
+      { name: 'Cloud Nord 2025' },
+      { name: 'Snowcamp 2026 (incoming)' },
+    ],
+  },
+  {
+    name: 'Yeeso',
+    role: 'Mentoring Squad Leader',
+    description:
+      'Organization aiming to accelerate the feminization of IT teams through awareness programs, mentoring, and networking.',
+    from: '2024-09-01',
+    site: 'https://yeeso.fr',
+    lightLogoId: 'yeeso-light.svg',
+    darkLogoId: 'yeeso-dark.svg',
+  },
+] satisfies Volunteering[];
+
+const firstExperience = '2006-02-01';
+const fromFirstExperience = dayjs().diff(firstExperience, 'year');
+
 const resume = {
   firstname: 'Céline',
   lastname: 'Louvet',
   birthdate: '1980-12-02',
-  firstExperience: '2006-02-01',
+  firstExperience,
   email: 'celine.louvet@gmail.com',
   website: 'https://celine.louvet.me',
   title: 'Staff engineer / Senior lead developer',
@@ -571,14 +606,18 @@ const resume = {
   ],
   hobbies: 'Drawing, painting, clay modeling, sports',
   biographies: [
-    'Backend developer and passionate, for 18 years, loves reaching stability and quality for production applications.',
+    `Backend developer and passionate, for ${fromFirstExperience} years, loves reaching stability and quality for production applications.`,
     'Specializing into cloud architectures, with a liking for functional languages.',
+    'Speaker at conferences on technology topics, experience sharing, and methodologies.',
+    'Volunteer for NGOs dedicated to mentoring, Crafts Records as first-time speakers coach and Yeeso as Mentoring Squad Leader.',
     'Currently lead developer at Shine.',
   ],
   descriptions: [
     'Backend Senior Developer, in Typescript, with a liking for functional languages.',
     'Several experiences as lead developer or staff engineer, with developers teams management.',
     'Several experiences as Technical Leader, with legacy rework or from scratch creation, architecture and methodology practices set up.',
+    'Speaker at conferences on technology topics, experience sharing, and methodologies.',
+    'Volunteer for NGOs dedicated to mentoring, Crafts Records as first-time speakers coach and Yeeso as Mentoring Squad Leader.',
   ],
   skills: [
     'Build phase, wih stability and quality as a goal',
@@ -1303,6 +1342,7 @@ const resume = {
       when: '2013-03-01',
     },
   ],
+  volunteering,
 } satisfies Resume;
 
 export default resume;

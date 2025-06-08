@@ -16,7 +16,7 @@ export interface SurveyResultsProps
 export const TalkSurveyResults = React.forwardRef<
   HTMLDivElement,
   SurveyResultsProps
->(({ talkSubjectId, conventionId }, ref) => {
+>(function TalkSurveyResults({ talkSubjectId, conventionId }, ref) {
   const { t } = useTranslation('components', { keyPrefix: 'survey' });
 
   const { surveyPoll, loading, results, error } = useSurveyResults(

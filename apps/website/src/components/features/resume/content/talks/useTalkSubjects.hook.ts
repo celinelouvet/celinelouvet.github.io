@@ -16,28 +16,28 @@ type HookType = {
   talkSubjects: Map<string, TalkSubject>;
 };
 
-export const useTalkSubjects = ({
+export function useTalkSubjects({
   conventions,
   talks,
   talkSubjects,
-}: HookType): TalkWithConventions[] => {
+}: HookType): TalkWithConventions[] {
   const allConventionTalks = talks
     .map((talk) => asConventionTalk({ talk, conventions, talkSubjects }))
     .sort(({ when: when1 }, { when: when2 }) => dayjs(when2).diff(when1));
 
   return allConventionTalks.reduce(groupBySubjectId, []);
-};
+}
 
 type AsConventionTalkType = {
   talk: Talk;
   talkSubjects: Map<string, TalkSubject>;
   conventions: Map<string, Convention>;
 };
-const asConventionTalk = ({
+function asConventionTalk({
   talk,
   conventions,
   talkSubjects,
-}: AsConventionTalkType): FullTalk => {
+}: AsConventionTalkType): FullTalk {
   const { conventionId, subjectId } = talk;
 
   const convention = conventions.get(conventionId);
@@ -52,12 +52,12 @@ const asConventionTalk = ({
     ...subject,
     convention: { ...convention, when: talk.when },
   };
-};
+}
 
-const groupBySubjectId = (
+function groupBySubjectId(
   acc: TalkWithConventions[],
   { convention, ...currentTalk }: FullTalk,
-) => {
+) {
   const index = acc.findIndex(
     ({ subjectId }) => subjectId === currentTalk.subjectId,
   );
@@ -69,4 +69,4 @@ const groupBySubjectId = (
   }
 
   return acc satisfies TalkWithConventions[];
-};
+}

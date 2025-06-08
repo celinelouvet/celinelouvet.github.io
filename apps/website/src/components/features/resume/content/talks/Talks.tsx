@@ -13,7 +13,7 @@ export type TalksProps = {
   resume: Resume;
 };
 
-export const Talks: React.FC<TalksProps> = ({ resume }) => {
+export const Talks: React.FC<TalksProps> = function Talks({ resume }) {
   const size = useHeadingSize();
   const talkSubjects = useTalkSubjects(resume);
   const { t } = useTranslation('resume', { keyPrefix: 'talks' });

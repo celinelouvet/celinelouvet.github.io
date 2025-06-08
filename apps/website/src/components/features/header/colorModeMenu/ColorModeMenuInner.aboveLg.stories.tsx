@@ -1,7 +1,7 @@
 import { type Meta, type StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
-import { ColorModeMenuInner as ColorModeMenuComponent } from './ColorModeMenu';
+import { ColorModeMenuInner as ColorModeMenuComponent } from './ColorModeMenuInner';
 
 const meta = {
   title: 'Features/Header/AboveLg/Parts',

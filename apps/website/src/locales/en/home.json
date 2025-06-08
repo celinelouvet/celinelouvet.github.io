@@ -26,5 +26,9 @@
     "title": "Podcasts",
     "seeAll": "See all podcasts",
     "date": "MMM D YYYY"
+  },
+  "volunteering": {
+    "title": "volunteering",
+    "seeSite": "See the association's website"
   }
 }

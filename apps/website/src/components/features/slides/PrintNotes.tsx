@@ -8,7 +8,9 @@ type PrintNotesProps = {
   talkSubjectId?: string;
 };
 
-export const PrintNotes: React.FC<PrintNotesProps> = ({ talkSubjectId }) => {
+export const PrintNotes: React.FC<PrintNotesProps> = function PrintNotes({
+  talkSubjectId,
+}) {
   const { error, slideDeck } = useSlideDeck(talkSubjectId, 'Notes');
 
   if (error || !slideDeck) {

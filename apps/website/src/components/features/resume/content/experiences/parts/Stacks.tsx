@@ -10,18 +10,7 @@ export type StacksProps = {
   stacks?: XPStack[];
 };
 
-const buildTechnos = (technos: (string | Platform)[]) => {
-  return technos
-    .map((techno: string | Platform) => {
-      if (typeof techno === 'string') {
-        return techno;
-      }
-      return `${techno.type} (${techno.technos.join(', ')})`;
-    })
-    .join(', ');
-};
-
-export const Stacks: React.FC<StacksProps> = ({ stacks }) => {
+export const Stacks: React.FC<StacksProps> = function Stacks({ stacks }) {
   const size = useHeadingSize();
   const { t } = useTranslation('resume', {
     keyPrefix: 'experiences.experience',
@@ -50,3 +39,14 @@ export const Stacks: React.FC<StacksProps> = ({ stacks }) => {
     </>
   );
 };
+
+function buildTechnos(technos: (string | Platform)[]) {
+  return technos
+    .map((techno: string | Platform) => {
+      if (typeof techno === 'string') {
+        return techno;
+      }
+      return `${techno.type} (${techno.technos.join(', ')})`;
+    })
+    .join(', ');
+}

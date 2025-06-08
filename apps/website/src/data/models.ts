@@ -139,6 +139,7 @@ export type Resume = {
   educations: Education[];
   trainings: Training[];
   certifications: Certification[];
+  volunteering: Volunteering[];
 };
 
 export type ConventionTalk = Convention & TalkSubject & Talk;
@@ -152,3 +153,12 @@ export type ConventionWithTalks = Convention & {
   talks: TalkWithSubject[];
   coming: boolean;
 };
+
+export type Volunteering = Period &
+  Role & {
+    name: string;
+    description: string;
+    site: string;
+    lightLogoId: string;
+    darkLogoId: string;
+  };
