@@ -23,7 +23,8 @@
     "test": "turbo run test",
     "typecheck": "turbo run typecheck",
     "storybook": "turbo run storybook",
-    "slides": "turbo run slides"
+    "slides": "turbo run slides",
+    "resume": "turbo run resume"
   },
   "devDependencies": {
     "prettier": "3.5.2",
