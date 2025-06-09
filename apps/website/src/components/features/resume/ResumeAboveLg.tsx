@@ -17,12 +17,16 @@ export const ResumeAboveLg: React.FC<ResumeProps> = function ResumeAboveLg({
   const [summaryWidth] = useToken('space', ['summary.space']);
 
   return (
-    <Grid gridTemplateColumns={`[col1] ${summaryWidth} [line2] auto`}>
+    <Grid
+      gridTemplateColumns={`[col1] ${summaryWidth} [line2] auto`}
+      columnGap="6"
+      padding="6"
+    >
       <Box gridColumn="1 / span 2" bgGradient="brand" padding="6">
         <MainTitle resume={resume} />
       </Box>
 
-      <Summary resume={resume} />
+      <Summary resume={resume} height="100%" />
       <Content resume={resume} />
     </Grid>
   );

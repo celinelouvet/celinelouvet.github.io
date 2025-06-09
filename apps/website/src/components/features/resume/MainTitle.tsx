@@ -17,7 +17,10 @@ export const MainTitle: React.FC<MainTitleProps> = function MainTitle({
   const fullname = `${resume.firstname} ${resume.lastname}`;
 
   return (
-    <Box paddingLeft={{ lg: 'summary.space', base: '0' }} color="white">
+    <Box
+      paddingLeft={{ lg: 'summary.space', base: '0', _print: '0' }}
+      color="white"
+    >
       <H1Heading size={size}>{fullname}</H1Heading>
       <H2Heading size={size}>{resume.title}</H2Heading>
     </Box>

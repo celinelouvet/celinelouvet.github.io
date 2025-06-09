@@ -18,9 +18,15 @@ type ContentProps = Omit<ChakraStackProps, 'children'> & {
 export const Content: React.FC<ContentProps> = function Content({ resume }) {
   return (
     <Stack gap="8" padding="6">
-      <Stack direction="row-reverse" gap="6" alignItems="center">
+      <Stack
+        direction="row-reverse"
+        gap="6"
+        alignItems="center"
+        _print={{ display: 'none' }}
+      >
         <PdfDownloader />
       </Stack>
+
       <Description descriptions={resume.descriptions} />
       <Experiences experiences={resume.experiences} />
       <Talks resume={resume} />

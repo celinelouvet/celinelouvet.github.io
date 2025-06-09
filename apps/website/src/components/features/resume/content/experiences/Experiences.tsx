@@ -23,7 +23,11 @@ export const Experiences: React.FC<ExperiencesProps> = function Experiences({
 
       <Stack gap="8">
         {experiences.map((job) => (
-          <ExperienceDetails key={`${job.company}-${job.from}`} job={job} />
+          <ExperienceDetails
+            key={`${job.company}-${job.from}`}
+            job={job}
+            level={'main'}
+          />
         ))}
       </Stack>
     </Stack>

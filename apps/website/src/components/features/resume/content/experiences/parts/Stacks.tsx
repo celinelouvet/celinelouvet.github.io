@@ -1,4 +1,4 @@
-import { Flex, Stack, Text } from '@chakra-ui/react';
+import { Grid, GridItem, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -24,18 +24,30 @@ export const Stacks: React.FC<StacksProps> = function Stacks({ stacks }) {
     <>
       <H4Heading size={size}>{t('stacks')}</H4Heading>
 
-      <Stack paddingLeft="6" gap="0">
-        {stacks.map(({ type, technos }) => (
-          <Flex key={`stack-${type}`} direction={{ md: 'row', base: 'column' }}>
+      <Grid
+        gridTemplateColumns={
+          stacks.length > 1
+            ? {
+                md: `1fr 1fr`,
+                base: `100%`,
+                _print: `1fr 1fr`,
+              }
+            : `100%`
+        }
+        gap="6"
+      >
+        {stacks.map(({ type, technos = [] }) => (
+          <GridItem key={`stack-${type}`} paddingLeft="6">
             {type ? (
-              <Text fontWeight="700" width="120px">
+              <Text fontWeight="700" width="10em">
                 {type}
               </Text>
             ) : null}
+
             <Text flex="1">{buildTechnos(technos)}</Text>
-          </Flex>
+          </GridItem>
         ))}
-      </Stack>
+      </Grid>
     </>
   );
 };

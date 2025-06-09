@@ -1,0 +1,22 @@
+{
+  "name": "@repo/resume-generator",
+  "license": "MIT",
+  "version": "1.0.0",
+  "module": "src/run.ts",
+  "type": "module",
+  "scripts": {
+    "resume": "bun run src/run.ts",
+    "clean": "rm -rf .turbo && rm -fr _generated"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "5.7.3"
+  },
+  "dependencies": {
+    "commander": "14.0.0",
+    "puppeteer": "24.9.0",
+    "bun": "latest"
+  }
+}

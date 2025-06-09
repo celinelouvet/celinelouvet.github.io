@@ -1,8 +1,8 @@
-import { Box, List } from '@chakra-ui/react';
+import { Box, Stack, Timeline } from '@chakra-ui/react';
 import * as React from 'react';
-import { BsCircleFill } from 'react-icons/bs';
 
 import { type Experience } from '@/data';
+import { useIsPrint } from '@/hooks';
 
 import { ExperienceDetails } from './ExperienceDetails';
 
@@ -11,31 +11,47 @@ export type SubjobsProps = {
 };
 
 export const Subjobs: React.FC<SubjobsProps> = ({ subjobs }) => {
-  if (!subjobs) return null;
+  const isPrint = useIsPrint();
+
+  if (!subjobs || subjobs.length === 0) return null;
+
+  if (isPrint) {
+    return (
+      <Stack gap="4">
+        {subjobs.map((subjob) => (
+          <Box
+            key={`xp-${subjob.company}-${subjob.from}`}
+            marginLeft="8"
+            paddingX="8"
+            paddingY="2"
+            borderLeft="3px solid"
+            borderColor="brand.700"
+            borderLeftRadius="md"
+          >
+            <ExperienceDetails job={subjob} level="sub" />
+          </Box>
+        ))}
+      </Stack>
+    );
+  }
 
   return (
-    <List.Root listStyleType="circle">
+    <Timeline.Root variant="subtle">
       {subjobs.map((subjob) => (
-        <List.Item
-          key={`xp-${subjob.company}-${subjob.from}`}
-          display="flex"
-          alignItems="baseline"
-          borderLeftColor="brand.500"
-          borderLeftStyle="solid"
-          borderLeftWidth="2px"
-          paddingLeft="8"
-          paddingBottom="4"
-        >
-          <List.Indicator
-            as={BsCircleFill}
-            color="brand.500"
-            marginLeft="-41px"
-          />
-          <Box fontSize="0.9em">
-            <ExperienceDetails job={subjob} />
-          </Box>
-        </List.Item>
+        <Timeline.Item key={`xp-${subjob.company}-${subjob.from}`}>
+          <Timeline.Connector>
+            <Timeline.Separator />
+            <Timeline.Indicator />
+          </Timeline.Connector>
+
+          <Timeline.Content>
+            <Timeline.Title>
+              <ExperienceDetails job={subjob} level="sub" />
+            </Timeline.Title>
+          </Timeline.Content>
+        </Timeline.Item>
       ))}
-    </List.Root>
+      <Timeline.Item />
+    </Timeline.Root>
   );
 };
