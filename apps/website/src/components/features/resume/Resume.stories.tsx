@@ -25,7 +25,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const ResumeBelowLg: Story = {
+export const ResumeBelowMd: Story = {
   parameters: {
     viewport: { defaultViewport: 'mobile2' },
   },

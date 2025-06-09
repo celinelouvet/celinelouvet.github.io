@@ -19,7 +19,7 @@ export const Trainings: React.FC<TrainingsProps> = function Trainings({
   const { t } = useTranslation('resume', { keyPrefix: 'trainings' });
 
   return (
-    <Stack gap="4">
+    <Stack gap="4" _print={{ breakBefore: 'page', breakInside: 'avoid' }}>
       <H2Heading size={size}>{t('title')}</H2Heading>
 
       <Stack gap="8">

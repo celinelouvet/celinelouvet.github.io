@@ -14,5 +14,9 @@ export const RoleText: React.FC<RoleTextProps> = function RoleText({ role }) {
     return null;
   }
 
-  return <H4Heading size={size}>{role}</H4Heading>;
+  return (
+    <H4Heading size={size} _print={{ breakAfter: 'avoid' }}>
+      {role}
+    </H4Heading>
+  );
 };

@@ -1,6 +1,7 @@
 export { useApi } from './useApi.hook';
 export { useGroupByConventions } from './useGroupByConventions.hook';
 export { useHeadingSize } from './useHeadingSize.hook';
+export { useIsPrint } from './useIsPrint.hook';
 export { useLogger } from './useLogger.hook';
 export { useResume } from './useResume.hook';
 export { useSurveyResults } from './useSurveyResults.hook';

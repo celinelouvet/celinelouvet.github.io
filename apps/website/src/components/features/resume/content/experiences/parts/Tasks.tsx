@@ -25,10 +25,15 @@ export const Tasks: React.FC<TasksProps> = function Tasks({ tasks }) {
       <H4Heading size={size}>{t('tasks')}</H4Heading>
 
       <Grid
-        gridTemplateColumns={{
-          md: `1fr 1fr`,
-          base: `100%`,
-        }}
+        gridTemplateColumns={
+          tasks.length > 1
+            ? {
+                md: `1fr 1fr`,
+                base: `100%`,
+                _print: `1fr 1fr`,
+              }
+            : `100%`
+        }
         gap="6"
       >
         {tasks.map(({ name, subtasks = [] }) => (

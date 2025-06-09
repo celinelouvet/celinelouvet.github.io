@@ -1,4 +1,4 @@
-import { Link, type LinkProps, type RecipeProps } from '@chakra-ui/react';
+import { Icon, Link, type LinkProps, type RecipeProps } from '@chakra-ui/react';
 import * as React from 'react';
 import { LuExternalLink } from 'react-icons/lu';
 
@@ -25,7 +25,7 @@ export const ExternalLink = React.forwardRef<
       ref={ref}
       {...restProps}
     >
-      {children} <LuExternalLink />
+      {children} <Icon as={LuExternalLink} _print={{ display: 'none' }} />
     </Link>
   );
 });

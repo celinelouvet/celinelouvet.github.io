@@ -10,6 +10,7 @@ import { recipe as iconButtonRecipe } from './iconButton';
 import { recipe as linkRecipe } from './link';
 import { slotRecipe as tagSlotRecipe } from './tag';
 import { recipe as textRecipe } from './text';
+import { slotRecipe as timelineSlotRecipe } from './timeline';
 
 export const overrideRecipes = {
   ...buttonRecipe,
@@ -25,6 +26,7 @@ export const overrideSlotRecipes = {
   ...cardSlotRecipe,
   ...drawerSlotRecipe,
   ...tagSlotRecipe,
+  ...timelineSlotRecipe,
 } as ThemingConfig['slotRecipes'];
 
 export { CloseButton } from './closeButton';

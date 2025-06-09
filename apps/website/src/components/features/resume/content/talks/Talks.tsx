@@ -1,4 +1,4 @@
-import { Box, Stack } from '@chakra-ui/react';
+import { Box, Grid, Stack } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -19,16 +19,22 @@ export const Talks: React.FC<TalksProps> = function Talks({ resume }) {
   const { t } = useTranslation('resume', { keyPrefix: 'talks' });
 
   return (
-    <Stack>
+    <Stack gap="4" _print={{ breakBefore: 'page', breakInside: 'avoid' }}>
       <H2Heading size={size}>{t('title')}</H2Heading>
 
-      <Stack gap="8">
+      <Grid
+        gridTemplateColumns={{
+          base: `100%`,
+          _print: `1fr 1fr`,
+        }}
+        gap="6"
+      >
         {talkSubjects.map((talk) => (
           <Box key={talk.subjectId}>
             <TalkContent talk={talk} />
           </Box>
         ))}
-      </Stack>
+      </Grid>
     </Stack>
   );
 };

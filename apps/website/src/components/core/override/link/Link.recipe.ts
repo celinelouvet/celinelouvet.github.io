@@ -24,6 +24,9 @@ export const linkRecipe = defineRecipe({
         backgroundColor: 'brand.200',
       },
     },
+    _print: {
+      textDecoration: 'underline',
+    },
   },
   variants: {
     variant: {

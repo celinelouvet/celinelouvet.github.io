@@ -1,4 +1,4 @@
-import { Box, Stack } from '@chakra-ui/react';
+import { Box, Grid, Stack } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -27,16 +27,22 @@ export const Podcasts: React.FC<PodcastsProps> = function Podcasts({ resume }) {
   }, [podcasts]);
 
   return (
-    <Stack>
+    <Stack gap="4" _print={{ breakInside: 'avoid' }}>
       <H2Heading size={size}>{t('title')}</H2Heading>
 
-      <Stack gap="8">
+      <Grid
+        gridTemplateColumns={{
+          base: `100%`,
+          _print: `1fr 1fr`,
+        }}
+        gap="6"
+      >
         {sortedPodcasts.map((podcast) => (
           <Box key={podcast.name}>
             <PodcastDetails podcast={podcast} />
           </Box>
         ))}
-      </Stack>
+      </Grid>
     </Stack>
   );
 };

@@ -13,7 +13,7 @@ export const Descriptions: React.FC<DescriptionsProps> = function Descriptions({
   }
 
   return (
-    <Stack gap="0">
+    <Stack gap="0" _print={{ breakInside: 'avoid' }}>
       {descriptions.map((description, index) => (
         <Text key={index} marginBottom="0">
           {description}

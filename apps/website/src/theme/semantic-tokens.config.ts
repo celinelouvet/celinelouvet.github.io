@@ -3,6 +3,7 @@ import { type ThemingConfig } from '@chakra-ui/react';
 const pictureInPx = 200;
 const halfPictureInPx = pictureInPx / 2;
 const summarySize = pictureInPx * 1.75;
+const halfSummarySize = halfPictureInPx * 1.75;
 
 const brand100_rgb = '42, 89, 120';
 const brand500_rgb = '74, 144, 191';
@@ -23,6 +24,7 @@ export const semanticTokens = {
     'picture.size': { value: `${pictureInPx}px` },
     'picture.size.half': { value: `${halfPictureInPx}px` },
     'summary.size': { value: `${summarySize}px` },
+    'summary.size.half': { value: `${halfSummarySize}px` },
   },
   spacing: {
     'neg.picture.space.half': { value: `${-halfPictureInPx}px` },

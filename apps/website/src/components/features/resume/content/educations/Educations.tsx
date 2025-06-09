@@ -1,4 +1,4 @@
-import { Box, Stack } from '@chakra-ui/react';
+import { Box, Grid, Stack } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -19,16 +19,22 @@ export const Educations: React.FC<EducationsProps> = function Educations({
   const { t } = useTranslation('resume', { keyPrefix: 'educations' });
 
   return (
-    <Stack gap="4">
+    <Stack gap="4" _print={{ breakInside: 'avoid' }}>
       <H2Heading size={size}>{t('title')}</H2Heading>
 
-      <Stack gap="8">
+      <Grid
+        gridTemplateColumns={{
+          base: `100%`,
+          _print: `1fr 1fr`,
+        }}
+        gap="6"
+      >
         {educations.map((education) => (
           <Box key={education.school}>
             <EducationContent education={education} />
           </Box>
         ))}
-      </Stack>
+      </Grid>
     </Stack>
   );
 };

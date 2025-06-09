@@ -6,6 +6,7 @@ import { Provider } from '@/components/ui';
 import '@/lib/config';
 
 import '@/theme/fonts.css';
+import '@/theme/print.css';
 
 import App from './App';
 
