@@ -29,8 +29,9 @@ type Story = StoryObj<typeof meta>;
 export const AllExperienceVersions: Story = {
   args: {
     job: basicJob,
+    level: 'main',
   },
-  render: ({ job }) => {
+  render: ({ job, level }) => {
     const Item: React.FC<{ title: string; job: Experience }> = ({
       title,
       job,
@@ -40,7 +41,7 @@ export const AllExperienceVersions: Story = {
           <H3Heading>{title}</H3Heading>
         </Card.Header>
         <Card.Body>
-          <ExperienceDetailsComponent job={job} />
+          <ExperienceDetailsComponent job={job} level={level} />
         </Card.Body>
       </Card.Root>
     );
