@@ -37,7 +37,7 @@ export const AllTiles: Story = {
     const text3 = 'Some very long text 3';
     const text4 = 'Some very long text 4';
     return (
-      <Stack gap="2em">
+      <Stack gap="brand.200">
         <Item
           title="3 tiles"
           data={[{ text: text1 }, { text: text2 }, { text: text3 }]}

@@ -24,7 +24,7 @@ export const content = (
     }
     topRightCorner="Mi-Décembre 2017"
   >
-    <Stack gap="2em" width="100%" height="100%">
+    <Stack gap="brand.200" width="100%" height="100%">
       <ThumbsDown variant="slide">Manque d’expérience en startup</ThumbsDown>
     </Stack>
   </SlideContent>

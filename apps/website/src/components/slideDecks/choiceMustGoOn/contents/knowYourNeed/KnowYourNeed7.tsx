@@ -10,11 +10,11 @@ export const content = (
     title="Besoins flous"
     alignContent="flex-start"
   >
-    <Stack gap="1em" width="100%">
+    <Stack gap="brand.100" width="100%">
       <Quote title="Le client" variant="slide" opacity={0}>
         <Text>J’ai besoin d’un bouton pour télécharger un CSV.</Text>
       </Quote>
-      <Center color="brand.400" fontSize="2em">
+      <Center color="brand.400" fontSize="brand.200">
         <TbArrowBigDownFilled />
       </Center>
       <Quote title="Le client" variant="slide" opacity={0}>

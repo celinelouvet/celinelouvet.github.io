@@ -29,7 +29,7 @@ export const SlideContentWith2Columns: React.FC<SlideContentWith2ColumnsProps> =
           width="100%"
           height="100%"
           direction="row"
-          gap="2em"
+          gap="brand.200"
           alignItems="stretch"
           overflow="hidden"
         >

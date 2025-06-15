@@ -17,7 +17,7 @@ export const content = (
     title="Connaître son existant"
     alignContent="flex-start"
   >
-    <Stack width="100%" height="100%" gap="1em">
+    <Stack width="100%" height="100%" gap="brand.100">
       <ProgressiveList items={items} />
     </Stack>
   </SlideContent>

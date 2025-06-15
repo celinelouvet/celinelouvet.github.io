@@ -9,13 +9,13 @@ export const content = (
     title="Besoins flous"
     alignContent="flex-start"
   >
-    <Stack gap="1em" width="100%">
+    <Stack gap="brand.100" width="100%">
       <Quote title="Le client" variant="slide">
         <Text>
           Je m’en sers pour comparer les résultats des 3 derniers mois.
         </Text>
       </Quote>
-      <HStack gap="1em" alignItems="stretch" opacity={0}>
+      <HStack gap="brand.100" alignItems="stretch" opacity={0}>
         <Quote title="Moi" variant="rightSlide">
           <Text>Et, vous faites quoi des résultats ?</Text>
         </Quote>

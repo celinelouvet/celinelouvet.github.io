@@ -24,7 +24,7 @@ export const content = (
     }
     topRightCorner="Janvier 2019"
   >
-    <Stack gap="1em">
+    <Stack gap="brand.100">
       <Failure variant="slide">Je suis seule.</Failure>
     </Stack>
   </SlideContent>

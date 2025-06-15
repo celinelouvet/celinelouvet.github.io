@@ -18,7 +18,7 @@ export const content = (
     title="Questions à se poser"
     alignContent="flex-start"
   >
-    <Stack width="100%" height="100%" gap="1em">
+    <Stack width="100%" height="100%" gap="brand.100">
       <Text>Comment mettre en place notre solution ?</Text>
 
       <ProgressiveList items={items} />

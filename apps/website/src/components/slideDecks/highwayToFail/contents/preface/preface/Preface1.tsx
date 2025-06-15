@@ -10,7 +10,7 @@ export const content = (
     alignContent="flex-start"
   >
     <Center>
-      <Icon as={FaQuestion} boxSize="8em" color="brand.500" />
+      <Icon as={FaQuestion} boxSize="brand.800" color="brand.500" />
     </Center>
   </SlideContent>
 );

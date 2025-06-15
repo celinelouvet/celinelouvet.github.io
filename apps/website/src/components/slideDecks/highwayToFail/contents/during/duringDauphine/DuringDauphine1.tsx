@@ -22,7 +22,7 @@ export const content = (
       </React.Suspense>
     }
   >
-    <Stack width="100%" gap="1em">
+    <Stack width="100%" gap="brand.100">
       <Box>
         <Text>Anciens de Paris-Dauphine PSL.</Text>
       </Box>

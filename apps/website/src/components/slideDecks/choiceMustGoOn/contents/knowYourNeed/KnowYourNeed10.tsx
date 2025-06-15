@@ -13,10 +13,10 @@ export const content = (
       width="100%"
       height="100%"
       direction="row"
-      gap="2em"
+      gap="brand.200"
       alignItems="stretch"
     >
-      <Stack width="40%" gap="1em" opacity={0}>
+      <Stack width="40%" gap="brand.100" opacity={0}>
         <Box>
           <Text fontWeight="bold">Page WEB</Text>
           <Text>Affichage dynamique des données des mois précédents</Text>
@@ -26,7 +26,7 @@ export const content = (
           <Text>Envoi des emails</Text>
         </Box>
       </Stack>
-      <Stack width="30%" flexGrow="1" gap="1em" opacity={0}>
+      <Stack width="30%" flexGrow="1" gap="brand.100" opacity={0}>
         <ThumbsUp title="Pour le client" variant="slide">
           <Text>Gain de temps énorme, chaque mois</Text>
           <Text>Pas d’erreur dans le rapport</Text>

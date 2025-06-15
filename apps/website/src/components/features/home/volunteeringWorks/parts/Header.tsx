@@ -3,7 +3,6 @@ import type * as React from 'react';
 
 import { H3Heading, PeriodText } from '@/components/core';
 import type { Volunteering } from '@/data';
-import { useHeadingSize } from '@/hooks';
 
 type HeaderProps = {
   volunteering: Volunteering;
@@ -12,8 +11,6 @@ type HeaderProps = {
 export const Header: React.FC<HeaderProps> = function Header({
   volunteering: volunteering,
 }) {
-  const size = useHeadingSize();
-
   const period = {
     from: volunteering.from,
     to: volunteering.to,
@@ -26,7 +23,7 @@ export const Header: React.FC<HeaderProps> = function Header({
       direction={{ base: 'column', xl: 'row' }}
       flexWrap="wrap"
     >
-      <H3Heading size={size}>{volunteering.name}</H3Heading>
+      <H3Heading>{volunteering.name}</H3Heading>
       <PeriodText period={period} />
     </Flex>
   );

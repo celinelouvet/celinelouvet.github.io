@@ -24,10 +24,10 @@ export const content = (
       </React.Suspense>
     }
   >
-    <Stack width="100%" gap="1em">
+    <Stack width="100%" gap="brand.100">
       <Box>
         <Text>Ancien de l’ESSEC.</Text>
-        <Flex alignItems="center" gap="0.5em" marginLeft="1em">
+        <Flex alignItems="center" gap="brand.50" marginLeft="brand.100">
           <Icon as={BsArrowReturnRight} />
           <chakra.span>Inscription au programme de l’incubateur</chakra.span>
         </Flex>

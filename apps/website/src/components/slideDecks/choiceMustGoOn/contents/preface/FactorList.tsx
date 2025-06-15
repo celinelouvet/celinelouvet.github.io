@@ -26,8 +26,8 @@ const FactorLine: React.FC<{
         {index + 1}.
       </chakra.span>
       <chakra.span
-        paddingLeft="0.5em"
-        paddingRight="0.5em"
+        paddingLeft="brand.50"
+        paddingRight="brand.50"
         borderRightRadius="md"
         {...(contrast && { opacity: '0.4' })}
         {...(factor.highlighted && highlightedText)}
@@ -46,9 +46,9 @@ export const FactorList: React.FC<{
     <Grid
       templateColumns="2em 1fr"
       columnGap="0"
-      rowGap="0.5em"
+      rowGap="brand.50"
       width="45%"
-      lineHeight="1.5em"
+      lineHeight="brand.150"
     >
       {factors.map((factor, index) => (
         <FactorLine

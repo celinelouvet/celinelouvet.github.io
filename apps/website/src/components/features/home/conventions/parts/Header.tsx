@@ -3,7 +3,6 @@ import type * as React from 'react';
 
 import { H3Heading } from '@/components/core';
 import type { ConventionWithTalks } from '@/data';
-import { useHeadingSize } from '@/hooks';
 
 import { DateLanguage } from './DateLanguage';
 
@@ -12,8 +11,6 @@ type HeaderProps = {
 };
 
 export const Header: React.FC<HeaderProps> = function Header({ convention }) {
-  const size = useHeadingSize();
-
   return (
     <Flex
       gap="2"
@@ -21,7 +18,7 @@ export const Header: React.FC<HeaderProps> = function Header({ convention }) {
       direction={{ base: 'column', xl: 'row' }}
       flexWrap="wrap"
     >
-      <H3Heading size={size}>{convention.name}</H3Heading>
+      <H3Heading>{convention.name}</H3Heading>
       <DateLanguage {...convention} />
     </Flex>
   );

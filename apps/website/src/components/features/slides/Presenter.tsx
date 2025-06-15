@@ -44,7 +44,7 @@ export const Presenter: React.FC = function Presenter() {
           <HStack
             gap="8"
             width="100%"
-            height="8em"
+            height="brand.800"
             backgroundColor={{ base: 'brand.900', _dark: 'brand.200' }}
             borderRadius="md"
           >
@@ -94,7 +94,7 @@ export const Presenter: React.FC = function Presenter() {
             columns={3}
             gap="8"
             width="100%"
-            height="8em"
+            height="brand.800"
             backgroundColor={{ base: 'brand.900', _dark: 'brand.200' }}
             borderRadius="md"
           >

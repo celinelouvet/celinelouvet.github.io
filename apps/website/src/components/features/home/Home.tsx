@@ -21,7 +21,7 @@ export const Home: React.FC<HomeProps> = function Home({ resume }) {
     <Flex>
       <Grid
         gridTemplateColumns={{
-          md: `[col1] ${summaryWidth} [line2] auto`,
+          lg: `[col1] ${summaryWidth} [line2] auto`,
           base: `100%`,
         }}
         gap="8"

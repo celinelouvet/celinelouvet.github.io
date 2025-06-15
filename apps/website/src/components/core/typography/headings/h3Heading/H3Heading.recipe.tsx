@@ -15,10 +15,16 @@ export const h3HeadingRecipe = defineRecipe({
     },
     size: {
       md: {
-        fontSize: '1.5em',
+        fontSize: 'brand.150',
+        _print: {
+          fontSize: 'brand.125',
+        },
       },
       lg: {
-        fontSize: '1.7em',
+        fontSize: 'brand.170',
+        _print: {
+          fontSize: 'brand.150',
+        },
       },
     },
   },

@@ -18,13 +18,40 @@ export const h1HeadingRecipe = defineRecipe({
     },
     size: {
       sm: {
-        fontSize: '2.25em',
+        fontSize: 'brand.225',
+        base: {
+          fontSize: 'brand.175',
+        },
+        md: {
+          fontSize: 'brand.225',
+        },
+        _print: {
+          fontSize: 'brand.175',
+        },
       },
       md: {
-        fontSize: '2.5em',
+        fontSize: 'brand.275',
+        base: {
+          fontSize: 'brand.225',
+        },
+        md: {
+          fontSize: 'brand.275',
+        },
+        _print: {
+          fontSize: 'brand.225',
+        },
       },
       lg: {
-        fontSize: '2.75em',
+        fontSize: 'brand.300',
+        base: {
+          fontSize: 'brand.250',
+        },
+        md: {
+          fontSize: 'brand.275',
+        },
+        _print: {
+          fontSize: 'brand.250',
+        },
       },
     },
   },

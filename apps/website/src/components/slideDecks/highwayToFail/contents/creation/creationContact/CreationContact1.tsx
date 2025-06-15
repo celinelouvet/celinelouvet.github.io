@@ -23,7 +23,7 @@ export const content = (
     }
     topRightCorner="Mi-Décembre 2017"
   >
-    <Stack width="100%" gap="1em">
+    <Stack width="100%" gap="brand.100">
       <Box>
         <Text>Discussion lors d’un meetup avec une connaissance.</Text>
       </Box>

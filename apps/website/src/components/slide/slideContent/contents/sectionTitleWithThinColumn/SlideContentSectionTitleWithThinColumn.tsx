@@ -26,8 +26,8 @@ export const SlideContentSectionTitleWithThinColumn: React.FC<SlideContentSectio
           <Box
             width="23%"
             height="100%"
-            paddingX="2em"
-            paddingY="3em"
+            paddingX="brand.200"
+            paddingY="brand.300"
             backgroundColor="white"
           >
             {column1}
@@ -36,9 +36,9 @@ export const SlideContentSectionTitleWithThinColumn: React.FC<SlideContentSectio
           <Box
             width="77%"
             height="100%"
-            paddingLeft="1em"
-            paddingY="3em"
-            paddingRight="3em"
+            paddingLeft="brand.100"
+            paddingY="brand.300"
+            paddingRight="brand.300"
             backgroundColor="brand.700"
             color="brand.200"
           >

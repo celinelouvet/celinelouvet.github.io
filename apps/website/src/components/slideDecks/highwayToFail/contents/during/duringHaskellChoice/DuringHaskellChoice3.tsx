@@ -12,7 +12,7 @@ const VerticalTimelineDuring = React.lazy(() =>
 );
 
 const commonStyle = {
-  width: '4em',
+  width: 'brand.400',
   marginBottom: '0',
   paddingBottom: '0',
 };
@@ -37,11 +37,11 @@ export const content = (
     }
   >
     <Grid
-      templateColumns="5em 5em"
+      templateColumns="brand.500 brand.500"
       templateRows="repeat(1fr, 6)"
       alignItems="center"
       justifyItems="center"
-      columnGap="1em"
+      columnGap="brand.100"
       textAlign="center"
     >
       <GridItem>

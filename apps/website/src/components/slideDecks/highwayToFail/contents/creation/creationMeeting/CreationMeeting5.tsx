@@ -24,7 +24,7 @@ export const content = (
     }
     topRightCorner="Mi-Décembre 2017"
   >
-    <Stack height="100%" gap="1em">
+    <Stack height="100%" gap="brand.100">
       <ThumbsDown variant="slide">
         Manque de volonté de les challenger sur leur vision
       </ThumbsDown>

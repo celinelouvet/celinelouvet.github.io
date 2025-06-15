@@ -17,10 +17,31 @@ export const h2HeadingRecipe = defineRecipe({
     },
     size: {
       md: {
-        fontSize: '2em',
+        fontSize: 'brand.225',
+        base: {
+          fontSize: 'brand.150',
+        },
+        sm: {
+          fontSize: 'brand.175',
+        },
+        md: {
+          fontSize: 'brand.225',
+        },
+        _print: {
+          fontSize: 'brand.175',
+        },
       },
       lg: {
-        fontSize: '2.25em',
+        fontSize: 'brand.250',
+        base: {
+          fontSize: 'brand.200',
+        },
+        md: {
+          fontSize: 'brand.250',
+        },
+        _print: {
+          fontSize: 'brand.200',
+        },
       },
     },
   },

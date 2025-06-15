@@ -8,7 +8,7 @@ export const content = (
     type={SlideContentTypes.titleWithContent}
     title="Failure stories"
   >
-    <Icon as={FaEllipsisH} boxSize="8em" color="brand.500" />
+    <Icon as={FaEllipsisH} boxSize="brand.800" color="brand.500" />
   </SlideContent>
 );
 

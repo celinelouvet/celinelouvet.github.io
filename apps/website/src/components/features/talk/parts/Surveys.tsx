@@ -37,7 +37,7 @@ export const Surveys: React.FC<SurveysProps> = function Surveys({
         </Link.Internal>
       </Box>
 
-      <List.Root paddingLeft="1em">
+      <List.Root paddingLeft="brand.100">
         {surveys
           .filter(({ show }) => show)
           .map(({ name, opensAt, closesAt }) => (

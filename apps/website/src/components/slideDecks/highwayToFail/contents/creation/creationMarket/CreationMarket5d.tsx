@@ -24,13 +24,13 @@ export const content = (
     }
     topRightCorner="Mi-Décembre 2017"
   >
-    <Stack gap="1em">
+    <Stack gap="brand.100">
       <Text>Clients de type TPE et PME</Text>
 
-      <Stack gap="0.5em">
+      <Stack gap="brand.50">
         <chakra.span>Motivation éthique : 1 avis = 1 micro-don</chakra.span>
 
-        <Flex alignItems="center" gap="0.5em" marginLeft="1em">
+        <Flex alignItems="center" gap="brand.50" marginLeft="brand.100">
           <Icon as={BsArrowReturnRight} />
           <chakra.span>Déductible des impots de Fairvioo</chakra.span>
         </Flex>

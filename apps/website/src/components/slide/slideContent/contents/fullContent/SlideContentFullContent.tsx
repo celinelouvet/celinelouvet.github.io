@@ -18,11 +18,11 @@ export const SlideContentFullContent: React.FC<SlideContentFullContentProps> =
       <Box
         width="100%"
         height="100%"
-        padding="3em"
+        padding="brand.300"
         backgroundColor={backgroundColor}
         color={color}
         direction="row"
-        gap="2em"
+        gap="brand.200"
         alignItems="stretch"
         overflow="hidden"
         {...restProps}

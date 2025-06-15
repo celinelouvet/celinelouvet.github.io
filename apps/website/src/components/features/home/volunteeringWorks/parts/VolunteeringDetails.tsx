@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 
 import { H4Heading, Link } from '@/components/core';
 import type { Volunteering } from '@/data';
-import { useHeadingSize } from '@/hooks';
 
 import { Header } from './Header';
 import { OrganizationPicture } from './OrganizationPicture';
@@ -12,7 +11,6 @@ import { OrganizationPicture } from './OrganizationPicture';
 export const VolunteeringDetails: React.FC<{ volunteering: Volunteering }> =
   function VolunteeringDetails({ volunteering }) {
     const { t } = useTranslation('home', { keyPrefix: 'volunteering' });
-    const size = useHeadingSize();
 
     const tasks = (volunteering.tasks ?? []).map(({ name }) => name).join(', ');
 
@@ -37,7 +35,7 @@ export const VolunteeringDetails: React.FC<{ volunteering: Volunteering }> =
                 borderColor={{ base: 'brand.700', _dark: 'brand.600' }}
                 borderLeftRadius="md"
               >
-                <H4Heading size={size}>{volunteering.role}</H4Heading>
+                <H4Heading>{volunteering.role}</H4Heading>
                 {tasks.length > 0 ? <Text>{tasks}</Text> : null}
                 <Spacer />
                 <Box>

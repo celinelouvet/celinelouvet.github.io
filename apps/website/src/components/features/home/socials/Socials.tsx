@@ -17,7 +17,7 @@ export const Socials: React.FC<SocialsProps> = function Socials({ socials }) {
     <Box>
       <H2Heading>{t('title')}</H2Heading>
 
-      <List.Root gap="1" variant="plain">
+      <List.Root gap="1" variant="plain" fontSize={{ base: 'sm', sm: 'md' }}>
         {socials.map(({ name, handle, link }, index) => (
           <List.LinkItem
             key={index}

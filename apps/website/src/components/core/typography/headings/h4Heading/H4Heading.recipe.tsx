@@ -8,10 +8,16 @@ export const h4HeadingRecipe = defineRecipe({
   variants: {
     size: {
       md: {
-        fontSize: '1.2em',
+        fontSize: 'brand.120',
+        _print: {
+          fontSize: 'brand.110',
+        },
       },
       lg: {
-        fontSize: '1.4em',
+        fontSize: 'brand.140',
+        _print: {
+          fontSize: 'brand.120',
+        },
       },
     },
   },

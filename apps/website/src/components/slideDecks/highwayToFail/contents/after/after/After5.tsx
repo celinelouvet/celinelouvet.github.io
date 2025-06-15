@@ -23,7 +23,7 @@ export const content = (
       </React.Suspense>
     }
   >
-    <Stack gap="1em">
+    <Stack gap="brand.100">
       <Failure variant="slide">J’ai fait un burnout</Failure>
     </Stack>
   </SlideContent>

@@ -22,7 +22,7 @@ export const SlideContentMainTitle: React.FC<SlideContentMainTitleProps> =
           height="100%"
           alignItems="center"
           justifyContent="center"
-          gap="4em"
+          gap="brand.400"
         >
           <Box>
             <Title title={title} />

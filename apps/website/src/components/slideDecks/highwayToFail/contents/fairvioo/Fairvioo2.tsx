@@ -20,7 +20,7 @@ export const content = (
         height="100%"
         flexDirection="column"
         lineHeight="1.25"
-        fontSize="2.5em"
+        fontSize="brand.250"
         color="brand.500"
         fontWeight="900"
       >

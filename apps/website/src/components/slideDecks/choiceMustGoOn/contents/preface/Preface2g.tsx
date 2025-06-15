@@ -17,7 +17,7 @@ export const content = (
     alignContent="flex-start"
     topRightCorner="2015"
   >
-    <Stack gap="1em" width="100%">
+    <Stack gap="brand.100" width="100%">
       <Text>Produit par le « Standish group ».</Text>
       <Text>Résultat d’une recherche visant à identifier :</Text>
 

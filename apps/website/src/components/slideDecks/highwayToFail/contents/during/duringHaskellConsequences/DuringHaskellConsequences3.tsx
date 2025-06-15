@@ -24,7 +24,7 @@ export const content = (
     }
     topRightCorner="Eté 2018"
   >
-    <Stack gap="1em">
+    <Stack gap="brand.100">
       <Failure variant="slide">Oups, la roadmap</Failure>
       <Failure variant="slide">Perte de confiance</Failure>
     </Stack>

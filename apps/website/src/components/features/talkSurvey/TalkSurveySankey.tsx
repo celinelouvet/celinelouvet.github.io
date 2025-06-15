@@ -70,7 +70,7 @@ export const TalkSurveySankey = React.forwardRef<
       </Box>
 
       <Box>
-        <Skeleton loading={loading} minHeight="5em">
+        <Skeleton loading={loading} minHeight="brand.500">
           <Box textAlign="center">
             <Chart
               chartVersion="51"

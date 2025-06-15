@@ -27,7 +27,7 @@ export const content = (
       <HStack
         width="100%"
         height="100%"
-        gap="3em"
+        gap="brand.300"
         alignItems="stretch"
         justifyContent="space-between"
       >

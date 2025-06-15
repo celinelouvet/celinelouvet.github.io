@@ -14,12 +14,12 @@ export const content = (
       width="100%"
       alignItems="center"
       justifyContent="flex-start"
-      gap="3em"
+      gap="brand.300"
     >
       <Center width="20%">
-        <Icon as={LuTarget} boxSize="4em" color="brand.500" />
+        <Icon as={LuTarget} boxSize="brand.400" color="brand.500" />
       </Center>
-      <Stack flex="1" fontSize="1.25em" gap="1em">
+      <Stack flex="1" fontSize="brand.125" gap="brand.100">
         <Text>Se concentrer sur la valeur à apporter</Text>
       </Stack>
     </HStack>

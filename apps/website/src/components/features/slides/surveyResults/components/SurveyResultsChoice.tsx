@@ -40,8 +40,13 @@ export const SurveyResultsChoice: React.FC<SurveyResultsChoiceProps> =
             <SurveyResultsPie question={question} results={results} />
           </Box>
 
-          <Stack width="45%" height="100%" justifyContent="center" gap="2em">
-            <Flex flexDirection="row" gap="1em" fontSize="1.25em">
+          <Stack
+            width="45%"
+            height="100%"
+            justifyContent="center"
+            gap="brand.200"
+          >
+            <Flex flexDirection="row" gap="brand.100" fontSize="brand.125">
               <Text fontWeight="700">{t('allVotes')}</Text>
               <Text>{total}</Text>
             </Flex>

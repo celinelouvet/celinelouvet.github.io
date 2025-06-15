@@ -16,7 +16,7 @@ import { NavLink } from 'react-router';
 
 import { H3Heading, Link } from '@/components/core';
 import { type TalkSubject } from '@/data';
-import { useHeadingSize, useLogger } from '@/hooks';
+import { useLogger } from '@/hooks';
 
 export type PossibleSubjectProps = {
   subjectId: string;
@@ -30,7 +30,6 @@ export const Subject: React.FC<PossibleSubjectProps> = function Subject({
   const { topic, summary, availableForCfp, descriptions } = subject;
   const { log } = useLogger();
   const { t } = useTranslation('talks', { keyPrefix: 'talk' });
-  const size = useHeadingSize();
 
   const link = `/talks/${subjectId}`;
 
@@ -42,7 +41,7 @@ export const Subject: React.FC<PossibleSubjectProps> = function Subject({
             <LinkOverlay asChild>
               <NavLink to={link} onClick={() => log('Talk', { topic })}>
                 <Flex width="100%" alignItems="baseline" gap="8">
-                  <H3Heading size={size}>{topic}</H3Heading>
+                  <H3Heading>{topic}</H3Heading>
 
                   {availableForCfp ? (
                     <Tag.Root variant="subtle" size="lg">

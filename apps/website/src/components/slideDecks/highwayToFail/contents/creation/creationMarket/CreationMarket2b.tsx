@@ -29,7 +29,7 @@ const Yotpo = React.lazy(() =>
 
 const dateStyle = {
   fontFamily: 'PT Sans Narrow',
-  fontSize: '1.3em',
+  fontSize: 'brand.130',
   fontWeight: 600,
 };
 
@@ -45,7 +45,7 @@ export const content = (
     }
     topRightCorner="Mi-Décembre 2017"
   >
-    <HStack gap="1em" width="100%" height="100%">
+    <HStack gap="brand.100" width="100%" height="100%">
       <List.Root variant="slide" flex="1" alignSelf="start">
         <List.Item>Nombreux concurrents,</List.Item>
         <List.Item>En place depuis plusieurs années.</List.Item>

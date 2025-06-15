@@ -13,13 +13,13 @@ import * as React from 'react';
 
 import { DateText, H2Heading, H3Heading, Picture } from '@/components/core';
 
-import { promotionIcon } from './icons';
 import {
   ColorMode,
   type ContentPromotion,
   SlideContentTypes,
 } from '../../types';
 import { SlideContentWith2Columns } from '../content2Columns';
+import { promotionIcon } from './icons';
 
 type SlideContentPromotionProps = Omit<BoxProps, 'children'> &
   React.PropsWithChildren<ContentPromotion>;
@@ -52,13 +52,13 @@ export const SlideContentPromotion: React.FC<SlideContentPromotionProps> =
           height="100%"
           alignItems="stretch"
           justifyContent="center"
-          gap="1em"
+          gap="brand.100"
         >
           <Box>
             <Title title={title} />
           </Box>
 
-          <Box textAlign="center" marginBottom="2em">
+          <Box textAlign="center" marginBottom="brand.200">
             <H3Heading variant="slide">{author}</H3Heading>
           </Box>
 
@@ -67,7 +67,7 @@ export const SlideContentPromotion: React.FC<SlideContentPromotionProps> =
               <Grid
                 templateColumns="1fr 1fr"
                 templateRows="1fr 1fr"
-                gap="1em"
+                gap="brand.100"
                 width="80%"
                 height="100%"
               >
@@ -105,8 +105,8 @@ const Title: React.FC<{ title: string }> = ({ title }) => (
 );
 
 const Day: React.FC<{ time?: string }> = ({ time }) => (
-  <Flex w="100%" gap="0.5em" alignItems="center">
-    <Icon as={promotionIcon('day')} boxSize="1.25em" />
+  <Flex w="100%" gap="brand.50" alignItems="center">
+    <Icon as={promotionIcon('day')} boxSize="brand.125" />
     {time ? (
       <DateText
         dateFormat="D MMMM YYYY"
@@ -121,8 +121,8 @@ const Day: React.FC<{ time?: string }> = ({ time }) => (
 );
 
 const Time: React.FC<{ time?: string }> = ({ time }) => (
-  <Flex w="100%" gap="0.5em" alignItems="center">
-    <Icon as={promotionIcon('time')} boxSize="1.25em" />
+  <Flex w="100%" gap="brand.50" alignItems="center">
+    <Icon as={promotionIcon('time')} boxSize="brand.125" />
     {time ? (
       <DateText dateFormat="h:mm" when={time} variant="slide" color="white" />
     ) : (
@@ -132,15 +132,15 @@ const Time: React.FC<{ time?: string }> = ({ time }) => (
 );
 
 const Convention: React.FC<{ convention: string }> = ({ convention }) => (
-  <Flex w="100%" gap="0.5em" alignItems="center">
-    <Icon as={promotionIcon('convention')} boxSize="1.25em" />
+  <Flex w="100%" gap="brand.50" alignItems="center">
+    <Icon as={promotionIcon('convention')} boxSize="brand.125" />
     <chakra.span>{convention}</chakra.span>
   </Flex>
 );
 
 const Room: React.FC<{ room?: string }> = ({ room }) => (
-  <Flex w="100%" gap="0.5em" alignItems="center">
-    <Icon as={promotionIcon('room')} boxSize="1.25em" />
+  <Flex w="100%" gap="brand.50" alignItems="center">
+    <Icon as={promotionIcon('room')} boxSize="brand.125" />
     {room ? (
       <chakra.span>{room}</chakra.span>
     ) : (

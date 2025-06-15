@@ -27,7 +27,7 @@ export const content = (
       height="100%"
       alignItems="center"
       justifyContent="center"
-      gap="3em"
+      gap="brand.300"
     >
       <Stack gap="0" alignItems="center" justifyContent="center">
         <Title title={talk.title} />
@@ -42,7 +42,7 @@ export const content = (
       </Box>
 
       <Box alignSelf="start">
-        <HStack gap="2em">
+        <HStack gap="brand.200">
           {talk.socials.map(({ name, handle, onMain }, index) => {
             if (!onMain) return null;
             return (

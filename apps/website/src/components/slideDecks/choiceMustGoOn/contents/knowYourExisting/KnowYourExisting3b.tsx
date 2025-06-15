@@ -16,7 +16,7 @@ export const content = (
     title="Tech radar"
     alignContent="flex-start"
   >
-    <Stack gap="1em" height="100%" width="100%">
+    <Stack gap="brand.100" height="100%" width="100%">
       <Text>
         Liste des technos (ou méthodes) qui sont utilisées (ou ont été
         utilisées) avec leur niveau de maîtrise.

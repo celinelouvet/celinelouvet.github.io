@@ -9,9 +9,9 @@ import { type SurveyPollChoiceQuestion } from '@repo/models';
 import * as React from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
 
-import { surveyResultsPieRecipe } from './SurveyResultsPie.recipe';
 import { useColorModeToken } from '../useColorModeToken.hook';
 import { useQuestionResults } from '../useQuestionResults';
+import { surveyResultsPieRecipe } from './SurveyResultsPie.recipe';
 
 type SurveyResultsPieVariantProps = RecipeVariantProps<
   typeof surveyResultsPieRecipe
@@ -43,7 +43,7 @@ export const SurveyResultsPie = React.forwardRef<
             dataEntry.value !== 0 ? dataEntry.title : ''
           }
           labelStyle={{
-            fontSize: '0.5em',
+            fontSize: 'brand.50',
             fill: labelColor,
             fontFamily: 'nunito',
             fontWeight: 'bold',

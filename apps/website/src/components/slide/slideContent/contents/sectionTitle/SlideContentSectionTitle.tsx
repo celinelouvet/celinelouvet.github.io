@@ -15,7 +15,7 @@ export const SlideContentSectionTitle: React.FC<SlideContentSectionTitleProps> =
       <Box
         width="100%"
         height="100%"
-        padding="3em"
+        padding="brand.300"
         backgroundColor="brand.700"
         color="brand.200"
         {...restProps}

@@ -9,7 +9,7 @@ export const content = (
     title="Budget / Temps"
     alignContent="flex-start"
   >
-    <Stack gap="1em" width="100%">
+    <Stack gap="brand.100" width="100%">
       <Quote title="Le client" variant="slide">
         <Text>
           On va le développer en interne, ça coûtera moins cher que

@@ -18,15 +18,15 @@ export const content = (
     title="GCP Datastore"
     alignContent="flex-start"
   >
-    <Stack width="100%" height="100%" gap="1em" alignItems="center">
+    <Stack width="100%" height="100%" gap="brand.100" alignItems="center">
       <Text fontWeight="700">
         Est-ce que les inconvénients sont acceptables ?
       </Text>
-      <HStack width="100%" gap="1em" alignItems="center" opacity={0}>
+      <HStack width="100%" gap="brand.100" alignItems="center" opacity={0}>
         <Box
           flex="2"
           gap="0"
-          padding="1em"
+          padding="brand.100"
           borderRadius="md"
           backgroundColor="brand.800"
         >
@@ -37,7 +37,7 @@ export const content = (
           <Icon as={TbArrowBigRightFilled} />
         </Box>
 
-        <Stack flex="1" gap="1em" textAlign="center">
+        <Stack flex="1" gap="brand.100" textAlign="center">
           <Text>Domaine hautement relationnel</Text>
           <chakra.span>
             <chakra.strong>À priori,</chakra.strong> non

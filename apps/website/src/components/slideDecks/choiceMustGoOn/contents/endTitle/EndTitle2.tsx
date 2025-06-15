@@ -23,14 +23,14 @@ export const content = (
     <Stack height="100%" alignItems="center" justifyContent="space-between">
       <HStack
         width="100%"
-        gap="5em"
+        gap="brand.500"
         alignItems="center"
         justifyContent="space-between"
       >
         <Stack
           alignItems="center"
           justifyContent="space-around"
-          gap="2em"
+          gap="brand.200"
           flex="1"
         >
           <Center width="60%">
@@ -46,7 +46,7 @@ export const content = (
         <Stack
           alignItems="center"
           justifyContent="space-around"
-          gap="2em"
+          gap="brand.200"
           flex="1"
         >
           <Center width="60%">
@@ -60,7 +60,7 @@ export const content = (
         </Stack>
       </HStack>
 
-      <HStack gap="2em">
+      <HStack gap="brand.200">
         {talk.socials.map(({ name, handle, onMain }, index) => {
           if (!onMain) return null;
           return (

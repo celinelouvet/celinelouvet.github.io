@@ -10,7 +10,7 @@ export const content = (
     title="Conclusion"
     alignContent="flex-start"
   >
-    <Stack width="100%" height="100%" gap="1em">
+    <Stack width="100%" height="100%" gap="brand.100">
       <ProgressiveList
         type="numbered"
         items={[

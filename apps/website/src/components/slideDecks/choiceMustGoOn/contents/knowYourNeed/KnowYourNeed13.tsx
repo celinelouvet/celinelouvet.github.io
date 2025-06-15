@@ -9,7 +9,7 @@ export const content = (
     title="Besoins flous"
     alignContent="flex-start"
   >
-    <Stack gap="1em" width="100%">
+    <Stack gap="brand.100" width="100%">
       <Quote title="Le client" variant="slide">
         <Text>
           L’Excel appelle une API pour faire les calculs. Il faudra voir avec

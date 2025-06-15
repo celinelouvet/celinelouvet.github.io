@@ -9,11 +9,11 @@ export const alertSlotRecipe = defineSlotRecipe({
       borderRadius: 'md',
     },
     description: {
-      lineHeight: '1.5em',
+      lineHeight: 'brand.150',
     },
     title: {
-      lineHeight: '1.5em',
-      marginBottom: '0.5em',
+      lineHeight: 'brand.150',
+      marginBottom: 'brand.50',
       fontWeight: 'bold',
     },
   },
@@ -22,46 +22,46 @@ export const alertSlotRecipe = defineSlotRecipe({
     variant: {
       slide: {
         root: {
-          borderRadius: '0.25em',
-          borderLeftWidth: '0.25em',
+          borderRadius: 'brand.25',
+          borderLeftWidth: 'brand.25',
           borderLeftStyle: 'solid',
-          fontSize: '1em',
+          fontSize: 'brand.100',
           alignItems: 'center',
         },
         indicator: {
-          marginRight: '1em',
-          fontSize: '1em',
+          marginRight: 'brand.100',
+          fontSize: 'brand.100',
         },
         title: {
-          lineHeight: '1.5em',
-          marginBottom: '0.5em',
+          lineHeight: 'brand.150',
+          marginBottom: 'brand.50',
         },
         description: {
-          lineHeight: '1.5em',
+          lineHeight: 'brand.150',
         },
       },
 
       rightSlide: {
         root: {
           flexDirection: 'row-reverse',
-          borderRadius: '0.25em',
-          borderRightWidth: '0.25em',
+          borderRadius: 'brand.25',
+          borderRightWidth: 'brand.25',
           borderRightStyle: 'solid',
-          fontSize: '1em',
+          fontSize: 'brand.100',
           alignItems: 'center',
         },
         indicator: {
-          marginLeft: '1em',
-          fontSize: '1em',
+          marginLeft: 'brand.100',
+          fontSize: 'brand.100',
         },
         title: {
           textAlign: 'right',
-          lineHeight: '1.5em',
-          marginBottom: '0.5em',
+          lineHeight: 'brand.150',
+          marginBottom: 'brand.50',
         },
         description: {
           float: 'right',
-          lineHeight: '1.5em',
+          lineHeight: 'brand.150',
           textAlign: 'right',
         },
       },

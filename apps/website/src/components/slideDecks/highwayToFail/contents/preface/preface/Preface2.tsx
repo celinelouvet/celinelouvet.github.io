@@ -45,7 +45,7 @@ export const content = (
       width="80%"
       templateColumns="repeat(3, 1fr)"
       templateRows="repeat(2, 1fr)"
-      gap="5em"
+      gap="brand.500"
     >
       <GridItem>
         <React.Suspense fallback={<Loading />}>

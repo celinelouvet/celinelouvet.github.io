@@ -19,7 +19,7 @@ export const content = (
     alignContent="flex-start"
   >
     <Stack
-      gap="1em"
+      gap="brand.100"
       width="100%"
       height="100%"
       alignItems="center"

@@ -8,7 +8,7 @@ export const dateTextRecipe = defineRecipe({
   variants: {
     variant: {
       slide: {
-        fontSize: '1em',
+        fontSize: 'brand.100',
       },
     },
     size: {

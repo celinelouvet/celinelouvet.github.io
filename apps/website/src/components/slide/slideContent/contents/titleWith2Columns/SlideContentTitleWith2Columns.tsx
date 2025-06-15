@@ -22,7 +22,7 @@ export const SlideContentTitleWith2Columns: React.FC<SlideContentTitleWith2Colum
     ...props
   }) {
     const titleWithCorner = topRightCornerContent ? (
-      <HStack gap="1em" alignItems="baseline">
+      <HStack gap="brand.100" alignItems="baseline">
         <H2Heading variant="slide" flex="1">
           {title}
         </H2Heading>
@@ -42,7 +42,7 @@ export const SlideContentTitleWith2Columns: React.FC<SlideContentTitleWith2Colum
           width="100%"
           height="100%"
           alignItems="stretch"
-          gap="1em"
+          gap="brand.100"
           overflow="hidden"
         >
           <Box>{titleWithCorner}</Box>
