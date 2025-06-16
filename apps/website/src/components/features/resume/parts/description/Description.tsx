@@ -14,7 +14,7 @@ export const Description: React.FC<DescriptionProps> = function Description({
   const { t } = useTranslation('resume', { keyPrefix: 'description' });
 
   return (
-    <Stack _print={{ breakAfter: 'page' }}>
+    <Stack id="descriptions" _print={{ breakAfter: 'page' }}>
       <H2Heading>{t('title')}</H2Heading>
 
       <Box>

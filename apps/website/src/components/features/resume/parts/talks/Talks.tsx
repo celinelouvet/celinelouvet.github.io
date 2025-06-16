@@ -17,7 +17,11 @@ export const Talks: React.FC<TalksProps> = function Talks({ resume }) {
   const { t } = useTranslation('resume', { keyPrefix: 'talks' });
 
   return (
-    <Stack gap="4" _print={{ breakBefore: 'page', breakInside: 'avoid' }}>
+    <Stack
+      id="talks"
+      gap="4"
+      _print={{ breakBefore: 'page', breakInside: 'avoid' }}
+    >
       <H2Heading>{t('title')}</H2Heading>
 
       <Grid

@@ -16,7 +16,7 @@ export const Experiences: React.FC<ExperiencesProps> = function Experiences({
 }) {
   const { t } = useTranslation('resume', { keyPrefix: 'experiences' });
   return (
-    <Stack gap="4">
+    <Stack id="experiences" gap="4">
       <H2Heading>{t('title')}</H2Heading>
 
       <Stack gap="8">

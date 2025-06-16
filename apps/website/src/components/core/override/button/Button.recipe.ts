@@ -10,6 +10,16 @@ export const buttonRecipe = defineRecipe({
         _active: { backgroundColor: 'brand.600' },
         _expanded: { backgroundColor: 'brand.600' },
       },
+      subtle: {
+        color: { base: 'brand.300', _dark: 'brand.900' },
+        backgroundColor: { base: 'brand.800', _dark: 'brand.200' },
+        _hover: {
+          textDecoration: 'underline',
+          backgroundColor: { base: 'brand.700', _dark: 'brand.400' },
+        },
+        _active: { backgroundColor: 'brand.600' },
+        _expanded: { backgroundColor: 'brand.600' },
+      },
 
       outline: {
         color: { base: 'brand.200', _dark: 'brand.800' },

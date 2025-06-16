@@ -17,7 +17,7 @@ export const Educations: React.FC<EducationsProps> = function Educations({
   const { t } = useTranslation('resume', { keyPrefix: 'educations' });
 
   return (
-    <Stack gap="4" _print={{ breakInside: 'avoid' }}>
+    <Stack id="educations" gap="4" _print={{ breakInside: 'avoid' }}>
       <H2Heading>{t('title')}</H2Heading>
 
       <Grid

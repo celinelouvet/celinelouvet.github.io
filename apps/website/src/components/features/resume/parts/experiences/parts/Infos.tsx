@@ -15,7 +15,7 @@ export const Infos: React.FC<InfosProps> = function Infos({ job }) {
       alignItems="baseline"
       gap="2"
       flexDirection={{ base: 'column', md: 'row', _print: 'row' }}
-      color="gray.500"
+      color={{ base: 'gray.500', _dark: 'gray.300' }}
       flexWrap="wrap"
     >
       <DateFormatter type="period" period={period} size={{ _print: 'xs' }} />
