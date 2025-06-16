@@ -1,7 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import type * as React from 'react';
 
-import { H3Heading, PeriodText } from '@/components/core';
+import { DateFormatter, H3Heading } from '@/components/core';
 import type { Volunteering } from '@/data';
 
 type HeaderProps = {
@@ -24,7 +24,7 @@ export const Header: React.FC<HeaderProps> = function Header({
       flexWrap="wrap"
     >
       <H3Heading>{volunteering.name}</H3Heading>
-      <PeriodText period={period} />
+      <DateFormatter type="period" period={period} />
     </Flex>
   );
 };

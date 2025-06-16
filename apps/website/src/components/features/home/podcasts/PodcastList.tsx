@@ -1,5 +1,5 @@
 import { Box, Center, Stack } from '@chakra-ui/react';
-import dayjs from 'dayjs';
+import { compareDesc } from 'date-fns';
 import type * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -28,7 +28,7 @@ export const PodcastList: React.FC<PodcastListProps> = function PodcastList({
   }
 
   const sortedPodcasts = [...podcasts].sort((p1, p2) =>
-    dayjs(p2.when).diff(dayjs(p1.when)),
+    compareDesc(p1.when, p2.when),
   );
 
   return (

@@ -1,4 +1,4 @@
-import dayjs from 'dayjs';
+import { compareDesc, isAfter, isBefore } from 'date-fns';
 
 import {
   type Convention,
@@ -18,6 +18,7 @@ export const useGroupByConventions = ({
   talks,
   talkSubjects,
 }: HookType) => {
+  const today = new Date();
   const enrichedConventions = [...conventions.entries()].map(
     ([conventionId, convention]) => ({
       ...convention,
@@ -27,21 +28,16 @@ export const useGroupByConventions = ({
     }),
   );
   const sortedConventions = [...enrichedConventions.values()].sort((a, b) =>
-    dayjs(b.start).diff(dayjs(a.start)),
+    compareDesc(a.start, b.start),
   ) as ConventionWithTalks[];
 
   const alreadyDoneConventions = sortedConventions
-    .filter(({ start, end = start }) => isAfter(end))
+    .filter(({ start, end = start }) => isBefore(end, today))
     .map((convention) => ({ ...convention, coming: false }));
 
   const comingConventions = sortedConventions
-    .filter(({ start }) => isBefore(start))
+    .filter(({ start }) => isAfter(start, today))
     .map((convention) => ({ ...convention, coming: true }));
 
   return { alreadyDoneConventions, comingConventions };
 };
-
-const isBefore = (date: string): boolean =>
-  dayjs().isBefore(dayjs(date), 'day');
-
-const isAfter = (date: string): boolean => dayjs().isAfter(dayjs(date), 'day');

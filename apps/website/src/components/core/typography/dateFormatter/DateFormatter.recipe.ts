@@ -1,12 +1,23 @@
 import { defineRecipe } from '@chakra-ui/react';
 
-export const periodTextRecipe = defineRecipe({
+export const dateFormatterRecipe = defineRecipe({
   base: {
     fontFamily: 'Nunito',
-    color: { base: 'brand.300', _dark: 'brand.700' },
   },
   variants: {
+    variant: {
+      slide: {
+        color: 'brand.300',
+        fontSize: 'brand.100',
+      },
+    },
     size: {
+      lg: {
+        fontSize: 'lg',
+      },
+      md: {
+        fontSize: 'md',
+      },
       sm: {
         fontSize: 'sm',
       },

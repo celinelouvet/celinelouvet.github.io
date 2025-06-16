@@ -6,7 +6,7 @@
   "notFound": "Sujet non trouvé",
   "seeSlides": "Voir les slides",
   "talk": {
-    "date": "D MMM YYYY",
+    "date": "d MMM yyyy",
     "more": "Voir plus",
     "less": "Voir moins",
 
