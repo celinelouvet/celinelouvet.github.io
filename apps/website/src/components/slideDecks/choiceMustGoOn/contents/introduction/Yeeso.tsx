@@ -20,8 +20,8 @@ const YeesoLight = React.lazy(() =>
 
 export const content = (
   <SlideContent type={SlideContentTypes.fullContent} colormode={ColorMode.dark}>
-    <Stack height="100%" width="100%" textAlign="center" gap="1em">
-      <Stack height="40%" gap="2em" marginBottom="3em">
+    <Stack height="100%" width="100%" textAlign="center" gap="brand.100">
+      <Stack height="40%" gap="brand.200" marginBottom="brand.300">
         <Center height="45%">
           <React.Suspense fallback={<Loading />}>
             <YeesoLight />

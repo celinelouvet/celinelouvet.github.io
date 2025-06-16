@@ -23,7 +23,7 @@ export const content = (
     }
     topRightCorner="Mars 2019"
   >
-    <Stack gap="1em">
+    <Stack gap="brand.100">
       <Text>Freelance</Text>
     </Stack>
   </SlideContent>

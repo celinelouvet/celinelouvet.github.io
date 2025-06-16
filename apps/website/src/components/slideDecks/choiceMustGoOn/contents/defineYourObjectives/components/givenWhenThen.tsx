@@ -33,7 +33,12 @@ export const GivenWhenThen: React.FC<GivenWhenThenProps> = (props) => {
     const and = props.given.and;
 
     return (
-      <Grid templateColumns="1fr 3fr" columnGap="1em" rowGap="0" width="100%">
+      <Grid
+        templateColumns="1fr 3fr"
+        columnGap="brand.100"
+        rowGap="0"
+        width="100%"
+      >
         <chakra.span {...titleStyle}>Etant donné que</chakra.span>
         <chakra.span opacity={shown.includes('text') ? 1 : 0}>
           {text}
@@ -55,7 +60,12 @@ export const GivenWhenThen: React.FC<GivenWhenThenProps> = (props) => {
     const text = props.when.text;
 
     return (
-      <Grid templateColumns="1fr 3fr" columnGap="1em" rowGap="0" width="100%">
+      <Grid
+        templateColumns="1fr 3fr"
+        columnGap="brand.100"
+        rowGap="0"
+        width="100%"
+      >
         <chakra.span {...titleStyle}>Lorsque</chakra.span>
         <chakra.span opacity={shown.includes('text') ? 1 : 0}>
           {text}
@@ -68,7 +78,12 @@ export const GivenWhenThen: React.FC<GivenWhenThenProps> = (props) => {
     const text = props.then.text;
     const and = props.then.and;
     return (
-      <Grid templateColumns="1fr 3fr" columnGap="1em" rowGap="0" width="100%">
+      <Grid
+        templateColumns="1fr 3fr"
+        columnGap="brand.100"
+        rowGap="0"
+        width="100%"
+      >
         <chakra.span {...titleStyle}>Alors</chakra.span>
         <chakra.span opacity={shown.includes('text') ? 1 : 0}>
           {text}
@@ -86,7 +101,7 @@ export const GivenWhenThen: React.FC<GivenWhenThenProps> = (props) => {
   }
 
   return (
-    <Stack width="100%" gap="1.75em">
+    <Stack width="100%" gap="brand.175">
       <Given />
       <When />
       <Then />

@@ -32,7 +32,7 @@ export const Line: React.FC<Item> = ({
       {...basicStyle}
       {...(contrast && contrastStyle)}
       {...(highlighted && highlightedStyle)}
-      padding="0.5em"
+      padding="brand.50"
       borderLeftRadius="md"
     >
       <chakra.span opacity={shown.includes('need') ? 1 : 0}>{need}</chakra.span>
@@ -63,7 +63,7 @@ export const Line: React.FC<Item> = ({
       {...basicStyle}
       {...(contrast && contrastStyle)}
       {...(highlighted && highlightedStyle)}
-      paddingRight="0.5em"
+      paddingRight="brand.50"
       borderRightRadius="md"
       justifyContent="center"
     >

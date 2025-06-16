@@ -17,7 +17,7 @@
     "alreadyDone": "Talks",
     "seeAll": "See all talks",
     "talk": {
-      "date": "MMM D YYYY",
+      "date": "MMM d yyyy",
       "seeAbstract": "See abstract",
       "program": "Program"
     }
@@ -25,7 +25,7 @@
   "podcasts": {
     "title": "Podcasts",
     "seeAll": "See all podcasts",
-    "date": "MMM D YYYY"
+    "date": "MMM d yyyy"
   },
   "volunteering": {
     "title": "volunteering",

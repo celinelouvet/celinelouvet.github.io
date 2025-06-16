@@ -15,7 +15,12 @@ const PresenterPage = lazy(() =>
 );
 const ResumePage = lazy(() =>
   import('@/pages').then((module) => ({
-    default: module.Resume,
+    default: module.ResumePage,
+  })),
+);
+const ResumePrintPage = lazy(() =>
+  import('@/pages').then((module) => ({
+    default: module.ResumePrintPage,
   })),
 );
 const SlidesContentPage = lazy(() =>
@@ -130,14 +135,25 @@ function App() {
             </Route>
           </Route>
 
-          <Route
-            path="/resume"
-            element={
-              <Suspense fallback={<Loading />}>
-                <ResumePage />
-              </Suspense>
-            }
-          />
+          <Route path="/resume">
+            <Route
+              index
+              element={
+                <Suspense fallback={<Loading />}>
+                  <ResumePage />
+                </Suspense>
+              }
+            />
+            <Route
+              path="print/:language"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <ResumePrintPage />
+                </Suspense>
+              }
+            />
+          </Route>
+
           <Route path="/talks">
             <Route path=":talkSubjectId">
               <Route path=":conventionId">

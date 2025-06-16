@@ -14,12 +14,12 @@ export const content = (
       width="100%"
       alignItems="center"
       justifyContent="flex-start"
-      gap="3em"
+      gap="brand.300"
     >
       <Center width="20%">
-        <Icon as={LuCircleAlert} boxSize="4em" color="brand.orange" />
+        <Icon as={LuCircleAlert} boxSize="brand.400" color="brand.orange" />
       </Center>
-      <Stack flex="1" color="brand.300" fontSize="1.25em" gap="1em">
+      <Stack flex="1" color="brand.300" fontSize="brand.125" gap="brand.100">
         <Text>Besoins flous</Text>
         <Text>Choix technologique non-maîtrisé</Text>
       </Stack>

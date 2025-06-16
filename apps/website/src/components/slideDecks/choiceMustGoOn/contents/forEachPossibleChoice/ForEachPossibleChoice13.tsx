@@ -19,7 +19,7 @@ export const content = (
     title="Complexités"
     alignContent="flex-start"
   >
-    <Stack width="100%" height="100%" gap="1em" opacity={0}>
+    <Stack width="100%" height="100%" gap="brand.100" opacity={0}>
       <Tiles data={items} />
     </Stack>
   </SlideContent>

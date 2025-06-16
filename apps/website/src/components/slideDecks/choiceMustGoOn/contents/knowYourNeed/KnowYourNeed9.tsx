@@ -15,12 +15,16 @@ export const content = (
       width="100%"
       alignItems="center"
       justifyContent="flex-start"
-      gap="3em"
+      gap="brand.300"
     >
       <Center width="20%">
-        <Icon as={LuMessageCircleQuestion} boxSize="4em" color="brand.500" />
+        <Icon
+          as={LuMessageCircleQuestion}
+          boxSize="brand.400"
+          color="brand.500"
+        />
       </Center>
-      <Stack flex="1" fontSize="1.25em" gap="1em">
+      <Stack flex="1" fontSize="brand.125" gap="brand.100">
         <H3Heading variant="slide">Méthode des « 5 pourquoi »</H3Heading>
         <Text>Utilisée pour comprendre la cause profonde d’un problème.</Text>
       </Stack>

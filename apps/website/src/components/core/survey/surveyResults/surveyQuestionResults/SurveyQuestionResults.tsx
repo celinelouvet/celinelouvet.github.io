@@ -64,7 +64,7 @@ export const SurveyQuestionResults = React.forwardRef<
             css={styles.pie}
           />
           <Stack css={styles.breakdown} ref={ref}>
-            <Flex fontSize="xl" flexDirection="row" gap="1em">
+            <Flex fontSize="xl" flexDirection="row" gap="brand.100">
               <Text fontWeight="700">{t('allVotes')}</Text>
               <Text>{total}</Text>
             </Flex>

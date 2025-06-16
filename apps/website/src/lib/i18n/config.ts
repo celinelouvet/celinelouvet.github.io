@@ -1,4 +1,5 @@
-import { locale } from 'dayjs';
+import { setDefaultOptions } from 'date-fns';
+import { enUS, fr } from 'date-fns/locale';
 import i18next, { use as i18nextUse } from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import Backend from 'i18next-http-backend';
@@ -8,7 +9,7 @@ import { DEFAULT_LANGUAGE_KEY, DEFAULT_NAMESPACE } from '@/lib/i18n';
 import { isBrowser } from '@/lib/ssr';
 import locales from '@/locales';
 
-locale(DEFAULT_LANGUAGE_KEY);
+setDefaultOptions({ locale: DEFAULT_LANGUAGE_KEY === 'en' ? enUS : fr });
 
 i18nextUse(Backend)
   .use(LanguageDetector)
@@ -26,7 +27,7 @@ i18nextUse(Backend)
   });
 
 i18next.on('languageChanged', (langKey) => {
-  locale(langKey);
+  setDefaultOptions({ locale: langKey === 'en' ? enUS : fr });
   if (isBrowser) {
     document.documentElement.lang = langKey;
   }

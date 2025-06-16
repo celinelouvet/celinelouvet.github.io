@@ -35,7 +35,7 @@ export const content = (
       </>
     }
   >
-    <Stack gap="1em">
+    <Stack gap="brand.100">
       <Box>
         <ThumbsUp variant="slide">Ça ne coûte rien.</ThumbsUp>
       </Box>

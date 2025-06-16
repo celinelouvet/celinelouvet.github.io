@@ -21,7 +21,7 @@ export const content = (
     title="Cadrer le besoin"
     alignContent="flex-start"
   >
-    <Stack gap="1em" width="100%">
+    <Stack gap="brand.100" width="100%">
       <Text>Le besoin s’éclaircit :</Text>
 
       <ProgressiveList items={items} />

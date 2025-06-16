@@ -23,7 +23,7 @@ export const content = (
     }
     topRightCorner="Mi-Décembre 2017"
   >
-    <Stack width="100%" gap="1em">
+    <Stack width="100%" gap="brand.100">
       <Text>
         <Text as="b">MVP : </Text>
         <chakra.span>Minimum Viable Product</chakra.span>

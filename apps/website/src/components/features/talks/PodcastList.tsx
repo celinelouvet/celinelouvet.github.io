@@ -1,5 +1,5 @@
 import { Box, Stack } from '@chakra-ui/react';
-import dayjs from 'dayjs';
+import { compareDesc } from 'date-fns';
 import * as React from 'react';
 
 import { H2Heading } from '@/components/core';
@@ -21,8 +21,9 @@ export const PodcastList: React.FC<PodcastListProps> = function PodcastList({
   }
 
   const sortedPodcasts = [...podcasts].sort((p1, p2) =>
-    dayjs(p2.when).diff(dayjs(p1.when)),
+    compareDesc(p1.when, p2.when),
   );
+
   return (
     <Box>
       <H2Heading>{title}</H2Heading>

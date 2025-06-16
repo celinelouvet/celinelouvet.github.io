@@ -17,7 +17,7 @@ export const content = (
     title="Définition d’une API"
     alignContent="flex-start"
   >
-    <Stack width="100%" height="100%" gap="1em" opacity={0}>
+    <Stack width="100%" height="100%" gap="brand.100" opacity={0}>
       <Text>Définition de SLA (Service Level Agreement)</Text>
 
       <ProgressiveList items={items} />

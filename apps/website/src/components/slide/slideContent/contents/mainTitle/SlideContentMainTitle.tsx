@@ -22,7 +22,7 @@ export const SlideContentMainTitle: React.FC<SlideContentMainTitleProps> =
           height="100%"
           alignItems="center"
           justifyContent="center"
-          gap="4em"
+          gap="brand.400"
         >
           <Box>
             <Title title={title} />
@@ -37,13 +37,7 @@ export const SlideContentMainTitle: React.FC<SlideContentMainTitleProps> =
 
 const Title: React.FC<{ title: string }> = ({ title }) =>
   title.split('\n').map((line, i) => (
-    <H1Heading
-      key={i}
-      variant="slide"
-      size="lg"
-      textAlign="center"
-      lineHeight="1.5"
-    >
+    <H1Heading key={i} variant="slide" textAlign="center" lineHeight="1.5">
       {line}
     </H1Heading>
   ));

@@ -21,12 +21,17 @@ import { Title } from '../Title.component';
 
 export const content = (
   <SlideContent colormode={ColorMode.dark} type={SlideContentTypes.fullContent}>
-    <Stack height="100%" alignItems="center" justifyContent="center" gap="3em">
+    <Stack
+      height="100%"
+      alignItems="center"
+      justifyContent="center"
+      gap="brand.300"
+    >
       <Center flex="1">
         <Title title="Merci pour votre attention" />
       </Center>
 
-      <HStack gap="2em">
+      <HStack gap="brand.200">
         {talk.socials.map(({ name, handle, onMain }, index) => {
           if (!onMain) return null;
           return (

@@ -1,10 +1,10 @@
 import { Box, type BoxProps, Center, Flex, Stack } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { useCurrentPosition, useSlideSize } from './hooks';
-import { type Notes } from './types';
 import { SlideTimer } from '../slideTimer';
 import { type Slide } from '../types';
+import { useCurrentPosition, useSlideSize } from './hooks';
+import { type Notes } from './types';
 
 const slideBorder = {
   borderStyle: 'solid',
@@ -44,7 +44,7 @@ const Note: React.FC<NoteProps> = ({ slides, position }) => (
         key={`note-${index}`}
         display={index !== position ? 'none' : ''}
         userSelect="none"
-        fontSize={'0.75em'}
+        fontSize="brand.75"
       >
         {note}
       </Stack>
@@ -72,7 +72,7 @@ const Slide: React.FC<SlideProps> = ({ slides, position, preview = false }) => {
     <Box
       {...slideBorder}
       {...contentProps}
-      fontSize={preview ? '0.5em' : '0.75em'}
+      fontSize={preview ? 'brand.50' : 'brand.75'}
     >
       {slide.content}
     </Box>
@@ -106,7 +106,7 @@ export const SlideDeckForNotes = React.forwardRef<
         width="50%"
         paddingX="4"
         alignItems="center"
-        gap="1em"
+        gap="brand.100"
       >
         <Box>
           <SlideTimer />

@@ -15,7 +15,7 @@ export const SlideContentSectionTitle: React.FC<SlideContentSectionTitleProps> =
       <Box
         width="100%"
         height="100%"
-        padding="3em"
+        padding="brand.300"
         backgroundColor="brand.700"
         color="brand.200"
         {...restProps}
@@ -27,9 +27,7 @@ export const SlideContentSectionTitle: React.FC<SlideContentSectionTitleProps> =
           justifyContent="center"
         >
           <Box>
-            <H1Heading variant="slide" size="lg">
-              {title}
-            </H1Heading>
+            <H1Heading variant="slide">{title}</H1Heading>
           </Box>
         </Stack>
       </Box>

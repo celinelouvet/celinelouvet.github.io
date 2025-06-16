@@ -24,7 +24,7 @@ export const content = (
       </React.Suspense>
     }
   >
-    <Stack width="100%" height="100%" gap="1em">
+    <Stack width="100%" height="100%" gap="brand.100">
       <Text>Clever Cloud cherche à promouvoir l’hébergement de Haskell.</Text>
       <ThumbsUp variant="slide">Crédits gratuits.</ThumbsUp>
     </Stack>

@@ -19,7 +19,7 @@ export const content = (
     title="Tracer les raisons"
     alignContent="flex-start"
   >
-    <Stack gap="1em" width="100%" height="100%" alignItems="flex-start">
+    <Stack gap="brand.100" width="100%" height="100%" alignItems="flex-start">
       <Text>Decision records</Text>
       <ProgressiveList items={items} />
     </Stack>

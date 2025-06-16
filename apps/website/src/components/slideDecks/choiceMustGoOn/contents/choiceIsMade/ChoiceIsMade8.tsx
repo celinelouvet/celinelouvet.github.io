@@ -14,14 +14,14 @@ export const content = (
       width="100%"
       alignItems="center"
       justifyContent="flex-start"
-      gap="3em"
+      gap="brand.300"
     >
       <Center width="20%">
         <Center position="relative">
-          <Icon as={LuRepeat2} boxSize="4em" color="brand.500" />
+          <Icon as={LuRepeat2} boxSize="brand.400" color="brand.500" />
         </Center>
       </Center>
-      <Stack flex="1" fontSize="1.25em" gap="1em">
+      <Stack flex="1" fontSize="brand.125" gap="brand.100">
         <chakra.span>Itérer tant que le besoin n’est pas satisfait</chakra.span>
       </Stack>
     </HStack>

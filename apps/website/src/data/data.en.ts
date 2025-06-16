@@ -1,4 +1,5 @@
-import dayjs from 'dayjs';
+import { formatDuration, intervalToDuration } from 'date-fns';
+import { enUS } from 'date-fns/locale';
 
 import type { Resume } from './models';
 import {
@@ -15,8 +16,16 @@ import {
   volunteering_en,
 } from './parts';
 
-const firstExperience = '2006-02-01';
-export const fromFirstExperience = dayjs().diff(firstExperience, 'year');
+export const firstExperience = '2006-02-01';
+
+const experience = intervalToDuration({
+  start: firstExperience,
+  end: new Date(),
+});
+const fromFirstExperience = formatDuration(experience, {
+  format: ['years'],
+  locale: enUS,
+});
 
 export const resume = {
   firstname: 'Céline',
@@ -31,7 +40,7 @@ export const resume = {
   remotes,
   hobbies: 'Drawing, painting, clay modeling, sports',
   biographies: [
-    `Backend developer and passionate, for ${fromFirstExperience} years, loves reaching stability and quality for production applications.`,
+    `Backend developer and passionate, for ${fromFirstExperience}, loves reaching stability and quality for production applications.`,
     'Specializing into cloud architectures, with a liking for functional languages.',
     'Speaker at conferences on technology topics, experience sharing, and methodologies.',
     'Volunteer for NGOs dedicated to mentoring, Crafts Records as first-time speakers coach and Yeeso as Mentoring Squad Leader.',

@@ -36,7 +36,7 @@ export const CloseButton: Story = {
         </Card.Header>
         <Card.Body>
           <Grid
-            templateColumns="5em 10em"
+            templateColumns="brand.500 brand.1000"
             templateRows="1fr"
             gap={4}
             alignItems="center"

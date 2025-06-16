@@ -22,7 +22,7 @@ export const content = (
       </React.Suspense>
     }
   >
-    <Stack gap="1em">
+    <Stack gap="brand.100">
       <List.Root variant="slide">
         <List.Item>
           Des nouvelles connaissances dans des métiers inconnus

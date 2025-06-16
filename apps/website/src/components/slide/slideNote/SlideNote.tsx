@@ -17,7 +17,7 @@ export const SlideNote = React.forwardRef<HTMLDivElement, SlideNoteProps>(
   function SlideNote(props, ref) {
     const { hours, minutes, seconds, children, ...restProps } = props;
     return (
-      <Stack gap="1em" padding="3em" ref={ref} {...restProps}>
+      <Stack gap="brand.100" padding="brand.300" ref={ref} {...restProps}>
         {hours || minutes || seconds ? (
           <Box
             textAlign="center"

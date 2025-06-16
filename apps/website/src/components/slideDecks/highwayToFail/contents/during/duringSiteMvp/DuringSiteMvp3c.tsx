@@ -30,7 +30,7 @@ export const content = (
       <List.Item>Ajout progressif de fonctionnalités</List.Item>
     </List.Root>
 
-    <Text paddingLeft="3em">
+    <Text paddingLeft="brand.300">
       Google Analytics, SEO, prerendering, événements Facebook, événements
       LinkedIn, événements Segment, Zapier, Prefinery, Draft, etc.
     </Text>

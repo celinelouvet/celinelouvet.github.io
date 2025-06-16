@@ -13,7 +13,7 @@ export const content = (
     column1={<VerticalTimelineBefore />}
     topRightCorner="Début 2017"
   >
-    <Stack width="100%" gap="1em">
+    <Stack width="100%" gap="brand.100">
       <Box>
         <List.Root variant="slide">
           <List.Item>
@@ -26,7 +26,7 @@ export const content = (
         </List.Root>
       </Box>
 
-      <Box marginTop="0.5em">
+      <Box marginTop="brand.50">
         <ThumbsDown variant="slide">
           Très grande confiance en moi et en mes réalisations.
         </ThumbsDown>

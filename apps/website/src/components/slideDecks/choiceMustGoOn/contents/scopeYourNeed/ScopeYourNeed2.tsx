@@ -9,7 +9,7 @@ export const content = (
     title="Cadrer le besoin"
     alignContent="flex-start"
   >
-    <Stack gap="1em" width="100%">
+    <Stack gap="brand.100" width="100%">
       <Quote title="Le client" variant="slide">
         <Text>J’ai besoin de gérer les permissions de mes utilisateurs.</Text>
       </Quote>

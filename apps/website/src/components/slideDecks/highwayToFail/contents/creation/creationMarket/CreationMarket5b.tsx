@@ -23,7 +23,7 @@ export const content = (
     }
     topRightCorner="Mi-Décembre 2017"
   >
-    <Stack gap="1em">
+    <Stack gap="brand.100">
       <Text>Clients de type TPE et PME</Text>
     </Stack>
   </SlideContent>

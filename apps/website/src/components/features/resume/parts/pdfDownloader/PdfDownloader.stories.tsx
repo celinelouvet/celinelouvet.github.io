@@ -5,6 +5,9 @@ import { PdfDownloader as PdfDownloaderComponent } from './PdfDownloader';
 const meta = {
   title: 'Features/Resume/Parts',
   component: PdfDownloaderComponent,
+  parameters: {
+    viewport: { defaultViewport: 'desktop' },
+  },
 } satisfies Meta<typeof PdfDownloaderComponent>;
 
 export default meta;

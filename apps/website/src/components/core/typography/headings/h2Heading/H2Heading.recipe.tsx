@@ -6,6 +6,12 @@ export const h2HeadingRecipe = defineRecipe({
     fontWeight: '400',
     marginBottom: '2',
     textTransform: 'uppercase',
+    fontSize: {
+      base: 'brand.150',
+      sm: 'brand.175',
+      md: 'brand.225',
+      _print: 'brand.175',
+    },
   },
   variants: {
     variant: {
@@ -17,14 +23,11 @@ export const h2HeadingRecipe = defineRecipe({
     },
     size: {
       md: {
-        fontSize: '2em',
+        fontSize: { base: 'brand.200', _print: 'brand.175' },
       },
       lg: {
-        fontSize: '2.25em',
+        fontSize: { base: 'brand.225', _print: 'brand.175' },
       },
     },
-  },
-  defaultVariants: {
-    size: 'md',
   },
 });

@@ -23,7 +23,7 @@ export const content = (
     }
     topRightCorner="Octobre 2018"
   >
-    <Stack gap="1em">
+    <Stack gap="brand.100">
       <List.Root variant="slide">
         <List.Item>Pas de levée</List.Item>
       </List.Root>

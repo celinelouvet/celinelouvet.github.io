@@ -17,7 +17,7 @@
     "alreadyDone": "Conférences",
     "seeAll": "Voir toutes mes conférences",
     "talk": {
-      "date": "D MMMM YYYY",
+      "date": "d MMMM yyyy",
 
       "seeAbstract": "Voir l’abstract",
       "program": "Programme",
@@ -28,7 +28,7 @@
   "podcasts": {
     "title": "Podcasts",
     "seeAll": "Voir tous mes podcasts",
-    "date": "D MMMM YYYY"
+    "date": "d MMMM yyyy"
   },
   "volunteering": {
     "title": "Bénévolat",

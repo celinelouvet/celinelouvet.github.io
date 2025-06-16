@@ -73,13 +73,13 @@ export const content = (
 
 export const note = (
   <SlideNote>
-    <Stack gap="1em">
+    <Stack gap="brand.100">
       {data
         .filter(({ hidden }) => !hidden)
         .map(({ title, results }) => (
-          <Stack key={title} gap="0.5em">
+          <Stack key={title} gap="brand.50">
             <Text>Pour "{title}"</Text>
-            <HStack gap="3em">
+            <HStack gap="brand.300">
               {results.map(({ title, value }) => (
                 <chakra.span key={title}>
                   {title} : {value}%

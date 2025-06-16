@@ -6,7 +6,12 @@ export const listSlotRecipe = defineSlotRecipe({
 
   base: {
     root: {
-      marginLeft: 8,
+      base: {
+        marginLeft: 1,
+      },
+      md: {
+        marginLeft: 8,
+      },
     },
   },
 
@@ -20,9 +25,9 @@ export const listSlotRecipe = defineSlotRecipe({
 
       slide: {
         root: {
-          paddingLeft: '1em',
+          paddingLeft: 'brand.100',
           listStyle: 'revert',
-          marginBottom: '2em',
+          marginBottom: 'brand.200',
         },
 
         item: {

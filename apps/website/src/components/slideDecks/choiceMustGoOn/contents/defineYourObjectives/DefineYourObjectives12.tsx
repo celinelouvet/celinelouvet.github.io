@@ -14,12 +14,12 @@ export const content = (
       width="100%"
       alignItems="center"
       justifyContent="flex-start"
-      gap="3em"
+      gap="brand.300"
     >
       <Center width="20%">
-        <Icon as={LuHandCoins} boxSize="4em" color="brand.orange" />
+        <Icon as={LuHandCoins} boxSize="brand.400" color="brand.orange" />
       </Center>
-      <Stack flex="1" fontSize="1.25em" gap="1em">
+      <Stack flex="1" fontSize="brand.125" gap="brand.100">
         <Text>Make-or-Buy</Text>
       </Stack>
     </HStack>

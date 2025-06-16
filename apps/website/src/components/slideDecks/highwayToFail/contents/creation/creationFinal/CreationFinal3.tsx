@@ -24,7 +24,7 @@ export const content = (
     }
     topRightCorner="Mi-Décembre 2017"
   >
-    <Stack width="100%" gap="1em">
+    <Stack width="100%" gap="brand.100">
       <Box>
         <ThumbsUp variant="slide">
           Ils apportent l’idée, ça me paraît OK.

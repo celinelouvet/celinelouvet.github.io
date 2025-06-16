@@ -51,8 +51,8 @@ export const content = (
       <Box>
         <Grid
           templateColumns="auto auto"
-          columnGap="1em"
-          rowGap="0.5em"
+          columnGap="brand.100"
+          rowGap="brand.50"
           alignItems="center"
           justifyItems="start"
         >
@@ -67,7 +67,7 @@ export const content = (
 
 export const note = (
   <SlideNote>
-    <Stack gap="1em">
+    <Stack gap="brand.100">
       <Text>Autres chiffres: on a </Text>
       {data.map(({ title, value }) => (
         <Text key={title}>

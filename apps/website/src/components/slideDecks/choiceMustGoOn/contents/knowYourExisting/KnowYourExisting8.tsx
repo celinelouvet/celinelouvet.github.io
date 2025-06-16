@@ -17,7 +17,7 @@ export const content = (
     title="Golden path"
     alignContent="flex-start"
   >
-    <Stack width="100%" height="100%" gap="1em">
+    <Stack width="100%" height="100%" gap="brand.100">
       <Text>Boîte à outils pour répondre aux besoins les plus communs.</Text>
       <Box opacity={0}>
         <ProgressiveList items={items} />

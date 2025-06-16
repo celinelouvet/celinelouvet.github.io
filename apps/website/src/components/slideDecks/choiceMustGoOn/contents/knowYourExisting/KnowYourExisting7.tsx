@@ -8,7 +8,7 @@ export const content = (
     title="Golden path"
     alignContent="flex-start"
   >
-    <Stack width="100%" height="100%" gap="1em">
+    <Stack width="100%" height="100%" gap="brand.100">
       <Text>Aussi appelé « Paved Road »</Text>
     </Stack>
   </SlideContent>

@@ -26,7 +26,7 @@ export const content = (
     <HStack
       width="100%"
       height="100%"
-      gap="2em"
+      gap="brand.200"
       alignItems="center"
       justifyContent="space-between"
     >
@@ -34,7 +34,7 @@ export const content = (
         height="100%"
         alignItems="center"
         justifyContent="center"
-        gap="3em"
+        gap="brand.300"
       >
         <Box>
           <Title title={talk.title} />
@@ -44,7 +44,7 @@ export const content = (
         </Box>
         <Spacer />
         <Box alignSelf="start">
-          <HStack gap="2em">
+          <HStack gap="brand.200">
             {talk.socials.map(({ name, handle, onMain }, index) => {
               if (!onMain) return null;
               return (
@@ -64,7 +64,12 @@ export const content = (
           </HStack>
         </Box>
       </Stack>
-      <Stack width="20%" alignItems="center" justifyContent="center" gap="2em">
+      <Stack
+        width="20%"
+        alignItems="center"
+        justifyContent="center"
+        gap="brand.200"
+      >
         <QrCode
           width="100%"
           variant="light"

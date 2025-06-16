@@ -5,6 +5,14 @@ export const h3HeadingRecipe = defineRecipe({
     fontFamily: 'PT Sans Narrow',
     fontWeight: '400',
     marginBottom: '2',
+
+    fontSize: {
+      base: 'brand.125',
+      sm: 'brand.150',
+      md: 'brand.175',
+      lg: 'brand.200',
+      _print: 'brand.150',
+    },
   },
   variants: {
     variant: {
@@ -15,14 +23,11 @@ export const h3HeadingRecipe = defineRecipe({
     },
     size: {
       md: {
-        fontSize: '1.5em',
+        fontSize: { base: 'brand.150', _print: 'brand.150' },
       },
       lg: {
-        fontSize: '1.7em',
+        fontSize: { base: 'brand.170', _print: 'brand.150' },
       },
     },
-  },
-  defaultVariants: {
-    size: 'md',
   },
 });

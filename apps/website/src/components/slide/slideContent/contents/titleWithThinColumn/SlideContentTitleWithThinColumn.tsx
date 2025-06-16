@@ -18,7 +18,7 @@ export const SlideContentTitleWithThinColumn: React.FC<SlideContentTitleWithThin
       ...restProps
     } = props;
     const titleWithCorner = topRightCornerContent ? (
-      <HStack gap="1em" alignItems="baseline">
+      <HStack gap="brand.100" alignItems="baseline">
         <H2Heading variant="slide" flex="1">
           {title}
         </H2Heading>
@@ -46,8 +46,8 @@ export const SlideContentTitleWithThinColumn: React.FC<SlideContentTitleWithThin
           <Box
             width="23%"
             height="100%"
-            paddingX="2em"
-            paddingY="3em"
+            paddingX="brand.200"
+            paddingY="brand.300"
             backgroundColor="white"
           >
             {column1}
@@ -56,11 +56,11 @@ export const SlideContentTitleWithThinColumn: React.FC<SlideContentTitleWithThin
           <Box
             width="77%"
             height="100%"
-            paddingLeft="1em"
-            paddingY="3em"
-            paddingRight="3em"
+            paddingLeft="brand.100"
+            paddingY="brand.300"
+            paddingRight="brand.300"
           >
-            <Stack width="100%" height="100%" gap="1em" overflow="hidden">
+            <Stack width="100%" height="100%" gap="brand.100" overflow="hidden">
               <Box>{titleWithCorner}</Box>
 
               <Box width="100%" flex="1">

@@ -24,7 +24,7 @@ export const content = (
     }
     topRightCorner="Mi-Décembre 2017"
   >
-    <Stack width="100%" height="100%" gap="2em">
+    <Stack width="100%" height="100%" gap="brand.200">
       <Box>
         <Text>
           Signature d’une lettre d’intention, avec attribution par vesting.

@@ -9,15 +9,15 @@ export const content = (
     title="Mesure de la réponse"
     alignContent="flex-start"
   >
-    <Stack width="100%" height="100%" gap="1em" alignItems="center">
+    <Stack width="100%" height="100%" gap="brand.100" alignItems="center">
       <chakra.strong>Est-ce que la solution répond au besoin ?</chakra.strong>
 
       <Center width="100%" flex="1">
         <Grid
           templateColumns="1fr 2em 2fr"
           templateRows="repeat(2, 1fr)"
-          columnGap="3em"
-          rowGap="2em"
+          columnGap="brand.300"
+          rowGap="brand.200"
           alignItems="center"
         >
           <GridItem textAlign="right">Oui</GridItem>

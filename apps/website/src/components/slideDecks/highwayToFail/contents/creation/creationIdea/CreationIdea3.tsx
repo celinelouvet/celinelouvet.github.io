@@ -22,7 +22,7 @@ export const content = (
       </React.Suspense>
     }
   >
-    <Stack gap="1em">
+    <Stack gap="brand.100">
       <Text>1 avis laissé = 1 micro-don généré</Text>
     </Stack>
   </SlideContent>

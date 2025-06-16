@@ -15,19 +15,19 @@ export const SlideContentAbstract: React.FC<SlideContentAbstractProps> =
       <Box
         width="100%"
         height="100%"
-        padding="3em"
+        padding="brand.300"
         backgroundColor="brand.300"
         color="brand.900"
         {...restProps}
       >
-        <Stack gap="1.5em">
+        <Stack gap="brand.150">
           <Box>
             <Title title={topic} />
           </Box>
 
           <Box>
             {descriptions.map((description, i) => (
-              <Text key={i} fontSize="0.75em" marginBottom="1.1em">
+              <Text key={i} fontSize="brand.75" marginBottom="brand.110">
                 {description}
               </Text>
             ))}

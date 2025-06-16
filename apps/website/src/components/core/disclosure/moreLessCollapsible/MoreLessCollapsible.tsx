@@ -57,7 +57,7 @@ export const MoreLessCollapsible: React.FC<MoreLessCollapsibleProps> = ({
       <Collapsible.RootProvider value={collapsible} {...props}>
         <Collapsible.Content marginBottom={2}>{children}</Collapsible.Content>
 
-        <Collapsible.Trigger asChild minHeight="2em">
+        <Collapsible.Trigger asChild minHeight="brand.200">
           <CollapsibleTrigger
             open={collapsible.open}
             onOpenChange={(isOpen) => {

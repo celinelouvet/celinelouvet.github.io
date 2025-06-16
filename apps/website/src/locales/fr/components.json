@@ -1,6 +1,6 @@
 {
   "talkDetails": {
-    "date": "D MMM YYYY",
+    "date": "d MMM yyyy",
     "audio": "Audio",
     "program": "Programme",
     "slides": "Slides",

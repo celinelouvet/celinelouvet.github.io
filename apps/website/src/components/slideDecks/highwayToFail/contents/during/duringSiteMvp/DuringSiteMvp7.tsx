@@ -23,15 +23,15 @@ export const content = (
       </React.Suspense>
     }
   >
-    <Flex height="100%" alignItems="center" gap="3em">
+    <Flex height="100%" alignItems="center" gap="brand.300">
       <Box>
-        <Icon as={FaFlag} boxSize="4em" color="brand.500" />
+        <Icon as={FaFlag} boxSize="brand.400" color="brand.500" />
       </Box>
       <Box
         flex="1"
         color="brand.300"
-        fontSize="1.25em"
-        lineHeight="2em"
+        fontSize="brand.125"
+        lineHeight="brand.200"
         textAlign="center"
       >
         <Text>Se concentrer sur ce qui apporte de la valeur métier.</Text>

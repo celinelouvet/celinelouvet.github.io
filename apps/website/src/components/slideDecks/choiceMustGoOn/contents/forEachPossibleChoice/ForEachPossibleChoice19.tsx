@@ -18,7 +18,7 @@ export const content = (
     title="En résumé"
     alignContent="flex-start"
   >
-    <HStack width="100%" height="100%" gap="3em" opacity="0">
+    <HStack width="100%" height="100%" gap="brand.300" opacity="0">
       <ProgressiveList
         items={items}
         type="numbered"
@@ -30,7 +30,7 @@ export const content = (
         <Stack
           textAlign="center"
           backgroundColor="brand.800"
-          padding="1em"
+          padding="brand.100"
           borderRadius="md"
         >
           <chakra.span>Dépendra</chakra.span>

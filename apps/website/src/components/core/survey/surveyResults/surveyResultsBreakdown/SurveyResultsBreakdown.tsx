@@ -9,8 +9,8 @@ import { type SurveyPollChoiceQuestion } from '@repo/models';
 import * as React from 'react';
 import { BsArrowRight } from 'react-icons/bs';
 
-import { surveyResultsBreakdownRecipe } from './SurveyResultsBreakdown.recipe';
 import { useQuestionResults } from '../useQuestionResults';
+import { surveyResultsBreakdownRecipe } from './SurveyResultsBreakdown.recipe';
 
 type VoteResult = {
   title: string;
@@ -56,9 +56,9 @@ export const SurveyResultsBreakdown = React.forwardRef<
 
   return (
     <Grid
-      templateColumns="3em 4em auto 4em"
-      columnGap="1em"
-      rowGap="0.5em"
+      templateColumns="brand.300 brand.400 auto brand.400"
+      columnGap="brand.100"
+      rowGap="brand.50"
       alignItems="center"
       justifyItems="start"
       css={styles}

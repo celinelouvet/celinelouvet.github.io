@@ -36,7 +36,7 @@ export const content = (
         </React.Suspense>
       </Box>
       <Center width="100%" height="100%" backgroundColor="#666666">
-        <Text fontSize="1.5em" color="white" fontWeight="600">
+        <Text fontSize="brand.150" color="white" fontWeight="600">
           Choix de la techno
         </Text>
       </Center>

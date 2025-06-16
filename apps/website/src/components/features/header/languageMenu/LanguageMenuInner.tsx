@@ -22,7 +22,13 @@ export const LanguageMenuInner: React.FC<LanguageMenuInnerProps> =
     });
 
     return (
-      <Menu.Root>
+      <Menu.Root
+        id="language-menu"
+        ids={{
+          trigger: 'language-menu-button',
+          content: 'language-menu-content',
+        }}
+      >
         <Menu.Trigger asChild>
           <Button as={Button} size="sm" justifyContent="space-between">
             <BsTranslate />

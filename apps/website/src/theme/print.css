@@ -17,4 +17,17 @@
       content: counter(page) ' / ' counter(pages);
     }
   }
+
+  html {
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+
+    filter: opacity(1) !important;
+    -webkit-filter: opacity(1) !important;
+  }
+
+  body {
+    background-size: 21cm 29.7cm;
+    font-size: 10pt;
+  }
 }

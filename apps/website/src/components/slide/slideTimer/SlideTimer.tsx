@@ -19,7 +19,13 @@ export const SlideTimer = React.forwardRef<HTMLDivElement, SlideTimerProps>(
       useStopwatch({ autoStart: false });
 
     return (
-      <HStack alignItems="center" gap="2em" padding="4" ref={ref} {...props}>
+      <HStack
+        alignItems="center"
+        gap="brand.200"
+        padding="4"
+        ref={ref}
+        {...props}
+      >
         <Box flex="1">
           <TimeText
             hours={hours}

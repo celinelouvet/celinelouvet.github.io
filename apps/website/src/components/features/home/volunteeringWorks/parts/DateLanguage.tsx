@@ -2,7 +2,7 @@ import { HStack, chakra } from '@chakra-ui/react';
 import type * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { DateText } from '@/components/core';
+import { DateFormatter } from '@/components/core';
 import type { ConventionWithTalks } from '@/data';
 
 type DateLanguageProps = Pick<
@@ -24,7 +24,7 @@ export const DateLanguage: React.FC<DateLanguageProps> = function DateLanguage({
         color={{ base: 'brand.300', _dark: 'brand.700' }}
         fontSize="sm"
       >
-        <DateText when={start} dateFormat={t('date')} />
+        <DateFormatter type="date" when={start} dateFormat={t('date')} />
         <chakra.span>–</chakra.span>
         <chakra.span>{language.toUpperCase()}</chakra.span>
       </HStack>
@@ -39,9 +39,9 @@ export const DateLanguage: React.FC<DateLanguageProps> = function DateLanguage({
         fontSize="sm"
       >
         <HStack gap="0">
-          <DateText when={start} dateFormat="DD" />
+          <DateFormatter type="date" when={start} dateFormat="dd" />
           <chakra.span>-</chakra.span>
-          <DateText when={end} dateFormat={t('date')} />
+          <DateFormatter type="date" when={end} dateFormat={t('date')} />
         </HStack>
         <chakra.span>–</chakra.span>
         <chakra.span>{language.toUpperCase()}</chakra.span>

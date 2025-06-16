@@ -22,7 +22,7 @@ export const content = (
       </React.Suspense>
     }
   >
-    <Stack gap="1em"></Stack>
+    <Stack gap="brand.100"></Stack>
   </SlideContent>
 );
 

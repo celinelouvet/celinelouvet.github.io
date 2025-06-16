@@ -17,7 +17,7 @@ export const content = (
     title="Questions à se poser"
     alignContent="flex-start"
   >
-    <Stack width="100%" height="100%" gap="1em">
+    <Stack width="100%" height="100%" gap="brand.100">
       <Text>
         Comment mesurer qu’on valide les critères d’acceptation définis ?
       </Text>

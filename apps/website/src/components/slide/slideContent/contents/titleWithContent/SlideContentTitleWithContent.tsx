@@ -16,7 +16,7 @@ export const SlideContentTitleWithContent: React.FC<SlideContentTitleWithContent
     ...props
   }) {
     const titleWithCorner = topRightCornerContent ? (
-      <HStack gap="1em" alignItems="baseline">
+      <HStack gap="brand.100" alignItems="baseline">
         <H2Heading variant="slide" flex="1">
           {title}
         </H2Heading>
@@ -30,7 +30,7 @@ export const SlideContentTitleWithContent: React.FC<SlideContentTitleWithContent
       <Box
         width="100%"
         height="100%"
-        padding="3em"
+        padding="brand.300"
         backgroundColor="brand.900"
         color="brand.100"
         {...props}
@@ -39,7 +39,7 @@ export const SlideContentTitleWithContent: React.FC<SlideContentTitleWithContent
           width="100%"
           height="100%"
           alignItems="stretch"
-          gap="1em"
+          gap="brand.100"
           overflow="hidden"
         >
           <Box>{titleWithCorner}</Box>

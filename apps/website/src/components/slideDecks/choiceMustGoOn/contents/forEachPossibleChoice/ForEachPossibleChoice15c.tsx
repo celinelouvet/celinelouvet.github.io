@@ -23,15 +23,15 @@ export const content = (
     title="Définition d’une API"
     alignContent="flex-start"
   >
-    <Stack width="100%" height="100%" gap="1em" alignItems="center">
+    <Stack width="100%" height="100%" gap="brand.100" alignItems="center">
       <chakra.strong>
         Comment mesurer qu’on valide les critères définis ?
       </chakra.strong>
-      <HStack width="100%" gap="1em" alignItems="center">
+      <HStack width="100%" gap="brand.100" alignItems="center">
         <Stack flex="1">
           <Stack
             gap="0"
-            padding="0.5em"
+            padding="brand.50"
             borderRadius="md"
             backgroundColor="brand.800"
           >
@@ -40,7 +40,7 @@ export const content = (
             <ProgressiveList
               type="numbered"
               items={criterias}
-              gap="1em"
+              gap="brand.100"
               marginBottom="0"
             />
           </Stack>
@@ -50,11 +50,11 @@ export const content = (
           <Icon as={TbArrowBigRightFilled} />
         </Box>
 
-        <Stack flex="1" gap="1em">
+        <Stack flex="1" gap="brand.100">
           <ProgressiveList
             type="numbered"
             items={responses}
-            gap="1em"
+            gap="brand.100"
             marginBottom="0"
           />
         </Stack>

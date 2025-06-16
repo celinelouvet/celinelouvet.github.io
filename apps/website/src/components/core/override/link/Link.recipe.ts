@@ -10,6 +10,8 @@ export const linkRecipe = defineRecipe({
     textWrap: 'wrap',
     paddingX: '1',
     cursor: 'pointer',
+    textOverflow: 'ellipsis',
+    overflowX: 'hidden',
 
     _dark: {
       color: 'brand.600',
@@ -54,12 +56,12 @@ export const linkRecipe = defineRecipe({
       slideDark: {
         textDecoration: 'underline',
         color: 'brand.900',
-        fontSize: '1.25em',
+        fontSize: 'brand.125',
       },
       slideLight: {
         textDecoration: 'underline',
         color: 'brand.300',
-        fontSize: '1.25em',
+        fontSize: 'brand.125',
       },
     },
 

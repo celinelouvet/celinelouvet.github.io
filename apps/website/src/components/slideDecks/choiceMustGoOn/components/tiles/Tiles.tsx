@@ -13,7 +13,7 @@ import { getColors } from './colors';
 const boxStyle = {
   borderRadius: 'md',
   color: 'white',
-  padding: '0.5em',
+  padding: 'brand.50',
 };
 
 const allColors = ['brand.200', 'brand.300', 'brand.400', 'brand.500'];
@@ -56,7 +56,7 @@ export function Tiles({ data }: TilesProps) {
       >
         <Text
           fontFamily="PT Sans narrow"
-          fontSize="1.25em"
+          fontSize="brand.125"
           fontWeight="700"
           opacity={shown ? 1 : 0}
         >

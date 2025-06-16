@@ -15,12 +15,16 @@ export const content = (
       width="100%"
       alignItems="center"
       justifyContent="flex-start"
-      gap="3em"
+      gap="brand.300"
     >
       <Center width="20%">
-        <Icon as={LuMessageCircleQuestion} boxSize="4em" color="brand.500" />
+        <Icon
+          as={LuMessageCircleQuestion}
+          boxSize="brand.400"
+          color="brand.500"
+        />
       </Center>
-      <Stack flex="1" color="brand.300" fontSize="1.25em" gap="1em">
+      <Stack flex="1" color="brand.300" fontSize="brand.125" gap="brand.100">
         <H3Heading variant="slide">Méthode « MoSCoW »</H3Heading>
         <Text>Vise à établir les priorités des besoins.</Text>
       </Stack>

@@ -183,3 +183,84 @@ jobs:
           glob: '**/*.pdf'
           predefinedAcl: publicRead
           process_gcloudignore: false
+
+  resumePdf:
+    name: Generate Resume PDF
+    needs: deploy
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [20]
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Define bucket path
+        id: bucket
+        run: echo "BUCKET_PATH=${{env.BUCKET_NAME}}/${{ env.VERSION }}/resume" >> $GITHUB_OUTPUT
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup node env
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Cache node modules
+        uses: actions/cache@v4
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+
+      - name: Cache turbo build setup
+        uses: actions/cache@v4
+        with:
+          path: .turbo
+          key: ${{ runner.os }}-turbo-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-turbo-
+
+      - id: auth
+        name: Auth to GCP
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate PDF
+        shell: bash
+        run: npx turbo run resume --  --pageUrl="${{ env.VERSION_URL }}" --out="_generated"
+        env:
+          VERSION_URL: ${{ needs.deploy.outputs.versionUrl }}
+
+      - name: Upload PDF
+        uses: google-github-actions/upload-cloud-storage@v2
+        with:
+          path: tools/resume-generator/_generated
+          destination: ${{ steps.bucket.outputs.BUCKET_PATH }}
+          parent: false
+          glob: '**/*.pdf'
+          predefinedAcl: publicRead
+          process_gcloudignore: false
+
+      - name: Upload screenshots
+        uses: google-github-actions/upload-cloud-storage@v2
+        with:
+          path: tools/resume-generator/_generated
+          destination: ${{ steps.bucket.outputs.BUCKET_PATH }}
+          parent: false
+          glob: '**/*.png'
+          predefinedAcl: publicRead
+          process_gcloudignore: false

@@ -15,7 +15,7 @@ export const content = (
     title="Exemple"
     alignContent="flex-start"
   >
-    <HStack width="100%" height="100%" gap="3em">
+    <HStack width="100%" height="100%" gap="brand.300">
       <Stack
         flex="1"
         height="100%"
@@ -24,17 +24,19 @@ export const content = (
       >
         <Stack
           gap="0"
-          padding="0.5em"
+          padding="brand.50"
           borderRadius="md"
           backgroundColor="brand.800"
         >
           <chakra.strong>Besoin</chakra.strong>
-          <chakra.span paddingLeft="1em">Sauvegarder des données</chakra.span>
+          <chakra.span paddingLeft="brand.100">
+            Sauvegarder des données
+          </chakra.span>
         </Stack>
 
         <Stack
           gap="0"
-          padding="0.5em"
+          padding="brand.50"
           borderRadius="md"
           backgroundColor="brand.800"
         >
@@ -47,7 +49,7 @@ export const content = (
         flex="1"
         height="100%"
         alignItems="flex-start"
-        gap="1em"
+        gap="brand.100"
         opacity={0}
       >
         <chakra.strong>Plusieurs choix possibles</chakra.strong>

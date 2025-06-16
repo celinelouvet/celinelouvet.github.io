@@ -24,7 +24,7 @@ export const content = (
     }
     topRightCorner="Novembre 2018"
   >
-    <Stack gap="1em">
+    <Stack gap="brand.100">
       <ThumbsDown variant="slide">Manque de motivation généralisé</ThumbsDown>
       <ThumbsDown variant="slide">Manque d’argent</ThumbsDown>
     </Stack>

@@ -1,9 +1,9 @@
 import { Box, type BoxProps, Center, Grid } from '@chakra-ui/react';
 import * as React from 'react';
 
+import { type Slide } from '../types';
 import { useSlideSize, useWindowSize } from './hooks';
 import { type PrintNotes } from './types';
-import { type Slide } from '../types';
 
 export type SlideDeckForPrintNotesProps = Omit<BoxProps, 'children'> &
   React.PropsWithChildren<PrintNotes>;
@@ -77,7 +77,7 @@ export const Content = React.forwardRef<HTMLDivElement, SlideProps>(
             <Box
               {...contentProps}
               fontSize={fontSize * 0.9}
-              lineHeight="1.25em"
+              lineHeight="brand.125"
               {...slideBorder}
             >
               {content}

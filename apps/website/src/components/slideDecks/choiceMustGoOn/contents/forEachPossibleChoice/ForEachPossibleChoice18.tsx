@@ -25,15 +25,15 @@ export const content = (
       width="100%"
       alignItems="center"
       justifyContent="flex-start"
-      gap="3em"
+      gap="brand.300"
     >
       <Center width="20%">
         <Center position="relative">
-          <Icon as={GiHeavyBullets} boxSize="4em" color="brand.500" />
+          <Icon as={GiHeavyBullets} boxSize="brand.400" color="brand.500" />
           <Center {...strikedStyle}></Center>
         </Center>
       </Center>
-      <Stack flex="1" fontSize="1.25em" gap="1em">
+      <Stack flex="1" fontSize="brand.125" gap="brand.100">
         <H3Heading variant="slide">Pas de « Silver Bullet »</H3Heading>
         <Text>Ça dépend de ce qui est à mettre en place et du contexte.</Text>
       </Stack>

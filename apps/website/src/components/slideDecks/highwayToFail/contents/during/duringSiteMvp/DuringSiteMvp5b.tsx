@@ -27,7 +27,7 @@ export const content = (
       </React.Suspense>
     }
   >
-    <Stack height="100%" gap="1em">
+    <Stack height="100%" gap="brand.100">
       <Text>
         Les 20% restants vont être les plus difficiles, et demanderont 80%
         d’effort.

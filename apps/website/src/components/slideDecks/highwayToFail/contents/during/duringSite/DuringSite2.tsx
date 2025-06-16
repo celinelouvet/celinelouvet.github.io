@@ -38,7 +38,7 @@ export const content = (
     <Flex
       width="100%"
       height="100%"
-      gap="1em"
+      gap="brand.100"
       alignItems="flex-start"
       justifyContent="center"
     >

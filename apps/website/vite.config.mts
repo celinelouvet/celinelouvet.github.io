@@ -22,5 +22,8 @@ export default defineConfig(({ mode }) => {
       target: 'ESNext',
       outDir: 'dist/app',
     },
+    server: {
+      allowedHosts: ['.ngrok-free.app'],
+    },
   };
 }) satisfies UserConfigFnObject;

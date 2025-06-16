@@ -9,10 +9,10 @@ export const content = (
     title="À priori, non"
     alignContent="flex-start"
   >
-    <Stack gap="0.5em" width="100%" height="100%">
+    <Stack gap="brand.50" width="100%" height="100%">
       <chakra.span>C’est une impression</chakra.span>
 
-      <Flex alignItems="center" gap="0.5em" marginLeft="1em">
+      <Flex alignItems="center" gap="brand.50" marginLeft="brand.100">
         <Icon as={BsArrowReturnRight} />
         <chakra.span>Un PoC peut être nécessaire, pour confirmer</chakra.span>
       </Flex>

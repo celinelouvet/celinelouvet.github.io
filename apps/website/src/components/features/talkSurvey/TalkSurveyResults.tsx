@@ -45,7 +45,7 @@ export const TalkSurveyResults = React.forwardRef<
       </Box>
       {questionsToShow.map(({ id, question }) => (
         <Box key={id}>
-          <Skeleton loading={loading} minHeight="5em">
+          <Skeleton loading={loading} minHeight="brand.500">
             <SurveyQuestionResults question={question} results={results[id]} />
           </Skeleton>
         </Box>

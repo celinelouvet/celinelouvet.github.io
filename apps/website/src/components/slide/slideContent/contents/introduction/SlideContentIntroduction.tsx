@@ -43,7 +43,7 @@ export const SlideContentIntroduction: React.FC<SlideContentIntroductionProps> =
           height="100%"
           alignItems="stretch"
           justifyContent="center"
-          gap="2em"
+          gap="brand.200"
         >
           <Box>
             <H2Heading variant="slide">{author}</H2Heading>
@@ -63,9 +63,9 @@ export const SlideContentIntroduction: React.FC<SlideContentIntroductionProps> =
           </Box>
 
           <Box>
-            <HStack gap="2em" alignItems="start">
+            <HStack gap="brand.200" alignItems="start">
               {splitSocials.map((split, splitIndex) => (
-                <List.Root key={splitIndex} variant="plain" gap="0.5em">
+                <List.Root key={splitIndex} variant="plain" gap="brand.50">
                   {split.map(({ name, handle }, index) => (
                     <List.TextItem
                       key={index}

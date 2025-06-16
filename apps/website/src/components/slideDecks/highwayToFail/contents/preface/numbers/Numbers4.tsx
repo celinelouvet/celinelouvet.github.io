@@ -9,7 +9,7 @@ export const content = (
     title="Consensus"
     column1={
       <Center width="100%" height="70%">
-        <Icon as={FaHashtag} boxSize="5em" color="brand.500" />
+        <Icon as={FaHashtag} boxSize="brand.500" color="brand.500" />
       </Center>
     }
   >
@@ -18,14 +18,14 @@ export const content = (
       height="100%"
       justifyContent="center"
       alignItems="center"
-      gap="1em"
+      gap="brand.100"
     >
       <Box>
-        <Text fontSize="2.5em" color="brand.400" fontWeight="900">
+        <Text fontSize="brand.250" color="brand.400" fontWeight="900">
           Entre 60% et 90%
         </Text>
       </Box>
-      <Box marginBottom="1em">
+      <Box marginBottom="brand.100">
         <Text>des start‑ups échouent</Text>
       </Box>
     </Stack>
