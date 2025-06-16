@@ -1,24 +1,23 @@
+import { Box, type BoxProps } from '@chakra-ui/react';
 import * as React from 'react';
 
 import { PageContainer } from '@/components/core';
 import { Header, Resume as ResumeContent } from '@/components/features';
-import { useIsPrint, useResume } from '@/hooks';
+import { useResume } from '@/hooks';
 
-export const Resume: React.FC = () => {
-  const resume = useResume();
+export type ResumePageProps = Omit<BoxProps, 'children'>;
 
-  const isPrint = useIsPrint();
+export const ResumePage = React.forwardRef<HTMLDivElement, BoxProps>(
+  function ResumePage(props, ref) {
+    const resume = useResume();
 
-  if (isPrint) {
-    return <ResumeContent resume={resume} />;
-  }
-
-  return (
-    <>
-      <Header />
-      <PageContainer>
-        <ResumeContent resume={resume} />
-      </PageContainer>
-    </>
-  );
-};
+    return (
+      <Box ref={ref} {...props}>
+        <Header />
+        <PageContainer>
+          <ResumeContent resume={resume} />
+        </PageContainer>
+      </Box>
+    );
+  },
+);

@@ -1,30 +1,38 @@
-import { useMediaQuery, useToken } from '@chakra-ui/react';
+import { Box, type BoxProps, useBreakpointValue } from '@chakra-ui/react';
 import * as React from 'react';
 
 import { type Resume } from '@/data';
-import { useIsPrint } from '@/hooks';
 
-import { ResumeAboveLg } from './ResumeAboveLg';
-import { ResumeBelowLg } from './ResumeBelowLg';
-import { ResumePrint } from './ResumePrint';
+import { ResumeContent as ResumeAboveLg } from './aboveLg';
+import { ResumeContent as ResumeBelowMd } from './belowMd';
+import { ResumeContent as ResumeBetweenMdAndLg } from './betweenMdAndLg';
+import { ResumeContent as ResumePrint } from './print';
 
-type ResumeProps = {
-  resume: Resume;
-};
+export interface ResumeProps
+  extends Omit<BoxProps, 'children'>,
+    React.PropsWithChildren<{
+      resume: Resume;
+    }> {}
 
-export const ResumeLayout: React.FC<ResumeProps> = function ResumeLayout({
-  resume,
-}) {
-  const isPrint = useIsPrint();
+export const ResumeLayout = React.forwardRef<HTMLDivElement, ResumeProps>(
+  function ResumeLayout(props, ref) {
+    const { resume, ...restProps } = props;
 
-  const [lg] = useToken('breakpoints', ['lg']);
+    const ResumeContent = useBreakpointValue({
+      base: ResumeBelowMd,
+      md: ResumeBetweenMdAndLg,
+      lg: ResumeAboveLg,
+      _print: ResumePrint,
+    });
 
-  const [aboveLg] = useMediaQuery([`(min-width: ${lg})`]);
-  if (isPrint) {
-    return <ResumePrint resume={resume} />;
-  }
-  if (aboveLg) {
-    return <ResumeAboveLg resume={resume} />;
-  }
-  return <ResumeBelowLg resume={resume} />;
-};
+    if (!ResumeContent) {
+      return null;
+    }
+
+    return (
+      <Box ref={ref} {...restProps}>
+        <ResumeContent resume={resume} />
+      </Box>
+    );
+  },
+);

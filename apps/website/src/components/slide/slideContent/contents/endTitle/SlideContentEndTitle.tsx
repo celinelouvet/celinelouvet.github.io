@@ -37,13 +37,7 @@ export const SlideContentEndTitle: React.FC<SlideContentEndTitleProps> =
 
 const Title: React.FC<{ title: string }> = ({ title }) =>
   title.split('\n').map((line, i) => (
-    <H1Heading
-      key={i}
-      variant="slide"
-      size="lg"
-      textAlign="center"
-      lineHeight="1.5"
-    >
+    <H1Heading key={i} variant="slide" textAlign="center" lineHeight="1.5">
       {line}
     </H1Heading>
   ));

@@ -10,5 +10,9 @@
     "years_one": "{{count}} an",
     "years_other": "{{count}} ans",
     "months": "{{count}} mois"
+  },
+  "remoteType": {
+    "FULLTIME": "Télétravail complet",
+    "HYBRID": "Télétravail alterné (3 jours / semaine)"
   }
 }

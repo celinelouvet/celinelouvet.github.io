@@ -11,5 +11,10 @@
     "years_other": "{{count}} years",
     "months_one": "{{count}} month",
     "months_other": "{{count}} months"
+  },
+
+  "remoteType": {
+    "FULLTIME": "Full-time remote",
+    "HYBRID": "Part-time remote (3 days / week)"
   }
 }

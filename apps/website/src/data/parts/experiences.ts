@@ -23,6 +23,14 @@ const experiences = {
           },
         ],
       },
+      {
+        type: 'Services',
+        technos: ['Node', 'Typescript', 'Express', 'Fastify'],
+      },
+      {
+        type: 'Frontends',
+        technos: ['Typescript', 'React'],
+      },
     ],
   },
 
@@ -367,7 +375,7 @@ export const experiences_fr = [
       {
         name: 'Team Core Banking',
         description:
-          'Développement du nouveau cœur bancaire destiné à devenir un Banking-as-a-Service.',
+          'Développement du nouveau cœur bancaire destiné à devenir un Banking‑as‑a‑Service.',
       },
     ],
     tasks: [
@@ -831,6 +839,52 @@ export const experiences_en = [
   {
     ...experiences.shine,
     role: 'Senior Lead developer',
+    descriptions: [
+      'Fullstack developer on a highly event-driven microservices architecture.',
+      'Mentoring junior developers in career transition.',
+      'Development of a new CQRS-oriented architecture.',
+      'As part of the acquisition of Shine by Ageras, involving major reorganization of teams and products.',
+    ],
+    projects: [
+      {
+        name: 'Team User Success',
+        description:
+          'Implementation of solutions to make customer support more efficient.',
+      },
+      {
+        name: 'Team Core Banking',
+        description:
+          'Development of the new banking core intended to become Banking‑as‑a‑Service.',
+      },
+    ],
+    tasks: [
+      {
+        name: 'Shine level',
+        subtasks: [
+          { name: 'Definition of the authorization system' },
+          {
+            name: 'Harmonization of tools, methodologies, and processes following the merger with Ageras',
+          },
+        ],
+      },
+      {
+        name: 'User success level',
+        subtasks: [
+          { name: 'Interface with external APIs (Intercom, Pappers, etc.)' },
+          {
+            name: 'Implementation of a company monitoring system for compliance',
+          },
+        ],
+      },
+      {
+        name: 'Core banking level',
+        subtasks: [
+          {
+            name: 'Implementation of a release candidate system for deployments',
+          },
+        ],
+      },
+    ],
   },
 
   // Pyxo

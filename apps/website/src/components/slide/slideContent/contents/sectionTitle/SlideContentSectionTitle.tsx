@@ -27,9 +27,7 @@ export const SlideContentSectionTitle: React.FC<SlideContentSectionTitleProps> =
           justifyContent="center"
         >
           <Box>
-            <H1Heading variant="slide" size="lg">
-              {title}
-            </H1Heading>
+            <H1Heading variant="slide">{title}</H1Heading>
           </Box>
         </Stack>
       </Box>

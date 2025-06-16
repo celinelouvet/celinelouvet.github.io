@@ -1,6 +1,12 @@
+export { Certifications } from './certifications';
 export { Description } from './description';
+export { Educations } from './educations';
+export { Experiences } from './experiences';
 export { Infos } from './infos';
 export { PdfDownloader } from './pdfDownloader';
+export { Podcasts } from './podcasts';
 export { Remotes } from './remote';
 export { Skills } from './skills';
-export { Socials } from './socials/Socials';
+export { Socials } from './socials';
+export { Talks } from './talks';
+export { Trainings } from './trainings';

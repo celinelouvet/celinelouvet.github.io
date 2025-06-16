@@ -11,7 +11,12 @@ import {
 } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { DateText, H2Heading, H3Heading, Picture } from '@/components/core';
+import {
+  DateFormatter,
+  H2Heading,
+  H3Heading,
+  Picture,
+} from '@/components/core';
 
 import {
   ColorMode,
@@ -108,8 +113,9 @@ const Day: React.FC<{ time?: string }> = ({ time }) => (
   <Flex w="100%" gap="brand.50" alignItems="center">
     <Icon as={promotionIcon('day')} boxSize="brand.125" />
     {time ? (
-      <DateText
-        dateFormat="D MMMM YYYY"
+      <DateFormatter
+        type="date"
+        dateFormat="d MMMM yyyy"
         when={time}
         variant="slide"
         color="white"
@@ -124,7 +130,13 @@ const Time: React.FC<{ time?: string }> = ({ time }) => (
   <Flex w="100%" gap="brand.50" alignItems="center">
     <Icon as={promotionIcon('time')} boxSize="brand.125" />
     {time ? (
-      <DateText dateFormat="h:mm" when={time} variant="slide" color="white" />
+      <DateFormatter
+        type="date"
+        dateFormat="h:mm"
+        when={time}
+        variant="slide"
+        color="white"
+      />
     ) : (
       <chakra.span>Heure inconnue</chakra.span>
     )}

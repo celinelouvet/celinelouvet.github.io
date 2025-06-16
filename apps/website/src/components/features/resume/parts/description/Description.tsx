@@ -3,7 +3,6 @@ import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { H2Heading } from '@/components/core';
-import { useHeadingSize } from '@/hooks';
 
 export type DescriptionProps = {
   descriptions: string[];
@@ -12,12 +11,11 @@ export type DescriptionProps = {
 export const Description: React.FC<DescriptionProps> = function Description({
   descriptions,
 }) {
-  const size = useHeadingSize();
   const { t } = useTranslation('resume', { keyPrefix: 'description' });
 
   return (
     <Stack _print={{ breakAfter: 'page' }}>
-      <H2Heading size={size}>{t('title')}</H2Heading>
+      <H2Heading>{t('title')}</H2Heading>
 
       <Box>
         {descriptions.map((description, index) => (

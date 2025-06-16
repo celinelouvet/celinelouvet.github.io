@@ -43,9 +43,7 @@ export const SlideContentSectionTitleWithThinColumn: React.FC<SlideContentSectio
             color="brand.200"
           >
             <Center width="100%" height="100%">
-              <H1Heading variant="slide" size="lg">
-                {title}
-              </H1Heading>
+              <H1Heading variant="slide">{title}</H1Heading>
             </Center>
           </Box>
         </HStack>

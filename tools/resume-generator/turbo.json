@@ -1,6 +1,6 @@
 {
   "extends": ["//"],
   "tasks": {
-    "resume": {}
+    "resume": { "cache": false, "persistent": true }
   }
 }

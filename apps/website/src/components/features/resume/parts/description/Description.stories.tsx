@@ -7,13 +7,15 @@ import { Description as DescriptionComponent } from './Description';
 const meta = {
   title: 'Features/Resume/Parts',
   component: DescriptionComponent,
+  parameters: {
+    viewport: { defaultViewport: 'desktop' },
+  },
+  args: {
+    descriptions: resume.descriptions,
+  },
 } satisfies Meta<typeof DescriptionComponent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Description: Story = {
-  args: {
-    descriptions: resume.descriptions,
-  },
-};
+export const Description: Story = {};

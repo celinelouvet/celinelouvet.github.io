@@ -4,19 +4,17 @@ import { useTranslation } from 'react-i18next';
 
 import { H2Heading } from '@/components/core';
 import { type Remote } from '@/data';
-import { useHeadingSize } from '@/hooks';
 
 export type RemotesProps = {
   remotes: Remote[];
 };
 
 export const Remotes: React.FC<RemotesProps> = function Remotes({ remotes }) {
-  const size = useHeadingSize();
   const { t } = useTranslation('resume', { keyPrefix: 'remote' });
 
   return (
     <Box>
-      <H2Heading size={size}>{t('title')}</H2Heading>
+      <H2Heading>{t('title')}</H2Heading>
 
       <List.Root gap="1" variant="plain">
         {remotes.map(({ type, where }, index) => (

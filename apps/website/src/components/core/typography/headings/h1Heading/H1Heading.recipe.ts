@@ -6,6 +6,13 @@ export const h1HeadingRecipe = defineRecipe({
     textTransform: 'uppercase',
     fontWeight: '400',
     paddingBottom: '3',
+
+    fontSize: {
+      base: 'brand.225',
+      sm: 'brand.250',
+      md: 'brand.275',
+      _print: 'brand.225',
+    },
   },
   variants: {
     variant: {
@@ -18,44 +25,14 @@ export const h1HeadingRecipe = defineRecipe({
     },
     size: {
       sm: {
-        fontSize: 'brand.225',
-        base: {
-          fontSize: 'brand.175',
-        },
-        md: {
-          fontSize: 'brand.225',
-        },
-        _print: {
-          fontSize: 'brand.175',
-        },
+        fontSize: { base: 'brand.225', _print: 'brand.225' },
       },
       md: {
-        fontSize: 'brand.275',
-        base: {
-          fontSize: 'brand.225',
-        },
-        md: {
-          fontSize: 'brand.275',
-        },
-        _print: {
-          fontSize: 'brand.225',
-        },
+        fontSize: { base: 'brand.275', _print: 'brand.225' },
       },
       lg: {
-        fontSize: 'brand.300',
-        base: {
-          fontSize: 'brand.250',
-        },
-        md: {
-          fontSize: 'brand.275',
-        },
-        _print: {
-          fontSize: 'brand.250',
-        },
+        fontSize: { base: 'brand.300', _print: 'brand.225' },
       },
     },
-  },
-  defaultVariants: {
-    size: 'md',
   },
 });

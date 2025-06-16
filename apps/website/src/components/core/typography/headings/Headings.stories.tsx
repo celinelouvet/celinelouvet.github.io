@@ -50,25 +50,25 @@ export const Headings: Story = {
         <Tag size="lg">H1</Tag>
       </GridItem>
       <GridItem>
-        <H1Heading size="sm">H1 - {h1Sizes?.sm.fontSize}</H1Heading>
+        <H1Heading size="sm">H1 - {h1Sizes?.sm.fontSize.base}</H1Heading>
       </GridItem>
       <GridItem>
-        <H1Heading>H1 - {h1Sizes?.md.fontSize}</H1Heading>
+        <H1Heading>H1 - {h1Sizes?.md.fontSize.base}</H1Heading>
       </GridItem>
       <GridItem>
-        <H1Heading size="lg">H1 - {h1Sizes?.lg.fontSize}</H1Heading>
+        <H1Heading size="lg">H1 - {h1Sizes?.lg.fontSize.base}</H1Heading>
       </GridItem>
       <GridItem>
         <H1Heading variant="slide" size="sm">
-          H1 - {h1Sizes?.sm.fontSize}
+          H1 - {h1Sizes?.sm.fontSize.base}
         </H1Heading>
       </GridItem>
       <GridItem>
-        <H1Heading variant="slide">H1 - {h1Sizes?.md.fontSize}</H1Heading>
+        <H1Heading variant="slide">H1 - {h1Sizes?.md.fontSize.base}</H1Heading>
       </GridItem>
       <GridItem>
         <H1Heading variant="slide" size="lg">
-          H1 - {h1Sizes?.lg.fontSize}
+          H1 - {h1Sizes?.lg.fontSize.base}
         </H1Heading>
       </GridItem>
 
@@ -77,18 +77,18 @@ export const Headings: Story = {
       </GridItem>
       <GridItem></GridItem>
       <GridItem>
-        <H2Heading>H2 - {h2Sizes?.md.fontSize}</H2Heading>
+        <H2Heading>H2 - {h2Sizes?.md.fontSize.base}</H2Heading>
       </GridItem>
       <GridItem>
-        <H2Heading size="lg">H2 - {h2Sizes?.lg.fontSize}</H2Heading>
+        <H2Heading size="lg">H2 - {h2Sizes?.lg.fontSize.base}</H2Heading>
       </GridItem>
       <GridItem></GridItem>
       <GridItem>
-        <H2Heading variant="slide">H2 - {h2Sizes?.md.fontSize}</H2Heading>
+        <H2Heading variant="slide">H2 - {h2Sizes?.md.fontSize.base}</H2Heading>
       </GridItem>
       <GridItem>
         <H2Heading variant="slide" size="lg">
-          H2 - {h2Sizes?.lg.fontSize}
+          H2 - {h2Sizes?.lg.fontSize.base}
         </H2Heading>
       </GridItem>
 
@@ -97,18 +97,18 @@ export const Headings: Story = {
       </GridItem>
       <GridItem></GridItem>
       <GridItem>
-        <H3Heading>H3 - {h3Sizes?.md.fontSize}</H3Heading>
+        <H3Heading>H3 - {h3Sizes?.md.fontSize.base}</H3Heading>
       </GridItem>
       <GridItem>
-        <H3Heading size="lg">H3 - {h3Sizes?.lg.fontSize}</H3Heading>
+        <H3Heading size="lg">H3 - {h3Sizes?.lg.fontSize.base}</H3Heading>
       </GridItem>
       <GridItem></GridItem>
       <GridItem>
-        <H3Heading variant="slide">H3 - {h3Sizes?.md.fontSize}</H3Heading>
+        <H3Heading variant="slide">H3 - {h3Sizes?.md.fontSize.base}</H3Heading>
       </GridItem>
       <GridItem>
         <H3Heading variant="slide" size="lg">
-          H3 - {h3Sizes?.lg.fontSize}
+          H3 - {h3Sizes?.lg.fontSize.base}
         </H3Heading>
       </GridItem>
 

@@ -1,11 +1,9 @@
-import { recipe as dateTextRecipe } from './dateText';
-import { recipe as durationTextRecipe } from './durationText';
+import { recipe as dateFormatterRecipe } from './dateFormatter';
 import { recipes as headingsRecipes } from './headings';
-import { recipe as periodTextRecipe } from './periodText';
+import { recipe as remoteTextRecipe } from './remoteText';
 import { recipe as timeTextRecipe } from './timeText';
 
-export { DateText } from './dateText';
-export { DurationText } from './durationText';
+export { DateFormatter } from './dateFormatter';
 export {
   H1Heading,
   H2Heading,
@@ -13,13 +11,12 @@ export {
   H4Heading,
   H5Heading,
 } from './headings';
-export { PeriodText } from './periodText';
+export { RemoteText } from './remoteText';
 export { TimeText } from './timeText';
 
 export const typographyRecipes = {
-  ...dateTextRecipe,
-  ...durationTextRecipe,
+  ...dateFormatterRecipe,
   ...headingsRecipes,
-  ...periodTextRecipe,
   ...timeTextRecipe,
+  ...remoteTextRecipe,
 };
