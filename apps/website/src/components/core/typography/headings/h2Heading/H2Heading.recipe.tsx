@@ -19,6 +19,7 @@ export const h2HeadingRecipe = defineRecipe({
         textTransform: 'none',
         fontWeight: '400',
         lineHeight: '1.2',
+        fontSize: 'brand.200',
       },
     },
     size: {
@@ -29,5 +30,8 @@ export const h2HeadingRecipe = defineRecipe({
         fontSize: { base: 'brand.225', _print: 'brand.175' },
       },
     },
+  },
+  defaultVariants: {
+    size: 'lg',
   },
 });

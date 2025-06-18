@@ -17,7 +17,7 @@ const sizes = {
   200: { value: '2em' },
   225: { value: '2.25em' },
   250: { value: '2.5em' },
-  275: { value: '2.5em' },
+  275: { value: '2.75em' },
   300: { value: '3em' },
   400: { value: '4em' },
   500: { value: '5em' },
