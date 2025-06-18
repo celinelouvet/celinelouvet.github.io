@@ -10,12 +10,12 @@ export const content = (
   >
     <Center width="100%" height="100%">
       <Link.Internal
-        to="/mixit/results"
+        to="/voxxedlux/results"
         textAlign="center"
         variant="slideLight"
         target="_blank"
       >
-        celine.louvet.me/mixit/results
+        celine.louvet.me/voxxedlux/results
       </Link.Internal>
     </Center>
   </SlideContent>
