@@ -25,7 +25,7 @@ export const Podcasts: React.FC<PodcastsProps> = function Podcasts({ resume }) {
   }, [podcasts]);
 
   return (
-    <Stack gap="4" _print={{ breakInside: 'avoid' }}>
+    <Stack id="podcasts" gap="4" _print={{ breakInside: 'avoid' }}>
       <H2Heading>{t('title')}</H2Heading>
 
       <Grid

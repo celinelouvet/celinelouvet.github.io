@@ -14,7 +14,6 @@ import {
   Trainings,
 } from '../parts';
 
-
 type ContentProps = Omit<ChakraStackProps, 'children'> & {
   resume: Resume;
 };

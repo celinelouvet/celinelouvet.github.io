@@ -61,5 +61,14 @@
   },
   "certifications": {
     "title": "Certifications"
+  },
+  "menu": {
+    "descriptions": "Description",
+    "experiences": "Expériences",
+    "talks": "Conférences",
+    "podcasts": "Podcasts",
+    "educations": "Formation scolaire",
+    "trainings": "Formations",
+    "certifications": "Certifications"
   }
 }

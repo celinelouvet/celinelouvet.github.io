@@ -63,5 +63,14 @@
   },
   "certifications": {
     "title": "Certifications"
+  },
+  "menu": {
+    "descriptions": "Description",
+    "experiences": "Experiences",
+    "talks": "Talks",
+    "podcasts": "Podcasts",
+    "educations": "Education",
+    "trainings": "Trainings",
+    "certifications": "Certifications"
   }
 }

@@ -16,7 +16,7 @@ export const Certifications: React.FC<CertificationsProps> =
     const { t } = useTranslation('resume', { keyPrefix: 'certifications' });
 
     return (
-      <Stack gap="4" _print={{ breakInside: 'avoid' }}>
+      <Stack id="certifications" gap="4" _print={{ breakInside: 'avoid' }}>
         <H2Heading>{t('title')}</H2Heading>
 
         <Grid
