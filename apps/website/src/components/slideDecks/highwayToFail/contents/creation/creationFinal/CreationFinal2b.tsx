@@ -38,7 +38,7 @@ export const content = (
           labelStyle={(dataIndex) => {
             const dataEntry = data[dataIndex];
             return {
-              fontSize: 'brand.25',
+              fontSize: '0.25em',
               fill: dataEntry.labelColor,
               fontFamily: 'nunito',
               fontWeight: 'bold',

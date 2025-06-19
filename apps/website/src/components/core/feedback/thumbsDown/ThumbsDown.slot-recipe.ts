@@ -14,6 +14,8 @@ export const thumbsDownSlotRecipe = defineSlotRecipe({
       slide: {
         root: {
           fontSize: 'brand.100',
+          lineHeight: '1.5',
+          borderRadius: 'md',
           backgroundColor: { base: '#eadcbf', _dark: '#eadcbf' },
           borderLeftColor: { base: '#cf8b5e', _dark: '#cf8b5e' },
           color: { base: '#443c37', _dark: '#443c37' },
@@ -27,6 +29,8 @@ export const thumbsDownSlotRecipe = defineSlotRecipe({
       rightSlide: {
         root: {
           fontSize: 'brand.100',
+          lineHeight: '1.5',
+          borderRadius: 'md',
           backgroundColor: { base: '#eadcbf', _dark: '#eadcbf' },
           borderRightColor: { base: '#cf8b5e', _dark: '#cf8b5e' },
           color: { base: '#443c37', _dark: '#443c37' },
