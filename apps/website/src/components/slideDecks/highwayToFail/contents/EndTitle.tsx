@@ -8,7 +8,6 @@ import {
   chakra,
 } from '@chakra-ui/react';
 
-import { H2Heading, QrCode } from '@/components/core';
 import {
   ColorMode,
   SlideContent,
@@ -57,19 +56,6 @@ export const content = (
             );
           })}
         </HStack>
-      </Stack>
-      <Stack
-        width="25%"
-        alignItems="center"
-        justifyContent="space-around"
-        gap="brand.200"
-      >
-        <QrCode
-          width="100%"
-          variant="light"
-          value="https://mixitconf.org/2025/highway-to-fail-ou-l-39-histoire-d-39-un-echec-previsible#feedback"
-        />
-        <H2Heading variant="slide">Retours</H2Heading>
       </Stack>
     </HStack>
   </SlideContent>
