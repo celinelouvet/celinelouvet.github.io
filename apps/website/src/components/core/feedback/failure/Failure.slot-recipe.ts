@@ -14,6 +14,8 @@ export const failureSlotRecipe = defineSlotRecipe({
       slide: {
         root: {
           fontSize: 'brand.100',
+          lineHeight: '1.5',
+          borderRadius: 'md',
           backgroundColor: { base: '#e3b4b7', _dark: '#e3b4b7' },
           borderLeftColor: { base: '#cc5152', _dark: '#cc5152' },
           color: { base: '#3d3b46', _dark: '#3d3b46' },
@@ -27,6 +29,8 @@ export const failureSlotRecipe = defineSlotRecipe({
       rightSlide: {
         root: {
           fontSize: 'brand.100',
+          lineHeight: '1.5',
+          borderRadius: 'md',
           backgroundColor: { base: '#e3b4b7', _dark: '#e3b4b7' },
           borderRightColor: { base: '#cc5152', _dark: '#cc5152' },
           color: { base: '#3d3b46', _dark: '#3d3b46' },

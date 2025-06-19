@@ -5,7 +5,7 @@ const defaultContentHeight = 450;
 const ratio = 16 / 9;
 
 const defaultConfig = {
-  lineHeight: 'brand.200',
+  lineHeight: '2em',
   fontSize: defaultFontSize,
   height: defaultContentHeight,
   width: defaultContentHeight * ratio,

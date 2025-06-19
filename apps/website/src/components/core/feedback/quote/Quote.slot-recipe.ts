@@ -54,6 +54,8 @@ export const quoteSlotRecipe = defineSlotRecipe({
       slide: {
         root: {
           fontSize: 'brand.100',
+          lineHeight: '1.5',
+          borderRadius: 'md',
           backgroundColor: { base: 'brand.800', _dark: 'brand.800' },
           borderLeftColor: { base: 'brand.400', _dark: 'brand.500' },
           color: { base: 'brand.200', _dark: 'brand.200' },
@@ -67,6 +69,8 @@ export const quoteSlotRecipe = defineSlotRecipe({
       rightSlide: {
         root: {
           fontSize: 'brand.100',
+          lineHeight: '1.5',
+          borderRadius: 'md',
           backgroundColor: { base: 'brand.800', _dark: 'brand.800' },
           borderRightColor: { base: 'brand.400', _dark: 'brand.500' },
           color: { base: 'brand.200', _dark: 'brand.200' },
