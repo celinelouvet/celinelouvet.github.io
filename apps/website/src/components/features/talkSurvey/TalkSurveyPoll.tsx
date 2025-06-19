@@ -22,57 +22,40 @@ export const TalkSurveyPoll = React.forwardRef<HTMLDivElement, SurveyPollProps>(
     const { log } = useLogger();
     const { t } = useTranslation('components', { keyPrefix: 'survey' });
 
-    const {
-      surveyId,
-      surveyPoll,
-      surveyState,
-      states,
-      values,
-      setState,
-      setValue,
-    } = useSurveyPoll(talkSubjectId, conventionId);
+    const { surveyId, surveyPoll, surveyState, survey, setAnswer, getResults } =
+      useSurveyPoll(talkSubjectId, conventionId);
 
     if (surveyPoll === null || surveyId === null) {
       return <Box>{t('noSurvey')}</Box>;
     }
 
-    const { questions, title } = surveyPoll;
-
-    function ifOptional(current: string) {
-      const question = questions.get(current);
-
-      if (question && question.optional && 'next' in question) {
-        setState(question.next, true);
-      }
-    }
+    const { title } = surveyPoll;
 
     async function logAnswer(key: string) {
-      const question = questions.get(key);
-
-      if (question && 'title' in question) {
-        await log('Answer selected', { title, question: question.title });
+      const questionState = survey.get(key);
+      if (questionState === undefined) {
+        return;
       }
+
+      const questionTitle =
+        ('title' in questionState.question && questionState.question.title) ??
+        'unknown question';
+
+      await log('Answer selected', { title, question: questionTitle });
     }
 
-    async function onAnswer(
-      key: string,
-      value: string,
-      next: string,
-      oldNext?: string,
-    ) {
-      setValue(key, value, oldNext !== undefined);
+    async function onAnswer(key: string, value: 'yes' | 'no' | string) {
+      setAnswer(key, value);
 
-      if (oldNext) {
-        setState(oldNext, false);
-      }
-      setState(next, true);
-
-      ifOptional(next);
       await logAnswer(key);
     }
 
     function onSubmit() {
-      post('/survey', { surveyId, title, values: Object.fromEntries(values) });
+      const results = getResults();
+      if (!results) {
+        return;
+      }
+      post('/survey', results);
       log('Survey submitted', { title });
     }
 
@@ -91,11 +74,11 @@ export const TalkSurveyPoll = React.forwardRef<HTMLDivElement, SurveyPollProps>(
     const Opened = (
       <form>
         <Stack gap="4">
-          {[...questions.entries()].map(([key, question]) => (
-            <Box key={key} display={states.get(key) ? '' : 'none'}>
+          {[...survey.entries()].map(([key, questionState]) => (
+            <Box key={key} display={questionState.shown ? '' : 'none'}>
               <QuestionContent
                 id={key}
-                question={question}
+                question={questionState.question}
                 onAnswer={onAnswer}
                 onSubmit={onSubmit}
               />
