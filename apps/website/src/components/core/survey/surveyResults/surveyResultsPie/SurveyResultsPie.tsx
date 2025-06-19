@@ -43,7 +43,7 @@ export const SurveyResultsPie = React.forwardRef<
             dataEntry.value !== 0 ? dataEntry.title : ''
           }
           labelStyle={{
-            fontSize: 'brand.50',
+            fontSize: '0.5em',
             fill: labelColor,
             fontFamily: 'nunito',
             fontWeight: 'bold',
