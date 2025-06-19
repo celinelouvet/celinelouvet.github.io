@@ -55,6 +55,26 @@ const getContent = (env, version, service, dist) => {
     secure: always
     static_files: ${dist}/index.html
     upload: ${dist}/index.html
+
+  - url: /voxxedlux
+    secure: always
+    static_files: ${dist}/index.html
+    upload: ${dist}/index.html
+
+  - url: /voxxedlux/results
+    secure: always
+    static_files: ${dist}/index.html
+    upload: ${dist}/index.html
+
+  - url: /talks/.*
+    secure: always
+    static_files: ${dist}/index.html
+    upload: ${dist}/index.html
+
+  - url: /talks/highway_to_fail/voxxedlux_2025
+    secure: always
+    static_files: ${dist}/index.html
+    upload: ${dist}/index.html
 `;
 
   return `runtime: nodejs22

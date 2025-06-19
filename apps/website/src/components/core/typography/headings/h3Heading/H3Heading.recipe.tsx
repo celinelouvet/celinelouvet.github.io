@@ -19,6 +19,7 @@ export const h3HeadingRecipe = defineRecipe({
       slide: {
         fontWeight: '400',
         marginBottom: '2',
+        fontSize: 'brand.150',
       },
     },
     size: {
@@ -29,5 +30,8 @@ export const h3HeadingRecipe = defineRecipe({
         fontSize: { base: 'brand.170', _print: 'brand.150' },
       },
     },
+  },
+  defaultVariants: {
+    size: 'lg',
   },
 });
