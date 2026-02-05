@@ -127,7 +127,7 @@ jobs:
     steps:
       - name: Define bucket path
         id: bucket
-        run: echo "BUCKET_PATH=${{env.BUCKET_NAME}}/${{ env.VERSION }}/slides" >> $GITHUB_OUTPUT
+        run: echo "BUCKET_PATH=${{env.BUCKET_NAME}}/slides" >> $GITHUB_OUTPUT
 
       - name: Checkout
         uses: actions/checkout@v4
@@ -199,7 +199,7 @@ jobs:
     steps:
       - name: Define bucket path
         id: bucket
-        run: echo "BUCKET_PATH=${{env.BUCKET_NAME}}/${{ env.VERSION }}/resume" >> $GITHUB_OUTPUT
+        run: echo "BUCKET_PATH=${{env.BUCKET_NAME}}/resume" >> $GITHUB_OUTPUT
 
       - name: Checkout
         uses: actions/checkout@v4
