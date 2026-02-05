@@ -18,18 +18,22 @@ const experiences = {
               'Spanner',
               'FileStorage',
               'Pub/Sub',
-              'PostgreSQL',
+              'CloudSQL / PostgreSQL',
             ],
           },
         ],
       },
       {
         type: 'Services',
-        technos: ['Node', 'Typescript', 'Express', 'Fastify'],
+        technos: ['Node', 'Typescript', 'Express / Fastify'],
       },
       {
         type: 'Frontends',
         technos: ['Typescript', 'React'],
+      },
+      {
+        type: 'Patterns',
+        technos: ['DDD', 'CQRS', 'Event Sourcing', 'Hexagonal Architecture'],
       },
     ],
   },
@@ -375,7 +379,7 @@ export const experiences_fr = [
       {
         name: 'Team Core Banking',
         description:
-          'Développement du nouveau cœur bancaire destiné à devenir un Banking‑as‑a‑Service.',
+          'Développement du nouveau cœur bancaire destiné à devenir un Banking‑as‑a‑Service (PSP, ledger, audit, etc.).',
       },
     ],
     tasks: [
@@ -402,6 +406,15 @@ export const experiences_fr = [
         subtasks: [
           {
             name: 'Mise en place de système de release candidate pour les déploiements',
+          },
+          {
+            name: 'Génération automatique de schémas fonctionnels, à partir du code',
+          },
+          {
+            name: 'Design et implémentation du ledger, avec l’enregistrement des opérations en double comptabilité',
+          },
+          {
+            name: 'Déploiement, monitoring et alerting, en production',
           },
         ],
       },
@@ -854,7 +867,7 @@ export const experiences_en = [
       {
         name: 'Team Core Banking',
         description:
-          'Development of the new banking core intended to become Banking‑as‑a‑Service.',
+          'Development of the new banking core intended to become Banking‑as‑a‑Service (PSP, ledger, audit, etc.).',
       },
     ],
     tasks: [
@@ -882,6 +895,13 @@ export const experiences_en = [
           {
             name: 'Implementation of a release candidate system for deployments',
           },
+          { name: 'Automatic generation of functional diagrams, from code' },
+          {
+            name: 'Design and implementation of the ledger, in order to record operations in double-entry accounting',
+          },
+          {
+            name: 'Application deployment, monitoring and alerting, in production',
+          },
         ],
       },
     ],
@@ -893,7 +913,7 @@ export const experiences_en = [
     role: 'Backend developer',
     descriptions: [
       'Backend developer on a microservices architecture, highly event‑driven.',
-      'Several methodologies set up ro reduce frictions with the product team and improve projects and QA follow‑ups.',
+      'Several methodologies set up to reduce frictions with the product team and improve projects and QA follow‑ups.',
     ],
     projects: [
       {
