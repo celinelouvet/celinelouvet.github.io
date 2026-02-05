@@ -31,7 +31,7 @@ const resume = {
   lastname: 'Louvet',
   birthdate: '1980-12-02',
   firstExperience,
-  email: 'celine.louvet@gmail.com',
+  email: 'celine@louvet.me',
   website: 'https://celine.louvet.me',
   title: 'Staff engineer / Senior lead developer',
   location: 'Lyon',
