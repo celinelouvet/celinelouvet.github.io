@@ -40,7 +40,11 @@ async function printPage(
   try {
     console.log('[PDF] Generating PDF for page', { url });
 
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 0 });
+    page.setDefaultNavigationTimeout(0);
+    await page.goto(url, {
+      waitUntil: 'networkidle2',
+      timeout: 0,
+    });
     await page.waitForNetworkIdle({ idleTime: 500 });
 
     const title = await page.title();
@@ -52,6 +56,7 @@ async function printPage(
 
     await page.pdf({
       ...viewPort,
+      timeout: 0,
 
       printBackground: true,
       path: filepath,

@@ -119,7 +119,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [20]
+        node: [22]
         talkSubjectId: [highway-to-fail, choice-must-go-on]
 
     permissions:
@@ -192,7 +192,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [20]
+        node: [22]
 
     permissions:
       contents: read
