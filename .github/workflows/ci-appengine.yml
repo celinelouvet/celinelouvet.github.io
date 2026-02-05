@@ -175,7 +175,7 @@ jobs:
           TALK_SUBJECT_ID: ${{ matrix.talkSubjectId }}
 
       - name: Upload PDF
-        uses: google-github-actions/upload-cloud-storage@v2
+        uses: google-github-actions/upload-cloud-storage@v3
         with:
           path: tools/slides-generator/_generated
           destination: ${{ steps.bucket.outputs.BUCKET_PATH }}
@@ -246,7 +246,7 @@ jobs:
           VERSION_URL: ${{ needs.deploy.outputs.versionUrl }}
 
       - name: Upload PDF
-        uses: google-github-actions/upload-cloud-storage@v2
+        uses: google-github-actions/upload-cloud-storage@v3
         with:
           path: tools/resume-generator/_generated
           destination: ${{ steps.bucket.outputs.BUCKET_PATH }}
@@ -256,7 +256,7 @@ jobs:
           process_gcloudignore: false
 
       - name: Upload screenshots
-        uses: google-github-actions/upload-cloud-storage@v2
+        uses: google-github-actions/upload-cloud-storage@v3
         with:
           path: tools/resume-generator/_generated
           destination: ${{ steps.bucket.outputs.BUCKET_PATH }}
