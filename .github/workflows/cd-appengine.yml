@@ -167,7 +167,7 @@ jobs:
 
       - name: Generate PDF
         shell: bash
-        run: npx turbo run slides --  --pageUrl="${{ env.VERSION_URL }}" --talkSubjectId="${{ env.TALK_SUBJECT_ID }}" --out="_generated"
+        run: npx turbo run slides --  --pageUrl="${{ env.VERSION_URL }}" --out="_generated" "${{ env.TALK_SUBJECT_ID }}"
         env:
           VERSION_URL: ${{ needs.deploy.outputs.versionUrl }}
           TALK_SUBJECT_ID: ${{ matrix.talkSubjectId }}

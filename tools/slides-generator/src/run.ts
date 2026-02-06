@@ -1,28 +1,16 @@
-import { parseArgs } from 'util';
-import { printPdf } from './generate';
+import { program } from 'commander';
+import { printPdf } from './generate.ts';
 
-const { values } = parseArgs({
-  args: Bun.argv,
-  options: {
-    pageUrl: {
-      type: 'string',
-      default: 'http://localhost:5173',
-    },
-    talkSubjectId: {
-      type: 'string',
-    },
-    out: {
-      type: 'string',
-      default: '_generated',
-    },
-  },
-  strict: true,
-  allowPositionals: true,
-});
+program
+  .option('--pageUrl [pageUrl]', 'The URL of the page to generate slides from', 'http://localhost:5173')
+  .option('--out [out]', 'The output folder for the generated slides', '_generated')
+  .argument('<talkSubjectId>', 'The ID of the talk subject to generate slides for');
 
-const pageUrl = values.pageUrl;
-const talkSubjectId = values.talkSubjectId;
-const outFolder = values.out;
+program.parse();
+
+const pageUrl = program.opts().pageUrl;
+const outFolder = program.opts().out;
+const talkSubjectId = program.args[0];
 
 if (!talkSubjectId) {
   console.error('Please provide a talkSubjectId');
