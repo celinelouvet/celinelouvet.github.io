@@ -5,7 +5,6 @@ import { prepareOutputFolder } from './folder.ts';
 
 const width = 1600;
 const height = 900;
-const viewPort = { width, height };
 
 async function openPage(browser: Browser): Promise<Page> {
   return new Promise((resolve, reject) => {
@@ -40,7 +39,6 @@ async function printPage(
   try {
     console.log('[PDF] Generating PDF for page', { url });
 
-    page.setDefaultNavigationTimeout(0);
     await page.goto(url, {
       waitUntil: 'networkidle2',
       timeout: 0,
@@ -55,17 +53,13 @@ async function printPage(
     console.log('[PDF] Page loaded', { url, title, filepath });
 
     await page.pdf({
-      ...viewPort,
-      timeout: 0,
+      width,
+      height,
 
       printBackground: true,
       path: filepath,
-      margin: {
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
-      },
+      margin: { top: 0, left: 0, bottom: 0, right: 0 },
+      timeout: 0,
     });
 
     console.log('[PDF] PDF generated for page', { url, filepath });
@@ -102,7 +96,9 @@ export async function printPdf(
     });
 
     const page = await openPage(browser);
-    await page.setViewport(viewPort);
+    await page.setViewport({ width, height, deviceScaleFactor: 1 });
+    await page.emulateMediaType('screen');
+    page.setDefaultNavigationTimeout(0);
 
     for (const url of urls) {
       await printPage(url, page, outFolder);

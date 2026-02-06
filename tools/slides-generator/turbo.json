@@ -1,6 +1,6 @@
 {
   "extends": ["//"],
   "tasks": {
-    "slides": {}
+    "slides": { "cache": false, "persistent": false }
   }
 }
