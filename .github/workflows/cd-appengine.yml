@@ -31,26 +31,18 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+
+      - uses: pnpm/action-setup@v4
 
       - name: Setup node env
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node }}
-
-      - name: Cache node modules
-        uses: actions/cache@v4
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
+          cache: "pnpm"
 
       - name: Cache turbo build setup
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: .turbo
           key: ${{ runner.os }}-turbo-${{ github.sha }}
@@ -58,28 +50,16 @@ jobs:
             ${{ runner.os }}-turbo-
 
       - name: Install dependencies
-        run: npm ci
-
-      - name: Clean
-        run: npm run clean
+        run: pnpm install
 
       - name: Build packages
-        run: |
-          npx turbo @repo/eslint-config#build
-          npx turbo @repo/jest-presets#build
-          npx turbo @repo/typescript-config#build
-          npx turbo @repo/models#build
+        run: pnpm build
 
-      - name: Build apps
-        run: |
-          npx turbo api#build
-          npx turbo website#build
-
-      - name: Typechecks
-        run: npm run typecheck
+      - name: Type checks
+        run: pnpm typecheck
 
       - name: Lint code and types
-        run: npm run lint
+        run: pnpm lint
 
       - id: deploy_website
         name: Deploy website to GCP AppEngine
@@ -130,26 +110,18 @@ jobs:
         run: echo "BUCKET_PATH=${{env.BUCKET_NAME}}/slides" >> $GITHUB_OUTPUT
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+
+      - uses: pnpm/action-setup@v4
 
       - name: Setup node env
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node }}
-
-      - name: Cache node modules
-        uses: actions/cache@v4
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
+          cache: "pnpm"
 
       - name: Cache turbo build setup
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: .turbo
           key: ${{ runner.os }}-turbo-${{ github.sha }}
@@ -158,16 +130,16 @@ jobs:
 
       - id: auth
         name: Auth to GCP
-        uses: google-github-actions/auth@v2
+        uses: google-github-actions/auth@v3
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install
 
       - name: Generate PDF
         shell: bash
-        run: npx turbo run slides --  --pageUrl="${{ env.VERSION_URL }}" --talkSubjectId="${{ env.TALK_SUBJECT_ID }}" --out="_generated"
+        run: pnpx turbo run slides --  --pageUrl="${{ env.VERSION_URL }}" --talkSubjectId="${{ env.TALK_SUBJECT_ID }}" --out="_generated"
         env:
           VERSION_URL: ${{ needs.deploy.outputs.versionUrl }}
           TALK_SUBJECT_ID: ${{ matrix.talkSubjectId }}
@@ -202,26 +174,18 @@ jobs:
         run: echo "BUCKET_PATH=${{env.BUCKET_NAME}}/resume" >> $GITHUB_OUTPUT
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+
+      - uses: pnpm/action-setup@v4
 
       - name: Setup node env
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node }}
-
-      - name: Cache node modules
-        uses: actions/cache@v4
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
+          cache: "pnpm"
 
       - name: Cache turbo build setup
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: .turbo
           key: ${{ runner.os }}-turbo-${{ github.sha }}
@@ -230,16 +194,16 @@ jobs:
 
       - id: auth
         name: Auth to GCP
-        uses: google-github-actions/auth@v2
+        uses: google-github-actions/auth@v3
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install
 
       - name: Generate PDF
         shell: bash
-        run: npx turbo run resume --  --pageUrl="${{ env.VERSION_URL }}" --out="_generated"
+        run: pnpx turbo run resume --  --pageUrl="${{ env.VERSION_URL }}" --out="_generated"
         env:
           VERSION_URL: ${{ needs.deploy.outputs.versionUrl }}
 

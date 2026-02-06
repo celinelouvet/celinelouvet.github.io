@@ -1,5 +1,5 @@
 name: 'Deploy TurboRepo app to Google App Engine'
-description: 'Deploy TurboRepo Apps to Google App Engine using a flexible nodejs runtime and npm.'
+description: 'Deploy TurboRepo Apps to Google App Engine using a flexible nodejs runtime and pnpm.'
 author: Céline Louvet
 branding:
   color: 'purple'
@@ -51,7 +51,7 @@ runs:
   steps:
     - name: Simplify monorepo to ${{inputs.target_app}}
       shell: bash
-      run: npx turbo prune --scope="${{ inputs.target_app }}"
+      run: pnpx turbo prune --scope="${{ inputs.target_app }}"
 
     - name: Add out dir from turbo prune to env
       id: out
@@ -69,12 +69,12 @@ runs:
 
     - name: Install dependencies
       shell: bash
-      run: npm install
+      run: pnpm install
       working-directory: '${{ steps.out.outputs.path }}'
 
     - name: Build app
       shell: bash
-      run: npx turbo ${{ inputs.target_app }}#build
+      run: pnpx turbo ${{ inputs.target_app }}#build
       working-directory: '${{ steps.out.outputs.path }}'
       env:
         VITE_BASE_URL: '${{ fromJson(steps.base_urls.outputs.result).app }}'
@@ -117,7 +117,7 @@ runs:
           --service="${{inputs.target_service}}"
 
     - name: Authenticate with Google Cloud
-      uses: google-github-actions/auth@v2
+      uses: google-github-actions/auth@v3
       with:
         project_id: '${{ inputs.gcloud_project_id }}'
         credentials_json: '${{ inputs.gcloud_credentials_json }}'

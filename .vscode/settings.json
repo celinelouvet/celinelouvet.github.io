@@ -7,5 +7,6 @@
   "javascript.inlayHints.parameterNames.enabled": "none",
   "typescript.preferences.preferTypeOnlyAutoImports": true,
   "vite.autoStart": false,
-  "cSpell.language": "en"
+  "cSpell.language": "en",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

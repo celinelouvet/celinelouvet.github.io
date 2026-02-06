@@ -14,6 +14,7 @@
   "contributors": [],
   "license": "MIT",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "build": "turbo run build",
     "clean": "turbo run clean",
     "dev": "turbo run dev",
@@ -34,10 +35,5 @@
     "node": "~22",
     "bun": "*"
   },
-  "packageManager": "npm@10.9.0",
-  "workspaces": [
-    "apps/*",
-    "packages/*",
-    "tools/*"
-  ]
+  "packageManager": "pnpm@10.28.2"
 }

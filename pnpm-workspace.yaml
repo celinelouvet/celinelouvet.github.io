@@ -1,0 +1,11 @@
+packages:
+  - apps/**
+  - packages/**
+  - tools/**
+
+onlyBuiltDependencies:
+  - bun
+  - esbuild
+  - protobufjs
+  - puppeteer
+  - unrs-resolver
