@@ -31,7 +31,7 @@
     "turbo": "2.5.4"
   },
   "engines": {
-    "node": "~22",
+    "node": "~24",
     "bun": "*"
   },
   "packageManager": "npm@10.9.0",

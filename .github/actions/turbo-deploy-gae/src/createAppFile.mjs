@@ -77,7 +77,7 @@ const getContent = (env, version, service, dist) => {
     upload: ${dist}/index.html
 `;
 
-  return `runtime: nodejs22
+  return `runtime: nodejs24
 service: ${service}
 
 instance_class: F2
