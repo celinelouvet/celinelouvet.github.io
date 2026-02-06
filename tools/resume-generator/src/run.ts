@@ -1,8 +1,9 @@
-import { parseArgs } from 'util';
-import { printPdf } from './generate';
+import { argv } from 'node:process';
+import { parseArgs } from 'node:util';
+import { printPdf } from './generate.ts';
 
 const { values } = parseArgs({
-  args: Bun.argv,
+  args: argv,
   options: {
     pageUrl: {
       type: 'string',

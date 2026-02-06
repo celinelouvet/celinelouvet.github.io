@@ -5,18 +5,15 @@
   "module": "src/run.ts",
   "type": "module",
   "scripts": {
-    "slides": "bun run src/run.ts",
+    "slides": "node src/run.ts",
     "clean": "rm -rf .turbo && rm -fr _generated"
   },
   "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "5.7.3"
+    "@types/node": "24.10.9"
   },
   "dependencies": {
-    "commander": "14.0.0",
-    "puppeteer": "24.9.0",
-    "bun": "latest"
+    "commander": "14.0.3",
+    "puppeteer": "24.37.2",
+    "typescript": "5.7.3"
   }
 }

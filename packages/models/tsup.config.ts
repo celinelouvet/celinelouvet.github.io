@@ -6,6 +6,6 @@ export default defineConfig((options: Options) => ({
   dts: true,
   sourcemap: true,
   format: ['cjs', 'esm'],
-  target: 'node22',
+  target: 'node24',
   ...options,
 }));

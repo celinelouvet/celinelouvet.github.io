@@ -1,7 +1,7 @@
-import path from 'path';
+import path from 'node:path';
 import { Browser, launch, Page } from 'puppeteer';
 
-import { prepareOutputFolder } from './folder';
+import { prepareOutputFolder } from './folder.ts';
 
 const width = 827;
 const height = 1170;

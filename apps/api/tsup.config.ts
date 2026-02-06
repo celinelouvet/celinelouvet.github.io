@@ -5,6 +5,6 @@ export default defineConfig((options: Options) => ({
   clean: true,
   sourcemap: true,
   format: ['cjs'],
-  target: 'node22',
+  target: 'node24',
   ...options,
 }));
