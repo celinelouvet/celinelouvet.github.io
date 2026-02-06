@@ -99,12 +99,14 @@ runs:
       run: |
         node ${{ github.action_path }}/src/overwritePackages.mjs \
           --root="${{ steps.out.outputs.path }}"
+        cat "${{ steps.out.outputs.path }}/package.json"
 
     - name: Prepare ${{ steps.out.outputs.path }}/.gcloudignore
       shell: bash
       run: |
         node ${{ github.action_path }}/src/createGcloudIgnore.mjs \
           --root="${{ steps.out.outputs.path }}"
+        cat "${{ steps.out.outputs.path }}/.gcloudignore"
 
     - name: Prepare ${{ steps.out.outputs.path }}/app.yaml
       shell: bash
