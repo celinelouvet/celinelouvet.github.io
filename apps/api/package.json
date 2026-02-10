@@ -23,7 +23,7 @@
     "@google-cloud/datastore": "9.2.1",
     "@repo/models": "*",
     "cors": "2.8.5",
-    "express": "5.1.0",
+    "express": "5.2.1",
     "morgan": "1.10.0",
     "zod": "4.3.6"
   },
@@ -33,7 +33,7 @@
     "@repo/jest-presets": "*",
     "@repo/typescript-config": "*",
     "@types/cors": "2.8.17",
-    "@types/express": "5.0.2",
+    "@types/express": "5.0.6",
     "@types/morgan": "1.9.9",
     "@types/node": "24.10.9",
     "@types/supertest": "6.0.3",
