@@ -16,13 +16,16 @@ export enum SlideContentTypes {
   abstract = 'abstract',
 }
 
-export enum ColorMode {
-  light = 'light',
-  dark = 'dark',
-}
+export const colorMode = {
+  "light": 'light',
+  'dark': 'dark'
+} as const
+
+export type ColorMode = keyof typeof colorMode;
+
 
 const WithColorMode = z.object({
-  colormode: z.nativeEnum(ColorMode).default(ColorMode.light),
+  colormode: z.enum([colorMode.light, colorMode.dark]).default(colorMode.light),
 });
 
 const WithTopRightCorner = z.object({

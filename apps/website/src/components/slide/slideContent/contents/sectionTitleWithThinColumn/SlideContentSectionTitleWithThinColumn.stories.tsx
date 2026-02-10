@@ -39,6 +39,8 @@ export const SectionTitleWithThinColumn: Story = {
   args: {
     type: SlideContentTypes.sectionTitleWithThinColumn,
     title: 'Section Title',
+    column1,
+    children: content,
   },
   render: () => (
     <SlideContentSectionTitleWithThinColumn

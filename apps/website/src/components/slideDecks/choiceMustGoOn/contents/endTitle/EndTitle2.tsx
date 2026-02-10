@@ -10,16 +10,16 @@ import {
 
 import { H2Heading, QrCode } from '@/components/core';
 import {
-  ColorMode,
   SlideContent,
   SlideContentTypes,
   SlideNote,
+  colorMode
 } from '@/components/slide';
 import { choiceMustGoOnTalkFr as talk } from '@/data/talks';
 import { socialIcon } from '@/lib';
 
 export const content = (
-  <SlideContent colormode={ColorMode.dark} type={SlideContentTypes.fullContent}>
+  <SlideContent colormode={colorMode.dark} type={SlideContentTypes.fullContent}>
     <Stack height="100%" alignItems="center" justifyContent="space-between">
       <HStack
         width="100%"

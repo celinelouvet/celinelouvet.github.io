@@ -2,7 +2,7 @@ import { Box } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
 import { SlideContentFullContent } from './SlideContentFullContent';
-import { ColorMode, SlideContentTypes } from '../../types';
+import { SlideContentTypes, colorMode } from '../../types';
 
 const meta = {
   title: 'SlideDeck/SlideContent',
@@ -32,11 +32,11 @@ const content = (
 export const FullContentLight: Story = {
   args: {
     type: SlideContentTypes.fullContent,
-    colormode: ColorMode.light,
+    colormode: colorMode.light,
   },
   render: () => (
     <SlideContentFullContent
-      colormode={ColorMode.light}
+      colormode={colorMode.light}
       type={SlideContentTypes.fullContent}
     >
       {content}
@@ -47,11 +47,11 @@ export const FullContentLight: Story = {
 export const FullContentDark: Story = {
   args: {
     type: SlideContentTypes.fullContent,
-    colormode: ColorMode.dark,
+    colormode: colorMode.dark,
   },
   render: () => (
     <SlideContentFullContent
-      colormode={ColorMode.dark}
+      colormode={colorMode.dark}
       type={SlideContentTypes.fullContent}
     >
       {content}

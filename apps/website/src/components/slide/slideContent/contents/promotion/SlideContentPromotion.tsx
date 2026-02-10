@@ -19,9 +19,9 @@ import {
 } from '@/components/core';
 
 import {
-  ColorMode,
   type ContentPromotion,
   SlideContentTypes,
+  colorMode
 } from '../../types';
 import { SlideContentWith2Columns } from '../content2Columns';
 import { promotionIcon } from './icons';
@@ -49,7 +49,7 @@ export const SlideContentPromotion: React.FC<SlideContentPromotionProps> =
     return (
       <SlideContentWith2Columns
         {...props}
-        colormode={ColorMode.dark}
+        colormode={colorMode.dark}
         type={SlideContentTypes.content2Columns}
         column1={column1}
       >

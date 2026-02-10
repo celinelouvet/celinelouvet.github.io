@@ -1,18 +1,18 @@
 import { Box, type BoxProps } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { ColorMode, type ContentFullContent } from '../../types';
+import { type ContentFullContent, colorMode } from '../../types';
 
 type SlideContentFullContentProps = Omit<BoxProps, 'children'> &
   React.PropsWithChildren<ContentFullContent>;
 
 export const SlideContentFullContent: React.FC<SlideContentFullContentProps> =
   function SlideContentFullContent(props) {
-    const { colormode = ColorMode.light, children, ...restProps } = props;
+    const { colormode = colorMode.light, children, ...restProps } = props;
 
     const backgroundColor =
-      colormode === ColorMode.light ? 'brand.900' : 'brand.300';
-    const color = colormode === ColorMode.light ? 'brand.100' : 'brand.900';
+      colormode === colorMode.light ? 'brand.900' : 'brand.300';
+    const color = colormode === colorMode.light ? 'brand.100' : 'brand.900';
 
     return (
       <Box

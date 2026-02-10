@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { SlideContentTitleWith2Columns as SlideContentTitleWith2Columns } from './SlideContentTitleWith2Columns';
+import { SlideContentTitleWith2Columns } from './SlideContentTitleWith2Columns';
 import { SlideContentTypes } from '../../types';
 
 const meta = {
@@ -41,6 +41,9 @@ export const TitleWith2Columns: Story = {
   args: {
     type: SlideContentTypes.titleWith2Columns,
     title: 'Title with 2 columns',
+    column1,
+    topRightCorner,
+    children: content,
   },
   render: () => (
     <SlideContentTitleWith2Columns

@@ -4,9 +4,9 @@ import * as React from 'react';
 import { H2Heading, H3Heading } from '@/components/core';
 
 import {
-  ColorMode,
   type ContentTitleWith2Columns,
   SlideContentTypes,
+  colorMode
 } from '../../types';
 import { SlideContentFullContent } from '../fullContent';
 
@@ -35,7 +35,7 @@ export const SlideContentTitleWith2Columns: React.FC<SlideContentTitleWith2Colum
     return (
       <SlideContentFullContent
         {...props}
-        colormode={ColorMode.light}
+        colormode={colorMode.light}
         type={SlideContentTypes.fullContent}
       >
         <Stack

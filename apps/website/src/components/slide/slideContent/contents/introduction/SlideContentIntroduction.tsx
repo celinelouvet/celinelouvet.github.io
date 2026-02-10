@@ -6,9 +6,9 @@ import { H2Heading, List, Picture } from '@/components/core';
 import { socialIcon } from '@/lib';
 
 import {
-  ColorMode,
   type ContentIntroduction,
   SlideContentTypes,
+  colorMode
 } from '../../types';
 import { SlideContentWith2Columns } from '../content2Columns';
 
@@ -35,7 +35,7 @@ export const SlideContentIntroduction: React.FC<SlideContentIntroductionProps> =
     return (
       <SlideContentWith2Columns
         column1={Column1}
-        colormode={ColorMode.light}
+        colormode={colorMode.light}
         {...restProps}
         type={SlideContentTypes.content2Columns}
       >

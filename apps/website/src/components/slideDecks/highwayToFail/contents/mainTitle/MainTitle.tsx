@@ -11,10 +11,10 @@ import {
 
 import { H2Heading, H3Heading, QrCode } from '@/components/core';
 import {
-  ColorMode,
   SlideContent,
   SlideContentTypes,
   SlideNote,
+  colorMode
 } from '@/components/slide';
 import { highwayToFailTalkFr as talk } from '@/data/talks';
 import { socialIcon } from '@/lib';
@@ -22,7 +22,7 @@ import { socialIcon } from '@/lib';
 import { Title } from './Title.component';
 
 export const content = (
-  <SlideContent colormode={ColorMode.dark} type={SlideContentTypes.fullContent}>
+  <SlideContent colormode={colorMode.dark} type={SlideContentTypes.fullContent}>
     <HStack
       width="100%"
       height="100%"

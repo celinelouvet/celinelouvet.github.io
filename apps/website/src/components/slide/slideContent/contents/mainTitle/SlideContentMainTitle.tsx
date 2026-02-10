@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import { H1Heading, H2Heading } from '@/components/core';
 
-import { ColorMode, type ContentTitle, SlideContentTypes } from '../../types';
+import { type ContentTitle, SlideContentTypes, colorMode } from '../../types';
 import { SlideContentFullContent } from '../fullContent';
 
 type SlideContentMainTitleProps = Omit<BoxProps, 'children'> &
@@ -14,7 +14,7 @@ export const SlideContentMainTitle: React.FC<SlideContentMainTitleProps> =
     return (
       <SlideContentFullContent
         {...props}
-        colormode={ColorMode.dark}
+        colormode={colorMode.dark}
         type={SlideContentTypes.fullContent}
       >
         <Stack

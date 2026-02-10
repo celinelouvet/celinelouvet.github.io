@@ -9,10 +9,10 @@ import {
 } from '@chakra-ui/react';
 
 import {
-  ColorMode,
   SlideContent,
   SlideContentTypes,
   SlideNote,
+  colorMode
 } from '@/components/slide';
 import { choiceMustGoOnTalkFr as talk } from '@/data/talks';
 import { socialIcon } from '@/lib';
@@ -20,7 +20,7 @@ import { socialIcon } from '@/lib';
 import { Title } from '../Title.component';
 
 export const content = (
-  <SlideContent colormode={ColorMode.dark} type={SlideContentTypes.fullContent}>
+  <SlideContent colormode={colorMode.dark} type={SlideContentTypes.fullContent}>
     <Stack
       height="100%"
       alignItems="center"
