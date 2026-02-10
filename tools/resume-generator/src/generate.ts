@@ -57,6 +57,9 @@ async function printPage(
 
     const filepath = path.join(path.resolve(outFolder), filename);
 
+    await page.emulateMediaFeatures([
+      { name: 'prefers-color-scheme', value: 'light' },
+    ]);
     await page.emulateMediaType('print');
     await page.screenshot({
       path: `${filepath}.png`,

@@ -98,6 +98,9 @@ export async function printPdf(
     const page = await openPage(browser);
     await page.setViewport({ width, height, deviceScaleFactor: 1 });
     await page.emulateMediaType('screen');
+    await page.emulateMediaFeatures([
+      { name: 'prefers-color-scheme', value: 'light' },
+    ]);
     page.setDefaultNavigationTimeout(0);
 
     for (const url of urls) {

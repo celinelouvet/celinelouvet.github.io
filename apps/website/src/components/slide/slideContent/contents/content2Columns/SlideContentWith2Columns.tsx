@@ -2,9 +2,9 @@ import { Box, type BoxProps, Stack } from '@chakra-ui/react';
 import * as React from 'react';
 
 import {
-  ColorMode,
   type Content2Columns,
   SlideContentTypes,
+  colorMode
 } from '../../types';
 import { SlideContentFullContent } from '../fullContent';
 
@@ -14,7 +14,7 @@ type SlideContentWith2ColumnsProps = Omit<BoxProps, 'children'> &
 export const SlideContentWith2Columns: React.FC<SlideContentWith2ColumnsProps> =
   function SlideContentWith2Columns(props) {
     const {
-      colormode = ColorMode.light,
+      colormode = colorMode.light,
       column1,
       children,
       ...restProps

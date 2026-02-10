@@ -4,9 +4,9 @@ import * as React from 'react';
 import { H1Heading } from '@/components/core';
 
 import {
-  ColorMode,
   type ContentEndTitle,
   SlideContentTypes,
+  colorMode
 } from '../../types';
 import { SlideContentFullContent } from '../fullContent';
 
@@ -18,7 +18,7 @@ export const SlideContentEndTitle: React.FC<SlideContentEndTitleProps> =
     return (
       <SlideContentFullContent
         {...props}
-        colormode={ColorMode.dark}
+        colormode={colorMode.dark}
         type={SlideContentTypes.fullContent}
       >
         <Stack

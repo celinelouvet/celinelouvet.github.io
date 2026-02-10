@@ -47,6 +47,10 @@ export const TitleWithThinColumn2Columns: Story = {
   args: {
     type: SlideContentTypes.titleWithThin2Columns,
     title: 'Title with 1 thin column and 2 columns',
+    column1,
+    column2,
+    topRightCorner,
+    children: content,
   },
   render: () => (
     <SlideContentTitleWithThin2Columns

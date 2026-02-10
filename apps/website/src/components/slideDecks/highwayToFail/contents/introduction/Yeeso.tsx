@@ -4,10 +4,10 @@ import { BsLink45Deg } from 'react-icons/bs';
 
 import { H2Heading, H3Heading } from '@/components/core';
 import {
-  ColorMode,
   SlideContent,
   SlideContentTypes,
   SlideNote,
+  colorMode
 } from '@/components/slide';
 
 import { Loading } from '../../components/loading';
@@ -19,7 +19,7 @@ const YeesoLight = React.lazy(() =>
 );
 
 export const content = (
-  <SlideContent type={SlideContentTypes.fullContent} colormode={ColorMode.dark}>
+  <SlideContent type={SlideContentTypes.fullContent} colormode={colorMode.dark}>
     <Stack height="100%" width="100%" textAlign="center" gap="brand.100">
       <Stack height="40%" gap="brand.200" marginBottom="brand.300">
         <Center height="45%">
