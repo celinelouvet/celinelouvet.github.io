@@ -86,13 +86,14 @@ export const talkSubjects_fr = new Map<string, TalkSubject>([
   [
     'choice_must_go_on',
     {
-      topic: 'The choice must go on, le bon (de préférence)',
+      topic: 'What If, une histoire de possibilités',
       summary:
-        'Approche heuristique pour affiner les besoins et faire un choix',
+        'Approche heuristique pour choisir une solution parmi plusieurs possibles',
       descriptions: [
-        'Vous avez déjà subi un mauvais choix ? Ou vous avez vous‑même fait un mauvais choix ? En effet, qu’il ait été fait pour une raison technique, produit ou encore méthodo, on a été nombreux et nombreuses à vivre ce moment où on se dit « mais quelle idiotie ?! » ou encore « Mais que c’est tordu !!! ».',
+        'Avez–vous déjà été face à un problème ayant plusieurs solutions possibles ? Comment avez–vous choisi la solution ? Est–ce que c’était la bonne ?',
+        'En effet, choisir la bonne solution du premier coup est difficile, voire impossible. Que ça soit pour une raison technique, produit ou méthodo, on a été nombreux et nombreuses à être à face à un choix malencontreux et à vivre ce moment où on se dit « mais pourquoi ?! ».',
         'On le sait, faire le bon choix est parfois très difficile. Celui qui a fonctionné une fois ne sera pas forcément pertinent ailleurs. De plus, un mauvais choix peut avoir un impact désastreux, tant sur la qualité du résultat produit que sur les équipes.',
-        'Je vous proposerai une approche personnelle pour que ça se passe au mieux possible. Peut‑être qu’elle pourra vous permettre d’éviter certains écueils.',
+        'Je vous proposerai une approche personnelle pour que peser les possibilités et mesurer leurs impacts. Peut‑être qu’elle pourra vous permettre d’éviter certains écueils.',
       ],
       availableForCfp: true,
     },
@@ -178,12 +179,14 @@ export const talkSubjects_en = new Map<string, TalkSubject>([
   [
     'choice_must_go_on',
     {
-      topic: 'The choice must go on, the good (if possible)',
-      summary: 'Heuristic approach to refine requirements and make a choice',
+      topic: 'What If, a story of possibilities',
+      summary:
+        'Heuristic approach to choose a solution among several possible ones',
       descriptions: [
-        'Have you ever suffered from a bad choice? Or made one yourself? Whether it was made for technical, product or methodological reasons, many of us have experienced that moment when we say to ourselves, « What kind of idiocy is this?! ».',
-        'As we all know, making the right choice can be very difficult. What worked once may not work elsewhere. Moreover, the wrong decision can have a disastrous impact, not only on the quality of the result produced, but also on the teams involved.',
-        'I’ll suggest a very personal approach to make it as smooth as possible. Perhaps it will help you steer away from some pitfalls.',
+        'Have you ever faced a problem with several possible solutions? How did you choose the solution? Was it the right one?',
+        'In fact, choosing the right solution on the first try is difficult, if not impossible. Whether due to technical, product, or methodological reasons, many of us have found ourselves facing a poor choice and experiencing that moment when we ask ourselves, “But why?!”',
+        'As we know, making the right choice can sometimes be very difficult. What worked once won’t necessarily work elsewhere. Moreover, a bad choice can have disastrous consequences, both for the quality of the end result and for the teams involved.',
+        'I’ll offer you a personalized approach to help you weigh your options and assess their implications. Perhaps it will help you avoid certain pitfalls.',
       ],
       availableForCfp: true,
     },
