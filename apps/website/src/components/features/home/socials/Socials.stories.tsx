@@ -24,11 +24,6 @@ export const Socials: Story = {
         link: 'https://bsky.app/profile/handle.bsky.social',
       },
       {
-        name: 'mastodon',
-        handle: 'handle@pouet.chapril.org',
-        link: 'https://pouet.chapril.org/@handle',
-      },
-      {
         name: 'other',
         handle: 'site',
         link: 'https://handle.com',
