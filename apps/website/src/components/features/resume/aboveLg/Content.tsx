@@ -12,6 +12,7 @@ import {
   Podcasts,
   Talks,
   Trainings,
+  VolunteeringWorks,
 } from '../parts';
 
 type ContentProps = Omit<ChakraStackProps, 'children'> & {
@@ -37,6 +38,7 @@ export const Content: React.FC<ContentProps> = function Content({ resume }) {
       <Educations educations={resume.educations} />
       <Trainings trainings={resume.trainings} />
       <Certifications certifications={resume.certifications} />
+      <VolunteeringWorks volunteeringWorks={resume.volunteering} />
     </Stack>
   );
 };

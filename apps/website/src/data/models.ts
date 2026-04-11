@@ -154,6 +154,8 @@ export type ConventionWithTalks = Convention & {
   coming: boolean;
 };
 
+export type SubVolunteering = Period & Role;
+
 export type Volunteering = Period &
   Role & {
     name: string;
@@ -161,4 +163,5 @@ export type Volunteering = Period &
     site: string;
     lightLogoId: string;
     darkLogoId: string;
+    subVolunteering?: SubVolunteering[];
   };

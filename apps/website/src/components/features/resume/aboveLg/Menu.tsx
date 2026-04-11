@@ -61,6 +61,7 @@ function linksContent({ resume }: LinksContent): string[] {
     educations,
     trainings,
     certifications,
+    volunteering,
   } = resume;
   const linksArray: string[] = [];
   if (descriptions.length > 0) linksArray.push('descriptions');
@@ -70,5 +71,6 @@ function linksContent({ resume }: LinksContent): string[] {
   if (educations.length > 0) linksArray.push('educations');
   if (trainings.length > 0) linksArray.push('trainings');
   if (certifications.length > 0) linksArray.push('certifications');
+  if (volunteering.length > 0) linksArray.push('volunteering');
   return linksArray;
 }

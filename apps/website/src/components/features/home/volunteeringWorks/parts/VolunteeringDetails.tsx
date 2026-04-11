@@ -2,17 +2,16 @@ import { Box, Card, Flex, Spacer, Stack, Text } from '@chakra-ui/react';
 import type * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H4Heading, Link } from '@/components/core';
-import type { Volunteering } from '@/data';
+import { Link } from '@/components/core';
+import type { SubVolunteering, Volunteering } from '@/data';
 
 import { Header } from './Header';
 import { OrganizationPicture } from './OrganizationPicture';
+import { VolunteeringRole } from './VolunteeringRole';
 
 export const VolunteeringDetails: React.FC<{ volunteering: Volunteering }> =
   function VolunteeringDetails({ volunteering }) {
     const { t } = useTranslation('home', { keyPrefix: 'volunteering' });
-
-    const tasks = (volunteering.tasks ?? []).map(({ name }) => name).join(', ');
 
     return (
       <Card.Root size="sm" variant="subtle">
@@ -25,6 +24,12 @@ export const VolunteeringDetails: React.FC<{ volunteering: Volunteering }> =
             <Stack gap="4">
               <Text>{volunteering.description}</Text>
 
+              <Box>
+                <Link.External href={volunteering.site}>
+                  {t('seeSite')}
+                </Link.External>
+              </Box>
+
               <Stack
                 width="100%"
                 gap="4"
@@ -35,17 +40,14 @@ export const VolunteeringDetails: React.FC<{ volunteering: Volunteering }> =
                 borderColor={{ base: 'brand.700', _dark: 'brand.600' }}
                 borderLeftRadius="md"
               >
-                <H4Heading>{volunteering.role}</H4Heading>
-                {tasks.length > 0 ? <Text>{tasks}</Text> : null}
-                <Spacer />
-                <Box>
-                  <Link.External href={volunteering.site}>
-                    {t('seeSite')}
-                  </Link.External>
-                </Box>
+                {volunteering.role ? (
+                  <VolunteeringRole volunteering={volunteering} />
+                ) : null}
+                {(volunteering.subVolunteering ?? []).map((sub) => (
+                  <VolunteeringRole key={key(sub)} volunteering={sub} />
+                ))}
               </Stack>
             </Stack>
-
             <Spacer />
             <OrganizationPicture {...volunteering} />
           </Flex>
@@ -53,3 +55,7 @@ export const VolunteeringDetails: React.FC<{ volunteering: Volunteering }> =
       </Card.Root>
     );
   };
+
+function key({ role, from }: SubVolunteering) {
+  return `${role}-${from}`;
+}
