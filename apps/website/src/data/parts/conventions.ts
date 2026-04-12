@@ -184,4 +184,13 @@ export const conventions = new Map<string, Convention>([
       program: 'https://luxembourg.voxxeddays.com/fr/#schedule',
     },
   ],
+  [
+    'lyonjs_yeeso_2026',
+    {
+      name: 'Meetup LyonJS avec Yeeso (En Mixité)',
+      language: 'FR',
+      start: '2026-04-23',
+      program: 'https://www.meetup.com/fr-fr/lyonjs/events/314104906/',
+    },
+  ],
 ]);
