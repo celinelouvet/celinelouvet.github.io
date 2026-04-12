@@ -18,7 +18,6 @@ export const ResumeContent: React.FC<ResumeContentProps> =
         <Box bgGradient="brand" padding="6">
           <MainTitle resume={resume} />
         </Box>
-
         <Summary resume={resume} />
         <Content resume={resume} />
       </Stack>
