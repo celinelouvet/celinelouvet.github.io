@@ -1,4 +1,8 @@
-import { type StackProps as ChakraStackProps, Stack } from '@chakra-ui/react';
+import {
+  type StackProps as ChakraStackProps,
+  HStack,
+  Stack,
+} from '@chakra-ui/react';
 import * as React from 'react';
 
 import { type Resume } from '@/data';
@@ -12,6 +16,7 @@ import {
   Podcasts,
   Talks,
   Trainings,
+  VolunteeringWorks,
 } from '../parts';
 
 type ContentProps = Omit<ChakraStackProps, 'children'> & {
@@ -21,14 +26,9 @@ type ContentProps = Omit<ChakraStackProps, 'children'> & {
 export const Content: React.FC<ContentProps> = function Content({ resume }) {
   return (
     <Stack gap="8" padding="6">
-      <Stack
-        direction="row-reverse"
-        gap="6"
-        alignItems="center"
-        _print={{ display: 'none' }}
-      >
+      <HStack gap="6" alignItems="center" _print={{ display: 'none' }}>
         <PdfDownloader />
-      </Stack>
+      </HStack>
 
       <Description descriptions={resume.descriptions} />
       <Experiences experiences={resume.experiences} />
@@ -37,6 +37,7 @@ export const Content: React.FC<ContentProps> = function Content({ resume }) {
       <Educations educations={resume.educations} />
       <Trainings trainings={resume.trainings} />
       <Certifications certifications={resume.certifications} />
+      <VolunteeringWorks volunteeringWorks={resume.volunteering} />
     </Stack>
   );
 };

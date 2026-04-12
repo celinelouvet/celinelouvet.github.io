@@ -1,7 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
   "version": "0.2",
-  "ignorePaths": ["node_modules"],
+  "ignorePaths": [
+    "node_modules"
+  ],
   "language": "en",
   "overrides": [
     {
@@ -12,5 +14,9 @@
       "filename": "apps/website/src/data/parts/experiences.ts",
       "enabled": false
     }
+  ],
+  "words": [
+    "Bénévolat",
+    "Volunteerings"
   ]
 }

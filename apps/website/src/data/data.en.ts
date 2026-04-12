@@ -43,7 +43,7 @@ export const resume = {
     `Backend developer and passionate, for ${fromFirstExperience}, loves reaching stability and quality for production applications.`,
     'Specializing into cloud architectures, with a liking for functional languages.',
     'Speaker at conferences on technology topics, experience sharing, and methodologies.',
-    'Volunteer for NGOs dedicated to mentoring, Crafts Records as first-time speakers coach and Yeeso as Mentoring Squad Leader.',
+    'Volunteer for NGOs dedicated to mentoring, Crafts Records as first-time speakers coach and Yeeso as Mentoring Squad Leader and meetup speaker.',
     'Currently lead developer at Shine.',
   ],
   descriptions: [
@@ -51,7 +51,7 @@ export const resume = {
     'Several experiences as lead developer or staff engineer, with developers teams management.',
     'Several experiences as Technical Leader, with legacy rework or from scratch creation, architecture and methodology practices set up.',
     'Speaker at conferences on technology topics, experience sharing, and methodologies.',
-    'Volunteer for NGOs dedicated to mentoring, Crafts Records as first-time speakers coach and Yeeso as Mentoring Squad Leader.',
+    'Volunteer for NGOs dedicated to mentoring, Crafts Records as first-time speakers coach and Yeeso as Mentoring Squad Leader and meetup speaker.',
   ],
   skills: [
     'Build phase, wih stability and quality as a goal',

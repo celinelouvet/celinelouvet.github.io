@@ -22,8 +22,18 @@ const volunteering = {
   },
 } satisfies Record<
   'Crafts Records' | 'Yeeso',
-  Omit<Volunteering, 'name' | 'description' | 'role'>
+  Omit<Volunteering, 'name' | 'description' | 'role' | 'subVolunteering'>
 >;
+
+const subVolunteeringYesso = {
+  squadLeader: {
+    from: '2024-09-01',
+    to: '2025-08-31',
+  },
+  meetupSpeaker: {
+    from: '2024-09-01',
+  },
+};
 
 export const volunteering_fr = [
   {
@@ -36,9 +46,18 @@ export const volunteering_fr = [
   {
     ...volunteering.Yeeso,
     name: 'Yeeso',
-    role: 'Squad Leader mentorat',
     description:
       'Association visant à accélérer la féminisation des équipes informatiques, via des programmes de sensibilisation, de mentorat et du réseau.',
+    subVolunteering: [
+      {
+        ...subVolunteeringYesso.squadLeader,
+        role: 'Squad Leader Mentorat',
+      },
+      {
+        ...subVolunteeringYesso.meetupSpeaker,
+        role: 'Intervenante en meetup',
+      },
+    ],
   },
 ];
 
@@ -56,5 +75,15 @@ export const volunteering_en = [
     role: 'Mentoring Squad Leader',
     description:
       'Organization aiming to accelerate the feminization of IT teams through awareness programs, mentoring, and networking.',
+    subVolunteering: [
+      {
+        ...subVolunteeringYesso.squadLeader,
+        role: 'Mentoring Squad Leader',
+      },
+      {
+        ...subVolunteeringYesso.meetupSpeaker,
+        role: 'Meetup speaker',
+      },
+    ],
   },
 ] satisfies Volunteering[];

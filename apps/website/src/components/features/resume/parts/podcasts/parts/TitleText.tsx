@@ -3,14 +3,26 @@ import * as React from 'react';
 import { H4Heading } from '@/components/core';
 import { type Podcast } from '@/data';
 
-export type TitleTextProps = Pick<Podcast, 'title'>;
+export type TitleTextProps = Pick<Podcast, 'title' | 'episode'>;
 
 export const TitleText: React.FC<TitleTextProps> = function TitleText({
   title,
+  episode,
 }) {
-  if (!title) {
+  if (!title && !episode) {
     return null;
   }
 
-  return <H4Heading>{title}</H4Heading>;
+  const texts: string[] = [];
+  if (episode) {
+    texts.push(episode);
+  }
+  if (episode && title) {
+    texts.push(': ');
+  }
+  if (title) {
+    texts.push(title);
+  }
+
+  return <H4Heading>{texts.join('')}</H4Heading>;
 };

@@ -9,9 +9,4 @@ export const socials = [
     handle: 'celinelouvet',
     link: 'https://www.linkedin.com/in/celinelouvet',
   },
-  {
-    name: 'mastodon',
-    handle: 'celine_louvet@pouet.chapril.org',
-    link: 'https://pouet.chapril.org/@celine_louvet',
-  },
 ];

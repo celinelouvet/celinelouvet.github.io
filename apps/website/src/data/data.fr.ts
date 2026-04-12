@@ -42,7 +42,7 @@ const resume = {
     `Développeuse backend et passionnée, depuis ${fromFirstExperience}, aimant la recherche de stabilité et de qualité d’une application.`,
     'Spécialisée sur les architectures cloud, avec une appétence pour les langages fonctionnels.',
     'Intervenante en conférences sur des sujets technologiques, de retour d’expérience et de méthodes.',
-    'Bénévole pour des associations dédiées au mentorat, Crafts Records en tant que coach d’intervenantes débutantes et Yeeso en tant que Squad Leader sur le mentorat.',
+    'Bénévole pour des associations dédiées au mentorat, Crafts Records en tant que coach d’intervenantes débutantes et Yeeso en tant que Squad leader Mentorat et intervenante en meetup.',
     'Actuellement lead developer chez Shine.',
   ],
   descriptions: [
@@ -50,7 +50,7 @@ const resume = {
     'Plusieurs expériences de lead developer, avec management d’une équipe de développeurs.',
     'Plusieurs expériences de Technical Leader, avec reprise de legacy ou de création en partant de zéro, architecture et de mises en place de méthodes de travail.',
     'Intervenante en conférences sur des sujets technologiques, de retour d’expérience et de méthodes.',
-    'Bénévole pour des associations dédiées au mentorat, Crafts Records en tant que coach d’intervenantes débutantes et Yeeso en tant que Squad Leader sur le mentorat.',
+    'Bénévole pour des associations dédiées au mentorat, Crafts Records en tant que coach d’intervenantes débutantes et Yeeso en tant que Squad leader Mentorat et intervenante en meetup.',
   ],
   skills: [
     'Phase de build, avec objectif stabilité & qualité',

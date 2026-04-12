@@ -196,4 +196,10 @@ export const talks = [
     when: '2025-06-19',
     links: {},
   },
+  {
+    subjectId: 'permissions_mysteries',
+    conventionId: 'lyonjs_yeeso_2026',
+    when: '2026-04-23',
+    links: {},
+  },
 ] satisfies Talk[];

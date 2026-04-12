@@ -10,3 +10,4 @@ export { Skills } from './skills';
 export { Socials } from './socials';
 export { Talks } from './talks';
 export { Trainings } from './trainings';
+export { VolunteeringWorks } from './volunteeringWorks';
