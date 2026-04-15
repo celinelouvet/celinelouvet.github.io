@@ -6,7 +6,7 @@ import {
   SlideNote,
 } from 'src/components/slide';
 
-import { ProgressiveList } from '../../components/progressiveList';
+import { ProgressiveList } from '../../../components/progressiveList';
 
 const items = [
   { text: 'Est-ce que ça répond au besoin ?' },
