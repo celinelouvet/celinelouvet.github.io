@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
+import { BrowserRouter, Route, Routes } from 'react-router';
 
 import { Loading } from './components/features';
 
@@ -207,12 +207,6 @@ function App() {
               <Suspense fallback={<Loading />}>
                 <HomePage />
               </Suspense>
-            }
-          />
-          <Route
-            path="/voxxedlux"
-            element={
-              <Navigate to="/talks/highway_to_fail/voxxedlux_2025" replace />
             }
           />
         </Routes>
