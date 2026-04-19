@@ -2,6 +2,7 @@ import { type Meta, type StoryObj } from '@storybook/react';
 
 import { SlideDeck, ViewTypes } from 'src/components/slide';
 
+import ExampleSlides from '../example';
 import IntroductionSlides from '../introduction';
 import MainTitleSlides from '../mainTitle';
 import { getSlides } from '../slides';
@@ -16,7 +17,7 @@ const meta = {
 } satisfies Meta<typeof SlideDeck>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+export type Story = StoryObj<typeof meta>;
 
 export const AllSlides: Story = {
   render: () => {
@@ -35,6 +36,13 @@ export const MainTitle: Story = {
 export const Introduction: Story = {
   render: () => {
     const slides = IntroductionSlides;
+    return <SlideDeck view={ViewTypes.print} slides={slides} />;
+  },
+};
+
+export const Example: Story = {
+  render: () => {
+    const slides = ExampleSlides;
     return <SlideDeck view={ViewTypes.print} slides={slides} />;
   },
 };

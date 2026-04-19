@@ -4,8 +4,9 @@
   "eslint.useESLintClass": true,
   "files.autoSave": "onFocusChange",
   "editor.formatOnSave": true,
-  "javascript.inlayHints.parameterNames.enabled": "none",
-  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "js/ts.inlayHints.parameterNames.enabled": "none",
+  "js/ts.preferences.preferTypeOnlyAutoImports": true,
   "vite.autoStart": false,
-  "cSpell.language": "en"
+  "editor.hover.showLongLineWarning": false,
+  "js/ts.tsdk.path": "node_modules/typescript/lib"
 }
