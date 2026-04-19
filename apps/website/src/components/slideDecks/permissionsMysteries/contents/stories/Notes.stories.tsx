@@ -6,6 +6,7 @@ import ExampleSlides from '../example';
 import IntroductionSlides from '../introduction';
 import MainTitleSlides from '../mainTitle';
 import { getSlides } from '../slides';
+import WhySlides from '../why';
 
 const meta = {
   title: 'Talks/PermissionsMysteries/Notes',
@@ -43,6 +44,13 @@ export const Introduction: Story = {
 export const Example: Story = {
   render: () => {
     const slides = ExampleSlides;
+    return <SlideDeck view={ViewTypes.printNotes} slides={slides} />;
+  },
+};
+
+export const Why: Story = {
+  render: () => {
+    const slides = WhySlides;
     return <SlideDeck view={ViewTypes.printNotes} slides={slides} />;
   },
 };
