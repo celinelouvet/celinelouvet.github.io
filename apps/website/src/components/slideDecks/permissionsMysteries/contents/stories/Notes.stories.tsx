@@ -3,6 +3,7 @@ import { type Meta, type StoryObj } from '@storybook/react';
 import { SlideDeck, ViewTypes } from 'src/components/slide';
 
 import ExampleSlides from '../example';
+import IdentityVsPermissionsSlides from '../identityVsPermissions';
 import IntroductionSlides from '../introduction';
 import MainTitleSlides from '../mainTitle';
 import { getSlides } from '../slides';
@@ -51,6 +52,13 @@ export const Example: Story = {
 export const Why: Story = {
   render: () => {
     const slides = WhySlides;
+    return <SlideDeck view={ViewTypes.printNotes} slides={slides} />;
+  },
+};
+
+export const IdentityVsPermissions: Story = {
+  render: () => {
+    const slides = IdentityVsPermissionsSlides;
     return <SlideDeck view={ViewTypes.printNotes} slides={slides} />;
   },
 };
