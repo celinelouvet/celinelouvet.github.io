@@ -7,6 +7,7 @@ import IdentityVsPermissionsSlides from '../identityVsPermissions';
 import IntroductionSlides from '../introduction';
 import MainTitleSlides from '../mainTitle';
 import { getSlides } from '../slides';
+import WhichRuleSlides from '../whichRule';
 import WhySlides from '../why';
 
 const meta = {
@@ -59,6 +60,13 @@ export const Why: Story = {
 export const IdentityVsPermissions: Story = {
   render: () => {
     const slides = IdentityVsPermissionsSlides;
+    return <SlideDeck view={ViewTypes.print} slides={slides} />;
+  },
+};
+
+export const WhichRule: Story = {
+  render: () => {
+    const slides = WhichRuleSlides;
     return <SlideDeck view={ViewTypes.print} slides={slides} />;
   },
 };

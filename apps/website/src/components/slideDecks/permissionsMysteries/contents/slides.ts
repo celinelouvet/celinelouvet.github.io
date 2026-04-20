@@ -6,6 +6,7 @@ import Example from './example';
 import IdentityVsPermissions from './identityVsPermissions';
 import Introduction from './introduction';
 import MainTitle from './mainTitle';
+import WhichRule from './whichRule';
 import Why from './why';
 
 export const getSlides = () => {
@@ -15,5 +16,6 @@ export const getSlides = () => {
     ...Example,
     ...Why,
     ...IdentityVsPermissions,
+    ...WhichRule,
   ] satisfies Slide[];
 };
