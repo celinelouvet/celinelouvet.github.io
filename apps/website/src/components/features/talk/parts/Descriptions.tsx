@@ -1,7 +1,7 @@
 import { Stack, Text } from '@chakra-ui/react';
 import type * as React from 'react';
 
-import type { TalkSubject } from '@/data';
+import type { TalkSubject } from 'src/data';
 
 type DescriptionsProps = {
   descriptions: TalkSubject['descriptions'];

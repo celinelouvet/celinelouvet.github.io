@@ -2,7 +2,7 @@ import { Box } from '@chakra-ui/react';
 import * as React from 'react';
 import { useParams } from 'react-router';
 
-import { Content } from '@/components/features';
+import { Content } from 'src/components/features';
 
 export const SlidesContentPage: React.FC = () => {
   const { talkSubjectId } = useParams();

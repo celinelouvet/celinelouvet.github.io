@@ -2,8 +2,8 @@ import { Box, Center, Stack, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H2Heading, Link } from '@/components/core';
-import { useLogger } from '@/hooks';
+import { H2Heading, Link } from 'src/components/core';
+import { useLogger } from 'src/hooks';
 
 export type BiographyProps = {
   biographies: string[];

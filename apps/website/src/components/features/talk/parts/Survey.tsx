@@ -1,7 +1,7 @@
 import { HStack, chakra } from '@chakra-ui/react';
 import type * as React from 'react';
 
-import { List } from '@/components/core';
+import { List } from 'src/components/core';
 
 import { SurveyAction } from './SurveyAction';
 

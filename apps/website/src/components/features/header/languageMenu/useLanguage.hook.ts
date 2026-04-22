@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { AVAILABLE_LANGUAGES } from '@/lib/i18n';
+import { AVAILABLE_LANGUAGES } from 'src/lib/i18n';
 
 type UseLanguageProps = {
   onChange: (newValue: string, oldValue: string) => void;

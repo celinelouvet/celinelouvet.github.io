@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 
-import { Provider } from '@/components/ui';
+import { Provider } from 'src/components/ui';
 
-import '@/lib/config';
+import 'src/lib/config';
 
-import '@/theme/fonts.css';
-import '@/theme/print.css';
+import 'src/theme/fonts.css';
+import 'src/theme/print.css';
 
 import App from './App';
 

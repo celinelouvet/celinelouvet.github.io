@@ -11,7 +11,7 @@ import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { BsCheckCircleFill } from 'react-icons/bs';
 
-import { CloseButton } from '@/components/core';
+import { CloseButton } from 'src/components/core';
 
 import { surveyPollSubmitRecipe } from './SurveyPollSubmit.recipe';
 
@@ -22,7 +22,8 @@ type SurveyPollSubmitVariantProps = RecipeVariantProps<
 };
 
 export interface SurveyPollSubmitProps
-  extends Omit<BoxProps, 'onSubmit'>,
+  extends
+    Omit<BoxProps, 'onSubmit'>,
     React.PropsWithChildren<SurveyPollSubmitVariantProps> {}
 
 export const SurveyPollSubmit = React.forwardRef<

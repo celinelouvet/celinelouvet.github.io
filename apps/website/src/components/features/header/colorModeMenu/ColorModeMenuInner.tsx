@@ -3,8 +3,8 @@ import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { BsChevronDown } from 'react-icons/bs';
 
-import { ColorModeIcon, useColorMode } from '@/components/ui';
-import type { useLogger } from '@/hooks';
+import { ColorModeIcon, useColorMode } from 'src/components/ui';
+import type { useLogger } from 'src/hooks';
 
 import { ColorModeItem } from './ColorModeItem';
 import { isColorMode, modes } from './colorModes';

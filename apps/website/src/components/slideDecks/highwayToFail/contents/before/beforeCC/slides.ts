@@ -1,4 +1,4 @@
-import type { Slide } from '@/components/slide';
+import type { Slide } from 'src/components/slide';
 
 import BeforeCC1 from './BeforeCC1';
 import BeforeCC2 from './BeforeCC2';

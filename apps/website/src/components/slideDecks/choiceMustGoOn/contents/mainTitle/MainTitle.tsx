@@ -1,15 +1,15 @@
 import { Box, HStack, Icon, Stack, Text, chakra } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { H2Heading } from '@/components/core';
+import { H2Heading } from 'src/components/core';
 import {
   SlideContent,
   SlideContentTypes,
   SlideNote,
-  colorMode
-} from '@/components/slide';
-import { choiceMustGoOnTalkFr as talk } from '@/data/talks';
-import { socialIcon } from '@/lib';
+  colorMode,
+} from 'src/components/slide';
+import { choiceMustGoOnTalkFr as talk } from 'src/data/talks';
+import { socialIcon } from 'src/lib';
 
 import { Loading } from '../../components/loading';
 import { Title } from '../Title.component';

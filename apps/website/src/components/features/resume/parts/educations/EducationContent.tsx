@@ -1,7 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import * as React from 'react';
 
-import type { Education } from '@/data';
+import type { Education } from 'src/data';
 
 import { EducationDiploma } from './EducationDiploma';
 import { EducationFullname } from './EducationFullname';

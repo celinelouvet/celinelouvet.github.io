@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { H4Heading } from '@/components/core';
-import { type Podcast } from '@/data';
+import { H4Heading } from 'src/components/core';
+import { type Podcast } from 'src/data';
 
 export type TitleTextProps = Pick<Podcast, 'title'>;
 

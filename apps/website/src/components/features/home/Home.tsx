@@ -1,7 +1,7 @@
 import { Flex, Grid, Stack, useToken } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { type Resume } from '@/data';
+import { type Resume } from 'src/data';
 
 import { Biography } from './biography';
 import { Conventions } from './conventions';

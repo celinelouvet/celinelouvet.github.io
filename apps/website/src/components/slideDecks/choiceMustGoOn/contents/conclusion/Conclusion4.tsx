@@ -1,8 +1,12 @@
 import { Center, HStack, Icon, Stack } from '@chakra-ui/react';
 import { GiHeavyBullets } from 'react-icons/gi';
 
-import { H3Heading } from '@/components/core';
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+import { H3Heading } from 'src/components/core';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+} from 'src/components/slide';
 
 const strikedStyle = {
   position: 'absolute',

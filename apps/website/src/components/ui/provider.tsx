@@ -2,7 +2,7 @@
 
 import { ChakraProvider } from '@chakra-ui/react';
 
-import { customSystem } from '@/theme';
+import { customSystem } from 'src/theme';
 
 import { ColorModeProvider, type ColorModeProviderProps } from './color-mode';
 

@@ -3,8 +3,8 @@ import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router';
 
-import { ResumePrint } from '@/components/features';
-import { useResume } from '@/hooks';
+import { ResumePrint } from 'src/components/features';
+import { useResume } from 'src/hooks';
 
 export type ResumePrintPageProps = Omit<BoxProps, 'children'>;
 

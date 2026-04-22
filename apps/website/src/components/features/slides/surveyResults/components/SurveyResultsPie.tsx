@@ -3,7 +3,7 @@ import { type SurveyPollChoiceQuestion } from '@repo/models';
 import * as React from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
 
-import { useQuestionResults } from '@/components/core/survey/surveyResults/useQuestionResults';
+import { useQuestionResults } from 'src/components/core/survey/surveyResults/useQuestionResults';
 
 type SurveyResultsPieProps = {
   question: SurveyPollChoiceQuestion;

@@ -1,7 +1,11 @@
 import { Box, HStack, Icon, Stack, chakra } from '@chakra-ui/react';
 import { TbArrowBigRightFilled } from 'react-icons/tb';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+} from 'src/components/slide';
 
 import { ProgressiveList } from '../../components/progressiveList';
 

@@ -1,8 +1,8 @@
 import { Flex, Stack, Text } from '@chakra-ui/react';
 import type * as React from 'react';
 
-import { DateFormatter, H4Heading } from '@/components/core';
-import type { SubVolunteering, Volunteering } from '@/data';
+import { DateFormatter, H4Heading } from 'src/components/core';
+import type { SubVolunteering, Volunteering } from 'src/data';
 
 export const VolunteeringRole: React.FC<{
   volunteering: Volunteering | SubVolunteering;

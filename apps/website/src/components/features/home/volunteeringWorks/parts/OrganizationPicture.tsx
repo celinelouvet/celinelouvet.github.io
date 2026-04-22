@@ -1,7 +1,7 @@
 import { Center, Image } from '@chakra-ui/react';
 
-import { useColorMode } from '@/components/ui';
-import type { Volunteering } from '@/data';
+import { useColorMode } from 'src/components/ui';
+import type { Volunteering } from 'src/data';
 
 const height = '120px';
 const lgWidth = '200px';

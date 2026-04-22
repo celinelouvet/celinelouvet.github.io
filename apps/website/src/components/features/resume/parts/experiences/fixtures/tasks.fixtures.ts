@@ -1,4 +1,4 @@
-import { type Task } from '@/data';
+import { type Task } from 'src/data';
 
 // Tasks
 const subtask1 = { name: 'Sub task 1' } satisfies Task;

@@ -1,4 +1,4 @@
-import type { Slide } from '@/components/slide';
+import type { Slide } from 'src/components/slide';
 
 import DuringLearnHaskell1 from './DuringLearnHaskell1';
 import DuringLearnHaskell2 from './DuringLearnHaskell2';

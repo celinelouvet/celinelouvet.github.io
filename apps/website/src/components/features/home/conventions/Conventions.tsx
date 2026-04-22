@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { type Resume } from '@/data';
-import { useGroupByConventions } from '@/hooks';
+import { type Resume } from 'src/data';
+import { useGroupByConventions } from 'src/hooks';
 
 import { ConventionList } from './ConventionList';
 

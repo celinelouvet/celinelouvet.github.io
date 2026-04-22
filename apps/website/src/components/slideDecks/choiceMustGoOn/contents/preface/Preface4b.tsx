@@ -1,7 +1,11 @@
 import { Box, Center, HStack, Stack, Text, chakra } from '@chakra-ui/react';
 import { PieChart } from 'react-minimal-pie-chart';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+} from 'src/components/slide';
 
 const onBudget = [
   { title: 'Oui', value: 44, color: '#4990bf', labelColor: '#f3f8fb' },

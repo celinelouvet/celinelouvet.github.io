@@ -5,7 +5,7 @@ import {
   type ConventionWithTalks,
   type Talk,
   type TalkSubject,
-} from '@/data';
+} from 'src/data';
 
 type HookType = {
   conventions: Map<string, Convention>;

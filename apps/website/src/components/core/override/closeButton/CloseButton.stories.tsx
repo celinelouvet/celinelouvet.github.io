@@ -1,7 +1,7 @@
 import { Card, Center, For, Grid, Stack, Text } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { H3Heading } from '@/components/core';
+import { H3Heading } from 'src/components/core';
 
 import { CloseButton as CloseButtonComponent } from './CloseButton';
 

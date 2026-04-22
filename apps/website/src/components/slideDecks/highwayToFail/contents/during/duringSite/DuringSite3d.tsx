@@ -1,8 +1,12 @@
 import { List, Text } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { ThumbsUp } from '@/components/core';
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+import { ThumbsUp } from 'src/components/core';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+} from 'src/components/slide';
 
 import { Loading } from '../../../components/loading';
 

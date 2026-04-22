@@ -5,7 +5,7 @@ import {
 } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { useLogger } from '@/hooks';
+import { useLogger } from 'src/hooks';
 
 import { CollapsibleTrigger } from './CollapsibleTrigger';
 

@@ -1,8 +1,8 @@
 import { Flex } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { DateFormatter, RemoteText } from '@/components/core';
-import type { Experience } from '@/data';
+import { DateFormatter, RemoteText } from 'src/components/core';
+import type { Experience } from 'src/data';
 
 export type InfosProps = {
   job: Pick<Experience, 'from' | 'to' | 'remote'>;

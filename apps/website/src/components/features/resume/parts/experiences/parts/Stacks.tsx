@@ -2,11 +2,12 @@ import { Flex, Grid, Stack, type StackProps, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H4Heading } from '@/components/core';
-import { type Experience, type Platform } from '@/data';
+import { H4Heading } from 'src/components/core';
+import { type Experience, type Platform } from 'src/data';
 
 export interface StacksProps
-  extends Omit<StackProps, 'children'>,
+  extends
+    Omit<StackProps, 'children'>,
     React.PropsWithChildren<{
       job: Experience;
     }> {}

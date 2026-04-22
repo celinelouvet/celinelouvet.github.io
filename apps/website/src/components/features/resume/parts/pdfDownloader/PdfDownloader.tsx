@@ -2,8 +2,8 @@ import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { BsFileEarmarkPdfFill } from 'react-icons/bs';
 
-import { Link, Tooltip } from '@/components/core';
-import { useLogger } from '@/hooks';
+import { Link, Tooltip } from 'src/components/core';
+import { useLogger } from 'src/hooks';
 
 const root =
   'https://storage.googleapis.com/celinelouvet-cv.appspot.com/resume';

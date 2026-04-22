@@ -1,8 +1,8 @@
 import type { SurveyPollChoiceQuestion } from '@repo/models';
 import * as React from 'react';
 
-import { SlideDeck, SlideNote, ViewTypes } from '@/components/slide';
-import { useSurveyResults } from '@/hooks';
+import { SlideDeck, SlideNote, ViewTypes } from 'src/components/slide';
+import { useSurveyResults } from 'src/hooks';
 
 import { Error, Loader, NoSurveyFound } from './components';
 import { SurveyResultsChoice } from './components/SurveyResultsChoice';

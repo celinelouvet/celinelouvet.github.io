@@ -1,8 +1,8 @@
 import { Flex } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { DateFormatter, H3Heading } from '@/components/core';
-import type { Certification } from '@/data';
+import { DateFormatter, H3Heading } from 'src/components/core';
+import type { Certification } from 'src/data';
 
 export const CertificationHeader: React.FC<{
   certification: Certification;

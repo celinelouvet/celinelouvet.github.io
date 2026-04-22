@@ -1,7 +1,7 @@
 import { Box, Stack, type StackProps } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { TimeText } from '@/components/core';
+import { TimeText } from 'src/components/core';
 
 type SlideNotePropsVariantProps = {
   hours?: number;
@@ -10,7 +10,8 @@ type SlideNotePropsVariantProps = {
 };
 
 export interface SlideNoteProps
-  extends Omit<StackProps, 'children'>,
+  extends
+    Omit<StackProps, 'children'>,
     React.PropsWithChildren<SlideNotePropsVariantProps> {}
 
 export const SlideNote = React.forwardRef<HTMLDivElement, SlideNoteProps>(

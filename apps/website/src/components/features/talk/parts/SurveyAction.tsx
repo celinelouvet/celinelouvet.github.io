@@ -2,7 +2,7 @@ import { chakra } from '@chakra-ui/react';
 import type * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Link } from '@/components/core';
+import { Link } from 'src/components/core';
 
 type SurveyActionProps = {
   name?: string;

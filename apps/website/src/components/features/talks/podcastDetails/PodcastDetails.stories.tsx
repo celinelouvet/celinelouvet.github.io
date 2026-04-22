@@ -1,7 +1,7 @@
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { PageContainer } from '@/components/core';
-import type { Podcast } from '@/data';
+import { PageContainer } from 'src/components/core';
+import type { Podcast } from 'src/data';
 
 import { PodcastDetails as PodcastDetailsComponent } from './PodcastDetails';
 

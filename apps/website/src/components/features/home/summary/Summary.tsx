@@ -1,8 +1,8 @@
 import { Box, Stack } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { H1Heading, H2Heading, Picture } from '@/components/core';
-import { type Resume } from '@/data';
+import { H1Heading, H2Heading, Picture } from 'src/components/core';
+import { type Resume } from 'src/data';
 
 export type SummaryProps = {
   resume: Pick<Resume, 'firstname' | 'lastname' | 'title'>;

@@ -5,7 +5,7 @@ import {
 } from '@repo/models';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { ColorModeButton } from '@/components/ui';
+import { ColorModeButton } from 'src/components/ui';
 
 import { SurveyQuestionResults as SurveyQuestionResultsComponent } from './SurveyQuestionResults';
 

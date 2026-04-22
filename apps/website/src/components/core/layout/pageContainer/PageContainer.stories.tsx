@@ -1,6 +1,6 @@
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { PageContainer as PageContainerComponent } from '@/components/core';
+import { PageContainer as PageContainerComponent } from 'src/components/core';
 
 const meta = {
   title: 'Core/Layout',

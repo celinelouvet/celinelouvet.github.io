@@ -2,7 +2,7 @@ import { Box } from '@chakra-ui/react';
 import * as React from 'react';
 import { useParams } from 'react-router';
 
-import { SurveyResults } from '@/components/features';
+import { SurveyResults } from 'src/components/features';
 
 export const SlidesSurveyResultsPage: React.FC = () => {
   const { talkSubjectId, conventionId } = useParams();

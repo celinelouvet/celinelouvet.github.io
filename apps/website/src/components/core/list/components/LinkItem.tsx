@@ -2,8 +2,8 @@ import { List, chakra } from '@chakra-ui/react';
 import * as React from 'react';
 import { type IconType } from 'react-icons';
 
-import { Link, Tooltip } from '@/components/core';
-import { capitalize } from '@/lib';
+import { Link, Tooltip } from 'src/components/core';
+import { capitalize } from 'src/lib';
 
 export type LinkItemProps = {
   icon?: IconType;

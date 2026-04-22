@@ -2,9 +2,9 @@ import { Box, Center, Stack } from '@chakra-ui/react';
 import type * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H2Heading, Link } from '@/components/core';
-import type { ConventionWithTalks } from '@/data';
-import { useLogger } from '@/hooks';
+import { H2Heading, Link } from 'src/components/core';
+import type { ConventionWithTalks } from 'src/data';
+import { useLogger } from 'src/hooks';
 
 import { ConventionDetails } from './parts';
 

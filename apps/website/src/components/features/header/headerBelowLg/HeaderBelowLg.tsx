@@ -2,8 +2,8 @@ import { Box, type BoxProps, Flex, useDisclosure } from '@chakra-ui/react';
 import * as React from 'react';
 import { useLocation } from 'react-router';
 
-import { HeaderContainer } from '@/components/core';
-import { useResume } from '@/hooks';
+import { HeaderContainer } from 'src/components/core';
+import { useResume } from 'src/hooks';
 
 import { ColorModeMenu } from '../colorModeMenu';
 import { LanguageMenu } from '../languageMenu';

@@ -2,13 +2,13 @@ import { Box, type BoxProps, Center, HStack, Stack } from '@chakra-ui/react';
 import * as React from 'react';
 import { BsArrowRight } from 'react-icons/bs';
 
-import { H2Heading, List, Picture } from '@/components/core';
-import { socialIcon } from '@/lib';
+import { H2Heading, List, Picture } from 'src/components/core';
+import { socialIcon } from 'src/lib';
 
 import {
   type ContentIntroduction,
   SlideContentTypes,
-  colorMode
+  colorMode,
 } from '../../types';
 import { SlideContentWith2Columns } from '../content2Columns';
 

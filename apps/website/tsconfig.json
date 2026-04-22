@@ -8,9 +8,6 @@
     "rootDir": ".",
     "baseUrl": ".",
     "outDir": "dist",
-    "paths": {
-      "@/*": ["src/*"]
-    },
     "tsBuildInfoFile": "./.tsconfig.tsbuildinfo"
   }
 }

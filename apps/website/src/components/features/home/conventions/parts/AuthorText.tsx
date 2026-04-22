@@ -2,7 +2,7 @@ import { chakra } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { type Podcast } from '@/data';
+import { type Podcast } from 'src/data';
 
 export type AuthorTextProps = Pick<Podcast, 'author'>;
 

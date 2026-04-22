@@ -1,4 +1,4 @@
-import type { Slide } from '@/components/slide';
+import type { Slide } from 'src/components/slide';
 
 import CreationMarket1 from './CreationMarket1';
 import CreationMarket2 from './CreationMarket2';

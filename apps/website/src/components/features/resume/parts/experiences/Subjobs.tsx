@@ -1,12 +1,13 @@
 import { Box, Stack, type StackProps, Timeline } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { type Experience } from '@/data';
+import { type Experience } from 'src/data';
 
 import { ExperienceDetails } from './ExperienceDetails';
 
 export interface SubjobsProps
-  extends Omit<StackProps, 'children'>,
+  extends
+    Omit<StackProps, 'children'>,
     React.PropsWithChildren<{
       job: Experience;
     }> {}

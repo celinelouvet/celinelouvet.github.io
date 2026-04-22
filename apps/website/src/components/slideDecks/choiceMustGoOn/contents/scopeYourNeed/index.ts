@@ -1,4 +1,4 @@
-import type { Slide } from '@/components/slide';
+import type { Slide } from 'src/components/slide';
 
 import ScopeYourNeed1 from './ScopeYourNeed1';
 import ScopeYourNeed2 from './ScopeYourNeed2';

@@ -2,9 +2,9 @@ import { Flex, Stack, Tag, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H2Heading } from '@/components/core';
-import { type Resume } from '@/data';
-import { useTalk } from '@/hooks';
+import { H2Heading } from 'src/components/core';
+import { type Resume } from 'src/data';
+import { useTalk } from 'src/hooks';
 
 import { Descriptions, Surveys } from './parts';
 

@@ -1,7 +1,11 @@
 import { Icon, Text } from '@chakra-ui/react';
 import { FaEllipsisH } from 'react-icons/fa';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+} from 'src/components/slide';
 
 export const content = (
   <SlideContent

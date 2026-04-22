@@ -14,9 +14,9 @@ import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router';
 
-import { H3Heading, Link } from '@/components/core';
-import { type TalkSubject } from '@/data';
-import { useLogger } from '@/hooks';
+import { H3Heading, Link } from 'src/components/core';
+import { type TalkSubject } from 'src/data';
+import { useLogger } from 'src/hooks';
 
 export type PossibleSubjectProps = {
   subjectId: string;

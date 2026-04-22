@@ -3,11 +3,12 @@ import { type SurveyPollChoiceQuestion } from '@repo/models';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H2Heading, Link, SurveyQuestionResults } from '@/components/core';
-import { useSurveyResults } from '@/hooks';
+import { H2Heading, Link, SurveyQuestionResults } from 'src/components/core';
+import { useSurveyResults } from 'src/hooks';
 
 export interface SurveyResultsProps
-  extends StackProps,
+  extends
+    StackProps,
     React.PropsWithChildren<{
       talkSubjectId?: string | string[];
       conventionId?: string | string[];

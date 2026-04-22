@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { H4Heading } from '@/components/core';
+import { H4Heading } from 'src/components/core';
 
 export type RoleTextProps = {
   role?: string;

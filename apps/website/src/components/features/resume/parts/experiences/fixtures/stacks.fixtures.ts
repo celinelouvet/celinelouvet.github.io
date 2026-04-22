@@ -1,4 +1,4 @@
-import { type Stack } from '@/data';
+import { type Stack } from 'src/data';
 
 // Stacks
 export const simpleStack1 = {

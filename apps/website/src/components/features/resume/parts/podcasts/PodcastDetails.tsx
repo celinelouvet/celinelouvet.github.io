@@ -1,8 +1,8 @@
 import { Box, Flex, HStack, Stack, chakra } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { DateFormatter, H3Heading } from '@/components/core';
-import { type Podcast } from '@/data';
+import { DateFormatter, H3Heading } from 'src/components/core';
+import { type Podcast } from 'src/data';
 
 import { AuthorText, DescriptionText, TitleText } from './parts';
 

@@ -9,7 +9,7 @@ import * as React from 'react';
 import { FaPause, FaPlay, FaUndo } from 'react-icons/fa';
 import { useStopwatch } from 'react-timer-hook';
 
-import { TimeText } from '@/components/core';
+import { TimeText } from 'src/components/core';
 
 type SlideTimerProps = StackProps;
 

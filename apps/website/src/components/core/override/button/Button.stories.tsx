@@ -8,7 +8,7 @@ import {
 } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { H3Heading } from '@/components/core';
+import { H3Heading } from 'src/components/core';
 
 const meta = {
   title: 'Core/Override',

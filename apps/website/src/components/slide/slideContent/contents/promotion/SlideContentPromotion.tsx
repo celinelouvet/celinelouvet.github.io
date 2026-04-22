@@ -16,12 +16,12 @@ import {
   H2Heading,
   H3Heading,
   Picture,
-} from '@/components/core';
+} from 'src/components/core';
 
 import {
   type ContentPromotion,
   SlideContentTypes,
-  colorMode
+  colorMode,
 } from '../../types';
 import { SlideContentWith2Columns } from '../content2Columns';
 import { promotionIcon } from './icons';

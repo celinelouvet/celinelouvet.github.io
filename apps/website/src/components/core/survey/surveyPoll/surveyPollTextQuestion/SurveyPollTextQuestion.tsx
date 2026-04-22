@@ -10,7 +10,7 @@ import { type SurveyPollTextQuestion as SurveyPollTextQuestionModel } from '@rep
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H2Heading } from '@/components/core';
+import { H2Heading } from 'src/components/core';
 
 type SurveyPollTextQuestionVariantProps =
   SlotRecipeProps<'surveyPollTextQuestion'> & {
@@ -19,7 +19,8 @@ type SurveyPollTextQuestionVariantProps =
   };
 
 export interface SurveyPollTextQuestionProps
-  extends BoxProps,
+  extends
+    BoxProps,
     React.PropsWithChildren<SurveyPollTextQuestionVariantProps> {}
 
 export const SurveyPollTextQuestion = React.forwardRef<

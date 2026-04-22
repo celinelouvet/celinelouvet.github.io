@@ -8,15 +8,15 @@ import {
   chakra,
 } from '@chakra-ui/react';
 
-import { H2Heading, QrCode } from '@/components/core';
+import { H2Heading, QrCode } from 'src/components/core';
 import {
   SlideContent,
   SlideContentTypes,
   SlideNote,
-  colorMode
-} from '@/components/slide';
-import { choiceMustGoOnTalkFr as talk } from '@/data/talks';
-import { socialIcon } from '@/lib';
+  colorMode,
+} from 'src/components/slide';
+import { choiceMustGoOnTalkFr as talk } from 'src/data/talks';
+import { socialIcon } from 'src/lib';
 
 export const content = (
   <SlideContent colormode={colorMode.dark} type={SlideContentTypes.fullContent}>

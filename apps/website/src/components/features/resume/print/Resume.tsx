@@ -1,8 +1,8 @@
 import { Center, Flex, Stack } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { Picture } from '@/components/core';
-import { type Resume } from '@/data';
+import { Picture } from 'src/components/core';
+import { type Resume } from 'src/data';
 
 import { Content } from './Content';
 import { MainTitle } from './MainTitle';

@@ -1,4 +1,4 @@
-import type { Slide } from '@/components/slide';
+import type { Slide } from 'src/components/slide';
 
 import AfterEnd1 from './AfterEnd1';
 import AfterEnd1b from './AfterEnd1b';

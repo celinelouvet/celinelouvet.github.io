@@ -9,12 +9,13 @@ import * as React from 'react';
 import { Chart, type ReactGoogleChartProps } from 'react-google-charts';
 import { useTranslation } from 'react-i18next';
 
-import { H2Heading } from '@/components/core';
+import { H2Heading } from 'src/components/core';
 
 import { useSurveySankeyData } from './useSurveySankey.hook';
 
 export interface TalkSurveySankeyProps
-  extends StackProps,
+  extends
+    StackProps,
     React.PropsWithChildren<{
       talkSubjectId?: string | string[];
       conventionId?: string | string[];

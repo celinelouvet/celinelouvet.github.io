@@ -1,8 +1,12 @@
 import { Center, HStack, Icon, Stack, Text } from '@chakra-ui/react';
 import { LuMessageCircleQuestion } from 'react-icons/lu';
 
-import { H3Heading } from '@/components/core';
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+import { H3Heading } from 'src/components/core';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+} from 'src/components/slide';
 
 export const content = (
   <SlideContent

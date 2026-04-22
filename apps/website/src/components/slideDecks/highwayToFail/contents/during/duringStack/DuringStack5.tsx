@@ -1,7 +1,11 @@
 import { Box, Center, Text } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+} from 'src/components/slide';
 
 import { Loading } from '../../../components/loading';
 

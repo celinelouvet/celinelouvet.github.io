@@ -2,8 +2,8 @@ import { Flex, HStack, Spacer, Stack, Text } from '@chakra-ui/react';
 import type * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Link } from '@/components/core';
-import type { TalkWithSubject } from '@/data';
+import { Link } from 'src/components/core';
+import type { TalkWithSubject } from 'src/data';
 
 import { TalkLink } from './TalkLink';
 import { TalkPicture } from './TalkPicture';

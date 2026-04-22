@@ -2,7 +2,11 @@ import { Box, Flex, Icon, Stack, Text, chakra } from '@chakra-ui/react';
 import * as React from 'react';
 import { BsArrowReturnRight } from 'react-icons/bs';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+} from 'src/components/slide';
 
 import { Loading } from '../../../components/loading';
 

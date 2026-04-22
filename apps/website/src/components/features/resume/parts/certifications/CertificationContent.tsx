@@ -1,7 +1,7 @@
 import { Flex, chakra } from '@chakra-ui/react';
 import * as React from 'react';
 
-import type { Certification } from '@/data';
+import type { Certification } from 'src/data';
 
 import { CertificationHeader } from './CertificationHeader';
 

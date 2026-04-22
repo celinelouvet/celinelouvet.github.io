@@ -1,7 +1,7 @@
 import { Box, type BoxProps, Center, Stack, Text } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { H2Heading } from '@/components/core';
+import { H2Heading } from 'src/components/core';
 
 import { type ContentAbstract } from '../../types';
 

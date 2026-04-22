@@ -1,4 +1,4 @@
-import { type Experience } from '@/data';
+import { type Experience } from 'src/data';
 
 import { basicJob, descriptions, role, subjobs, to } from './common.fixtures';
 import { allProjects } from './projects.fixtures';

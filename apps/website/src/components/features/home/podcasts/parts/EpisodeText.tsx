@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { H3Heading } from '@/components/core';
-import { type Podcast } from '@/data';
+import { H3Heading } from 'src/components/core';
+import { type Podcast } from 'src/data';
 
 type EpisodeTextProps = Pick<Podcast, 'episode'>;
 

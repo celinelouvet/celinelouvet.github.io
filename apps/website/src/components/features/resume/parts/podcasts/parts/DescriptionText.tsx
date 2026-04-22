@@ -1,7 +1,7 @@
 import { chakra } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { type Podcast } from '@/data';
+import { type Podcast } from 'src/data';
 
 export type DescriptionTextProps = Pick<Podcast, 'description'>;
 

@@ -2,9 +2,9 @@ import { Box, Flex, HStack, Stack, Text } from '@chakra-ui/react';
 import { type SurveyPollChoiceQuestion } from '@repo/models';
 import { useTranslation } from 'react-i18next';
 
-import { SurveyResultsBreakdown } from '@/components/core';
-import { useQuestionResults } from '@/components/core/survey/surveyResults/useQuestionResults';
-import { SlideContent, SlideContentTypes } from '@/components/slide';
+import { SurveyResultsBreakdown } from 'src/components/core';
+import { useQuestionResults } from 'src/components/core/survey/surveyResults/useQuestionResults';
+import { SlideContent, SlideContentTypes } from 'src/components/slide';
 
 import { SurveyResultsPie } from './SurveyResultsPie';
 

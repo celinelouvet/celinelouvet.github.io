@@ -2,7 +2,7 @@ import { chakra } from '@chakra-ui/react';
 import { format } from 'date-fns';
 import * as React from 'react';
 
-import type { ConventionWithDate } from '@/data';
+import type { ConventionWithDate } from 'src/data';
 
 type TalkConventionProps = {
   convention: ConventionWithDate;

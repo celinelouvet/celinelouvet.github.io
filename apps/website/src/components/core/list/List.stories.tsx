@@ -2,7 +2,7 @@ import { Stack } from '@chakra-ui/react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { BsBlockquoteLeft, BsGeoAltFill, BsTwitter } from 'react-icons/bs';
 
-import { List as ListComponent } from '@/components/core';
+import { List as ListComponent } from 'src/components/core';
 
 const meta = { title: 'Core', component: ListComponent.Root } satisfies Meta<
   typeof ListComponent.Root

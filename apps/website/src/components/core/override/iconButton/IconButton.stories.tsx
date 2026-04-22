@@ -9,7 +9,7 @@ import {
 import { type Meta, type StoryObj } from '@storybook/react';
 import { BsList } from 'react-icons/bs';
 
-import { H3Heading } from '@/components/core';
+import { H3Heading } from 'src/components/core';
 
 const meta = {
   title: 'Core/Override',

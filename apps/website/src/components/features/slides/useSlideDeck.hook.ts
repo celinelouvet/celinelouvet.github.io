@@ -4,7 +4,7 @@ import {
   type SlideDeck,
   type SlideDeckKey,
   slideDecks,
-} from '@/components/slideDecks';
+} from 'src/components/slideDecks';
 
 export function useSlideDeck(talkSubjectId?: string, prefix = '') {
   const [slideDeck, setSlideDeck] = React.useState<SlideDeck | null>(null);

@@ -1,7 +1,7 @@
 import { For, Grid, GridItem, Stack, Text } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { H2Heading, QrCode as QrCodeComponent } from '@/components/core';
+import { H2Heading, QrCode as QrCodeComponent } from 'src/components/core';
 
 const meta = {
   title: 'Core/Media',

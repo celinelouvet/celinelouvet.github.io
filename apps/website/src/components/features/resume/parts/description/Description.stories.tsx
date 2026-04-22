@@ -1,6 +1,6 @@
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import resume from '@/data/data.fr';
+import resume from 'src/data/data.fr';
 
 import { Description as DescriptionComponent } from './Description';
 

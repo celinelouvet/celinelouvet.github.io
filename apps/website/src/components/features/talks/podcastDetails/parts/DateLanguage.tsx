@@ -1,8 +1,8 @@
 import { HStack, chakra } from '@chakra-ui/react';
 import type * as React from 'react';
 
-import { DateFormatter } from '@/components/core';
-import type { Podcast } from '@/data';
+import { DateFormatter } from 'src/components/core';
+import type { Podcast } from 'src/data';
 
 type DateLanguageProps = Pick<Podcast, 'language' | 'when'>;
 export const DateLanguage: React.FC<DateLanguageProps> = function DateLanguage({

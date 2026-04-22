@@ -1,6 +1,10 @@
 import { Box, HStack, Stack, Text, chakra } from '@chakra-ui/react';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+} from 'src/components/slide';
 
 import { ProgressiveList } from '../../components/progressiveList';
 
