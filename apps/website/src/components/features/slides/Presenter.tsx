@@ -1,17 +1,73 @@
 import {
   Button,
   ButtonGroup,
+  Card,
   Center,
   Flex,
-  HStack,
-  SimpleGrid,
   Stack,
   Text,
+  Wrap,
 } from '@chakra-ui/react';
 import * as React from 'react';
 
 import { H2Heading, Link, PageContainer } from 'src/components/core';
 import { useColorMode } from 'src/components/ui';
+
+type TalkPresenterProps = {
+  title: string;
+  talkId: string;
+  surveyId?: string;
+  onClick: (talkId: string, withNotes: boolean) => void;
+};
+
+export const TalkPresenter: React.FC<TalkPresenterProps> =
+  function TalkPresenter({ title, talkId, surveyId, onClick }) {
+    return (
+      <>
+        <Card.Root variant="primary-subtle">
+          <Card.Header>
+            <H2Heading>{title}</H2Heading>
+          </Card.Header>
+
+          <Card.Body>
+            <Wrap rowGap="8" columnGap="32" justify="center">
+              <Center>
+                <ButtonGroup gap="8">
+                  <Button onClick={() => onClick(talkId, false)}>
+                    Present
+                  </Button>
+                  <Button onClick={() => onClick(talkId, true)}>
+                    Present with notes
+                  </Button>
+                </ButtonGroup>
+              </Center>
+
+              <Center>
+                <ButtonGroup gap="8">
+                  <Link.Internal to={`/slides/${talkId}/print`}>
+                    Print content
+                  </Link.Internal>
+                  <Link.Internal to={`/slides/${talkId}/print-notes`}>
+                    Print content with notes
+                  </Link.Internal>
+                </ButtonGroup>
+              </Center>
+
+              {surveyId ? (
+                <Center>
+                  <ButtonGroup gap="8">
+                    <Link.Internal to={`/slides/${talkId}/results/${surveyId}`}>
+                      Results
+                    </Link.Internal>
+                  </ButtonGroup>
+                </Center>
+              ) : null}
+            </Wrap>
+          </Card.Body>
+        </Card.Root>
+      </>
+    );
+  };
 
 export const Presenter: React.FC = function Presenter() {
   const { colorMode } = useColorMode();
@@ -41,93 +97,17 @@ export const Presenter: React.FC = function Presenter() {
         ) : null}
 
         <Stack gap="8" width="100%">
-          <HStack
-            gap="8"
-            width="100%"
-            height="brand.800"
-            backgroundColor={{ base: 'brand.900', _dark: 'brand.200' }}
-            borderRadius="md"
-          >
-            <Center
-              width="30%"
-              height="100%"
-              backgroundColor="brand.400"
-              color="brand.900"
-              borderLeftRadius="md"
-            >
-              <H2Heading>Highway to fail</H2Heading>
-            </Center>
-
-            <SimpleGrid columns={2} gap="8" flex="1">
-              <Center>
-                <ButtonGroup gap="8">
-                  <Button onClick={() => onClick('highway-to-fail', false)}>
-                    Present
-                  </Button>
-                  <Button onClick={() => onClick('highway-to-fail', true)}>
-                    Present with notes
-                  </Button>
-                </ButtonGroup>
-              </Center>
-
-              <Center>
-                <ButtonGroup gap="8">
-                  <Link.Internal to="/slides/highway-to-fail/print">
-                    Print content
-                  </Link.Internal>
-                  <Link.Internal to="/slides/highway-to-fail/print-notes">
-                    Print content with notes
-                  </Link.Internal>
-                </ButtonGroup>
-              </Center>
-              <Center>
-                <ButtonGroup gap="8">
-                  <Link.Internal to="/slides/highway_to_fail/results/mixit_2025">
-                    Results
-                  </Link.Internal>
-                </ButtonGroup>
-              </Center>
-            </SimpleGrid>
-          </HStack>
-
-          <SimpleGrid
-            columns={3}
-            gap="8"
-            width="100%"
-            height="brand.800"
-            backgroundColor={{ base: 'brand.900', _dark: 'brand.200' }}
-            borderRadius="md"
-          >
-            <Center
-              backgroundColor="brand.400"
-              color="brand.900"
-              borderLeftRadius="md"
-            >
-              <H2Heading>The choice must go on</H2Heading>
-            </Center>
-
-            <Center>
-              <ButtonGroup gap="8">
-                <Button onClick={() => onClick('choice-must-go-on', false)}>
-                  Present
-                </Button>
-                <Button onClick={() => onClick('choice-must-go-on', true)}>
-                  Present with notes
-                </Button>
-              </ButtonGroup>
-            </Center>
-
-            <Center>
-              <ButtonGroup gap="8">
-                <Link.Internal to="/slides/choice-must-go-on/print">
-                  Print content
-                </Link.Internal>
-                <Link.Internal to="/slides/choice-must-go-on/print-notes">
-                  Print content with notes
-                </Link.Internal>
-              </ButtonGroup>
-            </Center>
-          </SimpleGrid>
+          <TalkPresenter
+            title="Highway to fail"
+            talkId="highway-to-fail"
+            surveyId="mixit_2025"
+            onClick={onClick}
+          />
+          <TalkPresenter
+            title="What if"
+            talkId="choice-must-go-on"
+            onClick={onClick}
+          />
         </Stack>
       </Stack>
     </PageContainer>
