@@ -2,6 +2,7 @@
 
 import type { Slide } from 'src/components/slide';
 
+import DecisionEnforcement from './decisionEnforcement';
 import Example from './example';
 import IdentityVsPermissions from './identityVsPermissions';
 import Introduction from './introduction';
@@ -17,5 +18,6 @@ export const getSlides = () => {
     ...Why,
     ...IdentityVsPermissions,
     ...WhichRule,
+    ...DecisionEnforcement,
   ] satisfies Slide[];
 };

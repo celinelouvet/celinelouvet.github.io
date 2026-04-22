@@ -2,6 +2,7 @@ import { type Meta, type StoryObj } from '@storybook/react';
 
 import { SlideDeck, ViewTypes } from 'src/components/slide';
 
+import DecisionEnforcementSlides from '../decisionEnforcement';
 import ExampleSlides from '../example';
 import IdentityVsPermissionsSlides from '../identityVsPermissions';
 import NotionsSlides from '../importantNotions';
@@ -75,6 +76,13 @@ export const WhichRule: Story = {
 export const Notions: Story = {
   render: () => {
     const slides = NotionsSlides;
+    return <SlideDeck view={ViewTypes.print} slides={slides} />;
+  },
+};
+
+export const DecisionEnforcement: Story = {
+  render: () => {
+    const slides = DecisionEnforcementSlides;
     return <SlideDeck view={ViewTypes.print} slides={slides} />;
   },
 };
