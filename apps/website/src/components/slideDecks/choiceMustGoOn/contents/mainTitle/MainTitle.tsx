@@ -11,7 +11,7 @@ import {
 import { choiceMustGoOnTalkFr as talk } from 'src/data/talks';
 import { socialIcon } from 'src/lib';
 
-import { Loading } from '../../components/loading';
+import { Loading } from '../../../components/loading';
 import { Title } from '../Title.component';
 
 const Subtitle = React.lazy(() =>

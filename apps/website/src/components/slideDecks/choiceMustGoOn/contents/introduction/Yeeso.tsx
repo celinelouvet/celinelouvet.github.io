@@ -10,7 +10,7 @@ import {
   colorMode,
 } from 'src/components/slide';
 
-import { Loading } from '../../components/loading';
+import { Loading } from '../../../components/loading';
 
 const YeesoLight = React.lazy(() =>
   import('./components/YeesoLight').then((module) => ({

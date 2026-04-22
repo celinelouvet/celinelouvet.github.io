@@ -6,7 +6,7 @@ import {
   SlideNote,
 } from 'src/components/slide';
 
-import { type Tile, Tiles } from '../../components/tiles';
+import { type Tile, Tiles } from '../../../components/tiles';
 
 const reasons = [
   { text: 'Budget respecté', shown: false },

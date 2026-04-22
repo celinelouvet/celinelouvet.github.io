@@ -6,7 +6,7 @@ import {
   SlideNote,
 } from 'src/components/slide';
 
-import { ProgressiveList } from '../../components/progressiveList';
+import { ProgressiveList } from '../../../components/progressiveList';
 
 const items = [
   { text: 'Réponse en moins de 1ms jusqu’à 100 requêtes par seconde' },
