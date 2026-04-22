@@ -2,7 +2,7 @@ import { Box, Stack, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H2Heading } from '@/components/core';
+import { H2Heading } from 'src/components/core';
 
 export type DescriptionProps = {
   descriptions: string[];

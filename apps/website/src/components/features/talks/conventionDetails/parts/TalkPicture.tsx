@@ -1,6 +1,6 @@
 import { Center, Image } from '@chakra-ui/react';
 
-import type { TalkWithSubject } from '@/data';
+import type { TalkWithSubject } from 'src/data';
 
 const height = '120px';
 const lgWidth = '200px';

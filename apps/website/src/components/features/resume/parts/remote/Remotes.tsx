@@ -2,8 +2,8 @@ import { Box, List } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H2Heading } from '@/components/core';
-import { type Remote } from '@/data';
+import { H2Heading } from 'src/components/core';
+import { type Remote } from 'src/data';
 
 export type RemotesProps = {
   remotes: Remote[];

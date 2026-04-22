@@ -4,8 +4,8 @@ import {
   SurveyState,
 } from '@repo/models';
 
-import { type TalkSubject } from '@/data';
-import { useResume } from '@/hooks';
+import { type TalkSubject } from 'src/data';
+import { useResume } from 'src/hooks';
 
 const defaultSurveyId = 'default';
 const emptySurvey = {

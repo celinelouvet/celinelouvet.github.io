@@ -3,8 +3,8 @@ import type * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { BsCheckLg, BsChevronDown, BsTranslate } from 'react-icons/bs';
 
-import type { useLogger } from '@/hooks';
-import { AVAILABLE_LANGUAGES } from '@/lib/i18n';
+import type { useLogger } from 'src/hooks';
+import { AVAILABLE_LANGUAGES } from 'src/lib/i18n';
 
 import { useLanguage } from './useLanguage.hook';
 

@@ -1,7 +1,7 @@
 import { Card, Flex, HStack, Spacer, Stack, Text } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { type Podcast } from '@/data';
+import { type Podcast } from 'src/data';
 
 import { AuthorText } from './AuthorText';
 import { DescriptionText } from './DescriptionText';

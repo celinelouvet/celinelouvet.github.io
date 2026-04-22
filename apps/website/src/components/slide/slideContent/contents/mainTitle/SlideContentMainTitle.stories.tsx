@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { highwayToFailTalkFr as talk } from '@/data/talks';
+import { highwayToFailTalkFr as talk } from 'src/data/talks';
 
 import { SlideContentMainTitle } from './SlideContentMainTitle';
 import { SlideContentTypes } from '../../types';

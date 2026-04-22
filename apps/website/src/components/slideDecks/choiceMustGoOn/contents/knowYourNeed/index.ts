@@ -1,4 +1,4 @@
-import type { Slide } from '@/components/slide';
+import type { Slide } from 'src/components/slide';
 
 import KnowYourNeed1 from './KnowYourNeed1';
 import KnowYourNeed10 from './KnowYourNeed10';

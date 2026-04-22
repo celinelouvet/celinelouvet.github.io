@@ -1,4 +1,4 @@
-import type { Slide } from '@/components/slide';
+import type { Slide } from 'src/components/slide';
 
 import DuringWhere1 from './DuringWhere1';
 import DuringWhere2 from './DuringWhere2';

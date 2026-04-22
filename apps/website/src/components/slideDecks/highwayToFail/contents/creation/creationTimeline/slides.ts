@@ -1,4 +1,4 @@
-import type { Slide } from '@/components/slide';
+import type { Slide } from 'src/components/slide';
 
 import CreationTimeline1 from './CreationTimeline1';
 import CreationTimeline2 from './CreationTimeline2';

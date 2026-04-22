@@ -1,7 +1,7 @@
 import { Drawer, Flex, Portal, Stack, chakra } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { CloseButton } from '@/components/core';
+import { CloseButton } from 'src/components/core';
 
 import { sections } from '../../sections';
 import { HeaderDrawerButton } from '../headerDrawerButton';

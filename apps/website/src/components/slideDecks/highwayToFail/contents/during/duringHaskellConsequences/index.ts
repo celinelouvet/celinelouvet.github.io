@@ -1,4 +1,4 @@
-import type { Slide } from '@/components/slide';
+import type { Slide } from 'src/components/slide';
 
 import DuringHaskellConsequences1 from './DuringHaskellConsequences1';
 import DuringHaskellConsequences2 from './DuringHaskellConsequences2';

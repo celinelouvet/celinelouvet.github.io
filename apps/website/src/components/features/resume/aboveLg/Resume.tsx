@@ -1,7 +1,7 @@
 import { Box, Grid } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { type Resume } from '@/data';
+import { type Resume } from 'src/data';
 
 import { Content } from './Content';
 import { MainTitle } from './MainTitle';

@@ -2,8 +2,8 @@ import { HStack, chakra } from '@chakra-ui/react';
 import type * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { DateFormatter } from '@/components/core';
-import type { ConventionWithTalks } from '@/data';
+import { DateFormatter } from 'src/components/core';
+import type { ConventionWithTalks } from 'src/data';
 
 export type DateLanguageProps = Pick<
   ConventionWithTalks,

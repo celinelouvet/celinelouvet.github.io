@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 
-import { Link } from '@/components/core';
-import type { Links } from '@/data';
+import { Link } from 'src/components/core';
+import type { Links } from 'src/data';
 
 type TalkLinkProps = {
   type: keyof Links;

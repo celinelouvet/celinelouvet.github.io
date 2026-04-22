@@ -1,7 +1,7 @@
 import { Grid, GridItem, Heading } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { Tag } from '@/components/ui';
+import { Tag } from 'src/components/ui';
 
 import { H1Heading, h1HeadingRecipe } from './h1Heading';
 import { H2Heading, h2HeadingRecipe } from './h2Heading';

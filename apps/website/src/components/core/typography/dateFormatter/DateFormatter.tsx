@@ -8,7 +8,7 @@ import { format, formatDuration, intervalToDuration } from 'date-fns';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import type { Period } from '@/data';
+import type { Period } from 'src/data';
 
 import { dateFormatterRecipe } from './DateFormatter.recipe';
 
@@ -22,7 +22,8 @@ type DateFormatterVariantProps = RecipeVariantProps & {
 };
 
 export interface DateFormatterProps
-  extends Omit<TextProps, 'children'>,
+  extends
+    Omit<TextProps, 'children'>,
     React.PropsWithChildren<DateFormatterVariantProps> {}
 
 export const DateFormatter = React.forwardRef<

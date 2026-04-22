@@ -10,8 +10,8 @@ import {
 } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { H2Heading, Link, PageContainer } from '@/components/core';
-import { useColorMode } from '@/components/ui';
+import { H2Heading, Link, PageContainer } from 'src/components/core';
+import { useColorMode } from 'src/components/ui';
 
 export const Presenter: React.FC = function Presenter() {
   const { colorMode } = useColorMode();

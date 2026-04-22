@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import { PageContainer } from '@/components/core';
-import { Header, Talks as TalksContent } from '@/components/features';
-import { useResume } from '@/hooks';
+import { PageContainer } from 'src/components/core';
+import { Header, Talks as TalksContent } from 'src/components/features';
+import { useResume } from 'src/hooks';
 
 export const Talks: React.FC = () => {
   const resume = useResume();

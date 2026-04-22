@@ -1,7 +1,7 @@
 import { Stack, Text } from '@chakra-ui/react';
 import * as React from 'react';
 
-import type { Volunteering } from '@/data';
+import type { Volunteering } from 'src/data';
 
 import { SubVolunteeringWorks } from './SubVolunteeringWorks';
 import { VolunteeringHeader } from './VolunteeringHeader';

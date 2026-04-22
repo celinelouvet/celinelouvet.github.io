@@ -2,8 +2,8 @@ import { Box, Card, Flex, Spacer, Stack, Text } from '@chakra-ui/react';
 import type * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Link } from '@/components/core';
-import type { SubVolunteering, Volunteering } from '@/data';
+import { Link } from 'src/components/core';
+import type { SubVolunteering, Volunteering } from 'src/data';
 
 import { Header } from './Header';
 import { OrganizationPicture } from './OrganizationPicture';

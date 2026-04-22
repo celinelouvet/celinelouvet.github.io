@@ -1,9 +1,9 @@
 import { Box, type BoxProps } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { PageContainer } from '@/components/core';
-import { Header, Resume as ResumeContent } from '@/components/features';
-import { useResume } from '@/hooks';
+import { PageContainer } from 'src/components/core';
+import { Header, Resume as ResumeContent } from 'src/components/features';
+import { useResume } from 'src/hooks';
 
 export type ResumePageProps = Omit<BoxProps, 'children'>;
 

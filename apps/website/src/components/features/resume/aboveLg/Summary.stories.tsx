@@ -1,8 +1,8 @@
 import { Grid, GridItem } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { PageContainer } from '@/components/core';
-import resume from '@/data/data.fr';
+import { PageContainer } from 'src/components/core';
+import resume from 'src/data/data.fr';
 
 import { Summary as SummaryComponent } from './Summary';
 

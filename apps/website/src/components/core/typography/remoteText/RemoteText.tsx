@@ -8,7 +8,7 @@ import {
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import type { RemoteType } from '@/data';
+import type { RemoteType } from 'src/data';
 
 import { remoteTextRecipe } from './RemoteText.recipe';
 
@@ -17,7 +17,8 @@ type RemoteTextVariantProps = RecipeVariantProps<typeof remoteTextRecipe> & {
 };
 
 export interface RemoteTextProps
-  extends Omit<TextProps, 'children'>,
+  extends
+    Omit<TextProps, 'children'>,
     React.PropsWithChildren<RemoteTextVariantProps> {}
 
 export const RemoteText = React.forwardRef<HTMLSpanElement, RemoteTextProps>(

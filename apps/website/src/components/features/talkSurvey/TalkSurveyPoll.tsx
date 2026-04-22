@@ -3,14 +3,15 @@ import { SurveyState } from '@repo/models';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H2Heading, H3Heading, Link } from '@/components/core';
-import { useApi, useLogger } from '@/hooks';
+import { H2Heading, H3Heading, Link } from 'src/components/core';
+import { useApi, useLogger } from 'src/hooks';
 
 import { QuestionContent } from './QuestionContent';
 import { useSurveyPoll } from './useSurveyPoll.hook';
 
 export interface SurveyPollProps
-  extends StackProps,
+  extends
+    StackProps,
     React.PropsWithChildren<{
       talkSubjectId?: string | string[];
       conventionId?: string | string[];

@@ -2,8 +2,8 @@ import { Box, Grid, Stack } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H2Heading } from '@/components/core';
-import { type Education } from '@/data';
+import { H2Heading } from 'src/components/core';
+import { type Education } from 'src/data';
 
 import { EducationContent } from './EducationContent';
 

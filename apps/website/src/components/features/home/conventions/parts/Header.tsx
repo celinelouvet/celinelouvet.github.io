@@ -1,8 +1,8 @@
 import { Flex } from '@chakra-ui/react';
 import type * as React from 'react';
 
-import { H3Heading } from '@/components/core';
-import type { ConventionWithTalks } from '@/data';
+import { H3Heading } from 'src/components/core';
+import type { ConventionWithTalks } from 'src/data';
 
 import { DateLanguage } from './DateLanguage';
 

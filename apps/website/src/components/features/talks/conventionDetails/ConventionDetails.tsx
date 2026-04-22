@@ -2,8 +2,8 @@ import { Button, Card, Center, Flex, Spacer, Stack } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Link } from '@/components/core';
-import { type ConventionWithTalks } from '@/data';
+import { Link } from 'src/components/core';
+import { type ConventionWithTalks } from 'src/data';
 
 import { Header, TalkDetails } from './parts';
 

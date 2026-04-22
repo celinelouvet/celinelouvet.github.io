@@ -1,7 +1,7 @@
 import { Box, type BoxProps, Stack } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { H1Heading, H2Heading } from '@/components/core';
+import { H1Heading, H2Heading } from 'src/components/core';
 
 import { type ContentTitle, SlideContentTypes, colorMode } from '../../types';
 import { SlideContentFullContent } from '../fullContent';

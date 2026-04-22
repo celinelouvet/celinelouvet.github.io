@@ -1,8 +1,8 @@
 import { Stack } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { H3Heading, MoreLessCollapsible } from '@/components/core';
-import { type Experience } from '@/data';
+import { H3Heading, MoreLessCollapsible } from 'src/components/core';
+import { type Experience } from 'src/data';
 
 import {
   Descriptions,

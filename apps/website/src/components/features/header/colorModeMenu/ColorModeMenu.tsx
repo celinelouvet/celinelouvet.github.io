@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { useLogger } from '@/hooks';
+import { useLogger } from 'src/hooks';
 
 import { ColorModeMenuInner } from './ColorModeMenuInner';
 

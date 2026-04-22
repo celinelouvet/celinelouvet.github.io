@@ -6,7 +6,7 @@ import {
   type Talk,
   type TalkSubject,
   type TalkWithConventions,
-} from '@/data';
+} from 'src/data';
 
 type FullTalk = TalkSubject & Talk & { convention: ConventionWithDate };
 

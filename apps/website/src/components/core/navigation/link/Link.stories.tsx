@@ -1,7 +1,7 @@
 import { Card, For, Grid, GridItem, Stack, Text } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { H3Heading, Link as LinkComponent } from '@/components/core';
+import { H3Heading, Link as LinkComponent } from 'src/components/core';
 
 const meta = {
   title: 'Core/Navigation',

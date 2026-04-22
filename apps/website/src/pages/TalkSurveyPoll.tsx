@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { useParams } from 'react-router';
 
-import { PageContainer } from '@/components/core';
+import { PageContainer } from 'src/components/core';
 import {
   Header,
   TalkSurveyPoll as TalkSurveyPollContent,
-} from '@/components/features';
+} from 'src/components/features';
 
 export const TalkSurveyPoll: React.FC = () => {
   const { talkSubjectId, conventionId } = useParams();

@@ -5,7 +5,7 @@ import {
   SurveyPollChoiceQuestion,
   SurveyPollSubmit,
   SurveyPollTextQuestion,
-} from '@/components/core';
+} from 'src/components/core';
 
 type QuestionContentProps = {
   id: string;

@@ -1,4 +1,4 @@
-import { type Podcast } from '@/data';
+import { type Podcast } from 'src/data';
 
 export const title = 'Podcast title';
 export const author = 'Podcast author';

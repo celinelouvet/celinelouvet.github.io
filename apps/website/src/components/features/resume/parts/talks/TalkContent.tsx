@@ -1,8 +1,8 @@
 import { Text } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { H3Heading } from '@/components/core';
-import type { TalkWithConventions } from '@/data';
+import { H3Heading } from 'src/components/core';
+import type { TalkWithConventions } from 'src/data';
 
 import { TalkConvention } from './TalkConvention';
 

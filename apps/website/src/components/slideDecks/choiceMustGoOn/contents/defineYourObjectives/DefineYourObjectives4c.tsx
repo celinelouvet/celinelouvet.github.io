@@ -1,6 +1,10 @@
 import { Center } from '@chakra-ui/react';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+} from 'src/components/slide';
 
 import { GivenWhenThen } from './components/givenWhenThen';
 

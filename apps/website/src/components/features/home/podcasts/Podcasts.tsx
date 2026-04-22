@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { type Resume } from '@/data';
+import { type Resume } from 'src/data';
 
 import { PodcastList } from './PodcastList';
 

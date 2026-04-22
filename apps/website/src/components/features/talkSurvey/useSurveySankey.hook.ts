@@ -1,8 +1,8 @@
 import { type SurveyPoll, type SurveyPollChoiceQuestion } from '@repo/models';
 import * as React from 'react';
 
-import { survey } from '@/data/talks/highwayToFail/survey.fr';
-import { useSurveyResults } from '@/hooks';
+import { survey } from 'src/data/talks/highwayToFail/survey.fr';
+import { useSurveyResults } from 'src/hooks';
 
 type QuestionToShow = {
   id: string;

@@ -6,7 +6,7 @@ import {
   type ConventionWithTalks,
   type Podcast,
   type TalkSubject,
-} from '@/data';
+} from 'src/data';
 
 type MenuProps = {
   subjects: Map<string, TalkSubject>;

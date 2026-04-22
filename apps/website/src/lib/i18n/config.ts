@@ -5,9 +5,9 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import Backend from 'i18next-http-backend';
 import { initReactI18next } from 'react-i18next';
 
-import { DEFAULT_LANGUAGE_KEY, DEFAULT_NAMESPACE } from '@/lib/i18n';
-import { isBrowser } from '@/lib/ssr';
-import locales from '@/locales';
+import { DEFAULT_LANGUAGE_KEY, DEFAULT_NAMESPACE } from 'src/lib/i18n';
+import { isBrowser } from 'src/lib/ssr';
+import locales from 'src/locales';
 
 setDefaultOptions({ locale: DEFAULT_LANGUAGE_KEY === 'en' ? enUS : fr });
 

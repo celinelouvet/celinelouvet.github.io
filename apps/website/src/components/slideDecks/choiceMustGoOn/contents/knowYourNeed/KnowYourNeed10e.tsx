@@ -1,7 +1,11 @@
 import { Box, Stack, Text } from '@chakra-ui/react';
 
-import { ThumbsUp } from '@/components/core';
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+import { ThumbsUp } from 'src/components/core';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+} from 'src/components/slide';
 
 export const content = (
   <SlideContent

@@ -2,8 +2,8 @@ import { Box, Card, Center, Stack } from '@chakra-ui/react';
 import { type SurveyPollChoice } from '@repo/models';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { H3Heading } from '@/components/core';
-import { ColorModeButton } from '@/components/ui';
+import { H3Heading } from 'src/components/core';
+import { ColorModeButton } from 'src/components/ui';
 
 import { SurveyResultsPie as SurveyResultsPieComponent } from './SurveyResultsPie';
 

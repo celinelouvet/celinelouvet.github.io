@@ -6,8 +6,8 @@ import {
 } from '@repo/models';
 import * as React from 'react';
 
-import { useSurveyInfos } from '@/components/features/talkSurvey/useSurveyInfos.hook';
-import { useApi } from '@/hooks';
+import { useSurveyInfos } from 'src/components/features/talkSurvey/useSurveyInfos.hook';
+import { useApi } from 'src/hooks';
 
 type ChoiceValue = 'yes' | 'no';
 type ReducedResults = Record<string, Record<ChoiceValue, number>>;

@@ -2,8 +2,8 @@ import { Box, Stack } from '@chakra-ui/react';
 import type * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H3Heading, Link, List } from '@/components/core';
-import type { TalkSubject } from '@/data';
+import { H3Heading, Link, List } from 'src/components/core';
+import type { TalkSubject } from 'src/data';
 
 import { Survey } from './Survey';
 

@@ -5,8 +5,8 @@ import {
 } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { Picture } from '@/components/core';
-import type { Resume } from '@/data';
+import { Picture } from 'src/components/core';
+import type { Resume } from 'src/data';
 
 import { Infos, Remotes, Skills, Socials } from '../parts';
 

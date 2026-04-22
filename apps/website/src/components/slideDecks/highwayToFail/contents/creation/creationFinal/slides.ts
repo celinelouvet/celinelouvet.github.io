@@ -1,4 +1,4 @@
-import type { Slide } from '@/components/slide';
+import type { Slide } from 'src/components/slide';
 
 import CreationFinal1 from './CreationFinal1';
 import CreationFinal2 from './CreationFinal2';

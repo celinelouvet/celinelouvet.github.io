@@ -1,4 +1,4 @@
-import type { Slide } from '@/components/slide';
+import type { Slide } from 'src/components/slide';
 
 import DuringDauphine from './duringDauphine';
 import DuringEssec from './duringEssec';

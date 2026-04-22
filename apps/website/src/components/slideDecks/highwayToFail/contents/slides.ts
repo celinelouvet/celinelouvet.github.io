@@ -1,6 +1,6 @@
 'use client';
 
-import type { Slide } from '@/components/slide';
+import type { Slide } from 'src/components/slide';
 
 import After from './after';
 import Before from './before';

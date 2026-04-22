@@ -1,4 +1,4 @@
-import type { Slide } from '@/components/slide';
+import type { Slide } from 'src/components/slide';
 
 import ForEachPossibleChoice1 from './ForEachPossibleChoice1';
 import ForEachPossibleChoice10 from './ForEachPossibleChoice10';

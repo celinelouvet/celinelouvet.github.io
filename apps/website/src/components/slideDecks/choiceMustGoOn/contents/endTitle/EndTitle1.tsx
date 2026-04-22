@@ -12,10 +12,10 @@ import {
   SlideContent,
   SlideContentTypes,
   SlideNote,
-  colorMode
-} from '@/components/slide';
-import { choiceMustGoOnTalkFr as talk } from '@/data/talks';
-import { socialIcon } from '@/lib';
+  colorMode,
+} from 'src/components/slide';
+import { choiceMustGoOnTalkFr as talk } from 'src/data/talks';
+import { socialIcon } from 'src/lib';
 
 import { Title } from '../Title.component';
 

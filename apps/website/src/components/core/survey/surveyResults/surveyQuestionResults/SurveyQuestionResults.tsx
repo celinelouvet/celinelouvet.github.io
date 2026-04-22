@@ -10,7 +10,7 @@ import { type SurveyPollChoiceQuestion } from '@repo/models';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H2Heading } from '@/components/core';
+import { H2Heading } from 'src/components/core';
 
 import { SurveyResultsBreakdown } from '../surveyResultsBreakdown';
 import { SurveyResultsPie } from '../surveyResultsPie';
@@ -23,7 +23,8 @@ type SurveyQuestionResultsVariantProps =
   };
 
 export interface SurveyQuestionResultsProps
-  extends Omit<Card.RootProps, 'question' | 'results'>,
+  extends
+    Omit<Card.RootProps, 'question' | 'results'>,
     React.PropsWithChildren<SurveyQuestionResultsVariantProps> {}
 
 export const SurveyQuestionResults = React.forwardRef<

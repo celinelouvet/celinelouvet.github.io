@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { H4Heading } from '@/components/core';
-import { type TalkSubject } from '@/data';
+import { H4Heading } from 'src/components/core';
+import { type TalkSubject } from 'src/data';
 
 export type TopicTextProps = Pick<TalkSubject, 'topic'>;
 

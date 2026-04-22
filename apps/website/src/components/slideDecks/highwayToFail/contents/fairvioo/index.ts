@@ -1,4 +1,4 @@
-import type { Slide } from '@/components/slide';
+import type { Slide } from 'src/components/slide';
 
 import Fairvioo1 from './Fairvioo1';
 import Fairvioo2 from './Fairvioo2';

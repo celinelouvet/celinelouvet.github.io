@@ -1,6 +1,6 @@
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { PageContainer } from '@/components/core';
+import { PageContainer } from 'src/components/core';
 
 import { ConventionDetails as ConventionDetailsComponent } from './ConventionDetails';
 

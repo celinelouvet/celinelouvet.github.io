@@ -9,11 +9,12 @@ import {
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H4Heading } from '@/components/core';
-import { type Experience } from '@/data';
+import { H4Heading } from 'src/components/core';
+import { type Experience } from 'src/data';
 
 export interface TasksProps
-  extends Omit<StackProps, 'children'>,
+  extends
+    Omit<StackProps, 'children'>,
     React.PropsWithChildren<{
       job: Experience;
     }> {}

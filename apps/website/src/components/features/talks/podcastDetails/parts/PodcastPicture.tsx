@@ -1,6 +1,6 @@
 import { Center, Image } from '@chakra-ui/react';
 
-import type { Podcast } from '@/data';
+import type { Podcast } from 'src/data';
 
 const height = '120px';
 const lgWidth = '200px';

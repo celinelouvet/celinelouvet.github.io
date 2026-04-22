@@ -1,6 +1,6 @@
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { HeaderContainer as HeaderContainerComponent } from '@/components/core';
+import { HeaderContainer as HeaderContainerComponent } from 'src/components/core';
 
 const meta = {
   title: 'Core/Layout',

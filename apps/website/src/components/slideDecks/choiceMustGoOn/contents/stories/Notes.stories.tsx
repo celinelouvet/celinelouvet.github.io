@@ -1,6 +1,6 @@
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { SlideDeck, ViewTypes } from '@/components/slide';
+import { SlideDeck, ViewTypes } from 'src/components/slide';
 
 import ChoiceIsMadeSlides from '../choiceIsMade';
 import ConclusionSlides from '../conclusion';

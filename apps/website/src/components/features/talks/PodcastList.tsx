@@ -2,8 +2,8 @@ import { Box, Stack } from '@chakra-ui/react';
 import { compareDesc } from 'date-fns';
 import * as React from 'react';
 
-import { H2Heading } from '@/components/core';
-import { type Podcast } from '@/data';
+import { H2Heading } from 'src/components/core';
+import { type Podcast } from 'src/data';
 
 import { PodcastDetails } from './podcastDetails';
 

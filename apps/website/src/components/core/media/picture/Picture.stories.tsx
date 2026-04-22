@@ -1,7 +1,7 @@
 import { Grid, GridItem, Text } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { H2Heading, Picture as PictureComponent } from '@/components/core';
+import { H2Heading, Picture as PictureComponent } from 'src/components/core';
 
 const meta = {
   title: 'Core/Media',

@@ -4,72 +4,72 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
 import { Loading } from './components/features';
 
 const HomePage = lazy(() =>
-  import('@/pages').then((module) => ({
+  import('src/pages').then((module) => ({
     default: module.Home,
   })),
 );
 const PresenterPage = lazy(() =>
-  import('@/pages/slides').then((module) => ({
+  import('src/pages/slides').then((module) => ({
     default: module.PresenterPage,
   })),
 );
 const ResumePage = lazy(() =>
-  import('@/pages').then((module) => ({
+  import('src/pages').then((module) => ({
     default: module.ResumePage,
   })),
 );
 const ResumePrintPage = lazy(() =>
-  import('@/pages').then((module) => ({
+  import('src/pages').then((module) => ({
     default: module.ResumePrintPage,
   })),
 );
 const SlidesContentPage = lazy(() =>
-  import('@/pages/slides').then((module) => ({
+  import('src/pages/slides').then((module) => ({
     default: module.SlidesContentPage,
   })),
 );
 const SlidesSurveyResultsPage = lazy(() =>
-  import('@/pages/slides').then((module) => ({
+  import('src/pages/slides').then((module) => ({
     default: module.SlidesSurveyResultsPage,
   })),
 );
 const SlidesNotesPage = lazy(() =>
-  import('@/pages/slides').then((module) => ({
+  import('src/pages/slides').then((module) => ({
     default: module.SlidesNotesPage,
   })),
 );
 const SlidesPrintNotesPage = lazy(() =>
-  import('@/pages/slides').then((module) => ({
+  import('src/pages/slides').then((module) => ({
     default: module.SlidesPrintNotesPage,
   })),
 );
 const SlidesPrintPage = lazy(() =>
-  import('@/pages/slides').then((module) => ({
+  import('src/pages/slides').then((module) => ({
     default: module.SlidesPrintPage,
   })),
 );
 const TalkPage = lazy(() =>
-  import('@/pages').then((module) => ({
+  import('src/pages').then((module) => ({
     default: module.Talk,
   })),
 );
 const TalkSurveyPollPage = lazy(() =>
-  import('@/pages').then((module) => ({
+  import('src/pages').then((module) => ({
     default: module.TalkSurveyPoll,
   })),
 );
 const TalkSurveyResultsPage = lazy(() =>
-  import('@/pages').then((module) => ({
+  import('src/pages').then((module) => ({
     default: module.TalkSurveyResults,
   })),
 );
 const TalkSurveySankeyPage = lazy(() =>
-  import('@/pages').then((module) => ({
+  import('src/pages').then((module) => ({
     default: module.TalkSurveySankey,
   })),
 );
 const TalksPage = lazy(() =>
-  import('@/pages').then((module) => ({
+  import('src/pages').then((module) => ({
     default: module.Talks,
   })),
 );

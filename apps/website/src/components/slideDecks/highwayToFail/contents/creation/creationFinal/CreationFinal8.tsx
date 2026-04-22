@@ -2,7 +2,11 @@ import { Box, Flex, Icon, Text } from '@chakra-ui/react';
 import * as React from 'react';
 import { FaFlag } from 'react-icons/fa';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+} from 'src/components/slide';
 
 import { Loading } from '../../../components/loading';
 

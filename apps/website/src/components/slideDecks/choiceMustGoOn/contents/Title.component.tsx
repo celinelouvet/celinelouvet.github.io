@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { H1Heading } from '@/components/core';
+import { H1Heading } from 'src/components/core';
 
 export const Title: React.FC<{ title: string }> = function Title({ title }) {
   return title.split('\n').map((line, i) => (

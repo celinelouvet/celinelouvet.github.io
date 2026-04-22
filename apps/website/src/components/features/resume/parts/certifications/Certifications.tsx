@@ -2,8 +2,8 @@ import { Box, Grid, Stack } from '@chakra-ui/react';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H2Heading } from '@/components/core';
-import { type Certification } from '@/data';
+import { H2Heading } from 'src/components/core';
+import { type Certification } from 'src/data';
 
 import { CertificationContent } from './CertificationContent';
 

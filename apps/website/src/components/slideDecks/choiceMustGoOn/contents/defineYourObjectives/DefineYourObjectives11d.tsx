@@ -1,7 +1,11 @@
 import { Flex, HStack, Icon, Stack, chakra } from '@chakra-ui/react';
 import { BsArrowReturnRight } from 'react-icons/bs';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+} from 'src/components/slide';
 
 export const content = (
   <SlideContent

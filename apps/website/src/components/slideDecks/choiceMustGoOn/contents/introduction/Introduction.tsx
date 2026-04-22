@@ -1,7 +1,11 @@
 import { Text } from '@chakra-ui/react';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
-import { choiceMustGoOnTalkFr as talk } from '@/data/talks';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+} from 'src/components/slide';
+import { choiceMustGoOnTalkFr as talk } from 'src/data/talks';
 
 export const content = (
   <SlideContent

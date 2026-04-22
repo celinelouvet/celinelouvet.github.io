@@ -2,8 +2,8 @@ import { Box, Stack } from '@chakra-ui/react';
 import type * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { H2Heading } from '@/components/core';
-import type { Resume, Volunteering } from '@/data';
+import { H2Heading } from 'src/components/core';
+import type { Resume, Volunteering } from 'src/data';
 
 import { VolunteeringDetails } from './parts';
 

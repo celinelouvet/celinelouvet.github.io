@@ -10,8 +10,8 @@ import {
   BsHourglassSplit,
 } from 'react-icons/bs';
 
-import { H2Heading, List } from '@/components/core';
-import { type Resume } from '@/data';
+import { H2Heading, List } from 'src/components/core';
+import { type Resume } from 'src/data';
 
 type InfosProps = {
   resume: Resume;

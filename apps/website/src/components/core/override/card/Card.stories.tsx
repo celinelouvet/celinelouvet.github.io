@@ -1,7 +1,7 @@
 import { Card as CardComponent, For, Stack } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { H2Heading } from '@/components/core';
+import { H2Heading } from 'src/components/core';
 
 const meta = {
   title: 'Core/Override',

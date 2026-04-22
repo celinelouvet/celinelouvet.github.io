@@ -1,6 +1,6 @@
 import { createSystem, defaultConfig, defineConfig } from '@chakra-ui/react';
 
-import { coreRecipes, coreSlotRecipes } from '@/components/core';
+import { coreRecipes, coreSlotRecipes } from 'src/components/core';
 
 import { conditions } from './conditions.config';
 import { globalCss } from './global-css.config';

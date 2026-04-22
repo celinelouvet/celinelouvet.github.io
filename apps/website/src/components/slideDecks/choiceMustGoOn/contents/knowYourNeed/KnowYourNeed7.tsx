@@ -1,8 +1,12 @@
 import { Center, Stack, Text } from '@chakra-ui/react';
 import { TbArrowBigDownFilled } from 'react-icons/tb';
 
-import { Quote } from '@/components/core';
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+import { Quote } from 'src/components/core';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+} from 'src/components/slide';
 
 export const content = (
   <SlideContent

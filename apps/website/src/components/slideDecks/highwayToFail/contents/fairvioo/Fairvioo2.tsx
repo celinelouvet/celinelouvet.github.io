@@ -1,7 +1,11 @@
 import { Center, Text } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+} from 'src/components/slide';
 
 const TalkFairvioo2 = React.lazy(() =>
   import('./components/TalkFairvioo2').then((module) => ({

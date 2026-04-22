@@ -1,4 +1,4 @@
-import type { Slide } from '@/components/slide';
+import type { Slide } from 'src/components/slide';
 
 import DuringPlatform1 from './DuringPlatform1';
 import DuringPlatform2 from './DuringPlatform2';

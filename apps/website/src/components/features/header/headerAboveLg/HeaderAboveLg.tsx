@@ -1,7 +1,7 @@
 import { Box, type BoxProps, ButtonGroup, Flex, For } from '@chakra-ui/react';
 import * as React from 'react';
 
-import { HeaderContainer } from '@/components/core';
+import { HeaderContainer } from 'src/components/core';
 
 import { HeaderButton } from './headerButton';
 import { ColorModeMenu } from '../colorModeMenu';

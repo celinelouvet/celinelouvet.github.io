@@ -1,7 +1,7 @@
 import { Stack, Text } from '@chakra-ui/react';
 import { type Meta, type StoryObj } from '@storybook/react';
 
-import { PageContainer } from '@/components/core';
+import { PageContainer } from 'src/components/core';
 
 import { HeaderAboveLg as HeaderAboveLgComponent } from './HeaderAboveLg';
 

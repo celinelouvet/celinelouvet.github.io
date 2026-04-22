@@ -1,4 +1,4 @@
-import { type Experience, type RemoteType } from '@/data';
+import { type Experience, type RemoteType } from 'src/data';
 
 const company = 'Company';
 export const from = '2021-01-01';

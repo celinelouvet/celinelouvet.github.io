@@ -3,7 +3,7 @@ import { type SurveyPollChoiceQuestion as SurveyPollChoiceQuestionModel } from '
 import { type Meta, type StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
-import { H1Heading } from '@/components/core';
+import { H1Heading } from 'src/components/core';
 
 import { SurveyPollChoiceQuestion as SurveyPollChoiceQuestionComponent } from './SurveyPollChoiceQuestion';
 

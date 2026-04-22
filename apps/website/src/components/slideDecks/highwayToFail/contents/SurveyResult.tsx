@@ -1,7 +1,11 @@
 import { Center, Text } from '@chakra-ui/react';
 
-import { Link } from '@/components/core';
-import { SlideContent, SlideContentTypes, SlideNote } from '@/components/slide';
+import { Link } from 'src/components/core';
+import {
+  SlideContent,
+  SlideContentTypes,
+  SlideNote,
+} from 'src/components/slide';
 
 export const content = (
   <SlideContent

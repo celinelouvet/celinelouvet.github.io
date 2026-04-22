@@ -1,4 +1,4 @@
-import { type Resume, type TalkSubject } from '@/data';
+import { type Resume, type TalkSubject } from 'src/data';
 
 export const useTalk = (resume: Resume, talkSubjectId?: string | string[]) => {
   if (!talkSubjectId) {
