@@ -4,6 +4,7 @@ import { SlideDeck, ViewTypes } from 'src/components/slide';
 
 import ExampleSlides from '../example';
 import IdentityVsPermissionsSlides from '../identityVsPermissions';
+import NotionsSlides from '../importantNotions';
 import IntroductionSlides from '../introduction';
 import MainTitleSlides from '../mainTitle';
 import { getSlides } from '../slides';
@@ -67,6 +68,13 @@ export const IdentityVsPermissions: Story = {
 export const WhichRule: Story = {
   render: () => {
     const slides = WhichRuleSlides;
+    return <SlideDeck view={ViewTypes.print} slides={slides} />;
+  },
+};
+
+export const Notions: Story = {
+  render: () => {
+    const slides = NotionsSlides;
     return <SlideDeck view={ViewTypes.print} slides={slides} />;
   },
 };
