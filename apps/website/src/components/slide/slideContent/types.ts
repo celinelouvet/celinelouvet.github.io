@@ -17,12 +17,11 @@ export enum SlideContentTypes {
 }
 
 export const colorMode = {
-  "light": 'light',
-  'dark': 'dark'
-} as const
+  light: 'light',
+  dark: 'dark',
+} as const;
 
 export type ColorMode = keyof typeof colorMode;
-
 
 const WithColorMode = z.object({
   colormode: z.enum([colorMode.light, colorMode.dark]).default(colorMode.light),
@@ -30,6 +29,10 @@ const WithColorMode = z.object({
 
 const WithTopRightCorner = z.object({
   topRightCorner: z.string().optional(),
+});
+
+const WithOverflow = z.object({
+  allowOverflow: z.boolean().default(false).optional(),
 });
 
 const ContentTitleSchema = z.object({
@@ -82,7 +85,8 @@ const ContentTitleWithContentSchema = z
     type: z.literal(SlideContentTypes.titleWithContent),
     title: z.string(),
   })
-  .merge(WithTopRightCorner);
+  .merge(WithTopRightCorner)
+  .merge(WithOverflow);
 
 const ContentTitleWith2ColumnsSchema = z
   .object({

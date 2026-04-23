@@ -12,6 +12,7 @@ export const SlideContentTitleWithContent: React.FC<SlideContentTitleWithContent
   function SlideContentTitleWithContent({
     title,
     topRightCorner: topRightCornerContent,
+    allowOverflow = false,
     children,
     ...props
   }) {
@@ -40,14 +41,14 @@ export const SlideContentTitleWithContent: React.FC<SlideContentTitleWithContent
           height="100%"
           alignItems="stretch"
           gap="brand.100"
-          overflow="hidden"
+          overflow={allowOverflow ? 'visible' : 'hidden'}
         >
           <Box>{titleWithCorner}</Box>
           <Flex
             flexGrow="1"
             justifyContent="center"
             alignItems="flex-start"
-            overflow="hidden"
+            overflow={allowOverflow ? 'visible' : 'hidden'}
           >
             {children}
           </Flex>

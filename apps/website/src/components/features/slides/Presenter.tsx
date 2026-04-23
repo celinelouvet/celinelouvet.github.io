@@ -98,6 +98,11 @@ export const Presenter: React.FC = function Presenter() {
 
         <Stack gap="8" width="100%">
           <TalkPresenter
+            title="Les mystères des permissions"
+            talkId="permissions-mysteries"
+            onClick={onClick}
+          />
+          <TalkPresenter
             title="Highway to fail"
             talkId="highway-to-fail"
             surveyId="mixit_2025"
