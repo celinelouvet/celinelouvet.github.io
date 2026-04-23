@@ -18,6 +18,7 @@ export const content = (
         textAlign="center"
         variant="slideLight"
         target="_blank"
+        fontSize="brand.125"
       >
         celine.louvet.me/voxxedlux/results
       </Link.Internal>

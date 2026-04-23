@@ -2,6 +2,7 @@ import { type Meta, type StoryObj } from '@storybook/react';
 
 import { SlideDeck, ViewTypes } from 'src/components/slide';
 
+import ArchitecturesSlides from '../architectures';
 import DecisionEnforcementSlides from '../decisionEnforcement';
 import ExampleSlides from '../example';
 import IdentityVsPermissionsSlides from '../identityVsPermissions';
@@ -83,6 +84,13 @@ export const Notions: Story = {
 export const DecisionEnforcement: Story = {
   render: () => {
     const slides = DecisionEnforcementSlides;
+    return <SlideDeck view={ViewTypes.printNotes} slides={slides} />;
+  },
+};
+
+export const Architectures: Story = {
+  render: () => {
+    const slides = ArchitecturesSlides;
     return <SlideDeck view={ViewTypes.printNotes} slides={slides} />;
   },
 };

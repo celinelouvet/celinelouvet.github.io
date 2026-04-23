@@ -56,12 +56,10 @@ export const linkRecipe = defineRecipe({
       slideDark: {
         textDecoration: 'underline',
         color: 'brand.900',
-        fontSize: 'brand.125',
       },
       slideLight: {
         textDecoration: 'underline',
         color: 'brand.300',
-        fontSize: 'brand.125',
       },
     },
 
